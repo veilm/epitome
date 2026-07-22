@@ -1,0 +1,18 @@
+# Captured site data and crawl state
+/data/
+/captures/
+/archive/
+/warc/
+/crawl-state/
+
+# Generated output
+/output/
+/dist/
+
+# Local/runtime files
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+
