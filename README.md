@@ -12,3 +12,10 @@ notes. No bulk crawl has been started.
 See [docs/network-capture.md](docs/network-capture.md) for current capture usage,
 [docs/archive-plan.md](docs/archive-plan.md) for the broader site-capture design,
 and [docs/markdown-plan.md](docs/markdown-plan.md) for article conversion.
+
+Quick start:
+
+```sh
+util/capture_url 'https://openai.com/index/example/'
+util/url_to_markdown 'https://openai.com/index/example/'
+```

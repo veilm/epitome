@@ -1,210 +1,116 @@
-# OpenAI article-to-Markdown investigation
+# LLM-ready article extraction
 
-This is a separate derivative pipeline from archival capture. WARC/raw HTML is
-the source of truth; Markdown is a normalized reading and analysis format.
+The Markdown output is an intermediate representation for language models, not
+a user-facing republication of the source page. Its job is to retain the useful
+article context while discarding JavaScript, CSS, navigation, cookie UI,
+recommendations, and other page chrome.
 
-The investigation compared:
+Exact visual or media fidelity belongs to the separate network capture. For
+model input, it is acceptable to reduce an interactive chart to its accessible
+table, omit playback controls, or leave out decorative media.
 
-- `https://openai.com/index/gpt-5-6/`, a current, complex article; and
-- `https://openai.com/index/chatgpt-can-now-see-hear-and-speak/`, an older
-  article with audio, images, and legacy content components.
+## Usage
 
-## Findings
-
-- Both pages have a semantic `<main>` and `<article>`, exactly one `<h1>`, a
-  canonical link, description/social metadata, and server-rendered body text.
-- Useful hero regions have explicit attributes:
-  `data-article-hero-copy-region="meta|headline|subhead"`.
-- Citations use `data-testid="citations"`; author lists use
-  `data-testid="author-list"`. These are better initial hooks than generated
-  utility classes.
-- The article element also contains page UI and recommendations: table-of-
-  contents navigation, listen/share controls, author/footnote cards, and “Keep
-  reading” cards. Converting the entire `<article>` blindly produces noise and
-  duplicates.
-- Older body blocks often have a `.prose` class. Current ordinary paragraphs do
-  not, so `.prose` is not a valid universal body selector.
-- A current complex article contained 57 paragraphs, 46 list items, 20 block
-  quotes, 30 figures, 11 real HTML tables, code, video, audio, canvas, and three
-  iframes. The older sample had a different structure and no `<figure>` tags.
-- Current charts expose accessible table/text content in the DOM. A converter
-  should prefer that over screenshots, while retaining an associated visual or
-  embed URL where useful.
-- Some images are lazy and had an empty `currentSrc` in the sampled viewport.
-  Their original `src`, `srcset`, `<source>`, or React/SSR representation must
-  be read rather than relying only on loaded browser state.
-- Superscript links, captions, “opens in a new window” helper text, duplicated
-  responsive markup, audio timers, loading placeholders, and hidden carousel
-  slides require explicit normalization.
-- No JSON-LD was present in the two inspected pages. Metadata extraction cannot
-  depend on it.
-
-## Output contract
-
-Each article should produce deterministic UTF-8 Markdown with YAML frontmatter:
-
-```yaml
----
-title: ...
-canonical_url: https://openai.com/index/...
-description: ...
-published_at: 1695600000
-updated_at: null
-authors: []
-categories: []
-language: en-US
-captured_at: 1784760000
-source_sha256: ...
----
+```sh
+util/url_to_markdown 'https://openai.com/index/example/'
 ```
 
-Use Unix seconds for timestamps. Frontmatter should distinguish publication,
-source modification, and capture time rather than collapsing them.
-
-The Markdown body should retain, in document order:
-
-- headings and stable heading anchors;
-- paragraphs and inline emphasis/code;
-- ordered and unordered lists;
-- block quotes and attributions;
-- links resolved to absolute canonical URLs;
-- images with alt text and a selected archival/original URL;
-- captions immediately after their media;
-- audio/video/download links with captions or transcripts when present;
-- fenced code blocks with language when discoverable;
-- tables, using Markdown tables only when rectangular and readable, otherwise
-  embedded HTML tables;
-- footnote references and definitions;
-- a marked placeholder for interactive embeds that cannot be represented.
-
-Authors, acknowledgments, and footnotes belong in the output. “Keep reading,”
-global navigation, cookie UI, listen/share controls, carousel controls, and
-analytics do not.
-
-## Conversion pipeline
-
-### 1. Choose the source representation
-
-Keep both of these in the ignored capture area:
-
-1. original response bytes and headers from the archive;
-2. an optional post-hydration DOM snapshot from the browser completion pass.
-
-Default to original server-rendered HTML. Use the rendered snapshot only for a
-component whose meaningful content is absent from the original DOM. Record the
-choice in the conversion manifest.
-
-### 2. Extract metadata
-
-In priority order:
-
-- canonical URL from `link[rel=canonical]`;
-- title from the hero headline, then `<h1>`, then `og:title`;
-- subhead from the hero subhead, then the description meta tag;
-- displayed publication time from the hero meta region and `<time datetime>`;
-- author list from `[data-testid=author-list]`;
-- category/type from hero metadata and article navigation;
-- language from `<html lang>`;
-- hero media from the hero/backdrop component and social-image metadata.
-
-Store the unparsed displayed date as diagnostic metadata when parsing fails.
-
-### 3. Isolate content
-
-- Start at `<article>`.
-- Extract hero metadata separately so it is not duplicated in the body.
-- Drop `nav`, form controls, share/listen UI, cookie UI, loading placeholders,
-  and nodes marked `data-nosnippet` when they are presentational duplicates.
-- Stop ordinary body extraction before the citations/author container, then
-  extract its semantic author, acknowledgment, and footnote subsections with
-  dedicated handlers.
-- Exclude the trailing related/“Keep reading” collection.
-- Do not key the boundary only to English heading text. Prefer structural/test
-  attributes and use heading text as a checked fallback.
-
-### 4. Convert with a custom block walker
-
-A generic HTML-to-Markdown package can handle inline markup, but component
-boundaries require project-specific rules. Walk the cleaned tree in document
-order and emit typed intermediate blocks before rendering Markdown:
+The default output is:
 
 ```text
-Heading | Paragraph | List | Quote | Code | Table | Media | Embed | Footnote
+output/markdown/HOST-PATH.md
 ```
 
-The intermediate representation prevents nested responsive wrappers from
-creating duplicate text and makes it possible to unit-test extraction
-separately from Markdown formatting.
+The command also writes ignored research artifacts below `data/extractions/`:
 
-Important custom rules:
+- `page.html`: the complete rendered DOM, available when extraction looks
+  incomplete;
+- `content.html`: the selected and cleaned content subtree;
+- `read.json`: the visibility-aware semantic view produced by `cdp read`;
+- `metadata.json`: extracted title, canonical URL, date, author, and language;
+- `report.json`: text coverage, input/output sizes, media observations, and
+  warnings.
 
-- collapse exact duplicate blocks caused by responsive variants, but never
-  deduplicate merely similar prose;
-- remove accessibility helper text such as “opens in a new window” from link
-  labels while preserving the destination;
-- select the highest-quality original image candidate, retaining all candidates
-  in a sidecar manifest;
-- represent chart/table components from accessible DOM data;
-- retain iframe source, title, fallback text, and archived screenshot;
-- map linked superscripts to Markdown footnotes;
-- turn `<br>` into a hard break only where it is semantically meaningful;
-- normalize non-breaking spaces but preserve significant Unicode punctuation.
+Use `--selector` to override automatic selection for a one-off page. Use
+`--strict` when a pipeline should return nonzero for quality warnings.
 
-### 5. Validate
+## How it works
 
-For every conversion, emit a small JSON manifest (also generated/ignored) with
-source hash, extraction warnings, counts by block type, skipped embeds, selected
-media, and converter version.
+1. Open the URL in a fresh tab through CDP.
+2. Choose the largest useful `article`, `main`, or `[role=main]` subtree.
+3. Apply small matching rules from `research/site_rules.json`.
+4. Remove scripts, styles, navigation, forms, controls, and known trailing
+   recommendation sections.
+5. Convert semantic HTML into compact Markdown using the dependency-free
+   renderer in `util/epitome_lib/html_to_markdown.py`.
+6. Compare words in the cleaned source against words in the result and emit a
+   report.
 
-Automated checks should reject or warn on:
+The converter preserves the structures most useful to an LLM:
 
-- missing title, canonical URL, publication date, or body;
-- body word count far below visible article text;
-- duplicate consecutive paragraphs/headings;
-- empty links or media without both a URL and fallback description;
-- malformed tables or unresolved relative URLs;
-- visible body text present in the source but absent from all emitted blocks.
+- title, canonical URL, description, date, author, and language;
+- headings and paragraphs;
+- links and basic emphasis;
+- lists and quotes;
+- code blocks;
+- accessible tables;
+- image alt text/URLs and sourced media links when readily available;
+- author, acknowledgment, and footnote text.
 
-## Implementation recommendation
+It does not attempt to preserve page layout, animations, client state, visual
+chart styling, playback controls, or every decorative image.
 
-Build a Python CLI with two stages:
+## Generalization
 
-```text
-epitome-md extract SOURCE_HTML > intermediate.json
-epitome-md render intermediate.json > article.md
+The generic extractor is intentionally the default. Site-specific behavior is
+data-driven where possible:
+
+```json
+{
+  "host_suffix": "example.com",
+  "root_selectors": ["article"],
+  "exclude_selectors": [".newsletter-prompt"],
+  "exclude_text_exact": ["Loading..."],
+  "cut_at_headings": ["Related articles"]
+}
 ```
 
-Use a mature HTML5 parser with CSS selectors (for example `selectolax` or
-`lxml`) and a small custom Markdown renderer. The standard-library HTML parser
-is too forgiving in the wrong ways for this component-heavy HTML. Dependency
-selection should happen when implementation begins; no package was installed
-as part of this investigation.
+OpenAI currently needs only a preferred article root, a few UI text exclusions,
+and a cutoff before recommendation cards. Generated CSS classes are avoided.
 
-Suggested initial corpus, capped at 8–10 pages:
+## Review and future LLM repair
 
-1. a simple company announcement;
-2. the inspected 2023 voice/image article;
-3. a complex current model launch with tables and interactive media;
-4. a research publication with equations/code;
-5. a system card;
-6. a customer story;
-7. an article with an embedded site or video;
-8. a page with extensive footnotes/acknowledgments.
+The report is the first automatic review layer. A suspiciously short body,
+missing title, or low word coverage produces a warning. Media without source
+URLs is recorded as an observation rather than a failure because the output is
+text-oriented.
 
-Hand-review expected Markdown for this corpus and commit only small, authored
-fixtures or structural assertions—not copied full articles. Full source pages,
-Markdown exports, manifests, screenshots, and media remain under ignored data
-or output directories.
+A future LLM reviewer can receive:
 
-## Definition of done for the spike
+1. the Markdown;
+2. `report.json`;
+3. `read.json`; and, only if necessary,
+4. the cleaned or complete HTML.
 
-- All corpus pages convert without an exception.
-- Metadata matches the visible/source values.
-- No article paragraph, list, table, quote, code block, or footnote is silently
-  omitted.
-- Global/related UI does not leak into the body.
-- Media and embeds have useful archival references and fallback text.
-- A second run over identical input is byte-for-byte deterministic.
-- The converter never fetches the network; capture and conversion remain
-  separate operations.
+It can then decide whether important article text is missing or page chrome
+leaked in. The preferred repair order is:
 
+1. adjust `research/site_rules.json`;
+2. add a small, named site hook for a genuinely unusual component;
+3. improve the generic renderer when the issue applies across sites.
+
+Generated patches should be reviewed and tested against saved artifacts before
+being used for a crawl. The crawler itself should not silently rewrite its own
+extractor during a production run.
+
+## Current observed results
+
+The bounded test corpus currently includes an older OpenAI product article and
+a large current model launch. Both produced readable article text with tables,
+footnotes, headings, and metadata. The complex page had an approximately 1.88
+MB raw server response during investigation and produced about 35 thousand
+Markdown characters while retaining about 95% of the words in the cleaned
+content subtree.
+
+This percentage is a diagnostic, not a requirement for textual identity. Manual
+review remains important when adding a new site or component family.
