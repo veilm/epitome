@@ -41,6 +41,12 @@ Batch capture is sequential and refuses more than 10 unique URLs unless
 default; use `--delay-seconds` to increase that interval. Each run has a
 `progress.jsonl` ledger.
 
+Summarize a completed run with:
+
+```sh
+util/summarize_crawl data/crawls/RUN_TIMESTAMP
+```
+
 When a large crawl is approved, sitemap URLs can be prepared with the committed
 research utility:
 
