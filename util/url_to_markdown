@@ -1,0 +1,115 @@
+#!/usr/bin/python
+"""Turn a URL into Markdown using a browser DOM and general extraction rules."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import sys
+import time
+
+from epitome_lib import cdp
+from epitome_lib.capture import validate_url
+from epitome_lib.extraction import (
+    convert_extraction,
+    default_artifact_dir,
+    default_markdown_path,
+    extract_page,
+)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("url")
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--artifacts", type=Path)
+    parser.add_argument("--selector", help="override automatic main-content selection")
+    parser.add_argument("--port", type=int, default=2103)
+    parser.add_argument("--wait-ms", type=int, default=1000)
+    parser.add_argument("--keep-tab", action="store_true")
+    parser.add_argument("--strict", action="store_true", help="return nonzero for quality warnings")
+    return parser.parse_args()
+
+
+def write_json(path: Path, value: object) -> None:
+    path.write_text(
+        json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
+
+def main() -> int:
+    args = parse_args()
+    try:
+        validate_url(args.url)
+    except ValueError as error:
+        print(f"url_to_markdown: {error}", file=sys.stderr)
+        return 2
+    captured_at = int(time.time())
+    output = args.output or default_markdown_path(args.url)
+    artifacts = args.artifacts or default_artifact_dir(args.url, captured_at)
+    session = f"epitome-md-{captured_at}-{os.getpid()}"
+    connected = False
+    try:
+        cdp.run(
+            [
+                "connect",
+                "--session",
+                session,
+                "--port",
+                str(args.port),
+                "--new",
+                "--new-url",
+                args.url,
+            ],
+            timeout=15,
+        )
+        connected = True
+        cdp.run(["wait", "--session", session], timeout=45)
+        if args.wait_ms:
+            time.sleep(max(0, args.wait_ms) / 1000)
+        extraction = extract_page(session, args.url, args.selector)
+        markdown, report = convert_extraction(extraction, captured_at)
+
+        artifacts.mkdir(parents=True, exist_ok=False)
+        (artifacts / "page.html").write_text(extraction["documentHtml"], encoding="utf-8")
+        (artifacts / "content.html").write_text(extraction["contentHtml"], encoding="utf-8")
+        write_json(
+            artifacts / "metadata.json",
+            {
+                key: value
+                for key, value in extraction.items()
+                if key not in {"documentHtml", "contentHtml", "sourceText"}
+            },
+        )
+        read_result = cdp.run(
+            ["read", "--session", session, "--json", "--wait", extraction["rootSelector"]],
+            timeout=45,
+        )
+        (artifacts / "read.json").write_text(read_result.stdout, encoding="utf-8")
+        write_json(artifacts / "report.json", report)
+
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(markdown, encoding="utf-8")
+    except (OSError, RuntimeError, cdp.CdpError) as error:
+        print(f"url_to_markdown: {error}", file=sys.stderr)
+        return 1
+    finally:
+        if connected:
+            if not args.keep_tab:
+                try:
+                    cdp.eval_json(session, "(window.close(), true)", timeout=5)
+                except cdp.CdpError:
+                    pass
+            cdp.run(["disconnect", "--session", session], timeout=5, check=False)
+
+    warning_text = "; ".join(report["warnings"]) or "no quality warnings"
+    print(f"Wrote {output} ({report['word_coverage']:.1%} text coverage; {warning_text})")
+    print(f"Research artifacts: {artifacts}")
+    return 3 if args.strict and report["warnings"] else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,19 @@
+{
+  "sites": [
+    {
+      "host_suffix": "openai.com",
+      "root_selectors": ["article"],
+      "exclude_selectors": [],
+      "exclude_text_exact": [
+        "Loading...",
+        "Loading…",
+        "00:00"
+      ],
+      "cut_at_headings": [
+        "Keep reading",
+        "Related articles"
+      ]
+    }
+  ],
+  "version": 1
+}
