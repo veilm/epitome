@@ -37,7 +37,9 @@ util/capture_urls --url-file data/urls.txt
 ```
 
 Batch capture is sequential and refuses more than 10 unique URLs unless
-`--max-urls` is explicitly raised. Each run has a `progress.jsonl` ledger.
+`--max-urls` is explicitly raised. It pauses 10 seconds between pages by
+default; use `--delay-seconds` to increase that interval. Each run has a
+`progress.jsonl` ledger.
 
 When a large crawl is approved, sitemap URLs can be prepared with the committed
 research utility:
@@ -64,4 +66,3 @@ causes browser traffic.
 
 These are observable limitations we can address individually after the simple
 pipeline encounters them.
-
