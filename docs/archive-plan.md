@@ -33,10 +33,11 @@ sitemap, RSS, and five child sitemaps. It was not a crawl.
 
 ## What “1:1 clone” should mean
 
-A recursive folder of rewritten HTML is insufficient. The primary artifact
-should be a web archive: original request URL, timestamp, status, redirects,
-headers, and response bytes stored as WARC records. A replay layer can then
-rewrite archived URLs at serving time, like the Internet Archive.
+A recursive folder of rewritten HTML may be enough for the first visual clone,
+but the capture store must retain the original request URL, timestamp, status,
+redirects, headers, and response bytes. The current CDP network-log directories
+do that directly. WARC can be exported later if interoperability with existing
+web-archive replay tools becomes useful.
 
 There are two fidelity levels:
 
@@ -47,8 +48,8 @@ There are two fidelity levels:
    embedded sites, and deterministic substitutes for analytics, experiments,
    and other non-content services.
 
-The archive should target both, but store the original traffic rather than
-making a rewritten static mirror the source of truth.
+Start with archival fidelity plus a generated static mirror. Add behavioral
+replay only for concrete features that the static result fails to reproduce.
 
 ## Proposed capture architecture
 
@@ -63,10 +64,11 @@ making a rewritten static mirror the source of truth.
 - Incremental runs prioritize new URLs and changed `lastmod` values, but do not
   treat `lastmod` as proof that unchanged pages are byte-identical.
 
-### 2. Raw HTTP capture
+### 2. Network capture
 
-- Store every request and response in WARC, including redirects and failures.
-- Store crawl frontier/state and a CDX-style lookup index separately.
+- Attach `cdp network-log` before navigation and store every observed request
+  and response, including redirects and failures.
+- Store crawl frontier/state and a URL lookup index separately.
 - Record capture timestamp, source sitemap(s), referrer, canonical URL, content
   hash, MIME type, response size, and retry history.
 - Capture HTML before its dependencies, then parse resource URLs from HTML,
@@ -74,13 +76,13 @@ making a rewritten static mirror the source of truth.
 - Preserve response headers and original URL spelling. Content-addressed
   deduplication may save space, but replay metadata must remain per request.
 
-### 3. Browser completion pass
+### 3. Browser completion
 
 Raw HTML parsing cannot discover every lazy or computed request. Run a real
 browser against a controlled subset first, then expand only if missing-resource
 tests justify it:
 
-- record browser network traffic into WARC;
+- record browser network traffic into the capture directories;
 - scroll pages to trigger lazy images and media metadata;
 - enumerate same-origin iframes and archive them recursively;
 - exercise non-destructive presentation controls such as tabs and carousels;
@@ -91,39 +93,37 @@ The browser pass should initially cover one page per template/component family,
 not every URL. If raw capture plus dependency parsing proves complete for a
 family, avoid paying the browser cost for every page.
 
-### 4. Replay
+### 4. Static materialization, then replay if needed
 
-- Use a WARC-aware replay server rather than permanently rewriting captured
-  files. `pywb` is the obvious first candidate to evaluate.
-- Rewrite resource navigation through the replay origin while preserving the
-  original URL and timestamp in the archive index.
+- First generate a static tree by mapping captured GET responses to local paths
+  and rewriting HTML/CSS resource references.
+- Preserve the original URL and timestamp in the capture index.
 - Block live-network fallback during fidelity testing; missing requests must be
   visible errors, not silently fetched from production.
 - Stub analytics and experimentation calls when they do not affect content.
   Archive content-bearing gates, TTS, downloadable files, and embedded sites.
-- Keep a small generated static export as an optional convenience output, not
-  the canonical archive.
+- If runtime requests or interactions fail in practice, add a lookup server
+  keyed by method plus complete URL. WARC/`pywb` remains an available export and
+  replay option rather than an initial dependency.
 
 ## Candidate implementation
 
-A practical first spike is Browsertrix Crawler or a small Playwright capture
-worker feeding WARC files, with `warcio` for validation/indexing and `pywb` for
-replay. None of those tools were found installed during this investigation, so
-dependency choice and installation should be an explicit implementation step.
+The first capture worker is implemented in Python around the installed `cdp`
+CLI, with no third-party dependency. It provides:
 
-If we build the coordinator ourselves, it should be a Python program with:
+- response bodies and request/response metadata from `cdp network-log`;
+- final rendered HTML and a semantic `cdp read` snapshot;
+- sequential bounded batch capture with a JSONL progress ledger;
+- a bounded sitemap-listing research utility;
+- CLI limits such as `--max-urls`, `--max-scrolls`, and `--max-seconds` that
+  default to conservative values.
 
-- an SQLite frontier and capture catalog;
-- bounded async HTTP workers with per-host concurrency and backoff;
-- WARC writing delegated to a mature library;
-- a browser-worker queue for selected pages;
-- resumable runs identified by Unix timestamp;
-- CLI limits such as `--max-pages`, `--max-bytes`, `--max-duration`, and
-  `--concurrency` that default to conservative values.
+Concurrency, retries, stronger resumption, and a database catalog should be
+added only when observed crawl size or failures justify them.
 
 ## Fidelity verification
 
-- Validate every WARC and ensure its records are indexable.
+- Validate capture manifests and ensure every recorded response is indexable.
 - Replay with outbound networking disabled and collect every failed request.
 - Compare live and replay DOM structure, text, canonical metadata, link targets,
   and screenshots at desktop and mobile widths.
@@ -142,4 +142,3 @@ If we build the coordinator ourselves, it should be a Python program with:
 4. Replay that spike offline and quantify missing requests.
 5. Estimate total URL count and bytes from sitemap metadata plus sampled pages.
 6. Only then approve a complete initial capture.
-
