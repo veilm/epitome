@@ -138,6 +138,79 @@ def summarize_network(network_dir: Path) -> dict[str, Any]:
     }
 
 
+def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
+    """Aggregate per-page manifests from a capture_urls run."""
+    pages_dir = crawl_dir / "pages"
+    page_summaries = []
+    hosts: dict[str, int] = {}
+    statuses: dict[str, int] = {}
+    total_requests = 0
+    total_bodies = 0
+    total_body_bytes = 0
+    total_body_errors = 0
+    total_redactions = 0
+    complete_pages = 0
+    html_pages = 0
+    read_pages = 0
+
+    for manifest_path in sorted(pages_dir.glob("*/manifest.json")):
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        page_dir = manifest_path.parent
+        network = manifest.get("network_summary", {})
+        complete = bool(manifest.get("complete"))
+        complete_pages += int(complete)
+        html_pages += int((page_dir / "page.html").exists())
+        read_pages += int((page_dir / "read.json").exists())
+        total_requests += int(network.get("requests", 0))
+        total_bodies += int(network.get("response_bodies", 0))
+        total_body_bytes += int(network.get("response_bytes", 0))
+        total_body_errors += int(network.get("response_body_errors", 0))
+        total_redactions += int(manifest.get("redacted_header_values", 0))
+        for host, count in network.get("hosts", {}).items():
+            hosts[host] = hosts.get(host, 0) + int(count)
+        for status, count in network.get("statuses", {}).items():
+            statuses[status] = statuses.get(status, 0) + int(count)
+        page_summaries.append(
+            {
+                "url": manifest.get("requested_url"),
+                "complete": complete,
+                "requests": int(network.get("requests", 0)),
+                "response_bytes": int(network.get("response_bytes", 0)),
+                "response_body_errors": int(network.get("response_body_errors", 0)),
+                "duration_seconds": max(
+                    0,
+                    int(manifest.get("capture_finished_at", 0))
+                    - int(manifest.get("capture_started_at", 0)),
+                ),
+            }
+        )
+
+    disk_bytes = sum(
+        path.stat().st_size
+        for path in crawl_dir.rglob("*")
+        if path.is_file()
+    )
+    return {
+        "crawl_dir": str(crawl_dir),
+        "pages": len(page_summaries),
+        "complete_pages": complete_pages,
+        "pages_with_html": html_pages,
+        "pages_with_read_json": read_pages,
+        "requests": total_requests,
+        "response_bodies": total_bodies,
+        "response_bytes": total_body_bytes,
+        "response_body_errors": total_body_errors,
+        "redacted_header_values": total_redactions,
+        "disk_bytes": disk_bytes,
+        "hosts": dict(sorted(hosts.items(), key=lambda item: (-item[1], item[0]))),
+        "statuses": dict(sorted(statuses.items())),
+        "page_summaries": page_summaries,
+    }
+
+
 def capture_url(
     url: str,
     output_dir: Path,
@@ -270,4 +343,3 @@ def capture_url(
     if failure is not None:
         raise failure
     return manifest
-
