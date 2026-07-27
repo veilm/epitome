@@ -1,8 +1,11 @@
 [
   {
+    "codex_command": [
+      "cdx"
+    ],
     "confidence": 0.95,
     "content_path": "articles/openai.com-index-chatgpt-can-now-see-hear-and-speak.md",
-    "generated_at": 1785178350,
+    "generated_at": 1785181967,
     "input_characters": 7132,
     "input_sha256": "6a4e9be0118d73cb9723c51e96d998bd37ae8b5ad79e087171cbea1f7d9c9bfe",
     "model": "gpt-5.6-terra",
@@ -12,15 +15,18 @@
     "title": "ChatGPT can now see, hear, and speak"
   },
   {
-    "confidence": 0.98,
+    "codex_command": [
+      "cdx"
+    ],
+    "confidence": 0.95,
     "content_path": "articles/openai.com-index-gpt-5-6.md",
-    "generated_at": 1785178309,
-    "input_characters": 34928,
-    "input_sha256": "02f6c3c0ee77eff4eca01a2fb6bf664b5e34cb61f6d0948f34090401ddb31ee0",
+    "generated_at": 1785181939,
+    "input_characters": 36187,
+    "input_sha256": "d33fa638383df6fb96763c3400ee50fd5f9747261bdf73d81005467377788d37",
     "model": "gpt-5.6-terra",
     "reasoning_effort": "medium",
     "source_url": "https://openai.com/index/gpt-5-6/",
-    "status": "error",
+    "status": "complete",
     "title": "GPT‑5.6: Frontier intelligence that scales with your ambition"
   }
 ]

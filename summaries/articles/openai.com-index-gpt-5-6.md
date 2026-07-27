@@ -1,8 +1,22 @@
 ---
-status: error
-confidence: 0.98
+status: complete
+confidence: 0.95
 title: "GPT‑5.6: Frontier intelligence that scales with your ambition"
 source_url: "https://openai.com/index/gpt-5-6/"
 ---
 
-The captured article is abruptly cut off in its footnotes (ending mid-sentence after “Codex”), so it is unsuitable for a complete archival summary.
+Published July 9, 2026, this OpenAI announcement introduces the generally available GPT-5.6 model family: Sol, its flagship; Terra, a balanced lower-cost tier; and Luna, its fastest and least expensive tier. OpenAI says the family was designed to produce more useful work per token and that Sol improves coding, knowledge work, computer use, cybersecurity, and scientific research. The article characterizes these as company and benchmark claims, rather than independent findings.
+
+OpenAI reports that Sol scored 53.6 on Agents’ Last Exam, 13.1 points above Claude Fable 5 under the cited setup, and that medium-reasoning Sol surpassed it at about one-quarter of the estimated cost. It also reports that max-reasoning Sol was within one point of Fable 5 on the Artificial Analysis Intelligence Index while taking 61% less time and costing about half as much. On the Artificial Analysis Coding Agent Index, OpenAI says Sol reached 80, used under half the output tokens of Fable 5, and cost roughly one-third less. The published tables also show a mixed comparison picture: for example, GPT-5.6 Sol trails some named competitors on SWE-Bench Pro, GDPval-AA v2, several tool-use measures, and FrontierMath Tier 4.
+
+The release adds `max`, a reasoning setting that gives the model more time to explore, check, and revise, and `ultra`, which by default coordinates four agents in parallel for difficult work. OpenAI says that adding agents improved the result-versus-latency tradeoff in tests including BrowseComp, SEC-Bench Pro, and Terminal-Bench 2.1. The API’s Responses API gains Programmatic Tool Calling, allowing models to write and run in-memory programs to coordinate tools and filter intermediate results, plus a beta multi-agent capability for concurrent subagents.
+
+The article emphasizes improved design and productivity outputs. It says GPT-5.6 can inspect rendered interfaces, create editable presentations, infer and reproduce reference-deck design systems, and produce more polished documents and spreadsheets. OpenAI reports Sol scores of 92.2% on BrowseComp and 62.6% on OSWorld 2.0; it also says Luna nearly matches GPT-5.5’s peak knowledge-work performance for under half the estimated cost. Customer quotations from companies including Cursor, Notion, Microsoft, Figma, Canva, and others describe early tests, but are testimonials rather than independently presented evaluations.
+
+For cybersecurity, OpenAI reports substantial gains over GPT-5.5: 73.5% versus 47.9% on ExploitBench, 33.7% on ExploitGym with a six-hour limit, and 71.2% versus 45.8% on SEC-Bench Pro. It frames the models as useful for defensive tasks such as secure review, patching, threat modeling, and blue teaming. More sensitive defensive functionality is offered through OpenAI Daybreak’s Trusted Access for Cyber for qualified, verified users; the announcement says hardware-backed passkeys would be required by September 1 for individual members to retain access to the most cyber-capable frontier models. OpenAI says the models do not cross its Critical threshold for cyber or biology capabilities, while acknowledging both are dual-use.
+
+The stated safety system combines model-trained protections, real-time checks, monitoring, account-level enforcement, and a reasoning monitor that evaluates possible harm in context. OpenAI says Sol’s cyber safeguards block about ten times more potentially harmful activity than prior safeguards and that it conducted approximately 700,000 NVIDIA A100 GPU-equivalent hours of automated black-box red teaming before release. It acknowledges that safeguards can impede benign use and says ChatGPT and Codex can retry prompts with lower-capability models.
+
+OpenAI says GPT-5.6 became available globally across ChatGPT, Codex, and the API beginning on the publication date, with a 24-hour gradual rollout. In ChatGPT Work and Codex, eligible paid users can select among the tiers and reasoning effort settings; `ultra` is limited to higher plans. API pricing per million tokens is listed as $5 input/$30 output for Sol, $2.50/$15 for Terra, and $1/$6 for Luna. The release also announces explicit prompt-cache breakpoints, a 30-minute minimum cache life, cache writes billed at 1.25 times the normal input rate, and a 90% discount for cached-input reads.
+
+Source: [Original article](https://openai.com/index/gpt-5-6/)

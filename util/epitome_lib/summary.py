@@ -11,7 +11,7 @@ import shutil
 import subprocess
 import tempfile
 import time
-from typing import Any
+from typing import Any, Sequence
 from urllib.parse import urlsplit
 
 
@@ -124,12 +124,15 @@ def summarize_article(
     output_path: Path,
     catalog_path: Path,
     prompt_template_path: Path,
+    codex_command: Sequence[str] = ("cdx",),
     model: str = "gpt-5.6-terra",
     reasoning_effort: str = "medium",
     timeout: float = 900,
     run_root: Path = Path("data/summary-runs"),
 ) -> dict[str, Any]:
     input_text = input_path.read_text(encoding="utf-8")
+    if not codex_command:
+        raise ValueError("codex_command must not be empty")
     input_metadata: dict[str, Any] = {}
     try:
         input_metadata, _ = parse_front_matter(input_text)
@@ -154,7 +157,7 @@ def summarize_article(
         (run_dir / "prompt.txt").write_text(prompt, encoding="utf-8")
         shutil.copyfile(temporary_input, run_dir / "input.md")
         command = [
-            "codex",
+            *codex_command,
             "exec",
             "--ephemeral",
             "--skip-git-repo-check",
@@ -212,6 +215,7 @@ def summarize_article(
     input_sha256 = hashlib.sha256(input_text.encode()).hexdigest()
     entry = {
         "confidence": float(metadata["confidence"]),
+        "codex_command": list(codex_command),
         "content_path": os.path.relpath(output_path, catalog_path.parent),
         "generated_at": int(time.time()),
         "input_characters": len(input_text),

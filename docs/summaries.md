@@ -12,10 +12,10 @@ util/summarize_article output/markdown/openai.com-index-example.md
 
 The default invocation uses:
 
-- `codex exec` in a newly created temporary directory;
+- the workstation's `cdx exec` wrapper in a newly created temporary directory;
 - `gpt-5.6-terra` with medium reasoning;
 - an ephemeral session;
-- a workspace-write sandbox limited to that temporary workspace;
+- a temporary workspace containing only the input and requested output;
 - no approval prompts, live search, or user configuration;
 - the committed prompt in `research/summary_prompt.md`.
 
@@ -51,6 +51,23 @@ Tracked results are stored as:
 Markdown content stays out of JSON. `content_path` is relative to the catalog.
 Re-running the same source URL replaces its catalog entry.
 
+`cdx` selects and exports the workstation's stored `CODEX_HOME` before launching
+Codex, so the pipeline uses the intended local authentication. The wrapper
+currently also injects `--dangerously-bypass-approvals-and-sandbox`; therefore
+the temporary directory and prompt constrain the job's intended scope, but this
+is not an OS-enforced Codex sandbox.
+
+The command prefix is configurable:
+
+```sh
+util/summarize_article INPUT --codex-command 'cdx now8pm'
+EPITOME_CODEX_COMMAND='cdx ms2' util/summarize_article INPUT
+```
+
+This accepts a command prefix rather than only an executable path so account
+selectors and future wrappers can be used. Each catalog entry records the exact
+prefix.
+
 ## Build and view the summary site
 
 ```sh
@@ -63,9 +80,14 @@ data and generator remain tracked. Open `http://127.0.0.1:8014/` to browse all
 records. Complete summaries link to their original OpenAI article. Error
 records remain visible so extractor regressions cannot disappear silently.
 
-The first bounded validation produced two records:
+The first bounded validation exposed a real partial-DOM extraction: the GPT‑5.6
+input ended during footnote 3 even though the article referenced eight
+footnotes. After adding bounded scrolling and note-target validation, the
+article was extracted again with all eight notes.
+
+The current two records were both generated through `cdx`:
 
 - the 2023 “ChatGPT can now see, hear, and speak” extraction summarized
   successfully with 95% status confidence;
-- the GPT‑5.6 extraction was marked `error` with 98% status confidence because
-  its final footnote is genuinely cut off mid-sentence.
+- the repaired GPT‑5.6 extraction summarized successfully with 95% status
+  confidence.

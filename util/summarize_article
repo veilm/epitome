@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
+import shlex
 import sys
 
 from epitome_lib.summary import (
@@ -27,6 +29,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--model", default="gpt-5.6-terra")
     parser.add_argument("--reasoning-effort", default="medium")
+    parser.add_argument(
+        "--codex-command",
+        default=os.environ.get("EPITOME_CODEX_COMMAND", "cdx"),
+        help="command prefix for Codex (default: cdx; env: EPITOME_CODEX_COMMAND)",
+    )
     parser.add_argument("--timeout", type=float, default=900)
     return parser.parse_args()
 
@@ -49,6 +56,10 @@ def main() -> int:
         )
         return 2
     output = args.output or Path("summaries/articles") / f"{url_slug(source_url)}.md"
+    codex_command = shlex.split(args.codex_command)
+    if not codex_command:
+        print("summarize_article: --codex-command must not be empty", file=sys.stderr)
+        return 2
     try:
         entry = summarize_article(
             args.input,
@@ -56,6 +67,7 @@ def main() -> int:
             output_path=output,
             catalog_path=args.catalog,
             prompt_template_path=args.prompt_template,
+            codex_command=codex_command,
             model=args.model,
             reasoning_effort=args.reasoning_effort,
             timeout=args.timeout,

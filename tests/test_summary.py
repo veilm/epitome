@@ -58,6 +58,7 @@ The input was empty.
                 "source_url": "https://example.com/a",
                 "content_path": "articles/a.md",
                 "status": "complete",
+                "codex_command": ["cdx"],
             }
             write_catalog(catalog, first)
             write_catalog(catalog, {**first, "status": "error"})
