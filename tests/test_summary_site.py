@@ -62,6 +62,7 @@ site. It contains more than one hundred characters and links to the
             index = (output / "index.html").read_text(encoding="utf-8")
             article_pages = list((output / "articles").glob("*.html"))
             self.assertIn("Example article", index)
+            self.assertIn('class="summary-list"', index)
             self.assertEqual(len(article_pages), 1)
             self.assertIn(
                 "Original OpenAI article",

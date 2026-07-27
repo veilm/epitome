@@ -112,34 +112,27 @@ def markdown_to_html(markdown: str) -> str:
 
 
 STYLE = """
-:root{color-scheme:light;--paper:#f5f1e8;--ink:#171714;--muted:#69675f;
---line:#d8d1c4;--accent:#235c4b;--good:#276749;--bad:#9b2c2c}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);
-font:17px/1.68 Georgia,serif}a{color:var(--accent);text-underline-offset:.18em}
-.shell{width:min(74rem,calc(100% - 2rem));margin:auto}.masthead{padding:4rem 0 2rem;
-border-bottom:1px solid var(--line)}.eyebrow{font:700 .72rem/1.2 system-ui;
-letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-h1,h2,h3{font-family:system-ui,sans-serif;line-height:1.08;letter-spacing:-.035em}
-h1{font-size:clamp(2.5rem,7vw,5.8rem);margin:.3rem 0 1rem;max-width:14ch}
-.intro{max-width:43rem;color:var(--muted);font-size:1.15rem}.stats{display:flex;gap:2rem;
-font:600 .85rem system-ui;margin-top:2rem}.grid{display:grid;
-grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1px;background:var(--line);
-border:1px solid var(--line);margin:2rem 0 5rem}.card{background:var(--paper);
-padding:1.5rem;min-height:16rem;display:flex;flex-direction:column}.card h2{
-font-size:1.45rem;margin:.7rem 0}.card p{color:var(--muted);margin:.25rem 0}
-.card .open{margin-top:auto;font:700 .85rem system-ui}.badge{display:inline-flex;
-width:max-content;border:1px solid currentColor;border-radius:99px;padding:.22rem .55rem;
-font:700 .68rem system-ui;text-transform:uppercase;letter-spacing:.08em}
-.complete{color:var(--good)}.error{color:var(--bad)}.article{width:min(48rem,
-calc(100% - 2rem));margin:0 auto;padding:3rem 0 7rem}.article nav{
-font:700 .8rem system-ui;margin-bottom:3rem}.article h1{font-size:clamp(2.2rem,6vw,4rem)}
-.meta{display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;padding:1rem 0 2rem;
-border-bottom:1px solid var(--line);font:600 .8rem system-ui;color:var(--muted)}
-.content{padding-top:1.5rem}.content h2{font-size:1.7rem;margin-top:2.4rem}
-.content h3{font-size:1.3rem;margin-top:2rem}.content p{margin:1.15rem 0}
-.content blockquote{border-left:3px solid var(--accent);margin:1.5rem 0;padding-left:1.2rem}
-code,pre{font-family:ui-monospace,monospace}pre{overflow:auto;background:#e9e3d7;padding:1rem}
-@media(max-width:600px){.masthead{padding-top:2.5rem}.stats{gap:1rem;flex-wrap:wrap}}
+:root{color-scheme:light;--muted:#666;--line:#ddd;--good:#28633f;--bad:#9b2c2c}
+*{box-sizing:border-box}
+body{font:16px/1.55 system-ui,sans-serif;margin:3rem auto;max-width:70rem;
+padding:0 1.5rem;color:#171717;background:#fff}
+a{color:#145a8d;text-underline-offset:.15em}
+h1{font-size:2rem;margin:0 0 .75rem}h2{font-size:1.1rem;margin:0 0 .25rem}
+h3{font-size:1rem}.intro{max-width:48rem;margin:.5rem 0;color:var(--muted)}
+.stats{display:flex;gap:1.25rem;margin:1rem 0 2rem;color:var(--muted);font-size:.875rem}
+.summary-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.summary-list li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.record-meta,.source{display:block;color:var(--muted);font-size:.8rem}
+.source{margin-top:.15rem;overflow-wrap:anywhere}.status{font-weight:600}
+.complete{color:var(--good)}.error{color:var(--bad)}
+.article{max-width:48rem;margin:0 auto}.article nav{margin-bottom:2.5rem;font-size:.875rem}
+.article>h1{margin-top:.65rem}.meta{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem;
+padding:0 0 1.25rem;border-bottom:1px solid var(--line);color:var(--muted);
+font-size:.8rem}.content{padding-top:1rem}.content h2{font-size:1.35rem;margin-top:2.25rem}
+.content h3{font-size:1.1rem;margin-top:1.75rem}.content p{margin:1rem 0}
+.content blockquote{border-left:2px solid #aaa;margin:1.5rem 0;padding-left:1rem;color:#444}
+code,pre{font-family:ui-monospace,monospace}pre{overflow:auto;background:#f4f4f4;padding:1rem}
+@media(max-width:600px){body{margin-top:2rem}.stats{gap:.75rem;flex-wrap:wrap}}
 """
 
 
@@ -187,7 +180,7 @@ def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
         confidence = float(metadata["confidence"])
         article_body = f"""
 <main class="article"><nav><a href="/">← All summaries</a></nav>
-<span class="badge {status}">{escape(status)}</span>
+<span class="status {status}">{escape(status)}</span>
 <h1>{escape(str(metadata["title"]))}</h1>
 <div class="meta"><span>{confidence:.0%} status confidence</span>
 <span>{escape(str(entry.get("model", "unknown model")))}</span>
@@ -197,25 +190,23 @@ def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
             _page(str(metadata["title"]), article_body),
             encoding="utf-8",
         )
-        description = (
-            "Summary available."
-            if status == "complete"
-            else "The source extraction needs attention before summarization."
-        )
         cards.append(
-            f"""<article class="card"><span class="badge {status}">{status}</span>
-<h2>{escape(str(metadata["title"]))}</h2><p>{escape(description)}</p>
-<p>{confidence:.0%} status confidence</p>
-<a class="open" href="articles/{article_name}">Read record →</a></article>"""
+            f"""<li><h2><a href="articles/{article_name}">{
+                escape(str(metadata["title"]))
+            }</a></h2>
+<span class="record-meta"><span class="status {status}">{status}</span>
+ · {confidence:.0%} status confidence · {
+                escape(str(entry.get("model", "unknown model")))
+            }</span>
+<small class="source">{escape(source_url)}</small></li>"""
         )
     index_body = f"""
-<header class="masthead"><div class="shell"><div class="eyebrow">Epitome index</div>
-<h1>Article summaries</h1><p class="intro">Compact, model-readable records of
+<header><h1>Article summaries</h1><p class="intro">Compact, model-readable records of
 OpenAI’s published articles, with extraction failures kept visible instead of
 silently summarized.</p><div class="stats"><span>{len(entries)} records</span>
 <span>{complete_count} complete</span><span>{error_count} need attention</span>
-</div></div></header><main class="shell"><section class="grid">
-{''.join(cards)}</section></main>"""
+</div></header><main><ul class="summary-list">
+{''.join(cards)}</ul></main>"""
     (output_dir / "index.html").write_text(
         _page("Article summaries", index_body),
         encoding="utf-8",
