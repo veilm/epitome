@@ -1,0 +1,44 @@
+#!/usr/bin/python
+"""Build and serve the static summary site locally."""
+
+from __future__ import annotations
+
+import argparse
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+import sys
+
+from epitome_lib.summary_site import build_summary_site
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--catalog", type=Path, default=Path("summaries/catalog.json"))
+    parser.add_argument("--output", type=Path, default=Path("dist/summaries"))
+    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--port", type=int, default=8014)
+    args = parser.parse_args()
+    try:
+        result = build_summary_site(args.catalog, args.output)
+    except (OSError, KeyError, ValueError) as error:
+        print(f"serve_summaries: {error}", file=sys.stderr)
+        return 1
+    handler = partial(SimpleHTTPRequestHandler, directory=str(args.output))
+    server = ThreadingHTTPServer((args.host, args.port), handler)
+    print(
+        f"Summaries: http://{args.host}:{args.port}/ "
+        f"({result['articles']} articles)",
+        flush=True,
+    )
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

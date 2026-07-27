@@ -1,0 +1,31 @@
+#!/usr/bin/python
+"""Build the static article-summary browser."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import sys
+
+from epitome_lib.summary_site import build_summary_site
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--catalog", type=Path, default=Path("summaries/catalog.json"))
+    parser.add_argument("--output", type=Path, default=Path("dist/summaries"))
+    args = parser.parse_args()
+    try:
+        result = build_summary_site(args.catalog, args.output)
+    except (OSError, KeyError, ValueError) as error:
+        print(f"build_summary_site: {error}", file=sys.stderr)
+        return 1
+    print(
+        f"Built {result['articles']} summary pages in {args.output} "
+        f"({result['complete']} complete, {result['errors']} need attention)"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
