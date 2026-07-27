@@ -99,10 +99,11 @@ def main() -> int:
     finally:
         if connected:
             if not args.keep_tab:
-                try:
-                    cdp.eval_json(session, "(window.close(), true)", timeout=5)
-                except cdp.CdpError:
-                    pass
+                if not cdp.close_session_tab(session):
+                    print(
+                        "url_to_markdown: warning: the extraction tab could not be closed",
+                        file=sys.stderr,
+                    )
             cdp.run(["disconnect", "--session", session], timeout=5, check=False)
 
     warning_text = "; ".join(report["warnings"]) or "no quality warnings"

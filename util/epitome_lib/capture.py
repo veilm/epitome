@@ -13,6 +13,7 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from . import cdp
+from .assets import complete_capture_assets
 
 
 SENSITIVE_REQUEST_HEADERS = {
@@ -152,6 +153,9 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
     complete_pages = 0
     html_pages = 0
     read_pages = 0
+    asset_attempts = 0
+    assets_completed = 0
+    asset_failures = 0
 
     for manifest_path in sorted(pages_dir.glob("*/manifest.json")):
         try:
@@ -160,6 +164,7 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
             continue
         page_dir = manifest_path.parent
         network = manifest.get("network_summary", {})
+        asset_completion = manifest.get("asset_completion", {})
         complete = bool(manifest.get("complete"))
         complete_pages += int(complete)
         html_pages += int((page_dir / "page.html").exists())
@@ -169,6 +174,9 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
         total_body_bytes += int(network.get("response_bytes", 0))
         total_body_errors += int(network.get("response_body_errors", 0))
         total_redactions += int(manifest.get("redacted_header_values", 0))
+        asset_attempts += int(asset_completion.get("attempted", 0))
+        assets_completed += int(asset_completion.get("completed", 0))
+        asset_failures += int(asset_completion.get("failed", 0))
         for host, count in network.get("hosts", {}).items():
             hosts[host] = hosts.get(host, 0) + int(count)
         for status, count in network.get("statuses", {}).items():
@@ -180,6 +188,9 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
                 "requests": int(network.get("requests", 0)),
                 "response_bytes": int(network.get("response_bytes", 0)),
                 "response_body_errors": int(network.get("response_body_errors", 0)),
+                "asset_attempts": int(asset_completion.get("attempted", 0)),
+                "assets_completed": int(asset_completion.get("completed", 0)),
+                "asset_failures": int(asset_completion.get("failed", 0)),
                 "duration_seconds": max(
                     0,
                     int(manifest.get("capture_finished_at", 0))
@@ -204,6 +215,9 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
         "response_bytes": total_body_bytes,
         "response_body_errors": total_body_errors,
         "redacted_header_values": total_redactions,
+        "asset_attempts": asset_attempts,
+        "assets_completed": assets_completed,
+        "asset_failures": asset_failures,
         "disk_bytes": disk_bytes,
         "hosts": dict(sorted(hosts.items(), key=lambda item: (-item[1], item[0]))),
         "statuses": dict(sorted(statuses.items())),
@@ -220,6 +234,11 @@ def capture_url(
     max_seconds: float = 90,
     settle_seconds: float = 2,
     keep_tab: bool = False,
+    complete_assets: bool = True,
+    max_assets: int = 50,
+    max_asset_bytes: int = 500 * 1024 * 1024,
+    asset_delay_seconds: float = 2,
+    asset_timeout: float = 90,
 ) -> dict[str, Any]:
     """Capture one URL and return its manifest.
 
@@ -240,6 +259,8 @@ def capture_url(
     logger: subprocess.Popen[str] | None = None
     logger_result = ("", "", 0)
     failure: BaseException | None = None
+    asset_completion: dict[str, Any] | None = None
+    final_page_url = url
 
     cdp.run(
         [
@@ -301,6 +322,7 @@ def capture_url(
             "html:document.documentElement.outerHTML})",
             timeout=30,
         )
+        final_page_url = page["url"]
         (output_dir / "page.html").write_text(page["html"], encoding="utf-8")
         read_result = cdp.run(
             ["read", "--session", session, "--json", "--wait"],
@@ -312,33 +334,75 @@ def capture_url(
     finally:
         if logger is not None:
             logger_result = _stop_network_log(logger)
+        if complete_assets and (output_dir / "page.html").exists():
+            try:
+                asset_completion = complete_capture_assets(
+                    output_dir / "page.html",
+                    network_dir,
+                    final_page_url,
+                    max_assets=max_assets,
+                    max_bytes=max_asset_bytes,
+                    delay_seconds=asset_delay_seconds,
+                    timeout=asset_timeout,
+                )
+            except (OSError, ValueError) as error:
+                asset_completion = {
+                    "attempted": 0,
+                    "completed": 0,
+                    "failed": 1,
+                    "error": f"{type(error).__name__}: {error}",
+                }
+            _write_json(output_dir / "asset-completion.json", asset_completion)
         redacted = redact_capture_headers(network_dir)
         summary = summarize_network(network_dir)
         manifest = {
             "capture_started_at": int(started_at),
             "capture_finished_at": int(time.time()),
             "requested_url": url,
+            "final_url": final_page_url,
             "session": session,
             "port": port,
             "limits": {
                 "max_scrolls": max_scrolls,
                 "max_seconds": max_seconds,
                 "settle_seconds": settle_seconds,
+                "complete_assets": complete_assets,
+                "max_assets": max_assets,
+                "max_asset_bytes": max_asset_bytes,
+                "asset_delay_seconds": asset_delay_seconds,
+                "asset_timeout": asset_timeout,
             },
             "redacted_header_values": redacted,
             "network_log_returncode": logger_result[2],
             "network_summary": summary,
             "complete": failure is None,
         }
+        if asset_completion is not None:
+            manifest["asset_completion"] = {
+                key: asset_completion.get(key)
+                for key in (
+                    "discovered",
+                    "already_complete",
+                    "attempted",
+                    "completed",
+                    "failed",
+                    "downloaded_bytes",
+                    "error",
+                )
+                if key in asset_completion
+            }
         if logger_result[1].strip():
             manifest["network_log_stderr"] = logger_result[1].strip()
         if failure is not None:
             manifest["error"] = f"{type(failure).__name__}: {failure}"
-        _write_json(output_dir / "manifest.json", manifest)
 
         if not keep_tab:
-            cdp.eval_json(session, "(window.close(), true)", timeout=5)
+            manifest["tab_closed"] = cdp.close_session_tab(session)
+        else:
+            manifest["tab_closed"] = False
+            manifest["tab_kept"] = True
         cdp.run(["disconnect", "--session", session], timeout=5, check=False)
+        _write_json(output_dir / "manifest.json", manifest)
 
     if failure is not None:
         raise failure

@@ -21,6 +21,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-seconds", type=float, default=90)
     parser.add_argument("--settle-seconds", type=float, default=2)
     parser.add_argument("--keep-tab", action="store_true")
+    parser.add_argument("--no-complete-assets", action="store_true")
+    parser.add_argument("--max-assets", type=int, default=50)
+    parser.add_argument("--max-asset-bytes", type=int, default=500 * 1024 * 1024)
+    parser.add_argument("--asset-delay-seconds", type=float, default=2)
+    parser.add_argument("--asset-timeout", type=float, default=90)
     return parser.parse_args()
 
 
@@ -36,6 +41,11 @@ def main() -> int:
             max_seconds=args.max_seconds,
             settle_seconds=args.settle_seconds,
             keep_tab=args.keep_tab,
+            complete_assets=not args.no_complete_assets,
+            max_assets=args.max_assets,
+            max_asset_bytes=args.max_asset_bytes,
+            asset_delay_seconds=args.asset_delay_seconds,
+            asset_timeout=args.asset_timeout,
         )
     except (RuntimeError, ValueError) as error:
         print(f"capture_url: {error}", file=sys.stderr)
@@ -45,9 +55,17 @@ def main() -> int:
         f"Captured {summary['requests']} responses "
         f"({summary['response_bytes']} body bytes) to {output}"
     )
+    completion = manifest.get("asset_completion")
+    if completion:
+        print(
+            "Asset completion: "
+            f"{completion.get('completed', 0)}/{completion.get('attempted', 0)} "
+            f"missing references recovered"
+        )
+    if not manifest.get("tab_closed") and not manifest.get("tab_kept"):
+        print("capture_url: warning: the capture tab could not be closed", file=sys.stderr)
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -17,17 +17,37 @@ is ignored by Git. It contains:
 - `response-body.bin` and JSON bodies where applicable;
 - `page.html`: the final rendered DOM;
 - `read.json`: the visibility-aware semantic view from `cdp read`;
+- `asset-completion.json`: referenced assets that were already complete,
+  recovered, failed, or skipped by a bound;
 - `manifest.json`: limits and response/host/byte counts.
 
 The logger is attached to an `about:blank` tab before navigation so it captures
 the main document. The utility then performs bounded scrolling to trigger lazy
-resources. Defaults are deliberately finite: 40 scroll operations and 90
-seconds.
+resources. After logging stops, a completion pass discovers resource URLs in
+the rendered HTML and captured CSS, then explicitly downloads any whose complete
+bodies are absent. A `206 Partial Content` response counts as complete only when
+its range covers the entire declared entity. When a request cap applies,
+audiovisual files are prioritized, followed by documents and images. Defaults
+are deliberately finite:
+40 scroll operations, 90 seconds, at most 50 recovery requests, and at most
+500 MiB of recovered bodies. Recovery requests are spaced two seconds apart.
+
+When all capture and recovery work is finished, Epitome closes the exact CDP
+target recorded in its session and disconnects. It does not close unrelated
+browser tabs. `--keep-tab` is available for interactive debugging.
 
 Useful smaller research run:
 
 ```sh
 util/capture_url URL --max-scrolls 4 --max-seconds 30
+```
+
+Asset recovery can be tuned or disabled:
+
+```sh
+util/capture_url URL --max-assets 10 --max-asset-bytes 104857600 \
+  --asset-delay-seconds 5
+util/capture_url URL --no-complete-assets
 ```
 
 ## Capture a bounded URL list
@@ -60,8 +80,9 @@ causes browser traffic.
 
 ## Current limitations
 
-- Only resources actually requested by the browser are captured. Unopened tabs,
-  carousel states, downloads, and deep iframe interactions may be absent.
+- Resource completion follows rendered HTML and captured CSS references but
+  does not recursively crawl linked pages or iframe dependencies. Unopened
+  carousel states and interaction-only downloads may still be absent.
 - The final DOM is captured after bounded scrolling, not exhaustive interaction.
 - Captures are response-oriented directories, not yet a directly servable tree.
 - A static materializer/replay server still needs to map complete URLs (including

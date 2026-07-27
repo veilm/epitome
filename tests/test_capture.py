@@ -1,8 +1,16 @@
 from pathlib import Path
 import json
 import tempfile
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import threading
 import unittest
 
+from util.epitome_lib.assets import (
+    asset_priority,
+    complete_body,
+    complete_capture_assets,
+    discover_html_assets,
+)
 from util.epitome_lib.capture import (
     redact_capture_headers,
     summarize_crawl,
@@ -10,6 +18,20 @@ from util.epitome_lib.capture import (
     url_slug,
     validate_url,
 )
+
+
+class _AssetHandler(BaseHTTPRequestHandler):
+    body = b"complete media body"
+
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "video/mp4")
+        self.send_header("Content-Length", str(len(self.body)))
+        self.end_headers()
+        self.wfile.write(self.body)
+
+    def log_message(self, format, *args):
+        pass
 
 
 class CaptureHelpersTest(unittest.TestCase):
@@ -69,6 +91,11 @@ class CaptureHelpersTest(unittest.TestCase):
                         "capture_started_at": 10,
                         "capture_finished_at": 15,
                         "redacted_header_values": 2,
+                        "asset_completion": {
+                            "attempted": 4,
+                            "completed": 3,
+                            "failed": 1,
+                        },
                         "network_summary": {
                             "requests": 3,
                             "response_bodies": 2,
@@ -86,7 +113,106 @@ class CaptureHelpersTest(unittest.TestCase):
             self.assertEqual(summary["complete_pages"], 1)
             self.assertEqual(summary["requests"], 3)
             self.assertEqual(summary["response_bytes"], 100)
+            self.assertEqual(summary["asset_attempts"], 4)
+            self.assertEqual(summary["assets_completed"], 3)
+            self.assertEqual(summary["asset_failures"], 1)
             self.assertEqual(summary["page_summaries"][0]["duration_seconds"], 5)
+
+    def test_asset_discovery(self):
+        urls = discover_html_assets(
+            """
+            <video poster="/poster.jpg"><source src="/movie.mp4"></video>
+            <img src="/small.jpg" srcset="/medium.jpg 2x, /large.jpg 3x">
+            <link rel="canonical" href="/article">
+            <link rel="stylesheet" href="/site.css">
+            <a href="/paper.pdf">Paper</a>
+            """,
+            "https://example.com/posts/one",
+        )
+        self.assertEqual(
+            urls,
+            {
+                "https://example.com/poster.jpg",
+                "https://example.com/movie.mp4",
+                "https://example.com/small.jpg",
+                "https://example.com/medium.jpg",
+                "https://example.com/large.jpg",
+                "https://example.com/site.css",
+                "https://example.com/paper.pdf",
+            },
+        )
+
+    def test_asset_priority_favors_media_and_documents(self):
+        urls = [
+            "https://example.com/app.js",
+            "https://example.com/image.jpg",
+            "https://example.com/paper.pdf",
+            "https://example.com/movie.mp4",
+        ]
+        self.assertEqual(
+            sorted(urls, key=asset_priority),
+            [
+                "https://example.com/movie.mp4",
+                "https://example.com/paper.pdf",
+                "https://example.com/image.jpg",
+                "https://example.com/app.js",
+            ],
+        )
+
+    def test_partial_response_is_complete_only_when_it_contains_full_entity(self):
+        with tempfile.TemporaryDirectory() as temp:
+            record = Path(temp)
+            (record / "response-body.bin").write_bytes(b"12345")
+            (record / "response-headers.json").write_text(
+                json.dumps(
+                    {
+                        "content-length": "5",
+                        "content-range": "bytes 0-4/5",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertTrue(complete_body(record, {"status": "206"}))
+            (record / "response-headers.json").write_text(
+                json.dumps(
+                    {
+                        "content-length": "5",
+                        "content-range": "bytes 5-9/10",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertFalse(complete_body(record, {"status": "206"}))
+
+    def test_asset_completion_downloads_a_missing_reference(self):
+        server = ThreadingHTTPServer(("127.0.0.1", 0), _AssetHandler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            with tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                network = root / "network"
+                network.mkdir()
+                url = f"http://127.0.0.1:{server.server_port}/movie.mp4"
+                page = root / "page.html"
+                page.write_text(f'<video src="{url}"></video>', encoding="utf-8")
+                report = complete_capture_assets(
+                    page,
+                    network,
+                    url,
+                    max_assets=1,
+                    max_bytes=1024,
+                    delay_seconds=0,
+                )
+                self.assertEqual(report["completed"], 1)
+                self.assertEqual(report["downloaded_bytes"], len(_AssetHandler.body))
+                bodies = list(network.glob("*/response-body.bin"))
+                self.assertEqual(len(bodies), 1)
+                self.assertEqual(bodies[0].read_bytes(), _AssetHandler.body)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
 
 
 if __name__ == "__main__":
