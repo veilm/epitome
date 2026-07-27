@@ -1,0 +1,74 @@
+#!/usr/bin/python
+"""Summarize one extracted article with an isolated headless Codex run."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import sys
+
+from epitome_lib.summary import (
+    parse_front_matter,
+    summarize_article,
+    url_slug,
+)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input", type=Path)
+    parser.add_argument("--source-url")
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--catalog", type=Path, default=Path("summaries/catalog.json"))
+    parser.add_argument(
+        "--prompt-template",
+        type=Path,
+        default=Path("research/summary_prompt.md"),
+    )
+    parser.add_argument("--model", default="gpt-5.6-terra")
+    parser.add_argument("--reasoning-effort", default="medium")
+    parser.add_argument("--timeout", type=float, default=900)
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    try:
+        input_text = args.input.read_text(encoding="utf-8")
+        input_metadata, _ = parse_front_matter(input_text)
+    except OSError as error:
+        print(f"summarize_article: {error}", file=sys.stderr)
+        return 2
+    except ValueError:
+        input_metadata = {}
+    source_url = args.source_url or input_metadata.get("canonical_url")
+    if not isinstance(source_url, str) or not source_url.startswith(("http://", "https://")):
+        print(
+            "summarize_article: provide --source-url or canonical_url front matter",
+            file=sys.stderr,
+        )
+        return 2
+    output = args.output or Path("summaries/articles") / f"{url_slug(source_url)}.md"
+    try:
+        entry = summarize_article(
+            args.input,
+            source_url,
+            output_path=output,
+            catalog_path=args.catalog,
+            prompt_template_path=args.prompt_template,
+            model=args.model,
+            reasoning_effort=args.reasoning_effort,
+            timeout=args.timeout,
+        )
+    except (OSError, ValueError) as error:
+        print(f"summarize_article: {error}", file=sys.stderr)
+        return 1
+    print(
+        f"Summary {entry['status']} ({entry['confidence']:.0%} confidence): "
+        f"{output}"
+    )
+    return 0 if entry["status"] == "complete" else 3
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
