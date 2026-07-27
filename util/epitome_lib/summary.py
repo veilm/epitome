@@ -124,7 +124,7 @@ def summarize_article(
     output_path: Path,
     catalog_path: Path,
     prompt_template_path: Path,
-    codex_command: Sequence[str] = ("cdx",),
+    codex_command: Sequence[str] = ("codex",),
     model: str = "gpt-5.6-terra",
     reasoning_effort: str = "medium",
     timeout: float = 900,
@@ -215,7 +215,6 @@ def summarize_article(
     input_sha256 = hashlib.sha256(input_text.encode()).hexdigest()
     entry = {
         "confidence": float(metadata["confidence"]),
-        "codex_command": list(codex_command),
         "content_path": os.path.relpath(output_path, catalog_path.parent),
         "generated_at": int(time.time()),
         "input_characters": len(input_text),
@@ -231,6 +230,7 @@ def summarize_article(
         json.dumps(
             {
                 **entry,
+                "codex_command": list(codex_command),
                 "codex_returncode": returncode,
                 "duration_seconds": int(time.time()) - started_at,
                 "output_path": str(output_path),

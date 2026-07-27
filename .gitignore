@@ -11,8 +11,8 @@
 
 # Local/runtime files
 .env
+.epitome-local.json
 .venv/
 __pycache__/
 *.py[cod]
 *.log
-

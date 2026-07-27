@@ -1,4 +1,5 @@
 from pathlib import Path
+import inspect
 import json
 import tempfile
 import unittest
@@ -6,6 +7,7 @@ import unittest
 from util.epitome_lib.summary import (
     error_summary,
     parse_front_matter,
+    summarize_article,
     validate_summary,
     write_catalog,
 )
@@ -58,13 +60,19 @@ The input was empty.
                 "source_url": "https://example.com/a",
                 "content_path": "articles/a.md",
                 "status": "complete",
-                "codex_command": ["cdx"],
             }
             write_catalog(catalog, first)
             write_catalog(catalog, {**first, "status": "error"})
             entries = json.loads(catalog.read_text(encoding="utf-8"))
             self.assertEqual(entries, [{**first, "status": "error"}])
             self.assertNotIn("content", entries[0])
+            self.assertNotIn("codex_command", entries[0])
+
+    def test_portable_runner_defaults_to_standard_codex(self):
+        default = inspect.signature(summarize_article).parameters[
+            "codex_command"
+        ].default
+        self.assertEqual(default, ("codex",))
 
     def test_input_front_matter_supports_json_values(self):
         metadata, body = parse_front_matter(

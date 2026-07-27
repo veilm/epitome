@@ -12,7 +12,7 @@ util/summarize_article output/markdown/openai.com-index-example.md
 
 The default invocation uses:
 
-- the workstation's `cdx exec` wrapper in a newly created temporary directory;
+- standard `codex exec` in a newly created temporary directory;
 - `gpt-5.6-terra` with medium reasoning;
 - an ephemeral session;
 - a temporary workspace containing only the input and requested output;
@@ -51,22 +51,29 @@ Tracked results are stored as:
 Markdown content stays out of JSON. `content_path` is relative to the catalog.
 Re-running the same source URL replaces its catalog entry.
 
-`cdx` selects and exports the workstation's stored `CODEX_HOME` before launching
-Codex, so the pipeline uses the intended local authentication. The wrapper
-currently also injects `--dangerously-bypass-approvals-and-sandbox`; therefore
-the temporary directory and prompt constrain the job's intended scope, but this
-is not an OS-enforced Codex sandbox.
-
-The command prefix is configurable:
+The portable command prefix is configurable without changing repository code:
 
 ```sh
-util/summarize_article INPUT --codex-command 'cdx now8pm'
-EPITOME_CODEX_COMMAND='cdx ms2' util/summarize_article INPUT
+util/summarize_article INPUT \
+  --codex-command 'custom-codex-wrapper profile'
+EPITOME_CODEX_COMMAND='custom-codex-wrapper profile' \
+  util/summarize_article INPUT
 ```
 
 This accepts a command prefix rather than only an executable path so account
-selectors and future wrappers can be used. Each catalog entry records the exact
-prefix.
+selectors and future wrappers can be used.
+
+`util/summarize_article_workstation` is a separate local adapter. It reads
+`codex_command` from the ignored `.epitome-local.json` and forwards that prefix
+to the portable utility. This keeps authentication paths and workstation
+account names out of Git while allowing the local configuration to remain
+one command:
+
+```json
+{
+  "codex_command": ["custom-codex-wrapper", "profile"]
+}
+```
 
 ## Build and view the summary site
 
@@ -85,7 +92,7 @@ input ended during footnote 3 even though the article referenced eight
 footnotes. After adding bounded scrolling and note-target validation, the
 article was extracted again with all eight notes.
 
-The current two records were both generated through `cdx`:
+The current two records were regenerated through the configured local adapter:
 
 - the 2023 “ChatGPT can now see, hear, and speak” extraction summarized
   successfully with 95% status confidence;

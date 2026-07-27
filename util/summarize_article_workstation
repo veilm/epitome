@@ -1,0 +1,45 @@
+#!/usr/bin/python
+"""Run summarize_article with an ignored workstation command configuration."""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+import shlex
+import sys
+
+
+REPOSITORY_ROOT = Path(__file__).resolve().parent.parent
+CONFIG_PATH = REPOSITORY_ROOT / ".epitome-local.json"
+PORTABLE_UTILITY = REPOSITORY_ROOT / "util" / "summarize_article"
+
+
+def main() -> int:
+    try:
+        config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+        command = config["codex_command"]
+        if (
+            not isinstance(command, list)
+            or not command
+            or not all(isinstance(value, str) and value for value in command)
+        ):
+            raise ValueError("codex_command must be a non-empty string array")
+    except (OSError, KeyError, json.JSONDecodeError, ValueError) as error:
+        print(
+            f"summarize_article_workstation: invalid {CONFIG_PATH}: {error}",
+            file=sys.stderr,
+        )
+        return 2
+    arguments = [
+        str(PORTABLE_UTILITY),
+        *sys.argv[1:],
+        "--codex-command",
+        shlex.join(command),
+    ]
+    os.execv(PORTABLE_UTILITY, arguments)
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

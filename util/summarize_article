@@ -31,8 +31,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--reasoning-effort", default="medium")
     parser.add_argument(
         "--codex-command",
-        default=os.environ.get("EPITOME_CODEX_COMMAND", "cdx"),
-        help="command prefix for Codex (default: cdx; env: EPITOME_CODEX_COMMAND)",
+        default=os.environ.get("EPITOME_CODEX_COMMAND", "codex"),
+        help="command prefix for Codex (default: codex; env: EPITOME_CODEX_COMMAND)",
     )
     parser.add_argument("--timeout", type=float, default=900)
     return parser.parse_args()
