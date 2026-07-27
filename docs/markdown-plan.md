@@ -33,6 +33,9 @@ The command also writes ignored research artifacts below `data/extractions/`:
 
 Use `--selector` to override automatic selection for a one-off page. Use
 `--strict` when a pipeline should return nonzero for quality warnings.
+The browser performs bounded scrolling before extraction so lazy article
+sections and footnotes have a chance to render. `--max-scrolls` and
+`--max-scroll-seconds` tune those limits.
 
 ## How it works
 
@@ -84,6 +87,11 @@ The report is the first automatic review layer. A suspiciously short body,
 missing title, or low word coverage produces a warning. Media without source
 URLs is recorded as an observation rather than a failure because the output is
 text-oriented.
+
+The report also compares note links with note targets. A reference such as
+`#citation-bottom-8` without a corresponding element is a quality warning; this
+catches partially hydrated footnote lists that otherwise look like plausible
+article endings.
 
 A future LLM reviewer can receive:
 

@@ -28,6 +28,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--selector", help="override automatic main-content selection")
     parser.add_argument("--port", type=int, default=2103)
     parser.add_argument("--wait-ms", type=int, default=1000)
+    parser.add_argument("--max-scrolls", type=int, default=40)
+    parser.add_argument("--max-scroll-seconds", type=float, default=60)
     parser.add_argument("--keep-tab", action="store_true")
     parser.add_argument("--strict", action="store_true", help="return nonzero for quality warnings")
     return parser.parse_args()
@@ -70,7 +72,15 @@ def main() -> int:
         cdp.run(["wait", "--session", session], timeout=45)
         if args.wait_ms:
             time.sleep(max(0, args.wait_ms) / 1000)
+        scroll_result = cdp.scroll_to_stable_bottom(
+            session,
+            max_scrolls=args.max_scrolls,
+            max_seconds=args.max_scroll_seconds,
+        )
+        if args.wait_ms:
+            time.sleep(max(0, args.wait_ms) / 1000)
         extraction = extract_page(session, args.url, args.selector)
+        extraction["scrollResult"] = scroll_result
         markdown, report = convert_extraction(extraction, captured_at)
 
         artifacts.mkdir(parents=True, exist_ok=False)

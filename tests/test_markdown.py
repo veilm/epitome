@@ -1,6 +1,10 @@
 import unittest
 
-from util.epitome_lib.extraction import parse_timestamp
+from util.epitome_lib.extraction import (
+    convert_extraction,
+    missing_note_targets,
+    parse_timestamp,
+)
 from util.epitome_lib.html_to_markdown import MarkdownRenderer, word_coverage
 
 
@@ -43,6 +47,24 @@ class MarkdownTest(unittest.TestCase):
         self.assertEqual(parse_timestamp("1970-01-01T00:00:10Z"), 10)
         self.assertEqual(parse_timestamp("January 1, 1970"), 0)
         self.assertAlmostEqual(word_coverage("one two two", "one two"), 2 / 3)
+
+    def test_missing_note_targets_are_reported(self):
+        html = """
+        <p>Claims<a href="#citation-bottom-1">1</a>
+        and<a href="https://example.com/a#citation-bottom-2">2</a>.</p>
+        <ol><li id="citation-bottom-1">First note.</li></ol>
+        """
+        self.assertEqual(missing_note_targets(html), ["citation-bottom-2"])
+        _, report = convert_extraction(
+            {
+                "canonical": "https://example.com/a",
+                "contentHtml": html,
+                "sourceText": "Claims 1 and 2. First note.",
+                "title": "Article",
+            },
+            100,
+        )
+        self.assertIn("citation-bottom-2", report["warnings"][-1])
 
 
 if __name__ == "__main__":

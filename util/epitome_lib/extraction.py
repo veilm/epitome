@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 import hashlib
 import json
 from pathlib import Path
@@ -18,6 +19,33 @@ from .html_to_markdown import MarkdownRenderer, word_coverage
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 EXTRACTOR_PATH = REPOSITORY_ROOT / "research/extract_page.js"
 RULES_PATH = REPOSITORY_ROOT / "research/site_rules.json"
+NOTE_TARGET_RE = re.compile(r"^(?:citation(?:-bottom)?|footnote|fn)[-_]?\d+", re.IGNORECASE)
+
+
+class _FragmentTargets(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.ids: set[str] = set()
+        self.references: set[str] = set()
+
+    def handle_starttag(
+        self,
+        tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        values = {name.lower(): value for name, value in attrs if value is not None}
+        if "id" in values:
+            self.ids.add(values["id"])
+        if tag.lower() == "a" and "href" in values:
+            fragment = urlsplit(values["href"]).fragment
+            if fragment and NOTE_TARGET_RE.match(fragment):
+                self.references.add(fragment)
+
+
+def missing_note_targets(html: str) -> list[str]:
+    parser = _FragmentTargets()
+    parser.feed(html)
+    return sorted(parser.references - parser.ids)
 
 
 def site_options(url: str, selector: str | None = None) -> dict[str, Any]:
@@ -102,6 +130,11 @@ def convert_extraction(extraction: dict[str, Any], captured_at: int) -> tuple[st
         warnings.append("body is unusually short")
     if coverage < 0.9:
         warnings.append(f"text coverage below 90% ({coverage:.1%})")
+    missing_notes = missing_note_targets(extraction["contentHtml"])
+    if missing_notes:
+        warnings.append(
+            "missing referenced note targets: " + ", ".join(missing_notes)
+        )
     missing_media = int(extraction.get("mediaWithoutSource", 0))
     document_characters = int(extraction.get("documentHtmlCharacters", 0))
     report = {
@@ -115,6 +148,8 @@ def convert_extraction(extraction: dict[str, Any], captured_at: int) -> tuple[st
         "word_coverage": round(coverage, 6),
         "media_elements": int(extraction.get("mediaCount", 0)),
         "media_without_source": missing_media,
+        "missing_note_targets": missing_notes,
+        "scroll_result": extraction.get("scrollResult"),
         "warnings": warnings,
     }
     return markdown, report
