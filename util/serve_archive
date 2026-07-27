@@ -1,0 +1,193 @@
+#!/usr/bin/python
+"""Serve captured pages through an offline-only local replay layer."""
+
+from __future__ import annotations
+
+import argparse
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+import re
+import sys
+from urllib.parse import urlsplit
+
+from epitome_lib.replay import (
+    CaptureIndex,
+    archive_index_html,
+    decode_url,
+    rewrite_css,
+    rewrite_html,
+    unavailable_html,
+)
+
+
+RANGE_RE = re.compile(r"bytes=(\d*)-(\d*)$")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "capture_roots",
+        nargs="*",
+        type=Path,
+        default=[Path("data")],
+        help="capture trees to index (default: data)",
+    )
+    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--port", type=int, default=8013)
+    parser.add_argument("--verbose", action="store_true")
+    return parser.parse_args()
+
+
+def make_handler(index: CaptureIndex, *, verbose: bool = False):
+    class ArchiveHandler(BaseHTTPRequestHandler):
+        def log_message(self, format, *args):
+            if verbose:
+                super().log_message(format, *args)
+
+        def _send(
+            self,
+            body: bytes,
+            content_type: str,
+            *,
+            status: int = 200,
+            allow_range: bool = False,
+            head_only: bool = False,
+        ) -> None:
+            start = 0
+            end = len(body) - 1
+            if allow_range and (value := self.headers.get("Range")):
+                match = RANGE_RE.fullmatch(value.strip())
+                if match:
+                    first, last = match.groups()
+                    if first:
+                        start = int(first)
+                        end = int(last) if last else end
+                    elif last:
+                        start = max(0, len(body) - int(last))
+                    end = min(end, len(body) - 1)
+                    if start > end or start >= len(body):
+                        self.send_response(416)
+                        self.send_header("Content-Range", f"bytes */{len(body)}")
+                        self.end_headers()
+                        return
+                    status = 206
+            selected = body[start : end + 1]
+            self.send_response(status)
+            self.send_header("Content-Type", content_type)
+            self.send_header("Content-Length", str(len(selected)))
+            self.send_header("Cache-Control", "no-store")
+            if allow_range:
+                self.send_header("Accept-Ranges", "bytes")
+            if status == 206:
+                self.send_header(
+                    "Content-Range",
+                    f"bytes {start}-{end}/{len(body)}",
+                )
+            self.end_headers()
+            if not head_only:
+                self.wfile.write(selected)
+
+        def _dispatch(self, *, head_only: bool) -> None:
+            path = urlsplit(self.path).path
+            if path in {"/", "/index.html"}:
+                self._send(
+                    archive_index_html(index).encode(),
+                    "text/html; charset=utf-8",
+                    head_only=head_only,
+                )
+                return
+            if path == "/health":
+                self._send(b"ok\n", "text/plain; charset=utf-8", head_only=head_only)
+                return
+            prefix, _, token = path.lstrip("/").partition("/")
+            try:
+                url = decode_url(token)
+            except (ValueError, UnicodeDecodeError):
+                self.send_error(400, "Invalid archive URL")
+                return
+            if prefix == "replay":
+                page = index.page(url)
+                if not page:
+                    self.send_error(404, "Captured page not found")
+                    return
+                html = rewrite_html(
+                    page.html_path.read_text(encoding="utf-8"),
+                    url,
+                    index,
+                )
+                self._send(
+                    html.encode(),
+                    "text/html; charset=utf-8",
+                    head_only=head_only,
+                )
+                return
+            if prefix == "resource":
+                resource = index.resource(url)
+                if not resource:
+                    self.send_error(404, "Captured resource not found")
+                    return
+                body = resource.body_path.read_bytes()
+                content_type = resource.content_type
+                if "text/css" in content_type:
+                    body = rewrite_css(
+                        body.decode("utf-8", errors="replace"),
+                        url,
+                    ).encode()
+                elif "text/html" in content_type:
+                    body = rewrite_html(
+                        body.decode("utf-8", errors="replace"),
+                        url,
+                        index,
+                    ).encode()
+                self._send(
+                    body,
+                    content_type,
+                    allow_range=True,
+                    head_only=head_only,
+                )
+                return
+            if prefix == "unavailable":
+                self._send(
+                    unavailable_html(url).encode(),
+                    "text/html; charset=utf-8",
+                    head_only=head_only,
+                )
+                return
+            self.send_error(404)
+
+        def do_GET(self):
+            self._dispatch(head_only=False)
+
+        def do_HEAD(self):
+            self._dispatch(head_only=True)
+
+    return ArchiveHandler
+
+
+def main() -> int:
+    args = parse_args()
+    roots = args.capture_roots or [Path("data")]
+    index = CaptureIndex.from_roots(roots)
+    if not index.pages:
+        print("serve_archive: no captured pages found", file=sys.stderr)
+        return 1
+    server = ThreadingHTTPServer(
+        (args.host, args.port),
+        make_handler(index, verbose=args.verbose),
+    )
+    print(
+        f"Archive: http://{args.host}:{args.port}/ "
+        f"({len(index.unique_pages())} pages, {len(index.resources)} resources)",
+        flush=True,
+    )
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

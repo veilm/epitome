@@ -18,4 +18,9 @@ Quick start:
 ```sh
 util/capture_url 'https://openai.com/index/example/'
 util/url_to_markdown 'https://openai.com/index/example/'
+util/serve_archive data --port 8013
 ```
+
+The archive browser is then available at `http://127.0.0.1:8013/`. It rewrites
+captured pages for local-only static replay and never falls back to the live
+site. See [docs/replay.md](docs/replay.md).
