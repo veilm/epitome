@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from html import escape, unescape
 from html.parser import HTMLParser
 import base64
+import ipaddress
 import json
 from pathlib import Path
 import re
@@ -64,6 +65,18 @@ def normalize_url(value: str, base_url: str) -> str | None:
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return None
     return parsed._replace(fragment="").geturl()
+
+
+def is_archival_url(value: str) -> bool:
+    parsed = urlsplit(value)
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+        return False
+    if parsed.hostname.lower() == "localhost":
+        return False
+    try:
+        return not ipaddress.ip_address(parsed.hostname).is_loopback
+    except ValueError:
+        return True
 
 
 @dataclass(frozen=True)
@@ -138,7 +151,7 @@ class CaptureIndex:
                 manifest.get("requested_url"),
                 manifest.get("final_url"),
             )
-            if isinstance(value, str) and value
+            if isinstance(value, str) and value and is_archival_url(value)
         }
         for url in urls:
             current = self.pages.get(url)
@@ -170,7 +183,7 @@ class CaptureIndex:
         urls = {
             value
             for value in (metadata.get("url"), metadata.get("finalUrl"))
-            if isinstance(value, str) and value
+            if isinstance(value, str) and value and is_archival_url(value)
         }
         for url in urls:
             current = self.resources.get(url)

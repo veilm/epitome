@@ -105,6 +105,23 @@ class ReplayTest(unittest.TestCase):
             index = CaptureIndex.from_roots([Path(temp)])
             self.assertIsNone(index.resource("https://example.com/image.png"))
 
+    def test_index_ignores_replay_capture_recursion(self):
+        with tempfile.TemporaryDirectory() as temp:
+            page = Path(temp) / "capture"
+            page.mkdir()
+            (page / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "capture_started_at": 100,
+                        "requested_url": "http://127.0.0.1:8013/replay/example",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (page / "page.html").write_text("<html></html>", encoding="utf-8")
+            index = CaptureIndex.from_roots([Path(temp)])
+            self.assertEqual(index.pages, {})
+
 
 if __name__ == "__main__":
     unittest.main()
