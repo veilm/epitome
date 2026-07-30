@@ -69,9 +69,17 @@ util/capture_urls --url-file data/urls.txt
 ```
 
 Batch capture is sequential and refuses more than 10 unique URLs unless
-`--max-urls` is explicitly raised. It pauses 10 seconds between pages by
-default; use `--delay-seconds` to increase that interval. Each run has a
-`progress.jsonl` ledger.
+`--max-urls` is explicitly raised. Before starting, it scans complete captures
+below `data/` and skips their requested and final URLs, treating fragments and
+trailing-slash differences as the same page. Incomplete captures remain
+eligible for retry. Use repeatable `--existing-root` options to scan other
+archive roots, or the explicit `--allow-recapture` escape hatch when a fresh
+copy is intentional.
+
+The default pause grows with the post-deduplication batch size: 10 seconds for
+up to 10 pages, 15 for 20, 20 for 40, 30 for 80, and 45 above 80. An explicit
+`--delay-seconds` overrides it. Each run records the effective delay, selected
+URLs, and skipped existing URLs in its `progress.jsonl` ledger.
 
 Summarize a completed run with:
 
@@ -89,6 +97,19 @@ research/list_sitemap_urls https://openai.com/sitemap.xml \
 
 Listing and capturing are separate so the URL set can be inspected before it
 causes browser traffic.
+
+Prepare a bounded article-only batch while preserving sitemap order and
+excluding every completed capture:
+
+```sh
+research/select_uncaptured_urls data/openai-sitemap-urls.txt \
+  --url-prefix https://openai.com/index/ --max-urls 80 \
+  --output data/next-openai-index-urls.txt
+util/capture_urls --url-file data/next-openai-index-urls.txt --max-urls 80
+```
+
+The selector and the capture command independently enforce the completed-page
+check, so a stale selection file cannot silently cause duplicate acquisition.
 
 ## Current limitations
 

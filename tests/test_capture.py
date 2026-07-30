@@ -14,7 +14,10 @@ from util.epitome_lib.assets import (
     discover_vimeo_video_asset,
 )
 from util.epitome_lib.capture import (
+    archival_url_key,
+    completed_capture_urls,
     redact_capture_headers,
+    recommended_page_delay,
     summarize_crawl,
     summarize_network,
     url_slug,
@@ -45,6 +48,50 @@ class CaptureHelpersTest(unittest.TestCase):
         self.assertEqual(validate_url("https://example.com/a"), "https://example.com/a")
         with self.assertRaises(ValueError):
             validate_url("file:///tmp/page.html")
+
+    def test_completed_capture_urls_normalizes_and_requires_complete_html(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            complete = root / "complete"
+            complete.mkdir()
+            (complete / "page.html").write_text("<html></html>", encoding="utf-8")
+            (complete / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "complete": True,
+                        "requested_url": "HTTPS://OPENAI.COM/index/example/",
+                        "final_url": "https://openai.com/index/example/#section",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            incomplete = root / "incomplete"
+            incomplete.mkdir()
+            (incomplete / "page.html").write_text("<html></html>", encoding="utf-8")
+            (incomplete / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "complete": False,
+                        "requested_url": "https://openai.com/index/retry/",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                completed_capture_urls([root]),
+                {"https://openai.com/index/example"},
+            )
+            self.assertEqual(
+                archival_url_key("https://openai.com/index/example/"),
+                "https://openai.com/index/example",
+            )
+
+    def test_page_delay_scales_with_batch_size(self):
+        self.assertEqual(recommended_page_delay(10), 10)
+        self.assertEqual(recommended_page_delay(20), 15)
+        self.assertEqual(recommended_page_delay(40), 20)
+        self.assertEqual(recommended_page_delay(80), 30)
+        self.assertEqual(recommended_page_delay(81), 45)
 
     def test_summary_and_header_redaction(self):
         with tempfile.TemporaryDirectory() as temp:

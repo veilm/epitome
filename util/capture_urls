@@ -9,7 +9,14 @@ from pathlib import Path
 import sys
 import time
 
-from epitome_lib.capture import capture_url, url_slug, validate_url
+from epitome_lib.capture import (
+    archival_url_key,
+    capture_url,
+    completed_capture_urls,
+    recommended_page_delay,
+    url_slug,
+    validate_url,
+)
 
 
 def load_urls(positional: list[str], url_file: Path | None) -> list[str]:
@@ -41,6 +48,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--url-file", type=Path)
     parser.add_argument("--output-root", type=Path)
     parser.add_argument(
+        "--existing-root",
+        action="append",
+        type=Path,
+        help="skip completed captures below this root (repeatable; default: data)",
+    )
+    parser.add_argument(
+        "--allow-recapture",
+        action="store_true",
+        help="capture URLs even when a complete archived copy already exists",
+    )
+    parser.add_argument(
         "--max-urls",
         type=int,
         default=10,
@@ -58,8 +76,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--delay-seconds",
         type=float,
-        default=10,
-        help="pause between page captures (default: 10 seconds)",
+        help="pause between pages (default: 10-45 seconds based on batch size)",
     )
     parser.add_argument("--stop-on-error", action="store_true")
     return parser.parse_args()
@@ -75,10 +92,33 @@ def main() -> int:
     if not urls:
         print("capture_urls: no URLs supplied", file=sys.stderr)
         return 2
+    existing_roots = args.existing_root or [Path("data")]
+    skipped_existing = []
+    if not args.allow_recapture:
+        completed = completed_capture_urls(existing_roots)
+        skipped_existing = [
+            url for url in urls if archival_url_key(url) in completed
+        ]
+        urls = [
+            url for url in urls if archival_url_key(url) not in completed
+        ]
+        if skipped_existing:
+            print(
+                f"Skipping {len(skipped_existing)} already completed URL(s)",
+                flush=True,
+            )
+    if not urls:
+        print("capture_urls: every supplied URL already has a complete capture")
+        return 0
     if args.max_urls < 1:
         print("capture_urls: --max-urls must be positive", file=sys.stderr)
         return 2
-    if args.delay_seconds < 0:
+    delay_seconds = (
+        args.delay_seconds
+        if args.delay_seconds is not None
+        else recommended_page_delay(len(urls))
+    )
+    if delay_seconds < 0:
         print("capture_urls: --delay-seconds must be non-negative", file=sys.stderr)
         return 2
     if len(urls) > args.max_urls:
@@ -97,7 +137,13 @@ def main() -> int:
     failures = 0
     append_event(
         progress,
-        {"event": "start", "timestamp": run_timestamp, "urls": urls},
+        {
+            "delay_seconds": delay_seconds,
+            "event": "start",
+            "skipped_existing": skipped_existing,
+            "timestamp": run_timestamp,
+            "urls": urls,
+        },
     )
     for index, url in enumerate(urls, start=1):
         output = pages / f"{index:06d}-{url_slug(url)}"
@@ -143,20 +189,20 @@ def main() -> int:
             print(f"capture_urls: {url}: {error}", file=sys.stderr)
             if args.stop_on_error:
                 break
-        if index < len(urls) and args.delay_seconds:
+        if index < len(urls) and delay_seconds:
             append_event(
                 progress,
                 {
                     "event": "delay",
                     "after_index": index,
-                    "seconds": args.delay_seconds,
+                    "seconds": delay_seconds,
                 },
             )
             print(
-                f"Waiting {args.delay_seconds:g} seconds before the next article",
+                f"Waiting {delay_seconds:g} seconds before the next article",
                 flush=True,
             )
-            time.sleep(args.delay_seconds)
+            time.sleep(delay_seconds)
     append_event(
         progress,
         {"event": "finish", "timestamp": int(time.time()), "failures": failures},

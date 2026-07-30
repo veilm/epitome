@@ -1,0 +1,72 @@
+#!/usr/bin/python
+"""Select a bounded, ordered URL list that has no complete archived copy."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "util"))
+
+from epitome_lib.capture import (
+    archival_url_key,
+    completed_capture_urls,
+    validate_url,
+)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("url_file", type=Path)
+    parser.add_argument("--existing-root", action="append", type=Path)
+    parser.add_argument("--url-prefix")
+    parser.add_argument("--max-urls", type=int, default=80)
+    parser.add_argument("--output", type=Path)
+    args = parser.parse_args()
+
+    if args.max_urls < 1:
+        parser.error("--max-urls must be positive")
+    try:
+        values = [
+            line.strip()
+            for line in args.url_file.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ]
+        for value in values:
+            validate_url(value)
+    except (OSError, ValueError) as error:
+        print(f"select_uncaptured_urls: {error}", file=sys.stderr)
+        return 1
+
+    completed = completed_capture_urls(args.existing_root or [Path("data")])
+    selected = []
+    seen: set[str] = set()
+    eligible = 0
+    for url in values:
+        if args.url_prefix and not url.startswith(args.url_prefix):
+            continue
+        key = archival_url_key(url)
+        if key in seen or key in completed:
+            continue
+        seen.add(key)
+        eligible += 1
+        if len(selected) < args.max_urls:
+            selected.append(url)
+
+    text = "".join(f"{url}\n" for url in selected)
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(text, encoding="utf-8")
+    else:
+        sys.stdout.write(text)
+    print(
+        f"Selected {len(selected)} of {eligible} uncaptured eligible URL(s); "
+        f"{len(completed)} completed URL identities indexed",
+        file=sys.stderr,
+    )
+    return 0 if selected else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

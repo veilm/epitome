@@ -27,7 +27,7 @@ SENSITIVE_RESPONSE_HEADERS = {"set-cookie", "set-cookie2"}
 
 def validate_url(url: str) -> str:
     parsed = urlsplit(url)
-    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
         raise ValueError("URL must be an absolute http:// or https:// URL")
     return url
 
@@ -41,6 +41,57 @@ def url_slug(url: str) -> str:
 
 def default_capture_dir(url: str, root: Path = Path("data/captures")) -> Path:
     return root / f"{int(time.time())}-{url_slug(url)}"
+
+
+def archival_url_key(url: str) -> str:
+    """Normalize harmless URL spelling differences for capture deduplication."""
+    parsed = urlsplit(validate_url(url))
+    path = parsed.path.rstrip("/") or "/"
+    return parsed._replace(
+        scheme=parsed.scheme.lower(),
+        netloc=parsed.netloc.lower(),
+        path=path,
+        fragment="",
+    ).geturl()
+
+
+def completed_capture_urls(roots: list[Path]) -> set[str]:
+    """Return normalized page URLs backed by complete manifests and HTML."""
+    result: set[str] = set()
+    for root in roots:
+        if not root.exists():
+            continue
+        for manifest_path in root.rglob("manifest.json"):
+            if not manifest_path.with_name("page.html").exists():
+                continue
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            if not manifest.get("complete"):
+                continue
+            for field in ("requested_url", "final_url"):
+                value = manifest.get(field)
+                if not isinstance(value, str):
+                    continue
+                try:
+                    result.add(archival_url_key(value))
+                except ValueError:
+                    continue
+    return result
+
+
+def recommended_page_delay(url_count: int) -> float:
+    """Scale the default inter-page pause as a bounded batch grows."""
+    if url_count <= 10:
+        return 10
+    if url_count <= 20:
+        return 15
+    if url_count <= 40:
+        return 20
+    if url_count <= 80:
+        return 30
+    return 45
 
 
 def _write_json(path: Path, value: Any) -> None:
