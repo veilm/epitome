@@ -7,6 +7,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import subprocess
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -36,6 +37,7 @@ RESOURCE_ATTRIBUTES = {
 SRCSET_TAGS = {"img", "source"}
 CSS_URL_RE = re.compile(r"url\(\s*(['\"]?)(.*?)\1\s*\)", re.IGNORECASE)
 CONTENT_RANGE_RE = re.compile(r"bytes\s+(\d+)-(\d+)/(\d+|\*)", re.IGNORECASE)
+VIMEO_CONFIG_MARKER = "window.playerConfig = "
 ASSET_PRIORITIES = {
     ".avi": 0,
     ".m4a": 0,
@@ -150,6 +152,60 @@ def discover_css_assets(css: str, base_url: str) -> set[str]:
     return result
 
 
+def discover_vimeo_progressive_asset(html: str) -> str | None:
+    """Return the highest-resolution progressive file from Vimeo player HTML."""
+    marker = html.find(VIMEO_CONFIG_MARKER)
+    if marker < 0:
+        return None
+    try:
+        config, _ = json.JSONDecoder().raw_decode(
+            html[marker + len(VIMEO_CONFIG_MARKER) :]
+        )
+        progressive = config["request"]["files"]["progressive"]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return None
+    candidates = [
+        item
+        for item in progressive
+        if isinstance(item, dict)
+        and isinstance(item.get("url"), str)
+        and item["url"].startswith(("http://", "https://"))
+    ]
+    if not candidates:
+        return None
+    selected = max(
+        candidates,
+        key=lambda item: (
+            int(item.get("height") or 0),
+            int(item.get("width") or 0),
+            int(item.get("bitrate") or 0),
+        ),
+    )
+    return str(selected["url"])
+
+
+def discover_vimeo_video_asset(html: str) -> str | None:
+    """Return Vimeo's best directly playable source or its HLS master."""
+    if progressive := discover_vimeo_progressive_asset(html):
+        return progressive
+    marker = html.find(VIMEO_CONFIG_MARKER)
+    if marker < 0:
+        return None
+    try:
+        config, _ = json.JSONDecoder().raw_decode(
+            html[marker + len(VIMEO_CONFIG_MARKER) :]
+        )
+        hls = config["request"]["files"]["hls"]
+        cdn = hls["cdns"][hls["default_cdn"]]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return None
+    for key in ("avc_url", "url"):
+        value = cdn.get(key)
+        if isinstance(value, str) and value.startswith(("http://", "https://")):
+            return value
+    return None
+
+
 def _headers(record_dir: Path) -> dict[str, str]:
     path = record_dir / "response-headers.json"
     if not path.exists():
@@ -218,14 +274,20 @@ def discover_capture_assets(page_html: Path, network_dir: Path, page_url: str) -
             metadata = _json(metadata_path)
         except (OSError, json.JSONDecodeError):
             continue
-        content_type = str(metadata.get("contentType", "")).lower()
-        if "css" not in content_type:
-            continue
         try:
-            css = body_path.read_text(encoding="utf-8", errors="replace")
+            body = body_path.read_text(encoding="utf-8", errors="replace")
         except OSError:
             continue
-        urls.update(discover_css_assets(css, str(metadata.get("url", page_url))))
+        content_type = str(metadata.get("contentType", "")).lower()
+        resource_url = str(metadata.get("url", page_url))
+        if "css" in content_type:
+            urls.update(discover_css_assets(body, resource_url))
+        elif (
+            "html" in content_type
+            and urlsplit(resource_url).hostname == "player.vimeo.com"
+        ):
+            if video_url := discover_vimeo_video_asset(body):
+                urls.add(video_url)
     return urls
 
 
@@ -238,7 +300,10 @@ def _record_name(url: str) -> str:
 
 def asset_priority(url: str) -> tuple[int, str]:
     """Put audiovisual and document resources before incidental dependencies."""
-    path = urlsplit(url).path.lower()
+    parsed = urlsplit(url)
+    path = parsed.path.lower()
+    if parsed.hostname == "player.vimeo.com" or path.endswith(".m3u8"):
+        return 0, url
     priority = next(
         (value for extension, value in ASSET_PRIORITIES.items() if path.endswith(extension)),
         3,
@@ -253,6 +318,19 @@ def _download_asset(
     remaining_bytes: int,
     timeout: float,
 ) -> dict[str, Any]:
+    parsed = urlsplit(url)
+    if (
+        parsed.path.lower().endswith(".m3u8")
+        and parsed.hostname
+        and parsed.hostname.endswith(".vimeocdn.com")
+    ):
+        return _download_hls_asset(
+            url,
+            network_dir,
+            remaining_bytes=remaining_bytes,
+            timeout=timeout,
+        )
+
     record_dir = network_dir / _record_name(url)
     record_dir.mkdir()
     metadata: dict[str, Any] = {
@@ -319,6 +397,125 @@ def _download_asset(
     }
 
 
+def _download_hls_asset(
+    url: str,
+    network_dir: Path,
+    *,
+    remaining_bytes: int,
+    timeout: float,
+) -> dict[str, Any]:
+    """Losslessly remux a Vimeo HLS presentation into one archival MP4."""
+    record_dir = network_dir / _record_name(url)
+    record_dir.mkdir()
+    metadata: dict[str, Any] = {
+        "method": "GET",
+        "source": "asset-completion-hls-remux",
+        "timestamp": int(time.time()),
+        "transform": "ffmpeg stream copy from adaptive HLS to MP4",
+        "url": url,
+    }
+    request_headers = {
+        "Accept": "*/*",
+        "User-Agent": "Epitome archival research capture/0.1",
+    }
+    _write_json(record_dir / "request-headers.json", request_headers)
+    temporary_body = record_dir / "response-body.partial"
+    try:
+        command = [
+            "ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "fatal",
+            "-nostdin",
+            "-y",
+            "-i",
+            url,
+            "-map",
+            "0:v:0",
+            "-map",
+            "0:a:0?",
+            "-c",
+            "copy",
+            "-movflags",
+            "+faststart",
+            "-f",
+            "mp4",
+            str(temporary_body),
+        ]
+        process = subprocess.Popen(
+            command,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+        deadline = time.monotonic() + timeout
+        while process.poll() is None:
+            if (
+                temporary_body.exists()
+                and temporary_body.stat().st_size > remaining_bytes
+            ):
+                process.kill()
+                process.communicate()
+                raise ValueError(
+                    f"remuxed body exceeded the remaining "
+                    f"{remaining_bytes}-byte budget"
+                )
+            if time.monotonic() >= deadline:
+                process.kill()
+                process.communicate()
+                raise subprocess.TimeoutExpired(command, timeout)
+            time.sleep(0.1)
+        _, stderr = process.communicate()
+        if process.returncode:
+            detail = stderr.strip().splitlines()
+            raise ValueError(detail[-1] if detail else "ffmpeg failed")
+        size = temporary_body.stat().st_size
+        if size > remaining_bytes:
+            raise ValueError(
+                f"remuxed body is {size} bytes; "
+                f"{remaining_bytes} bytes remain in the completion budget"
+            )
+        digest = hashlib.sha256()
+        with temporary_body.open("rb") as stream:
+            while chunk := stream.read(1024 * 1024):
+                digest.update(chunk)
+        temporary_body.replace(record_dir / "response-body.bin")
+        metadata.update(
+            {
+                "contentType": "video/mp4",
+                "finalUrl": url,
+                "responseBytes": size,
+                "sha256": digest.hexdigest(),
+                "status": "200",
+            }
+        )
+        _write_json(
+            record_dir / "response-headers.json",
+            {
+                "content-length": str(size),
+                "content-type": "video/mp4",
+                "x-epitome-derived-from": "adaptive HLS",
+            },
+        )
+    except (
+        OSError,
+        subprocess.SubprocessError,
+        ValueError,
+    ) as error:
+        temporary_body.unlink(missing_ok=True)
+        (record_dir / "response-body.bin").unlink(missing_ok=True)
+        metadata["responseBodyError"] = f"{type(error).__name__}: {error}"
+        metadata["responseBytes"] = 0
+    _write_json(record_dir / "metadata.json", metadata)
+    return {
+        "bytes": int(metadata.get("responseBytes", 0)),
+        "complete": "responseBodyError" not in metadata,
+        "error": metadata.get("responseBodyError"),
+        "record": record_dir.name,
+        "url": url,
+    }
+
+
 def complete_capture_assets(
     page_html: Path,
     network_dir: Path,
@@ -334,14 +531,18 @@ def complete_capture_assets(
         raise ValueError("asset completion limits must be non-negative and timeout positive")
     discovered = discover_capture_assets(page_html, network_dir, page_url)
     already_complete = captured_complete_urls(network_dir)
-    missing = sorted(discovered - already_complete, key=asset_priority)
-    selected = missing[:max_assets]
+    pending = set(discovered - already_complete)
+    attempted_urls: set[str] = set()
     results = []
     downloaded_bytes = 0
-    for index, url in enumerate(selected):
-        if downloaded_bytes >= max_bytes:
-            break
-        if index and delay_seconds:
+    while (
+        pending
+        and len(results) < max_assets
+        and downloaded_bytes < max_bytes
+    ):
+        url = min(pending, key=asset_priority)
+        pending.remove(url)
+        if results and delay_seconds:
             time.sleep(delay_seconds)
         result = _download_asset(
             url,
@@ -350,8 +551,25 @@ def complete_capture_assets(
             timeout=timeout,
         )
         results.append(result)
+        attempted_urls.add(url)
         downloaded_bytes += result["bytes"]
-    attempted_urls = {item["url"] for item in results}
+        if result["complete"] and urlsplit(url).hostname == "player.vimeo.com":
+            body_path = network_dir / result["record"] / "response-body.bin"
+            try:
+                player_html = body_path.read_text(
+                    encoding="utf-8",
+                    errors="replace",
+                )
+            except OSError:
+                continue
+            video_url = discover_vimeo_video_asset(player_html)
+            if video_url:
+                discovered.add(video_url)
+                if (
+                    video_url not in already_complete
+                    and video_url not in attempted_urls
+                ):
+                    pending.add(video_url)
     return {
         "already_complete": len(discovered & already_complete),
         "attempted": len(results),
@@ -366,5 +584,8 @@ def complete_capture_assets(
             "timeout": timeout,
         },
         "results": results,
-        "skipped": [url for url in missing if url not in attempted_urls],
+        "skipped": sorted(
+            discovered - already_complete - attempted_urls,
+            key=asset_priority,
+        ),
     }

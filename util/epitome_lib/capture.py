@@ -225,6 +225,58 @@ def summarize_crawl(crawl_dir: Path) -> dict[str, Any]:
     }
 
 
+def activate_vimeo_embeds(
+    session: str,
+    *,
+    delay_seconds: float = 2,
+) -> dict[str, Any]:
+    """Hydrate script-deferred Vimeo iframes while the network logger is live.
+
+    OpenAI's video component can leave iframe ``src`` blank until interaction.
+    Its React Flight stream still contains the Vimeo URLs, sometimes split
+    between adjacent script chunks. Decode and concatenate those chunks, then
+    assign the URLs to the corresponding blank frames deterministically.
+    """
+    result = cdp.eval_script(
+        session,
+        r"""(()=>{
+const frames=[...document.querySelectorAll('iframe[title*="Vimeo" i]')];
+const chunks=[];
+for(const script of document.scripts){
+ const match=(script.textContent||"").match(/^self\.__next_f\.push\((.*)\)$/s);
+ if(!match)continue;
+ try{
+  const item=JSON.parse(match[1]);
+  if(typeof item?.[1]==="string")chunks.push(item[1]);
+ }catch{}
+}
+const flight=chunks.join("");
+const urls=[...flight.matchAll(
+ /"videoEmbedUrl":"(https:\/\/player\.vimeo\.com\/video\/.*?)"/g
+)].map(match=>match[1].replaceAll("&amp;","&"));
+const results=frames.map((frame,index)=>{
+ const embeddedUrl=urls[index]||"";
+ const hadSrc=Boolean(frame.src);
+ if(!hadSrc&&embeddedUrl)frame.src=embeddedUrl;
+ return {
+  embedded_url:embeddedUrl,
+  hydrated:Boolean(!hadSrc&&embeddedUrl),
+  src:frame.src,
+  title:frame.title,
+ };
+});
+return {discovered:frames.length,embedded_urls:urls.length,results};
+})()""",
+        timeout=10,
+    )
+    if delay_seconds and any(item.get("src") for item in result["results"]):
+        time.sleep(delay_seconds)
+    return {
+        **result,
+        "activated": sum(bool(item.get("src")) for item in result["results"]),
+    }
+
+
 def capture_url(
     url: str,
     output_dir: Path,
@@ -316,6 +368,8 @@ def capture_url(
                 break
             time.sleep(0.2)
 
+        interactive_media = activate_vimeo_embeds(session)
+        _write_json(output_dir / "interactive-media.json", interactive_media)
         page = cdp.eval_json(
             session,
             "({url:location.href,title:document.title,"
@@ -377,6 +431,10 @@ def capture_url(
             "network_summary": summary,
             "complete": failure is None,
         }
+        if (interactive_path := output_dir / "interactive-media.json").exists():
+            manifest["interactive_media"] = json.loads(
+                interactive_path.read_text(encoding="utf-8")
+            )
         if asset_completion is not None:
             manifest["asset_completion"] = {
                 key: asset_completion.get(key)

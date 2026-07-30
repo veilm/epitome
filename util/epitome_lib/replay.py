@@ -13,7 +13,7 @@ import re
 from typing import Any, Iterable
 from urllib.parse import urljoin, urlsplit
 
-from .assets import complete_body
+from .assets import complete_body, discover_vimeo_video_asset
 
 
 CSS_URL_RE = re.compile(r"url\(\s*(['\"]?)(.*?)\1\s*\)", re.IGNORECASE)
@@ -106,12 +106,14 @@ class CaptureIndex:
     def __init__(self) -> None:
         self.pages: dict[str, PageRecord] = {}
         self.resources: dict[str, ResourceRecord] = {}
+        self.vimeo_videos: dict[str, str] = {}
 
     @classmethod
     def from_roots(cls, roots: Iterable[Path]) -> "CaptureIndex":
         index = cls()
         for root in roots:
             index.add_root(root)
+        index._index_vimeo_videos()
         return index
 
     def add_root(self, root: Path) -> None:
@@ -208,6 +210,24 @@ class CaptureIndex:
             unique[page.html_path] = page
         return sorted(unique.values(), key=lambda page: page.url)
 
+    def _index_vimeo_videos(self) -> None:
+        for player_url, resource in self.resources.items():
+            if urlsplit(player_url).hostname != "player.vimeo.com":
+                continue
+            try:
+                html = resource.body_path.read_text(
+                    encoding="utf-8",
+                    errors="replace",
+                )
+            except OSError:
+                continue
+            video_url = discover_vimeo_video_asset(html)
+            if video_url and video_url in self.resources:
+                self.vimeo_videos[player_url] = video_url
+
+    def vimeo_video(self, player_url: str) -> str | None:
+        return self.vimeo_videos.get(player_url)
+
 
 def rewrite_css(css: str, base_url: str) -> str:
     def replace_url(match: re.Match[str]) -> str:
@@ -233,6 +253,7 @@ class _HTMLRewriter(HTMLParser):
         self.output: list[str] = []
         self.script_depth = 0
         self.style_depth = 0
+        self.replaced_vimeo_iframes = 0
 
     def _resource(self, value: str) -> str:
         url = normalize_url(value, self.base_url)
@@ -289,6 +310,17 @@ class _HTMLRewriter(HTMLParser):
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh":
             return
 
+        vimeo_video_url = None
+        if (
+            tag == "iframe"
+            and "vimeo" in attrs.get("title", "").lower()
+            and (iframe_url := normalize_url(attrs.get("src", ""), self.base_url))
+        ):
+            vimeo_video_url = self.index.vimeo_video(iframe_url)
+            if vimeo_video_url:
+                tag = "video"
+                self.replaced_vimeo_iframes += 1
+
         rendered_attrs = []
         for name, value in attrs_list:
             lower = name.lower()
@@ -297,6 +329,14 @@ class _HTMLRewriter(HTMLParser):
             if value is None:
                 rendered_attrs.append(name)
                 continue
+            if vimeo_video_url and lower in {"allow", "loading", "src"}:
+                continue
+            if vimeo_video_url and lower == "class":
+                value = " ".join(
+                    item for item in value.split() if item != "opacity-0"
+                )
+            if tag == "img" and lower == "loading":
+                value = "eager"
             if lower == "srcset":
                 value = self._srcset(value)
             elif lower == "style":
@@ -313,6 +353,15 @@ class _HTMLRewriter(HTMLParser):
                 value = self._link(value)
             rendered_attrs.append(f'{name}="{escape(value, quote=True)}"')
 
+        if vimeo_video_url:
+            rendered_attrs.extend(
+                [
+                    f'src="{resource_path(vimeo_video_url)}"',
+                    "controls",
+                    "playsinline",
+                    'preload="metadata"',
+                ]
+            )
         suffix = " /" if closed else ""
         attributes = f" {' '.join(rendered_attrs)}" if rendered_attrs else ""
         self.output.append(f"<{tag}{attributes}{suffix}>")
@@ -335,6 +384,10 @@ class _HTMLRewriter(HTMLParser):
             return
         if tag == "style" and self.style_depth:
             self.style_depth -= 1
+        if tag == "iframe" and self.replaced_vimeo_iframes:
+            self.replaced_vimeo_iframes -= 1
+            self.output.append("</video>")
+            return
         self.output.append(f"</{tag}>")
 
     def handle_data(self, data):

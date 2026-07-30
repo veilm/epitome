@@ -17,6 +17,7 @@ is ignored by Git. It contains:
 - `response-body.bin` and JSON bodies where applicable;
 - `page.html`: the final rendered DOM;
 - `read.json`: the visibility-aware semantic view from `cdp read`;
+- `interactive-media.json`: deferred video embeds found and activated;
 - `asset-completion.json`: referenced assets that were already complete,
   recovered, failed, or skipped by a bound;
 - `manifest.json`: limits and response/host/byte counts.
@@ -31,6 +32,17 @@ audiovisual files are prioritized, followed by documents and images. Defaults
 are deliberately finite:
 40 scroll operations, 90 seconds, at most 50 recovery requests, and at most
 500 MiB of recovered bodies. Recovery requests are spaced two seconds apart.
+
+OpenAI's Vimeo component sometimes leaves iframe URLs blank until a visitor
+interacts with it. During capture, Epitome reconstructs the ordered Vimeo URLs
+from the page's embedded React data and hydrates those frames while logging is
+active. The completion pass fetches each player configuration. It preserves the
+highest-resolution progressive MP4 when Vimeo exposes one; otherwise it uses
+the advertised HLS presentation and asks `ffmpeg` to losslessly remux its best
+H.264/AAC rendition into a single MP4. This does not re-encode the media.
+Derived MP4 records retain the source HLS URL, transform description, size, and
+digest. The same asset byte and timeout limits apply, and over-budget temporary
+remuxes are stopped and discarded.
 
 When all capture and recovery work is finished, Epitome closes the exact CDP
 target recorded in its session and disconnects. It does not close unrelated
@@ -80,13 +92,13 @@ causes browser traffic.
 
 ## Current limitations
 
-- Resource completion follows rendered HTML and captured CSS references but
-  does not recursively crawl linked pages or iframe dependencies. Unopened
-  carousel states and interaction-only downloads may still be absent.
+- Resource completion follows rendered HTML and captured CSS references.
+  Vimeo players have explicit completion support, but arbitrary nested iframe
+  dependencies, unopened carousel states, and other interaction-only downloads
+  may still be absent.
 - The final DOM is captured after bounded scrolling, not exhaustive interaction.
-- Captures are response-oriented directories, not yet a directly servable tree.
-- A static materializer/replay server still needs to map complete URLs (including
-  query strings and methods) to captured responses and rewrite external URLs.
+- Captures remain response-oriented directories interpreted by the local replay
+  server rather than a portable, pre-materialized static tree.
 - Response bodies can contain site-generated identifiers or personalized
   experiment data even after credential headers are redacted. Captures remain
   ignored/private by default.

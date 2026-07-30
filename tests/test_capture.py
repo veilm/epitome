@@ -10,6 +10,8 @@ from util.epitome_lib.assets import (
     complete_body,
     complete_capture_assets,
     discover_html_assets,
+    discover_vimeo_progressive_asset,
+    discover_vimeo_video_asset,
 )
 from util.epitome_lib.capture import (
     redact_capture_headers,
@@ -157,6 +159,62 @@ class CaptureHelpersTest(unittest.TestCase):
                 "https://example.com/image.jpg",
                 "https://example.com/app.js",
             ],
+        )
+
+    def test_vimeo_progressive_discovery_prefers_highest_resolution(self):
+        html = (
+            "<script>window.playerConfig = "
+            + json.dumps(
+                {
+                    "request": {
+                        "files": {
+                            "progressive": [
+                                {
+                                    "height": 540,
+                                    "width": 960,
+                                    "url": "https://video.example/540.mp4",
+                                },
+                                {
+                                    "height": 1080,
+                                    "width": 1920,
+                                    "url": "https://video.example/1080.mp4",
+                                },
+                            ]
+                        }
+                    }
+                }
+            )
+            + ";</script>"
+        )
+        self.assertEqual(
+            discover_vimeo_progressive_asset(html),
+            "https://video.example/1080.mp4",
+        )
+
+    def test_vimeo_video_discovery_falls_back_to_hls(self):
+        html = (
+            "<script>window.playerConfig = "
+            + json.dumps(
+                {
+                    "request": {
+                        "files": {
+                            "hls": {
+                                "default_cdn": "archive",
+                                "cdns": {
+                                    "archive": {
+                                        "avc_url": "https://video.example/master.m3u8"
+                                    }
+                                },
+                            }
+                        }
+                    }
+                }
+            )
+            + ";</script>"
+        )
+        self.assertEqual(
+            discover_vimeo_video_asset(html),
+            "https://video.example/master.m3u8",
         )
 
     def test_partial_response_is_complete_only_when_it_contains_full_entity(self):
