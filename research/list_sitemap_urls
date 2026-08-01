@@ -20,8 +20,13 @@ def main() -> int:
     parser.add_argument("--max-sitemaps", type=int, default=50)
     parser.add_argument("--max-urls", type=int, default=20_000)
     parser.add_argument("--timeout", type=float, default=20)
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
+    output = None
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        output = args.output.open("w", encoding="utf-8")
     queue = deque([args.sitemap])
     seen_sitemaps: set[str] = set()
     seen_urls: set[str] = set()
@@ -48,7 +53,9 @@ def main() -> int:
                 print("list_sitemap_urls: URL limit reached", file=sys.stderr)
                 return 2
             seen_urls.add(url)
-            print(url)
+            print(url, file=output or sys.stdout)
+    if output:
+        output.close()
     return 0
 
 
