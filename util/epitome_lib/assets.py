@@ -11,7 +11,7 @@ import subprocess
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import quote, urljoin, urlsplit
 from urllib.request import Request, urlopen
 
 
@@ -84,7 +84,10 @@ def _normalize_url(value: str, base_url: str) -> str | None:
     value = value.strip()
     if not value or value.startswith(("data:", "blob:", "javascript:", "#")):
         return None
-    resolved = urljoin(base_url, value)
+    resolved = quote(
+        urljoin(base_url, value),
+        safe=":/?#[]@!$&'()*+,;=%",
+    )
     parsed = urlsplit(resolved)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return None

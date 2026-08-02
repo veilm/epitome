@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 import re
 from typing import Any, Iterable
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import quote, urljoin, urlsplit
 
 from .assets import complete_body, discover_vimeo_video_asset
 
@@ -60,7 +60,10 @@ def normalize_url(value: str, base_url: str) -> str | None:
     value = value.strip()
     if not value or value.startswith(("data:", "blob:", "javascript:", "#")):
         return None
-    resolved = urljoin(base_url, value)
+    resolved = quote(
+        urljoin(base_url, value),
+        safe=":/?#[]@!$&'()*+,;=%",
+    )
     parsed = urlsplit(resolved)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return None

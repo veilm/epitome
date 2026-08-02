@@ -191,6 +191,15 @@ class CaptureHelpersTest(unittest.TestCase):
             },
         )
 
+    def test_asset_discovery_encodes_spaces_in_urls(self):
+        self.assertEqual(
+            discover_html_assets(
+                '<video src="/media/a video (1).mp4"></video>',
+                "https://example.com/article/",
+            ),
+            {"https://example.com/media/a%20video%20(1).mp4"},
+        )
+
     def test_asset_priority_favors_media_and_documents(self):
         urls = [
             "https://example.com/app.js",

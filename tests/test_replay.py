@@ -7,6 +7,7 @@ from util.epitome_lib.replay import (
     CaptureIndex,
     decode_url,
     encode_url,
+    normalize_url,
     resource_path,
     rewrite_css,
     rewrite_html,
@@ -66,6 +67,15 @@ class ReplayTest(unittest.TestCase):
     def test_url_token_round_trip(self):
         url = "https://example.com/a?x=1&y=2"
         self.assertEqual(decode_url(encode_url(url)), url)
+
+    def test_normalize_url_encodes_spaces(self):
+        self.assertEqual(
+            normalize_url(
+                "/media/a video (1).mp4",
+                "https://example.com/article/",
+            ),
+            "https://example.com/media/a%20video%20(1).mp4",
+        )
 
     def test_rewrite_removes_execution_and_localizes_fetches(self):
         with tempfile.TemporaryDirectory() as temp:
