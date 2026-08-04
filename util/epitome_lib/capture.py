@@ -61,7 +61,12 @@ def completed_capture_urls(roots: list[Path]) -> set[str]:
     for root in roots:
         if not root.exists():
             continue
-        for manifest_path in root.rglob("manifest.json"):
+        manifest_paths = (
+            Path(directory) / "manifest.json"
+            for directory, _, filenames in os.walk(root, followlinks=True)
+            if "manifest.json" in filenames
+        )
+        for manifest_path in manifest_paths:
             if not manifest_path.with_name("page.html").exists():
                 continue
             try:

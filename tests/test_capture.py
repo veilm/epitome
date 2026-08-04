@@ -86,6 +86,30 @@ class CaptureHelpersTest(unittest.TestCase):
                 "https://openai.com/index/example",
             )
 
+    def test_completed_capture_urls_follows_external_archive_symlink(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            external = root / "external"
+            capture = external / "capture"
+            capture.mkdir(parents=True)
+            (capture / "page.html").write_text("<html></html>", encoding="utf-8")
+            (capture / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "complete": True,
+                        "requested_url": "https://example.com/external/",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            local = root / "local"
+            local.mkdir()
+            (local / "captures").symlink_to(external, target_is_directory=True)
+            self.assertEqual(
+                completed_capture_urls([local]),
+                {"https://example.com/external"},
+            )
+
     def test_page_delay_scales_with_batch_size(self):
         self.assertEqual(recommended_page_delay(10), 10)
         self.assertEqual(recommended_page_delay(20), 15)
