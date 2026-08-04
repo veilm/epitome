@@ -86,6 +86,13 @@ Summit, and the Department of War discussion. Longer Dario essays are not a
 single reliable sitemap category and some are hosted outside the main Anthropic
 post collection.
 
+The personal-site and external-index gap audit is recorded in
+`research/dario-amodei.md`. In brief, the personal sitemap has only five writing
+pages, its `Archive` link currently returns 404, and its interview list is
+stale. The reviewed union of the personal homepage and one independent index is
+already at least 17 interviews, plus several additional primary-source
+candidates found separately.
+
 The eventual inventory should combine:
 
 - explicit Dario matches from page author/byline metadata and newsroom search;

@@ -17,13 +17,14 @@ small validation samples come before any large crawl.
         removal history. Job listings need incremental snapshots because their
         historical value is largely in openings that later disappear.
 - [ ] **Anthropic — first next investigation**
-  - [ ] Inventory Anthropic's official blog, newsroom, research, policy, safety,
+  - [x] Inventory Anthropic's official blog, newsroom, research, policy, safety,
         product, and other company-post collections.
-  - [ ] Treat the company publications on `anthropic.com` and the separate
+  - [x] Treat the company publications on `anthropic.com` and the separate
         product/technical blog on `claude.com` as related but distinct sources.
-  - [ ] Inventory essays and articles written by Dario Amodei, including items
-        hosted outside Anthropic's main post collection.
-  - [ ] Identify feeds, sitemaps, media embeds, PDFs, and related official
+  - [ ] Complete the Dario Amodei inventory from the seeds and gaps documented
+        in `research/dario-amodei.md`; neither his homepage nor the independent
+        interview index is exhaustive.
+  - [x] Identify feeds, sitemaps, media embeds, PDFs, and related official
         Anthropic properties before defining crawl boundaries.
   - [ ] Build and validate archive, model-readable extraction, and summary flows.
 - [ ] **Twitter/X**
