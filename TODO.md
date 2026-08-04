@@ -7,9 +7,20 @@ small validation samples come before any large crawl.
 
 ## Source backlog
 
+- [ ] **Company careers and job listings**
+  - [ ] Add OpenAI careers and individual job listings to the OpenAI archive
+        scope.
+  - [ ] Add Anthropic's careers index and individual Greenhouse job listings to
+        the Anthropic archive scope.
+  - [ ] Preserve title, team, location, description, requirements, compensation
+        where published, stable external job ID, first/last-seen timestamps, and
+        removal history. Job listings need incremental snapshots because their
+        historical value is largely in openings that later disappear.
 - [ ] **Anthropic — first next investigation**
   - [ ] Inventory Anthropic's official blog, newsroom, research, policy, safety,
         product, and other company-post collections.
+  - [ ] Treat the company publications on `anthropic.com` and the separate
+        product/technical blog on `claude.com` as related but distinct sources.
   - [ ] Inventory essays and articles written by Dario Amodei, including items
         hosted outside Anthropic's main post collection.
   - [ ] Identify feeds, sitemaps, media embeds, PDFs, and related official
@@ -69,4 +80,3 @@ small validation samples come before any large crawl.
 - [ ] Extract compact, model-readable content independently of visual replay.
 - [ ] Add source-specific completeness checks and retry ledgers.
 - [ ] Add summaries only after archive and extraction quality are validated.
-
