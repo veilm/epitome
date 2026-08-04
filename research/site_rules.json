@@ -13,6 +13,20 @@
         "Keep reading",
         "Related articles"
       ]
+    },
+    {
+      "host_suffix": "anthropic.com",
+      "root_selectors": ["article"],
+      "exclude_selectors": [],
+      "exclude_text_exact": [],
+      "cut_at_headings": ["Related content"]
+    },
+    {
+      "host_suffix": "claude.com",
+      "root_selectors": ["main"],
+      "exclude_selectors": [],
+      "exclude_text_exact": [],
+      "cut_at_headings": ["Related posts"]
     }
   ],
   "version": 1

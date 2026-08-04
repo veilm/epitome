@@ -49,6 +49,39 @@
     if (value) authors.push(value);
   });
 
+  const structuredArticles = [];
+  function collectStructured(value) {
+    if (Array.isArray(value)) {
+      value.forEach(collectStructured);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    const type = value["@type"];
+    const types = Array.isArray(type) ? type : [type];
+    if (
+      value.datePublished ||
+      value.author ||
+      types.some((name) => /^(Article|BlogPosting|NewsArticle)$/i.test(name || ""))
+    ) {
+      structuredArticles.push(value);
+    }
+    if (value["@graph"]) collectStructured(value["@graph"]);
+  }
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    try {
+      collectStructured(JSON.parse(script.textContent || "null"));
+    } catch (_) {
+      // Invalid optional metadata should not prevent content extraction.
+    }
+  });
+  structuredArticles.forEach((article) => {
+    const values = Array.isArray(article.author) ? article.author : [article.author];
+    values.forEach((author) => {
+      const value = normalized(typeof author === "string" ? author : author?.name);
+      if (value) authors.push(value);
+    });
+  });
+
   const root = sourceRoot.cloneNode(true);
   const genericExcludes = [
     "script",
@@ -132,11 +165,20 @@
   const publishedMeta =
     document.querySelector('meta[property="article:published_time"]')?.content ||
     document.querySelector('meta[name="date"]')?.content ||
+    structuredArticles.find((article) => article.datePublished)?.datePublished ||
     "";
+  const visibleDate = Array.from(sourceRoot.querySelectorAll("*")).find((element) => {
+    if (element.children.length) return false;
+    return /^(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},\s+\d{4}$/i.test(
+      normalized(element.textContent),
+    );
+  });
   const publishedDisplay =
     normalized(heroTime?.textContent) ||
     normalized(heroMeta?.querySelector("p")?.textContent) ||
-    normalized(heroMeta?.textContent);
+    normalized(heroMeta?.textContent) ||
+    normalized(visibleDate?.textContent) ||
+    normalized(publishedMeta);
 
   return {
     url: location.href,

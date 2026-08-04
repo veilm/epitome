@@ -1,0 +1,172 @@
+#!/usr/bin/python
+"""List sitemap URLs by loading sitemap documents in a disposable CDP tab."""
+
+from __future__ import annotations
+
+import argparse
+from collections import deque
+import json
+import os
+from pathlib import Path
+import sys
+import time
+from urllib.parse import urlsplit
+from xml.etree import ElementTree
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "util"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from epitome_lib import cdp
+from epitome_lib.capture import validate_url
+from research.sitemap import locations, rendered_xml
+
+
+READ_SITEMAP = r"""(()=>({
+  contentType: document.contentType || "",
+  finalUrl: location.href,
+  text: document.body?.innerText || "",
+}))()"""
+
+
+def included(url: str, prefixes: list[str], excluded: list[str]) -> bool:
+    path = urlsplit(url).path
+    return (
+        (not prefixes or any(path.startswith(prefix) for prefix in prefixes))
+        and not any(path.startswith(prefix) for prefix in excluded)
+    )
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Discover sitemap URLs through the browser instead of a direct HTTP client."
+    )
+    parser.add_argument("sitemap")
+    parser.add_argument("--port", type=int, default=2103)
+    parser.add_argument("--max-sitemaps", type=int, default=50)
+    parser.add_argument("--max-urls", type=int, default=20_000)
+    parser.add_argument("--timeout", type=float, default=45)
+    parser.add_argument("--delay-seconds", type=float, default=2)
+    parser.add_argument(
+        "--include-path-prefix",
+        action="append",
+        default=[],
+        help="emit only URL paths beginning with this value (repeatable)",
+    )
+    parser.add_argument(
+        "--exclude-path-prefix",
+        action="append",
+        default=[],
+        help="omit URL paths beginning with this value (repeatable)",
+    )
+    parser.add_argument("--output", type=Path)
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    try:
+        validate_url(args.sitemap)
+    except ValueError as error:
+        print(f"list_sitemap_urls_cdp: {error}", file=sys.stderr)
+        return 2
+    if args.max_sitemaps < 1 or args.max_urls < 1:
+        print("list_sitemap_urls_cdp: limits must be positive", file=sys.stderr)
+        return 2
+    if args.delay_seconds < 0:
+        print("list_sitemap_urls_cdp: delay must be non-negative", file=sys.stderr)
+        return 2
+
+    session = f"epitome-sitemap-{int(time.time() * 1000)}-{os.getpid()}"
+    queue = deque([args.sitemap])
+    seen_sitemaps: set[str] = set()
+    seen_urls: set[str] = set()
+    result: list[str] = []
+    connected = False
+    try:
+        cdp.run(
+            [
+                "connect",
+                "--session",
+                session,
+                "--port",
+                str(args.port),
+                "--new",
+                "--new-url",
+                "about:blank",
+            ],
+            timeout=15,
+        )
+        connected = True
+        while queue:
+            sitemap = queue.popleft()
+            if sitemap in seen_sitemaps:
+                continue
+            if len(seen_sitemaps) >= args.max_sitemaps:
+                raise RuntimeError("sitemap limit reached")
+            seen_sitemaps.add(sitemap)
+            cdp.eval_json(
+                session,
+                f"(location.href={json.dumps(sitemap)}, true)",
+                timeout=10,
+            )
+            cdp.run(
+                ["wait", "--session", session],
+                timeout=args.timeout,
+            )
+            page = cdp.eval_script(session, READ_SITEMAP, timeout=15)
+            if page.get("finalUrl") != sitemap:
+                print(
+                    f"list_sitemap_urls_cdp: redirected {sitemap} "
+                    f"to {page.get('finalUrl')}",
+                    file=sys.stderr,
+                )
+            child_sitemaps, urls = locations(rendered_xml(page.get("text", "")))
+            queue.extend(child_sitemaps)
+            for url in urls:
+                if url in seen_urls:
+                    continue
+                if len(seen_urls) >= args.max_urls:
+                    raise RuntimeError("URL limit reached")
+                seen_urls.add(url)
+                if included(
+                    url,
+                    args.include_path_prefix,
+                    args.exclude_path_prefix,
+                ):
+                    result.append(url)
+            if queue and args.delay_seconds:
+                time.sleep(args.delay_seconds)
+    except (
+        OSError,
+        RuntimeError,
+        ValueError,
+        ElementTree.ParseError,
+        cdp.CdpError,
+    ) as error:
+        print(f"list_sitemap_urls_cdp: {error}", file=sys.stderr)
+        return 1
+    finally:
+        if connected:
+            if not cdp.close_session_tab(session):
+                print(
+                    "list_sitemap_urls_cdp: warning: sitemap tab did not close",
+                    file=sys.stderr,
+                )
+            cdp.run(["disconnect", "--session", session], timeout=5, check=False)
+
+    text = "".join(f"{url}\n" for url in result)
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(text, encoding="utf-8")
+        print(
+            f"Wrote {len(result)} URL(s) from {len(seen_sitemaps)} sitemap(s) "
+            f"to {args.output}",
+            file=sys.stderr,
+        )
+    else:
+        sys.stdout.write(text)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

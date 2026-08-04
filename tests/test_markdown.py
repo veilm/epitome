@@ -4,6 +4,7 @@ from util.epitome_lib.extraction import (
     convert_extraction,
     missing_note_targets,
     parse_timestamp,
+    site_options,
 )
 from util.epitome_lib.html_to_markdown import MarkdownRenderer, word_coverage
 
@@ -46,7 +47,17 @@ class MarkdownTest(unittest.TestCase):
     def test_timestamp_and_coverage(self):
         self.assertEqual(parse_timestamp("1970-01-01T00:00:10Z"), 10)
         self.assertEqual(parse_timestamp("January 1, 1970"), 0)
+        self.assertEqual(parse_timestamp("Jul 22, 2026"), 1784678400)
         self.assertAlmostEqual(word_coverage("one two two", "one two"), 2 / 3)
+
+    def test_anthropic_and_claude_site_rules(self):
+        anthropic = site_options("https://www.anthropic.com/news/example")
+        self.assertEqual(anthropic["rootSelectors"], ["article"])
+        self.assertEqual(anthropic["cutAtHeadings"], ["Related content"])
+
+        claude = site_options("https://claude.com/blog/example")
+        self.assertEqual(claude["rootSelectors"], ["main"])
+        self.assertEqual(claude["cutAtHeadings"], ["Related posts"])
 
     def test_missing_note_targets_are_reported(self):
         html = """
