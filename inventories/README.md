@@ -1,0 +1,36 @@
+# Media inventories
+
+Tracked inventories bridge Epitome's page captures with external media download
+systems. Large downloaded files remain outside Git; these small JSON files record
+what is needed, where it should be imported, and every captured article that uses
+it.
+
+## Anthropic YouTube embeds
+
+[`anthropic-youtube.json`](anthropic-youtube.json) contains one item per YouTube
+video. Each item provides:
+
+- the YouTube ID and watch URL;
+- a stable import directory below the private Anthropic archive;
+- every referring article, embed title, source iframe URL, and capture locator;
+- a status field, initially `pending_download`; and
+- optional `imported_files` and `notes` fields for the external downloader or a
+  later import step.
+
+On Delirium, `media/youtube/<video_id>` is relative to
+`/mnt2/capsule/epitome/anthropic/`. The downloader may choose its own filenames
+and containers inside that directory, then record them in `imported_files`.
+
+Regenerate discovery data without losing existing status/import fields:
+
+```sh
+util/inventory_embedded_media \
+  /mnt2/capsule/epitome/anthropic/crawls/1786067844 \
+  /mnt2/capsule/epitome/anthropic/crawls/1786099713 \
+  --source 'Anthropic public-site batch' \
+  --media-root media/youtube \
+  --output inventories/anthropic-youtube.json
+```
+
+The paths in this example describe Delirium's private archive, not portable
+defaults in the capture utilities.

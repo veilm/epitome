@@ -12,7 +12,9 @@ notes. Captured site data remains private and ignored by Git.
 See [docs/network-capture.md](docs/network-capture.md) for current capture usage,
 [docs/archive-plan.md](docs/archive-plan.md) for the broader site-capture design,
 [docs/markdown-plan.md](docs/markdown-plan.md) for article conversion, and
-[TODO.md](TODO.md) for the future source backlog.
+[TODO.md](TODO.md) for the future source backlog. Current per-source coverage and
+active preservation gaps are tracked in [STATUS.md](STATUS.md); external-media
+import mappings live under [inventories/](inventories/README.md).
 
 Quick start:
 

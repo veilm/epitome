@@ -26,6 +26,13 @@ small validation samples come before any large crawl.
         interview index is exhaustive.
   - [x] Identify feeds, sitemaps, media embeds, PDFs, and related official
         Anthropic properties before defining crawl boundaries.
+  - [x] Complete and offline-verify the approved first 160 Anthropic page URLs.
+  - [x] Inventory the 34 pending YouTube videos used by 22 captured articles in
+        `inventories/anthropic-youtube.json`.
+  - [ ] Import those videos through the external downloader and connect replay
+        to the files recorded in the inventory.
+  - [ ] Fix script-disabled Claude.com Webflow rendering and validate a bounded
+        multi-page blog sample before beginning a larger crawl.
   - [ ] Build and validate archive, model-readable extraction, and summary flows.
 - [ ] **Twitter/X**
   - [ ] Define curated Twitter lists and accounts to preserve.
