@@ -288,15 +288,17 @@ def activate_vimeo_embeds(
 ) -> dict[str, Any]:
     """Hydrate script-deferred Vimeo iframes while the network logger is live.
 
-    OpenAI's video component can leave iframe ``src`` blank until interaction.
-    Its React Flight stream still contains the Vimeo URLs, sometimes split
-    between adjacent script chunks. Decode and concatenate those chunks, then
-    assign the URLs to the corresponding blank frames deterministically.
+    Video components can leave iframe ``src`` blank, or leave only an empty
+    placeholder, until interaction. React Flight data and Vimeo oEmbed requests
+    still expose the URLs. Recover those URLs and assign them to the rendered
+    media slots while the network logger is live.
     """
     result = cdp.eval_script(
         session,
         r"""(()=>{
 const frames=[...document.querySelectorAll('iframe[title*="Vimeo" i]')];
+const placeholders=[...document.querySelectorAll('[class*="e-videoEmbed"]')]
+ .filter(node=>!node.querySelector('iframe,video'));
 const chunks=[];
 for(const script of document.scripts){
  const match=(script.textContent||"").match(/^self\.__next_f\.push\((.*)\)$/s);
@@ -307,12 +309,31 @@ for(const script of document.scripts){
  }catch{}
 }
 const flight=chunks.join("");
-const urls=[...flight.matchAll(
+const flightUrls=[...flight.matchAll(
  /"videoEmbedUrl":"(https:\/\/player\.vimeo\.com\/video\/.*?)"/g
 )].map(match=>match[1].replaceAll("&amp;","&"));
-const results=frames.map((frame,index)=>{
+const oembedUrls=performance.getEntriesByType("resource")
+ .map(entry=>{
+  try{
+   const url=new URL(entry.name);
+   if(url.hostname!=="vimeo.com"||!url.pathname.includes("/api/oembed"))return "";
+   const embedded=url.searchParams.get("url")||"";
+   return embedded.startsWith("https://player.vimeo.com/video/")?embedded:"";
+  }catch{return "";}
+ }).filter(Boolean);
+const urls=[...new Set([...oembedUrls,...flightUrls])];
+const slots=[...frames];
+for(const placeholder of placeholders){
+ const frame=document.createElement("iframe");
+ frame.title="Video on Vimeo";
+ frame.style.cssText="width:100%;height:100%;border:0";
+ frame.allow="autoplay; fullscreen; picture-in-picture";
+ placeholder.replaceChildren(frame);
+ slots.push(frame);
+}
+const results=slots.map((frame,index)=>{
  const embeddedUrl=urls[index]||"";
- const hadSrc=Boolean(frame.src);
+ const hadSrc=Boolean(frame.getAttribute("src"));
  if(!hadSrc&&embeddedUrl)frame.src=embeddedUrl;
  return {
   embedded_url:embeddedUrl,
@@ -321,7 +342,7 @@ const results=frames.map((frame,index)=>{
   title:frame.title,
  };
 });
-return {discovered:frames.length,embedded_urls:urls.length,results};
+return {discovered:slots.length,embedded_urls:urls.length,results};
 })()""",
         timeout=10,
     )

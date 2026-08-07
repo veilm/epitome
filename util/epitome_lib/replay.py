@@ -385,6 +385,15 @@ class _HTMLRewriter(HTMLParser):
             return
         if self.script_depth:
             return
+        if tag == "head":
+            # Consent controls captured in their initial state become inert once
+            # replay strips scripts.  Keep the raw HTML untouched on disk, but
+            # do not let an uncloseable overlay obscure the archived document.
+            self.output.append(
+                '<style id="epitome-replay-style">'
+                '#consent-banner,[data-testid="consent-banner"]'
+                '{display:none!important}</style>'
+            )
         if tag == "style" and self.style_depth:
             self.style_depth -= 1
         if tag == "iframe" and self.replaced_vimeo_iframes:
