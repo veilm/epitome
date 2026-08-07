@@ -54,6 +54,11 @@ small validation samples come before any large crawl.
   - [ ] SemiAnalysis.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
+- [ ] **Individual writers and personal blogs**
+  - [ ] Peter Steinberger.
+  - [ ] Andrej Karpathy.
+  - [ ] Inventory each person's canonical blog, essays, talks, and other
+        first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
   - [ ] AI 2027.
   - [ ] AI 2040.
