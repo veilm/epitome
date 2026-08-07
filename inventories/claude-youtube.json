@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786128341,
+  "source": "Claude.com blog pilot",
+  "capture_runs": [
+    "1786127775"
+  ],
+  "media_import_contract": {
+    "root_relative_to_source_archive": "media/youtube",
+    "per_video_directory": "media/youtube/{video_id}",
+    "article_links": "items[].articles",
+    "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
+  },
+  "summary": {
+    "videos": 4,
+    "articles": 3,
+    "statuses": {
+      "pending_download": 4
+    }
+  },
+  "items": [
+    {
+      "provider": "youtube",
+      "video_id": "Ii99RU3mOJM",
+      "watch_url": "https://www.youtube.com/watch?v=Ii99RU3mOJM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Ii99RU3mOJM",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-builds-visuals",
+          "title": "Claude builds interactive visuals right in your conversation | Claude by Anthropic",
+          "embed_title": "Claude can now show you",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Ii99RU3mOJM",
+          "capture_run": "1786127775",
+          "capture_page": "pages/000004-claude.com-blog-claude-builds-visuals",
+          "capture_started_at": 1786128027
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "sbkwv-HVhQU",
+      "watch_url": "https://www.youtube.com/watch?v=sbkwv-HVhQU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/sbkwv-HVhQU",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-and-slack",
+          "title": "Claude and Slack | Claude by Anthropic",
+          "embed_title": "Connect Slack to Claude with MCP",
+          "embed_url": "https://www.youtube-nocookie.com/embed/sbkwv-HVhQU",
+          "capture_run": "1786127775",
+          "capture_page": "pages/000002-claude.com-blog-claude-and-slack",
+          "capture_started_at": 1786127869
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "tI1uzSJuSxc",
+      "watch_url": "https://www.youtube.com/watch?v=tI1uzSJuSxc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/tI1uzSJuSxc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-and-slack",
+          "title": "Claude and Slack | Claude by Anthropic",
+          "embed_title": "Claude in Slack",
+          "embed_url": "https://www.youtube-nocookie.com/embed/tI1uzSJuSxc",
+          "capture_run": "1786127775",
+          "capture_page": "pages/000002-claude.com-blog-claude-and-slack",
+          "capture_started_at": 1786127869
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "wI0ptqCSL0I",
+      "watch_url": "https://www.youtube.com/watch?v=wI0ptqCSL0I",
+      "status": "pending_download",
+      "import_directory": "media/youtube/wI0ptqCSL0I",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills",
+          "title": "Building verification loops in Claude Code with skills | Claude by Anthropic",
+          "embed_title": "Stop babysitting your agents",
+          "embed_url": "https://www.youtube-nocookie.com/embed/wI0ptqCSL0I?start=1028",
+          "capture_run": "1786127775",
+          "capture_page": "pages/000001-claude.com-blog-building-verification-loops-in-claude-code-with-skills",
+          "capture_started_at": 1786127795
+        }
+      ]
+    }
+  ]
+}

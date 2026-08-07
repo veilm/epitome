@@ -34,3 +34,20 @@ util/inventory_embedded_media \
 
 The paths in this example describe Delirium's private archive, not portable
 defaults in the capture utilities.
+
+## Claude.com YouTube embeds
+
+[`claude-youtube.json`](claude-youtube.json) uses the same schema for the
+Claude.com blog. On Delirium, its `media/youtube/<video_id>` directories are
+relative to `/mnt2/capsule/epitome/claude.com/`.
+
+Regenerate it after additional Claude.com batches while preserving any existing
+status/import fields:
+
+```sh
+util/inventory_embedded_media \
+  /mnt2/capsule/epitome/claude.com/crawls/1786127775 \
+  --source 'Claude.com blog pilot' \
+  --media-root media/youtube \
+  --output inventories/claude-youtube.json
+```

@@ -31,8 +31,12 @@ small validation samples come before any large crawl.
         `inventories/anthropic-youtube.json`.
   - [ ] Import those videos through the external downloader and connect replay
         to the files recorded in the inventory.
-  - [ ] Fix script-disabled Claude.com Webflow rendering and validate a bounded
-        multi-page blog sample before beginning a larger crawl.
+  - [x] Fix script-disabled Claude.com Webflow rendering and validate a bounded
+        five-page blog sample before beginning a larger crawl.
+  - [x] Inventory the 4 pending YouTube videos used by 3 Claude.com pilot
+        articles in `inventories/claude-youtube.json`.
+  - [ ] Import those videos through the external downloader and connect replay
+        to the files recorded in the inventory.
   - [ ] Build and validate archive, model-readable extraction, and summary flows.
 - [ ] **Twitter/X**
   - [ ] Define curated Twitter lists and accounts to preserve.
