@@ -20,6 +20,30 @@ essay is cleanly contained by `article`, with its title, subtitle, visible date,
 main body, acknowledgements, and footnotes; it should work with the generic
 capture and extraction pipeline.
 
+The reviewed, tracked capture input is `sources/dario-amodei.txt`. It contains
+the homepage plus all five self-hosted writings (six successful pages total).
+The broken `/archive` navigation target is documented here but deliberately not
+treated as a seventh content page.
+
+## Capture validation
+
+A representative capture of *Machines of Loving Grace* passed on 2026-08-07:
+the live and local pages both exposed the complete roughly 90,000-character
+article, the local replay had no failed visible images, and a reload made no
+production-origin requests. The generic `capture_urls` runner is therefore
+appropriate for the six-page tracked list without a site-specific parser.
+
+Asset completion also discovered two historical PDFs linked as citations whose
+hosts no longer resolved during validation:
+
+- `https://pdf.usaid.gov/pdf_docs/pnacw645.pdf`
+- `https://www.fhi.ox.ac.uk/brain-emulation-roadmap-report.pdf`
+
+These are outbound reference documents rather than required visual assets. The
+archive preserves their URLs and article context; retrieving archival copies is
+a separate linked-document follow-up and does not block capture of the personal
+site itself.
+
 The homepage also links two 2025 op-eds and nine interviews. That interview
 list is demonstrably stale: it includes the August 2023 Dwarkesh conversation,
 but not the February 2026 follow-up.
