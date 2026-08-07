@@ -33,7 +33,7 @@ small validation samples come before any large crawl.
         to the files recorded in the inventory.
   - [x] Fix script-disabled Claude.com Webflow rendering and validate a bounded
         five-page blog sample before beginning a larger crawl.
-  - [x] Inventory the 4 pending YouTube videos used by 3 Claude.com pilot
+  - [x] Inventory the 14 pending YouTube videos used by 11 captured Claude.com
         articles in `inventories/claude-youtube.json`.
   - [ ] Import those videos through the external downloader and connect replay
         to the files recorded in the inventory.

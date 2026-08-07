@@ -47,7 +47,8 @@ status/import fields:
 ```sh
 util/inventory_embedded_media \
   /mnt2/capsule/epitome/claude.com/crawls/1786127775 \
-  --source 'Claude.com blog pilot' \
+  /mnt2/capsule/epitome/claude.com/crawls/1786137145 \
+  --source 'Claude.com blog batches' \
   --media-root media/youtube \
   --output inventories/claude-youtube.json
 ```

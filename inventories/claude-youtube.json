@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786128341,
-  "source": "Claude.com blog pilot",
+  "generated_at_unix": 1786139300,
+  "source": "Claude.com blog batches",
   "capture_runs": [
-    "1786127775"
+    "1786127775",
+    "1786137145"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/youtube",
@@ -12,13 +13,67 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 4,
-    "articles": 3,
+    "videos": 14,
+    "articles": 11,
     "statuses": {
-      "pending_download": 4
+      "pending_download": 14
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "45hPRdfDEsI",
+      "watch_url": "https://www.youtube.com/watch?v=45hPRdfDEsI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/45hPRdfDEsI",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-managed-agents",
+          "title": "Claude Managed Agents: get to production 10x faster | Claude by Anthropic",
+          "embed_title": "How Notion built with Claude Managed Agents",
+          "embed_url": "https://www.youtube-nocookie.com/embed/45hPRdfDEsI",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000013-claude.com-blog-claude-managed-agents",
+          "capture_started_at": 1786138285
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "7-1tNo8HAwk",
+      "watch_url": "https://www.youtube.com/watch?v=7-1tNo8HAwk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/7-1tNo8HAwk",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-for-the-legal-industry",
+          "title": "Claude for the legal industry | Claude by Anthropic",
+          "embed_title": "New agents for legal professionals | Claude Cowork",
+          "embed_url": "https://www.youtube-nocookie.com/embed/7-1tNo8HAwk",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000011-claude.com-blog-claude-for-the-legal-industry",
+          "capture_started_at": 1786138060
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "I1BvAHOsjBU",
+      "watch_url": "https://www.youtube.com/watch?v=I1BvAHOsjBU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/I1BvAHOsjBU",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-managed-agents",
+          "title": "Claude Managed Agents: get to production 10x faster | Claude by Anthropic",
+          "embed_title": "Introducing Claude Managed Agents",
+          "embed_url": "https://www.youtube-nocookie.com/embed/I1BvAHOsjBU",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000013-claude.com-blog-claude-managed-agents",
+          "capture_started_at": 1786138285
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "Ii99RU3mOJM",
@@ -34,6 +89,114 @@
           "capture_run": "1786127775",
           "capture_page": "pages/000004-claude.com-blog-claude-builds-visuals",
           "capture_started_at": 1786128027
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "OHQRNj6HJgM",
+      "watch_url": "https://www.youtube.com/watch?v=OHQRNj6HJgM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/OHQRNj6HJgM",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-code-remote-mcp",
+          "title": "Remote MCP support in Claude Code | Claude by Anthropic",
+          "embed_title": "Claude Code + Linear",
+          "embed_url": "https://www.youtube-nocookie.com/embed/OHQRNj6HJgM",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000005-claude.com-blog-claude-code-remote-mcp",
+          "capture_started_at": 1786137505
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "XpXImenrSPI",
+      "watch_url": "https://www.youtube.com/watch?v=XpXImenrSPI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XpXImenrSPI",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-code-and-slack",
+          "title": "Claude Code and Slack | Claude by Anthropic",
+          "embed_title": "Claude Code in Slack",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XpXImenrSPI",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000001-claude.com-blog-claude-code-and-slack",
+          "capture_started_at": 1786137155
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "cIctgHKEeMA",
+      "watch_url": "https://www.youtube.com/watch?v=cIctgHKEeMA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/cIctgHKEeMA",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-excel-powerpoint-updates",
+          "title": "Advancing Claude for Excel and PowerPoint | Claude by Anthropic",
+          "embed_title": "One conversation across Claude for Excel and PowerPoint",
+          "embed_url": "https://www.youtube-nocookie.com/embed/cIctgHKEeMA",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000007-claude.com-blog-claude-excel-powerpoint-updates",
+          "capture_started_at": 1786137706
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "mCj4kx_P2Ak",
+      "watch_url": "https://www.youtube.com/watch?v=mCj4kx_P2Ak",
+      "status": "pending_download",
+      "import_directory": "media/youtube/mCj4kx_P2Ak",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-for-chrome",
+          "title": "Piloting Claude in Chrome | Claude by Anthropic",
+          "embed_title": "Research Preview: Claude for Chrome",
+          "embed_url": "https://www.youtube-nocookie.com/embed/mCj4kx_P2Ak",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000008-claude.com-blog-claude-for-chrome",
+          "capture_started_at": 1786137795
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "rWaQSQEm_aY",
+      "watch_url": "https://www.youtube.com/watch?v=rWaQSQEm_aY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/rWaQSQEm_aY",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-code-desktop-redesign",
+          "title": "Redesigning Claude Code on desktop for parallel agents | Claude by Anthropic",
+          "embed_title": "The new Claude Code desktop app, redesigned for parallel agents",
+          "embed_url": "https://www.youtube-nocookie.com/embed/rWaQSQEm_aY",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000002-claude.com-blog-claude-code-desktop-redesign",
+          "capture_started_at": 1786137245
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "s-avRazvmLg",
+      "watch_url": "https://www.youtube.com/watch?v=s-avRazvmLg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/s-avRazvmLg",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-code-on-the-web",
+          "title": "Claude Code on the web | Claude by Anthropic",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/s-avRazvmLg?autoplay=0&mute=1&controls=1&origin=https%3A%2F%2Fwww.staging.ant.dev&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1&forigin=https%3A%2F%2Fwww.staging.ant.dev%2Fnews%2Fclaude-code-on-the-web&aoriginsup=1&gporigin=https%3A%2F%2Fwww.staging.ant.dev%2Fantaccess%2Fstructure%2Fposts%3Bnews%3Bbf9ddf12-70b1-493c-b667-b2c908f0bcb7%252Cview%253Dpreview&vf=1",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000003-claude.com-blog-claude-code-on-the-web",
+          "capture_started_at": 1786137333
         }
       ]
     },
@@ -88,6 +251,24 @@
           "capture_run": "1786127775",
           "capture_page": "pages/000001-claude.com-blog-building-verification-loops-in-claude-code-with-skills",
           "capture_started_at": 1786127795
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "zZbdabVY3fI",
+      "watch_url": "https://www.youtube.com/watch?v=zZbdabVY3fI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/zZbdabVY3fI",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-code-remote-mcp",
+          "title": "Remote MCP support in Claude Code | Claude by Anthropic",
+          "embed_title": "Claude Code + Sentry",
+          "embed_url": "https://www.youtube-nocookie.com/embed/zZbdabVY3fI",
+          "capture_run": "1786137145",
+          "capture_page": "pages/000005-claude.com-blog-claude-code-remote-mcp",
+          "capture_started_at": 1786137505
         }
       ]
     }
