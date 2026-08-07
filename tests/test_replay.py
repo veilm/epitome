@@ -91,6 +91,8 @@ class ReplayTest(unittest.TestCase):
             self.assertIn('id="epitome-replay-style"', html)
             self.assertIn('#consent-banner', html)
             self.assertIn('aspect-ratio:16/9', html)
+            self.assertIn('.transition_wrap{display:none!important}', html)
+            self.assertIn('main>section[style*="visibility: hidden"]', html)
             self.assertIn(
                 resource_path("https://example.com/style.css"),
                 html,

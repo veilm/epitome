@@ -395,6 +395,11 @@ class _HTMLRewriter(HTMLParser):
                 '{display:none!important}'
                 'figure[class*="post-video-container"]'
                 '{height:auto!important;aspect-ratio:16/9}'
+                '.transition_wrap{display:none!important}'
+                'main>section[style*="visibility: hidden"],'
+                'main .word[style*="visibility: hidden"]'
+                '{visibility:visible!important;opacity:1!important;'
+                'transform:none!important}'
                 '</style>'
             )
         if tag == "style" and self.style_depth:
