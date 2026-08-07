@@ -392,7 +392,10 @@ class _HTMLRewriter(HTMLParser):
             self.output.append(
                 '<style id="epitome-replay-style">'
                 '#consent-banner,[data-testid="consent-banner"]'
-                '{display:none!important}</style>'
+                '{display:none!important}'
+                'figure[class*="post-video-container"]'
+                '{height:auto!important;aspect-ratio:16/9}'
+                '</style>'
             )
         if tag == "style" and self.style_depth:
             self.style_depth -= 1

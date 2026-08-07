@@ -90,6 +90,7 @@ class ReplayTest(unittest.TestCase):
             self.assertNotIn("preconnect", html)
             self.assertIn('id="epitome-replay-style"', html)
             self.assertIn('#consent-banner', html)
+            self.assertIn('aspect-ratio:16/9', html)
             self.assertIn(
                 resource_path("https://example.com/style.css"),
                 html,
