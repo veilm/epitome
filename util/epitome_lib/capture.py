@@ -333,6 +333,15 @@ return {discovered:frames.length,embedded_urls:urls.length,results};
     }
 
 
+def wait_for_document(session: str, *, max_seconds: float) -> None:
+    """Wait for navigation using the capture budget, not cdp's 10s default."""
+    timeout = min(max_seconds, 45)
+    cdp.run(
+        ["wait", "--session", session, "--timeout", f"{timeout:g}s"],
+        timeout=timeout + 5,
+    )
+
+
 def capture_url(
     url: str,
     output_dir: Path,
@@ -398,10 +407,7 @@ def capture_url(
             f"(location.href={json.dumps(url)}, true)",
             timeout=10,
         )
-        cdp.run(
-            ["wait", "--session", session],
-            timeout=min(max_seconds, 45),
-        )
+        wait_for_document(session, max_seconds=max_seconds)
         time.sleep(max(0, settle_seconds))
 
         previous_height = -1

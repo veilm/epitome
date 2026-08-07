@@ -4,6 +4,7 @@ import tempfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import threading
 import unittest
+from unittest import mock
 
 from util.epitome_lib.assets import (
     asset_priority,
@@ -22,6 +23,7 @@ from util.epitome_lib.capture import (
     summarize_network,
     url_slug,
     validate_url,
+    wait_for_document,
 )
 
 
@@ -40,6 +42,21 @@ class _AssetHandler(BaseHTTPRequestHandler):
 
 
 class CaptureHelpersTest(unittest.TestCase):
+    def test_navigation_wait_passes_explicit_cdp_timeout(self):
+        with mock.patch("util.epitome_lib.capture.cdp.run") as run:
+            wait_for_document("capture-session", max_seconds=90)
+
+        run.assert_called_once_with(
+            [
+                "wait",
+                "--session",
+                "capture-session",
+                "--timeout",
+                "45s",
+            ],
+            timeout=50,
+        )
+
     def test_url_validation_and_slug(self):
         self.assertEqual(
             url_slug("https://openai.com/index/example/?x=1"),
