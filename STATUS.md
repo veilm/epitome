@@ -14,7 +14,7 @@ work.
 | Dario Amodei personal site | Complete | The homepage and all five self-hosted writings are captured and visually/offline-network verified. | Pursue archival copies of three unavailable outbound citation PDFs; continue the separate broader writing and interview inventory. |
 | Andrej Karpathy blog | Complete | All 26 reviewed URL identities are captured and offline-verified. Recent, historical, image-heavy, and long code-heavy pages replay locally; captured Disqus threads render statically, including 35 comments on `microgpt` and 37 on the RNN article. | Recover archival copies of five unavailable outbound research PDFs, then inventory Medium, `karpathy.ai`, notebooks, papers, videos, and other first-party writing separately. |
 | Peter Steinberger blog | Core page archive complete; media active | All 116 reviewed core URL identities are archived across validation and four bounded batches. Twenty desktop replays spanning 2012–2026 passed visual and offline-network checks. Five lost inline images are restored from reviewed canonical or Wayback copies, preserved tweets render statically, and two captured Vimeo videos play locally—including a 3h28m, 2.2 GB recording. | Import four inventoried YouTube videos. Two 2020 inline images are unavailable at the live origin, public source repository, and checked exact historical locations; another Vimeo player returns HTTP 403, and four dead outbound citations remain recovery tasks. Preserve deferred pagination/tag indexes later and evaluate the official Markdown mirror as a model-readable supplement. |
-| Dwarkesh Podcast | Page crawl active; media imports active | 93 of the 183 approved source identities are captured across structural validations and three bounded batches. Long transcripts, standalone essays, inline figures, and ordinary images replay locally. HLS playlist children now fail closed through local replay instead of leaking to Mux production. Four Substack audio assets, 53 YouTube videos, and 61 Substack videos are inventoried. | Continue with the selected deduplicated 60-page batch. Import full audio/video through the external downloader. One cited 1989 UQ paper remains blocked by upstream verification and publisher authentication; its stable bibliographic landing page is preserved. |
+| Dwarkesh Podcast | Page crawl active; media imports active | 153 of the 183 approved source identities are captured across structural validations and four bounded batches. Long transcripts, standalone essays, inline figures, and ordinary images replay locally. HLS playlist children fail closed through local replay instead of leaking to production. Forty-four Substack audio assets, 100 YouTube videos, and 72 Substack videos are inventoried. | Complete the selected final 30-page remainder. Import full audio/video through the external downloader. One cited 1989 UQ paper remains blocked by upstream verification and publisher authentication; its stable bibliographic landing page is preserved. |
 | SemiAnalysis newsletter | Page capture ready | A reviewed 325-identity scope contains the publication home, archive, feed, and 322 sitemap posts. Current and historical paywalled articles plus a free 2020 article are captured and offline-verified. Public subscription boundaries replay explicitly, and the validation pages contain no embedded audio/video imports. Current free-subscriber emails end at the same paid boundary, so they are not a richer source than the public pages. | Begin bounded batches only after the active Dwarkesh page scope completes. Inventory the separate corporate, careers, models, and public-tools site later; authenticated institutional data is out of public-crawl scope. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
@@ -50,11 +50,11 @@ Peter Steinberger's blog has a separate ledger at
 
 Dwarkesh Podcast has three provider-specific ledgers:
 
-- 53 YouTube videos referenced by 53 captured articles;
-- 61 Substack-hosted videos referenced by 61 captured articles; and
-- four Substack-hosted audio assets referenced by four captured articles.
+- 100 YouTube videos referenced by 100 captured articles;
+- 72 Substack-hosted videos referenced by 70 captured articles; and
+- 44 Substack-hosted audio assets referenced by 44 captured articles.
 
-All 118 entries are marked `pending_download` with stable private import paths.
+All 216 entries are marked `pending_download` with stable private import paths.
 
 ## Immediate next source
 
@@ -65,6 +65,6 @@ visual, image-loading, and offline-network checks; its only two asset misses
 were the same unused Webflow placeholder SVG returning HTTP 403. Dario's
 bounded personal-site scope and Karpathy's 26-page canonical blog scope are also
 complete. Peter Steinberger's 116-identity core blog scope is now also complete
-and replay-verified. Dwarkesh is the active page crawl; its first 93 source
-identities passed preservation review and the next deduplicated 60-page batch is
-selected.
+and replay-verified. Dwarkesh is the active page crawl; its first 153 source
+identities passed preservation review and the final deduplicated 30-page
+remainder is selected.

@@ -71,7 +71,9 @@ small validation samples come before any large crawl.
   - [x] Capture and offline-verify the deduplicated 45-page Dwarkesh batch;
         prevent captured HLS playlists from leaking child requests to live Mux
         hosts.
-  - [ ] Continue the selected deduplicated 60-page Dwarkesh batch, then import
+  - [x] Capture and offline-verify the deduplicated 60-page Dwarkesh batch,
+        including a successful retry of its one lost temporary CDP session.
+  - [ ] Complete the selected final 30-page Dwarkesh remainder, then import
         inventoried audio and video through the external downloader.
   - [x] Inventory the 325-identity SemiAnalysis newsletter scope and separate it
         from the corporate/models site and authenticated institutional data.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786204707,
+  "generated_at_unix": 1786233234,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,10 +12,10 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 61,
-    "articles": 61,
+    "videos": 72,
+    "articles": 70,
     "statuses": {
-      "pending_download": 61
+      "pending_download": 72
     }
   },
   "items": [
@@ -75,6 +75,33 @@
     },
     {
       "provider": "substack",
+      "media_id": "11c8cb35-f256-4014-8e5b-221cb4223556",
+      "status": "pending_download",
+      "import_directory": "media/substack/11c8cb35-f256-4014-8e5b-221cb4223556",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/patrick-mckenzie",
+          "title": "Patrick McKenzie \u2014 Money laundering, big tech censorship, SBF & Japan",
+          "embed_title": "Patrick McKenzie \u2014 Money laundering, big tech censorship, SBF & Japan",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/146935176/11c8cb35-f256-4014-8e5b-221cb4223556/transcoded-1721803006.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/11c8cb35-f256-4014-8e5b-221cb4223556/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/11c8cb35-f256-4014-8e5b-221cb4223556/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000011-www.dwarkesh.com-p-patrick-mckenzie",
+          "capture_started_at": 1786207388
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "13cf8b33-a2ab-4805-afaf-27fca84d8354",
       "status": "pending_download",
       "import_directory": "media/substack/13cf8b33-a2ab-4805-afaf-27fca84d8354",
@@ -97,6 +124,33 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000024-www.dwarkesh.com-p-ai-firms-narration",
           "capture_started_at": 1786199239
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "16d96267-465e-4604-8f23-5274340529b1",
+      "status": "pending_download",
+      "import_directory": "media/substack/16d96267-465e-4604-8f23-5274340529b1",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dylan-jon",
+          "title": "@Asianometry & Dylan Patel \u2014 How the semiconductor industry actually works",
+          "embed_title": "@Asianometry & Dylan Patel \u2014 How the semiconductor industry actually works",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/149705443/16d96267-465e-4604-8f23-5274340529b1/transcoded-1727892314.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/16d96267-465e-4604-8f23-5274340529b1/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/16d96267-465e-4604-8f23-5274340529b1/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000003-www.dwarkesh.com-p-dylan-jon",
+          "capture_started_at": 1786205698
         }
       ]
     },
@@ -205,6 +259,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000030-www.dwarkesh.com-p-dwarkesh-patel-wants-people-to-learn",
           "capture_started_at": 1786200464
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "294f4ac3-ec14-4cbb-801f-ff35d1a98f09",
+      "status": "pending_download",
+      "import_directory": "media/substack/294f4ac3-ec14-4cbb-801f-ff35d1a98f09",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/daniel-yergin",
+          "title": "Daniel Yergin \u2014 Oil destroyed Hitler, fracking destroyed Putin",
+          "embed_title": "Daniel Yergin \u2014 Oil destroyed Hitler, fracking destroyed Putin",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/149019792/294f4ac3-ec14-4cbb-801f-ff35d1a98f09/transcoded-1726695444.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/294f4ac3-ec14-4cbb-801f-ff35d1a98f09/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/294f4ac3-ec14-4cbb-801f-ff35d1a98f09/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000004-www.dwarkesh.com-p-daniel-yergin",
+          "capture_started_at": 1786205915
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "2c9b829e-fe9e-4c67-8cd9-7c8762809e2c",
+      "status": "pending_download",
+      "import_directory": "media/substack/2c9b829e-fe9e-4c67-8cd9-7c8762809e2c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/advertise",
+          "title": "Sponsor the podcast - by Dwarkesh Patel - Dwarkesh Podcast",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/145608177/2c9b829e-fe9e-4c67-8cd9-7c8762809e2c/transcoded-03216.png?refresh=Sat Aug 08 2026 12:56:58 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/2c9b829e-fe9e-4c67-8cd9-7c8762809e2c/src?override_publication_id=69345&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/2c9b829e-fe9e-4c67-8cd9-7c8762809e2c/src?override_publication_id=69345&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000015-www.dwarkesh.com-p-advertise",
+          "capture_started_at": 1786208217
         }
       ]
     },
@@ -453,6 +561,33 @@
     },
     {
       "provider": "substack",
+      "media_id": "4c6156ed-ae3b-41aa-8a1d-950aa00f9f79",
+      "status": "pending_download",
+      "import_directory": "media/substack/4c6156ed-ae3b-41aa-8a1d-950aa00f9f79",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/advertise",
+          "title": "Sponsor the podcast - by Dwarkesh Patel - Dwarkesh Podcast",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/145608177/4c6156ed-ae3b-41aa-8a1d-950aa00f9f79/transcoded-12209.png?refresh=Sat Aug 08 2026 12:56:58 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4c6156ed-ae3b-41aa-8a1d-950aa00f9f79/src?override_publication_id=69345&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4c6156ed-ae3b-41aa-8a1d-950aa00f9f79/src?override_publication_id=69345&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000015-www.dwarkesh.com-p-advertise",
+          "capture_started_at": 1786208217
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "4c7a4c7c-4303-47f6-9adf-0d1b23555e1b",
       "status": "pending_download",
       "import_directory": "media/substack/4c7a4c7c-4303-47f6-9adf-0d1b23555e1b",
@@ -669,6 +804,33 @@
     },
     {
       "provider": "substack",
+      "media_id": "62a67109-7a54-47a7-b785-b2ea81a9b0e7",
+      "status": "pending_download",
+      "import_directory": "media/substack/62a67109-7a54-47a7-b785-b2ea81a9b0e7",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/john-schulman",
+          "title": "John Schulman (OpenAI Cofounder) - Reasoning, RLHF, & Plan for 2027 AGI",
+          "embed_title": "John Schulman (OpenAI Cofounder) \u2014 Reasoning, RLHF, & plan for 2027 AGI",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/144657191/62a67109-7a54-47a7-b785-b2ea81a9b0e7/transcoded-00001.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/62a67109-7a54-47a7-b785-b2ea81a9b0e7/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/62a67109-7a54-47a7-b785-b2ea81a9b0e7/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000018-www.dwarkesh.com-p-john-schulman",
+          "capture_started_at": 1786208909
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "6974c510-9b3c-4a9d-a741-c0c28af04057",
       "status": "pending_download",
       "import_directory": "media/substack/6974c510-9b3c-4a9d-a741-c0c28af04057",
@@ -772,6 +934,33 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786182573/pages/000009-www.dwarkesh.com-p-adam-brown-gr",
           "capture_started_at": 1786184396
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "71b061bf-88d8-4dc6-8817-dfb5f5c790bc",
+      "status": "pending_download",
+      "import_directory": "media/substack/71b061bf-88d8-4dc6-8817-dfb5f5c790bc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tony-blair",
+          "title": "Tony Blair \u2014 Why political leaders keep failing at major change",
+          "embed_title": "Tony Blair \u2014 Why political leaders keep failing at major change",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/146005940/71b061bf-88d8-4dc6-8817-dfb5f5c790bc/transcoded-1719406695.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/71b061bf-88d8-4dc6-8817-dfb5f5c790bc/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/71b061bf-88d8-4dc6-8817-dfb5f5c790bc/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000013-www.dwarkesh.com-p-tony-blair",
+          "capture_started_at": 1786207806
         }
       ]
     },
@@ -934,6 +1123,33 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000034-www.dwarkesh.com-p-satya-nadella",
           "capture_started_at": 1786201240
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "7f960bf1-958e-4ddf-a6e9-253ae7a53320",
+      "status": "pending_download",
+      "import_directory": "media/substack/7f960bf1-958e-4ddf-a6e9-253ae7a53320",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/leopold-aschenbrenner",
+          "title": "Leopold Aschenbrenner \u2014 2027 AGI, China/US super-intelligence race, & the return of history",
+          "embed_title": "Leopold Aschenbrenner \u2014 2027 AGI, China/US super-intelligence race, & the return of history",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/145136502/7f960bf1-958e-4ddf-a6e9-253ae7a53320/transcoded-00001.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/7f960bf1-958e-4ddf-a6e9-253ae7a53320/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/7f960bf1-958e-4ddf-a6e9-253ae7a53320/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000017-www.dwarkesh.com-p-leopold-aschenbrenner",
+          "capture_started_at": 1786208685
         }
       ]
     },
@@ -1290,6 +1506,33 @@
     },
     {
       "provider": "substack",
+      "media_id": "b564f3ad-5bd4-458e-945f-641ac4aa66a2",
+      "status": "pending_download",
+      "import_directory": "media/substack/b564f3ad-5bd4-458e-945f-641ac4aa66a2",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-reich",
+          "title": "David Reich \u2014 How one small tribe conquered the world 70,000 years ago",
+          "embed_title": "David Reich \u2014 How one small tribe conquered the world 70,000 years ago",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/148257189/b564f3ad-5bd4-458e-945f-641ac4aa66a2/transcoded-00001.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/b564f3ad-5bd4-458e-945f-641ac4aa66a2/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/b564f3ad-5bd4-458e-945f-641ac4aa66a2/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000007-www.dwarkesh.com-p-david-reich",
+          "capture_started_at": 1786206532
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "b88b93a9-8ba0-4dd1-81b5-bb557d48a623",
       "status": "pending_download",
       "import_directory": "media/substack/b88b93a9-8ba0-4dd1-81b5-bb557d48a623",
@@ -1614,6 +1857,33 @@
     },
     {
       "provider": "substack",
+      "media_id": "ee3f1255-f593-4e46-9a4c-f9c5e5f19350",
+      "status": "pending_download",
+      "import_directory": "media/substack/ee3f1255-f593-4e46-9a4c-f9c5e5f19350",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/advertise",
+          "title": "Sponsor the podcast - by Dwarkesh Patel - Dwarkesh Podcast",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/145608177/ee3f1255-f593-4e46-9a4c-f9c5e5f19350/transcoded-00545.png?refresh=Sat Aug 08 2026 12:56:58 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ee3f1255-f593-4e46-9a4c-f9c5e5f19350/src?override_publication_id=69345&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ee3f1255-f593-4e46-9a4c-f9c5e5f19350/src?override_publication_id=69345&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000015-www.dwarkesh.com-p-advertise",
+          "capture_started_at": 1786208217
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "f6efa180-a37f-4d39-ab2b-3afc31092217",
       "status": "pending_download",
       "import_directory": "media/substack/f6efa180-a37f-4d39-ab2b-3afc31092217",
@@ -1663,6 +1933,33 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000030-www.dwarkesh.com-p-sarah-paine-russo-chinese",
           "capture_started_at": 1786192937
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "f9e1b104-2c82-4278-aa5a-2c9dfd7c6663",
+      "status": "pending_download",
+      "import_directory": "media/substack/f9e1b104-2c82-4278-aa5a-2c9dfd7c6663",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/joe-carlsmith",
+          "title": "Joe Carlsmith \u2014 Preventing an AI takeover",
+          "embed_title": "Joe Carlsmith \u2014 Preventing an AI takeover",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/148002360/f9e1b104-2c82-4278-aa5a-2c9dfd7c6663/transcoded-1724335853.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f9e1b104-2c82-4278-aa5a-2c9dfd7c6663/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f9e1b104-2c82-4278-aa5a-2c9dfd7c6663/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000008-www.dwarkesh.com-p-joe-carlsmith",
+          "capture_started_at": 1786206747
         }
       ]
     }

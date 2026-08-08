@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786204715,
+  "generated_at_unix": 1786233244,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,220 @@
     "note": "Download one durable audio rendition per media ID. Preserve any caption tracks and record imported filenames in imported_files."
   },
   "summary": {
-    "audios": 4,
-    "articles": 4,
+    "audios": 44,
+    "articles": 44,
     "statuses": {
-      "pending_download": 4
+      "pending_download": 44
     }
   },
   "items": [
+    {
+      "provider": "substack-audio",
+      "media_id": "09559051-e9a1-4d34-99b9-c605fea7dc29",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/09559051-e9a1-4d34-99b9-c605fea7dc29",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine",
+          "title": "Sarah C. M. Paine - How Xi & Putin Think: Maritime vs Continental Powers & The Wars of Asia",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/09559051-e9a1-4d34-99b9-c605fea7dc29/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233036-retry-sarah-paine/pages/000001-www.dwarkesh.com-p-sarah-paine",
+          "capture_started_at": 1786233043
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "0ea1b465-c2ac-445f-8aa8-ab8daa47433e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/0ea1b465-c2ac-445f-8aa8-ab8daa47433e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/grant-sanderson",
+          "title": "Grant Sanderson (3Blue1Brown) - Past, Present, & Future of Mathematics",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/0ea1b465-c2ac-445f-8aa8-ab8daa47433e/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000033-www.dwarkesh.com-p-grant-sanderson",
+          "capture_started_at": 1786212154
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "11a326b7-c8ec-40f8-a1d7-0128d1c0feb5",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/11a326b7-c8ec-40f8-a1d7-0128d1c0feb5",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ilya-sutskever",
+          "title": "Ilya Sutskever (OpenAI Chief Scientist) - Building AGI, Alignment, & Future Models",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/11a326b7-c8ec-40f8-a1d7-0128d1c0feb5/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000043-www.dwarkesh.com-p-ilya-sutskever",
+          "capture_started_at": 1786214294
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "1ae85553-6538-4246-b125-fcf580e5ce5b",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/1ae85553-6538-4246-b125-fcf580e5ce5b",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/francois-chollet",
+          "title": "Francois Chollet, Mike Knoop - LLMs won\u2019t lead to AGI - $1,000,000 Prize to find true solution",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/1ae85553-6538-4246-b125-fcf580e5ce5b/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000016-www.dwarkesh.com-p-francois-chollet",
+          "capture_started_at": 1786208454
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "202ad858-5f5f-45ef-80ce-330e175ca817",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/202ad858-5f5f-45ef-80ce-330e175ca817",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/carl-shulman-2",
+          "title": "Carl Shulman (Pt 2) \u2014 AI Takeover, bio & cyber attacks, detecting deception, & humanity's far future",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/202ad858-5f5f-45ef-80ce-330e175ca817/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000037-www.dwarkesh.com-p-carl-shulman-2",
+          "capture_started_at": 1786212943
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "204d4eee-dcec-4c02-8561-c6f13934ee5d",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/204d4eee-dcec-4c02-8561-c6f13934ee5d",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dominic-cummings",
+          "title": "Dominic Cummings - COVID, Brexit, & Fixing Western Governance",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/204d4eee-dcec-4c02-8561-c6f13934ee5d/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000030-www.dwarkesh.com-p-dominic-cummings",
+          "capture_started_at": 1786211470
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "20c4c802-0d2f-471a-98f0-b73bae924ace",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/20c4c802-0d2f-471a-98f0-b73bae924ace",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tyler-cowen-3",
+          "title": "Tyler Cowen - Hayek, Keynes, & Smith on AI, Animal Spirits, Anarchy, & Growth",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/20c4c802-0d2f-471a-98f0-b73bae924ace/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000024-www.dwarkesh.com-p-tyler-cowen-3",
+          "capture_started_at": 1786210195
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "2583d6ee-459f-41e0-a72b-0964a1260d76",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/2583d6ee-459f-41e0-a72b-0964a1260d76",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/mark-zuckerberg",
+          "title": "Mark Zuckerberg - Llama 3, Open Sourcing $10b Models, & Caesar Augustus",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/2583d6ee-459f-41e0-a72b-0964a1260d76/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000019-www.dwarkesh.com-p-mark-zuckerberg",
+          "capture_started_at": 1786209119
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "32b98ff5-442c-48fd-8595-a2909d95d307",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/32b98ff5-442c-48fd-8595-a2909d95d307",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/demis-hassabis",
+          "title": "Demis Hassabis \u2014 Scaling, superhuman AIs, AlphaZero atop LLMs, AlphaFold",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/32b98ff5-442c-48fd-8595-a2909d95d307/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000022-www.dwarkesh.com-p-demis-hassabis",
+          "capture_started_at": 1786209759
+        }
+      ]
+    },
     {
       "provider": "substack-audio",
       "media_id": "378ecee0-1abb-4023-9d1d-b3ea9ebaee5a",
@@ -39,6 +246,282 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786167300-tyler-cowen",
           "capture_started_at": 1786167148
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "39e5a4a0-6d62-46ed-8b18-6357c2e1ded0",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/39e5a4a0-6d62-46ed-8b18-6357c2e1ded0",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/lars-doucet",
+          "title": "Lars Doucet - Georgism, Progress, Poverty, & Why Rent is Too High",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/39e5a4a0-6d62-46ed-8b18-6357c2e1ded0/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000048-www.dwarkesh.com-p-lars-doucet",
+          "capture_started_at": 1786215357
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "3c5a542f-3284-49e3-bac7-5765654324fc",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/3c5a542f-3284-49e3-bac7-5765654324fc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/austin-vernon",
+          "title": "38: Austin Vernon - Energy Superabundance, Engineering, and the Future of Productivity",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/3c5a542f-3284-49e3-bac7-5765654324fc/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000059-www.dwarkesh.com-p-austin-vernon",
+          "capture_started_at": 1786217721
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "3dd9f222-49b1-4f2f-9391-38d9c81d6b68",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/3dd9f222-49b1-4f2f-9391-38d9c81d6b68",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/shane-legg",
+          "title": "Shane Legg (DeepMind Founder) \u2014 2028 AGI, superhuman alignment, new architectures",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/3dd9f222-49b1-4f2f-9391-38d9c81d6b68/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000032-www.dwarkesh.com-p-shane-legg",
+          "capture_started_at": 1786211949
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "4175801a-af9d-4468-ba13-5a288226487a",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/4175801a-af9d-4468-ba13-5a288226487a",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/byrne-hobart-2",
+          "title": "Byrne Hobart - FTX, Drugs, Twitter, Taiwan, & Monasticism",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/4175801a-af9d-4468-ba13-5a288226487a/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000052-www.dwarkesh.com-p-byrne-hobart-2",
+          "capture_started_at": 1786216215
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "442e515f-a125-4241-8c87-35a9183911b3",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/442e515f-a125-4241-8c87-35a9183911b3",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sholto-douglas-trenton-bricken",
+          "title": "Sholto Douglas & Trenton Bricken - How to Build & Understand GPT-7's Mind",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/442e515f-a125-4241-8c87-35a9183911b3/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000020-www.dwarkesh.com-p-sholto-douglas-trenton-bricken",
+          "capture_started_at": 1786209328
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "45d36d6a-4286-42f2-ad49-a48e2a3aa81c",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/45d36d6a-4286-42f2-ad49-a48e2a3aa81c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/garett-jones",
+          "title": "Garett Jones - Immigration, National IQ, & Less Democracy",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/45d36d6a-4286-42f2-ad49-a48e2a3aa81c/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000047-www.dwarkesh.com-p-garett-jones",
+          "capture_started_at": 1786215150
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "4cebd109-722c-4ec8-94ce-f9cee9528044",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/4cebd109-722c-4ec8-94ce-f9cee9528044",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tyler-cowen-2",
+          "title": "Tyler Cowen - Talent, Collapse, & Sex - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/4cebd109-722c-4ec8-94ce-f9cee9528044/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000057-www.dwarkesh.com-p-tyler-cowen-2",
+          "capture_started_at": 1786217291
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "505f0f29-1c5a-4afa-be7d-ad901c109122",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/505f0f29-1c5a-4afa-be7d-ad901c109122",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan-3",
+          "title": "Bryan Caplan - Feminists, Billionaires, and Demagogues",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/505f0f29-1c5a-4afa-be7d-ad901c109122/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000056-www.dwarkesh.com-p-bryan-caplan-3",
+          "capture_started_at": 1786217075
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "554291f3-285e-459b-ac63-5669feac1b05",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/554291f3-285e-459b-ac63-5669feac1b05",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/carl-shulman",
+          "title": "Carl Shulman (Pt 1) - Intelligence Explosion, Primate Evolution, Robot Doublings, & Alignment",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/554291f3-285e-459b-ac63-5669feac1b05/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000038-www.dwarkesh.com-p-carl-shulman",
+          "capture_started_at": 1786213188
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "56c3b5a8-f471-41a9-b8b2-8ba23eb689b6",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/56c3b5a8-f471-41a9-b8b2-8ba23eb689b6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/holden-karnofsky",
+          "title": "Holden Karnofsky - Transformative AI & Most Important Century",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/56c3b5a8-f471-41a9-b8b2-8ba23eb689b6/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000049-www.dwarkesh.com-p-holden-karnofsky",
+          "capture_started_at": 1786215567
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "6657c303-3ddd-45a9-9d05-0910c3b103ed",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/6657c303-3ddd-45a9-9d05-0910c3b103ed",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/will-scaling-work-narration",
+          "title": "Will scaling work? [Narration] - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/6657c303-3ddd-45a9-9d05-0910c3b103ed/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000026-www.dwarkesh.com-p-will-scaling-work-narration",
+          "capture_started_at": 1786210631
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "6be267ba-e5ec-4ba8-b5d5-46a644be38cf",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/6be267ba-e5ec-4ba8-b5d5-46a644be38cf",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/paul-christiano",
+          "title": "Paul Christiano - Preventing AI Takeover",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/6be267ba-e5ec-4ba8-b5d5-46a644be38cf/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000031-www.dwarkesh.com-p-paul-christiano",
+          "capture_started_at": 1786211693
         }
       ]
     },
@@ -67,6 +550,144 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "7646fcfb-bbba-4b8b-a795-a2233e21933e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/7646fcfb-bbba-4b8b-a795-a2233e21933e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bethany-mclean",
+          "title": "Bethany McLean - Enron, FTX, 2008, Musk, Frauds, & Visionaries",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/7646fcfb-bbba-4b8b-a795-a2233e21933e/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000050-www.dwarkesh.com-p-bethany-mclean",
+          "capture_started_at": 1786215794
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "79e5888e-9b7d-4306-ba19-f0347b4ed7b8",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/79e5888e-9b7d-4306-ba19-f0347b4ed7b8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/nadia-asparouhova",
+          "title": "Nadia Asparouhova - Tech Elites, Democracy, Open Source, & Philanthropy",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/79e5888e-9b7d-4306-ba19-f0347b4ed7b8/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000051-www.dwarkesh.com-p-nadia-asparouhova",
+          "capture_started_at": 1786216008
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "7ecb6f04-4467-48a0-9a21-7adfaaba9d2e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/7ecb6f04-4467-48a0-9a21-7adfaaba9d2e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/kenneth-jackson",
+          "title": "Kenneth T. Jackson - Robert Moses, Hero & Master Builder of NYC?",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/7ecb6f04-4467-48a0-9a21-7adfaaba9d2e/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000054-www.dwarkesh.com-p-kenneth-jackson",
+          "capture_started_at": 1786216637
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "7f113342-9ac4-418c-a51d-29a8567aafda",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/7f113342-9ac4-418c-a51d-29a8567aafda",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/lyndon-johnson",
+          "title": "Lessons from The Years of Lyndon Johnson by Robert Caro",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/audio/upload/7f113342-9ac4-418c-a51d-29a8567aafda/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000041-www.dwarkesh.com-p-lyndon-johnson",
+          "capture_started_at": 1786213840
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "8985942d-9bb9-47d1-8ec8-2e1ec4357fe6",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/8985942d-9bb9-47d1-8ec8-2e1ec4357fe6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/steve-hsu",
+          "title": "37: Steve Hsu - Intelligence, Embryo Selection, & The Future of Humanity",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/8985942d-9bb9-47d1-8ec8-2e1ec4357fe6/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000060-www.dwarkesh.com-p-steve-hsu",
+          "capture_started_at": 1786217937
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "9e0b2927-5b08-41e9-bbce-8399b1d0fae8",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/9e0b2927-5b08-41e9-bbce-8399b1d0fae8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/eliezer-yudkowsky",
+          "title": "Eliezer Yudkowsky - Why AI Will Kill Us, Aligning LLMs, Nature of Intelligence, SciFi, & Rationality",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/9e0b2927-5b08-41e9-bbce-8399b1d0fae8/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000042-www.dwarkesh.com-p-eliezer-yudkowsky",
+          "capture_started_at": 1786214064
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "9f967eb5-ab31-4b9c-b851-0414731e09ed",
       "status": "pending_download",
       "import_directory": "media/substack-audio/9f967eb5-ab31-4b9c-b851-0414731e09ed",
@@ -90,6 +711,190 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "a36268a9-4adf-4af5-a704-52fe3679ac5e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/a36268a9-4adf-4af5-a704-52fe3679ac5e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/lyndon-johnson-narration",
+          "title": "Lessons from The Years of Lyndon Johnson by Robert Caro [Narration]",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/a36268a9-4adf-4af5-a704-52fe3679ac5e/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000025-www.dwarkesh.com-p-lyndon-johnson-narration",
+          "capture_started_at": 1786210424
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "a5d4779d-3ad0-473c-af1d-c2452af874a2",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/a5d4779d-3ad0-473c-af1d-c2452af874a2",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/brian-potter",
+          "title": "Brian Potter - Future of Construction, Ugly Modernism, & Environmental Review",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/a5d4779d-3ad0-473c-af1d-c2452af874a2/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000055-www.dwarkesh.com-p-brian-potter",
+          "capture_started_at": 1786216847
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "ae649dfc-587a-45b0-a052-13e63c648c1e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/ae649dfc-587a-45b0-a052-13e63c648c1e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/brett-harrison",
+          "title": "Brett Harrison - FTX US Former President & HFT Finance Veteran Speaks Out",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/ae649dfc-587a-45b0-a052-13e63c648c1e/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000045-www.dwarkesh.com-p-brett-harrison",
+          "capture_started_at": 1786214713
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "af0bf87f-929c-45bf-b275-3890db893c07",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/af0bf87f-929c-45bf-b275-3890db893c07",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jung-chang",
+          "title": "Jung Chang - Living through Cultural Revolution and Crimes of Mao",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/af0bf87f-929c-45bf-b275-3890db893c07/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000028-www.dwarkesh.com-p-jung-chang",
+          "capture_started_at": 1786211047
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "b3d2daea-0dc6-41ea-9e54-e3b090b47014",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/b3d2daea-0dc6-41ea-9e54-e3b090b47014",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/marc-andreessen",
+          "title": "Marc Andreessen - AI, Crypto, Regrets, Vulnerabilities, & Managerial Revolution",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/b3d2daea-0dc6-41ea-9e54-e3b090b47014/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000046-www.dwarkesh.com-p-marc-andreessen",
+          "capture_started_at": 1786214931
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "b757bd64-6f0d-424e-ab2c-8b3a6477f924",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/b757bd64-6f0d-424e-ab2c-8b3a6477f924",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/patrick-collison",
+          "title": "Patrick Collison (Stripe CEO) - Craft, Beauty, & The Future of Payments",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/b757bd64-6f0d-424e-ab2c-8b3a6477f924/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000023-www.dwarkesh.com-p-patrick-collison",
+          "capture_started_at": 1786209976
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "bc5f6d43-e84b-4377-96b3-a0e5e972972b",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/bc5f6d43-e84b-4377-96b3-a0e5e972972b",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dario-amodei",
+          "title": "Dario Amodei (Anthropic CEO) - $10 Billion Models, OpenAI, Scaling, & AGI in 2 years",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/bc5f6d43-e84b-4377-96b3-a0e5e972972b/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000035-www.dwarkesh.com-p-dario-amodei",
+          "capture_started_at": 1786212464
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "cea82dbc-a196-41a5-9641-cfd2e6918bc2",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/cea82dbc-a196-41a5-9641-cfd2e6918bc2",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andy-matuschak",
+          "title": "Andy Matuschak - Self-Teaching, Spaced Repetition, Why Books Don\u2019t Work",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/cea82dbc-a196-41a5-9641-cfd2e6918bc2/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000036-www.dwarkesh.com-p-andy-matuschak",
+          "capture_started_at": 1786212681
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "d5421211-4c3e-497d-93d5-4afc90696e79",
       "status": "pending_download",
       "import_directory": "media/substack-audio/d5421211-4c3e-497d-93d5-4afc90696e79",
@@ -108,6 +913,121 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000022-www.dwarkesh.com-p-capital-in-the-22nd-century",
           "capture_started_at": 1786191472
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "d6a65ee2-073c-4c2a-886f-5f5561c5234b",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/d6a65ee2-073c-4c2a-886f-5f5561c5234b",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/edward-glaeser",
+          "title": "Edward Glaeser - Cities, Terrorism, Housing, & Remote Work",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/d6a65ee2-073c-4c2a-886f-5f5561c5234b/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000053-www.dwarkesh.com-p-edward-glaeser",
+          "capture_started_at": 1786216425
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "d99db80d-c494-4285-9636-9edc594b3780",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/d99db80d-c494-4285-9636-9edc594b3780",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/richard-rhodes",
+          "title": "Richard Rhodes - Making of Atomic Bomb, WW2, Oppenheimer, & Abolishing Nukes",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/d99db80d-c494-4285-9636-9edc594b3780/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000040-www.dwarkesh.com-p-richard-rhodes",
+          "capture_started_at": 1786213617
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "eab4ba65-0d03-4214-9642-b2520fc21e60",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/eab4ba65-0d03-4214-9642-b2520fc21e60",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/nat-friedman",
+          "title": "Nat Friedman - Reading Ancient Scrolls, Open Source, & AI",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/eab4ba65-0d03-4214-9642-b2520fc21e60/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000044-www.dwarkesh.com-p-nat-friedman",
+          "capture_started_at": 1786214501
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "f21a4b37-fa2e-44d7-85fb-15a059986e4d",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/f21a4b37-fa2e-44d7-85fb-15a059986e4d",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/charles-mann",
+          "title": "38: Charles C. Mann - Native Americans, Slavery, & Solving Climate Change",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/f21a4b37-fa2e-44d7-85fb-15a059986e4d/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000058-www.dwarkesh.com-p-charles-mann",
+          "capture_started_at": 1786217512
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "f95670bf-0737-4336-a6bd-d517f5de6829",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/f95670bf-0737-4336-a6bd-d517f5de6829",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andrew-roberts",
+          "title": "Andrew Roberts - Leading Historian on Warfare Through The Ages",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/f95670bf-0737-4336-a6bd-d517f5de6829/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000029-www.dwarkesh.com-p-andrew-roberts",
+          "capture_started_at": 1786211258
         }
       ]
     }

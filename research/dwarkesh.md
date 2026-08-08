@@ -193,3 +193,28 @@ full durable playback awaits the explicit external-media imports.
 Across the 93 completed source identities, the refreshed ledgers now track 53
 YouTube videos, 61 Substack videos, and four Substack audio assets. The next
 deduplicated 60-page batch is selected.
+
+## Fourth bounded page batch
+
+The next 60 deduplicated pages were captured at:
+
+`/mnt2/capsule/epitome/dwarkesh/crawls/1786205301`
+
+Fifty-nine pages completed in the main run. The temporary CDP session for
+`/p/sarah-paine` disappeared four seconds into its first attempt; that page was
+retried once under `crawls/1786233036-retry-sarah-paine` and completed normally.
+The union contains all 60 requested identities, all capture tabs closed, and no
+asset-completion failures. Primary-image audits report zero missing article
+images across both roots.
+
+Five 1440×900 replay checks covered an image-oriented competition post, a
+standalone progress essay, a narration/audio page, the retried 141,499-character
+Sarah Paine transcript, and the historical 129,369-character Steve Hsu
+transcript. Layout, text, figures, media posters, and the explicit offline-media
+placeholders were intact with no broken image elements. Their strict replay log
+contained 287 requests, all to the local archive server; the HLS fix continued
+to prevent production fallback.
+
+Across the 153 completed source identities, the refreshed ledgers now track 100
+YouTube videos, 72 Substack videos referenced by 70 articles, and 44 Substack
+audio assets. The final 30-page remainder is selected.

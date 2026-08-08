@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786204698,
+  "generated_at_unix": 1786233223,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,31 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 53,
-    "articles": 53,
+    "videos": 100,
+    "articles": 100,
     "statuses": {
-      "pending_download": 53
+      "pending_download": 100
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "-VeZp2d7mDs",
+      "watch_url": "https://www.youtube.com/watch?v=-VeZp2d7mDs",
+      "status": "pending_download",
+      "import_directory": "media/youtube/-VeZp2d7mDs",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jung-chang",
+          "title": "Jung Chang - Living through Cultural Revolution and Crimes of Mao",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/-VeZp2d7mDs?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000028-www.dwarkesh.com-p-jung-chang",
+          "capture_started_at": 1786211047
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "0GMWxuYuxJI",
@@ -34,6 +52,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000003-www.dwarkesh.com-p-nick-lane",
           "capture_started_at": 1786194991
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "18zpjpPNWRw",
+      "watch_url": "https://www.youtube.com/watch?v=18zpjpPNWRw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/18zpjpPNWRw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/patrick-mckenzie",
+          "title": "Patrick McKenzie \u2014 Money laundering, big tech censorship, SBF & Japan",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/18zpjpPNWRw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000011-www.dwarkesh.com-p-patrick-mckenzie",
+          "capture_started_at": 1786207388
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "1Z35PqPQU2M",
+      "watch_url": "https://www.youtube.com/watch?v=1Z35PqPQU2M",
+      "status": "pending_download",
+      "import_directory": "media/youtube/1Z35PqPQU2M",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/charles-mann",
+          "title": "38: Charles C. Mann - Native Americans, Slavery, & Solving Climate Change",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/1Z35PqPQU2M?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000058-www.dwarkesh.com-p-charles-mann",
+          "capture_started_at": 1786217512
         }
       ]
     },
@@ -70,6 +124,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000010-www.dwarkesh.com-p-casey-handmer",
           "capture_started_at": 1786196390
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "3i7ym_Qh7BA",
+      "watch_url": "https://www.youtube.com/watch?v=3i7ym_Qh7BA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/3i7ym_Qh7BA",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dominic-cummings",
+          "title": "Dominic Cummings - COVID, Brexit, & Fixing Western Governance",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/3i7ym_Qh7BA?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000030-www.dwarkesh.com-p-dominic-cummings",
+          "capture_started_at": 1786211470
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "41SUp-TRVlg",
+      "watch_url": "https://www.youtube.com/watch?v=41SUp-TRVlg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/41SUp-TRVlg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/eliezer-yudkowsky",
+          "title": "Eliezer Yudkowsky - Why AI Will Kill Us, Aligning LLMs, Nature of Intelligence, SciFi, & Rationality",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/41SUp-TRVlg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000042-www.dwarkesh.com-p-eliezer-yudkowsky",
+          "capture_started_at": 1786214064
         }
       ]
     },
@@ -129,6 +219,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "5XsL_7TnfLU",
+      "watch_url": "https://www.youtube.com/watch?v=5XsL_7TnfLU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/5XsL_7TnfLU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/joe-carlsmith",
+          "title": "Joe Carlsmith \u2014 Preventing an AI takeover",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/5XsL_7TnfLU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000008-www.dwarkesh.com-p-joe-carlsmith",
+          "capture_started_at": 1786206747
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "64lXQP6cs5M",
       "watch_url": "https://www.youtube.com/watch?v=64lXQP6cs5M",
       "status": "pending_download",
@@ -165,6 +273,78 @@
     },
     {
       "provider": "youtube",
+      "video_id": "80BhjRh-Q-s",
+      "watch_url": "https://www.youtube.com/watch?v=80BhjRh-Q-s",
+      "status": "pending_download",
+      "import_directory": "media/youtube/80BhjRh-Q-s",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/steve-hsu",
+          "title": "37: Steve Hsu - Intelligence, Embryo Selection, & The Future of Humanity",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/80BhjRh-Q-s?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000060-www.dwarkesh.com-p-steve-hsu",
+          "capture_started_at": 1786217937
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "9AAhTLa0dT0",
+      "watch_url": "https://www.youtube.com/watch?v=9AAhTLa0dT0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/9AAhTLa0dT0",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/paul-christiano",
+          "title": "Paul Christiano - Preventing AI Takeover",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/9AAhTLa0dT0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000031-www.dwarkesh.com-p-paul-christiano",
+          "capture_started_at": 1786211693
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "9P2rk0Gtd0I",
+      "watch_url": "https://www.youtube.com/watch?v=9P2rk0Gtd0I",
+      "status": "pending_download",
+      "import_directory": "media/youtube/9P2rk0Gtd0I",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/byrne-hobart-2",
+          "title": "Byrne Hobart - FTX, Drugs, Twitter, Taiwan, & Monasticism",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/9P2rk0Gtd0I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000052-www.dwarkesh.com-p-byrne-hobart-2",
+          "capture_started_at": 1786216215
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "AHkmEnl55jo",
+      "watch_url": "https://www.youtube.com/watch?v=AHkmEnl55jo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/AHkmEnl55jo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tyler-cowen-2",
+          "title": "Tyler Cowen - Talent, Collapse, & Sex - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/AHkmEnl55jo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000057-www.dwarkesh.com-p-tyler-cowen-2",
+          "capture_started_at": 1786217291
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "BYXbuik3dgA",
       "watch_url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
       "status": "pending_download",
@@ -178,6 +358,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000018-www.dwarkesh.com-p-elon-musk",
           "capture_started_at": 1786190748
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "EY2nbAVZB-k",
+      "watch_url": "https://www.youtube.com/watch?v=EY2nbAVZB-k",
+      "status": "pending_download",
+      "import_directory": "media/youtube/EY2nbAVZB-k",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tyler-cowen-3",
+          "title": "Tyler Cowen - Hayek, Keynes, & Smith on AI, Animal Spirits, Anarchy, & Growth",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/EY2nbAVZB-k?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000024-www.dwarkesh.com-p-tyler-cowen-3",
+          "capture_started_at": 1786210195
         }
       ]
     },
@@ -219,6 +417,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "Gumo8zmgLqM",
+      "watch_url": "https://www.youtube.com/watch?v=Gumo8zmgLqM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Gumo8zmgLqM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/kenneth-jackson",
+          "title": "Kenneth T. Jackson - Robert Moses, Hero & Master Builder of NYC?",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Gumo8zmgLqM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000054-www.dwarkesh.com-p-kenneth-jackson",
+          "capture_started_at": 1786216637
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "Hrbq66XqtCo",
       "watch_url": "https://www.youtube.com/watch?v=Hrbq66XqtCo",
       "status": "pending_download",
@@ -255,6 +471,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "KUieFuV1fuo",
+      "watch_url": "https://www.youtube.com/watch?v=KUieFuV1fuo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/KUieFuV1fuo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/carl-shulman-2",
+          "title": "Carl Shulman (Pt 2) \u2014 AI Takeover, bio & cyber attacks, detecting deception, & humanity's far future",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/KUieFuV1fuo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000037-www.dwarkesh.com-p-carl-shulman-2",
+          "capture_started_at": 1786212943
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Kc1atfJkiJU",
+      "watch_url": "https://www.youtube.com/watch?v=Kc1atfJkiJU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Kc1atfJkiJU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/shane-legg",
+          "title": "Shane Legg (DeepMind Founder) \u2014 2028 AGI, superhuman alignment, new architectures",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Kc1atfJkiJU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000032-www.dwarkesh.com-p-shane-legg",
+          "capture_started_at": 1786211949
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "KxIeJjEGLdo",
       "watch_url": "https://www.youtube.com/watch?v=KxIeJjEGLdo",
       "status": "pending_download",
@@ -286,6 +538,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000039-www.dwarkesh.com-p-sarah-paine-india",
           "capture_started_at": 1786202220
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "MpttoDJ3pH8",
+      "watch_url": "https://www.youtube.com/watch?v=MpttoDJ3pH8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/MpttoDJ3pH8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/edward-glaeser",
+          "title": "Edward Glaeser - Cities, Terrorism, Housing, & Remote Work",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/MpttoDJ3pH8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000053-www.dwarkesh.com-p-edward-glaeser",
+          "capture_started_at": 1786216425
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Nlkk3glap_U",
+      "watch_url": "https://www.youtube.com/watch?v=Nlkk3glap_U",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Nlkk3glap_U",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dario-amodei",
+          "title": "Dario Amodei (Anthropic CEO) - $10 Billion Models, OpenAI, Scaling, & AGI in 2 years",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Nlkk3glap_U?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000035-www.dwarkesh.com-p-dario-amodei",
+          "capture_started_at": 1786212464
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "OFuu4pesKf0",
+      "watch_url": "https://www.youtube.com/watch?v=OFuu4pesKf0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/OFuu4pesKf0",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andy-matuschak",
+          "title": "Andy Matuschak - Self-Teaching, Spaced Repetition, Why Books Don\u2019t Work",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/OFuu4pesKf0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000036-www.dwarkesh.com-p-andy-matuschak",
+          "capture_started_at": 1786212681
         }
       ]
     },
@@ -471,6 +777,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "UTuuTTnjxMQ",
+      "watch_url": "https://www.youtube.com/watch?v=UTuuTTnjxMQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/UTuuTTnjxMQ",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sholto-douglas-trenton-bricken",
+          "title": "Sholto Douglas & Trenton Bricken - How to Build & Understand GPT-7's Mind",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/UTuuTTnjxMQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000020-www.dwarkesh.com-p-sholto-douglas-trenton-bricken",
+          "capture_started_at": 1786209328
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "UU9jbImVsNY",
       "watch_url": "https://www.youtube.com/watch?v=UU9jbImVsNY",
       "status": "pending_download",
@@ -484,6 +808,114 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000033-www.dwarkesh.com-p-notes-on-china-narration",
           "capture_started_at": 1786201053
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "UakqL6Pj9xo",
+      "watch_url": "https://www.youtube.com/watch?v=UakqL6Pj9xo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/UakqL6Pj9xo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/francois-chollet",
+          "title": "Francois Chollet, Mike Knoop - LLMs won\u2019t lead to AGI - $1,000,000 Prize to find true solution",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/UakqL6Pj9xo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000016-www.dwarkesh.com-p-francois-chollet",
+          "capture_started_at": 1786208454
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "UckqpcOu5SY",
+      "watch_url": "https://www.youtube.com/watch?v=UckqpcOu5SY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/UckqpcOu5SY",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/holden-karnofsky",
+          "title": "Holden Karnofsky - Transformative AI & Most Important Century",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/UckqpcOu5SY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000049-www.dwarkesh.com-p-holden-karnofsky",
+          "capture_started_at": 1786215567
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Uj6skZIxPuI",
+      "watch_url": "https://www.youtube.com/watch?v=Uj6skZIxPuI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Uj6skZIxPuI",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-reich",
+          "title": "David Reich \u2014 How one small tribe conquered the world 70,000 years ago",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Uj6skZIxPuI?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000007-www.dwarkesh.com-p-david-reich",
+          "capture_started_at": 1786206532
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "WNSZ6xouNv4",
+      "watch_url": "https://www.youtube.com/watch?v=WNSZ6xouNv4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/WNSZ6xouNv4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/clips-competition",
+          "title": "$2000 Clips Competition - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/WNSZ6xouNv4?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000027-www.dwarkesh.com-p-clips-competition",
+          "capture_started_at": 1786210839
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "WU-lBOAS1VQ",
+      "watch_url": "https://www.youtube.com/watch?v=WU-lBOAS1VQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/WU-lBOAS1VQ",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/patrick-collison",
+          "title": "Patrick Collison (Stripe CEO) - Craft, Beauty, & The Future of Payments",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/WU-lBOAS1VQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000023-www.dwarkesh.com-p-patrick-collison",
+          "capture_started_at": 1786209976
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Wo95ob_s_NI",
+      "watch_url": "https://www.youtube.com/watch?v=Wo95ob_s_NI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Wo95ob_s_NI",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/john-schulman",
+          "title": "John Schulman (OpenAI Cofounder) - Reasoning, RLHF, & Plan for 2027 AGI",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Wo95ob_s_NI?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000018-www.dwarkesh.com-p-john-schulman",
+          "capture_started_at": 1786208909
         }
       ]
     },
@@ -579,6 +1011,69 @@
     },
     {
       "provider": "youtube",
+      "video_id": "YSgfu7XprIM",
+      "watch_url": "https://www.youtube.com/watch?v=YSgfu7XprIM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/YSgfu7XprIM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/austin-vernon",
+          "title": "38: Austin Vernon - Energy Superabundance, Engineering, and the Future of Productivity",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/YSgfu7XprIM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000059-www.dwarkesh.com-p-austin-vernon",
+          "capture_started_at": 1786217721
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "YcVSgYz5SJ8",
+      "watch_url": "https://www.youtube.com/watch?v=YcVSgYz5SJ8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/YcVSgYz5SJ8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine",
+          "title": "Sarah C. M. Paine - How Xi & Putin Think: Maritime vs Continental Powers & The Wars of Asia",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/YcVSgYz5SJ8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233036-retry-sarah-paine/pages/000001-www.dwarkesh.com-p-sarah-paine",
+          "capture_started_at": 1786233043
+        },
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-lecture-series-public",
+          "title": "Come watch Sarah Paine lecture live next week!",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/YcVSgYz5SJ8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000001-www.dwarkesh.com-p-sarah-paine-lecture-series-public",
+          "capture_started_at": 1786205316
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Yf1o0TQzry8",
+      "watch_url": "https://www.youtube.com/watch?v=Yf1o0TQzry8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Yf1o0TQzry8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ilya-sutskever",
+          "title": "Ilya Sutskever (OpenAI Chief Scientist) - Building AGI, Alignment, & Future Models",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Yf1o0TQzry8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000043-www.dwarkesh.com-p-ilya-sutskever",
+          "capture_started_at": 1786214294
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "Znk5QINe01A",
       "watch_url": "https://www.youtube.com/watch?v=Znk5QINe01A",
       "status": "pending_download",
@@ -597,6 +1092,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "ZruyslAe26g",
+      "watch_url": "https://www.youtube.com/watch?v=ZruyslAe26g",
+      "status": "pending_download",
+      "import_directory": "media/youtube/ZruyslAe26g",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/garett-jones",
+          "title": "Garett Jones - Immigration, National IQ, & Less Democracy",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/ZruyslAe26g?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000047-www.dwarkesh.com-p-garett-jones",
+          "capture_started_at": 1786215150
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "_9V_Hbe-N1A",
       "watch_url": "https://www.youtube.com/watch?v=_9V_Hbe-N1A",
       "status": "pending_download",
@@ -610,6 +1123,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000021-www.dwarkesh.com-p-adam-marblestone",
           "capture_started_at": 1786191288
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "_kRg-ZP1vQc",
+      "watch_url": "https://www.youtube.com/watch?v=_kRg-ZP1vQc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/_kRg-ZP1vQc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/carl-shulman",
+          "title": "Carl Shulman (Pt 1) - Intelligence Explosion, Primate Evolution, Robot Doublings, & Alignment",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/_kRg-ZP1vQc?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000038-www.dwarkesh.com-p-carl-shulman",
+          "capture_started_at": 1786213188
         }
       ]
     },
@@ -705,6 +1236,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "bc6uFV9CJGg",
+      "watch_url": "https://www.youtube.com/watch?v=bc6uFV9CJGg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/bc6uFV9CJGg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/mark-zuckerberg",
+          "title": "Mark Zuckerberg - Llama 3, Open Sourcing $10b Models, & Caesar Augustus",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/bc6uFV9CJGg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000019-www.dwarkesh.com-p-mark-zuckerberg",
+          "capture_started_at": 1786209119
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "dmeRQN9z504",
+      "watch_url": "https://www.youtube.com/watch?v=dmeRQN9z504",
+      "status": "pending_download",
+      "import_directory": "media/youtube/dmeRQN9z504",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andy-matuschak",
+          "title": "Andy Matuschak - Self-Teaching, Spaced Repetition, Why Books Don\u2019t Work",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/dmeRQN9z504?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000036-www.dwarkesh.com-p-andy-matuschak",
+          "capture_started_at": 1786212681
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "htOvH12T7mU",
       "watch_url": "https://www.youtube.com/watch?v=htOvH12T7mU",
       "status": "pending_download",
@@ -718,6 +1285,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000029-www.dwarkesh.com-p-scott-daniel",
           "capture_started_at": 1786200263
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "jmWmrx6ki9Q",
+      "watch_url": "https://www.youtube.com/watch?v=jmWmrx6ki9Q",
+      "status": "pending_download",
+      "import_directory": "media/youtube/jmWmrx6ki9Q",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan-3",
+          "title": "Bryan Caplan - Feminists, Billionaires, and Demagogues",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/jmWmrx6ki9Q?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000056-www.dwarkesh.com-p-bryan-caplan-3",
+          "capture_started_at": 1786217075
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "kNsi5XVDTTM",
+      "watch_url": "https://www.youtube.com/watch?v=kNsi5XVDTTM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/kNsi5XVDTTM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/marc-andreessen",
+          "title": "Marc Andreessen - AI, Crypto, Regrets, Vulnerabilities, & Managerial Revolution",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/kNsi5XVDTTM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000046-www.dwarkesh.com-p-marc-andreessen",
+          "capture_started_at": 1786214931
         }
       ]
     },
@@ -754,6 +1357,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000002-www.dwarkesh.com-p-andrej-karpathy",
           "capture_started_at": 1786194788
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "m3oM69YHLeo",
+      "watch_url": "https://www.youtube.com/watch?v=m3oM69YHLeo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/m3oM69YHLeo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bethany-mclean",
+          "title": "Bethany McLean - Enron, FTX, 2008, Musk, Frauds, & Visionaries",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/m3oM69YHLeo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000050-www.dwarkesh.com-p-bethany-mclean",
+          "capture_started_at": 1786215794
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "m9ErXK5h-oU",
+      "watch_url": "https://www.youtube.com/watch?v=m9ErXK5h-oU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/m9ErXK5h-oU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/brian-potter",
+          "title": "Brian Potter - Future of Construction, Ugly Modernism, & Environmental Review",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/m9ErXK5h-oU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000055-www.dwarkesh.com-p-brian-potter",
+          "capture_started_at": 1786216847
         }
       ]
     },
@@ -813,6 +1452,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "nvL3vqMzznY",
+      "watch_url": "https://www.youtube.com/watch?v=nvL3vqMzznY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/nvL3vqMzznY",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/nadia-asparouhova",
+          "title": "Nadia Asparouhova - Tech Elites, Democracy, Open Source, & Philanthropy",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/nvL3vqMzznY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000051-www.dwarkesh.com-p-nadia-asparouhova",
+          "capture_started_at": 1786216008
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "nyvmYnz6EAg",
       "watch_url": "https://www.youtube.com/watch?v=nyvmYnz6EAg",
       "status": "pending_download",
@@ -826,6 +1483,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000020-www.dwarkesh.com-p-timelines-june-2025",
           "capture_started_at": 1786198465
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "oDyviiN4NVo",
+      "watch_url": "https://www.youtube.com/watch?v=oDyviiN4NVo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/oDyviiN4NVo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/grant-sanderson",
+          "title": "Grant Sanderson (3Blue1Brown) - Past, Present, & Future of Mathematics",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/oDyviiN4NVo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000033-www.dwarkesh.com-p-grant-sanderson",
+          "capture_started_at": 1786212154
         }
       ]
     },
@@ -885,6 +1560,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "pE3KKUKXcTM",
+      "watch_url": "https://www.youtube.com/watch?v=pE3KKUKXcTM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/pE3KKUKXcTM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dylan-jon",
+          "title": "@Asianometry & Dylan Patel \u2014 How the semiconductor industry actually works",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/pE3KKUKXcTM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000003-www.dwarkesh.com-p-dylan-jon",
+          "capture_started_at": 1786205698
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "qTogNUV3CAI",
+      "watch_url": "https://www.youtube.com/watch?v=qTogNUV3CAI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/qTogNUV3CAI",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/demis-hassabis",
+          "title": "Demis Hassabis \u2014 Scaling, superhuman AIs, AlphaZero atop LLMs, AlphaFold",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/qTogNUV3CAI?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000022-www.dwarkesh.com-p-demis-hassabis",
+          "capture_started_at": 1786209759
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "qb644F-iE_s",
       "watch_url": "https://www.youtube.com/watch?v=qb644F-iE_s",
       "status": "pending_download",
@@ -898,6 +1609,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000018-www.dwarkesh.com-p-arthur-kroeber",
           "capture_started_at": 1786198062
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "qcvMjoJdck4",
+      "watch_url": "https://www.youtube.com/watch?v=qcvMjoJdck4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/qcvMjoJdck4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/nat-friedman",
+          "title": "Nat Friedman - Reading Ancient Scrolls, Open Source, & AI",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/qcvMjoJdck4?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000044-www.dwarkesh.com-p-nat-friedman",
+          "capture_started_at": 1786214501
         }
       ]
     },
@@ -921,6 +1650,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "sL-qkv7Pzxo",
+      "watch_url": "https://www.youtube.com/watch?v=sL-qkv7Pzxo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/sL-qkv7Pzxo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/lars-doucet",
+          "title": "Lars Doucet - Georgism, Progress, Poverty, & Why Rent is Too High",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/sL-qkv7Pzxo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000048-www.dwarkesh.com-p-lars-doucet",
+          "capture_started_at": 1786215357
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "sRKBGVFVYAw",
       "watch_url": "https://www.youtube.com/watch?v=sRKBGVFVYAw",
       "status": "pending_download",
@@ -934,6 +1681,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000006-www.dwarkesh.com-p-david-reich-2",
           "capture_started_at": 1786188503
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "sveBcfz0fHk",
+      "watch_url": "https://www.youtube.com/watch?v=sveBcfz0fHk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/sveBcfz0fHk",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/daniel-yergin",
+          "title": "Daniel Yergin \u2014 Oil destroyed Hitler, fracking destroyed Putin",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/sveBcfz0fHk?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000004-www.dwarkesh.com-p-daniel-yergin",
+          "capture_started_at": 1786205915
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "tM9ZMYUYhTk",
+      "watch_url": "https://www.youtube.com/watch?v=tM9ZMYUYhTk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/tM9ZMYUYhTk",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andrew-roberts",
+          "title": "Andrew Roberts - Leading Historian on Warfare Through The Ages",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/tM9ZMYUYhTk?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000029-www.dwarkesh.com-p-andrew-roberts",
+          "capture_started_at": 1786211258
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "tMdMiYsfHKo",
+      "watch_url": "https://www.youtube.com/watch?v=tMdMiYsfHKo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/tMdMiYsfHKo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/richard-rhodes",
+          "title": "Richard Rhodes - Making of Atomic Bomb, WW2, Oppenheimer, & Abolishing Nukes",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/tMdMiYsfHKo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000040-www.dwarkesh.com-p-richard-rhodes",
+          "capture_started_at": 1786213617
         }
       ]
     },
@@ -970,6 +1771,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000007-www.dwarkesh.com-p-reiner-pope",
           "capture_started_at": 1786188710
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "yXgDlIlB93A",
+      "watch_url": "https://www.youtube.com/watch?v=yXgDlIlB93A",
+      "status": "pending_download",
+      "import_directory": "media/youtube/yXgDlIlB93A",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/brett-harrison",
+          "title": "Brett Harrison - FTX US Former President & HFT Finance Veteran Speaks Out",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/yXgDlIlB93A?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000045-www.dwarkesh.com-p-brett-harrison",
+          "capture_started_at": 1786214713
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "zSLWR3AbF3c",
+      "watch_url": "https://www.youtube.com/watch?v=zSLWR3AbF3c",
+      "status": "pending_download",
+      "import_directory": "media/youtube/zSLWR3AbF3c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tony-blair",
+          "title": "Tony Blair \u2014 Why political leaders keep failing at major change",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/zSLWR3AbF3c?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000013-www.dwarkesh.com-p-tony-blair",
+          "capture_started_at": 1786207806
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "zdbVtZIn9IM",
+      "watch_url": "https://www.youtube.com/watch?v=zdbVtZIn9IM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/zdbVtZIn9IM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/leopold-aschenbrenner",
+          "title": "Leopold Aschenbrenner \u2014 2027 AGI, China/US super-intelligence race, & the return of history",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/zdbVtZIn9IM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786205301/pages/000017-www.dwarkesh.com-p-leopold-aschenbrenner",
+          "capture_started_at": 1786208685
         }
       ]
     }
