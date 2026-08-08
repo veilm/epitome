@@ -34,5 +34,33 @@ executing Disqus scripts or contacting production servers.
 
 The representative post passed capture and replay validation with zero capture
 or asset failures, its primary image loaded locally, all 35 comments rendered,
-and a replay reload made zero external requests. The tracked 26-URL blog scope
-is therefore ready for a bounded crawl.
+and a replay reload made zero external requests.
+
+## Completed crawl
+
+The remaining 25 URLs were captured at:
+
+`/mnt2/capsule/epitome/andrej-karpathy/crawls/1786162117`
+
+Together with the representative validation run, deduplication recognizes all
+26 tracked source identities as complete. Every new manifest is complete, every
+capture tab closed, and the browser network logs succeeded.
+
+Five old articles link to research PDFs that now return upstream HTTP 404:
+
+- `http://jmlr.org/proceedings/papers/v32/silver14.pdf`
+- `http://www.jmlr.org/proceedings/papers/v32/graves14.pdf`
+- `http://www.image-net.org/papers/imagenet_cvpr09.pdf`
+- `http://www.matthewzeiler.com/pubs/arxive2013/arxive2013.pdf`
+- `http://homepage.tudelft.nl/19j49/Matlab_Toolbox_for_Dimensionality_Reduction_files/TR_Dimensiereductie.pdf`
+
+These are outbound citations rather than page images or runtime dependencies.
+Their original URLs and surrounding article context remain preserved; finding
+archival copies is a separate dependency-recovery task.
+
+Desktop replay checks covered recent, long code-heavy, image-heavy, historical,
+and JavaScript-era posts. All ordinary images loaded, article text was complete,
+and observed resource hosts were local. Static Disqus replay was also rechecked
+directly: `microgpt` retained 35 comments and the 2015 RNN article retained 37,
+with no production-origin requests. The approved canonical blog scope is
+therefore complete.

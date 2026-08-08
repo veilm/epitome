@@ -62,11 +62,14 @@ small validation samples come before any large crawl.
   - [x] Inventory Peter Steinberger's canonical 116-URL core blog scope and
         validate one representative rendered article plus its official Markdown
         mirror.
-  - [ ] Capture the remaining 115 Peter Steinberger core URLs after Karpathy,
+  - [ ] Capture the remaining 115 Peter Steinberger core URLs in bounded batches,
         then preserve the deferred pagination and tag archives separately.
   - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
         article, image, and static Disqus-comment preservation.
-  - [ ] Capture the remaining 25 Karpathy blog URLs.
+  - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including
+        representative static Disqus threads.
+  - [ ] Recover archival copies of the five unavailable outbound research PDFs
+        listed in `research/andrej-karpathy.md`.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**

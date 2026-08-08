@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786162340` (2026-08-08 04:12 UTC).
+Updated at Unix timestamp `1786164824` (2026-08-08 04:53 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -12,8 +12,8 @@ work.
 | Anthropic public site | Page archive complete; media active | The approved 160-URL batch has 160 complete page captures. HTML, article text, styles, and ordinary images replay locally. | Import 34 YouTube videos referenced by 22 articles. Two Claude 2 Vimeo embeds are no longer available upstream; their URLs and article context remain preserved. Continue toward the remainder of Anthropic's publication inventory only after media handling is integrated. |
 | Claude.com blog | Page archive complete; media active | All 201 inventoried URL identities are captured across the pilot and four deduplicated batches. Representative long, image-heavy, technical, customer-story, and video-bearing pages render locally with complete article text and ordinary images. | Import the 81 YouTube videos referenced by 58 captured Claude.com articles; add future publications incrementally. |
 | Dario Amodei personal site | Complete | The homepage and all five self-hosted writings are captured and visually/offline-network verified. | Pursue archival copies of three unavailable outbound citation PDFs; continue the separate broader writing and interview inventory. |
-| Andrej Karpathy blog | Batch archive active | A reviewed 26-URL scope covers the homepage, About page, RSS feed, and 23 dated posts. The representative `microgpt` post, primary image, and all 35 Disqus comments replay locally without scripts or external requests. The remaining 25 URLs are in a bounded crawl. | Finish and audit the active batch, then inventory outbound Medium, `karpathy.ai`, notebook, paper, video, and other first-party writing dependencies separately. |
-| Peter Steinberger blog | Capture-ready | A browser-derived 116-URL core scope covers the homepage, About, all-posts index, RSS feed, and 112 article URL identities. One long representative article replays fully offline. | After Karpathy completes, start with a bounded varied batch. Preserve the deferred pagination and tag indexes in a later phase, and evaluate the official Markdown mirror as a model-readable supplement. |
+| Andrej Karpathy blog | Complete | All 26 reviewed URL identities are captured and offline-verified. Recent, historical, image-heavy, and long code-heavy pages replay locally; captured Disqus threads render statically, including 35 comments on `microgpt` and 37 on the RNN article. | Recover archival copies of five unavailable outbound research PDFs, then inventory Medium, `karpathy.ai`, notebooks, papers, videos, and other first-party writing separately. |
+| Peter Steinberger blog | First batch ready | A browser-derived 116-URL core scope covers the homepage, About, all-posts index, RSS feed, and 112 article URL identities. One long representative article replays fully offline. | Begin a bounded varied batch. Preserve the deferred pagination and tag indexes in a later phase, and evaluate the official Markdown mirror as a model-readable supplement. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
 ## Active media import
@@ -46,6 +46,5 @@ pre-animation state (`opacity: 0`, `visibility: hidden`, translated elements,
 and the black transition overlay). The final 35-page batch passed manifest,
 visual, image-loading, and offline-network checks; its only two asset misses
 were the same unused Webflow placeholder SVG returning HTTP 403. Dario's
-bounded personal-site scope is also complete. Karpathy's remaining 25-page
-batch is active, and Peter Steinberger's core blog scope is capture-ready behind
-it.
+bounded personal-site scope and Karpathy's 26-page canonical blog scope are also
+complete. Peter Steinberger's core blog scope is the active next source.
