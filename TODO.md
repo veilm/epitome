@@ -67,7 +67,10 @@ small validation samples come before any large crawl.
         recover its expired SSRN paper as a stable local PDF resource.
   - [ ] Continue the selected deduplicated 30-page Dwarkesh batch, then import
         inventoried audio and video through the external downloader.
-  - [ ] SemiAnalysis.
+  - [x] Inventory the 325-identity SemiAnalysis newsletter scope and separate it
+        from the corporate/models site and authenticated institutional data.
+  - [ ] Validate varied free, older, image-heavy, and publicly paywalled
+        SemiAnalysis article variants before starting its first page batch.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**
