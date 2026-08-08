@@ -54,7 +54,12 @@ small validation samples come before any large crawl.
         captions or transcripts, and important outbound links.
   - [ ] Produce model-readable transcripts and article-style summaries.
 - [ ] **Substack and newsletters**
-  - [ ] Dwarkesh Patel.
+  - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
+        validate one long transcript/video post through offline replay.
+  - [x] Inventory the representative post's Substack-hosted and YouTube video
+        identities and stable import locations.
+  - [ ] Validate essay-only and older audio-first Dwarkesh variants; inventory
+        podcast audio and caption files before starting a larger page batch.
   - [ ] SemiAnalysis.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.

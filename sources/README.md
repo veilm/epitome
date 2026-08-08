@@ -17,7 +17,9 @@ Current reviewed lists:
   posts. Captured Disqus threads are rendered statically during replay;
 - `peter-steinberger-blog.txt`: homepage, About page, all-posts index, RSS feed,
   and 112 article identities from the first-party sitemap. Pagination and tag
-  archives are deferred to a later phase.
+  archives are deferred to a later phase;
+- `dwarkesh-podcast.txt`: homepage, public podcast feed, archive/about/podcast
+  indexes, and 178 first-party Substack post identities.
 
 Example:
 

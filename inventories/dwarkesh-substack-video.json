@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786165371,
+  "source": "Dwarkesh Podcast validation",
+  "capture_runs": [
+    "1786164950"
+  ],
+  "media_import_contract": {
+    "root_relative_to_source_archive": "media/substack",
+    "per_media_directory": "media/substack/{media_id}",
+    "article_links": "items[].articles",
+    "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
+  },
+  "summary": {
+    "videos": 1,
+    "articles": 1,
+    "statuses": {
+      "pending_download": 1
+    }
+  },
+  "items": [
+    {
+      "provider": "substack",
+      "media_id": "5723fd43-9712-418c-9427-9f60d7e5c03c",
+      "status": "pending_download",
+      "import_directory": "media/substack/5723fd43-9712-418c-9427-9f60d7e5c03c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dario-amodei-2",
+          "title": "Dario Amodei \u2014 \"We are near the end of the exponential\"",
+          "embed_title": "Dario Amodei \u2014 \"We are near the end of the exponential\"",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/187852154/5723fd43-9712-418c-9427-9f60d7e5c03c/transcoded-1771001052.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/5723fd43-9712-418c-9427-9f60d7e5c03c/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/5723fd43-9712-418c-9427-9f60d7e5c03c/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "1786164950",
+          "capture_page": ".",
+          "capture_started_at": 1786164950
+        }
+      ]
+    }
+  ]
+}

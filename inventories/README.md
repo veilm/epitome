@@ -55,3 +55,32 @@ util/inventory_embedded_media \
   --media-root media/youtube \
   --output inventories/claude-youtube.json
 ```
+
+## Dwarkesh hosted and YouTube video
+
+Dwarkesh Podcast pages can contain both a Substack-hosted primary video and a
+YouTube copy. `dwarkesh-substack-video.json` records Substack media IDs, poster
+URLs, HLS/MP4 source endpoints, referring posts, and stable import directories.
+`dwarkesh-youtube.json` records the YouTube side using the existing schema.
+
+Regenerate either ledger from completed Dwarkesh capture roots:
+
+```sh
+util/inventory_embedded_media \
+  /mnt2/capsule/epitome/dwarkesh/validation/1786164950 \
+  --provider substack \
+  --source 'Dwarkesh Podcast validation' \
+  --media-root media/substack \
+  --output inventories/dwarkesh-substack-video.json
+
+util/inventory_embedded_media \
+  /mnt2/capsule/epitome/dwarkesh/validation/1786164950 \
+  --provider youtube \
+  --source 'Dwarkesh Podcast validation' \
+  --media-root media/youtube \
+  --output inventories/dwarkesh-youtube.json
+```
+
+The raw Substack page state and podcast feed also contain audio, captions, and
+transcription metadata. Inventorying those is required before a large Dwarkesh
+batch; the current hosted-media ledger covers video elements only.
