@@ -56,3 +56,33 @@ bounded checks:
    `semianalysis.com` corporate/careers/models scope.
 
 No SemiAnalysis batch has been started during this reconnaissance.
+
+## Structural validations
+
+Three article variants were captured under
+`/mnt2/capsule/epitome/semianalysis/validation/`:
+
+- the current `SpaceX 10GW in 2027` article;
+- the widely linked 2023 `Google "We Have No Moat, And Neither Does OpenAI"`
+  article; and
+- the free 2020 `Moore's Law is Dead for DRAM` article.
+
+All three manifests are complete and all capture tabs closed. The first two
+currently declare `isAccessibleForFree: false` and render an explicit paid-
+subscriber boundary. That is the complete public representation, not a cropped
+capture error. The 2020 article declares `isAccessibleForFree: true` and
+retains its full short article body and seven inline images.
+
+Six direct legacy S3 originals returned HTTP 403, but preserved Substack proxy
+variants covered all but one rendered image. The generic replay-image audit
+identified that exact omission and repaired its 65,305-byte proxy resource. A
+second audit reports zero missing primary images across all three validations.
+Chromium checks at 1440×900 confirmed the two paywalls, the complete free
+article, and zero broken article images. An attached network log recorded 171
+requests, all to the local replay server.
+
+The three provider inventories currently contain zero YouTube, Substack-video,
+or Substack-audio entries. They remain tracked so later page batches can append
+newly encountered media without changing the workflow. With public paywall and
+legacy structures now distinguished and replay-tested, the newsletter scraper
+is ready for a first bounded batch after Dwarkesh completes.

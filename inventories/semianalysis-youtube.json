@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786195003,
+  "source": "SemiAnalysis",
+  "capture_runs": [
+    "semianalysis"
+  ],
+  "media_import_contract": {
+    "root_relative_to_source_archive": "media/youtube",
+    "per_video_directory": "media/youtube/{video_id}",
+    "article_links": "items[].articles",
+    "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
+  },
+  "summary": {
+    "videos": 0,
+    "articles": 0,
+    "statuses": {}
+  },
+  "items": []
+}

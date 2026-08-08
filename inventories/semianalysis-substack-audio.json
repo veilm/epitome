@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786195003,
+  "source": "SemiAnalysis",
+  "capture_runs": [
+    "semianalysis"
+  ],
+  "media_import_contract": {
+    "root_relative_to_source_archive": "media/substack-audio",
+    "per_media_directory": "media/substack-audio/{media_id}",
+    "article_links": "items[].articles",
+    "note": "Download one durable audio rendition per media ID. Preserve any caption tracks and record imported filenames in imported_files."
+  },
+  "summary": {
+    "audios": 0,
+    "articles": 0,
+    "statuses": {}
+  },
+  "items": []
+}

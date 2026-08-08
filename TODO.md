@@ -72,8 +72,11 @@ small validation samples come before any large crawl.
         inventoried audio and video through the external downloader.
   - [x] Inventory the 325-identity SemiAnalysis newsletter scope and separate it
         from the corporate/models site and authenticated institutional data.
-  - [ ] Validate varied free, older, image-heavy, and publicly paywalled
-        SemiAnalysis article variants before starting its first page batch.
+  - [x] Validate current and historical paywalled SemiAnalysis pages plus a free
+        legacy article; repair the sole missing primary image and verify all
+        replays remain offline.
+  - [ ] Begin bounded SemiAnalysis batches after Dwarkesh's approved page scope
+        completes.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**
