@@ -16,6 +16,7 @@ from epitome_lib.replay import (
     decode_url,
     resolve_byte_range,
     rewrite_css,
+    rewrite_hls_playlist,
     rewrite_html,
     unavailable_html,
 )
@@ -170,6 +171,12 @@ def make_handler(index: CaptureIndex, *, verbose: bool = False):
                 if "text/css" in content_type:
                     body = resource.body_path.read_bytes()
                     body = rewrite_css(
+                        body.decode("utf-8", errors="replace"),
+                        url,
+                    ).encode()
+                elif "mpegurl" in content_type.lower() or urlsplit(url).path.lower().endswith(".m3u8"):
+                    body = resource.body_path.read_bytes()
+                    body = rewrite_hls_playlist(
                         body.decode("utf-8", errors="replace"),
                         url,
                     ).encode()

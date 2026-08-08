@@ -21,6 +21,7 @@ CSS_IMPORT_RE = re.compile(
     r"(@import\s+)(?!url\()(['\"])(.*?)\2",
     re.IGNORECASE,
 )
+HLS_URI_ATTRIBUTE_RE = re.compile(r'(\bURI=)(["\'])(.*?)\2', re.IGNORECASE)
 TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 TWITTER_BLOCKQUOTE_RE = re.compile(
     r'<blockquote\b[^>]*class=(["\'])[^"\']*\btwitter-(?:tweet|video)\b[^"\']*\1[^>]*>'
@@ -459,6 +460,30 @@ def rewrite_css(css: str, base_url: str) -> str:
         return f'{match.group(1)}"{resource_path(url)}"'
 
     return CSS_IMPORT_RE.sub(replace_import, CSS_URL_RE.sub(replace_url, css))
+
+
+def rewrite_hls_playlist(playlist: str, base_url: str) -> str:
+    """Route HLS child playlists, segments, and key/map URIs through replay."""
+
+    def localize(value: str) -> str:
+        url = normalize_url(value, base_url)
+        return resource_path(url) if url else value
+
+    def replace_uri_attribute(match: re.Match[str]) -> str:
+        return f"{match.group(1)}{match.group(2)}{localize(match.group(3))}{match.group(2)}"
+
+    output = []
+    for line in playlist.splitlines(keepends=True):
+        content = line.rstrip("\r\n")
+        ending = line[len(content) :]
+        if content.startswith("#"):
+            content = HLS_URI_ATTRIBUTE_RE.sub(replace_uri_attribute, content)
+        elif content.strip():
+            leading = content[: len(content) - len(content.lstrip())]
+            trailing = content[len(content.rstrip()) :]
+            content = f"{leading}{localize(content.strip())}{trailing}"
+        output.append(content + ending)
+    return "".join(output)
 
 
 class _HTMLRewriter(HTMLParser):

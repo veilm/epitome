@@ -12,6 +12,7 @@ from util.epitome_lib.replay import (
     resolve_byte_range,
     stable_resource_identity,
     rewrite_css,
+    rewrite_hls_playlist,
     rewrite_html,
 )
 
@@ -124,6 +125,35 @@ class ReplayTest(unittest.TestCase):
         )
         self.assertIn(resource_path("https://example.com/image.png"), result)
         self.assertIn(resource_path("https://example.com/more.css"), result)
+
+    def test_hls_playlist_urls_are_localized(self):
+        base = "https://media.example/path/master.m3u8?token=abc"
+        playlist = """#EXTM3U
+#EXT-X-KEY:METHOD=AES-128,URI="keys/key.bin?x=1"
+#EXT-X-MAP:URI='init.mp4'
+#EXT-X-STREAM-INF:BANDWIDTH=1000000
+video/playlist.m3u8
+#EXTINF:4.0,
+https://chunks.example/segment-1.ts?token=abc
+"""
+        result = rewrite_hls_playlist(playlist, base)
+        self.assertIn(
+            f'URI="{resource_path("https://media.example/path/keys/key.bin?x=1")}"',
+            result,
+        )
+        self.assertIn(
+            f"URI='{resource_path('https://media.example/path/init.mp4')}'",
+            result,
+        )
+        self.assertIn(
+            resource_path("https://media.example/path/video/playlist.m3u8"),
+            result,
+        )
+        self.assertIn(
+            resource_path("https://chunks.example/segment-1.ts?token=abc"),
+            result,
+        )
+        self.assertNotIn("https://chunks.example", result)
 
     def test_substack_comma_srcset_and_preloads_stay_offline(self):
         proxy = (
