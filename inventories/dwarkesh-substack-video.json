@@ -1,11 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786167500,
-  "source": "Dwarkesh Podcast validation",
+  "generated_at_unix": 1786187394,
+  "source": "Dwarkesh Podcast",
   "capture_runs": [
-    "1786164950",
-    "1786167000-will-scaling-work",
-    "1786167300-tyler-cowen"
+    "dwarkesh"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/substack",
@@ -14,13 +12,40 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 1,
-    "articles": 1,
+    "videos": 9,
+    "articles": 9,
     "statuses": {
-      "pending_download": 1
+      "pending_download": 9
     }
   },
   "items": [
+    {
+      "provider": "substack",
+      "media_id": "352b2e49-0c01-42c3-b420-c0a321d0bae4",
+      "status": "pending_download",
+      "import_directory": "media/substack/352b2e49-0c01-42c3-b420-c0a321d0bae4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/alex-imas-phil-trammell",
+          "title": "Alex Imas and Phil Trammell \u2013 What remains scarce after AGI?",
+          "embed_title": "Alex Imas and Phil Trammell \u2013 What remains scarce after AGI?",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/200613353/352b2e49-0c01-42c3-b420-c0a321d0bae4/transcoded-1780589854.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/352b2e49-0c01-42c3-b420-c0a321d0bae4/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/352b2e49-0c01-42c3-b420-c0a321d0bae4/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000015-www.dwarkesh.com-p-alex-imas-phil-trammell",
+          "capture_started_at": 1786185996
+        }
+      ]
+    },
     {
       "provider": "substack",
       "media_id": "5723fd43-9712-418c-9427-9f60d7e5c03c",
@@ -42,9 +67,198 @@
               "type": "video/mp4"
             }
           ],
-          "capture_run": "1786164950",
-          "capture_page": ".",
+          "capture_run": "dwarkesh",
+          "capture_page": "validation/1786164950",
           "capture_started_at": 1786164950
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "60178f5a-1327-4032-b636-55bf724b5215",
+      "status": "pending_download",
+      "import_directory": "media/substack/60178f5a-1327-4032-b636-55bf724b5215",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/why-compute-might-get-10x-more-expensive-video",
+          "title": "Why smarter AI models could drive up compute prices 10x",
+          "embed_title": "Why smarter AI models could drive up compute prices 10x",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/209664458/60178f5a-1327-4032-b636-55bf724b5215/transcoded-1785784402.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/60178f5a-1327-4032-b636-55bf724b5215/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/60178f5a-1327-4032-b636-55bf724b5215/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000007-www.dwarkesh.com-p-why-compute-might-get-10x-more-expensive-video",
+          "capture_started_at": 1786183870
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "615de510-7827-403e-a419-9f9c3e755577",
+      "status": "pending_download",
+      "import_directory": "media/substack/615de510-7827-403e-a419-9f9c3e755577",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/the-sample-efficiency-black-hole",
+          "title": "The data black hole at the center of AI - by Dwarkesh Patel",
+          "embed_title": "The data black hole at the center of AI",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/202734201/615de510-7827-403e-a419-9f9c3e755577/transcoded-1781887356.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/615de510-7827-403e-a419-9f9c3e755577/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/615de510-7827-403e-a419-9f9c3e755577/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000013-www.dwarkesh.com-p-the-sample-efficiency-black-hole",
+          "capture_started_at": 1786185473
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "6c923e6c-254a-4fe9-ae22-bfa34ab6792c",
+      "status": "pending_download",
+      "import_directory": "media/substack/6c923e6c-254a-4fe9-ae22-bfa34ab6792c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ada-palmer-2",
+          "title": "Ada Palmer \u2013 Machiavelli is the most misunderstood thinker of all time",
+          "embed_title": "Ada Palmer \u2013 Machiavelli is the most misunderstood thinker of all time",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/202271948/6c923e6c-254a-4fe9-ae22-bfa34ab6792c/transcoded-1781630679.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/6c923e6c-254a-4fe9-ae22-bfa34ab6792c/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/6c923e6c-254a-4fe9-ae22-bfa34ab6792c/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000014-www.dwarkesh.com-p-ada-palmer-2",
+          "capture_started_at": 1786185731
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "70165e4d-bb6b-419a-8532-864600d885f9",
+      "status": "pending_download",
+      "import_directory": "media/substack/70165e4d-bb6b-419a-8532-864600d885f9",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/adam-brown-gr",
+          "title": "Adam Brown \u2013 A deep but accessible introduction to general relativity",
+          "embed_title": "Adam Brown \u2013 A deep but accessible introduction to general relativity",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/206445844/70165e4d-bb6b-419a-8532-864600d885f9/transcoded-1783700540.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/70165e4d-bb6b-419a-8532-864600d885f9/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/70165e4d-bb6b-419a-8532-864600d885f9/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000009-www.dwarkesh.com-p-adam-brown-gr",
+          "capture_started_at": 1786184396
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "79db13aa-56cb-4436-a924-c35c854eab15",
+      "status": "pending_download",
+      "import_directory": "media/substack/79db13aa-56cb-4436-a924-c35c854eab15",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/era-of-continual-learning",
+          "title": "8 Predictions for the Era of Continual Learning",
+          "embed_title": "8 Predictions for the Era of Continual Learning",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/210233020/79db13aa-56cb-4436-a924-c35c854eab15/transcoded-1786122979.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/79db13aa-56cb-4436-a924-c35c854eab15/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/79db13aa-56cb-4436-a924-c35c854eab15/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000006-www.dwarkesh.com-p-era-of-continual-learning",
+          "capture_started_at": 1786183607
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "7eb16383-1d3b-4b33-9ba2-4430cb4f3607",
+      "status": "pending_download",
+      "import_directory": "media/substack/7eb16383-1d3b-4b33-9ba2-4430cb4f3607",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/grant-sanderson-2",
+          "title": "Grant Sanderson \u2013 AI and the future of math",
+          "embed_title": "Grant Sanderson \u2013 AI and the future of math",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/204275916/7eb16383-1d3b-4b33-9ba2-4430cb4f3607/transcoded-1782836232.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/7eb16383-1d3b-4b33-9ba2-4430cb4f3607/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/7eb16383-1d3b-4b33-9ba2-4430cb4f3607/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000011-www.dwarkesh.com-p-grant-sanderson-2",
+          "capture_started_at": 1786184927
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "ecedf5cc-763b-440a-8d87-f182d9d7fef6",
+      "status": "pending_download",
+      "import_directory": "media/substack/ecedf5cc-763b-440a-8d87-f182d9d7fef6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/the-next-paradigm",
+          "title": "The next big breakthrough will be AIs learning on the job",
+          "embed_title": "The next big breakthrough will be AIs learning on the job",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/203704568/ecedf5cc-763b-440a-8d87-f182d9d7fef6/transcoded-1782492369.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ecedf5cc-763b-440a-8d87-f182d9d7fef6/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ecedf5cc-763b-440a-8d87-f182d9d7fef6/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786182573/pages/000012-www.dwarkesh.com-p-the-next-paradigm",
+          "capture_started_at": 1786185208
         }
       ]
     }

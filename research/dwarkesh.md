@@ -105,5 +105,31 @@ ledger now also includes the older Tyler episode. Full video and audio downloads
 remain a separate downloader task rather than part of the page crawl.
 
 With long video/transcript, essay/voiceover, and old audio-first variants now
-validated, the 183-URL first-party page scope is ready for a small bounded batch
-after the active Peter Steinberger crawl completes.
+validated, the 183-URL first-party page scope was approved for bounded batches.
+
+## First bounded page batch
+
+The selected 15-page pilot completed at:
+
+`/mnt2/capsule/epitome/dwarkesh/crawls/1786182573`
+
+All 15 manifests are complete and all capture tabs closed. Representative
+homepage, essay, long video/transcript, old audio-first, and citation-heavy
+replays were inspected at a 1440×900 desktop viewport. Article text, inline
+transcripts, and ordinary images were intact, with no broken image elements.
+The attached browser network log recorded 331 requests, all to the local replay
+server and none to a production origin.
+
+The only asset failure was an expired signed SSRN download URL on `Alex Imas and
+Phil Trammell – What remains scarce after AGI?`. The stable SSRN abstract and a
+fresh 7,223,859-byte PDF were captured under the source's private
+`dependencies/` directory. Replay now gives expiring SSRN download URLs a
+stable identity based on their path and `abstractId`, so the historical signed
+link resolves to the recovered local PDF. A browser range request verified a
+206 `application/pdf` response with the expected `%PDF-` signature.
+
+Across the validation and pilot captures, the tracked media ledgers now contain
+seven YouTube videos, nine Substack-hosted videos, and two Substack-hosted audio
+assets. These remain explicit downloader imports rather than silent gaps in the
+page archive. Eighteen of the 183 approved source identities are complete, and
+the next deduplicated 30-page batch is selected in ignored crawl input data.

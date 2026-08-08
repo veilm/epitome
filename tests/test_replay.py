@@ -10,6 +10,7 @@ from util.epitome_lib.replay import (
     normalize_url,
     resource_path,
     resolve_byte_range,
+    stable_resource_identity,
     rewrite_css,
     rewrite_html,
 )
@@ -359,6 +360,57 @@ src="{player_url}"></iframe></body></html>""",
             }
         )
         self.assertIsNone(index.resource("https://example.com/a"))
+
+    def test_expiring_ssrn_links_resolve_to_captured_stable_resource(self):
+        stale = (
+            "https://download.ssrn.com/paper.pdf?X-Amz-Date=old&abstractId=3722562"
+        )
+        fresh = (
+            "https://download.ssrn.com/paper.pdf?X-Amz-Date=fresh&abstractId=3722562"
+        )
+        identity = "https://download.ssrn.com/paper.pdf?abstractId=3722562"
+        self.assertEqual(stable_resource_identity(stale), identity)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            capture = root / "capture"
+            network = capture / "network" / "pdf"
+            network.mkdir(parents=True)
+            (capture / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "capture_started_at": 100,
+                        "requested_url": "https://example.com/article",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (capture / "page.html").write_text(
+                f'<html><body><a href="{stale}">Paper</a></body></html>',
+                encoding="utf-8",
+            )
+            body = b"%PDF captured"
+            (network / "metadata.json").write_text(
+                json.dumps({"url": fresh, "status": "200"}), encoding="utf-8"
+            )
+            (network / "response-headers.json").write_text(
+                json.dumps(
+                    {
+                        "content-length": str(len(body)),
+                        "content-type": "application/pdf",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (network / "response-body.bin").write_bytes(body)
+            index = CaptureIndex.from_roots([root])
+            self.assertIsNotNone(index.resource(stale))
+            html = rewrite_html(
+                (capture / "page.html").read_text(encoding="utf-8"),
+                "https://example.com/article",
+                index,
+            )
+            self.assertIn(resource_path(stale), html)
+            self.assertNotIn("/unavailable/", html)
 
     def test_index_ignores_replay_capture_recursion(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -63,8 +63,10 @@ small validation samples come before any large crawl.
   - [x] Inventory the two validated Substack audio assets, source endpoints,
         caption-track lists, and embedded timed-transcript row counts in
         `inventories/dwarkesh-substack-audio.json`.
-  - [ ] Run the selected first 15-page Dwarkesh batch, then import inventoried
-        audio and video through the external downloader.
+  - [x] Capture and offline-verify the selected first 15-page Dwarkesh batch;
+        recover its expired SSRN paper as a stable local PDF resource.
+  - [ ] Continue the selected deduplicated 30-page Dwarkesh batch, then import
+        inventoried audio and video through the external downloader.
   - [ ] SemiAnalysis.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.

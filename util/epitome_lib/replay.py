@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 import re
 from typing import Any, Iterable
-from urllib.parse import quote, urljoin, urlsplit
+from urllib.parse import parse_qsl, quote, urlencode, urljoin, urlsplit
 
 from .assets import complete_body, discover_vimeo_video_asset
 
@@ -225,6 +225,28 @@ def is_archival_url(value: str) -> bool:
         return True
 
 
+def stable_resource_identity(url: str) -> str | None:
+    """Return a stable lookup key for known expiring resource URLs."""
+    parsed = urlsplit(url)
+    if (parsed.hostname or "").lower() != "download.ssrn.com":
+        return None
+    abstract_id = next(
+        (
+            value
+            for name, value in parse_qsl(parsed.query)
+            if name.lower() == "abstractid" and value
+        ),
+        None,
+    )
+    if not abstract_id:
+        return None
+    return parsed._replace(
+        scheme="https",
+        query=urlencode({"abstractId": abstract_id}),
+        fragment="",
+    ).geturl()
+
+
 @dataclass(frozen=True)
 class PageRecord:
     url: str
@@ -339,13 +361,18 @@ class CaptureIndex:
         for url in urls:
             current = self.resources.get(url)
             if current is None or order >= current.order:
-                self.resources[url] = ResourceRecord(
+                record = ResourceRecord(
                     url=url,
                     body_path=metadata_path.with_name("response-body.bin"),
                     content_type=content_type,
                     headers=headers,
                     order=order,
                 )
+                self.resources[url] = record
+                if identity := stable_resource_identity(url):
+                    identity_current = self.resources.get(identity)
+                    if identity_current is None or order >= identity_current.order:
+                        self.resources[identity] = record
 
     def page(self, url: str) -> PageRecord | None:
         return self.pages.get(url)
@@ -356,6 +383,9 @@ class CaptureIndex:
             seen.add(url)
             if resource := self.resources.get(url):
                 return resource
+            if identity := stable_resource_identity(url):
+                if resource := self.resources.get(identity):
+                    return resource
             replacement = self.resource_aliases.get(url)
             if not replacement:
                 return None
@@ -453,6 +483,8 @@ class _HTMLRewriter(HTMLParser):
             return value
         if self.index.page(url):
             return replay_path(url)
+        if self.index.resource(url):
+            return resource_path(url)
         return unavailable_path(url)
 
     def _srcset(self, value: str) -> str:
