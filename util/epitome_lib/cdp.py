@@ -68,17 +68,27 @@ def eval_script(session: str, source: str, *, timeout: float = 30) -> Any:
         raise CdpError("cdp eval script returned invalid JSON") from error
 
 
-def close_session_tab(session: str, *, timeout: float = 10) -> bool:
+def close_session_tab(
+    session: str,
+    *,
+    timeout: float = 10,
+    attempts: int = 3,
+) -> bool:
     """Close the exact browser target saved in a CDP session."""
-    try:
-        result = run(
-            ["tabs", "close", "--session", session],
-            timeout=timeout,
-            check=False,
-        )
-    except CdpError:
-        return False
-    return result.returncode == 0
+    for attempt in range(max(1, attempts)):
+        try:
+            result = run(
+                ["tabs", "close", "--session", session],
+                timeout=timeout,
+                check=False,
+            )
+            if result.returncode == 0:
+                return True
+        except CdpError:
+            pass
+        if attempt + 1 < attempts:
+            time.sleep(0.25)
+    return False
 
 
 def scroll_to_stable_bottom(

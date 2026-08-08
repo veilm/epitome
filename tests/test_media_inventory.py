@@ -4,6 +4,7 @@ import tempfile
 import unittest
 
 from util.epitome_lib.media_inventory import (
+    build_substack_audio_inventory,
     build_substack_video_inventory,
     build_youtube_inventory,
 )
@@ -98,6 +99,44 @@ class MediaInventoryTest(unittest.TestCase):
             self.assertEqual(
                 item["articles"][0]["sources"][1]["url"],
                 "https://example.substack.com/api/video/media-123?type=mp4",
+            )
+
+    def test_substack_audio_inventory_keeps_sources_captions_and_transcript_count(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "100"
+            page = root / "pages" / "one"
+            page.mkdir(parents=True)
+            (page / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "requested_url": "https://example.substack.com/p/one",
+                        "capture_started_at": 100,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (page / "page.html").write_text(
+                '''<html><head><title>One</title></head><body>
+<audio src="/api/v1/audio/upload/76180006-2724-40f6-870c-f8f8c5780bb1/src">
+<track src="/captions.vtt" kind="captions" srclang="en" label="English">
+</audio>
+<div data-transcript-row-index="0">First</div>
+<div data-transcript-row-index="1">Second</div></body></html>''',
+                encoding="utf-8",
+            )
+            data = build_substack_audio_inventory(
+                [root], source="Example", generated_at_unix=123
+            )
+            self.assertEqual(data["summary"]["audios"], 1)
+            item = data["items"][0]
+            self.assertEqual(
+                item["media_id"], "76180006-2724-40f6-870c-f8f8c5780bb1"
+            )
+            article = item["articles"][0]
+            self.assertEqual(article["embedded_transcript_rows"], 2)
+            self.assertEqual(
+                article["caption_tracks"][0]["url"],
+                "https://example.substack.com/captions.vtt",
             )
 
 

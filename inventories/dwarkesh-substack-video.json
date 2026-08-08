@@ -1,9 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786165371,
+  "generated_at_unix": 1786167500,
   "source": "Dwarkesh Podcast validation",
   "capture_runs": [
-    "1786164950"
+    "1786164950",
+    "1786167000-will-scaling-work",
+    "1786167300-tyler-cowen"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/substack",

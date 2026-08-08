@@ -132,7 +132,10 @@ class _ResourceParser(HTMLParser):
             }:
                 self._add(values["href"])
         if tag in SRCSET_TAGS and "srcset" in values:
-            for candidate in values["srcset"].split(","):
+            # Commas are legal inside URLs. Substack's image proxy uses them
+            # for transformations; actual candidates are comma+whitespace
+            # separated in the rendered DOM.
+            for candidate in re.split(r",(?=\s)", values["srcset"]):
                 self._add(candidate.strip().split()[0])
         if tag == "a" and "href" in values:
             path = urlsplit(values["href"]).path.lower()

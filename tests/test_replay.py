@@ -122,12 +122,24 @@ class ReplayTest(unittest.TestCase):
 <link rel="preload" as="style" href="https://substackcdn.com/theme.css">
 <link rel="preload" as="font" href="https://fonts.gstatic.com/font.woff2">
 </head><body><img srcset="{proxy} 80w, {second} 160w"></body></html>'''
-        html = rewrite_html(source, "https://example.com/article", CaptureIndex())
+        index = CaptureIndex()
+        index.resources[proxy] = object()
+        index.resources[second] = object()
+        html = rewrite_html(source, "https://example.com/article", index)
         self.assertNotIn("rel=\"preload\"", html)
         self.assertNotIn("https://substackcdn.com", html)
         self.assertNotIn("https://fonts.gstatic.com", html)
         self.assertIn(f"{resource_path(proxy)} 80w", html)
         self.assertIn(f"{resource_path(second)} 160w", html)
+
+    def test_srcset_omits_uncaptured_variant_so_src_can_fallback(self):
+        base = "https://example.com/base.png"
+        missing = "https://example.com/missing-2x.png"
+        source = f'<img src="{base}" srcset="{missing} 2x">'
+        html = rewrite_html(source, "https://example.com/article", CaptureIndex())
+        self.assertIn(resource_path(base), html)
+        self.assertIn('srcset=""', html)
+        self.assertNotIn(resource_path(missing), html)
 
     def test_lazy_images_and_vimeo_are_made_static(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -278,6 +290,20 @@ src="{player_url}"></iframe></body></html>""",
             self.assertNotIn("<iframe", html)
             self.assertIn("Archived words", html)
             self.assertIn("twitter.com/ada/status/12345", html)
+
+    def test_external_media_iframes_become_bounded_offline_placeholders(self):
+        source = '''<html><body>
+<iframe src="https://www.youtube-nocookie.com/embed/abcDEF_123"></iframe>
+<iframe src="https://embed.podcasts.apple.com/us/podcast/example/id1?i=2"></iframe>
+<iframe src="https://open.spotify.com/embed/episode/episode123"></iframe>
+</body></html>'''
+        html = rewrite_html(source, "https://example.com/article", CaptureIndex())
+        self.assertNotIn("<iframe", html)
+        self.assertEqual(html.count("epitome-media-placeholder"), 3)
+        self.assertIn("YouTube video abcDEF_123", html)
+        self.assertIn("Apple Podcasts episode", html)
+        self.assertIn("Spotify episode123", html)
+        self.assertNotIn("https://www.youtube-nocookie.com", html)
 
     def test_index_only_accepts_complete_bodies(self):
         with tempfile.TemporaryDirectory() as temp:

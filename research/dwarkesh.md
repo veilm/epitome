@@ -62,7 +62,48 @@ YouTube imports are tracked separately in
 `inventories/dwarkesh-youtube.json`. The generic media inventory utility now
 understands Substack `<video>` IDs, posters, and HLS/MP4 source endpoints.
 
-Before a larger Dwarkesh batch, validate an essay-only post and an older
-audio-first episode, then extend the media ledger to podcast audio and caption
-files. Large video and audio downloads remain a separate downloader task rather
-than part of the page crawl.
+## Additional structural validations
+
+Two additional variants were captured before approving page batches:
+
+- The 2023 essay `Will scaling work?` is stored at
+  `/mnt2/capsule/epitome/dwarkesh/validation/1786167000-will-scaling-work`.
+  It retains 29,457 characters of rendered text and the article's figures. It
+  also revealed that nominally essay-only posts may have a separate Substack
+  article-voiceover audio asset, here media ID
+  `76180006-2724-40f6-870c-f8f8c5780bb1`.
+- The July 2020 audio-first episode `Tyler Cowen — The Great Reset` is stored at
+  `/mnt2/capsule/epitome/dwarkesh/validation/1786167300-tyler-cowen`. It retains
+  50,948 characters of page text, including the full written transcript, plus
+  references to the original Substack podcast audio, YouTube, Apple Podcasts,
+  and Spotify representations. Its audio media ID is
+  `378ecee0-1abb-4023-9d1d-b3ea9ebaee5a`.
+
+Both captures completed and closed their tabs. Their replays were visually
+checked at 1440×900 and an attached CDP network log recorded zero requests away
+from the local archive server. No discrete `<track>` caption files were exposed
+by either page. The older episode's transcript is inline article content, while
+the representative Dario video stores its timed transcript directly in the
+captured DOM.
+
+The replay audit exposed generic Substack defects and fixed them before a batch
+begins:
+
+- asset discovery no longer mistakes commas inside image-proxy transformations
+  for `srcset` separators;
+- replay advertises only responsive variants that actually exist in the local
+  capture, falling back to the preserved base image rather than displaying a
+  large blank area; and
+- YouTube, Apple Podcasts, and Spotify script embeds become bounded, labelled
+  offline placeholders instead of blank or pathologically tall frames while
+  their media is pending separate import.
+
+The tracked `inventories/dwarkesh-substack-audio.json` ledger currently records
+the two validated audio assets, their referring articles, source endpoints,
+caption-track lists, and embedded timed-transcript row counts. The YouTube
+ledger now also includes the older Tyler episode. Full video and audio downloads
+remain a separate downloader task rather than part of the page crawl.
+
+With long video/transcript, essay/voiceover, and old audio-first variants now
+validated, the 183-URL first-party page scope is ready for a small bounded batch
+after the active Peter Steinberger crawl completes.

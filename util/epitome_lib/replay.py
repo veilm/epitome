@@ -405,6 +405,7 @@ class _HTMLRewriter(HTMLParser):
         self.style_depth = 0
         self.replaced_vimeo_iframes = 0
         self.replaced_twitter_iframes = 0
+        self.replaced_media_iframes = 0
 
     def _resource(self, value: str) -> str:
         url = normalize_url(value, self.base_url)
@@ -429,7 +430,13 @@ class _HTMLRewriter(HTMLParser):
             parts = candidate.strip().split(maxsplit=1)
             if not parts:
                 continue
-            rewritten = self._resource(parts[0])
+            url = normalize_url(parts[0], self.base_url)
+            # Do not advertise responsive variants that are absent locally.
+            # Browsers otherwise prefer a missing high-DPI/WebP candidate over
+            # a complete captured `src`, leaving a blank image in replay.
+            if not url or not self.index.resource(url):
+                continue
+            rewritten = resource_path(url)
             candidates.append(
                 f"{rewritten} {parts[1]}" if len(parts) == 2 else rewritten
             )
@@ -468,6 +475,45 @@ class _HTMLRewriter(HTMLParser):
             return
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh":
             return
+
+        iframe_url = (
+            normalize_url(attrs.get("src", ""), self.base_url)
+            if tag == "iframe"
+            else None
+        )
+        if iframe_url:
+            parsed_iframe = urlsplit(iframe_url)
+            host = (parsed_iframe.hostname or "").lower()
+            path_parts = [part for part in parsed_iframe.path.split("/") if part]
+            provider = None
+            label = None
+            wide = False
+            if host in {
+                "youtube.com",
+                "www.youtube.com",
+                "youtube-nocookie.com",
+                "www.youtube-nocookie.com",
+            } and len(path_parts) >= 2 and path_parts[0] == "embed":
+                provider = "YouTube"
+                label = f"video {path_parts[1]}"
+                wide = True
+            elif host == "embed.podcasts.apple.com":
+                provider = "Apple Podcasts"
+                label = "episode"
+            elif host == "open.spotify.com" and "embed" in path_parts:
+                provider = "Spotify"
+                label = path_parts[-1] if path_parts else "episode"
+            if provider:
+                classes = "epitome-media-placeholder epitome-media-wide" if wide else "epitome-media-placeholder"
+                self.output.append(
+                    f'<figure class="{classes}" data-provider="{escape(provider, quote=True)}">'
+                    f'<strong>{escape(provider)} {escape(label or "media")}</strong>'
+                    '<span>Media is recorded for separate offline import.</span>'
+                    f'<a href="{unavailable_path(iframe_url)}">Archived source reference</a>'
+                    "</figure>"
+                )
+                self.replaced_media_iframes += 1
+                return
 
         vimeo_video_url = None
         if (
@@ -564,6 +610,12 @@ class _HTMLRewriter(HTMLParser):
                 'main .word[style*="visibility: hidden"]'
                 '{visibility:visible!important;opacity:1!important;'
                 'transform:none!important}'
+                '.epitome-media-placeholder{align-items:center;border:1px solid #bbb;'
+                'box-sizing:border-box;display:flex;flex-direction:column;gap:.5rem;'
+                'justify-content:center;margin:1rem auto;max-width:100%;min-height:9rem;'
+                'padding:1.5rem;text-align:center}'
+                '.epitome-media-placeholder span{color:#666}'
+                '.epitome-media-wide{aspect-ratio:16/9;height:auto!important;width:100%}'
                 '</style>'
             )
         if tag == "style" and self.style_depth:
@@ -574,6 +626,9 @@ class _HTMLRewriter(HTMLParser):
             return
         if tag == "iframe" and self.replaced_twitter_iframes:
             self.replaced_twitter_iframes -= 1
+            return
+        if tag == "iframe" and self.replaced_media_iframes:
+            self.replaced_media_iframes -= 1
             return
         self.output.append(f"</{tag}>")
 

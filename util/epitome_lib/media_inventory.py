@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -13,6 +14,10 @@ from urllib.parse import urljoin, urlsplit
 
 
 YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{6,}$")
+AUDIO_ID_RE = re.compile(
+    r"/(?:audio/(?:upload/)?)([0-9a-f]{8,}(?:-[0-9a-f]{4,})+)(?:/|\.|$)",
+    re.IGNORECASE,
+)
 PRESERVED_ITEM_FIELDS = ("status", "imported_files", "notes")
 
 
@@ -24,12 +29,17 @@ class EmbeddedMediaParser(HTMLParser):
         self.youtube: list[dict[str, str]] = []
         self.substack_videos: list[dict[str, Any]] = []
         self._substack_video: dict[str, Any] | None = None
+        self.substack_audio: list[dict[str, Any]] = []
+        self._substack_audio: dict[str, Any] | None = None
+        self.transcript_rows: set[str] = set()
 
     def handle_starttag(self, tag, attrs):
         if tag.lower() == "title":
             self.in_title = True
         tag = tag.lower()
         values = {name.lower(): value or "" for name, value in attrs}
+        if row_index := values.get("data-transcript-row-index"):
+            self.transcript_rows.add(row_index)
         if tag == "video" and values.get("data-video-id"):
             self._substack_video = {
                 "media_id": values["data-video-id"],
@@ -43,6 +53,29 @@ class EmbeddedMediaParser(HTMLParser):
                 self._substack_video["sources"].append(
                     {"url": values["src"], "type": values.get("type", "")}
                 )
+            return
+        if tag == "audio":
+            self._substack_audio = {
+                "sources": ([{"url": values["src"], "type": values.get("type", "")}]
+                            if values.get("src") else []),
+                "tracks": [],
+            }
+            return
+        if tag == "source" and self._substack_audio is not None:
+            if values.get("src"):
+                self._substack_audio["sources"].append(
+                    {"url": values["src"], "type": values.get("type", "")}
+                )
+            return
+        if tag == "track" and self._substack_audio is not None and values.get("src"):
+            self._substack_audio["tracks"].append(
+                {
+                    "url": values["src"],
+                    "kind": values.get("kind", ""),
+                    "label": values.get("label", ""),
+                    "srclang": values.get("srclang", ""),
+                }
+            )
             return
         if tag != "iframe":
             return
@@ -73,6 +106,9 @@ class EmbeddedMediaParser(HTMLParser):
         if tag.lower() == "video" and self._substack_video is not None:
             self.substack_videos.append(self._substack_video)
             self._substack_video = None
+        if tag.lower() == "audio" and self._substack_audio is not None:
+            self.substack_audio.append(self._substack_audio)
+            self._substack_audio = None
 
     def handle_data(self, data):
         if self.in_title:
@@ -308,6 +344,127 @@ def write_substack_video_inventory(
     generated_at_unix: int | None = None,
 ) -> dict[str, Any]:
     data = build_substack_video_inventory(
+        capture_roots,
+        source=source,
+        media_root=media_root,
+        generated_at_unix=generated_at_unix,
+        existing=_existing_items(output),
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    return data
+
+
+def _audio_id(url: str) -> str:
+    if match := AUDIO_ID_RE.search(urlsplit(url).path):
+        return match.group(1).lower()
+    return "url-" + hashlib.sha256(url.encode()).hexdigest()[:20]
+
+
+def build_substack_audio_inventory(
+    capture_roots: list[Path],
+    *,
+    source: str,
+    media_root: str = "media/substack-audio",
+    generated_at_unix: int | None = None,
+    existing: dict[tuple[str, str], dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    articles_by_media: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
+    capture_runs: set[str] = set()
+
+    for root in capture_roots:
+        capture_runs.add(root.name)
+        for manifest_path in sorted(root.rglob("manifest.json")):
+            page_path = manifest_path.with_name("page.html")
+            if not page_path.is_file():
+                continue
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                html = page_path.read_text(encoding="utf-8", errors="replace")
+            except (OSError, json.JSONDecodeError):
+                continue
+            article_url = manifest.get("final_url") or manifest.get("requested_url")
+            if not article_url:
+                continue
+            parser = EmbeddedMediaParser()
+            parser.feed(html)
+            for embedded in parser.substack_audio:
+                sources = [
+                    {**item, "url": urljoin(article_url, item["url"])}
+                    for item in embedded["sources"]
+                ]
+                if not sources:
+                    continue
+                media_id = _audio_id(sources[0]["url"])
+                current = {
+                    "url": article_url,
+                    "title": parser.document_title or article_url,
+                    "sources": sources,
+                    "caption_tracks": [
+                        {**item, "url": urljoin(article_url, item["url"])}
+                        for item in embedded["tracks"]
+                    ],
+                    "embedded_transcript_rows": len(parser.transcript_rows),
+                    "capture_run": root.name,
+                    "capture_page": str(manifest_path.parent.relative_to(root)),
+                    "capture_started_at": int(manifest.get("capture_started_at", 0)),
+                }
+                previous = articles_by_media[media_id].get(article_url)
+                if not previous or current["capture_started_at"] >= previous["capture_started_at"]:
+                    articles_by_media[media_id][article_url] = current
+
+    prior = existing or {}
+    items = []
+    for media_id, article_map in sorted(articles_by_media.items()):
+        item: dict[str, Any] = {
+            "provider": "substack-audio",
+            "media_id": media_id,
+            "status": "pending_download",
+            "import_directory": f"{media_root.rstrip('/')}/{media_id}",
+            "articles": sorted(article_map.values(), key=lambda article: article["url"]),
+        }
+        old = prior.get(("substack-audio", media_id), {})
+        for field in PRESERVED_ITEM_FIELDS:
+            if field in old:
+                item[field] = old[field]
+        items.append(item)
+
+    article_urls = {article["url"] for item in items for article in item["articles"]}
+    status_counts: dict[str, int] = defaultdict(int)
+    for item in items:
+        status_counts[item["status"]] += 1
+    return {
+        "schema_version": 1,
+        "generated_at_unix": generated_at_unix or int(time.time()),
+        "source": source,
+        "capture_runs": sorted(capture_runs),
+        "media_import_contract": {
+            "root_relative_to_source_archive": media_root,
+            "per_media_directory": f"{media_root.rstrip('/')}/{{media_id}}",
+            "article_links": "items[].articles",
+            "note": (
+                "Download one durable audio rendition per media ID. Preserve any "
+                "caption tracks and record imported filenames in imported_files."
+            ),
+        },
+        "summary": {
+            "audios": len(items),
+            "articles": len(article_urls),
+            "statuses": dict(sorted(status_counts.items())),
+        },
+        "items": items,
+    }
+
+
+def write_substack_audio_inventory(
+    capture_roots: list[Path],
+    output: Path,
+    *,
+    source: str,
+    media_root: str = "media/substack-audio",
+    generated_at_unix: int | None = None,
+) -> dict[str, Any]:
+    data = build_substack_audio_inventory(
         capture_roots,
         source=source,
         media_root=media_root,

@@ -58,8 +58,14 @@ small validation samples come before any large crawl.
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
         identities and stable import locations.
-  - [ ] Validate essay-only and older audio-first Dwarkesh variants; inventory
-        podcast audio and caption files before starting a larger page batch.
+  - [x] Validate essay/voiceover and older audio-first Dwarkesh variants through
+        offline replay, including inline transcript and external-player cases.
+  - [x] Inventory the two validated Substack audio assets, source endpoints,
+        caption-track lists, and embedded timed-transcript row counts in
+        `inventories/dwarkesh-substack-audio.json`.
+  - [ ] After Peter's active crawl completes, begin a small bounded Dwarkesh page
+        batch, then import inventoried audio and video through the external
+        downloader.
   - [ ] SemiAnalysis.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.

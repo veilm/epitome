@@ -232,6 +232,20 @@ class CaptureHelpersTest(unittest.TestCase):
             },
         )
 
+    def test_asset_discovery_preserves_commas_inside_srcset_urls(self):
+        proxy = (
+            "https://substackcdn.com/image/fetch/$s_!abc!,w_80,h_80,"
+            "c_fill,f_auto/https%3A%2F%2Fexample.com%2Fimage.png"
+        )
+        second = proxy.replace("w_80,h_80", "w_160,h_160")
+        self.assertEqual(
+            discover_html_assets(
+                f'<img srcset="{proxy} 80w, {second} 160w">',
+                "https://example.com/article",
+            ),
+            {proxy, second},
+        )
+
     def test_asset_discovery_encodes_spaces_in_urls(self):
         self.assertEqual(
             discover_html_assets(
