@@ -35,6 +35,107 @@ FETCH_ATTRIBUTES = {
 }
 
 
+class _ScriptJSONExtractor(HTMLParser):
+    def __init__(self, target_id: str) -> None:
+        super().__init__(convert_charrefs=False)
+        self.target_id = target_id
+        self.depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "script":
+            return
+        values = {name.lower(): value or "" for name, value in attrs}
+        if self.depth or values.get("id") == self.target_id:
+            self.depth += 1
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "script" and self.depth:
+            self.depth -= 1
+
+    def handle_data(self, data):
+        if self.depth:
+            self.parts.append(data)
+
+
+def _disqus_thread_data(html: str) -> dict[str, Any] | None:
+    parser = _ScriptJSONExtractor("disqus-threadData")
+    parser.feed(html)
+    if not parser.parts:
+        return None
+    try:
+        value = json.loads("".join(parser.parts))
+    except json.JSONDecodeError:
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def _static_disqus_comments(html: str) -> str:
+    data = _disqus_thread_data(html)
+    if not data:
+        return ""
+    response = data.get("response", {})
+    posts = response.get("posts", []) if isinstance(response, dict) else []
+    if not isinstance(posts, list):
+        return ""
+    thread = response.get("thread", {})
+    cursor = data.get("cursor", {}) if data else {}
+    total = cursor.get("total", len(posts)) if isinstance(cursor, dict) else len(posts)
+    title = thread.get("clean_title") or thread.get("title") or "Archived discussion"
+    comments = []
+    for post in posts:
+        if not isinstance(post, dict):
+            continue
+        author = post.get("author", {})
+        if not isinstance(author, dict):
+            author = {}
+        author_name = author.get("name") or author.get("username") or "Anonymous"
+        created_at = str(post.get("createdAt") or "")
+        points = post.get("points")
+        score = f" · {points} point{'s' if points != 1 else ''}" if isinstance(points, int) else ""
+        depth = min(max(int(post.get("depth", 0) or 0), 0), 6)
+        message = post.get("message") or post.get("raw_message")
+        if not isinstance(message, str) or not message.strip():
+            message = "<p><em>Deleted comment</em></p>"
+        post_id = escape(str(post.get("id") or ""), quote=True)
+        parent_id = escape(str(post.get("parent") or ""), quote=True)
+        comments.append(
+            f'<article class="epitome-disqus-comment" data-post-id="{post_id}" '
+            f'data-parent-id="{parent_id}" style="margin-left:{depth * 1.5}rem">'
+            f'<header><strong>{escape(str(author_name))}</strong>'
+            f'<span>{escape(created_at)}{escape(score)}</span></header>'
+            f'<div class="epitome-disqus-message">{message}</div></article>'
+        )
+    return (
+        '<section id="epitome-disqus-comments">'
+        f'<h2>{escape(str(title))} — {escape(str(total))} comments</h2>'
+        '<p class="epitome-disqus-note">Static comments preserved by Epitome; '
+        'interactive voting and replies are unavailable offline.</p>'
+        f'{"".join(comments)}</section>'
+        '<style id="epitome-disqus-style">'
+        '#epitome-disqus-comments{box-sizing:border-box;color:#333;'
+        'font:15px/1.5 system-ui,sans-serif;margin:0 auto;max-width:800px;padding:1rem}'
+        '#epitome-disqus-comments h2{font-size:1.25rem;margin:.5rem 0}'
+        '.epitome-disqus-note{color:#666;font-size:.85rem}'
+        '.epitome-disqus-comment{border-top:1px solid #ddd;padding:1rem 0}'
+        '.epitome-disqus-comment header{display:flex;gap:.5rem;justify-content:space-between}'
+        '.epitome-disqus-comment header span{color:#666;font-size:.8rem}'
+        '.epitome-disqus-message p:first-child{margin-top:.5rem}'
+        '.epitome-disqus-message img{height:auto;max-width:100%}'
+        '</style>'
+    )
+
+
+def _inject_static_disqus_comments(html: str) -> str:
+    comments = _static_disqus_comments(html)
+    if not comments:
+        return html
+    match = re.search(r"</body\s*>", html, re.IGNORECASE)
+    if not match:
+        return html + comments
+    return html[: match.start()] + comments + html[match.start() :]
+
+
 def encode_url(url: str) -> str:
     return base64.urlsafe_b64encode(url.encode()).decode().rstrip("=")
 
@@ -432,6 +533,7 @@ class _HTMLRewriter(HTMLParser):
 
 
 def rewrite_html(html: str, base_url: str, index: CaptureIndex) -> str:
+    html = _inject_static_disqus_comments(html)
     rewriter = _HTMLRewriter(index, base_url)
     rewriter.feed(html)
     rewriter.close()

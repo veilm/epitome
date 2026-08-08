@@ -89,6 +89,7 @@ class ReplayTest(unittest.TestCase):
             self.assertNotIn("<script", html)
             self.assertNotIn("preconnect", html)
             self.assertIn('id="epitome-replay-style"', html)
+            self.assertNotIn('id="epitome-disqus-comments"', html)
             self.assertIn('#consent-banner', html)
             self.assertIn('aspect-ratio:16/9', html)
             self.assertIn('.transition_wrap{display:none!important}', html)
@@ -185,6 +186,49 @@ src="{player_url}"></iframe></body></html>""",
             self.assertIn(resource_path(video_url), html)
             self.assertNotIn("<iframe", html)
             self.assertNotIn("opacity-0", html)
+
+    def test_disqus_thread_data_is_rendered_static(self):
+        data = {
+            "cursor": {"total": 2},
+            "response": {
+                "thread": {"clean_title": "Archived post"},
+                "posts": [
+                    {
+                        "id": "100",
+                        "parent": None,
+                        "depth": 0,
+                        "createdAt": "2026-01-01T12:00:00",
+                        "points": 2,
+                        "author": {"name": "Ada"},
+                        "message": '<p>First <a href="https://example.com/x">link</a></p>',
+                    },
+                    {
+                        "id": "101",
+                        "parent": "100",
+                        "depth": 1,
+                        "createdAt": "2026-01-01T13:00:00",
+                        "points": 1,
+                        "author": {"username": "Grace"},
+                        "message": "<p>Reply</p>",
+                    },
+                ],
+            },
+        }
+        source = (
+            '<html><body><script type="text/json" id="disqus-threadData">'
+            + json.dumps(data)
+            + "</script></body></html>"
+        )
+        html = rewrite_html(source, "https://disqus.com/embed/comments/", CaptureIndex())
+        self.assertNotIn("<script", html)
+        self.assertIn('id="epitome-disqus-comments"', html)
+        self.assertIn("Archived post — 2 comments", html)
+        self.assertIn("Ada", html)
+        self.assertIn("Grace", html)
+        self.assertIn("First", html)
+        self.assertIn("Reply", html)
+        self.assertIn('data-parent-id="100"', html)
+        self.assertIn("/unavailable/", html)
 
     def test_index_only_accepts_complete_bodies(self):
         with tempfile.TemporaryDirectory() as temp:
