@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786156166,
+  "generated_at_unix": 1786162008,
   "source": "Claude.com blog batches",
   "capture_runs": [
     "1786127775",
     "1786137145",
     "1786143499",
-    "1786148472"
+    "1786148472",
+    "1786156382"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/youtube",
@@ -15,10 +16,10 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 64,
-    "articles": 44,
+    "videos": 81,
+    "articles": 58,
     "statuses": {
-      "pending_download": 64
+      "pending_download": 81
     }
   },
   "items": [
@@ -42,6 +43,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "-lBZ-kX3wDg",
+      "watch_url": "https://www.youtube.com/watch?v=-lBZ-kX3wDg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/-lBZ-kX3wDg",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-night",
+          "title": "Working at the frontier: How Cognition trusts Claude Fable 5 to work through the night | Claude by Anthropic",
+          "embed_title": "Working at the Frontier: Cognition",
+          "embed_url": "https://www.youtube-nocookie.com/embed/-lBZ-kX3wDg",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000026-claude.com-blog-working-at-the-frontier-how-cognition-trusts-claude-fable-5-to-work-through-the-nigh",
+          "capture_started_at": 1786159781
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "0SgCiUfoYo8",
       "watch_url": "https://www.youtube.com/watch?v=0SgCiUfoYo8",
       "status": "pending_download",
@@ -55,6 +74,24 @@
           "capture_run": "1786143499",
           "capture_page": "pages/000003-claude.com-blog-claude-security-public-beta",
           "capture_started_at": 1786143719
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "2Qx4i3pV81M",
+      "watch_url": "https://www.youtube.com/watch?v=2Qx4i3pV81M",
+      "status": "pending_download",
+      "import_directory": "media/youtube/2Qx4i3pV81M",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/web-search-api",
+          "title": "Introducing web search on the Anthropic API | Claude by Anthropic",
+          "embed_title": "Web Search on the Anthropic API",
+          "embed_url": "https://www.youtube-nocookie.com/embed/2Qx4i3pV81M",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000022-claude.com-blog-web-search-api",
+          "capture_started_at": 1786159201
         }
       ]
     },
@@ -312,6 +349,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "GWnNMfFivnk",
+      "watch_url": "https://www.youtube.com/watch?v=GWnNMfFivnk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/GWnNMfFivnk",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+          "title": "Think through hard problems in voice mode | Claude by Anthropic",
+          "embed_title": "Good Morning Devi",
+          "embed_url": "https://www.youtube-nocookie.com/embed/GWnNMfFivnk",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000012-claude.com-blog-think-through-hard-problems-in-voice-mode",
+          "capture_started_at": 1786157881
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "Hen24w2Jyz4",
       "watch_url": "https://www.youtube.com/watch?v=Hen24w2Jyz4",
       "status": "pending_download",
@@ -402,6 +457,33 @@
     },
     {
       "provider": "youtube",
+      "video_id": "IoqpBKrNaZI",
+      "watch_url": "https://www.youtube.com/watch?v=IoqpBKrNaZI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/IoqpBKrNaZI",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/skills",
+          "title": "Introducing Agent Skills | Claude by Anthropic",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/IoqpBKrNaZI?autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Fwww.anthropic.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1&forigin=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fskills&aoriginsup=1&vf=1",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000002-claude.com-blog-skills",
+          "capture_started_at": 1786156518
+        },
+        {
+          "url": "https://claude.com/blog/skills-explained",
+          "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents | Claude by Anthropic",
+          "embed_title": "Agent Skills: Specialized capabilities you can customize",
+          "embed_url": "https://www.youtube-nocookie.com/embed/IoqpBKrNaZI",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000003-claude.com-blog-skills-explained",
+          "capture_started_at": 1786156665
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "Jp83_JMK74o",
       "watch_url": "https://www.youtube.com/watch?v=Jp83_JMK74o",
       "status": "pending_download",
@@ -420,6 +502,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "K14-tbSfqqw",
+      "watch_url": "https://www.youtube.com/watch?v=K14-tbSfqqw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/K14-tbSfqqw",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work",
+          "title": "Base44 uses Claude Fable 5 for its hardest engineering work | Claude by Anthropic",
+          "embed_title": "Working at the Frontier: Base44",
+          "embed_url": "https://www.youtube-nocookie.com/embed/K14-tbSfqqw",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000030-claude.com-blog-working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging",
+          "capture_started_at": 1786160326
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "KCSBAAQJp5Y",
       "watch_url": "https://www.youtube.com/watch?v=KCSBAAQJp5Y",
       "status": "pending_download",
@@ -433,6 +533,15 @@
           "capture_run": "1786148472",
           "capture_page": "pages/000047-claude.com-blog-opus-4-6-finance",
           "capture_started_at": 1786154064
+        },
+        {
+          "url": "https://claude.com/blog/self-serve-enterprise",
+          "title": "Claude Enterprise, now available self-serve | Claude by Anthropic",
+          "embed_title": "Claude Opus 4.6 for finance",
+          "embed_url": "https://www.youtube-nocookie.com/embed/KCSBAAQJp5Y",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000001-claude.com-blog-self-serve-enterprise",
+          "capture_started_at": 1786156383
         }
       ]
     },
@@ -451,6 +560,24 @@
           "capture_run": "1786143499",
           "capture_page": "pages/000029-claude.com-blog-evaluate-prompts",
           "capture_started_at": 1786146496
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "LIa9IBQL53Q",
+      "watch_url": "https://www.youtube.com/watch?v=LIa9IBQL53Q",
+      "status": "pending_download",
+      "import_directory": "media/youtube/LIa9IBQL53Q",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/working-at-the-frontier-cursor",
+          "title": "How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems | Claude by Anthropic",
+          "embed_title": "Working at the Frontier: Cursor",
+          "embed_url": "https://www.youtube-nocookie.com/embed/LIa9IBQL53Q",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000025-claude.com-blog-working-at-the-frontier-cursor",
+          "capture_started_at": 1786159642
         }
       ]
     },
@@ -672,6 +799,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "VHsp6Hp7Stw",
+      "watch_url": "https://www.youtube.com/watch?v=VHsp6Hp7Stw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/VHsp6Hp7Stw",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/your-thinking-partner",
+          "title": "Claude: From Chatbot to Thinking Partner | Claude by Anthropic",
+          "embed_title": "Turning Claude into your thinking partner",
+          "embed_url": "https://www.youtube-nocookie.com/embed/VHsp6Hp7Stw",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000034-claude.com-blog-your-thinking-partner",
+          "capture_started_at": 1786160846
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "WUSLZ_cEqnc",
       "watch_url": "https://www.youtube.com/watch?v=WUSLZ_cEqnc",
       "status": "pending_download",
@@ -726,6 +871,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "YrYQ_IMlOsM",
+      "watch_url": "https://www.youtube.com/watch?v=YrYQ_IMlOsM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/YrYQ_IMlOsM",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/team-plan-and-ios",
+          "title": "Introducing the Claude Team plan and iOS app | Claude by Anthropic",
+          "embed_title": "Claude for teams",
+          "embed_url": "https://www.youtube-nocookie.com/embed/YrYQ_IMlOsM",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000007-claude.com-blog-team-plan-and-ios",
+          "capture_started_at": 1786157203
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "aQpbp-Ra2Rk",
       "watch_url": "https://www.youtube.com/watch?v=aQpbp-Ra2Rk",
       "status": "pending_download",
@@ -739,6 +902,24 @@
           "capture_run": "1786148472",
           "capture_page": "pages/000055-claude.com-blog-prompt-generator",
           "capture_started_at": 1786155031
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "b77htH1eX-s",
+      "watch_url": "https://www.youtube.com/watch?v=b77htH1eX-s",
+      "status": "pending_download",
+      "import_directory": "media/youtube/b77htH1eX-s",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/tool-use-ga",
+          "title": "Claude can now use tools | Claude by Anthropic",
+          "embed_title": "Claude 3 tool use: customer support",
+          "embed_url": "https://www.youtube-nocookie.com/embed/b77htH1eX-s",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000014-claude.com-blog-tool-use-ga",
+          "capture_started_at": 1786158149
         }
       ]
     },
@@ -834,6 +1015,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "dcKXca3Bs2o",
+      "watch_url": "https://www.youtube.com/watch?v=dcKXca3Bs2o",
+      "status": "pending_download",
+      "import_directory": "media/youtube/dcKXca3Bs2o",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/what-is-model-context-protocol",
+          "title": "What is Model Context Protocol? Connect AI to your world | Claude by Anthropic",
+          "embed_title": "Turn designs into code with Claude Code + Figma",
+          "embed_url": "https://www.youtube-nocookie.com/embed/dcKXca3Bs2o",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000023-claude.com-blog-what-is-model-context-protocol",
+          "capture_started_at": 1786159335
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "fuxdGCMF1Qg",
       "watch_url": "https://www.youtube.com/watch?v=fuxdGCMF1Qg",
       "status": "pending_download",
@@ -852,6 +1051,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "i1zSvcLxk4Q",
+      "watch_url": "https://www.youtube.com/watch?v=i1zSvcLxk4Q",
+      "status": "pending_download",
+      "import_directory": "media/youtube/i1zSvcLxk4Q",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work",
+          "title": "Working at the frontier: How Thomson Reuters builds AI for high- stakes professional work | Claude by Anthropic",
+          "embed_title": "Working at the Frontier: Thomson Reuters",
+          "embed_url": "https://www.youtube-nocookie.com/embed/i1zSvcLxk4Q",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000028-claude.com-blog-working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-",
+          "capture_started_at": 1786160054
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "igO8iyca2_g",
       "watch_url": "https://www.youtube.com/watch?v=igO8iyca2_g",
       "status": "pending_download",
@@ -865,6 +1082,24 @@
           "capture_run": "1786148472",
           "capture_page": "pages/000058-claude.com-blog-running-an-ai-native-engineering-org",
           "capture_started_at": 1786155392
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "kS1MJFZWMq4",
+      "watch_url": "https://www.youtube.com/watch?v=kS1MJFZWMq4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/kS1MJFZWMq4",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/skills",
+          "title": "Introducing Agent Skills | Claude by Anthropic",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/kS1MJFZWMq4?autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Fwww.anthropic.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=3&forigin=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fskills&aoriginsup=1&vf=1",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000002-claude.com-blog-skills",
+          "capture_started_at": 1786156518
         }
       ]
     },
@@ -919,6 +1154,24 @@
           "capture_run": "1786148472",
           "capture_page": "pages/000003-claude.com-blog-how-anthropic-uses-claude-gtm-engineering",
           "capture_started_at": 1786148722
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "nbG2DO6Xsek",
+      "watch_url": "https://www.youtube.com/watch?v=nbG2DO6Xsek",
+      "status": "pending_download",
+      "import_directory": "media/youtube/nbG2DO6Xsek",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/skills-explained",
+          "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents | Claude by Anthropic",
+          "embed_title": "Shareable Projects in Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/nbG2DO6Xsek",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000003-claude.com-blog-skills-explained",
+          "capture_started_at": 1786156665
         }
       ]
     },
@@ -1122,6 +1375,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "vYO9kUu-aC8",
+      "watch_url": "https://www.youtube.com/watch?v=vYO9kUu-aC8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/vYO9kUu-aC8",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail",
+          "title": "Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail | Claude by Anthropic",
+          "embed_title": "Working at the Frontier: Hebbia",
+          "embed_url": "https://www.youtube-nocookie.com/embed/vYO9kUu-aC8",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000027-claude.com-blog-working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-",
+          "capture_started_at": 1786159916
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "wI0ptqCSL0I",
       "watch_url": "https://www.youtube.com/watch?v=wI0ptqCSL0I",
       "status": "pending_download",
@@ -1140,6 +1411,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "wXC2u36w2Rc",
+      "watch_url": "https://www.youtube.com/watch?v=wXC2u36w2Rc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/wXC2u36w2Rc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/what-is-model-context-protocol",
+          "title": "What is Model Context Protocol? Connect AI to your world | Claude by Anthropic",
+          "embed_title": "Move from content to polished design with Canva + Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/wXC2u36w2Rc",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000023-claude.com-blog-what-is-model-context-protocol",
+          "capture_started_at": 1786159335
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "wjCUO-5lVhk",
       "watch_url": "https://www.youtube.com/watch?v=wjCUO-5lVhk",
       "status": "pending_download",
@@ -1153,6 +1442,42 @@
           "capture_run": "1786148472",
           "capture_page": "pages/000026-claude.com-blog-interactive-tools-in-claude",
           "capture_started_at": 1786151512
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "xBV60h9_lbw",
+      "watch_url": "https://www.youtube.com/watch?v=xBV60h9_lbw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/xBV60h9_lbw",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/what-is-model-context-protocol",
+          "title": "What is Model Context Protocol? Connect AI to your world | Claude by Anthropic",
+          "embed_title": "Ship faster with real context from Linear, Notion, and Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/xBV60h9_lbw",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000023-claude.com-blog-what-is-model-context-protocol",
+          "capture_started_at": 1786159335
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "ysPbXH0LpIE",
+      "watch_url": "https://www.youtube.com/watch?v=ysPbXH0LpIE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/ysPbXH0LpIE",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/skills-explained",
+          "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents | Claude by Anthropic",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/ysPbXH0LpIE",
+          "capture_run": "1786156382",
+          "capture_page": "pages/000003-claude.com-blog-skills-explained",
+          "capture_started_at": 1786156665
         }
       ]
     },
