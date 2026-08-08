@@ -167,3 +167,29 @@ The attached offline network log recorded 4,854 requests, all to the local
 server. Across the full 48-identity archive, media ledgers now track 22 YouTube
 videos, 28 Substack videos, and three Substack audio assets. The next
 deduplicated 45-page batch is selected.
+
+## Third bounded page batch
+
+The next 45 deduplicated pages completed at:
+
+`/mnt2/capsule/epitome/dwarkesh/crawls/1786194586`
+
+All 45 manifests are complete, all capture tabs closed, and the crawl reported
+zero page or asset-completion failures. The primary-image audit found zero
+missing rendered article images. Five desktop replays covered the standalone
+`Notes on China` and `AI Firm` essays, the 195,241-character Scott
+Alexander/Daniel Kokotajlo transcript, a 163,556-character video/transcript
+page, and a short event announcement. All images loaded and the page layouts,
+headings, comments, and long transcripts were intact.
+
+The first strict replay-network pass exposed one general leak: captured HLS
+playlists still contained absolute Mux child-playlist and segment URLs. Replay
+now rewrites ordinary playlist lines plus `URI` attributes for keys and maps to
+local resource routes. A repeated audit of two video-bearing pages recorded 141
+requests, all to the local server. Uncaptured segments therefore fail closed
+instead of consulting production; the preserved posters remain visible while
+full durable playback awaits the explicit external-media imports.
+
+Across the 93 completed source identities, the refreshed ledgers now track 53
+YouTube videos, 61 Substack videos, and four Substack audio assets. The next
+deduplicated 60-page batch is selected.
