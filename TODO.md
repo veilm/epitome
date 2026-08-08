@@ -59,7 +59,11 @@ small validation samples come before any large crawl.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**
-  - [ ] Peter Steinberger.
+  - [x] Inventory Peter Steinberger's canonical 116-URL core blog scope and
+        validate one representative rendered article plus its official Markdown
+        mirror.
+  - [ ] Capture the remaining 115 Peter Steinberger core URLs after Karpathy,
+        then preserve the deferred pagination and tag archives separately.
   - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
         article, image, and static Disqus-comment preservation.
   - [ ] Capture the remaining 25 Karpathy blog URLs.
