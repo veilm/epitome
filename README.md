@@ -1,13 +1,20 @@
 # Epitome
 
-Epitome is an archival project for the public OpenAI website. The intended
-outputs are:
+Epitome is a general archival system for historically valuable public web
+sources. It currently preserves company publications, independent writers, and
+newsletters, with additional source families planned. The intended outputs are:
 
-1. a high-fidelity, replayable capture of the site; and
-2. clean Markdown renditions of OpenAI articles.
+1. high-fidelity page and media captures that replay without contacting the
+   original site;
+2. clean, model-readable article renditions; and
+3. linked summaries suitable for a small static reference site.
 
-The repository contains bounded CDP capture utilities and investigation/design
-notes. Captured site data remains private and ignored by Git.
+The repository contains source-agnostic bounded CDP capture, replay,
+model-readable extraction, and summary utilities, plus per-source investigation
+notes and inventories. Site-specific recovery rules are added only when an
+observed page needs them. Large captured site data remains private and ignored
+by Git; compact source lists, status records, media mappings, and summaries can
+be tracked.
 
 See [docs/network-capture.md](docs/network-capture.md) for current capture usage,
 [docs/archive-plan.md](docs/archive-plan.md) for the broader site-capture design,
@@ -16,7 +23,7 @@ See [docs/network-capture.md](docs/network-capture.md) for current capture usage
 active preservation gaps are tracked in [STATUS.md](STATUS.md); external-media
 import mappings live under [inventories/](inventories/README.md).
 
-Quick start:
+Quick start, using an OpenAI article as one example source:
 
 ```sh
 util/capture_url 'https://openai.com/index/example/'
