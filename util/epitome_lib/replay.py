@@ -518,8 +518,11 @@ class _HTMLRewriter(HTMLParser):
         vimeo_video_url = None
         if (
             tag == "iframe"
-            and "vimeo" in attrs.get("title", "").lower()
-            and (iframe_url := normalize_url(attrs.get("src", ""), self.base_url))
+            and iframe_url
+            and (
+                "vimeo" in attrs.get("title", "").lower()
+                or urlsplit(iframe_url).hostname == "player.vimeo.com"
+            )
         ):
             vimeo_video_url = self.index.vimeo_video(iframe_url)
             if vimeo_video_url:

@@ -160,7 +160,7 @@ class ReplayTest(unittest.TestCase):
             )
             (page / "page.html").write_text(
                 f"""<html><body><img loading="lazy" src="/image.png">
-<iframe title="Example on Vimeo" class="opacity-0 player"
+<iframe class="opacity-0 player"
 src="{player_url}"></iframe></body></html>""",
                 encoding="utf-8",
             )

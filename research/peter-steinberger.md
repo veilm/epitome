@@ -91,5 +91,41 @@ the original server-rendered `twitter-tweet` blockquote by status ID and replay
 uses its preserved text in place of the iframe. The audited tweet now shows its
 full quotation, author, link, and date without running Twitter code.
 
-The next bounded batch should be selected against the full Peter archive root,
-use a longer inter-page delay, and skip these 16 complete identities.
+## Second batch
+
+The next 30 oldest uncaptured core identities were archived at:
+
+`/mnt2/capsule/epitome/peter-steinberger/crawls/1786166787`
+
+All 30 page manifests completed with zero capture errors. Twenty-nine recorded
+tab closure directly; the one transient close failure was observed and closed
+manually during the run, leaving the browser at its original three tabs. The CDP
+helper now retries exact-session tab closure so a brief CLI collision does not
+leave future capture tabs behind. The approved core scope is now 46/116 complete.
+
+Seven asset-completion requests failed, but only three were inline page media:
+
+- `swizzling-strict-msgSend.png` has an exact 2014 Wayback copy from the former
+  `petersteinberger.com` origin;
+- `UIPrinterSearchingView.png` has an exact 2014 copy from that origin; and
+- `researchkit-animations.gif` has an exact 2015 copy from that origin.
+
+All three historical bodies were imported through the browser under the private
+`dependencies/` tree and are restored by reviewed aliases in
+`inventories/resource-aliases.json`. The remaining failures are links rather
+than inline media: three dead historical image URLs used as prose hyperlinks and
+Apple's unavailable 2013 `Architecting_Modern_Apps_Part_2.pdf` citation. Their
+original URLs and article context remain preserved for later citation recovery.
+
+Five 1440×900 replays spanning 2012–2016 were inspected: `Moving On`, the two
+restored 2014 image cases, `Researching ResearchKit`, and the media-heavy
+`Running UI Tests on iOS With Ludicrous Speed`. All article text and inline
+images rendered; the restored GIF animates; two old tweet embeds render their
+preserved static quotations; and an archived 68.28-second Vimeo body reaches
+browser ready-state 4 in a native local `<video>`. Vimeo recognition now uses
+the player hostname as well as optional iframe titles, covering older titleless
+embeds. The attached audit log contained 27 local requests and zero production-
+origin requests or errors.
+
+The next bounded batch should skip these 46 complete identities and use a longer
+delay again. Seventy reviewed core identities remain.

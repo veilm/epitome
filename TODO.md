@@ -76,9 +76,13 @@ small validation samples come before any large crawl.
   - [x] Capture and offline-verify the first varied 15-page Peter batch; restore
         the lost 2016 iWork image from its surviving canonical copy and render
         preserved tweet text without Twitter JavaScript.
-  - [ ] Capture the remaining 100 Peter Steinberger core URLs in bounded batches,
-        track the unrecovered 2020 SwiftUI image, then preserve the deferred
-        pagination and tag archives separately.
+  - [x] Capture and offline-verify the next 30 oldest Peter identities; recover
+        three missing inline images from exact historical Wayback bodies and
+        validate a locally playable titleless Vimeo embed.
+  - [ ] Capture the remaining 70 Peter Steinberger core URLs in bounded batches,
+        track the unrecovered 2020 SwiftUI image and four dead outbound
+        citations, then preserve the deferred pagination and tag archives
+        separately.
   - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
         article, image, and static Disqus-comment preservation.
   - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including
