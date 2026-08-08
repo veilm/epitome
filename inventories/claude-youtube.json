@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786148136,
+  "generated_at_unix": 1786156166,
   "source": "Claude.com blog batches",
   "capture_runs": [
     "1786127775",
     "1786137145",
-    "1786143499"
+    "1786143499",
+    "1786148472"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/youtube",
@@ -14,10 +15,10 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 28,
-    "articles": 25,
+    "videos": 64,
+    "articles": 44,
     "statuses": {
-      "pending_download": 28
+      "pending_download": 64
     }
   },
   "items": [
@@ -95,6 +96,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "4_mkm1-4F6c",
+      "watch_url": "https://www.youtube.com/watch?v=4_mkm1-4F6c",
+      "status": "pending_download",
+      "import_directory": "media/youtube/4_mkm1-4F6c",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+          "title": "How the product designer who built Claude Design uses it | Claude by Anthropic",
+          "embed_title": "IG style editing of ui theme",
+          "embed_url": "https://www.youtube-nocookie.com/embed/4_mkm1-4F6c",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000018-claude.com-blog-how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-bui",
+          "capture_started_at": 1786150507
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "5kTDt9ewTwE",
       "watch_url": "https://www.youtube.com/watch?v=5kTDt9ewTwE",
       "status": "pending_download",
@@ -113,6 +132,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "6IvP72wy4oE",
+      "watch_url": "https://www.youtube.com/watch?v=6IvP72wy4oE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/6IvP72wy4oE",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/integrations",
+          "title": "Claude can now connect to your world | Claude by Anthropic",
+          "embed_title": "Remote MCP Product Demo: Claude + Atlassian",
+          "embed_url": "https://www.youtube-nocookie.com/embed/6IvP72wy4oE",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000025-claude.com-blog-integrations",
+          "capture_started_at": 1786151388
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "6bN6hnx-A2A",
+      "watch_url": "https://www.youtube.com/watch?v=6bN6hnx-A2A",
+      "status": "pending_download",
+      "import_directory": "media/youtube/6bN6hnx-A2A",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Medkit with Opus4.7",
+          "embed_url": "https://www.youtube-nocookie.com/embed/6bN6hnx-A2A",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "6erI1uxx2eo",
+      "watch_url": "https://www.youtube.com/watch?v=6erI1uxx2eo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/6erI1uxx2eo",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon | Claude by Anthropic",
+          "embed_title": "Claude Opus 4.8 Build Day: Custom Universe",
+          "embed_url": "https://www.youtube-nocookie.com/embed/6erI1uxx2eo",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000038-claude.com-blog-meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "capture_started_at": 1786152978
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "7-1tNo8HAwk",
       "watch_url": "https://www.youtube.com/watch?v=7-1tNo8HAwk",
       "status": "pending_download",
@@ -126,6 +199,42 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000011-claude.com-blog-claude-for-the-legal-industry",
           "capture_started_at": 1786138060
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "7UgtfcKL0Zg",
+      "watch_url": "https://www.youtube.com/watch?v=7UgtfcKL0Zg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/7UgtfcKL0Zg",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon | Claude by Anthropic",
+          "embed_title": "Claude Opus 4.8 Build Day: Tekton",
+          "embed_url": "https://www.youtube-nocookie.com/embed/7UgtfcKL0Zg",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000038-claude.com-blog-meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "capture_started_at": 1786152978
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "91AJ0cpgLlQ",
+      "watch_url": "https://www.youtube.com/watch?v=91AJ0cpgLlQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/91AJ0cpgLlQ",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
+          "title": "Product management on the AI exponential | Claude by Anthropic",
+          "embed_title": "How Anthropic uses Claude in Product Management",
+          "embed_url": "https://www.youtube-nocookie.com/embed/91AJ0cpgLlQ",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000052-claude.com-blog-product-management-on-the-ai-exponential",
+          "capture_started_at": 1786154677
         }
       ]
     },
@@ -185,6 +294,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "FPPTnI88RR8",
+      "watch_url": "https://www.youtube.com/watch?v=FPPTnI88RR8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/FPPTnI88RR8",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity",
+          "title": "How Anthropic's cybersecurity team built a threat detection platform with Claude Code | Claude by Anthropic",
+          "embed_title": "How Anthropic uses Claude in Cybersecurity",
+          "embed_url": "https://www.youtube-nocookie.com/embed/FPPTnI88RR8",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000002-claude.com-blog-how-anthropic-uses-claude-cybersecurity",
+          "capture_started_at": 1786148603
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Hen24w2Jyz4",
+      "watch_url": "https://www.youtube.com/watch?v=Hen24w2Jyz4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Hen24w2Jyz4",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Aria: Built with Opus 4.7 Claude Code Hackathon",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Hen24w2Jyz4?start=28",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "I1BvAHOsjBU",
       "watch_url": "https://www.youtube.com/watch?v=I1BvAHOsjBU",
       "status": "pending_download",
@@ -198,6 +343,42 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000013-claude.com-blog-claude-managed-agents",
           "capture_started_at": 1786138285
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "IJ9FyX2xwWA",
+      "watch_url": "https://www.youtube.com/watch?v=IJ9FyX2xwWA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/IJ9FyX2xwWA",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Demo Maieutic",
+          "embed_url": "https://www.youtube-nocookie.com/embed/IJ9FyX2xwWA",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Ig3HlWNHcpY",
+      "watch_url": "https://www.youtube.com/watch?v=Ig3HlWNHcpY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Ig3HlWNHcpY",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/prompt-generator",
+          "title": "Generate better prompts in the developer console | Claude by Anthropic",
+          "embed_title": "Prompting assistance in Console: Content moderation",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Ig3HlWNHcpY",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000055-claude.com-blog-prompt-generator",
+          "capture_started_at": 1786155031
         }
       ]
     },
@@ -221,6 +402,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "Jp83_JMK74o",
+      "watch_url": "https://www.youtube.com/watch?v=Jp83_JMK74o",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Jp83_JMK74o",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+          "title": "How Anthropic uses Claude in Marketing | Claude by Anthropic",
+          "embed_title": "How Anthropic uses Claude in Marketing",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Jp83_JMK74o",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000005-claude.com-blog-how-anthropic-uses-claude-marketing",
+          "capture_started_at": 1786148962
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "KCSBAAQJp5Y",
+      "watch_url": "https://www.youtube.com/watch?v=KCSBAAQJp5Y",
+      "status": "pending_download",
+      "import_directory": "media/youtube/KCSBAAQJp5Y",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/opus-4-6-finance",
+          "title": "Advancing finance with Claude Opus 4.6 | Claude by Anthropic",
+          "embed_title": "Claude Opus 4.6 for finance",
+          "embed_url": "https://www.youtube-nocookie.com/embed/KCSBAAQJp5Y",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000047-claude.com-blog-opus-4-6-finance",
+          "capture_started_at": 1786154064
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "KIGBsQqZcNA",
       "watch_url": "https://www.youtube.com/watch?v=KIGBsQqZcNA",
       "status": "pending_download",
@@ -234,6 +451,24 @@
           "capture_run": "1786143499",
           "capture_page": "pages/000029-claude.com-blog-evaluate-prompts",
           "capture_started_at": 1786146496
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "LpGpwhORWr0",
+      "watch_url": "https://www.youtube.com/watch?v=LpGpwhORWr0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/LpGpwhORWr0",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-legal",
+          "title": "How Anthropic uses Claude in Legal | Claude by Anthropic",
+          "embed_title": "Claude works with you on slides, spreadsheets, and contract redlines",
+          "embed_url": "https://www.youtube-nocookie.com/embed/LpGpwhORWr0?start=67",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000004-claude.com-blog-how-anthropic-uses-claude-legal",
+          "capture_started_at": 1786148838
         }
       ]
     },
@@ -257,6 +492,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "NGAFwBfuiJ8",
+      "watch_url": "https://www.youtube.com/watch?v=NGAFwBfuiJ8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/NGAFwBfuiJ8",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/organization-skills-and-directory",
+          "title": "Skills for organizations, partners, the ecosystem | Claude by Anthropic",
+          "embed_title": "Skills Directory | Partner Skills for Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/NGAFwBfuiJ8",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000048-claude.com-blog-organization-skills-and-directory",
+          "capture_started_at": 1786154193
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "NLWiIj47IdI",
+      "watch_url": "https://www.youtube.com/watch?v=NLWiIj47IdI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/NLWiIj47IdI",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/product-development-in-the-agentic-era",
+          "title": "Product development in the agentic era | Claude by Anthropic",
+          "embed_title": "What is Claude Managed Agents?",
+          "embed_url": "https://www.youtube-nocookie.com/embed/NLWiIj47IdI?start=26",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000051-claude.com-blog-product-development-in-the-agentic-era",
+          "capture_started_at": 1786154561
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "OHQRNj6HJgM",
       "watch_url": "https://www.youtube.com/watch?v=OHQRNj6HJgM",
       "status": "pending_download",
@@ -275,6 +546,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "OZ2D_p82z6w",
+      "watch_url": "https://www.youtube.com/watch?v=OZ2D_p82z6w",
+      "status": "pending_download",
+      "import_directory": "media/youtube/OZ2D_p82z6w",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Wrench Board - Agent-Native Diagnostic Workbench for Board-Level Repair \u00b7 Built with Opus 4.7",
+          "embed_url": "https://www.youtube-nocookie.com/embed/OZ2D_p82z6w",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "PBxwtabGltc",
       "watch_url": "https://www.youtube.com/watch?v=PBxwtabGltc",
       "status": "pending_download",
@@ -288,6 +577,42 @@
           "capture_run": "1786143499",
           "capture_page": "pages/000002-claude.com-blog-claude-powered-artifacts",
           "capture_started_at": 1786143616
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "PupmfSttxlc",
+      "watch_url": "https://www.youtube.com/watch?v=PupmfSttxlc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/PupmfSttxlc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/memory",
+          "title": "Bringing memory to teams | Claude by Anthropic",
+          "embed_title": "Claude now has memory",
+          "embed_url": "https://www.youtube-nocookie.com/embed/PupmfSttxlc",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000039-claude.com-blog-memory",
+          "capture_started_at": 1786153104
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "QTfoYDzqXn0",
+      "watch_url": "https://www.youtube.com/watch?v=QTfoYDzqXn0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/QTfoYDzqXn0",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/productivity-platforms",
+          "title": "Claude and your productivity platforms | Claude by Anthropic",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/QTfoYDzqXn0?autoplay=0&mute=0&controls=1&origin=https%3A%2F%2Fwww.anthropic.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1&forigin=https%3A%2F%2Fwww.anthropic.com%2Fnews%2Fproductivity-platforms&aoriginsup=1&vf=1",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000053-claude.com-blog-productivity-platforms",
+          "capture_started_at": 1786154797
         }
       ]
     },
@@ -329,6 +654,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "UCD7Hnx_THQ",
+      "watch_url": "https://www.youtube.com/watch?v=UCD7Hnx_THQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/UCD7Hnx_THQ",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+          "title": "Preview, review, and merge with Claude Code | Claude by Anthropic",
+          "embed_title": "Preview your running app in Claude Code on desktop",
+          "embed_url": "https://www.youtube-nocookie.com/embed/UCD7Hnx_THQ",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000050-claude.com-blog-preview-review-and-merge-with-claude-code",
+          "capture_started_at": 1786154440
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "WUSLZ_cEqnc",
+      "watch_url": "https://www.youtube.com/watch?v=WUSLZ_cEqnc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/WUSLZ_cEqnc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon | Claude by Anthropic",
+          "embed_title": "Claude Opus 4.8 Build Day: Sim Francisco",
+          "embed_url": "https://www.youtube-nocookie.com/embed/WUSLZ_cEqnc",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000038-claude.com-blog-meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+          "capture_started_at": 1786152978
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "XNbc2HhL7J4",
       "watch_url": "https://www.youtube.com/watch?v=XNbc2HhL7J4",
       "status": "pending_download",
@@ -365,6 +726,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "aQpbp-Ra2Rk",
+      "watch_url": "https://www.youtube.com/watch?v=aQpbp-Ra2Rk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/aQpbp-Ra2Rk",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/prompt-generator",
+          "title": "Generate better prompts in the developer console | Claude by Anthropic",
+          "embed_title": "Prompting assistance in Console: Email triage",
+          "embed_url": "https://www.youtube-nocookie.com/embed/aQpbp-Ra2Rk",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000055-claude.com-blog-prompt-generator",
+          "capture_started_at": 1786155031
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "bR8FyicJynE",
+      "watch_url": "https://www.youtube.com/watch?v=bR8FyicJynE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/bR8FyicJynE",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+          "title": "How the product designer who built Claude Design uses it | Claude by Anthropic",
+          "embed_title": "subway times app recording",
+          "embed_url": "https://www.youtube-nocookie.com/embed/bR8FyicJynE",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000018-claude.com-blog-how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-bui",
+          "capture_started_at": 1786150507
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "bluAmTHoEow",
+      "watch_url": "https://www.youtube.com/watch?v=bluAmTHoEow",
+      "status": "pending_download",
+      "import_directory": "media/youtube/bluAmTHoEow",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/interactive-tools-in-claude",
+          "title": "Interactive connectors and MCP Apps | Claude by Anthropic",
+          "embed_title": "Your tools are now interactive in Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/bluAmTHoEow",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000026-claude.com-blog-interactive-tools-in-claude",
+          "capture_started_at": 1786151512
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "cIctgHKEeMA",
       "watch_url": "https://www.youtube.com/watch?v=cIctgHKEeMA",
       "status": "pending_download",
@@ -378,6 +793,96 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000007-claude.com-blog-claude-excel-powerpoint-updates",
           "capture_started_at": 1786137706
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "cWztXGcbGMk",
+      "watch_url": "https://www.youtube.com/watch?v=cWztXGcbGMk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/cWztXGcbGMk",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+          "title": "How the product designer who built Claude Design uses it | Claude by Anthropic",
+          "embed_title": "Claude Design redesign",
+          "embed_url": "https://www.youtube-nocookie.com/embed/cWztXGcbGMk",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000018-claude.com-blog-how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-bui",
+          "capture_started_at": 1786150507
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "c_9pLTnWIPg",
+      "watch_url": "https://www.youtube.com/watch?v=c_9pLTnWIPg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/c_9pLTnWIPg",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/integrations",
+          "title": "Claude can now connect to your world | Claude by Anthropic",
+          "embed_title": "Claude + Atlassian",
+          "embed_url": "https://www.youtube-nocookie.com/embed/c_9pLTnWIPg",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000025-claude.com-blog-integrations",
+          "capture_started_at": 1786151388
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "fuxdGCMF1Qg",
+      "watch_url": "https://www.youtube.com/watch?v=fuxdGCMF1Qg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/fuxdGCMF1Qg",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/integrations",
+          "title": "Claude can now connect to your world | Claude by Anthropic",
+          "embed_title": "Claude's Advanced Research Mode",
+          "embed_url": "https://www.youtube-nocookie.com/embed/fuxdGCMF1Qg",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000025-claude.com-blog-integrations",
+          "capture_started_at": 1786151388
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "igO8iyca2_g",
+      "watch_url": "https://www.youtube.com/watch?v=igO8iyca2_g",
+      "status": "pending_download",
+      "import_directory": "media/youtube/igO8iyca2_g",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/running-an-ai-native-engineering-org",
+          "title": "Running an AI-native engineering org | Claude by Anthropic",
+          "embed_title": "Running an AI-native engineering org",
+          "embed_url": "https://www.youtube-nocookie.com/embed/igO8iyca2_g?start=433",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000058-claude.com-blog-running-an-ai-native-engineering-org",
+          "capture_started_at": 1786155392
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "lsufr1i6ACY",
+      "watch_url": "https://www.youtube.com/watch?v=lsufr1i6ACY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/lsufr1i6ACY",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds",
+          "title": "Using Claude Cowork in marketing operations to automate reporting and campaign building | Claude by Anthropic",
+          "embed_title": "Claude Cowork for marketing ops",
+          "embed_url": "https://www.youtube-nocookie.com/embed/lsufr1i6ACY",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000007-claude.com-blog-how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-an",
+          "capture_started_at": 1786149196
         }
       ]
     },
@@ -401,6 +906,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "n4ZxEznNaIY",
+      "watch_url": "https://www.youtube.com/watch?v=n4ZxEznNaIY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/n4ZxEznNaIY",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering",
+          "title": "How one Anthropic seller rebuilt his team's workflows with Claude Code | Claude by Anthropic",
+          "embed_title": "How Anthropic uses Claude in GTM Engineering",
+          "embed_url": "https://www.youtube-nocookie.com/embed/n4ZxEznNaIY",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000003-claude.com-blog-how-anthropic-uses-claude-gtm-engineering",
+          "capture_started_at": 1786148722
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "pWcxmn4xjtw",
+      "watch_url": "https://www.youtube.com/watch?v=pWcxmn4xjtw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/pWcxmn4xjtw",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/interactive-tools-in-claude",
+          "title": "Interactive connectors and MCP Apps | Claude by Anthropic",
+          "embed_title": "Research prospects and craft outreach with Clay + Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/pWcxmn4xjtw",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000026-claude.com-blog-interactive-tools-in-claude",
+          "capture_started_at": 1786151512
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "qLuGU4PQNss",
+      "watch_url": "https://www.youtube.com/watch?v=qLuGU4PQNss",
+      "status": "pending_download",
+      "import_directory": "media/youtube/qLuGU4PQNss",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Virtual Puppet Theater (Build with Opus 4.7 hackathon)",
+          "embed_url": "https://www.youtube-nocookie.com/embed/qLuGU4PQNss?start=1",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "rWaQSQEm_aY",
       "watch_url": "https://www.youtube.com/watch?v=rWaQSQEm_aY",
       "status": "pending_download",
@@ -414,6 +973,42 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000002-claude.com-blog-claude-code-desktop-redesign",
           "capture_started_at": 1786137245
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "rhKYDg9FLeA",
+      "watch_url": "https://www.youtube.com/watch?v=rhKYDg9FLeA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/rhKYDg9FLeA",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+          "title": "How the product designer who built Claude Design uses it | Claude by Anthropic",
+          "embed_title": "Meet Claude Design Intro Video",
+          "embed_url": "https://www.youtube-nocookie.com/embed/rhKYDg9FLeA",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000018-claude.com-blog-how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-bui",
+          "capture_started_at": 1786150507
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "rkH4AjoTL5Q",
+      "watch_url": "https://www.youtube.com/watch?v=rkH4AjoTL5Q",
+      "status": "pending_download",
+      "import_directory": "media/youtube/rkH4AjoTL5Q",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon | Claude by Anthropic",
+          "embed_title": "Keep Thinking Prize Winner - Built with Opus 4.7 Hackathon | MaestrIA",
+          "embed_url": "https://www.youtube-nocookie.com/embed/rkH4AjoTL5Q",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000036-claude.com-blog-meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+          "capture_started_at": 1786152727
         }
       ]
     },
@@ -473,6 +1068,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "tJP6SKfo49c",
+      "watch_url": "https://www.youtube.com/watch?v=tJP6SKfo49c",
+      "status": "pending_download",
+      "import_directory": "media/youtube/tJP6SKfo49c",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-legal",
+          "title": "How Anthropic uses Claude in Legal | Claude by Anthropic",
+          "embed_title": "How Anthropic uses Claude in Legal",
+          "embed_url": "https://www.youtube-nocookie.com/embed/tJP6SKfo49c",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000004-claude.com-blog-how-anthropic-uses-claude-legal",
+          "capture_started_at": 1786148838
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "v5IOHK5xFlc",
       "watch_url": "https://www.youtube.com/watch?v=v5IOHK5xFlc",
       "status": "pending_download",
@@ -491,6 +1104,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "vMaqmfPo3j0",
+      "watch_url": "https://www.youtube.com/watch?v=vMaqmfPo3j0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/vMaqmfPo3j0",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/integrations",
+          "title": "Claude can now connect to your world | Claude by Anthropic",
+          "embed_title": "Claude + Zapier",
+          "embed_url": "https://www.youtube-nocookie.com/embed/vMaqmfPo3j0",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000025-claude.com-blog-integrations",
+          "capture_started_at": 1786151388
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "wI0ptqCSL0I",
       "watch_url": "https://www.youtube.com/watch?v=wI0ptqCSL0I",
       "status": "pending_download",
@@ -504,6 +1135,24 @@
           "capture_run": "1786127775",
           "capture_page": "pages/000001-claude.com-blog-building-verification-loops-in-claude-code-with-skills",
           "capture_started_at": 1786127795
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "wjCUO-5lVhk",
+      "watch_url": "https://www.youtube.com/watch?v=wjCUO-5lVhk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/wjCUO-5lVhk",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/interactive-tools-in-claude",
+          "title": "Interactive connectors and MCP Apps | Claude by Anthropic",
+          "embed_title": "Search files and extract insights with Box + Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/wjCUO-5lVhk",
+          "capture_run": "1786148472",
+          "capture_page": "pages/000026-claude.com-blog-interactive-tools-in-claude",
+          "capture_started_at": 1786151512
         }
       ]
     },

@@ -35,7 +35,9 @@ small validation samples come before any large crawl.
         to the files recorded in the inventory.
   - [x] Fix script-disabled Claude.com Webflow rendering and validate a bounded
         five-page blog sample before beginning a larger crawl.
-  - [x] Inventory the 28 pending YouTube videos used by 25 captured Claude.com
+  - [x] Archive and offline-verify 166 of the 201 inventoried Claude.com blog
+        URL identities; the final 35-page deduplicated batch is ready.
+  - [x] Inventory the 64 pending YouTube videos used by 44 captured Claude.com
         articles in `inventories/claude-youtube.json`.
   - [ ] Import those videos through the external downloader and connect replay
         to the files recorded in the inventory.

@@ -49,6 +49,7 @@ util/inventory_embedded_media \
   /mnt2/capsule/epitome/claude.com/crawls/1786127775 \
   /mnt2/capsule/epitome/claude.com/crawls/1786137145 \
   /mnt2/capsule/epitome/claude.com/crawls/1786143499 \
+  /mnt2/capsule/epitome/claude.com/crawls/1786148472 \
   --source 'Claude.com blog batches' \
   --media-root media/youtube \
   --output inventories/claude-youtube.json
