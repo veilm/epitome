@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786194490,
+  "generated_at_unix": 1786204698,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,139 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 22,
-    "articles": 22,
+    "videos": 53,
+    "articles": 53,
     "statuses": {
-      "pending_download": 22
+      "pending_download": 53
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "0GMWxuYuxJI",
+      "watch_url": "https://www.youtube.com/watch?v=0GMWxuYuxJI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/0GMWxuYuxJI",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/nick-lane",
+          "title": "Nick Lane \u2013 Life as we know it is chemically inevitable",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/0GMWxuYuxJI?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000003-www.dwarkesh.com-p-nick-lane",
+          "capture_started_at": 1786194991
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "21EYKqUsPfg",
+      "watch_url": "https://www.youtube.com/watch?v=21EYKqUsPfg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/21EYKqUsPfg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/richard-sutton",
+          "title": "Richard Sutton \u2013 Father of RL thinks LLMs are a dead end",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/21EYKqUsPfg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000006-www.dwarkesh.com-p-richard-sutton",
+          "capture_started_at": 1786195596
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "3cDHx2_QbPE",
+      "watch_url": "https://www.youtube.com/watch?v=3cDHx2_QbPE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/3cDHx2_QbPE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/casey-handmer",
+          "title": "China is killing the US on energy. Does that mean they\u2019ll win AGI? \u2014 Casey Handmer",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/3cDHx2_QbPE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000010-www.dwarkesh.com-p-casey-handmer",
+          "capture_started_at": 1786196390
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "48pxVdmkMIE",
+      "watch_url": "https://www.youtube.com/watch?v=48pxVdmkMIE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/48pxVdmkMIE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sergey-levine",
+          "title": "Fully autonomous robots are much closer than you think \u2013 Sergey Levine",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/48pxVdmkMIE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000007-www.dwarkesh.com-p-sergey-levine",
+          "capture_started_at": 1786195797
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "4GLSzuYXh6w",
+      "watch_url": "https://www.youtube.com/watch?v=4GLSzuYXh6w",
+      "status": "pending_download",
+      "import_directory": "media/youtube/4GLSzuYXh6w",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/satya-nadella",
+          "title": "Satya Nadella \u2014 Microsoft\u2019s AGI plan & quantum breakthrough",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/4GLSzuYXh6w?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000034-www.dwarkesh.com-p-satya-nadella",
+          "capture_started_at": 1786201240
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "4l3Sa8ImGFQ",
+      "watch_url": "https://www.youtube.com/watch?v=4l3Sa8ImGFQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/4l3Sa8ImGFQ",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-china",
+          "title": "Sarah Paine \u2014 How Mao conquered China (lecture & interview)",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/4l3Sa8ImGFQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000037-www.dwarkesh.com-p-sarah-paine-china",
+          "capture_started_at": 1786201824
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "64lXQP6cs5M",
+      "watch_url": "https://www.youtube.com/watch?v=64lXQP6cs5M",
+      "status": "pending_download",
+      "import_directory": "media/youtube/64lXQP6cs5M",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sholto-trenton-2",
+          "title": "How Does Claude 4 Think? \u2014 Sholto Douglas & Trenton Bricken",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/64lXQP6cs5M?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000023-www.dwarkesh.com-p-sholto-trenton-2",
+          "capture_started_at": 1786199037
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "8-boBsWcr5A",
@@ -75,6 +201,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "GT_sXIUJPUo",
+      "watch_url": "https://www.youtube.com/watch?v=GT_sXIUJPUo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/GT_sXIUJPUo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/tyler-cowen-4",
+          "title": "Tyler Cowen \u2014 The #1 bottleneck to AI progress is humans",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/GT_sXIUJPUo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000040-www.dwarkesh.com-p-tyler-cowen-4",
+          "capture_started_at": 1786202418
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "Hrbq66XqtCo",
       "watch_url": "https://www.youtube.com/watch?v=Hrbq66XqtCo",
       "status": "pending_download",
@@ -106,6 +250,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786182573/pages/000015-www.dwarkesh.com-p-alex-imas-phil-trammell",
           "capture_started_at": 1786185996
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "KxIeJjEGLdo",
+      "watch_url": "https://www.youtube.com/watch?v=KxIeJjEGLdo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/KxIeJjEGLdo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-east-asia",
+          "title": "Sarah Paine \u2014 How Imperial Japan defeated Tsarist Russia & Qing China",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/KxIeJjEGLdo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000012-www.dwarkesh.com-p-sarah-paine-east-asia",
+          "capture_started_at": 1786196924
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "LbkO84MsmyM",
+      "watch_url": "https://www.youtube.com/watch?v=LbkO84MsmyM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/LbkO84MsmyM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-india",
+          "title": "Sarah Paine \u2014 The war for India (lecture & interview)",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/LbkO84MsmyM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000039-www.dwarkesh.com-p-sarah-paine-india",
+          "capture_started_at": 1786202220
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "P2b4TjQa4gk",
+      "watch_url": "https://www.youtube.com/watch?v=P2b4TjQa4gk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/P2b4TjQa4gk",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ken-rogoff",
+          "title": "\"China is digging out of a crisis. And America\u2019s luck is wearing thin.\" \u2014 Ken Rogoff",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/P2b4TjQa4gk?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000019-www.dwarkesh.com-p-ken-rogoff",
+          "capture_started_at": 1786198264
         }
       ]
     },
@@ -147,6 +345,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "QFzgSmN8Ng8",
+      "watch_url": "https://www.youtube.com/watch?v=QFzgSmN8Ng8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/QFzgSmN8Ng8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/kyle-harper",
+          "title": "Kyle Harper \u2013 Why Rome Actually Fell: Plagues, Slavery, & Ice Age",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/QFzgSmN8Ng8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000026-www.dwarkesh.com-p-kyle-harper",
+          "capture_started_at": 1786199667
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "QbdbAhaJoCQ",
       "watch_url": "https://www.youtube.com/watch?v=QbdbAhaJoCQ",
       "status": "pending_download",
@@ -178,6 +394,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000030-www.dwarkesh.com-p-sarah-paine-russo-chinese",
           "capture_started_at": 1786192937
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "SdMgOXfSBQw",
+      "watch_url": "https://www.youtube.com/watch?v=SdMgOXfSBQw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/SdMgOXfSBQw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-ww2",
+          "title": "How Hitler almost starved Britain \u2013 Sarah Paine",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/SdMgOXfSBQw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000008-www.dwarkesh.com-p-sarah-paine-ww2",
+          "capture_started_at": 1786195997
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "TcfhrThp1OU",
+      "watch_url": "https://www.youtube.com/watch?v=TcfhrThp1OU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/TcfhrThp1OU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/joseph-henrich",
+          "title": "Joseph Henrich \u2014 Humans defeated smarter species with cultural evolution",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/TcfhrThp1OU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000032-www.dwarkesh.com-p-joseph-henrich",
+          "capture_started_at": 1786200850
         }
       ]
     },
@@ -219,6 +471,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "UU9jbImVsNY",
+      "watch_url": "https://www.youtube.com/watch?v=UU9jbImVsNY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/UU9jbImVsNY",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/notes-on-china-narration",
+          "title": "Notes on China - by Dwarkesh Patel - Dwarkesh Podcast",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/UU9jbImVsNY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000033-www.dwarkesh.com-p-notes-on-china-narration",
+          "capture_started_at": 1786201053
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "XCLODgdCmKA",
+      "watch_url": "https://www.youtube.com/watch?v=XCLODgdCmKA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XCLODgdCmKA",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jacob-kimmel",
+          "title": "Evolution designed us to die fast; we can change that \u2014 Jacob Kimmel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XCLODgdCmKA?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000009-www.dwarkesh.com-p-jacob-kimmel",
+          "capture_started_at": 1786196196
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "XLaRfZ4AHn8",
+      "watch_url": "https://www.youtube.com/watch?v=XLaRfZ4AHn8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XLaRfZ4AHn8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scaling-ama",
+          "title": "AMA: career advice given AGI, how I research ft. Sholto & Trenton",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XLaRfZ4AHn8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000031-www.dwarkesh.com-p-scaling-ama",
+          "capture_started_at": 1786200658
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "X_ZVSPcZhtw",
       "watch_url": "https://www.youtube.com/watch?v=X_ZVSPcZhtw",
       "status": "pending_download",
@@ -237,6 +543,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "XhB3qH_TFds",
+      "watch_url": "https://www.youtube.com/watch?v=XhB3qH_TFds",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XhB3qH_TFds",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/adam-brown",
+          "title": "Adam Brown \u2013 How Future Civilizations Could Change The Laws of Physics",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XhB3qH_TFds?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000042-www.dwarkesh.com-p-adam-brown",
+          "capture_started_at": 1786202820
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "YMfd3EoHfPI",
+      "watch_url": "https://www.youtube.com/watch?v=YMfd3EoHfPI",
+      "status": "pending_download",
+      "import_directory": "media/youtube/YMfd3EoHfPI",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/stephen-kotkin",
+          "title": "Stephen Kotkin \u2014 How Stalin became the most powerful dictator in history",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/YMfd3EoHfPI?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000013-www.dwarkesh.com-p-stephen-kotkin",
+          "capture_started_at": 1786197122
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Znk5QINe01A",
+      "watch_url": "https://www.youtube.com/watch?v=Znk5QINe01A",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Znk5QINe01A",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-japan",
+          "title": "Sarah Paine \u2014 Why Japan lost WWII (lecture & interview)",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Znk5QINe01A?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000038-www.dwarkesh.com-p-sarah-paine-japan",
+          "capture_started_at": 1786202024
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "_9V_Hbe-N1A",
       "watch_url": "https://www.youtube.com/watch?v=_9V_Hbe-N1A",
       "status": "pending_download",
@@ -250,6 +610,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000021-www.dwarkesh.com-p-adam-marblestone",
           "capture_started_at": 1786191288
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "a42key59cZQ",
+      "watch_url": "https://www.youtube.com/watch?v=a42key59cZQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/a42key59cZQ",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/gwern-branwen",
+          "title": "Gwern \u2014 Anonymous writer who predicted AI trajectory on $12K/year salary",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/a42key59cZQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000044-www.dwarkesh.com-p-gwern-branwen",
+          "capture_started_at": 1786203215
         }
       ]
     },
@@ -286,6 +664,96 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786167300-tyler-cowen",
           "capture_started_at": 1786167148
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "b1TeeIG6Uaw",
+      "watch_url": "https://www.youtube.com/watch?v=b1TeeIG6Uaw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/b1TeeIG6Uaw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/victor-shih",
+          "title": "Xi Jinping\u2019s paranoid approach to AGI, debt crisis, & Politburo politics \u2014 Victor Shih",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/b1TeeIG6Uaw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000022-www.dwarkesh.com-p-victor-shih",
+          "capture_started_at": 1786198839
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "bJD1NpdMY5s",
+      "watch_url": "https://www.youtube.com/watch?v=bJD1NpdMY5s",
+      "status": "pending_download",
+      "import_directory": "media/youtube/bJD1NpdMY5s",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ai-firms-narration",
+          "title": "What will automated firms look like? - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/bJD1NpdMY5s?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000024-www.dwarkesh.com-p-ai-firms-narration",
+          "capture_started_at": 1786199239
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "htOvH12T7mU",
+      "watch_url": "https://www.youtube.com/watch?v=htOvH12T7mU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/htOvH12T7mU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scott-daniel",
+          "title": "AI 2027: month-by-month model of intelligence explosion \u2014 Scott Alexander & Daniel Kokotajlo",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/htOvH12T7mU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000029-www.dwarkesh.com-p-scott-daniel",
+          "capture_started_at": 1786200263
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "kWcPg8t1kJ4",
+      "watch_url": "https://www.youtube.com/watch?v=kWcPg8t1kJ4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/kWcPg8t1kJ4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/lewis-bollard",
+          "title": "Artificial meat is harder than artificial intelligence \u2014 Lewis Bollard",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/kWcPg8t1kJ4?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000011-www.dwarkesh.com-p-lewis-bollard",
+          "capture_started_at": 1786196724
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "lXUZvyajciY",
+      "watch_url": "https://www.youtube.com/watch?v=lXUZvyajciY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/lXUZvyajciY",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/andrej-karpathy",
+          "title": "Andrej Karpathy \u2014 AGI is still a decade away",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/lXUZvyajciY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000002-www.dwarkesh.com-p-andrej-karpathy",
+          "capture_started_at": 1786194788
         }
       ]
     },
@@ -345,6 +813,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "nyvmYnz6EAg",
+      "watch_url": "https://www.youtube.com/watch?v=nyvmYnz6EAg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/nyvmYnz6EAg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/timelines-june-2025",
+          "title": "Why I don\u2019t think AGI is right around the corner",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/nyvmYnz6EAg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000020-www.dwarkesh.com-p-timelines-june-2025",
+          "capture_started_at": 1786198465
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "oIk3R-sMX5o",
       "watch_url": "https://www.youtube.com/watch?v=oIk3R-sMX5o",
       "status": "pending_download",
@@ -381,6 +867,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "olmHHxFQwxo",
+      "watch_url": "https://www.youtube.com/watch?v=olmHHxFQwxo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/olmHHxFQwxo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/george-church",
+          "title": "A billion years of evolution in a single afternoon \u2014 George Church",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/olmHHxFQwxo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000017-www.dwarkesh.com-p-george-church",
+          "capture_started_at": 1786197863
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "qb644F-iE_s",
+      "watch_url": "https://www.youtube.com/watch?v=qb644F-iE_s",
+      "status": "pending_download",
+      "import_directory": "media/youtube/qb644F-iE_s",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/arthur-kroeber",
+          "title": "Why China's manufacturing economy is dominating \u2014 Arthur Kroeber",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/qb644F-iE_s?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000018-www.dwarkesh.com-p-arthur-kroeber",
+          "capture_started_at": 1786198062
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "rYXeQbTuVl0",
+      "watch_url": "https://www.youtube.com/watch?v=rYXeQbTuVl0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/rYXeQbTuVl0",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/mark-zuckerberg-2",
+          "title": "Mark Zuckerberg \u2014 AI will write most Meta code in 18 months",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/rYXeQbTuVl0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000025-www.dwarkesh.com-p-mark-zuckerberg-2",
+          "capture_started_at": 1786199467
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "sRKBGVFVYAw",
       "watch_url": "https://www.youtube.com/watch?v=sRKBGVFVYAw",
       "status": "pending_download",
@@ -394,6 +934,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000006-www.dwarkesh.com-p-david-reich-2",
           "capture_started_at": 1786188503
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "v0gjI__RyCY",
+      "watch_url": "https://www.youtube.com/watch?v=v0gjI__RyCY",
+      "status": "pending_download",
+      "import_directory": "media/youtube/v0gjI__RyCY",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jeff-dean-and-noam-shazeer",
+          "title": "Jeff Dean & Noam Shazeer \u2014 25 years at Google: from PageRank to AGI",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/v0gjI__RyCY?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000035-www.dwarkesh.com-p-jeff-dean-and-noam-shazeer",
+          "capture_started_at": 1786201432
         }
       ]
     },

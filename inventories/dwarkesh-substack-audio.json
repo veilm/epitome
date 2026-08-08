@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786194490,
+  "generated_at_unix": 1786204715,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,10 +12,10 @@
     "note": "Download one durable audio rendition per media ID. Preserve any caption tracks and record imported filenames in imported_files."
   },
   "summary": {
-    "audios": 3,
-    "articles": 3,
+    "audios": 4,
+    "articles": 4,
     "statuses": {
-      "pending_download": 3
+      "pending_download": 4
     }
   },
   "items": [
@@ -62,6 +62,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786167000-will-scaling-work",
           "capture_started_at": 1786166925
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "9f967eb5-ab31-4b9c-b851-0414731e09ed",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/9f967eb5-ab31-4b9c-b851-0414731e09ed",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/why-i-dont-think-agi-is-right-around",
+          "title": "Why I don\u2019t think AGI is right around the corner",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/9f967eb5-ab31-4b9c-b851-0414731e09ed/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786194586/pages/000014-www.dwarkesh.com-p-why-i-dont-think-agi-is-right-around",
+          "capture_started_at": 1786197320
         }
       ]
     },
