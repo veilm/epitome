@@ -129,3 +129,37 @@ origin requests or errors.
 
 The next bounded batch should skip these 46 complete identities and use a longer
 delay again. Seventy reviewed core identities remain.
+
+## Third batch
+
+The next 45 uncaptured core identities were archived at:
+
+`/mnt2/capsule/epitome/peter-steinberger/crawls/1786170347`
+
+All 45 manifests completed with zero page failures and recorded successful tab
+closure, leaving only the browser's original three tabs. This raises approved
+core coverage to 91/116 identities.
+
+Four resource attempts failed in two articles. The 2018 Slack article's missing
+`snooze.png` was recovered from its original PSPDFKit article as an exact 2018
+Wayback body. Its linked emoji ZIP still exists under the corrected `/assets/img/`
+path in Peter's public source tree and was captured there. Both private dependency
+captures are restored by reviewed aliases in `inventories/resource-aliases.json`.
+The article's Vimeo player returned HTTP 403 at the live source and exposed no
+video body or progressive URL, so replay now replaces the otherwise misleading
+internal 404 iframe with an explicit preservation-unavailable notice and retains
+the source reference.
+
+The 2020 `jailbreaking/hierarchy-spotify.png` screenshot is absent from the live
+origin and every revision of the public source repository. Exact and wildcard
+checks across `steipete.me`, `steipete.com`, and `petersteinberger.com` found no
+Wayback body. It remains a documented second inline-image gap alongside the
+earlier SwiftUI Instruments screenshot; the article's remaining images and all
+9,371 characters of replay text are intact.
+
+Five 1440×900 replays spanning 2016, 2018, 2020, and 2025 were inspected. The
+recovered Slack screenshot and ordinary images render, the blocked Vimeo case is
+clear rather than a broken frame, and the varied historical, image-heavy, and
+current layouts retain their full text. The attached audit recorded 43 requests,
+all to the local archive server, with no production-origin requests. The final
+25 reviewed core identities remain.

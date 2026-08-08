@@ -305,6 +305,18 @@ src="{player_url}"></iframe></body></html>""",
         self.assertIn("Spotify episode123", html)
         self.assertNotIn("https://www.youtube-nocookie.com", html)
 
+    def test_unpreservable_vimeo_iframe_becomes_offline_placeholder(self):
+        player_url = "https://player.vimeo.com/video/123"
+        html = rewrite_html(
+            f'<html><body><iframe src="{player_url}"></iframe></body></html>',
+            "https://example.com/article",
+            CaptureIndex(),
+        )
+        self.assertNotIn("<iframe", html)
+        self.assertIn("Vimeo video unavailable", html)
+        self.assertIn("live player exposed no preservable media", html)
+        self.assertNotIn(player_url, html)
+
     def test_index_only_accepts_complete_bodies(self):
         with tempfile.TemporaryDirectory() as temp:
             index = self.make_capture(Path(temp))

@@ -528,6 +528,17 @@ class _HTMLRewriter(HTMLParser):
             if vimeo_video_url:
                 tag = "video"
                 self.replaced_vimeo_iframes += 1
+            else:
+                self.output.append(
+                    '<figure class="epitome-media-placeholder epitome-media-wide" '
+                    'data-provider="Vimeo">'
+                    '<strong>Vimeo video unavailable</strong>'
+                    '<span>The live player exposed no preservable media.</span>'
+                    f'<a href="{unavailable_path(iframe_url)}">Archived source reference</a>'
+                    "</figure>"
+                )
+                self.replaced_media_iframes += 1
+                return
 
         twitter_quote = None
         if tag == "iframe" and (status_id := attrs.get("data-tweet-id")):
