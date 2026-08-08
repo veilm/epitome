@@ -22,6 +22,12 @@ CSS_IMPORT_RE = re.compile(
     re.IGNORECASE,
 )
 TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+TWITTER_BLOCKQUOTE_RE = re.compile(
+    r'<blockquote\b[^>]*class=(["\'])[^"\']*\btwitter-(?:tweet|video)\b[^"\']*\1[^>]*>'
+    r".*?</blockquote>",
+    re.IGNORECASE | re.DOTALL,
+)
+TWITTER_STATUS_RE = re.compile(r"/(?:status|statuses)/(\d+)", re.IGNORECASE)
 FETCH_ATTRIBUTES = {
     "audio": {"src"},
     "embed": {"src"},
@@ -210,7 +216,9 @@ class CaptureIndex:
     def __init__(self) -> None:
         self.pages: dict[str, PageRecord] = {}
         self.resources: dict[str, ResourceRecord] = {}
+        self.resource_aliases: dict[str, str] = {}
         self.vimeo_videos: dict[str, str] = {}
+        self.twitter_quotes: dict[str, str] = {}
 
     @classmethod
     def from_roots(cls, roots: Iterable[Path]) -> "CaptureIndex":
@@ -218,6 +226,7 @@ class CaptureIndex:
         for root in roots:
             index.add_root(root)
         index._index_vimeo_videos()
+        index._index_twitter_quotes()
         return index
 
     def add_root(self, root: Path) -> None:
@@ -306,7 +315,25 @@ class CaptureIndex:
         return self.pages.get(url)
 
     def resource(self, url: str) -> ResourceRecord | None:
-        return self.resources.get(url)
+        seen: set[str] = set()
+        while url not in seen:
+            seen.add(url)
+            if resource := self.resources.get(url):
+                return resource
+            replacement = self.resource_aliases.get(url)
+            if not replacement:
+                return None
+            url = replacement
+        return None
+
+    def add_resource_aliases(self, aliases: dict[str, str]) -> None:
+        """Add reviewed URL substitutions for resources lost at their origin."""
+        for original, replacement in aliases.items():
+            if not isinstance(original, str) or not isinstance(replacement, str):
+                raise ValueError("resource aliases must map URL strings to URL strings")
+            if not is_archival_url(original) or not is_archival_url(replacement):
+                raise ValueError("resource aliases must contain archival HTTP(S) URLs")
+            self.resource_aliases[original] = replacement
 
     def unique_pages(self) -> list[PageRecord]:
         unique: dict[Path, PageRecord] = {}
@@ -331,6 +358,25 @@ class CaptureIndex:
 
     def vimeo_video(self, player_url: str) -> str | None:
         return self.vimeo_videos.get(player_url)
+
+    def _index_twitter_quotes(self) -> None:
+        """Recover static tweet text from pre-widget server HTML."""
+        for resource in self.resources.values():
+            if "html" not in resource.content_type.lower():
+                continue
+            try:
+                html = resource.body_path.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                continue
+            if "twitter-tweet" not in html and "twitter-video" not in html:
+                continue
+            for match in TWITTER_BLOCKQUOTE_RE.finditer(html):
+                quote_html = match.group(0)
+                if status := TWITTER_STATUS_RE.search(quote_html):
+                    self.twitter_quotes[status.group(1)] = quote_html
+
+    def twitter_quote(self, status_id: str) -> str | None:
+        return self.twitter_quotes.get(status_id)
 
 
 def rewrite_css(css: str, base_url: str) -> str:
@@ -358,6 +404,7 @@ class _HTMLRewriter(HTMLParser):
         self.script_depth = 0
         self.style_depth = 0
         self.replaced_vimeo_iframes = 0
+        self.replaced_twitter_iframes = 0
 
     def _resource(self, value: str) -> str:
         url = normalize_url(value, self.base_url)
@@ -432,6 +479,14 @@ class _HTMLRewriter(HTMLParser):
             if vimeo_video_url:
                 tag = "video"
                 self.replaced_vimeo_iframes += 1
+
+        twitter_quote = None
+        if tag == "iframe" and (status_id := attrs.get("data-tweet-id")):
+            twitter_quote = self.index.twitter_quote(status_id)
+            if twitter_quote:
+                self.output.append(twitter_quote)
+                self.replaced_twitter_iframes += 1
+                return
 
         rendered_attrs = []
         for name, value in attrs_list:
@@ -516,6 +571,9 @@ class _HTMLRewriter(HTMLParser):
         if tag == "iframe" and self.replaced_vimeo_iframes:
             self.replaced_vimeo_iframes -= 1
             self.output.append("</video>")
+            return
+        if tag == "iframe" and self.replaced_twitter_iframes:
+            self.replaced_twitter_iframes -= 1
             return
         self.output.append(f"</{tag}>")
 

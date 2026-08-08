@@ -67,8 +67,12 @@ small validation samples come before any large crawl.
   - [x] Inventory Peter Steinberger's canonical 116-URL core blog scope and
         validate one representative rendered article plus its official Markdown
         mirror.
-  - [ ] Capture the remaining 115 Peter Steinberger core URLs in bounded batches,
-        then preserve the deferred pagination and tag archives separately.
+  - [x] Capture and offline-verify the first varied 15-page Peter batch; restore
+        the lost 2016 iWork image from its surviving canonical copy and render
+        preserved tweet text without Twitter JavaScript.
+  - [ ] Capture the remaining 100 Peter Steinberger core URLs in bounded batches,
+        track the unrecovered 2020 SwiftUI image, then preserve the deferred
+        pagination and tag archives separately.
   - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
         article, image, and static Disqus-comment preservation.
   - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including

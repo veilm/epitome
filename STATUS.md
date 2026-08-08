@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786165389` (2026-08-08 05:03 UTC).
+Updated at Unix timestamp `1786166755` (2026-08-08 05:25 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -13,7 +13,7 @@ work.
 | Claude.com blog | Page archive complete; media active | All 201 inventoried URL identities are captured across the pilot and four deduplicated batches. Representative long, image-heavy, technical, customer-story, and video-bearing pages render locally with complete article text and ordinary images. | Import the 81 YouTube videos referenced by 58 captured Claude.com articles; add future publications incrementally. |
 | Dario Amodei personal site | Complete | The homepage and all five self-hosted writings are captured and visually/offline-network verified. | Pursue archival copies of three unavailable outbound citation PDFs; continue the separate broader writing and interview inventory. |
 | Andrej Karpathy blog | Complete | All 26 reviewed URL identities are captured and offline-verified. Recent, historical, image-heavy, and long code-heavy pages replay locally; captured Disqus threads render statically, including 35 comments on `microgpt` and 37 on the RNN article. | Recover archival copies of five unavailable outbound research PDFs, then inventory Medium, `karpathy.ai`, notebooks, papers, videos, and other first-party writing separately. |
-| Peter Steinberger blog | First batch ready | A browser-derived 116-URL core scope covers the homepage, About, all-posts index, RSS feed, and 112 article URL identities. One long representative article replays fully offline. | Begin a bounded varied batch. Preserve the deferred pagination and tag indexes in a later phase, and evaluate the official Markdown mirror as a model-readable supplement. |
+| Peter Steinberger blog | Active crawl; first batch verified | A browser-derived 116-URL core scope covers the homepage, About, all-posts index, RSS feed, and 112 article URL identities. Sixteen identities are archived across validation and the first varied batch. Five desktop replays spanning 2014–2026 passed visual and offline-network checks. A lost 2016 image is restored from a captured canonical copy, and preserved tweet text now replaces inert Twitter frames. | Continue bounded deduplicated batches. One 2020 inline image is unavailable at the live origin, public source repository, and checked exact Wayback URLs. Preserve deferred pagination/tag indexes later and evaluate the official Markdown mirror as a model-readable supplement. |
 | Dwarkesh Podcast | Page capture prepared; media investigation active | A first-party 183-URL scope covers the homepage, feed, three indexes, and 178 posts. The representative Dario interview retains its long transcript, comments, and 72 images offline with no production requests. Its Substack and YouTube video identities are inventoried. | Validate essay-only and older audio-first variants, then inventory podcast audio and captions before starting page batches. Full media remains an external downloader task. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
@@ -48,4 +48,5 @@ and the black transition overlay). The final 35-page batch passed manifest,
 visual, image-loading, and offline-network checks; its only two asset misses
 were the same unused Webflow placeholder SVG returning HTTP 403. Dario's
 bounded personal-site scope and Karpathy's 26-page canonical blog scope are also
-complete. Peter Steinberger's core blog scope is the active next source.
+complete. Peter Steinberger's core blog scope is the active crawl; its first
+varied batch is complete and replay-verified.

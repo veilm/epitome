@@ -247,6 +247,38 @@ src="{player_url}"></iframe></body></html>""",
         self.assertIn('data-parent-id="100"', html)
         self.assertIn("/unavailable/", html)
 
+    def test_twitter_iframe_uses_preserved_server_side_quote(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            index = self.make_capture(root)
+            page = root / "capture"
+            raw = page / "network" / "raw"
+            raw.mkdir()
+            tweet = (
+                '<blockquote class="twitter-tweet"><p>Archived words</p>— Ada '
+                '<a href="https://twitter.com/ada/status/12345">January 1</a>'
+                "</blockquote>"
+            ).encode()
+            (raw / "metadata.json").write_text(
+                json.dumps({"url": "https://example.com/article/", "status": "200"}),
+                encoding="utf-8",
+            )
+            (raw / "response-headers.json").write_text(
+                json.dumps({"content-length": str(len(tweet)), "content-type": "text/html"}),
+                encoding="utf-8",
+            )
+            (raw / "response-body.bin").write_bytes(tweet)
+            index = CaptureIndex.from_roots([root])
+            html = rewrite_html(
+                '<html><body><iframe title="X Post" data-tweet-id="12345" '
+                'src="https://platform.twitter.com/embed/Tweet.html"></iframe></body></html>',
+                "https://example.com/article/",
+                index,
+            )
+            self.assertNotIn("<iframe", html)
+            self.assertIn("Archived words", html)
+            self.assertIn("twitter.com/ada/status/12345", html)
+
     def test_index_only_accepts_complete_bodies(self):
         with tempfile.TemporaryDirectory() as temp:
             index = self.make_capture(Path(temp))
@@ -255,6 +287,28 @@ src="{player_url}"></iframe></body></html>""",
             image.write_bytes(b"cut")
             index = CaptureIndex.from_roots([Path(temp)])
             self.assertIsNone(index.resource("https://example.com/image.png"))
+
+    def test_resource_alias_resolves_only_when_original_is_missing(self):
+        with tempfile.TemporaryDirectory() as temp:
+            index = self.make_capture(Path(temp))
+            original = "https://old.example/missing.png"
+            replacement = "https://example.com/image.png"
+            index.add_resource_aliases({original: replacement})
+            self.assertEqual(index.resource(original), index.resource(replacement))
+
+            # Captured originals remain authoritative if an alias is stale.
+            index.add_resource_aliases({replacement: "https://example.com/other.png"})
+            self.assertIsNotNone(index.resource(replacement))
+
+    def test_resource_alias_cycles_fail_closed(self):
+        index = CaptureIndex()
+        index.add_resource_aliases(
+            {
+                "https://example.com/a": "https://example.com/b",
+                "https://example.com/b": "https://example.com/a",
+            }
+        )
+        self.assertIsNone(index.resource("https://example.com/a"))
 
     def test_index_ignores_replay_capture_recursion(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -58,9 +58,38 @@ That makes the mirror a promising optional input for later extraction quality
 checks, while the archived rendered page remains authoritative for visual and
 asset preservation.
 
-## Next crawl
+## First varied batch
 
-After the active Karpathy crawl finishes, select against
-`/mnt2/capsule/epitome/peter-steinberger` so the validated article is skipped.
-Begin with a bounded varied batch and generous spacing, then audit old and new
-site-era layouts before expanding through the remaining source list.
+The first 15-page batch is stored at:
+
+`/mnt2/capsule/epitome/peter-steinberger/crawls/1786164877`
+
+All 15 manifests completed, all capture tabs closed, and the network logs had no
+capture errors. Together with the representative validation capture, 16 of the
+116 reviewed core identities are archived. Five varied replays—the homepage and
+articles from 2014, 2016, 2020, and 2026—were checked at a 1440×900 desktop
+viewport. Their text, ordinary images, old and current layouts, and long-form
+content rendered locally, and the audit generated no production-origin network
+requests.
+
+Two inline image URLs returned HTTP 404 at the live origin:
+
+- The 2016 iWork collaboration image was recovered from the article's surviving
+  canonical copy on Nutrient. The substitute is preserved under
+  `/mnt2/capsule/epitome/peter-steinberger/dependencies/` and a reviewed alias in
+  `inventories/resource-aliases.json` restores it only when the original URL has
+  no captured body.
+- The 2020 `fruta-swiftui/instruments.png` image is absent from the current
+  public source repository. Exact URL checks for both the current `steipete.me`
+  location and the article's historical `steipete.com` source found no Wayback
+  capture. It remains a documented one-image preservation gap; the rest of that
+  10,384-character article and its other large screenshot replay correctly.
+
+The 2016 page also exposed a generic replay defect: Twitter's script-built frame
+became a blank rectangle when scripts were removed. Capture indexing now recovers
+the original server-rendered `twitter-tweet` blockquote by status ID and replay
+uses its preserved text in place of the iframe. The audited tweet now shows its
+full quotation, author, link, and date without running Twitter code.
+
+The next bounded batch should be selected against the full Peter archive root,
+use a longer inter-page delay, and skip these 16 complete identities.
