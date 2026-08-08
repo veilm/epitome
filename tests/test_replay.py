@@ -9,6 +9,7 @@ from util.epitome_lib.replay import (
     encode_url,
     normalize_url,
     resource_path,
+    resolve_byte_range,
     rewrite_css,
     rewrite_html,
 )
@@ -67,6 +68,17 @@ class ReplayTest(unittest.TestCase):
     def test_url_token_round_trip(self):
         url = "https://example.com/a?x=1&y=2"
         self.assertEqual(decode_url(encode_url(url)), url)
+
+    def test_byte_ranges_cover_media_requests_without_loading_full_body(self):
+        self.assertEqual(resolve_byte_range(1000, None), (200, 0, 999))
+        self.assertEqual(resolve_byte_range(1000, "bytes=0-99"), (206, 0, 99))
+        self.assertEqual(resolve_byte_range(1000, "bytes=900-"), (206, 900, 999))
+        self.assertEqual(resolve_byte_range(1000, "bytes=-100"), (206, 900, 999))
+        self.assertEqual(resolve_byte_range(1000, "bytes=1000-"), (416, 0, -1))
+        self.assertEqual(
+            resolve_byte_range(1000, "bytes=100-", max_open_ended=200),
+            (206, 100, 299),
+        )
 
     def test_normalize_url_encodes_spaces(self):
         self.assertEqual(

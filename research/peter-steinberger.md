@@ -163,3 +163,37 @@ clear rather than a broken frame, and the varied historical, image-heavy, and
 current layouts retain their full text. The attached audit recorded 43 requests,
 all to the local archive server, with no production-origin requests. The final
 25 reviewed core identities remain.
+
+## Final batch
+
+The final 25 uncaptured core identities were archived at:
+
+`/mnt2/capsule/epitome/peter-steinberger/crawls/1786176760`
+
+All 25 manifests completed with successful tab closure and no page-level
+capture errors. Selection against the full 116-URL source now returns zero
+uncaptured identities. Together with the earlier runs, the reviewed core page
+scope is complete.
+
+The only initial asset failure was the 3h28m Vimeo workshop embedded in `The
+Future of Vibe Coding`. Its adaptive stream exceeded the normal 90-second remux
+limit, so a bounded single-page recovery with a one-hour media ceiling preserved
+the full 2,350,638,280-byte H.264/AAC MP4 at:
+
+`/mnt2/capsule/epitome/peter-steinberger/retries/1786180500-future-of-vibe-coding`
+
+`ffprobe` reports 1920×1080 video and 12,503.72 seconds of video and audio. The
+first replay attempt also exposed a general large-media defect: the HTTP server
+read full resources into memory and answered Chromium's open-ended byte request
+with the entire multi-gigabyte remainder. Replay now streams binary resources
+from disk and caps open-ended responses to 16 MiB ranges. In a fresh Chromium
+session the recovered video reached ready-state 4, reported its full duration
+and dimensions, and advanced from 0 to 1.96 seconds during an actual play test.
+
+Five final-batch pages were visually checked at 1440×900: the six-image
+`Signature Flicker`, image-heavy `Peekaboo MCP`, the YouTube-bearing live Arena
+session, the recovered long Vimeo workshop, and the unyeared Claude Code Army
+alias. Images and full article text rendered, YouTube used the explicit
+separate-import placeholder, and the long local video played. Both audit passes
+made only localhost requests. Four pending YouTube identities across four
+articles are recorded in `inventories/peter-steinberger-youtube.json`.

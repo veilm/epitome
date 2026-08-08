@@ -63,9 +63,8 @@ small validation samples come before any large crawl.
   - [x] Inventory the two validated Substack audio assets, source endpoints,
         caption-track lists, and embedded timed-transcript row counts in
         `inventories/dwarkesh-substack-audio.json`.
-  - [ ] After Peter's active crawl completes, begin a small bounded Dwarkesh page
-        batch, then import inventoried audio and video through the external
-        downloader.
+  - [ ] Run the selected first 15-page Dwarkesh batch, then import inventoried
+        audio and video through the external downloader.
   - [ ] SemiAnalysis.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
@@ -82,10 +81,14 @@ small validation samples come before any large crawl.
   - [x] Capture and offline-verify the next 45 Peter identities; recover the
         historical Slack snooze screenshot and relocated emoji archive, and
         render the upstream-blocked Vimeo player as an explicit offline notice.
-  - [ ] Capture the final 25 Peter Steinberger core URLs, track the two
-        unrecovered 2020 inline images, blocked Vimeo player, and four dead
-        outbound citations, then preserve the deferred pagination and tag
-        archives separately.
+  - [x] Capture and offline-verify the final 25 Peter Steinberger core URLs;
+        recover the full 3h28m Vimeo workshop and make multi-gigabyte media
+        replay through bounded byte ranges.
+  - [x] Inventory four pending YouTube videos across four Peter articles in
+        `inventories/peter-steinberger-youtube.json`.
+  - [ ] Import Peter's four YouTube videos; track the two unrecovered 2020 inline
+        images, blocked Vimeo player, and four dead outbound citations, then
+        preserve the deferred pagination and tag archives separately.
   - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
         article, image, and static Disqus-comment preservation.
   - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including

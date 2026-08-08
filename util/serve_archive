@@ -7,7 +7,6 @@ import argparse
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-import re
 import sys
 from urllib.parse import urlsplit
 
@@ -15,13 +14,11 @@ from epitome_lib.replay import (
     CaptureIndex,
     archive_index_html,
     decode_url,
+    resolve_byte_range,
     rewrite_css,
     rewrite_html,
     unavailable_html,
 )
-
-
-RANGE_RE = re.compile(r"bytes=(\d*)-(\d*)$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -63,22 +60,15 @@ def make_handler(index: CaptureIndex, *, verbose: bool = False):
         ) -> None:
             start = 0
             end = len(body) - 1
-            if allow_range and (value := self.headers.get("Range")):
-                match = RANGE_RE.fullmatch(value.strip())
-                if match:
-                    first, last = match.groups()
-                    if first:
-                        start = int(first)
-                        end = int(last) if last else end
-                    elif last:
-                        start = max(0, len(body) - int(last))
-                    end = min(end, len(body) - 1)
-                    if start > end or start >= len(body):
-                        self.send_response(416)
-                        self.send_header("Content-Range", f"bytes */{len(body)}")
-                        self.end_headers()
-                        return
-                    status = 206
+            if allow_range:
+                status, start, end = resolve_byte_range(
+                    len(body), self.headers.get("Range")
+                )
+                if status == 416:
+                    self.send_response(status)
+                    self.send_header("Content-Range", f"bytes */{len(body)}")
+                    self.end_headers()
+                    return
             selected = body[start : end + 1]
             self.send_response(status)
             self.send_header("Content-Type", content_type)
@@ -94,6 +84,48 @@ def make_handler(index: CaptureIndex, *, verbose: bool = False):
             self.end_headers()
             if not head_only:
                 self.wfile.write(selected)
+
+        def _send_file(
+            self,
+            path: Path,
+            content_type: str,
+            *,
+            head_only: bool = False,
+        ) -> None:
+            length = path.stat().st_size
+            status, start, end = resolve_byte_range(
+                length,
+                self.headers.get("Range"),
+                max_open_ended=16 * 1024 * 1024,
+            )
+            if status == 416:
+                self.send_response(status)
+                self.send_header("Content-Range", f"bytes */{length}")
+                self.end_headers()
+                return
+            selected_length = max(0, end - start + 1)
+            self.send_response(status)
+            self.send_header("Content-Type", content_type)
+            self.send_header("Content-Length", str(selected_length))
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Accept-Ranges", "bytes")
+            if status == 206:
+                self.send_header("Content-Range", f"bytes {start}-{end}/{length}")
+            self.end_headers()
+            if head_only:
+                return
+            remaining = selected_length
+            try:
+                with path.open("rb") as stream:
+                    stream.seek(start)
+                    while remaining:
+                        chunk = stream.read(min(1024 * 1024, remaining))
+                        if not chunk:
+                            break
+                        self.wfile.write(chunk)
+                        remaining -= len(chunk)
+            except (BrokenPipeError, ConnectionResetError):
+                pass
 
         def _dispatch(self, *, head_only: bool) -> None:
             path = urlsplit(self.path).path
@@ -134,25 +166,28 @@ def make_handler(index: CaptureIndex, *, verbose: bool = False):
                 if not resource:
                     self.send_error(404, "Captured resource not found")
                     return
-                body = resource.body_path.read_bytes()
                 content_type = resource.content_type
                 if "text/css" in content_type:
+                    body = resource.body_path.read_bytes()
                     body = rewrite_css(
                         body.decode("utf-8", errors="replace"),
                         url,
                     ).encode()
                 elif "text/html" in content_type:
+                    body = resource.body_path.read_bytes()
                     body = rewrite_html(
                         body.decode("utf-8", errors="replace"),
                         url,
                         index,
                     ).encode()
-                self._send(
-                    body,
-                    content_type,
-                    allow_range=True,
-                    head_only=head_only,
-                )
+                else:
+                    self._send_file(
+                        resource.body_path,
+                        content_type,
+                        head_only=head_only,
+                    )
+                    return
+                self._send(body, content_type, allow_range=True, head_only=head_only)
                 return
             if prefix == "unavailable":
                 self._send(

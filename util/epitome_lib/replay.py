@@ -163,6 +163,42 @@ def unavailable_path(url: str) -> str:
     return f"/unavailable/{encode_url(url)}"
 
 
+def resolve_byte_range(
+    length: int,
+    value: str | None,
+    *,
+    max_open_ended: int | None = None,
+) -> tuple[int, int, int]:
+    """Resolve one HTTP byte range as ``(status, start, end)``.
+
+    Invalid syntax keeps the full response for compatibility with ordinary
+    clients. A syntactically valid but unsatisfiable range returns status 416.
+    """
+    start = 0
+    end = length - 1
+    if not value:
+        return 200, start, end
+    match = re.fullmatch(r"bytes=(\d*)-(\d*)", value.strip())
+    if not match:
+        return 200, start, end
+    first, last = match.groups()
+    if not first and not last:
+        return 200, start, end
+    if first:
+        start = int(first)
+        end = int(last) if last else end
+        if not last and max_open_ended:
+            end = min(end, start + max_open_ended - 1)
+    else:
+        suffix = int(last)
+        if suffix:
+            start = max(0, length - suffix)
+    end = min(end, length - 1)
+    if length <= 0 or start > end or start >= length:
+        return 416, 0, -1
+    return 206, start, end
+
+
 def normalize_url(value: str, base_url: str) -> str | None:
     value = value.strip()
     if not value or value.startswith(("data:", "blob:", "javascript:", "#")):

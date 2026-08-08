@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786176460` (2026-08-08 08:07 UTC).
+Updated at Unix timestamp `1786182407` (2026-08-08 09:46 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -13,8 +13,8 @@ work.
 | Claude.com blog | Page archive complete; media active | All 201 inventoried URL identities are captured across the pilot and four deduplicated batches. Representative long, image-heavy, technical, customer-story, and video-bearing pages render locally with complete article text and ordinary images. | Import the 81 YouTube videos referenced by 58 captured Claude.com articles; add future publications incrementally. |
 | Dario Amodei personal site | Complete | The homepage and all five self-hosted writings are captured and visually/offline-network verified. | Pursue archival copies of three unavailable outbound citation PDFs; continue the separate broader writing and interview inventory. |
 | Andrej Karpathy blog | Complete | All 26 reviewed URL identities are captured and offline-verified. Recent, historical, image-heavy, and long code-heavy pages replay locally; captured Disqus threads render statically, including 35 comments on `microgpt` and 37 on the RNN article. | Recover archival copies of five unavailable outbound research PDFs, then inventory Medium, `karpathy.ai`, notebooks, papers, videos, and other first-party writing separately. |
-| Peter Steinberger blog | Active crawl; 91/116 verified | A browser-derived 116-URL core scope covers the homepage, About, all-posts index, RSS feed, and 112 article URL identities. Ninety-one identities are archived across validation and three bounded batches. Fifteen desktop replays spanning 2012–2026 passed visual and offline-network checks. Five lost inline images are restored from reviewed canonical or Wayback copies, preserved tweets render statically, and a captured titleless Vimeo embed plays locally. | Finish the final 25 core identities. Two 2020 inline images are unavailable at the live origin, public source repository, and checked exact historical locations; a live Vimeo player returns HTTP 403, and four dead outbound citations remain recovery tasks. Preserve deferred pagination/tag indexes later and evaluate the official Markdown mirror as a model-readable supplement. |
-| Dwarkesh Podcast | Page capture ready; media imports active | A first-party 183-URL scope covers the homepage, feed, three indexes, and 178 posts. Long video/transcript, 2023 essay/voiceover, and 2020 audio-first variants are captured and offline-verified. Replays retain inline transcripts and images, use bounded placeholders for externally imported players, and make no production requests. Two Substack audio assets, two YouTube videos, and one Substack video are inventoried. | Start a small bounded page batch only after Peter's active crawl completes. Import full audio/video through the external downloader; no discrete caption tracks appeared in the validated pages, whose transcripts are embedded in page content. |
+| Peter Steinberger blog | Core page archive complete; media active | All 116 reviewed core URL identities are archived across validation and four bounded batches. Twenty desktop replays spanning 2012–2026 passed visual and offline-network checks. Five lost inline images are restored from reviewed canonical or Wayback copies, preserved tweets render statically, and two captured Vimeo videos play locally—including a 3h28m, 2.2 GB recording. | Import four inventoried YouTube videos. Two 2020 inline images are unavailable at the live origin, public source repository, and checked exact historical locations; another Vimeo player returns HTTP 403, and four dead outbound citations remain recovery tasks. Preserve deferred pagination/tag indexes later and evaluate the official Markdown mirror as a model-readable supplement. |
+| Dwarkesh Podcast | Page capture ready; media imports active | A first-party 183-URL scope covers the homepage, feed, three indexes, and 178 posts. Long video/transcript, 2023 essay/voiceover, and 2020 audio-first variants are captured and offline-verified. Replays retain inline transcripts and images, use bounded placeholders for externally imported players, and make no production requests. Two Substack audio assets, two YouTube videos, and one Substack video are inventoried. | Begin the selected 15-page bounded batch, then continue deduplicated batches if its page and media variants pass. Import full audio/video through the external downloader; no discrete caption tracks appeared in the validated pages, whose transcripts are embedded in page content. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
 ## Active media import
@@ -40,6 +40,13 @@ Claude.com has a separate ledger at
 - 81 entries currently marked `pending_download` under the private Claude.com
   archive's `media/youtube/<video_id>` directories.
 
+Peter Steinberger's blog has a separate ledger at
+[`inventories/peter-steinberger-youtube.json`](inventories/peter-steinberger-youtube.json):
+
+- four unique YouTube videos referenced by four captured articles; and
+- four entries marked `pending_download` under the private Peter archive's
+  `media/youtube/<video_id>` directories.
+
 ## Immediate next source
 
 Claude.com's approved 201-URL inventory is complete. The replay layer normalizes its captured
@@ -48,5 +55,5 @@ and the black transition overlay). The final 35-page batch passed manifest,
 visual, image-loading, and offline-network checks; its only two asset misses
 were the same unused Webflow placeholder SVG returning HTTP 403. Dario's
 bounded personal-site scope and Karpathy's 26-page canonical blog scope are also
-complete. Peter Steinberger's core blog scope is the active crawl; 91 of its 116
-reviewed identities are complete and replay-verified, with the final 25 next.
+complete. Peter Steinberger's 116-identity core blog scope is now also complete
+and replay-verified. Dwarkesh is the next active bounded page source.

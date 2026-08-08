@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786182407,
+  "source": "peter-steinberger-blog",
+  "capture_runs": [
+    "peter-steinberger"
+  ],
+  "media_import_contract": {
+    "root_relative_to_source_archive": "media/youtube",
+    "per_video_directory": "media/youtube/{video_id}",
+    "article_links": "items[].articles",
+    "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
+  },
+  "summary": {
+    "videos": 4,
+    "articles": 4,
+    "statuses": {
+      "pending_download": 4
+    }
+  },
+  "items": [
+    {
+      "provider": "youtube",
+      "video_id": "0c6izSzP-KQ",
+      "watch_url": "https://www.youtube.com/watch?v=0c6izSzP-KQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/0c6izSzP-KQ",
+      "articles": [
+        {
+          "url": "https://steipete.me/posts/2020/growing-your-twitter-followers",
+          "title": "Gardening Your Twitter: Growing Your Followers | Peter Steinberger",
+          "embed_title": "YouTube video player",
+          "embed_url": "https://www.youtube.com/embed/0c6izSzP-KQ",
+          "capture_run": "peter-steinberger",
+          "capture_page": "crawls/1786170347/pages/000020-steipete.me-posts-2020-growing-your-twitter-followers",
+          "capture_started_at": 1786172370
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "2OuQarA0a7I",
+      "watch_url": "https://www.youtube.com/watch?v=2OuQarA0a7I",
+      "status": "pending_download",
+      "import_directory": "media/youtube/2OuQarA0a7I",
+      "articles": [
+        {
+          "url": "https://steipete.me/posts/2018/porting-ios-apps-to-mac-marzipan-iosmac-uikit-appkit",
+          "title": "Marzipan: Porting iOS Apps to the Mac | Peter Steinberger",
+          "embed_title": "YouTube video player",
+          "embed_url": "https://www.youtube.com/embed/2OuQarA0a7I",
+          "capture_run": "peter-steinberger",
+          "capture_page": "crawls/1786170347/pages/000008-steipete.me-posts-2018-porting-ios-apps-to-mac-marzipan-iosmac-uikit-appkit",
+          "capture_started_at": 1786171072
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "68BS5GCRcBo",
+      "watch_url": "https://www.youtube.com/watch?v=68BS5GCRcBo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/68BS5GCRcBo",
+      "articles": [
+        {
+          "url": "https://steipete.me/posts/2025/live-coding-session-building-arena",
+          "title": "Live Coding Session: Building Arena | Peter Steinberger",
+          "embed_title": "YouTube video player",
+          "embed_url": "https://www.youtube.com/embed/68BS5GCRcBo",
+          "capture_run": "peter-steinberger",
+          "capture_page": "crawls/1786176760/pages/000002-steipete.me-posts-2025-live-coding-session-building-arena",
+          "capture_started_at": 1786176762
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "jWaO3rsNZU0",
+      "watch_url": "https://www.youtube.com/watch?v=jWaO3rsNZU0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/jWaO3rsNZU0",
+      "articles": [
+        {
+          "url": "https://steipete.me/posts/2018/binary-frameworks-swift",
+          "title": "Binary Frameworks in Swift | Peter Steinberger",
+          "embed_title": "YouTube video player",
+          "embed_url": "https://www.youtube.com/embed/jWaO3rsNZU0",
+          "capture_run": "peter-steinberger",
+          "capture_page": "crawls/1786170347/pages/000005-steipete.me-posts-2018-binary-frameworks-swift",
+          "capture_started_at": 1786170750
+        }
+      ]
+    }
+  ]
+}
