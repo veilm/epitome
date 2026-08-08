@@ -6,7 +6,10 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from epitome_lib.media_inventory import write_youtube_inventory
+from epitome_lib.media_inventory import (
+    write_substack_video_inventory,
+    write_youtube_inventory,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -16,12 +19,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source", required=True)
     parser.add_argument("--media-root", default="media/youtube")
     parser.add_argument("--generated-at", type=int)
+    parser.add_argument(
+        "--provider",
+        choices=("youtube", "substack"),
+        default="youtube",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    data = write_youtube_inventory(
+    writer = (
+        write_substack_video_inventory
+        if args.provider == "substack"
+        else write_youtube_inventory
+    )
+    data = writer(
         args.capture_roots,
         args.output,
         source=args.source,

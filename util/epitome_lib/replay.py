@@ -373,7 +373,12 @@ class _HTMLRewriter(HTMLParser):
 
     def _srcset(self, value: str) -> str:
         candidates = []
-        for candidate in value.split(","):
+        # A URL itself may legally contain commas. Substack's image proxy uses
+        # several comma-separated transformations inside every URL, while the
+        # actual srcset candidates are separated by a comma followed by
+        # whitespace. Splitting every comma corrupts those URLs into dozens of
+        # bogus relative candidates.
+        for candidate in re.split(r",(?=\s)", value):
             parts = candidate.strip().split(maxsplit=1)
             if not parts:
                 continue
@@ -385,9 +390,12 @@ class _HTMLRewriter(HTMLParser):
 
     def _should_drop_link(self, attrs: dict[str, str]) -> bool:
         rel = set(attrs.get("rel", "").lower().split())
-        if rel & {"dns-prefetch", "modulepreload", "preconnect"}:
+        if rel & {"dns-prefetch", "modulepreload", "preconnect", "prefetch"}:
             return True
-        return "preload" in rel and attrs.get("as", "").lower() == "script"
+        # Preloads are only performance hints. Keeping captured absolute font,
+        # style, image, or script preloads lets the offline replay contact the
+        # production CDN before the localized real element is encountered.
+        return "preload" in rel
 
     def _start(
         self,

@@ -112,6 +112,23 @@ class ReplayTest(unittest.TestCase):
         self.assertIn(resource_path("https://example.com/image.png"), result)
         self.assertIn(resource_path("https://example.com/more.css"), result)
 
+    def test_substack_comma_srcset_and_preloads_stay_offline(self):
+        proxy = (
+            "https://substackcdn.com/image/fetch/$s_!abc!,w_80,h_80,"
+            "c_fill,f_auto/https%3A%2F%2Fexample.com%2Fimage.png"
+        )
+        second = proxy.replace("w_80,h_80", "w_160,h_160")
+        source = f'''<html><head>
+<link rel="preload" as="style" href="https://substackcdn.com/theme.css">
+<link rel="preload" as="font" href="https://fonts.gstatic.com/font.woff2">
+</head><body><img srcset="{proxy} 80w, {second} 160w"></body></html>'''
+        html = rewrite_html(source, "https://example.com/article", CaptureIndex())
+        self.assertNotIn("rel=\"preload\"", html)
+        self.assertNotIn("https://substackcdn.com", html)
+        self.assertNotIn("https://fonts.gstatic.com", html)
+        self.assertIn(f"{resource_path(proxy)} 80w", html)
+        self.assertIn(f"{resource_path(second)} 160w", html)
+
     def test_lazy_images_and_vimeo_are_made_static(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

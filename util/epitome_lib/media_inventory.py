@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import time
 from typing import Any
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 
 
 YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{6,}$")
@@ -22,13 +22,30 @@ class EmbeddedMediaParser(HTMLParser):
         self.document_title_parts: list[str] = []
         self.in_title = False
         self.youtube: list[dict[str, str]] = []
+        self.substack_videos: list[dict[str, Any]] = []
+        self._substack_video: dict[str, Any] | None = None
 
     def handle_starttag(self, tag, attrs):
         if tag.lower() == "title":
             self.in_title = True
-        if tag.lower() != "iframe":
-            return
+        tag = tag.lower()
         values = {name.lower(): value or "" for name, value in attrs}
+        if tag == "video" and values.get("data-video-id"):
+            self._substack_video = {
+                "media_id": values["data-video-id"],
+                "embed_title": values.get("data-video-title", "").strip(),
+                "poster_url": values.get("poster", ""),
+                "sources": [],
+            }
+            return
+        if tag == "source" and self._substack_video is not None:
+            if values.get("src"):
+                self._substack_video["sources"].append(
+                    {"url": values["src"], "type": values.get("type", "")}
+                )
+            return
+        if tag != "iframe":
+            return
         src = values.get("src", "")
         parsed = urlsplit(src)
         host = parsed.hostname or ""
@@ -53,6 +70,9 @@ class EmbeddedMediaParser(HTMLParser):
     def handle_endtag(self, tag):
         if tag.lower() == "title":
             self.in_title = False
+        if tag.lower() == "video" and self._substack_video is not None:
+            self.substack_videos.append(self._substack_video)
+            self._substack_video = None
 
     def handle_data(self, data):
         if self.in_title:
@@ -71,9 +91,12 @@ def _existing_items(output: Path) -> dict[tuple[str, str], dict[str, Any]]:
     except (OSError, json.JSONDecodeError):
         return {}
     return {
-        (item.get("provider", ""), item.get("video_id", "")): item
+        (
+            item.get("provider", ""),
+            item.get("video_id") or item.get("media_id", ""),
+        ): item
         for item in data.get("items", [])
-        if item.get("provider") and item.get("video_id")
+        if item.get("provider") and (item.get("video_id") or item.get("media_id"))
     }
 
 
@@ -176,6 +199,115 @@ def write_youtube_inventory(
     generated_at_unix: int | None = None,
 ) -> dict[str, Any]:
     data = build_youtube_inventory(
+        capture_roots,
+        source=source,
+        media_root=media_root,
+        generated_at_unix=generated_at_unix,
+        existing=_existing_items(output),
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    return data
+
+
+def build_substack_video_inventory(
+    capture_roots: list[Path],
+    *,
+    source: str,
+    media_root: str = "media/substack",
+    generated_at_unix: int | None = None,
+    existing: dict[tuple[str, str], dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    articles_by_media: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
+    capture_runs: set[str] = set()
+
+    for root in capture_roots:
+        capture_runs.add(root.name)
+        for manifest_path in sorted(root.rglob("manifest.json")):
+            page_path = manifest_path.with_name("page.html")
+            if not page_path.is_file():
+                continue
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                html = page_path.read_text(encoding="utf-8", errors="replace")
+            except (OSError, json.JSONDecodeError):
+                continue
+            article_url = manifest.get("final_url") or manifest.get("requested_url")
+            if not article_url:
+                continue
+            parser = EmbeddedMediaParser()
+            parser.feed(html)
+            for embedded in parser.substack_videos:
+                media_id = embedded["media_id"]
+                current = {
+                    "url": article_url,
+                    "title": parser.document_title or article_url,
+                    "embed_title": embedded["embed_title"],
+                    "poster_url": urljoin(article_url, embedded["poster_url"]),
+                    "sources": [
+                        {**item, "url": urljoin(article_url, item["url"])}
+                        for item in embedded["sources"]
+                    ],
+                    "capture_run": root.name,
+                    "capture_page": str(manifest_path.parent.relative_to(root)),
+                    "capture_started_at": int(manifest.get("capture_started_at", 0)),
+                }
+                previous = articles_by_media[media_id].get(article_url)
+                if not previous or current["capture_started_at"] >= previous["capture_started_at"]:
+                    articles_by_media[media_id][article_url] = current
+
+    prior = existing or {}
+    items = []
+    for media_id, article_map in sorted(articles_by_media.items()):
+        item: dict[str, Any] = {
+            "provider": "substack",
+            "media_id": media_id,
+            "status": "pending_download",
+            "import_directory": f"{media_root.rstrip('/')}/{media_id}",
+            "articles": sorted(article_map.values(), key=lambda article: article["url"]),
+        }
+        old = prior.get(("substack", media_id), {})
+        for field in PRESERVED_ITEM_FIELDS:
+            if field in old:
+                item[field] = old[field]
+        items.append(item)
+
+    article_urls = {article["url"] for item in items for article in item["articles"]}
+    status_counts: dict[str, int] = defaultdict(int)
+    for item in items:
+        status_counts[item["status"]] += 1
+    return {
+        "schema_version": 1,
+        "generated_at_unix": generated_at_unix or int(time.time()),
+        "source": source,
+        "capture_runs": sorted(capture_runs),
+        "media_import_contract": {
+            "root_relative_to_source_archive": media_root,
+            "per_media_directory": f"{media_root.rstrip('/')}/{{media_id}}",
+            "article_links": "items[].articles",
+            "note": (
+                "Download one durable video rendition per media ID and record "
+                "the imported filenames in each item's imported_files field."
+            ),
+        },
+        "summary": {
+            "videos": len(items),
+            "articles": len(article_urls),
+            "statuses": dict(sorted(status_counts.items())),
+        },
+        "items": items,
+    }
+
+
+def write_substack_video_inventory(
+    capture_roots: list[Path],
+    output: Path,
+    *,
+    source: str,
+    media_root: str = "media/substack",
+    generated_at_unix: int | None = None,
+) -> dict[str, Any]:
+    data = build_substack_video_inventory(
         capture_roots,
         source=source,
         media_root=media_root,

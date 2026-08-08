@@ -3,7 +3,10 @@ import json
 import tempfile
 import unittest
 
-from util.epitome_lib.media_inventory import build_youtube_inventory
+from util.epitome_lib.media_inventory import (
+    build_substack_video_inventory,
+    build_youtube_inventory,
+)
 
 
 class MediaInventoryTest(unittest.TestCase):
@@ -56,6 +59,46 @@ class MediaInventoryTest(unittest.TestCase):
             )
             self.assertEqual(data["items"][0]["status"], "imported")
             self.assertEqual(data["items"][0]["imported_files"], ["video.webm"])
+
+    def test_substack_video_inventory_keeps_download_sources(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "100"
+            page = root / "pages" / "one"
+            page.mkdir(parents=True)
+            (page / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "requested_url": "https://example.substack.com/p/one",
+                        "capture_started_at": 100,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (page / "page.html").write_text(
+                '''<html><head><title>One</title></head><body>
+<video data-video-id="media-123" data-video-title="Interview" poster="/poster.png">
+<source src="/api/video/media-123?type=hls" type="application/x-mpegURL">
+<source src="/api/video/media-123?type=mp4" type="video/mp4">
+</video></body></html>''',
+                encoding="utf-8",
+            )
+            data = build_substack_video_inventory(
+                [root],
+                source="Example",
+                generated_at_unix=123,
+            )
+            self.assertEqual(data["summary"], {
+                "videos": 1,
+                "articles": 1,
+                "statuses": {"pending_download": 1},
+            })
+            item = data["items"][0]
+            self.assertEqual(item["media_id"], "media-123")
+            self.assertEqual(item["articles"][0]["embed_title"], "Interview")
+            self.assertEqual(
+                item["articles"][0]["sources"][1]["url"],
+                "https://example.substack.com/api/video/media-123?type=mp4",
+            )
 
 
 if __name__ == "__main__":
