@@ -34,10 +34,12 @@ production-origin requests. The generic `capture_urls` runner is therefore
 appropriate for the six-page tracked list without a site-specific parser.
 
 Asset completion also discovered two historical PDFs linked as citations whose
-hosts no longer resolved during validation:
+hosts no longer resolved during validation, plus one RAND citation that
+currently rejects archival retrieval with HTTP 403:
 
 - `https://pdf.usaid.gov/pdf_docs/pnacw645.pdf`
 - `https://www.fhi.ox.ac.uk/brain-emulation-roadmap-report.pdf`
+- `https://www.rand.org/content/dam/rand-pubs/perspectives/PE200/PE296/RAND_PE296.pdf`
 
 These are outbound reference documents rather than required visual assets. The
 archive preserves their URLs and article context; retrieving archival copies is

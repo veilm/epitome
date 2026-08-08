@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786139300,
+  "generated_at_unix": 1786148136,
   "source": "Claude.com blog batches",
   "capture_runs": [
     "1786127775",
-    "1786137145"
+    "1786137145",
+    "1786143499"
   ],
   "media_import_contract": {
     "root_relative_to_source_archive": "media/youtube",
@@ -13,13 +14,49 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 14,
-    "articles": 11,
+    "videos": 28,
+    "articles": 25,
     "statuses": {
-      "pending_download": 14
+      "pending_download": 28
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "-AkiUPvAqbU",
+      "watch_url": "https://www.youtube.com/watch?v=-AkiUPvAqbU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/-AkiUPvAqbU",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/cowork-for-enterprise",
+          "title": "Making Claude Cowork ready for enterprise | Claude by Anthropic",
+          "embed_title": "Cowork is now generally available",
+          "embed_url": "https://www.youtube-nocookie.com/embed/-AkiUPvAqbU",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000017-claude.com-blog-cowork-for-enterprise",
+          "capture_started_at": 1786145202
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "0SgCiUfoYo8",
+      "watch_url": "https://www.youtube.com/watch?v=0SgCiUfoYo8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/0SgCiUfoYo8",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-security-public-beta",
+          "title": "Claude Security is now in public beta | Claude by Anthropic",
+          "embed_title": "Find and fix security vulnerabilities with Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/0SgCiUfoYo8",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000003-claude.com-blog-claude-security-public-beta",
+          "capture_started_at": 1786143719
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "45hPRdfDEsI",
@@ -40,6 +77,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "4PtGWgEO0ME",
+      "watch_url": "https://www.youtube.com/watch?v=4PtGWgEO0ME",
+      "status": "pending_download",
+      "import_directory": "media/youtube/4PtGWgEO0ME",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/connectors-directory",
+          "title": "Discover tools that work with Claude | Claude by Anthropic",
+          "embed_title": "Discover tools that work with Claude",
+          "embed_url": "https://www.youtube-nocookie.com/embed/4PtGWgEO0ME",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000013-claude.com-blog-connectors-directory",
+          "capture_started_at": 1786144787
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "5kTDt9ewTwE",
+      "watch_url": "https://www.youtube.com/watch?v=5kTDt9ewTwE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/5kTDt9ewTwE",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/enterprise-managed-auth",
+          "title": "Centrally manage authorization for MCP connectors | Claude by Anthropic",
+          "embed_title": "Enterprise-managed auth for MCP connectors",
+          "embed_url": "https://www.youtube-nocookie.com/embed/5kTDt9ewTwE",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000028-claude.com-blog-enterprise-managed-auth",
+          "capture_started_at": 1786146353
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "7-1tNo8HAwk",
       "watch_url": "https://www.youtube.com/watch?v=7-1tNo8HAwk",
       "status": "pending_download",
@@ -53,6 +126,60 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000011-claude.com-blog-claude-for-the-legal-industry",
           "capture_started_at": 1786138060
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "BER3EhUIyz0",
+      "watch_url": "https://www.youtube.com/watch?v=BER3EhUIyz0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/BER3EhUIyz0",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/context-management",
+          "title": "Managing context on the Claude Developer Platform | Claude by Anthropic",
+          "embed_title": "Claude plays Catan: Managing agent context with Sonnet 4.5",
+          "embed_url": "https://www.youtube-nocookie.com/embed/BER3EhUIyz0",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000015-claude.com-blog-context-management",
+          "capture_started_at": 1786144996
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "EV89Ws8Ui9Y",
+      "watch_url": "https://www.youtube.com/watch?v=EV89Ws8Ui9Y",
+      "status": "pending_download",
+      "import_directory": "media/youtube/EV89Ws8Ui9Y",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/create-files",
+          "title": "Claude can now create and edit files | Claude by Anthropic",
+          "embed_title": "Preview: Claude can create and edit files",
+          "embed_url": "https://www.youtube-nocookie.com/embed/EV89Ws8Ui9Y",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000022-claude.com-blog-create-files",
+          "capture_started_at": 1786145741
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "F6dzjaBCBtU",
+      "watch_url": "https://www.youtube.com/watch?v=F6dzjaBCBtU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/F6dzjaBCBtU",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/collaborate-with-claude-across-excel-powerpoint-word-and-outlook",
+          "title": "Collaborate with Claude across Excel, PowerPoint, Word and Outlook | Claude by Anthropic",
+          "embed_title": "Collaborate with Claude across Microsoft365 apps",
+          "embed_url": "https://www.youtube-nocookie.com/embed/F6dzjaBCBtU",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000009-claude.com-blog-collaborate-with-claude-across-excel-powerpoint-word-and-outlook",
+          "capture_started_at": 1786144355
         }
       ]
     },
@@ -94,6 +221,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "KIGBsQqZcNA",
+      "watch_url": "https://www.youtube.com/watch?v=KIGBsQqZcNA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/KIGBsQqZcNA",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/evaluate-prompts",
+          "title": "Evaluate prompts in the developer console | Claude by Anthropic",
+          "embed_title": "Evaluate prompts in the Anthropic Console",
+          "embed_url": "https://www.youtube-nocookie.com/embed/KIGBsQqZcNA",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000029-claude.com-blog-evaluate-prompts",
+          "capture_started_at": 1786146496
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "NAauIR6JFps",
+      "watch_url": "https://www.youtube.com/watch?v=NAauIR6JFps",
+      "status": "pending_download",
+      "import_directory": "media/youtube/NAauIR6JFps",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/dispatch-and-computer-use",
+          "title": "Put Claude to work on your computer | Claude by Anthropic",
+          "embed_title": "Put Claude to work on your computer, from anywhere",
+          "embed_url": "https://www.youtube-nocookie.com/embed/NAauIR6JFps",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000025-claude.com-blog-dispatch-and-computer-use",
+          "capture_started_at": 1786146039
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "OHQRNj6HJgM",
       "watch_url": "https://www.youtube.com/watch?v=OHQRNj6HJgM",
       "status": "pending_download",
@@ -107,6 +270,78 @@
           "capture_run": "1786137145",
           "capture_page": "pages/000005-claude.com-blog-claude-code-remote-mcp",
           "capture_started_at": 1786137505
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "PBxwtabGltc",
+      "watch_url": "https://www.youtube.com/watch?v=PBxwtabGltc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/PBxwtabGltc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/claude-powered-artifacts",
+          "title": "Build and share AI-powered apps with Claude | Claude by Anthropic",
+          "embed_title": "Build a Claude-powered app",
+          "embed_url": "https://www.youtube-nocookie.com/embed/PBxwtabGltc",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000002-claude.com-blog-claude-powered-artifacts",
+          "capture_started_at": 1786143616
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "RKsADl0ZC3Y",
+      "watch_url": "https://www.youtube.com/watch?v=RKsADl0ZC3Y",
+      "status": "pending_download",
+      "import_directory": "media/youtube/RKsADl0ZC3Y",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/code-review",
+          "title": "Code Review for Claude Code | Claude by Anthropic",
+          "embed_title": "Introducing Code Review",
+          "embed_url": "https://www.youtube-nocookie.com/embed/RKsADl0ZC3Y",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000005-claude.com-blog-code-review",
+          "capture_started_at": 1786143954
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "U9jGOz_Lcbo",
+      "watch_url": "https://www.youtube.com/watch?v=U9jGOz_Lcbo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/U9jGOz_Lcbo",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/connectors-for-everyday-life",
+          "title": "New connectors in Claude for everyday life | Claude by Anthropic",
+          "embed_title": "All your everyday apps, in one conversation",
+          "embed_url": "https://www.youtube-nocookie.com/embed/U9jGOz_Lcbo",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000014-claude.com-blog-connectors-for-everyday-life",
+          "capture_started_at": 1786144890
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "XNbc2HhL7J4",
+      "watch_url": "https://www.youtube.com/watch?v=XNbc2HhL7J4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XNbc2HhL7J4",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/cowork-web-mobile",
+          "title": "Claude Cowork on web and mobile: hand off work anywhere | Claude by Anthropic",
+          "embed_title": "Claude Cowork: coming to mobile and web",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XNbc2HhL7J4",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000021-claude.com-blog-cowork-web-mobile",
+          "capture_started_at": 1786145638
         }
       ]
     },
@@ -233,6 +468,24 @@
           "capture_run": "1786127775",
           "capture_page": "pages/000002-claude.com-blog-claude-and-slack",
           "capture_started_at": 1786127869
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "v5IOHK5xFlc",
+      "watch_url": "https://www.youtube.com/watch?v=v5IOHK5xFlc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/v5IOHK5xFlc",
+      "articles": [
+        {
+          "url": "https://claude.com/blog/cowork-plugins-across-enterprise",
+          "title": "Cowork and plugins for teams across the enterprise | Claude by Anthropic",
+          "embed_title": "Cowork and Plugins: Helping enterprises move faster",
+          "embed_url": "https://www.youtube-nocookie.com/embed/v5IOHK5xFlc",
+          "capture_run": "1786143499",
+          "capture_page": "pages/000019-claude.com-blog-cowork-plugins-across-enterprise",
+          "capture_started_at": 1786145431
         }
       ]
     },

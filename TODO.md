@@ -24,6 +24,8 @@ small validation samples come before any large crawl.
   - [ ] Complete the Dario Amodei inventory from the seeds and gaps documented
         in `research/dario-amodei.md`; neither his homepage nor the independent
         interview index is exhaustive.
+  - [x] Capture and offline-verify Dario Amodei's bounded personal-site scope:
+        the homepage and all five self-hosted writings.
   - [x] Identify feeds, sitemaps, media embeds, PDFs, and related official
         Anthropic properties before defining crawl boundaries.
   - [x] Complete and offline-verify the approved first 160 Anthropic page URLs.
@@ -33,7 +35,7 @@ small validation samples come before any large crawl.
         to the files recorded in the inventory.
   - [x] Fix script-disabled Claude.com Webflow rendering and validate a bounded
         five-page blog sample before beginning a larger crawl.
-  - [x] Inventory the 14 pending YouTube videos used by 11 captured Claude.com
+  - [x] Inventory the 28 pending YouTube videos used by 25 captured Claude.com
         articles in `inventories/claude-youtube.json`.
   - [ ] Import those videos through the external downloader and connect replay
         to the files recorded in the inventory.
@@ -56,7 +58,9 @@ small validation samples come before any large crawl.
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**
   - [ ] Peter Steinberger.
-  - [ ] Andrej Karpathy.
+  - [x] Inventory Andrej Karpathy's canonical 26-page blog scope and validate
+        article, image, and static Disqus-comment preservation.
+  - [ ] Capture the remaining 25 Karpathy blog URLs.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**

@@ -8,6 +8,12 @@ Each list should contain one canonical URL per line. Before expanding a list,
 verify the source's own index or sitemap, document exclusions and broken links
 in `research/`, and deduplicate against existing archive roots at capture time.
 
+Current reviewed lists:
+
+- `dario-amodei.txt`: homepage plus five self-hosted writings;
+- `andrej-karpathy-blog.txt`: homepage, About page, RSS feed, and 23 dated blog
+  posts. Captured Disqus threads are rendered statically during replay.
+
 Example:
 
 ```sh
@@ -19,4 +25,3 @@ util/capture_urls \
   --port 2103 \
   --delay-seconds 30
 ```
-
