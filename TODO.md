@@ -75,6 +75,9 @@ small validation samples come before any large crawl.
   - [x] Validate current and historical paywalled SemiAnalysis pages plus a free
         legacy article; repair the sole missing primary image and verify all
         replays remain offline.
+  - [x] Compare current SemiAnalysis subscriber emails with their public pages;
+        free-account emails preserve the same preview/paywall boundary and are
+        not a richer source for paid issues.
   - [ ] Begin bounded SemiAnalysis batches after Dwarkesh's approved page scope
         completes.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication

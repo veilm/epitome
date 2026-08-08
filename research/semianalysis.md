@@ -86,3 +86,27 @@ or Substack-audio entries. They remain tracked so later page batches can append
 newly encountered media without changing the workflow. With public paywall and
 legacy structures now distinguished and replay-tested, the newsletter scraper
 is ready for a first bounded batch after Dwarkesh completes.
+
+## Subscriber-email comparison
+
+An authenticated mailbox was inspected through the ordinary rendered Gmail UI
+on CDP port 2102; no mailbox APIs or direct HTTP clients were used. The search
+found 44 SemiAnalysis messages spanning late 2024 through August 2026. Two
+current paid issues were opened, including the same `SpaceX 10GW in 2027`
+article used in the browser validation.
+
+The email does not provide a hidden copy of the paid article. The SpaceX email
+contains the same introduction, related-story card, final public paragraphs,
+`Beyond the paywall` transition, and subscription boundary as the public web
+page. It then offers an upgrade link. A second current issue likewise labels
+itself `PREVIEW` and ends with `Subscribe to SemiAnalysis to unlock the rest`.
+Gmail may visually clip a long message behind its own `View entire message`
+control, but that is separate from—and does not bypass—the publication's paid
+boundary.
+
+Consequently, the public newsletter page remains the canonical crawl input.
+Email is not a richer substitute for paid issues under the presently available
+free subscription. If a future account legitimately receives full issues by
+email, those messages should be treated as a separate private, authenticated
+source rather than mixed into the public-web archive. No message body or
+account-specific data is stored in Git.
