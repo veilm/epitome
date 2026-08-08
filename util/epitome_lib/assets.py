@@ -99,11 +99,15 @@ class _ResourceParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.base_url = base_url
         self.urls: set[str] = set()
+        self.priorities: dict[str, int] = {}
+        self.content_image_urls: set[str] = set()
+        self.article_depth = 0
 
-    def _add(self, value: str) -> None:
+    def _add(self, value: str, *, priority: int = 2) -> None:
         url = _normalize_url(value, self.base_url)
         if url:
             self.urls.add(url)
+            self.priorities[url] = min(priority, self.priorities.get(url, priority))
 
     def handle_starttag(
         self,
@@ -112,6 +116,8 @@ class _ResourceParser(HTMLParser):
     ) -> None:
         values = {name.lower(): value for name, value in attrs if value is not None}
         tag = tag.lower()
+        if tag == "article":
+            self.article_depth += 1
         if tag == "base" and "href" in values:
             resolved = _normalize_url(values["href"], self.base_url)
             if resolved:
@@ -119,7 +125,21 @@ class _ResourceParser(HTMLParser):
             return
         for attribute in RESOURCE_ATTRIBUTES.get(tag, ()):
             if attribute in values:
-                self._add(values[attribute])
+                self._add(values[attribute], priority=1 if self.article_depth else 2)
+                if tag == "img" and self.article_depth:
+                    url = _normalize_url(values[attribute], self.base_url)
+                    if url:
+                        self.content_image_urls.add(url)
+        if tag == "img" and self.article_depth and "data-attrs" in values:
+            try:
+                image_data = json.loads(values["data-attrs"])
+            except (json.JSONDecodeError, TypeError):
+                image_data = None
+            if isinstance(image_data, dict) and isinstance(image_data.get("src"), str):
+                # Substack keeps the full-resolution source here while the
+                # rendered `src` points at one generated proxy variant. Fetch
+                # this first so replay always has a durable image fallback.
+                self._add(image_data["src"], priority=0)
         if tag == "link" and "href" in values:
             rel = set(values.get("rel", "").lower().split())
             if rel & {
@@ -140,13 +160,27 @@ class _ResourceParser(HTMLParser):
         if tag == "a" and "href" in values:
             path = urlsplit(values["href"]).path.lower()
             if "download" in values or any(path.endswith(ext) for ext in DOWNLOAD_EXTENSIONS):
-                self._add(values["href"])
+                self._add(values["href"], priority=1 if self.article_depth else 2)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.lower() == "article" and self.article_depth:
+            self.article_depth -= 1
+
+
+def discover_html_asset_priorities(html: str, base_url: str) -> dict[str, int]:
+    parser = _ResourceParser(base_url)
+    parser.feed(html)
+    return parser.priorities
+
+
+def discover_content_image_assets(html: str, base_url: str) -> set[str]:
+    parser = _ResourceParser(base_url)
+    parser.feed(html)
+    return parser.content_image_urls
 
 
 def discover_html_assets(html: str, base_url: str) -> set[str]:
-    parser = _ResourceParser(base_url)
-    parser.feed(html)
-    return parser.urls
+    return set(discover_html_asset_priorities(html, base_url))
 
 
 def discover_css_assets(css: str, base_url: str) -> set[str]:
@@ -317,7 +351,7 @@ def asset_priority(url: str) -> tuple[int, str]:
     return priority, url
 
 
-def _download_asset(
+def download_capture_asset(
     url: str,
     network_dir: Path,
     *,
@@ -535,6 +569,10 @@ def complete_capture_assets(
     """Recover referenced assets whose complete bodies are absent."""
     if max_assets < 0 or max_bytes < 0 or delay_seconds < 0 or timeout <= 0:
         raise ValueError("asset completion limits must be non-negative and timeout positive")
+    priorities = discover_html_asset_priorities(
+        page_html.read_text(encoding="utf-8"),
+        page_url,
+    )
     discovered = discover_capture_assets(page_html, network_dir, page_url)
     already_complete = captured_complete_urls(network_dir)
     pending = set(discovered - already_complete)
@@ -546,11 +584,17 @@ def complete_capture_assets(
         and len(results) < max_assets
         and downloaded_bytes < max_bytes
     ):
-        url = min(pending, key=asset_priority)
+        url = min(
+            pending,
+            key=lambda candidate: (
+                priorities.get(candidate, 3),
+                *asset_priority(candidate),
+            ),
+        )
         pending.remove(url)
         if results and delay_seconds:
             time.sleep(delay_seconds)
-        result = _download_asset(
+        result = download_capture_asset(
             url,
             network_dir,
             remaining_bytes=max_bytes - downloaded_bytes,

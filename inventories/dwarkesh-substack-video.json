@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786187394,
+  "generated_at_unix": 1786194490,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,94 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 9,
-    "articles": 9,
+    "videos": 28,
+    "articles": 28,
     "statuses": {
-      "pending_download": 9
+      "pending_download": 28
     }
   },
   "items": [
+    {
+      "provider": "substack",
+      "media_id": "1ab2223f-563e-4940-9a24-0d313c31777a",
+      "status": "pending_download",
+      "import_directory": "media/substack/1ab2223f-563e-4940-9a24-0d313c31777a",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/adam-marblestone",
+          "title": "Adam Marblestone \u2014 AI is missing something fundamental about the brain",
+          "embed_title": "Adam Marblestone \u2014 AI is missing something fundamental about the brain",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/182960540/1ab2223f-563e-4940-9a24-0d313c31777a/transcoded-1767114375.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/1ab2223f-563e-4940-9a24-0d313c31777a/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/1ab2223f-563e-4940-9a24-0d313c31777a/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000021-www.dwarkesh.com-p-adam-marblestone",
+          "capture_started_at": 1786191288
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "33938ac2-de04-4233-b102-771ed68d5750",
+      "status": "pending_download",
+      "import_directory": "media/substack/33938ac2-de04-4233-b102-771ed68d5750",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dow-anthropic",
+          "title": "The most important question nobody's asking about AI",
+          "embed_title": "The most important question nobody's asking about AI",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/190633588/33938ac2-de04-4233-b102-771ed68d5750/transcoded-1773331170.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/33938ac2-de04-4233-b102-771ed68d5750/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/33938ac2-de04-4233-b102-771ed68d5750/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000015-www.dwarkesh.com-p-dow-anthropic",
+          "capture_started_at": 1786190204
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "3508a6d4-5c9c-4759-81d9-4607d7f2777f",
+      "status": "pending_download",
+      "import_directory": "media/substack/3508a6d4-5c9c-4759-81d9-4607d7f2777f",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/reiner-pope",
+          "title": "Reiner Pope \u2013 The math behind how LLMs are trained and served",
+          "embed_title": "Reiner Pope \u2013 The math behind how LLMs are trained and served",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/195859978/3508a6d4-5c9c-4759-81d9-4607d7f2777f/transcoded-1777482312.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/3508a6d4-5c9c-4759-81d9-4607d7f2777f/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/3508a6d4-5c9c-4759-81d9-4607d7f2777f/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000007-www.dwarkesh.com-p-reiner-pope",
+          "capture_started_at": 1786188710
+        }
+      ]
+    },
     {
       "provider": "substack",
       "media_id": "352b2e49-0c01-42c3-b420-c0a321d0bae4",
@@ -48,6 +129,141 @@
     },
     {
       "provider": "substack",
+      "media_id": "3ca9ce5d-c13a-450d-8796-29d437e2542e",
+      "status": "pending_download",
+      "import_directory": "media/substack/3ca9ce5d-c13a-450d-8796-29d437e2542e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/thoughts-on-ai-progress-dec-2025-video",
+          "title": "Thoughts on AI progress (Dec 2025) - by Dwarkesh Patel",
+          "embed_title": "Thoughts on AI progress (Dec 2025)",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/182443852/3ca9ce5d-c13a-450d-8796-29d437e2542e/transcoded-1766521549.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/3ca9ce5d-c13a-450d-8796-29d437e2542e/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/3ca9ce5d-c13a-450d-8796-29d437e2542e/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000023-www.dwarkesh.com-p-thoughts-on-ai-progress-dec-2025-video",
+          "capture_started_at": 1786191678
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "452351ae-929d-43d0-bfb6-4539ee76b798",
+      "status": "pending_download",
+      "import_directory": "media/substack/452351ae-929d-43d0-bfb6-4539ee76b798",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/satya-nadella-2",
+          "title": "Satya Nadella \u2014 How Microsoft is preparing for AGI",
+          "embed_title": "Satya Nadella \u2014 How Microsoft is preparing for AGI",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/178688356/452351ae-929d-43d0-bfb6-4539ee76b798/transcoded-1762964918.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/452351ae-929d-43d0-bfb6-4539ee76b798/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/452351ae-929d-43d0-bfb6-4539ee76b798/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000029-www.dwarkesh.com-p-satya-nadella-2",
+          "capture_started_at": 1786192750
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "4bd784cb-5a08-41d1-90ab-dfe7f7b9bfeb",
+      "status": "pending_download",
+      "import_directory": "media/substack/4bd784cb-5a08-41d1-90ab-dfe7f7b9bfeb",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/reiner-pope-2",
+          "title": "Reiner Pope \u2013 Chip design from the bottom up",
+          "embed_title": "Reiner Pope \u2013 Chip design from the bottom up",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/198847047/4bd784cb-5a08-41d1-90ab-dfe7f7b9bfeb/transcoded-1779463396.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4bd784cb-5a08-41d1-90ab-dfe7f7b9bfeb/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4bd784cb-5a08-41d1-90ab-dfe7f7b9bfeb/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000001-www.dwarkesh.com-p-reiner-pope-2",
+          "capture_started_at": 1786187606
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "4f17fb04-57be-46dc-8af2-896450096693",
+      "status": "pending_download",
+      "import_directory": "media/substack/4f17fb04-57be-46dc-8af2-896450096693",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-cold-war",
+          "title": "Sarah Paine \u2014 Why Russia Lost the Cold War",
+          "embed_title": "Sarah Paine \u2014 Why Russia Lost the Cold War",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/182083324/4f17fb04-57be-46dc-8af2-896450096693/transcoded-1766164364.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4f17fb04-57be-46dc-8af2-896450096693/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/4f17fb04-57be-46dc-8af2-896450096693/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000024-www.dwarkesh.com-p-sarah-paine-cold-war",
+          "capture_started_at": 1786191850
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "50f725d4-6ccb-4e93-85d3-9e3b38e46f30",
+      "status": "pending_download",
+      "import_directory": "media/substack/50f725d4-6ccb-4e93-85d3-9e3b38e46f30",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/terence-tao",
+          "title": "Terence Tao \u2013 Kepler, Newton, and the true nature of mathematical discovery",
+          "embed_title": "Terence Tao \u2013 Kepler, Newton, and the true nature of mathematical discovery",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/191582481/50f725d4-6ccb-4e93-85d3-9e3b38e46f30/transcoded-1774027925.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/50f725d4-6ccb-4e93-85d3-9e3b38e46f30/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/50f725d4-6ccb-4e93-85d3-9e3b38e46f30/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000013-www.dwarkesh.com-p-terence-tao",
+          "capture_started_at": 1786189798
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "5723fd43-9712-418c-9427-9f60d7e5c03c",
       "status": "pending_download",
       "import_directory": "media/substack/5723fd43-9712-418c-9427-9f60d7e5c03c",
@@ -70,6 +286,33 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786164950",
           "capture_started_at": 1786164950
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "59ee9f3b-e222-4bf4-8bfb-97d69ec33688",
+      "status": "pending_download",
+      "import_directory": "media/substack/59ee9f3b-e222-4bf4-8bfb-97d69ec33688",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ilya-sutskever-2",
+          "title": "Ilya Sutskever \u2014 We're moving from the age of scaling to the age of research",
+          "embed_title": "Ilya Sutskever \u2014 We're moving from the age of scaling to the age of research",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/179924094/59ee9f3b-e222-4bf4-8bfb-97d69ec33688/transcoded-1764088384.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/59ee9f3b-e222-4bf4-8bfb-97d69ec33688/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/59ee9f3b-e222-4bf4-8bfb-97d69ec33688/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000027-www.dwarkesh.com-p-ilya-sutskever-2",
+          "capture_started_at": 1786192383
         }
       ]
     },
@@ -183,6 +426,60 @@
     },
     {
       "provider": "substack",
+      "media_id": "737151e9-d4af-437f-97f0-2746037027ff",
+      "status": "pending_download",
+      "import_directory": "media/substack/737151e9-d4af-437f-97f0-2746037027ff",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms",
+          "title": "Notes on pretraining parallelisms and failed training runs.",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/198036394/737151e9-d4af-437f-97f0-2746037027ff/transcoded-00001.png?refresh=Sat Aug 08 2026 07:19:21 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/737151e9-d4af-437f-97f0-2746037027ff/src?override_publication_id=69345&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/737151e9-d4af-437f-97f0-2746037027ff/src?override_publication_id=69345&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000003-www.dwarkesh.com-p-notes-on-pretraining-parallelisms",
+          "capture_started_at": 1786187960
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "784c41e4-422c-4b40-848b-efaea0c75392",
+      "status": "pending_download",
+      "import_directory": "media/substack/784c41e4-422c-4b40-848b-efaea0c75392",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/notes-on-space-gpus",
+          "title": "Notes on Space GPUs - by Dwarkesh Patel - Dwarkesh Podcast",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/187006312/784c41e4-422c-4b40-848b-efaea0c75392/transcoded-00001.png?refresh=Sat Aug 08 2026 08:02:54 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/784c41e4-422c-4b40-848b-efaea0c75392/src?override_publication_id=69345&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/784c41e4-422c-4b40-848b-efaea0c75392/src?override_publication_id=69345&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000017-www.dwarkesh.com-p-notes-on-space-gpus",
+          "capture_started_at": 1786190572
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "79db13aa-56cb-4436-a924-c35c854eab15",
       "status": "pending_download",
       "import_directory": "media/substack/79db13aa-56cb-4436-a924-c35c854eab15",
@@ -237,6 +534,168 @@
     },
     {
       "provider": "substack",
+      "media_id": "9b1d0baa-a71e-4f85-9ed8-b0e0d6856c61",
+      "status": "pending_download",
+      "import_directory": "media/substack/9b1d0baa-a71e-4f85-9ed8-b0e0d6856c61",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dylan-patel",
+          "title": "Dylan Patel \u2014 Deep dive on the 3 big bottlenecks to scaling AI compute",
+          "embed_title": "Dylan Patel \u2014 Deep dive on the 3 big bottlenecks to scaling AI compute",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/190839917/9b1d0baa-a71e-4f85-9ed8-b0e0d6856c61/transcoded-1773436451.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/9b1d0baa-a71e-4f85-9ed8-b0e0d6856c61/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/9b1d0baa-a71e-4f85-9ed8-b0e0d6856c61/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000014-www.dwarkesh.com-p-dylan-patel",
+          "capture_started_at": 1786190005
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "ab696b1e-fae5-4a23-8656-cc16dfe156ba",
+      "status": "pending_download",
+      "import_directory": "media/substack/ab696b1e-fae5-4a23-8656-cc16dfe156ba",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ada-palmer",
+          "title": "Why Leonardo was a saboteur, Gutenberg went broke, and Florence was weird \u2013 Ada Palmer",
+          "embed_title": "Why Leonardo was a saboteur, Gutenberg went broke, and Florence was weird \u2013 Ada Palmer",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/190118311/ab696b1e-fae5-4a23-8656-cc16dfe156ba/transcoded-1773072293.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ab696b1e-fae5-4a23-8656-cc16dfe156ba/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ab696b1e-fae5-4a23-8656-cc16dfe156ba/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000016-www.dwarkesh.com-p-ada-palmer",
+          "capture_started_at": 1786190391
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "b1b09323-e5b5-4b44-812d-df884b8bd76d",
+      "status": "pending_download",
+      "import_directory": "media/substack/b1b09323-e5b5-4b44-812d-df884b8bd76d",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/elon-musk",
+          "title": "Elon Musk \u2014 \"In 36 months, the cheapest place to put AI will be space\u201d",
+          "embed_title": "Elon Musk \u2014 \"In 36 months, the cheapest place to put AI will be space\u201d",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/186967347/b1b09323-e5b5-4b44-812d-df884b8bd76d/transcoded-1770311734.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/b1b09323-e5b5-4b44-812d-df884b8bd76d/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/b1b09323-e5b5-4b44-812d-df884b8bd76d/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000018-www.dwarkesh.com-p-elon-musk",
+          "capture_started_at": 1786190748
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "ba8cfc9e-880a-4a08-b678-e46e85cdcf11",
+      "status": "pending_download",
+      "import_directory": "media/substack/ba8cfc9e-880a-4a08-b678-e46e85cdcf11",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/eric-jang",
+          "title": "Eric Jang \u2013 Building AlphaGo from scratch",
+          "embed_title": "Eric Jang \u2013 Building AlphaGo from scratch",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/197852876/ba8cfc9e-880a-4a08-b678-e46e85cdcf11/transcoded-1778852392.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ba8cfc9e-880a-4a08-b678-e46e85cdcf11/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/ba8cfc9e-880a-4a08-b678-e46e85cdcf11/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000005-www.dwarkesh.com-p-eric-jang",
+          "capture_started_at": 1786188308
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "d236686e-53f3-4733-b25b-62116a1dccfd",
+      "status": "pending_download",
+      "import_directory": "media/substack/d236686e-53f3-4733-b25b-62116a1dccfd",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-reich-2",
+          "title": "David Reich \u2013 Why the Bronze Age was an inflection point in human evolution",
+          "embed_title": "David Reich \u2013 Why the Bronze Age was an inflection point in human evolution",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/196892360/d236686e-53f3-4733-b25b-62116a1dccfd/transcoded-1778253313.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/d236686e-53f3-4733-b25b-62116a1dccfd/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/d236686e-53f3-4733-b25b-62116a1dccfd/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000006-www.dwarkesh.com-p-david-reich-2",
+          "capture_started_at": 1786188503
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "dac5e2e5-3e27-466d-b4ae-959d21f0722e",
+      "status": "pending_download",
+      "import_directory": "media/substack/dac5e2e5-3e27-466d-b4ae-959d21f0722e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/michael-nielsen",
+          "title": "Michael Nielsen \u2013 How science actually progresses",
+          "embed_title": "Michael Nielsen \u2013 How science actually progresses",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/193466212/dac5e2e5-3e27-466d-b4ae-959d21f0722e/transcoded-1775577035.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/dac5e2e5-3e27-466d-b4ae-959d21f0722e/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/dac5e2e5-3e27-466d-b4ae-959d21f0722e/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000012-www.dwarkesh.com-p-michael-nielsen",
+          "capture_started_at": 1786189600
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "ecedf5cc-763b-440a-8d87-f182d9d7fef6",
       "status": "pending_download",
       "import_directory": "media/substack/ecedf5cc-763b-440a-8d87-f182d9d7fef6",
@@ -259,6 +718,60 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786182573/pages/000012-www.dwarkesh.com-p-the-next-paradigm",
           "capture_started_at": 1786185208
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "f6efa180-a37f-4d39-ab2b-3afc31092217",
+      "status": "pending_download",
+      "import_directory": "media/substack/f6efa180-a37f-4d39-ab2b-3afc31092217",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jensen-huang",
+          "title": "Jensen Huang \u2013 TPU competition, why we should sell chips to China, & Nvidia\u2019s supply chain moat",
+          "embed_title": "Jensen Huang \u2013 TPU competition, why we should sell chips to China, & Nvidia\u2019s supply chain moat",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/194289889/f6efa180-a37f-4d39-ab2b-3afc31092217/transcoded-1776259454.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f6efa180-a37f-4d39-ab2b-3afc31092217/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f6efa180-a37f-4d39-ab2b-3afc31092217/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000010-www.dwarkesh.com-p-jensen-huang",
+          "capture_started_at": 1786189238
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "f956f371-7b23-4dd1-8df3-67b9d967ad7e",
+      "status": "pending_download",
+      "import_directory": "media/substack/f956f371-7b23-4dd1-8df3-67b9d967ad7e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-russo-chinese",
+          "title": "Sarah Paine \u2013 How Russia sabotaged China's rise",
+          "embed_title": "Sarah Paine \u2014 How Russia sabotaged China's rise",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/177641179/f956f371-7b23-4dd1-8df3-67b9d967ad7e/transcoded-1761911778.png?refresh=undefined",
+          "sources": [
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f956f371-7b23-4dd1-8df3-67b9d967ad7e/src?override_publication_id=69345&preview=false&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://www.dwarkesh.com/api/v1/video/upload/f956f371-7b23-4dd1-8df3-67b9d967ad7e/src?override_publication_id=69345&preview=false&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000030-www.dwarkesh.com-p-sarah-paine-russo-chinese",
+          "capture_started_at": 1786192937
         }
       ]
     }

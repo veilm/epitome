@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786187394,
+  "generated_at_unix": 1786194490,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,85 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 7,
-    "articles": 7,
+    "videos": 22,
+    "articles": 22,
     "statuses": {
-      "pending_download": 7
+      "pending_download": 22
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "8-boBsWcr5A",
+      "watch_url": "https://www.youtube.com/watch?v=8-boBsWcr5A",
+      "status": "pending_download",
+      "import_directory": "media/youtube/8-boBsWcr5A",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/satya-nadella-2",
+          "title": "Satya Nadella \u2014 How Microsoft is preparing for AGI",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/8-boBsWcr5A?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000029-www.dwarkesh.com-p-satya-nadella-2",
+          "capture_started_at": 1786192750
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "BYXbuik3dgA",
+      "watch_url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/BYXbuik3dgA",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/elon-musk",
+          "title": "Elon Musk \u2014 \"In 36 months, the cheapest place to put AI will be space\u201d",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/BYXbuik3dgA?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000018-www.dwarkesh.com-p-elon-musk",
+          "capture_started_at": 1786190748
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "FdkpWrlR5zg",
+      "watch_url": "https://www.youtube.com/watch?v=FdkpWrlR5zg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/FdkpWrlR5zg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-cold-war",
+          "title": "Sarah Paine \u2014 Why Russia Lost the Cold War",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/FdkpWrlR5zg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000024-www.dwarkesh.com-p-sarah-paine-cold-war",
+          "capture_started_at": 1786191850
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Hrbq66XqtCo",
+      "watch_url": "https://www.youtube.com/watch?v=Hrbq66XqtCo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Hrbq66XqtCo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jensen-huang",
+          "title": "Jensen Huang \u2013 TPU competition, why we should sell chips to China, & Nvidia\u2019s supply chain moat",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Hrbq66XqtCo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000010-www.dwarkesh.com-p-jensen-huang",
+          "capture_started_at": 1786189238
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "Jj-kBHzUohs",
@@ -39,6 +111,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "PAIhVfGbREA",
+      "watch_url": "https://www.youtube.com/watch?v=PAIhVfGbREA",
+      "status": "pending_download",
+      "import_directory": "media/youtube/PAIhVfGbREA",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ada-palmer",
+          "title": "Why Leonardo was a saboteur, Gutenberg went broke, and Florence was weird \u2013 Ada Palmer",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/PAIhVfGbREA?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000016-www.dwarkesh.com-p-ada-palmer",
+          "capture_started_at": 1786190391
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "Q8Fkpi18QXU",
+      "watch_url": "https://www.youtube.com/watch?v=Q8Fkpi18QXU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Q8Fkpi18QXU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/terence-tao",
+          "title": "Terence Tao \u2013 Kepler, Newton, and the true nature of mathematical discovery",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Q8Fkpi18QXU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000013-www.dwarkesh.com-p-terence-tao",
+          "capture_started_at": 1786189798
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "QbdbAhaJoCQ",
       "watch_url": "https://www.youtube.com/watch?v=QbdbAhaJoCQ",
       "status": "pending_download",
@@ -52,6 +160,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786182573/pages/000009-www.dwarkesh.com-p-adam-brown-gr",
           "capture_started_at": 1786184396
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "RH_ycZYH8-s",
+      "watch_url": "https://www.youtube.com/watch?v=RH_ycZYH8-s",
+      "status": "pending_download",
+      "import_directory": "media/youtube/RH_ycZYH8-s",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-paine-russo-chinese",
+          "title": "Sarah Paine \u2013 How Russia sabotaged China's rise",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/RH_ycZYH8-s?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000030-www.dwarkesh.com-p-sarah-paine-russo-chinese",
+          "capture_started_at": 1786192937
         }
       ]
     },
@@ -93,6 +219,60 @@
     },
     {
       "provider": "youtube",
+      "video_id": "X_ZVSPcZhtw",
+      "watch_url": "https://www.youtube.com/watch?v=X_ZVSPcZhtw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/X_ZVSPcZhtw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/eric-jang",
+          "title": "Eric Jang \u2013 Building AlphaGo from scratch",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/X_ZVSPcZhtw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000005-www.dwarkesh.com-p-eric-jang",
+          "capture_started_at": 1786188308
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "_9V_Hbe-N1A",
+      "watch_url": "https://www.youtube.com/watch?v=_9V_Hbe-N1A",
+      "status": "pending_download",
+      "import_directory": "media/youtube/_9V_Hbe-N1A",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/adam-marblestone",
+          "title": "Adam Marblestone \u2014 AI is missing something fundamental about the brain",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/_9V_Hbe-N1A?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000021-www.dwarkesh.com-p-adam-marblestone",
+          "capture_started_at": 1786191288
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "aR20FWCCjAs",
+      "watch_url": "https://www.youtube.com/watch?v=aR20FWCCjAs",
+      "status": "pending_download",
+      "import_directory": "media/youtube/aR20FWCCjAs",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ilya-sutskever-2",
+          "title": "Ilya Sutskever \u2014 We're moving from the age of scaling to the age of research",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/aR20FWCCjAs?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000027-www.dwarkesh.com-p-ilya-sutskever-2",
+          "capture_started_at": 1786192383
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "ayUZreGysTo",
       "watch_url": "https://www.youtube.com/watch?v=ayUZreGysTo",
       "status": "pending_download",
@@ -106,6 +286,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786167300-tyler-cowen",
           "capture_started_at": 1786167148
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "mDG_Hx3BSUE",
+      "watch_url": "https://www.youtube.com/watch?v=mDG_Hx3BSUE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/mDG_Hx3BSUE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/dylan-patel",
+          "title": "Dylan Patel \u2014 Deep dive on the 3 big bottlenecks to scaling AI compute",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/mDG_Hx3BSUE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000014-www.dwarkesh.com-p-dylan-patel",
+          "capture_started_at": 1786190005
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "myP8UjAM1pk",
+      "watch_url": "https://www.youtube.com/watch?v=myP8UjAM1pk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/myP8UjAM1pk",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/michael-nielsen",
+          "title": "Michael Nielsen \u2013 How science actually progresses",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/myP8UjAM1pk?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000012-www.dwarkesh.com-p-michael-nielsen",
+          "capture_started_at": 1786189600
         }
       ]
     },
@@ -129,6 +345,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "oIk3R-sMX5o",
+      "watch_url": "https://www.youtube.com/watch?v=oIk3R-sMX5o",
+      "status": "pending_download",
+      "import_directory": "media/youtube/oIk3R-sMX5o",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/reiner-pope-2",
+          "title": "Reiner Pope \u2013 Chip design from the bottom up",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/oIk3R-sMX5o?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000001-www.dwarkesh.com-p-reiner-pope-2",
+          "capture_started_at": 1786187606
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "oZBGAuANX6I",
       "watch_url": "https://www.youtube.com/watch?v=oZBGAuANX6I",
       "status": "pending_download",
@@ -142,6 +376,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786182573/pages/000007-www.dwarkesh.com-p-why-compute-might-get-10x-more-expensive-video",
           "capture_started_at": 1786183870
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "sRKBGVFVYAw",
+      "watch_url": "https://www.youtube.com/watch?v=sRKBGVFVYAw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/sRKBGVFVYAw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-reich-2",
+          "title": "David Reich \u2013 Why the Bronze Age was an inflection point in human evolution",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/sRKBGVFVYAw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000006-www.dwarkesh.com-p-david-reich-2",
+          "capture_started_at": 1786188503
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "xmkSf5IS-zw",
+      "watch_url": "https://www.youtube.com/watch?v=xmkSf5IS-zw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/xmkSf5IS-zw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/reiner-pope",
+          "title": "Reiner Pope \u2013 The math behind how LLMs are trained and served",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/xmkSf5IS-zw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000007-www.dwarkesh.com-p-reiner-pope",
+          "capture_started_at": 1786188710
         }
       ]
     }

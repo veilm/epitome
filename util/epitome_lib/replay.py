@@ -544,6 +544,28 @@ class _HTMLRewriter(HTMLParser):
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh":
             return
 
+        if tag == "img" and "src" in attrs:
+            current_image = normalize_url(attrs["src"], self.base_url)
+            if current_image and not self.index.resource(current_image):
+                try:
+                    image_data = json.loads(attrs.get("data-attrs", ""))
+                except (json.JSONDecodeError, TypeError):
+                    image_data = None
+                if (
+                    isinstance(image_data, dict)
+                    and isinstance(image_data.get("src"), str)
+                ):
+                    original_image = normalize_url(image_data["src"], self.base_url)
+                    if original_image and self.index.resource(original_image):
+                        attrs["src"] = original_image
+                        attrs_list = [
+                            (
+                                name,
+                                original_image if name.lower() == "src" else value,
+                            )
+                            for name, value in attrs_list
+                        ]
+
         iframe_url = (
             normalize_url(attrs.get("src", ""), self.base_url)
             if tag == "iframe"

@@ -133,3 +133,37 @@ seven YouTube videos, nine Substack-hosted videos, and two Substack-hosted audio
 assets. These remain explicit downloader imports rather than silent gaps in the
 page archive. Eighteen of the 183 approved source identities are complete, and
 the next deduplicated 30-page batch is selected in ignored crawl input data.
+
+## Second bounded page batch
+
+The next 30 deduplicated pages completed at:
+
+`/mnt2/capsule/epitome/dwarkesh/crawls/1786187606`
+
+All 30 manifests are complete, all capture tabs closed, and the crawl reported
+zero page failures. It retained 9,108 response bodies totaling about 596 MiB.
+One asset-completion request failed: an expired signed University of Queensland
+PDF cited in the Michael Nielsen interview. The stable bibliographic record for
+`Quantum Optical Fredkin Gate` is now preserved under `dependencies/`, but the
+128 KiB paper itself remains unavailable: the repository requires AWS human
+verification, the exact file has no Wayback snapshot, and the publisher asks
+for institutional or subscriber authentication. This is an explicit outbound
+citation recovery task rather than missing Dwarkesh page content.
+
+A representative browser audit exposed 17 missing primary article images on
+six pages. The 50-item completion budget had been exhausted on incidental and
+responsive variants before reaching those rendered figures. Asset discovery
+now identifies images inside `<article>`, prioritizes Substack's full-resolution
+`data-attrs` source ahead of proxy/sidebar resources, and lets replay fall back
+to that original when a generated proxy is absent. The reusable
+`research/audit_capture_images` utility found and repaired only the 17 missing
+resources (3,269,443 bytes). Its second pass reports zero missing article images
+across all 30 pages.
+
+Six repaired essay and interview replays were then checked in Chromium at a
+1440×900 desktop viewport. Their article text ranged from 12,776 to 131,650
+characters, all article images loaded, and long transcripts remained intact.
+The attached offline network log recorded 4,854 requests, all to the local
+server. Across the full 48-identity archive, media ledgers now track 22 YouTube
+videos, 28 Substack videos, and three Substack audio assets. The next
+deduplicated 45-page batch is selected.

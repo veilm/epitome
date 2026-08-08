@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786187394,
+  "generated_at_unix": 1786194490,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,10 +12,10 @@
     "note": "Download one durable audio rendition per media ID. Preserve any caption tracks and record imported filenames in imported_files."
   },
   "summary": {
-    "audios": 2,
-    "articles": 2,
+    "audios": 3,
+    "articles": 3,
     "statuses": {
-      "pending_download": 2
+      "pending_download": 3
     }
   },
   "items": [
@@ -62,6 +62,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "validation/1786167000-will-scaling-work",
           "capture_started_at": 1786166925
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "d5421211-4c3e-497d-93d5-4afc90696e79",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/d5421211-4c3e-497d-93d5-4afc90696e79",
+      "articles": [
+        {
+          "url": "https://philiptrammell.substack.com/p/capital-in-the-22nd-century",
+          "title": "Capital in the 22nd Century",
+          "sources": [
+            {
+              "url": "https://philiptrammell.substack.com/api/v1/audio/upload/d5421211-4c3e-497d-93d5-4afc90696e79/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786187606/pages/000022-www.dwarkesh.com-p-capital-in-the-22nd-century",
+          "capture_started_at": 1786191472
         }
       ]
     }

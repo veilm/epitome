@@ -154,6 +154,19 @@ class ReplayTest(unittest.TestCase):
         self.assertIn('srcset=""', html)
         self.assertNotIn(resource_path(missing), html)
 
+    def test_missing_substack_proxy_falls_back_to_captured_original(self):
+        original = "https://images.example/full.png"
+        proxy = "https://cdn.example/proxy.png"
+        source = (
+            f'<article><img src="{proxy}" '
+            f"data-attrs='{json.dumps({'src': original})}'></article>"
+        )
+        index = CaptureIndex()
+        index.resources[original] = object()
+        html = rewrite_html(source, "https://example.com/article", index)
+        self.assertIn(resource_path(original), html)
+        self.assertNotIn(resource_path(proxy), html)
+
     def test_lazy_images_and_vimeo_are_made_static(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

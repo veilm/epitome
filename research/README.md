@@ -9,6 +9,8 @@ one-off analysis code should not live only in shell history.
   tab, supports bounded sitemap-index traversal and path-prefix filters, and
   closes the tab when finished.
 - `list_sitemap_urls` performs bounded sitemap discovery.
+- `audit_capture_images` checks whether primary article images have a usable
+  offline replay representation and can repair only the missing resources.
 
 Generated HTML, `cdp read` snapshots, reports, and captures belong under the
 ignored `data/` and `output/` trees.

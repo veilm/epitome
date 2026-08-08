@@ -65,7 +65,10 @@ small validation samples come before any large crawl.
         `inventories/dwarkesh-substack-audio.json`.
   - [x] Capture and offline-verify the selected first 15-page Dwarkesh batch;
         recover its expired SSRN paper as a stable local PDF resource.
-  - [ ] Continue the selected deduplicated 30-page Dwarkesh batch, then import
+  - [x] Capture and offline-verify the deduplicated 30-page Dwarkesh batch;
+        repair 17 omitted article images and prioritize primary content in
+        future asset-completion budgets.
+  - [ ] Continue the selected deduplicated 45-page Dwarkesh batch, then import
         inventoried audio and video through the external downloader.
   - [x] Inventory the 325-identity SemiAnalysis newsletter scope and separate it
         from the corporate/models site and authenticated institutional data.

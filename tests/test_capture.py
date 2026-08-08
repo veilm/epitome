@@ -10,6 +10,7 @@ from util.epitome_lib.assets import (
     asset_priority,
     complete_body,
     complete_capture_assets,
+    discover_html_asset_priorities,
     discover_html_assets,
     discover_vimeo_progressive_asset,
     discover_vimeo_video_asset,
@@ -254,6 +255,47 @@ class CaptureHelpersTest(unittest.TestCase):
             ),
             {"https://example.com/media/a%20video%20(1).mp4"},
         )
+
+    def test_article_original_image_precedes_incidental_assets(self):
+        server = ThreadingHTTPServer(("127.0.0.1", 0), _AssetHandler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            with tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                network = root / "network"
+                network.mkdir()
+                original = f"http://127.0.0.1:{server.server_port}/original.jpg"
+                html = f"""
+                <img src="https://example.com/aaa.jpg">
+                <article>
+                  <img src="https://example.com/proxy.jpg"
+                       data-attrs='{{"src":"{original}"}}'>
+                </article>
+                """
+                priorities = discover_html_asset_priorities(
+                    html,
+                    "https://example.com/post",
+                )
+                self.assertEqual(priorities[original], 0)
+                self.assertEqual(priorities["https://example.com/proxy.jpg"], 1)
+                self.assertEqual(priorities["https://example.com/aaa.jpg"], 2)
+
+                page = root / "page.html"
+                page.write_text(html, encoding="utf-8")
+                report = complete_capture_assets(
+                    page,
+                    network,
+                    "https://example.com/post",
+                    max_assets=1,
+                    max_bytes=1024,
+                    delay_seconds=0,
+                )
+                self.assertEqual(report["results"][0]["url"], original)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
 
     def test_asset_priority_favors_media_and_documents(self):
         urls = [

@@ -1,0 +1,141 @@
+#!/usr/bin/python
+"""List primary article images absent from otherwise complete captures."""
+
+from __future__ import annotations
+
+import argparse
+from html.parser import HTMLParser
+import json
+from pathlib import Path
+import sys
+import time
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "util"))
+
+from epitome_lib.assets import download_capture_asset
+from epitome_lib.replay import CaptureIndex, decode_url, rewrite_html
+
+
+class _ReplayImageParser(HTMLParser):
+    def __init__(self, index: CaptureIndex):
+        super().__init__()
+        self.index = index
+        self.article_depth = 0
+        self.picture_sources: list[bool] = []
+        self.missing: list[str] = []
+
+    def handle_starttag(self, tag, attrs_list):
+        tag = tag.lower()
+        attrs = {name.lower(): value or "" for name, value in attrs_list}
+        if tag == "article":
+            self.article_depth += 1
+        if tag == "picture" and self.article_depth:
+            self.picture_sources.append(False)
+        if tag == "source" and self.picture_sources and attrs.get("srcset", "").strip():
+            self.picture_sources[-1] = True
+        if tag != "img" or not self.article_depth:
+            return
+        available = bool(attrs.get("srcset", "").strip()) or any(self.picture_sources)
+        src = attrs.get("src", "")
+        if src.startswith("/resource/"):
+            try:
+                url = decode_url(src.removeprefix("/resource/"))
+            except (ValueError, UnicodeDecodeError):
+                url = src
+            available = available or self.index.resource(url) is not None
+            if not available:
+                self.missing.append(url)
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if tag == "picture" and self.picture_sources:
+            self.picture_sources.pop()
+        if tag == "article" and self.article_depth:
+            self.article_depth -= 1
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("capture_root", type=Path)
+    parser.add_argument("--repair", action="store_true")
+    parser.add_argument("--delay-seconds", type=float, default=2)
+    parser.add_argument("--max-bytes", type=int, default=500 * 1024 * 1024)
+    parser.add_argument("--timeout", type=float, default=90)
+    args = parser.parse_args()
+    if args.delay_seconds < 0 or args.max_bytes < 0 or args.timeout <= 0:
+        parser.error("repair limits must be non-negative and timeout positive")
+    index = CaptureIndex.from_roots([args.capture_root])
+
+    pages = 0
+    pages_missing = 0
+    missing_total = 0
+    repair_results = []
+    repair_bytes = 0
+    for manifest_path in sorted(args.capture_root.rglob("manifest.json")):
+        page_dir = manifest_path.parent
+        page_html = page_dir / "page.html"
+        network_dir = page_dir / "network"
+        if not page_html.exists() or not network_dir.is_dir():
+            continue
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        page_url = manifest.get("final_url") or manifest.get("requested_url")
+        if not isinstance(page_url, str):
+            continue
+        pages += 1
+        rendered = rewrite_html(
+            page_html.read_text(encoding="utf-8"),
+            page_url,
+            index,
+        )
+        image_parser = _ReplayImageParser(index)
+        image_parser.feed(rendered)
+        missing = sorted(set(image_parser.missing))
+        if missing:
+            pages_missing += 1
+            missing_total += len(missing)
+            print(json.dumps({"url": page_url, "missing_images": missing}))
+            if args.repair:
+                page_results = []
+                for image_url in missing:
+                    if repair_results and args.delay_seconds:
+                        time.sleep(args.delay_seconds)
+                    result = download_capture_asset(
+                        image_url,
+                        network_dir,
+                        remaining_bytes=args.max_bytes - repair_bytes,
+                        timeout=args.timeout,
+                    )
+                    result["page_url"] = page_url
+                    repair_results.append(result)
+                    page_results.append(result)
+                    repair_bytes += result["bytes"]
+                    if repair_bytes >= args.max_bytes:
+                        break
+                (page_dir / "image-repair.json").write_text(
+                    json.dumps(page_results, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8",
+                )
+                if repair_bytes >= args.max_bytes:
+                    break
+
+    print(
+        json.dumps(
+            {
+                "pages": pages,
+                "pages_with_missing_images": pages_missing,
+                "missing_images": missing_total,
+                "repair_attempts": len(repair_results),
+                "repair_failures": sum(
+                    not result["complete"] for result in repair_results
+                ),
+                "repair_bytes": repair_bytes,
+            }
+        )
+    )
+    if args.repair:
+        return any(not result["complete"] for result in repair_results)
+    return bool(missing_total)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
