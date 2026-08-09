@@ -73,8 +73,10 @@ small validation samples come before any large crawl.
         hosts.
   - [x] Capture and offline-verify the deduplicated 60-page Dwarkesh batch,
         including a successful retry of its one lost temporary CDP session.
-  - [ ] Complete the selected final 30-page Dwarkesh remainder, then import
-        inventoried audio and video through the external downloader.
+  - [x] Complete and offline-verify the final 30-page Dwarkesh remainder; all
+        183 approved page identities are archived.
+  - [ ] Import Dwarkesh's inventoried audio and video through the external
+        downloader and add future publication URLs incrementally.
   - [x] Inventory the 325-identity SemiAnalysis newsletter scope and separate it
         from the corporate/models site and authenticated institutional data.
   - [x] Validate current and historical paywalled SemiAnalysis pages plus a free

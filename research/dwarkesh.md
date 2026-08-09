@@ -218,3 +218,26 @@ to prevent production fallback.
 Across the 153 completed source identities, the refreshed ledgers now track 100
 YouTube videos, 72 Substack videos referenced by 70 articles, and 44 Substack
 audio assets. The final 30-page remainder is selected.
+
+## Final page batch
+
+The final 30 deduplicated pages completed at:
+
+`/mnt2/capsule/epitome/dwarkesh/crawls/1786233407`
+
+All 30 manifests are complete, all capture tabs closed, and the run reported
+zero page or asset-completion failures. The primary-image audit found no
+missing article images. Deduplication against the tracked source proves that
+all 183 approved URL identities now have a complete capture.
+
+Five final 1440×900 checks covered two standalone essays, a transcript-bearing
+audio episode, and two early audio-first pages. Their article text, figures,
+layout, media posters, and offline-media state were intact with no broken image
+elements. The attached strict replay log contained 280 requests, all to the
+local archive server.
+
+The approved first-party page scope is therefore complete. The final tracked
+media ledgers contain 128 YouTube videos, 72 Substack videos referenced by 70
+articles, and 72 Substack audio assets. Those 272 durable media imports remain
+a separate active task for the external downloader, not an omission from the
+completed page crawl.

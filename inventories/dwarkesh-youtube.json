@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786233223,
+  "generated_at_unix": 1786240855,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,31 @@
     "note": "The external downloader may choose filenames and containers. Record imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 100,
-    "articles": 100,
+    "videos": 128,
+    "articles": 128,
     "statuses": {
-      "pending_download": 100
+      "pending_download": 128
     }
   },
   "items": [
+    {
+      "provider": "youtube",
+      "video_id": "--xKsIgv7tE",
+      "watch_url": "https://www.youtube.com/watch?v=--xKsIgv7tE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/--xKsIgv7tE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/michael-huemer",
+          "title": "Michael Huemer - Anarchy, Capitalism, and Progress",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/--xKsIgv7tE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000020-www.dwarkesh.com-p-michael-huemer",
+          "capture_started_at": 1786237671
+        }
+      ]
+    },
     {
       "provider": "youtube",
       "video_id": "-VeZp2d7mDs",
@@ -111,6 +129,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "3BBNG0TlVwM",
+      "watch_url": "https://www.youtube.com/watch?v=3BBNG0TlVwM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/3BBNG0TlVwM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/agustin-lebron",
+          "title": "Agustin Lebron - Trading, Crypto, and Adverse Selection",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/3BBNG0TlVwM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000006-www.dwarkesh.com-p-agustin-lebron",
+          "capture_started_at": 1786234569
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "3cDHx2_QbPE",
       "watch_url": "https://www.youtube.com/watch?v=3cDHx2_QbPE",
       "status": "pending_download",
@@ -142,6 +178,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000030-www.dwarkesh.com-p-dominic-cummings",
           "capture_started_at": 1786211470
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "3svashDgB50",
+      "watch_url": "https://www.youtube.com/watch?v=3svashDgB50",
+      "status": "pending_download",
+      "import_directory": "media/youtube/3svashDgB50",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-friedman",
+          "title": "David Friedman - Dating Markets, Legal Systems, Bitcoin, and Automation",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/3svashDgB50?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000018-www.dwarkesh.com-p-david-friedman",
+          "capture_started_at": 1786237236
         }
       ]
     },
@@ -214,6 +268,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000037-www.dwarkesh.com-p-sarah-paine-china",
           "capture_started_at": 1786201824
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "5Af0d2DbK5w",
+      "watch_url": "https://www.youtube.com/watch?v=5Af0d2DbK5w",
+      "status": "pending_download",
+      "import_directory": "media/youtube/5Af0d2DbK5w",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sbf",
+          "title": "32: Sam Bankman-Fried - Crypto, Altruism, and Leadership",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/5Af0d2DbK5w?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000005-www.dwarkesh.com-p-sbf",
+          "capture_started_at": 1786234349
         }
       ]
     },
@@ -345,6 +417,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "Ayewh_O0LPQ",
+      "watch_url": "https://www.youtube.com/watch?v=Ayewh_O0LPQ",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Ayewh_O0LPQ",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/caleb-watney",
+          "title": "Caleb Watney - America's Innovation Engine",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Ayewh_O0LPQ?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000026-www.dwarkesh.com-p-caleb-watney",
+          "capture_started_at": 1786239003
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "BV6Qice6Lrc",
+      "watch_url": "https://www.youtube.com/watch?v=BV6Qice6Lrc",
+      "status": "pending_download",
+      "import_directory": "media/youtube/BV6Qice6Lrc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-fitz",
+          "title": "Sarah Fitz-Claridge - Taking Children Seriously",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/BV6Qice6Lrc?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000019-www.dwarkesh.com-p-sarah-fitz",
+          "capture_started_at": 1786237453
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "BYXbuik3dgA",
       "watch_url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
       "status": "pending_download",
@@ -358,6 +466,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000018-www.dwarkesh.com-p-elon-musk",
           "capture_started_at": 1786190748
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "E65CHSV6Ads",
+      "watch_url": "https://www.youtube.com/watch?v=E65CHSV6Ads",
+      "status": "pending_download",
+      "import_directory": "media/youtube/E65CHSV6Ads",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/alexander-mikaberidze",
+          "title": "Alexander Mikaberidze - Napoleon, War, Progress, and Global Order",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/E65CHSV6Ads?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000004-www.dwarkesh.com-p-alexander-mikaberidze",
+          "capture_started_at": 1786234123
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "EVwjofV5TgU",
+      "watch_url": "https://www.youtube.com/watch?v=EVwjofV5TgU",
+      "status": "pending_download",
+      "import_directory": "media/youtube/EVwjofV5TgU",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-deutsch",
+          "title": "21: David Deutsch - AI, America, Fun, & Bayes",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/EVwjofV5TgU?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000015-www.dwarkesh.com-p-david-deutsch",
+          "capture_started_at": 1786236564
         }
       ]
     },
@@ -543,6 +687,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "M3TUe4zUCKk",
+      "watch_url": "https://www.youtube.com/watch?v=M3TUe4zUCKk",
+      "status": "pending_download",
+      "import_directory": "media/youtube/M3TUe4zUCKk",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/joseph-carlsmith",
+          "title": "35: Joseph Carlsmith - Utopia, AI & Infinite Ethics",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/M3TUe4zUCKk?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000002-www.dwarkesh.com-p-joseph-carlsmith",
+          "capture_started_at": 1786233642
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "MpttoDJ3pH8",
       "watch_url": "https://www.youtube.com/watch?v=MpttoDJ3pH8",
       "status": "pending_download",
@@ -574,6 +736,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000035-www.dwarkesh.com-p-dario-amodei",
           "capture_started_at": 1786212464
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "OEcOUgXvz7g",
+      "watch_url": "https://www.youtube.com/watch?v=OEcOUgXvz7g",
+      "status": "pending_download",
+      "import_directory": "media/youtube/OEcOUgXvz7g",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jimmy-soni",
+          "title": "24: Jimmy Soni - Peter Thiel, Elon Musk, and the Paypal Mafia",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/OEcOUgXvz7g?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000011-www.dwarkesh.com-p-jimmy-soni",
+          "capture_started_at": 1786235681
         }
       ]
     },
@@ -687,6 +867,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "QyWs-XomCk0",
+      "watch_url": "https://www.youtube.com/watch?v=QyWs-XomCk0",
+      "status": "pending_download",
+      "import_directory": "media/youtube/QyWs-XomCk0",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/richard-hanania",
+          "title": "22: Richard Hanania - Foreign Policy, Fertility, and Wokeness",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/QyWs-XomCk0?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000014-www.dwarkesh.com-p-richard-hanania",
+          "capture_started_at": 1786236339
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "R5sBycV80c8",
+      "watch_url": "https://www.youtube.com/watch?v=R5sBycV80c8",
+      "status": "pending_download",
+      "import_directory": "media/youtube/R5sBycV80c8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scott-young",
+          "title": "Scott Young - Ultralearning - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/R5sBycV80c8?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000023-www.dwarkesh.com-p-scott-young",
+          "capture_started_at": 1786238331
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "RH_ycZYH8-s",
       "watch_url": "https://www.youtube.com/watch?v=RH_ycZYH8-s",
       "status": "pending_download",
@@ -700,6 +916,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000030-www.dwarkesh.com-p-sarah-paine-russo-chinese",
           "capture_started_at": 1786192937
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "SMEfl5maB8k",
+      "watch_url": "https://www.youtube.com/watch?v=SMEfl5maB8k",
+      "status": "pending_download",
+      "import_directory": "media/youtube/SMEfl5maB8k",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/will-macaskill",
+          "title": "36: Will MacAskill - Longtermism, Altruism, History, & Technology",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/SMEfl5maB8k?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000001-www.dwarkesh.com-p-will-macaskill",
+          "capture_started_at": 1786233414
         }
       ]
     },
@@ -867,6 +1101,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "Uy5fvwdw8x4",
+      "watch_url": "https://www.youtube.com/watch?v=Uy5fvwdw8x4",
+      "status": "pending_download",
+      "import_directory": "media/youtube/Uy5fvwdw8x4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scott-aaronson",
+          "title": "Scott Aaronson - Quantum Computing, Complexity, and Creativity",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/Uy5fvwdw8x4?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000022-www.dwarkesh.com-p-scott-aaronson",
+          "capture_started_at": 1786238112
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "WNSZ6xouNv4",
       "watch_url": "https://www.youtube.com/watch?v=WNSZ6xouNv4",
       "status": "pending_download",
@@ -993,6 +1245,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "XoRXrnHg084",
+      "watch_url": "https://www.youtube.com/watch?v=XoRXrnHg084",
+      "status": "pending_download",
+      "import_directory": "media/youtube/XoRXrnHg084",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/stephen-grugett",
+          "title": "27: Stephen Grugett (Manifold Markets Founder) - Predictions Markets & Better Governance",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/XoRXrnHg084?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000008-www.dwarkesh.com-p-stephen-grugett",
+          "capture_started_at": 1786235014
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "YMfd3EoHfPI",
       "watch_url": "https://www.youtube.com/watch?v=YMfd3EoHfPI",
       "status": "pending_download",
@@ -1069,6 +1339,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000043-www.dwarkesh.com-p-ilya-sutskever",
           "capture_started_at": 1786214294
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "ZI_tDsOhd5I",
+      "watch_url": "https://www.youtube.com/watch?v=ZI_tDsOhd5I",
+      "status": "pending_download",
+      "import_directory": "media/youtube/ZI_tDsOhd5I",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/byrne-hobart",
+          "title": "Byrne Hobart - Optionality, Stagnation, and Secret Societies",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/ZI_tDsOhd5I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000017-www.dwarkesh.com-p-byrne-hobart",
+          "capture_started_at": 1786237020
         }
       ]
     },
@@ -1182,6 +1470,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "aagyRGKv66g",
+      "watch_url": "https://www.youtube.com/watch?v=aagyRGKv66g",
+      "status": "pending_download",
+      "import_directory": "media/youtube/aagyRGKv66g",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/robin-hanson",
+          "title": "Robin Hanson - The Long View - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/aagyRGKv66g?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000027-www.dwarkesh.com-p-robin-hanson",
+          "capture_started_at": 1786239223
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "ayUZreGysTo",
       "watch_url": "https://www.youtube.com/watch?v=ayUZreGysTo",
       "status": "pending_download",
@@ -1272,6 +1578,42 @@
     },
     {
       "provider": "youtube",
+      "video_id": "fTfDZO-p5Fo",
+      "watch_url": "https://www.youtube.com/watch?v=fTfDZO-p5Fo",
+      "status": "pending_download",
+      "import_directory": "media/youtube/fTfDZO-p5Fo",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/matjaz-leonardis",
+          "title": "Matja\u017e Leonardis - Science, Identity, and Probability",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/fTfDZO-p5Fo?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000029-www.dwarkesh.com-p-matjaz-leonardis",
+          "capture_started_at": 1786239662
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "faZI6OBOopE",
+      "watch_url": "https://www.youtube.com/watch?v=faZI6OBOopE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/faZI6OBOopE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ananyo-bhattacharya",
+          "title": "28: Ananyo Bhattacharya - John von Neumann, Jewish Genius, and Nuclear War",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/faZI6OBOopE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000007-www.dwarkesh.com-p-ananyo-bhattacharya",
+          "capture_started_at": 1786234791
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "htOvH12T7mU",
       "watch_url": "https://www.youtube.com/watch?v=htOvH12T7mU",
       "status": "pending_download",
@@ -1285,6 +1627,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000029-www.dwarkesh.com-p-scott-daniel",
           "capture_started_at": 1786200263
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "i70j-ZCPhXg",
+      "watch_url": "https://www.youtube.com/watch?v=i70j-ZCPhXg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/i70j-ZCPhXg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan-2",
+          "title": "23: Bryan Caplan - Discrimination, Poverty, & Mental Illness",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/i70j-ZCPhXg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000013-www.dwarkesh.com-p-bryan-caplan-2",
+          "capture_started_at": 1786236115
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "i75KvXVrtLw",
+      "watch_url": "https://www.youtube.com/watch?v=i75KvXVrtLw",
+      "status": "pending_download",
+      "import_directory": "media/youtube/i75KvXVrtLw",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/alex-tabarrok",
+          "title": "Alex Tabarrok - Prizes, Prices, and Public Goods",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/i75KvXVrtLw?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000025-www.dwarkesh.com-p-alex-tabarrok",
+          "capture_started_at": 1786238764
         }
       ]
     },
@@ -1357,6 +1735,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000002-www.dwarkesh.com-p-andrej-karpathy",
           "capture_started_at": 1786194788
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "ldTPVd3vO9Q",
+      "watch_url": "https://www.youtube.com/watch?v=ldTPVd3vO9Q",
+      "status": "pending_download",
+      "import_directory": "media/youtube/ldTPVd3vO9Q",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/uncle-bob",
+          "title": "Uncle Bob - The Long Reach of Code - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/ldTPVd3vO9Q?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000021-www.dwarkesh.com-p-uncle-bob",
+          "capture_started_at": 1786237896
         }
       ]
     },
@@ -1560,6 +1956,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "otyrj5SnS4I",
+      "watch_url": "https://www.youtube.com/watch?v=otyrj5SnS4I",
+      "status": "pending_download",
+      "import_directory": "media/youtube/otyrj5SnS4I",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jason-crawford",
+          "title": "Jason Crawford - The Roots of Progress - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/otyrj5SnS4I?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000028-www.dwarkesh.com-p-jason-crawford",
+          "capture_started_at": 1786239447
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "pE3KKUKXcTM",
       "watch_url": "https://www.youtube.com/watch?v=pE3KKUKXcTM",
       "status": "pending_download",
@@ -1632,6 +2046,24 @@
     },
     {
       "provider": "youtube",
+      "video_id": "r4AkTmqvWzM",
+      "watch_url": "https://www.youtube.com/watch?v=r4AkTmqvWzM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/r4AkTmqvWzM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan",
+          "title": "Bryan Caplan - Nurturing Orphaned Ideas - by Dwarkesh Patel",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/r4AkTmqvWzM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000030-www.dwarkesh.com-p-bryan-caplan",
+          "capture_started_at": 1786239880
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
       "video_id": "rYXeQbTuVl0",
       "watch_url": "https://www.youtube.com/watch?v=rYXeQbTuVl0",
       "status": "pending_download",
@@ -1645,6 +2077,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000025-www.dwarkesh.com-p-mark-zuckerberg-2",
           "capture_started_at": 1786199467
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "rsJxlybPByM",
+      "watch_url": "https://www.youtube.com/watch?v=rsJxlybPByM",
+      "status": "pending_download",
+      "import_directory": "media/youtube/rsJxlybPByM",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/pradyu-prasad",
+          "title": "26: Pradyu Prasad - Imperial Japan, the God Emperor, and Militarization in the Modern World",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/rsJxlybPByM?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000009-www.dwarkesh.com-p-pradyu-prasad",
+          "capture_started_at": 1786235231
         }
       ]
     },
@@ -1681,6 +2131,42 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786187606/pages/000006-www.dwarkesh.com-p-david-reich-2",
           "capture_started_at": 1786188503
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "sh04dEtBAoE",
+      "watch_url": "https://www.youtube.com/watch?v=sh04dEtBAoE",
+      "status": "pending_download",
+      "import_directory": "media/youtube/sh04dEtBAoE",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/razib-khan",
+          "title": "25: Razib Khan - Genomics, Intelligence, and The Church of Science",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/sh04dEtBAoE?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000010-www.dwarkesh.com-p-razib-khan",
+          "capture_started_at": 1786235462
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "snMWoyvmkhg",
+      "watch_url": "https://www.youtube.com/watch?v=snMWoyvmkhg",
+      "status": "pending_download",
+      "import_directory": "media/youtube/snMWoyvmkhg",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/fin-moorhouse",
+          "title": "34: Fin Moorhouse - Longtermism, Space, & Entrepreneurship",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/snMWoyvmkhg?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000003-www.dwarkesh.com-p-fin-moorhouse",
+          "capture_started_at": 1786233889
         }
       ]
     },
@@ -1789,6 +2275,24 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000045-www.dwarkesh.com-p-brett-harrison",
           "capture_started_at": 1786214713
+        }
+      ]
+    },
+    {
+      "provider": "youtube",
+      "video_id": "yYtyKmPZBto",
+      "watch_url": "https://www.youtube.com/watch?v=yYtyKmPZBto",
+      "status": "pending_download",
+      "import_directory": "media/youtube/yYtyKmPZBto",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/charles-murray",
+          "title": "Charles Murray - Human Accomplishment and the Future of Liberty",
+          "embed_title": "",
+          "embed_url": "https://www.youtube-nocookie.com/embed/yYtyKmPZBto?rel=0&autoplay=0&showinfo=0&enablejsapi=0",
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000024-www.dwarkesh.com-p-charles-murray",
+          "capture_started_at": 1786238547
         }
       ]
     },

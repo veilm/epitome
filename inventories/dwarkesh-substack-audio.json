@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786233244,
+  "generated_at_unix": 1786240891,
   "source": "Dwarkesh Podcast",
   "capture_runs": [
     "dwarkesh"
@@ -12,13 +12,36 @@
     "note": "Download one durable audio rendition per media ID. Preserve any caption tracks and record imported filenames in imported_files."
   },
   "summary": {
-    "audios": 44,
-    "articles": 44,
+    "audios": 72,
+    "articles": 72,
     "statuses": {
-      "pending_download": 44
+      "pending_download": 72
     }
   },
   "items": [
+    {
+      "provider": "substack-audio",
+      "media_id": "08b106c2-d9b8-4228-b661-c40bc0be18e6",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/08b106c2-d9b8-4228-b661-c40bc0be18e6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/joseph-carlsmith",
+          "title": "35: Joseph Carlsmith - Utopia, AI & Infinite Ethics",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/08b106c2-d9b8-4228-b661-c40bc0be18e6/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000002-www.dwarkesh.com-p-joseph-carlsmith",
+          "capture_started_at": 1786233642
+        }
+      ]
+    },
     {
       "provider": "substack-audio",
       "media_id": "09559051-e9a1-4d34-99b9-c605fea7dc29",
@@ -39,6 +62,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786233036-retry-sarah-paine/pages/000001-www.dwarkesh.com-p-sarah-paine",
           "capture_started_at": 1786233043
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "0cf38120-a654-4198-b78b-85219c1583dc",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/0cf38120-a654-4198-b78b-85219c1583dc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scott-aaronson",
+          "title": "Scott Aaronson - Quantum Computing, Complexity, and Creativity",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/0cf38120-a654-4198-b78b-85219c1583dc.mpga?post_id=52511233",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000022-www.dwarkesh.com-p-scott-aaronson",
+          "capture_started_at": 1786238112
         }
       ]
     },
@@ -90,6 +136,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "1a936e70-21d0-420e-8dbf-d46522f65c83",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/1a936e70-21d0-420e-8dbf-d46522f65c83",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/razib-khan",
+          "title": "25: Razib Khan - Genomics, Intelligence, and The Church of Science",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/1a936e70-21d0-420e-8dbf-d46522f65c83.mpga?post_id=53132062",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000010-www.dwarkesh.com-p-razib-khan",
+          "capture_started_at": 1786235462
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "1ae85553-6538-4246-b125-fcf580e5ce5b",
       "status": "pending_download",
       "import_directory": "media/substack-audio/1ae85553-6538-4246-b125-fcf580e5ce5b",
@@ -108,6 +177,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000016-www.dwarkesh.com-p-francois-chollet",
           "capture_started_at": 1786208454
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "1f7f3f58-68c7-42bc-a3db-293fe3bdd432",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/1f7f3f58-68c7-42bc-a3db-293fe3bdd432",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/scott-young",
+          "title": "Scott Young - Ultralearning - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/1f7f3f58-68c7-42bc-a3db-293fe3bdd432.mpga?post_id=52511234",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000023-www.dwarkesh.com-p-scott-young",
+          "capture_started_at": 1786238331
         }
       ]
     },
@@ -200,6 +292,52 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000019-www.dwarkesh.com-p-mark-zuckerberg",
           "capture_started_at": 1786209119
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "288179e1-dc46-453f-abf5-ab3c8dfc0034",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/288179e1-dc46-453f-abf5-ab3c8dfc0034",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/agustin-lebron",
+          "title": "Agustin Lebron - Trading, Crypto, and Adverse Selection",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/288179e1-dc46-453f-abf5-ab3c8dfc0034.mpga?post_id=58484687",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000006-www.dwarkesh.com-p-agustin-lebron",
+          "capture_started_at": 1786234569
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "2d761712-afbd-4932-a94b-342b3a7d0264",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/2d761712-afbd-4932-a94b-342b3a7d0264",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sarah-fitz",
+          "title": "Sarah Fitz-Claridge - Taking Children Seriously",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/2d761712-afbd-4932-a94b-342b3a7d0264.mpga?post_id=52511230",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000019-www.dwarkesh.com-p-sarah-fitz",
+          "capture_started_at": 1786237453
         }
       ]
     },
@@ -320,6 +458,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "3e10f313-f4f5-4216-b117-dcb2bb875a27",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/3e10f313-f4f5-4216-b117-dcb2bb875a27",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/matjaz-leonardis",
+          "title": "Matja\u017e Leonardis - Science, Identity, and Probability",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/3e10f313-f4f5-4216-b117-dcb2bb875a27.mpga?post_id=52511240",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000029-www.dwarkesh.com-p-matjaz-leonardis",
+          "capture_started_at": 1786239662
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "4175801a-af9d-4468-ba13-5a288226487a",
       "status": "pending_download",
       "import_directory": "media/substack-audio/4175801a-af9d-4468-ba13-5a288226487a",
@@ -435,6 +596,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "5125c3bf-1db5-4b84-a109-3d79d17079d2",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/5125c3bf-1db5-4b84-a109-3d79d17079d2",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/michael-huemer",
+          "title": "Michael Huemer - Anarchy, Capitalism, and Progress",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/5125c3bf-1db5-4b84-a109-3d79d17079d2.mpga?post_id=52511231",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000020-www.dwarkesh.com-p-michael-huemer",
+          "capture_started_at": 1786237671
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "554291f3-285e-459b-ac63-5669feac1b05",
       "status": "pending_download",
       "import_directory": "media/substack-audio/554291f3-285e-459b-ac63-5669feac1b05",
@@ -481,6 +665,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "5b63a86a-ed1d-4cd1-9e89-7cadb9d179de",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/5b63a86a-ed1d-4cd1-9e89-7cadb9d179de",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jimmy-soni",
+          "title": "24: Jimmy Soni - Peter Thiel, Elon Musk, and the Paypal Mafia",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/5b63a86a-ed1d-4cd1-9e89-7cadb9d179de.mpga?post_id=52511221",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000011-www.dwarkesh.com-p-jimmy-soni",
+          "capture_started_at": 1786235681
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "6657c303-3ddd-45a9-9d05-0910c3b103ed",
       "status": "pending_download",
       "import_directory": "media/substack-audio/6657c303-3ddd-45a9-9d05-0910c3b103ed",
@@ -504,6 +711,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "668913d9-94c1-43b4-9cb9-2148f478203c",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/668913d9-94c1-43b4-9cb9-2148f478203c",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/richard-hanania",
+          "title": "22: Richard Hanania - Foreign Policy, Fertility, and Wokeness",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/668913d9-94c1-43b4-9cb9-2148f478203c.mpga?post_id=52511223",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000014-www.dwarkesh.com-p-richard-hanania",
+          "capture_started_at": 1786236339
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "6be267ba-e5ec-4ba8-b5d5-46a644be38cf",
       "status": "pending_download",
       "import_directory": "media/substack-audio/6be267ba-e5ec-4ba8-b5d5-46a644be38cf",
@@ -522,6 +752,52 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000031-www.dwarkesh.com-p-paul-christiano",
           "capture_started_at": 1786211693
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "6ca16829-f370-4009-8f7f-f1337ae763fc",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/6ca16829-f370-4009-8f7f-f1337ae763fc",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-deutsch",
+          "title": "21: David Deutsch - AI, America, Fun, & Bayes",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/6ca16829-f370-4009-8f7f-f1337ae763fc.mpga?post_id=52511224",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000015-www.dwarkesh.com-p-david-deutsch",
+          "capture_started_at": 1786236564
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "7319e6aa-90d0-4319-9b47-2065c7b57b41",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/7319e6aa-90d0-4319-9b47-2065c7b57b41",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/robin-hanson",
+          "title": "Robin Hanson - The Long View - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/7319e6aa-90d0-4319-9b47-2065c7b57b41.mpga?post_id=52511238",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000027-www.dwarkesh.com-p-robin-hanson",
+          "capture_started_at": 1786239223
         }
       ]
     },
@@ -642,6 +918,29 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "7f49ffd3-8c03-4609-9817-80a01dd7308e",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/7f49ffd3-8c03-4609-9817-80a01dd7308e",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/ananyo-bhattacharya",
+          "title": "28: Ananyo Bhattacharya - John von Neumann, Jewish Genius, and Nuclear War",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/7f49ffd3-8c03-4609-9817-80a01dd7308e.mpga?post_id=54281341",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000007-www.dwarkesh.com-p-ananyo-bhattacharya",
+          "capture_started_at": 1786234791
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "8985942d-9bb9-47d1-8ec8-2e1ec4357fe6",
       "status": "pending_download",
       "import_directory": "media/substack-audio/8985942d-9bb9-47d1-8ec8-2e1ec4357fe6",
@@ -660,6 +959,52 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000060-www.dwarkesh.com-p-steve-hsu",
           "capture_started_at": 1786217937
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "8d47cc04-dd32-49b1-877e-efe8b63c30e4",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/8d47cc04-dd32-49b1-877e-efe8b63c30e4",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/sbf",
+          "title": "32: Sam Bankman-Fried - Crypto, Altruism, and Leadership",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/8d47cc04-dd32-49b1-877e-efe8b63c30e4/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000005-www.dwarkesh.com-p-sbf",
+          "capture_started_at": 1786234349
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "955c6b0b-9d1f-467a-9f04-34a42ecc9e6b",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/955c6b0b-9d1f-467a-9f04-34a42ecc9e6b",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/alexander-mikaberidze",
+          "title": "Alexander Mikaberidze - Napoleon, War, Progress, and Global Order",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/955c6b0b-9d1f-467a-9f04-34a42ecc9e6b/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000004-www.dwarkesh.com-p-alexander-mikaberidze",
+          "capture_started_at": 1786234123
         }
       ]
     },
@@ -706,6 +1051,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786194586/pages/000014-www.dwarkesh.com-p-why-i-dont-think-agi-is-right-around",
           "capture_started_at": 1786197320
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "a0429860-327f-44b8-911c-16a1307661b6",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/a0429860-327f-44b8-911c-16a1307661b6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/uncle-bob",
+          "title": "Uncle Bob - The Long Reach of Code - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/a0429860-327f-44b8-911c-16a1307661b6.mpga?post_id=52511232",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000021-www.dwarkesh.com-p-uncle-bob",
+          "capture_started_at": 1786237896
         }
       ]
     },
@@ -872,6 +1240,75 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "bd5691c9-448f-485f-aac1-4a990abcace6",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/bd5691c9-448f-485f-aac1-4a990abcace6",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/charles-murray",
+          "title": "Charles Murray - Human Accomplishment and the Future of Liberty",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/bd5691c9-448f-485f-aac1-4a990abcace6.mpga?post_id=52511235",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000024-www.dwarkesh.com-p-charles-murray",
+          "capture_started_at": 1786238547
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "bde5cfe8-e869-4aa2-a0bd-077d8f753232",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/bde5cfe8-e869-4aa2-a0bd-077d8f753232",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan",
+          "title": "Bryan Caplan - Nurturing Orphaned Ideas - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/bde5cfe8-e869-4aa2-a0bd-077d8f753232.mpga?post_id=52511244",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000030-www.dwarkesh.com-p-bryan-caplan",
+          "capture_started_at": 1786239880
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "c64ca7f2-b043-444d-8173-bc1d5c9753f5",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/c64ca7f2-b043-444d-8173-bc1d5c9753f5",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/pradyu-prasad",
+          "title": "26: Pradyu Prasad - Imperial Japan, the God Emperor, and Militarization in the Modern World",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/c64ca7f2-b043-444d-8173-bc1d5c9753f5.mpga?post_id=53132223",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000009-www.dwarkesh.com-p-pradyu-prasad",
+          "capture_started_at": 1786235231
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "cea82dbc-a196-41a5-9641-cfd2e6918bc2",
       "status": "pending_download",
       "import_directory": "media/substack-audio/cea82dbc-a196-41a5-9641-cfd2e6918bc2",
@@ -890,6 +1327,52 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000036-www.dwarkesh.com-p-andy-matuschak",
           "capture_started_at": 1786212681
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "d090dcc3-a5c7-4c4f-a3ba-e6cf4ec7bcb8",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/d090dcc3-a5c7-4c4f-a3ba-e6cf4ec7bcb8",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/david-friedman",
+          "title": "David Friedman - Dating Markets, Legal Systems, Bitcoin, and Automation",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/d090dcc3-a5c7-4c4f-a3ba-e6cf4ec7bcb8.mpga?post_id=52511229",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000018-www.dwarkesh.com-p-david-friedman",
+          "capture_started_at": 1786237236
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "d27b8e1f-a85a-4030-819b-6b456cdc3602",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/d27b8e1f-a85a-4030-819b-6b456cdc3602",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/caleb-watney",
+          "title": "Caleb Watney - America's Innovation Engine",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/d27b8e1f-a85a-4030-819b-6b456cdc3602.mpga?post_id=52511237",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000026-www.dwarkesh.com-p-caleb-watney",
+          "capture_started_at": 1786239003
         }
       ]
     },
@@ -964,6 +1447,75 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "dda79773-9ada-4622-8fab-bed5e1832ea3",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/dda79773-9ada-4622-8fab-bed5e1832ea3",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/alex-tabarrok",
+          "title": "Alex Tabarrok - Prizes, Prices, and Public Goods",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/dda79773-9ada-4622-8fab-bed5e1832ea3.mpga?post_id=52511236",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000025-www.dwarkesh.com-p-alex-tabarrok",
+          "capture_started_at": 1786238764
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "e314b966-28f4-4e64-9329-6cd0c1a72e18",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/e314b966-28f4-4e64-9329-6cd0c1a72e18",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/byrne-hobart",
+          "title": "Byrne Hobart - Optionality, Stagnation, and Secret Societies",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/e314b966-28f4-4e64-9329-6cd0c1a72e18.mpga?post_id=52511227",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000017-www.dwarkesh.com-p-byrne-hobart",
+          "capture_started_at": 1786237020
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "e9eb541d-6582-4cee-b0fc-643352ef5093",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/e9eb541d-6582-4cee-b0fc-643352ef5093",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/bryan-caplan-2",
+          "title": "23: Bryan Caplan - Discrimination, Poverty, & Mental Illness",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/e9eb541d-6582-4cee-b0fc-643352ef5093.mpga?post_id=52511222",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000013-www.dwarkesh.com-p-bryan-caplan-2",
+          "capture_started_at": 1786236115
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "eab4ba65-0d03-4214-9642-b2520fc21e60",
       "status": "pending_download",
       "import_directory": "media/substack-audio/eab4ba65-0d03-4214-9642-b2520fc21e60",
@@ -987,6 +1539,75 @@
     },
     {
       "provider": "substack-audio",
+      "media_id": "edac675b-b72a-462b-a2f0-2a55e111447b",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/edac675b-b72a-462b-a2f0-2a55e111447b",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/fin-moorhouse",
+          "title": "34: Fin Moorhouse - Longtermism, Space, & Entrepreneurship",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/edac675b-b72a-462b-a2f0-2a55e111447b/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000003-www.dwarkesh.com-p-fin-moorhouse",
+          "capture_started_at": 1786233889
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "ef3b8e8e-9e05-4d49-ac15-a3eab6f272a2",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/ef3b8e8e-9e05-4d49-ac15-a3eab6f272a2",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/stephen-grugett",
+          "title": "27: Stephen Grugett (Manifold Markets Founder) - Predictions Markets & Better Governance",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/ef3b8e8e-9e05-4d49-ac15-a3eab6f272a2.mpga?post_id=53416271",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000008-www.dwarkesh.com-p-stephen-grugett",
+          "capture_started_at": 1786235014
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "f16d4ce6-76c9-45d4-b231-5eb51dcbbc57",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/f16d4ce6-76c9-45d4-b231-5eb51dcbbc57",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/will-macaskill",
+          "title": "36: Will MacAskill - Longtermism, Altruism, History, & Technology",
+          "sources": [
+            {
+              "url": "https://api.substack.com/api/v1/audio/upload/f16d4ce6-76c9-45d4-b231-5eb51dcbbc57/src",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000001-www.dwarkesh.com-p-will-macaskill",
+          "capture_started_at": 1786233414
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
       "media_id": "f21a4b37-fa2e-44d7-85fb-15a059986e4d",
       "status": "pending_download",
       "import_directory": "media/substack-audio/f21a4b37-fa2e-44d7-85fb-15a059986e4d",
@@ -1005,6 +1626,29 @@
           "capture_run": "dwarkesh",
           "capture_page": "crawls/1786205301/pages/000058-www.dwarkesh.com-p-charles-mann",
           "capture_started_at": 1786217512
+        }
+      ]
+    },
+    {
+      "provider": "substack-audio",
+      "media_id": "f6339aca-6b5a-4306-97f2-783c18485420",
+      "status": "pending_download",
+      "import_directory": "media/substack-audio/f6339aca-6b5a-4306-97f2-783c18485420",
+      "articles": [
+        {
+          "url": "https://www.dwarkesh.com/p/jason-crawford",
+          "title": "Jason Crawford - The Roots of Progress - by Dwarkesh Patel",
+          "sources": [
+            {
+              "url": "https://substackcdn.com/public/audio/f6339aca-6b5a-4306-97f2-783c18485420.mpga?post_id=52511239",
+              "type": ""
+            }
+          ],
+          "caption_tracks": [],
+          "embedded_transcript_rows": 0,
+          "capture_run": "dwarkesh",
+          "capture_page": "crawls/1786233407/pages/000028-www.dwarkesh.com-p-jason-crawford",
+          "capture_started_at": 1786239447
         }
       ]
     },
