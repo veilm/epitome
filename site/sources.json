@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {"id": "openai", "name": "OpenAI", "archive_directory": "openai", "hosts": ["openai.com"], "undated_paths": ["/"]},
+    {"id": "anthropic", "name": "Anthropic", "archive_directory": "anthropic", "hosts": ["anthropic.com"], "title_suffixes": [" | Anthropic", " \\ Anthropic"], "undated_paths": ["/", "/news", "/research"]},
+    {"id": "claude", "name": "Claude", "archive_directory": "claude.com", "hosts": ["claude.com"], "title_suffixes": [" | Claude by Anthropic", " | Claude"], "undated_paths": ["/", "/blog"]},
+    {"id": "dario-amodei", "name": "Dario Amodei", "archive_directory": "dario-amodei", "hosts": ["darioamodei.com"], "title_prefix": "Dario Amodei — ", "undated_paths": ["/"]},
+    {"id": "andrej-karpathy", "name": "Andrej Karpathy", "archive_directory": "andrej-karpathy", "hosts": ["karpathy.github.io"], "undated_paths": ["/"]},
+    {"id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger", "hosts": ["steipete.me"], "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"], "exclude_paths": ["/rss.xml"]},
+    {"id": "dwarkesh", "name": "Dwarkesh Patel", "archive_directory": "dwarkesh", "hosts": ["dwarkesh.com"], "undated_paths": ["/", "/archive", "/podcast"]},
+    {"id": "semianalysis", "name": "SemiAnalysis", "archive_directory": "semianalysis", "hosts": ["semianalysis.com"], "undated_paths": ["/", "/archive"]}
+  ]
+}

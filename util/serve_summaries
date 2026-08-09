@@ -15,12 +15,13 @@ from epitome_lib.summary_site import build_summary_site
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalog", type=Path, default=Path("summaries/catalog.json"))
+    parser.add_argument("--pages-catalog", type=Path, default=Path("site/catalog.json"))
     parser.add_argument("--output", type=Path, default=Path("dist/summaries"))
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8014)
     args = parser.parse_args()
     try:
-        result = build_summary_site(args.catalog, args.output)
+        result = build_summary_site(args.catalog, args.output, args.pages_catalog)
     except (OSError, KeyError, ValueError) as error:
         print(f"serve_summaries: {error}", file=sys.stderr)
         return 1
@@ -28,7 +29,7 @@ def main() -> int:
     server = ThreadingHTTPServer((args.host, args.port), handler)
     print(
         f"Summaries: http://{args.host}:{args.port}/ "
-        f"({result['articles']} articles)",
+        f"({result['pages']} pages, {result['articles']} summaries)",
         flush=True,
     )
     try:

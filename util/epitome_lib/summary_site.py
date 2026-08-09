@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from html import escape
 import json
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
+from .capture import archival_url_key
 from .summary import parse_front_matter, url_slug, validate_summary
 
 
@@ -185,12 +187,34 @@ code,pre{font-family:ui-monospace,monospace}code{background:#f8f9fa;border:1px s
 padding:.05em .25em}pre{overflow:auto;background:#f8f9fa;border:1px solid var(--line);padding:1em}
 .site-footer{max-width:1352px;margin:0 auto;padding:18px 28px 30px;border-top:1px solid var(--faint);
 color:var(--quiet);font-size:12px}
+.catalog-layout{display:grid;grid-template-columns:230px minmax(0,850px);gap:28px;align-items:start}
+.filters{position:sticky;top:12px;border:1px solid var(--line);background:#f8f9fa;padding:13px 15px}
+.filters h2{font:18px/1.3 Georgia,serif;margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.filter-group{border:0;margin:0 0 15px;padding:0}.filter-group legend{font-weight:700;margin-bottom:5px}
+.filter-source{display:flex;align-items:center;gap:7px;padding:3px 0;cursor:pointer}
+.filter-source input{margin:0}.filter-select{width:100%;padding:5px;border:1px solid #72777d;background:#fff}
+.feed-toolbar{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+border-bottom:1px solid var(--line);padding:0 0 7px;margin-bottom:0}.feed-toolbar h2{font:22px Georgia,serif;margin:0}
+.feed-count{color:var(--quiet);font-size:12px}.feed{list-style:none;margin:0;padding:0}
+.feed-item{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;padding:14px 4px;
+border-bottom:1px solid var(--faint)}.feed-item[hidden]{display:none}
+.source-mark{display:flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #72777d;
+background:#fff;color:#202122;font:700 11px/1 Arial,sans-serif;letter-spacing:-.02em;border-radius:2px}
+.source-openai{background:#e7f5ef}.source-anthropic{background:#f4eee7}.source-claude{background:#f8e7db}
+.source-dario-amodei{background:#e9edf7}.source-andrej-karpathy{background:#f0e9f5}
+.source-peter-steinberger{background:#e7f1f7}.source-dwarkesh{background:#f6efd9}.source-semianalysis{background:#ebeff1}
+.feed-title{font:18px/1.35 Georgia,"Times New Roman",serif;margin:0 0 3px}
+.feed-meta{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;color:var(--quiet);font-size:12px}
+.summary-link{display:inline-block;border:1px solid #a2a9b1;background:#f8f9fa;padding:0 5px;font-weight:700}
+.undated-note{max-width:46rem;color:var(--quiet);font-size:12px;margin:8px 0 0}
+.empty-state{padding:30px 4px;color:var(--quiet)}
 @media(prefers-reduced-motion:reduce){.crystal i{animation:none!important}}
 @media(max-width:800px){.site-header{height:auto;flex-wrap:wrap;padding:10px 18px;gap:8px 18px}
 .brand{min-width:0}.site-search{order:3;width:100%}.site-links{font-size:12px}
 .page-shell{padding:14px 18px 36px}
 .notice{display:block;padding:12px 14px}.notice .symbol{display:none}.stats{flex-wrap:wrap;gap:.3rem 1rem}
-.summary-list{columns:1}.article-layout{display:block}.infobox{margin:18px 0}.tabs-right{display:none}}
+.summary-list{columns:1}.article-layout{display:block}.infobox{margin:18px 0}.tabs-right{display:none}
+.catalog-layout{display:block}.filters{position:static;margin-bottom:20px}.feed-title{font-size:17px}}
 """
 
 
@@ -206,19 +230,40 @@ def _page(title: str, body: str) -> str:
 <form class="site-search" action="/" method="get">
 <input type="search" name="q" placeholder="Search Epitome" aria-label="Search Epitome">
 <button type="submit">Search</button></form>
-<nav class="site-links" aria-label="Site"><a href="/">Summaries</a></nav></header>
+<nav class="site-links" aria-label="Site"><a href="/">Catalog</a></nav></header>
 <div class="page-shell">{body}</div>
 <footer class="site-footer">Epitome preserves source material and concise,
 model-readable summaries for future research.</footer>
 <script>
-const params=new URLSearchParams(location.search),query=params.get("q");
-if(query){{
- const input=document.querySelector('.site-search input'),items=document.querySelectorAll('.summary-list li');
- input.value=query;
- items.forEach(item=>item.hidden=!item.textContent.toLowerCase().includes(query.toLowerCase()));
- const heading=document.querySelector('.list-heading');
- if(heading) heading.textContent=`Search results for “${{query}}”`;
+const form=document.querySelector('.site-search'),input=form?.querySelector('input');
+const feed=document.querySelector('.feed'),count=document.querySelector('.feed-count');
+const sourceInputs=[...document.querySelectorAll('[data-source-filter]')];
+const summaryFilter=document.querySelector('#summary-filter'),sortSelect=document.querySelector('#sort-order');
+function refresh(){{
+ if(!feed)return;
+ const query=(input?.value||'').trim().toLowerCase();
+ const enabled=new Set(sourceInputs.filter(box=>box.checked).map(box=>box.value));
+ const summary=summaryFilter?.value||'all';let visible=0;
+ [...feed.children].forEach(item=>{{
+  const matchesSource=enabled.has(item.dataset.source);
+  const hasSummary=item.dataset.summary==='yes';
+  const matchesSummary=summary==='all'||(summary==='with'&&hasSummary)||(summary==='without'&&!hasSummary);
+  const matchesQuery=!query||item.textContent.toLowerCase().includes(query);
+  item.hidden=!(matchesSource&&matchesSummary&&matchesQuery);if(!item.hidden)visible++;
+ }});
+ const direction=sortSelect?.value==='oldest'?1:-1;
+ [...feed.children].sort((a,b)=>{{
+  const ad=Number(a.dataset.published),bd=Number(b.dataset.published);
+  if(ad<0&&bd>=0)return 1;if(bd<0&&ad>=0)return -1;
+  return (ad-bd)*direction||a.dataset.title.localeCompare(b.dataset.title);
+ }}).forEach(item=>feed.appendChild(item));
+ if(count)count.textContent=`${{visible.toLocaleString()}} of ${{feed.children.length.toLocaleString()}} pages`;
+ const empty=document.querySelector('.empty-state');if(empty)empty.hidden=visible!==0;
 }}
+form?.addEventListener('submit',event=>{{event.preventDefault();refresh()}});
+input?.addEventListener('input',refresh);sourceInputs.forEach(box=>box.addEventListener('change',refresh));
+summaryFilter?.addEventListener('change',refresh);sortSelect?.addEventListener('change',refresh);
+refresh();
 </script></body></html>"""
 
 
@@ -230,7 +275,11 @@ def _summary_path(catalog_path: Path, content_path: str) -> Path:
     return path
 
 
-def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
+def build_summary_site(
+    catalog_path: Path,
+    output_dir: Path,
+    pages_catalog_path: Path | None = Path("site/catalog.json"),
+) -> dict[str, int]:
     entries = json.loads(catalog_path.read_text(encoding="utf-8"))
     if not isinstance(entries, list):
         raise ValueError("summary catalog must be a JSON array")
@@ -241,7 +290,7 @@ def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
         stale.unlink()
     (output_dir / "style.css").write_text(STYLE.strip() + "\n", encoding="utf-8")
 
-    cards = []
+    summaries_by_url: dict[str, dict[str, object]] = {}
     complete_count = 0
     error_count = 0
     for entry in entries:
@@ -258,10 +307,10 @@ def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
         article_name = f"{slug}.html"
         confidence = float(metadata["confidence"])
         article_body = f"""
-<main><a class="article-back" href="/">← All summaries</a>
+<main><a class="article-back" href="/">← All archived pages</a>
 <h1 class="page-title">{escape(str(metadata["title"]))}</h1>
 <div class="page-tabs"><div class="tabs-left"><span class="selected">Summary</span>
-<a href="{escape(source_url, quote=True)}">Source</a></div>
+<a href="{escape(source_url, quote=True)}" target="_blank" rel="noopener noreferrer">Source</a></div>
 <div class="tabs-right"><span class="selected">Read</span><span>View record</span></div></div>
 <p class="site-note">From Epitome, the machine-readable archive</p>
 <div class="article-layout"><article class="article">
@@ -271,42 +320,121 @@ def build_summary_site(catalog_path: Path, output_dir: Path) -> dict[str, int]:
 <dt>Status confidence</dt><dd>{confidence:.0%}</dd>
 <dt>Model</dt><dd>{escape(str(entry.get("model", "unknown model")))}</dd>
 <dt>Original publication</dt>
-<dd><a href="{escape(source_url, quote=True)}">Original OpenAI article ↗</a></dd>
+<dd><a href="{escape(source_url, quote=True)}" target="_blank" rel="noopener noreferrer">Original article ↗</a></dd>
 </dl></aside></div></main>"""
         (article_dir / article_name).write_text(
             _page(str(metadata["title"]), article_body),
             encoding="utf-8",
         )
-        cards.append(
-            f"""<li><h2><a href="articles/{article_name}">{
-                escape(str(metadata["title"]))
-            }</a></h2>
-<span class="record-meta"><span class="status {status}">{status}</span>
- · {confidence:.0%} status confidence · {
-                escape(str(entry.get("model", "unknown model")))
-            }</span>
-<small class="source">{escape(source_url)}</small></li>"""
+        summaries_by_url[archival_url_key(source_url)] = {
+            "href": f"articles/{article_name}",
+            "status": status,
+            "title": str(metadata["title"]),
+        }
+
+    page_catalog: dict[str, object] = {"sources": [], "pages": []}
+    if pages_catalog_path is not None and pages_catalog_path.exists():
+        loaded = json.loads(pages_catalog_path.read_text(encoding="utf-8"))
+        if not isinstance(loaded, dict) or not isinstance(loaded.get("pages"), list):
+            raise ValueError("public page catalog must contain a pages array")
+        page_catalog = loaded
+    pages = list(page_catalog.get("pages", []))
+    if not pages:
+        pages = [
+            {
+                "captured_at": int(entry.get("generated_at", 0)),
+                "published_at": None,
+                "source": "other",
+                "title": str(entry.get("title", entry["source_url"])),
+                "url": str(entry["source_url"]),
+            }
+            for entry in entries
+        ]
+    source_records = {
+        str(source["id"]): source
+        for source in page_catalog.get("sources", [])
+        if isinstance(source, dict) and "id" in source
+    }
+    source_records.setdefault("other", {"id": "other", "name": "Other"})
+    initials = {
+        "openai": "OA", "anthropic": "A", "claude": "C", "dario-amodei": "DA",
+        "andrej-karpathy": "AK", "peter-steinberger": "PS", "dwarkesh": "DP",
+        "semianalysis": "SA", "other": "·",
+    }
+    feed_items: list[str] = []
+    dated_count = 0
+    summarized_count = 0
+    used_sources: set[str] = set()
+    for page in pages:
+        url = str(page["url"])
+        source_id = str(page.get("source", "other"))
+        used_sources.add(source_id)
+        source_name = str(source_records.get(source_id, {}).get("name", source_id))
+        title = str(page.get("title") or url)
+        published_at = page.get("published_at")
+        if isinstance(published_at, int):
+            dated_count += 1
+            date_display = datetime.fromtimestamp(published_at, tz=timezone.utc).strftime("%Y-%m-%d")
+            sort_date = published_at
+        else:
+            date_display = "Date unavailable"
+            sort_date = -1
+        summary = summaries_by_url.get(archival_url_key(url))
+        summarized_count += int(summary is not None)
+        summary_link = (
+            f'<a class="summary-link" href="{escape(str(summary["href"]), quote=True)}">Summary</a>'
+            if summary else ""
+        )
+        feed_items.append(
+            f'''<li class="feed-item" data-source="{escape(source_id, quote=True)}"
+data-summary="{"yes" if summary else "no"}" data-published="{sort_date}"
+data-title="{escape(title.lower(), quote=True)}"><span class="source-mark source-{escape(source_id, quote=True)}"
+aria-hidden="true">{escape(initials.get(source_id, source_name[:2].upper()))}</span><div>
+<h3 class="feed-title"><a href="{escape(url, quote=True)}" target="_blank"
+rel="noopener noreferrer">{escape(title)}</a></h3><div class="feed-meta">
+<span>{escape(source_name)}</span><span aria-hidden="true">·</span><time>{date_display}</time>
+{summary_link}</div></div></li>'''
+        )
+    source_filters = []
+    for source_id in sorted(used_sources, key=lambda value: str(source_records.get(value, {}).get("name", value))):
+        source_name = str(source_records.get(source_id, {}).get("name", source_id))
+        source_filters.append(
+            f'<label class="filter-source"><input type="checkbox" value="{escape(source_id, quote=True)}" '
+            f'data-source-filter checked><span>{escape(source_name)}</span></label>'
         )
     index_body = f"""
-<main><h1 class="page-title">Article summaries</h1>
+<main><h1 class="page-title">Archived publications</h1>
 <div class="page-tabs"><div class="tabs-left"><span class="selected">Main page</span>
 <span>Discussion</span></div><div class="tabs-right"><span class="selected">Read</span>
 <span>View history</span></div></div>
-<p class="site-note">From Epitome, the machine-readable archive</p>
+<p class="site-note">From Epitome, an index of historically valuable public sources</p>
 <section class="notice"><div class="symbol" aria-hidden="true">◇</div><div>
-<p><strong>Article summaries</strong> are compact, model-readable records of
-OpenAI’s published articles. Extraction failures remain visible instead of being
-silently summarized.</p><div class="stats"><span><strong>{len(entries)}</strong> records</span>
-<span><strong>{complete_count}</strong> complete</span>
-<span><strong>{error_count}</strong> need attention</span></div></div></section>
-<h2 class="list-heading">Summaries in Epitome</h2><ul class="summary-list">
-{''.join(cards)}</ul></main>"""
+<p><strong>Epitome’s publication catalog</strong> combines the pages preserved from
+independent writers, research organizations, and company publications. Titles link to
+their original public pages; available Epitome summaries are marked separately.</p>
+<div class="stats"><span><strong>{len(pages):,}</strong> pages</span>
+<span><strong>{len(used_sources)}</strong> sources</span><span><strong>{dated_count}</strong> dated</span>
+<span><strong>{summarized_count}</strong> summarized</span></div></div></section>
+<div class="catalog-layout"><aside class="filters" aria-label="Catalog filters"><h2>Filter</h2>
+<fieldset class="filter-group"><legend>Sources</legend>{''.join(source_filters)}</fieldset>
+<label class="filter-group"><strong>Summary</strong><select id="summary-filter" class="filter-select">
+<option value="all">All pages</option><option value="with">With a summary</option>
+<option value="without">Without a summary</option></select></label>
+<label class="filter-group"><strong>Order</strong><select id="sort-order" class="filter-select">
+<option value="newest">Newest first</option><option value="oldest">Oldest first</option>
+</select></label></aside><section><div class="feed-toolbar"><h2>Publications</h2>
+<span class="feed-count"></span></div><p class="undated-note">Publication dates come from
+source metadata. Pages without a reliable publication date appear after dated entries.</p>
+<ul class="feed">{''.join(feed_items)}</ul><p class="empty-state" hidden>No pages match these filters.</p>
+</section></div></main>"""
     (output_dir / "index.html").write_text(
-        _page("Article summaries", index_body),
+        _page("Archived publications", index_body),
         encoding="utf-8",
     )
     return {
         "articles": len(entries),
+        "pages": len(pages),
+        "sources": len(used_sources),
         "complete": complete_count,
         "errors": error_count,
     }

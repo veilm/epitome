@@ -13,15 +13,17 @@ from epitome_lib.summary_site import build_summary_site
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--catalog", type=Path, default=Path("summaries/catalog.json"))
+    parser.add_argument("--pages-catalog", type=Path, default=Path("site/catalog.json"))
     parser.add_argument("--output", type=Path, default=Path("dist/summaries"))
     args = parser.parse_args()
     try:
-        result = build_summary_site(args.catalog, args.output)
+        result = build_summary_site(args.catalog, args.output, args.pages_catalog)
     except (OSError, KeyError, ValueError) as error:
         print(f"build_summary_site: {error}", file=sys.stderr)
         return 1
     print(
-        f"Built {result['articles']} summary pages in {args.output} "
+        f"Built a {result['pages']}-page public catalog and "
+        f"{result['articles']} summaries in {args.output} "
         f"({result['complete']} complete, {result['errors']} need attention)"
     )
     return 0

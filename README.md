@@ -37,6 +37,9 @@ The archive browser is then available at `http://127.0.0.1:8013/`. It rewrites
 captured pages for local-only static replay and never falls back to the live
 site. See [docs/replay.md](docs/replay.md).
 
-The independent summary browser is available at `http://127.0.0.1:8014/`.
-Summary Markdown and its catalog are tracked, while Codex run diagnostics and
-generated site files stay ignored. See [docs/summaries.md](docs/summaries.md).
+The independent public catalog is available at `http://127.0.0.1:8014/`. It
+interleaves preserved pages from every source by publication date, supports
+source/search/summary filters, links to upstream originals, and exposes the
+tracked summaries when available. The compact page catalog and summary Markdown
+are tracked, while private captures, Codex diagnostics, and generated site files
+stay ignored. See [docs/summaries.md](docs/summaries.md).

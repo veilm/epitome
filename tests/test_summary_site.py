@@ -57,17 +57,50 @@ site. It contains more than one hundred characters and links to the
                 encoding="utf-8",
             )
             output = root / "dist"
-            result = build_summary_site(catalog, output)
+            pages_catalog = root / "pages.json"
+            pages_catalog.write_text(
+                json.dumps(
+                    {
+                        "sources": [
+                            {"id": "example", "name": "Example source"}
+                        ],
+                        "pages": [
+                            {
+                                "captured_at": 20,
+                                "published_at": 1741046400,
+                                "source": "example",
+                                "title": "Example article",
+                                "url": source_url,
+                            },
+                            {
+                                "captured_at": 19,
+                                "published_at": None,
+                                "source": "example",
+                                "title": "An undated page",
+                                "url": "https://example.com/undated",
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            result = build_summary_site(catalog, output, pages_catalog)
             self.assertEqual(result["complete"], 1)
+            self.assertEqual(result["pages"], 2)
             index = (output / "index.html").read_text(encoding="utf-8")
             article_pages = list((output / "articles").glob("*.html"))
             self.assertIn("Example article", index)
-            self.assertIn('class="summary-list"', index)
+            self.assertIn('class="feed"', index)
             self.assertIn('class="crystal"', index)
-            self.assertIn("Summaries in Epitome", index)
+            self.assertIn("Archived publications", index)
+            self.assertIn('target="_blank"', index)
+            self.assertIn('data-source-filter checked', index)
+            self.assertIn('id="sort-order"', index)
+            self.assertIn('id="summary-filter"', index)
+            self.assertIn('class="summary-link"', index)
             self.assertEqual(len(article_pages), 1)
             article = article_pages[0].read_text(encoding="utf-8")
-            self.assertIn("Original OpenAI article", article)
+            self.assertIn("Original article", article)
             self.assertIn('class="infobox"', article)
 
 

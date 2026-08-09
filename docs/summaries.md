@@ -75,17 +75,33 @@ one command:
 }
 ```
 
-## Build and view the summary site
+## Build and view the public catalog
 
 ```sh
+util/build_public_catalog --archive-root /mnt2/capsule/epitome
 util/build_summary_site
 util/serve_summaries --port 8014
 ```
 
-The generated static site is written to ignored `dist/summaries/`; its source
-data and generator remain tracked. Open `http://127.0.0.1:8014/` to browse all
-records. Complete summaries link to their original OpenAI article. Error
-records remain visible so extractor regressions cannot disappear silently.
+`util/build_public_catalog` scans complete private captures, deduplicates URL
+identities, and writes only portable public metadata to `site/catalog.json`:
+source, title, upstream URL, publication timestamp, and capture timestamp. It
+does not expose private archive paths, captured HTML, media, network logs, or
+replay URLs. Source definitions and structural-page exceptions live in
+`site/sources.json`; new sources should be added there.
+
+The generated static site is written to ignored `dist/summaries/`; its compact
+catalog, summaries, configuration, and generator remain tracked. Open
+`http://127.0.0.1:8014/` to browse the cross-source publication feed. Upstream
+articles open in a new tab. Available summaries have a separate `Summary` link,
+and source, full-text search, newest/oldest, and summary-availability filters
+work entirely in the browser. Pages without a trustworthy publication date are
+kept visible after dated entries instead of being assigned a capture date.
+
+The site has no dependency on the private archive at runtime. Refresh
+`site/catalog.json` after a successful crawl, then rebuild the static site.
+Error summary records remain visible so extractor regressions cannot disappear
+silently.
 
 The first bounded validation exposed a real partial-DOM extraction: the GPT‑5.6
 input ended during footnote 3 even though the article referenced eight

@@ -1,0 +1,32 @@
+#!/usr/bin/python
+"""Build the tracked public-page catalog from private archive captures."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import sys
+
+from epitome_lib.public_catalog import build_public_catalog
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--archive-root", type=Path, required=True)
+    parser.add_argument("--sources", type=Path, default=Path("site/sources.json"))
+    parser.add_argument("--output", type=Path, default=Path("site/catalog.json"))
+    args = parser.parse_args()
+    try:
+        result = build_public_catalog(args.archive_root, args.sources, args.output)
+    except (OSError, KeyError, TypeError, ValueError) as error:
+        print(f"build_public_catalog: {error}", file=sys.stderr)
+        return 1
+    print(
+        f"Cataloged {result['pages']} pages from {result['sources']} sources; "
+        f"{result['dated']} have publication dates ({result['malformed']} malformed skipped)"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
