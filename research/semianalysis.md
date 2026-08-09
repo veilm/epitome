@@ -204,3 +204,32 @@ articles with no YouTube or Substack-audio entries. The next 60 deduplicated
 articles are selected in the ignored working list
 `data/semianalysis-next-60.txt` for a 90-second-delay batch after local replay
 verification passes.
+
+## Fourth bounded page batch
+
+The next 60 deduplicated article identities completed at:
+
+`/mnt2/capsule/epitome/semianalysis/crawls/1786266816`
+
+All 60 manifests are complete, all capture tabs closed, and the crawl reported
+zero page or asset-completion failures. Together with the earlier captures, 153
+of the 325 approved source identities are now complete.
+
+Only two image-heavy articles exceeded the ordinary asset budget. They were
+missing 11 primary figures and no additional listing images. The repair
+recovered all 11 resources with three-second request spacing: 1,195,804 bytes
+with zero failures. Repeated primary and all-rendered-image audits now report
+zero omissions across all 60 pages.
+
+A desktop replay audit at 1440x900 covered both repaired articles plus ordinary,
+paywalled, and embedded-video variants. The five pages rendered between three
+and 58 images with zero broken or pending images; the video article retained its
+local `<video>` element. The strict CDP log recorded 296 requests, all to the
+local archive server, with no production-origin traffic. The audit tab was
+closed afterward.
+
+The provider inventories now contain ten Substack-hosted videos across five
+articles and no YouTube or Substack-audio entries. The next 75 deduplicated
+articles are selected in the ignored working list
+`data/semianalysis-next-75.txt` for a 105-second-delay batch after local replay
+verification passes.

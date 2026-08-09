@@ -8071,6 +8071,13 @@
       "url": "https://www.dwarkesh.com/p/sarah-paine-japan"
     },
     {
+      "captured_at": 1786266822,
+      "published_at": 1737615444,
+      "source": "semianalysis",
+      "title": "OpenAI Stargate Joint Venture Demystified | Microsoft Sore Loser, Does Softbank Have The Capital?, Texas GigaCampus, Winners &amp; Losers",
+      "url": "https://newsletter.semianalysis.com/p/openai-stargate-joint-venture-demystified"
+    },
+    {
       "captured_at": 1785864665,
       "published_at": 1737590400,
       "source": "openai",
@@ -8118,6 +8125,13 @@
       "source": "dwarkesh",
       "title": "Sarah Paine — The war for India (lecture & interview)",
       "url": "https://www.dwarkesh.com/p/sarah-paine-india"
+    },
+    {
+      "captured_at": 1786267019,
+      "published_at": 1736930625,
+      "source": "semianalysis",
+      "title": "2025 AI Diffusion Export Controls - Microsoft Regulatory Capture, Oracle Tears, Impacts Quantified, Model Restrictions",
+      "url": "https://newsletter.semianalysis.com/p/2025-ai-diffusion-export-controls-microsoft-regulatory-capture-oracle-tears"
     },
     {
       "captured_at": 1785720357,
@@ -8176,6 +8190,20 @@
       "url": "https://www.dwarkesh.com/p/adam-brown"
     },
     {
+      "captured_at": 1786267231,
+      "published_at": 1735124779,
+      "source": "semianalysis",
+      "title": "Nvidia's Christmas Present: GB300 &amp; B300 - Reasoning Inference, Amazon, Memory, Supply Chain",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-christmas-present-gb300-b300-reasoning-inference-amazon-memory-supply-chain"
+    },
+    {
+      "captured_at": 1786267436,
+      "published_at": 1734904998,
+      "source": "semianalysis",
+      "title": "MI300X vs H100 vs H200 Benchmark Part 1: Training - CUDA Moat Still Alive",
+      "url": "https://newsletter.semianalysis.com/p/mi300x-vs-h100-vs-h200-benchmark-part-1-training"
+    },
+    {
       "captured_at": 1785822051,
       "published_at": 1734652800,
       "source": "openai",
@@ -8232,6 +8260,20 @@
       "url": "https://openai.com/index/mercari"
     },
     {
+      "captured_at": 1786267662,
+      "published_at": 1733888324,
+      "source": "semianalysis",
+      "title": "Scaling Laws - O1 Pro Architecture, Reasoning Training Infrastructure, Orion and Claude 3.5 Opus “Failures”",
+      "url": "https://newsletter.semianalysis.com/p/scaling-laws-o1-pro-architecture-reasoning-training-infrastructure-orion-and-claude-3-5-opus-failures"
+    },
+    {
+      "captured_at": 1786267878,
+      "published_at": 1733725907,
+      "source": "semianalysis",
+      "title": "Intel on the Brink of Death | Culture Rot, Product Focus Flawed, Foundry Must Survive",
+      "url": "https://newsletter.semianalysis.com/p/intel-on-the-brink-of-death"
+    },
+    {
       "captured_at": 1785860153,
       "published_at": 1733702400,
       "source": "openai",
@@ -8286,6 +8328,13 @@
       "source": "openai",
       "title": "OpenAI and Future partner on specialist content",
       "url": "https://openai.com/index/openai-and-future-partner-on-specialist-content"
+    },
+    {
+      "captured_at": 1786268082,
+      "published_at": 1733246970,
+      "source": "semianalysis",
+      "title": "Amazon’s AI Self Sufficiency | Trainium2 Architecture &amp; Networking",
+      "url": "https://newsletter.semianalysis.com/p/amazons-ai-self-sufficiency-trainium2-architecture-networking"
     },
     {
       "captured_at": 1786158285,
@@ -8379,6 +8428,13 @@
       "url": "https://www.anthropic.com/news/github-copilot"
     },
     {
+      "captured_at": 1786268303,
+      "published_at": 1730104723,
+      "source": "semianalysis",
+      "title": "Fab Whack-A-Mole: Chinese Companies are Evading U.S. Sanctions",
+      "url": "https://newsletter.semianalysis.com/p/fab-whack-a-mole-chinese-companies"
+    },
+    {
       "captured_at": 1786203414,
       "published_at": 1729717496,
       "source": "dwarkesh",
@@ -8428,6 +8484,13 @@
       "url": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy"
     },
     {
+      "captured_at": 1786268515,
+      "published_at": 1728915006,
+      "source": "semianalysis",
+      "title": "Datacenter Anatomy Part 1: Electrical Systems",
+      "url": "https://newsletter.semianalysis.com/p/datacenter-anatomy-part-1-electrical"
+    },
+    {
       "captured_at": 1786155149,
       "published_at": 1728864000,
       "source": "claude",
@@ -8463,6 +8526,13 @@
       "url": "https://openai.com/index/hearst"
     },
     {
+      "captured_at": 1786268736,
+      "published_at": 1727963657,
+      "source": "semianalysis",
+      "title": "AI Neocloud Playbook and Anatomy",
+      "url": "https://newsletter.semianalysis.com/p/ai-neocloud-playbook-and-anatomy"
+    },
+    {
       "captured_at": 1785805379,
       "published_at": 1727913600,
       "source": "openai",
@@ -8489,6 +8559,13 @@
       "source": "openai",
       "title": "New funding to scale the benefits of AI",
       "url": "https://openai.com/index/scale-the-benefits-of-ai"
+    },
+    {
+      "captured_at": 1786268949,
+      "published_at": 1727821257,
+      "source": "semianalysis",
+      "title": "Clash of the Foundries: Gate All Around + Backside Power at 2nm",
+      "url": "https://newsletter.semianalysis.com/p/clash-of-the-foundries"
     },
     {
       "captured_at": 1785380368,
@@ -8729,6 +8806,20 @@
       "url": "https://www.anthropic.com/research/circuits-updates-august-2024"
     },
     {
+      "captured_at": 1786269156,
+      "published_at": 1725447717,
+      "source": "semianalysis",
+      "title": "Multi-Datacenter Training: OpenAI's Ambitious Plan To Beat Google's Infrastructure",
+      "url": "https://newsletter.semianalysis.com/p/multi-datacenter-training-openais"
+    },
+    {
+      "captured_at": 1786269379,
+      "published_at": 1725340403,
+      "source": "semianalysis",
+      "title": "The Memory Wall: Past, Present, and Future of DRAM",
+      "url": "https://newsletter.semianalysis.com/p/the-memory-wall"
+    },
+    {
       "captured_at": 1786206328,
       "published_at": 1725041961,
       "source": "dwarkesh",
@@ -8820,6 +8911,13 @@
       "url": "https://www.dwarkesh.com/p/energy-and-civilization"
     },
     {
+      "captured_at": 1786269591,
+      "published_at": 1722804492,
+      "source": "semianalysis",
+      "title": "Nvidia's Blackwell Reworked - Shipment Delays & GB200A Reworked Platforms",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-blackwell-reworked-shipment"
+    },
+    {
       "captured_at": 1786072132,
       "published_at": 1722470400,
       "source": "anthropic",
@@ -8869,6 +8967,13 @@
       "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence"
     },
     {
+      "captured_at": 1786269806,
+      "published_at": 1721192875,
+      "source": "semianalysis",
+      "title": "GB200 Hardware Architecture - Component Supply Chain & BOM",
+      "url": "https://newsletter.semianalysis.com/p/gb200-hardware-architecture-and-component"
+    },
+    {
       "captured_at": 1785973342,
       "published_at": 1721174400,
       "source": "anthropic",
@@ -8881,6 +8986,13 @@
       "source": "openai",
       "title": "Prover-Verifier Games improve legibility of language model outputs",
       "url": "https://openai.com/index/prover-verifier-games-improve-legibility"
+    },
+    {
+      "captured_at": 1786270025,
+      "published_at": 1721103255,
+      "source": "semianalysis",
+      "title": "GB200 & GB200A Component & Supply Chain Model",
+      "url": "https://newsletter.semianalysis.com/p/semianalysis-gb200-component-and"
     },
     {
       "captured_at": 1785811533,
@@ -9009,6 +9121,13 @@
       "url": "https://openai.com/index/improved-techniques-for-training-consistency-models"
     },
     {
+      "captured_at": 1786270174,
+      "published_at": 1718654802,
+      "source": "semianalysis",
+      "title": "100,000 H100 Clusters: Power, Network Topology, Ethernet vs InfiniBand, Reliability, Failures, Checkpointing",
+      "url": "https://newsletter.semianalysis.com/p/100000-h100-clusters-power-network"
+    },
+    {
       "captured_at": 1786208217,
       "published_at": 1718321940,
       "source": "dwarkesh",
@@ -9086,6 +9205,20 @@
       "url": "https://www.dwarkesh.com/p/leopold-aschenbrenner"
     },
     {
+      "captured_at": 1786270394,
+      "published_at": 1717426824,
+      "source": "semianalysis",
+      "title": "OpenAI Chip Team Is Now Serious",
+      "url": "https://newsletter.semianalysis.com/p/openai-chip-team-is-now-serious"
+    },
+    {
+      "captured_at": 1786270543,
+      "published_at": 1717053913,
+      "source": "semianalysis",
+      "title": "How Dell Is Beating Supermicro",
+      "url": "https://newsletter.semianalysis.com/p/how-dell-is-beating-supermicro"
+    },
+    {
       "captured_at": 1786158149,
       "published_at": 1717027200,
       "source": "claude",
@@ -9147,6 +9280,13 @@
       "source": "openai",
       "title": "OpenAI Board Forms Safety and Security Committee",
       "url": "https://openai.com/index/openai-board-forms-safety-and-security-committee"
+    },
+    {
+      "captured_at": 1786270712,
+      "published_at": 1716780675,
+      "source": "semianalysis",
+      "title": "Apple’s AI Strategy: Apple Datacenters, On-device, Cloud, And More",
+      "url": "https://newsletter.semianalysis.com/p/apples-ai-strategy-apple-datacenters"
     },
     {
       "captured_at": 1786100756,
@@ -9261,6 +9401,13 @@
       "url": "https://openai.com/index/introducing-the-model-spec"
     },
     {
+      "captured_at": 1786270917,
+      "published_at": 1715089948,
+      "source": "semianalysis",
+      "title": "OpenAI Is Doomed? - Et tu, Microsoft?",
+      "url": "https://newsletter.semianalysis.com/p/openai-is-doomed-et-tu-microsoft"
+    },
+    {
       "captured_at": 1785880158,
       "published_at": 1715040000,
       "source": "openai",
@@ -9324,11 +9471,25 @@
       "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar"
     },
     {
+      "captured_at": 1786271124,
+      "published_at": 1714498464,
+      "source": "semianalysis",
+      "title": "Wafer Fab Model",
+      "url": "https://newsletter.semianalysis.com/p/wafer-fab-model"
+    },
+    {
       "captured_at": 1785645411,
       "published_at": 1714348800,
       "source": "openai",
       "title": "We’re bringing the Financial Times’ world-class journalism to ChatGPT",
       "url": "https://openai.com/index/content-partnership-with-financial-times"
+    },
+    {
+      "captured_at": 1786271271,
+      "published_at": 1714092065,
+      "source": "semianalysis",
+      "title": "AI Cloud TCO Model",
+      "url": "https://newsletter.semianalysis.com/p/ai-cloud-tco-model"
     },
     {
       "captured_at": 1785975822,
@@ -9359,11 +9520,25 @@
       "url": "https://www.dwarkesh.com/p/mark-zuckerberg"
     },
     {
+      "captured_at": 1786271418,
+      "published_at": 1713448938,
+      "source": "semianalysis",
+      "title": "Intel’s 14A Magic Bullet: Directed Self-Assembly (DSA)",
+      "url": "https://newsletter.semianalysis.com/p/intels-14a-magic-bullet-directed"
+    },
+    {
       "captured_at": 1785705945,
       "published_at": 1713052800,
       "source": "openai",
       "title": "Introducing OpenAI Japan",
       "url": "https://openai.com/index/introducing-openai-japan"
+    },
+    {
+      "captured_at": 1786271625,
+      "published_at": 1712731940,
+      "source": "semianalysis",
+      "title": "Nvidia Blackwell Perf TCO Analysis - B100 vs B200 vs GB200NVL72",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-blackwell-perf-tco-analysis"
     },
     {
       "captured_at": 1785624320,
@@ -9385,6 +9560,13 @@
       "source": "openai",
       "title": "Customizing models for legal professionals",
       "url": "https://openai.com/index/harvey"
+    },
+    {
+      "captured_at": 1786271835,
+      "published_at": 1712097295,
+      "source": "semianalysis",
+      "title": "Is Intel Back? Foundry & Product Resurgence Measured",
+      "url": "https://newsletter.semianalysis.com/p/is-intel-back-foundry-and-product"
     },
     {
       "captured_at": 1785623968,
@@ -9413,6 +9595,13 @@
       "source": "dwarkesh",
       "title": "Sholto Douglas & Trenton Bricken - How to Build & Understand GPT-7's Mind",
       "url": "https://www.dwarkesh.com/p/sholto-douglas-trenton-bricken"
+    },
+    {
+      "captured_at": 1786272058,
+      "published_at": 1711365115,
+      "source": "semianalysis",
+      "title": "Nvidia’s Optical Boogeyman – NVL72, Infiniband Scale Out, 800G & 1.6T Ramp",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-optical-boogeyman-nvl72-infiniband"
     },
     {
       "captured_at": 1785819475,
@@ -9534,11 +9723,39 @@
       "url": "https://www.anthropic.com/news/google-vertex-general-availability"
     },
     {
+      "captured_at": 1786272274,
+      "published_at": 1710763959,
+      "source": "semianalysis",
+      "title": "Nvidia B100, B200, GB200 - COGS, Pricing, Margins, Ramp - Oberon, Umbriel, Miranda",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-b100-b200-gb200-cogs-pricing"
+    },
+    {
       "captured_at": 1785620755,
       "published_at": 1710745200,
       "source": "openai",
       "title": "Embedding AI into developer software",
       "url": "https://openai.com/index/jetbrains"
+    },
+    {
+      "captured_at": 1786272428,
+      "published_at": 1710688759,
+      "source": "semianalysis",
+      "title": "Astera Labs IPO - The Next Connectivity Superhero or Steamrolled By Competition?",
+      "url": "https://newsletter.semianalysis.com/p/astera-labs-ipo-the-next-connectivity"
+    },
+    {
+      "captured_at": 1786272677,
+      "published_at": 1710563204,
+      "source": "semianalysis",
+      "title": "CXL Is Dead In The AI Era",
+      "url": "https://newsletter.semianalysis.com/p/cxl-is-dead-in-the-ai-era"
+    },
+    {
+      "captured_at": 1786272888,
+      "published_at": 1710351336,
+      "source": "semianalysis",
+      "title": "AI Datacenter Energy Dilemma - Race for AI Datacenter Space",
+      "url": "https://newsletter.semianalysis.com/p/ai-datacenter-energy-dilemma-race"
     },
     {
       "captured_at": 1785881592,
@@ -9940,6 +10157,13 @@
       "url": "https://www.dwarkesh.com/p/patrick-collison"
     },
     {
+      "captured_at": 1786273118,
+      "published_at": 1708512293,
+      "source": "semianalysis",
+      "title": "Groq Inference Tokenomics: Speed, But At What Cost?",
+      "url": "https://newsletter.semianalysis.com/p/groq-inference-tokenomics-speed-but"
+    },
+    {
       "captured_at": 1786103730,
       "published_at": 1708041600,
       "source": "anthropic",
@@ -10206,6 +10430,34 @@
       "url": "https://openai.com/index/how-openai-is-approaching-2024-worldwide-elections"
     },
     {
+      "captured_at": 1786273328,
+      "published_at": 1707459876,
+      "source": "semianalysis",
+      "title": "Hybrid Bonding Process Flow - Advanced Packaging Part 5",
+      "url": "https://newsletter.semianalysis.com/p/hybrid-bonding-process-flow-advanced"
+    },
+    {
+      "captured_at": 1786273545,
+      "published_at": 1706995958,
+      "source": "semianalysis",
+      "title": "Datacenter Industry Model",
+      "url": "https://newsletter.semianalysis.com/p/datacenter-model"
+    },
+    {
+      "captured_at": 1786273694,
+      "published_at": 1706992784,
+      "source": "semianalysis",
+      "title": "Compliance Policies",
+      "url": "https://newsletter.semianalysis.com/p/semianalysis-compliance-policies"
+    },
+    {
+      "captured_at": 1786273841,
+      "published_at": 1706765727,
+      "source": "semianalysis",
+      "title": "Accelerator Industry Model",
+      "url": "https://newsletter.semianalysis.com/p/accelerator-model"
+    },
+    {
       "captured_at": 1786210195,
       "published_at": 1706713236,
       "source": "dwarkesh",
@@ -10402,6 +10654,20 @@
       "url": "https://openai.com/index/khan-academy"
     },
     {
+      "captured_at": 1786273990,
+      "published_at": 1705016066,
+      "source": "semianalysis",
+      "title": "Neural Network Quantization & Number Formats From First Principles",
+      "url": "https://newsletter.semianalysis.com/p/neural-network-quantization-and-number"
+    },
+    {
+      "captured_at": 1786274215,
+      "published_at": 1704315337,
+      "source": "semianalysis",
+      "title": "Intel GenAI For Yield, TSMC CFET & 3D Stacking, AMD 3D Device Modeling, Applied Materials Material Innovation, SK Hynix HBM4, Micron 3D DRAM & FeRAM, Hybrid Bonding vs TCB - IEDM 2023",
+      "url": "https://newsletter.semianalysis.com/p/intel-genai-for-yield-tsmc-cfet-and"
+    },
+    {
       "captured_at": 1786166925,
       "published_at": 1703598466,
       "source": "dwarkesh",
@@ -10416,11 +10682,39 @@
       "url": "https://www.anthropic.com/news/expanded-legal-protections-api-improvements"
     },
     {
+      "captured_at": 1786274425,
+      "published_at": 1702933528,
+      "source": "semianalysis",
+      "title": "Inference Race To The Bottom - Make It Up On Volume?",
+      "url": "https://newsletter.semianalysis.com/p/inference-race-to-the-bottom-make"
+    },
+    {
       "captured_at": 1785629045,
       "published_at": 1702512000,
       "source": "openai",
       "title": "Introducing Superalignment",
       "url": "https://openai.com/index/introducing-superalignment"
+    },
+    {
+      "captured_at": 1786274630,
+      "published_at": 1702309067,
+      "source": "semianalysis",
+      "title": "ASML Dilemma: High-NA EUV is Worse vs Low-NA EUV Multi-Patterning",
+      "url": "https://newsletter.semianalysis.com/p/asml-dilemma-high-na-euv-is-worse"
+    },
+    {
+      "captured_at": 1786274852,
+      "published_at": 1701892889,
+      "source": "semianalysis",
+      "title": "AMD MI300 Performance - Faster Than H100, But How Much?",
+      "url": "https://newsletter.semianalysis.com/p/amd-mi300-performance-faster-than"
+    },
+    {
+      "captured_at": 1786275062,
+      "published_at": 1701692529,
+      "source": "semianalysis",
+      "title": "GPU Cloud Economics Explained – The Hidden Truth",
+      "url": "https://newsletter.semianalysis.com/p/gpu-cloud-economics-explained-the"
     },
     {
       "captured_at": 1786210839,
@@ -10451,6 +10745,20 @@
       "url": "https://www.anthropic.com/news/claude-2-1"
     },
     {
+      "captured_at": 1786275232,
+      "published_at": 1700477831,
+      "source": "semianalysis",
+      "title": "Microsoft Swallows OpenAI’s Core Team – GPU Capacity, Incentive Structure, Intellectual Property, OpenAI Rump State",
+      "url": "https://newsletter.semianalysis.com/p/microsoft-swallows-openais-core-team"
+    },
+    {
+      "captured_at": 1786275402,
+      "published_at": 1700064574,
+      "source": "semianalysis",
+      "title": "Microsoft Infrastructure - AI & CPU Custom Silicon Maia 100, Athena, Cobalt 100",
+      "url": "https://newsletter.semianalysis.com/p/microsoft-infrastructure-ai-and-cpu"
+    },
+    {
       "captured_at": 1786211470,
       "published_at": 1700061274,
       "source": "dwarkesh",
@@ -10458,11 +10766,25 @@
       "url": "https://www.dwarkesh.com/p/dominic-cummings"
     },
     {
+      "captured_at": 1786275608,
+      "published_at": 1699525109,
+      "source": "semianalysis",
+      "title": "Nvidia's New China AI Chips Circumvent US Restrictions | H20 Faster Than H100 | Huawei Ascend 910B",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-new-china-ai-chips-circumvent"
+    },
+    {
       "captured_at": 1786103383,
       "published_at": 1699142400,
       "source": "anthropic",
       "title": "Thoughts on the US Executive Order, G7 Code of Conduct, and Bletchley Park Summit",
       "url": "https://www.anthropic.com/news/policy-recap-q4-2023"
+    },
+    {
+      "captured_at": 1786275782,
+      "published_at": 1698823140,
+      "source": "semianalysis",
+      "title": "AMD MI300 Ramp, GPT-4 Performance, ASP & Volumes",
+      "url": "https://newsletter.semianalysis.com/p/amd-mi300-ramp-gpt-4-performance"
     },
     {
       "captured_at": 1786211693,
@@ -10500,11 +10822,25 @@
       "url": "https://openai.com/index/distill"
     },
     {
+      "captured_at": 1786275966,
+      "published_at": 1698142692,
+      "source": "semianalysis",
+      "title": "Wafer Wars: Deciphering Latest Restrictions On AI And Semiconductor Manufacturing",
+      "url": "https://newsletter.semianalysis.com/p/wafer-wars-deciphering-latest-restrictions"
+    },
+    {
       "captured_at": 1785712321,
       "published_at": 1697698800,
       "source": "openai",
       "title": "Special projects",
       "url": "https://openai.com/index/special-projects"
+    },
+    {
+      "captured_at": 1786276180,
+      "published_at": 1697401955,
+      "source": "semianalysis",
+      "title": "Going Vertical: Gate All Around, 3D DRAM, 3D NAND - Kokusai Electric IPO",
+      "url": "https://newsletter.semianalysis.com/p/going-vertical-gate-all-around-3d"
     },
     {
       "captured_at": 1786212154,
@@ -10514,11 +10850,39 @@
       "url": "https://www.dwarkesh.com/p/grant-sanderson"
     },
     {
+      "captured_at": 1786276388,
+      "published_at": 1696912424,
+      "source": "semianalysis",
+      "title": "Nvidia’s Plans To Crush Competition – B100, “X100”, H200, 224G SerDes, OCS, CPO, PCIe 7.0, HBM3E",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-plans-to-crush-competition"
+    },
+    {
+      "captured_at": 1786276605,
+      "published_at": 1696467282,
+      "source": "semianalysis",
+      "title": "AI Doomer vs Techno-Optimist: Social Fabric, AI Girlfriends, Mass Media",
+      "url": "https://newsletter.semianalysis.com/p/ai-doomer-vs-techno-optimist-social"
+    },
+    {
       "captured_at": 1786233043,
       "published_at": 1696427007,
       "source": "dwarkesh",
       "title": "Sarah C. M. Paine - How Xi & Putin Think: Maritime vs Continental Powers & The Wars of Asia",
       "url": "https://www.dwarkesh.com/p/sarah-paine"
+    },
+    {
+      "captured_at": 1786276818,
+      "published_at": 1696207495,
+      "source": "semianalysis",
+      "title": "Amazon Anthropic: Poison Pill or Empire Strikes Back",
+      "url": "https://newsletter.semianalysis.com/p/amazon-anthropic-poison-pill-or-empire"
+    },
+    {
+      "captured_at": 1786276989,
+      "published_at": 1695801738,
+      "source": "semianalysis",
+      "title": "Nvidia Buys Illumina? The AI Foundry for Healthcare – The Hardware of Life",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-buys-illumina-the-ai-foundry"
     },
     {
       "captured_at": 1785971043,
@@ -10542,11 +10906,25 @@
       "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy"
     },
     {
+      "captured_at": 1786277213,
+      "published_at": 1694671713,
+      "source": "semianalysis",
+      "title": "Arm and a Leg: Arm's Quest To Extract Their True Value",
+      "url": "https://newsletter.semianalysis.com/p/arm-and-a-leg-arms-quest-to-extract"
+    },
+    {
       "captured_at": 1785971674,
       "published_at": 1694649600,
       "source": "anthropic",
       "title": "Anthropic partners with BCG",
       "url": "https://www.anthropic.com/news/anthropic-bcg"
+    },
+    {
+      "captured_at": 1786277420,
+      "published_at": 1694502849,
+      "source": "semianalysis",
+      "title": "China AI & Semiconductors Rise: US Sanctions Have Failed",
+      "url": "https://newsletter.semianalysis.com/p/china-ai-and-semiconductors-rise"
     },
     {
       "captured_at": 1786076428,
@@ -10556,11 +10934,53 @@
       "url": "https://www.anthropic.com/news/claude-pro"
     },
     {
+      "captured_at": 1786277624,
+      "published_at": 1693553883,
+      "source": "semianalysis",
+      "title": "TPUv5e: The New Benchmark in Cost-Efficient Inference and Training for <200B Parameter Models",
+      "url": "https://newsletter.semianalysis.com/p/tpuv5e-the-new-benchmark-in-cost"
+    },
+    {
+      "captured_at": 1786277831,
+      "published_at": 1693430167,
+      "source": "semianalysis",
+      "title": "Broadcom’s Google TPU Revenue Explosion, Networking Boom, VMWare Integration",
+      "url": "https://newsletter.semianalysis.com/p/broadcoms-google-tpu-revenue-explosion"
+    },
+    {
+      "captured_at": 1786278040,
+      "published_at": 1693180935,
+      "source": "semianalysis",
+      "title": "Google Gemini Eats The World – Gemini Smashes GPT-4 By 5X, The GPU-Poors",
+      "url": "https://newsletter.semianalysis.com/p/google-gemini-eats-the-world-gemini"
+    },
+    {
+      "captured_at": 1786278192,
+      "published_at": 1692816105,
+      "source": "semianalysis",
+      "title": "Nvidia's Optical Ascent: >$1B Revenue; The Missing 800G Ramp; AI Head-Fakes",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-optical-ascent-1b-revenue"
+    },
+    {
+      "captured_at": 1786278398,
+      "published_at": 1692555179,
+      "source": "semianalysis",
+      "title": "Nvidia’s Ramp – Volume, ASP, Cloud Pricing, Margins, EPS, Cashflow, China, Competition",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-ramp-volume-asp-cloud-pricing"
+    },
+    {
       "captured_at": 1786212464,
       "published_at": 1691502007,
       "source": "dwarkesh",
       "title": "Dario Amodei (Anthropic CEO) - Scaling, Alignment, & AI Progress",
       "url": "https://www.dwarkesh.com/p/dario-amodei"
+    },
+    {
+      "captured_at": 1786278583,
+      "published_at": 1690872660,
+      "source": "semianalysis",
+      "title": "Energizing AI: Power Delivery Competition Heats Up Vicor, MPS, Delta, ADI, Renesas, Infineon",
+      "url": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
     },
     {
       "captured_at": 1786100305,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786264986,
+  "generated_at_unix": 1786280858,
   "source": "SemiAnalysis newsletter",
   "capture_runs": [
     "semianalysis"
@@ -12,10 +12,10 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 9,
-    "articles": 4,
+    "videos": 10,
+    "articles": 5,
     "statuses": {
-      "pending_download": 9
+      "pending_download": 10
     }
   },
   "items": [
@@ -43,6 +43,33 @@
           "capture_run": "semianalysis",
           "capture_page": "crawls/1786244832/pages/000023-newsletter.semianalysis.com-p-nvidia-the-inference-kingdom-expands",
           "capture_started_at": 1786249945
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "253e1c2c-c9e7-4608-8845-e6ce1b0ef03e",
+      "status": "pending_download",
+      "import_directory": "media/substack/253e1c2c-c9e7-4608-8845-e6ce1b0ef03e",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/the-memory-wall",
+          "title": "The Memory Wall: Past, Present, and Future of DRAM",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/148186625/253e1c2c-c9e7-4608-8845-e6ce1b0ef03e/transcoded-00001.png?refresh=Sun Aug 09 2026 05:56:20 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/253e1c2c-c9e7-4608-8845-e6ce1b0ef03e/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/253e1c2c-c9e7-4608-8845-e6ce1b0ef03e/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786266816/pages/000013-newsletter.semianalysis.com-p-the-memory-wall",
+          "capture_started_at": 1786269379
         }
       ]
     },
