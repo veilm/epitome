@@ -59,6 +59,16 @@ deletion-history workflows are explicitly designed.
         captions or transcripts, and important outbound links.
   - [ ] Produce model-readable transcripts and article-style summaries.
 - [ ] **Substack and newsletters**
+  - [ ] Inventory and preserve Jack Clark's **Import AI** newsletter at
+        `importai.substack.com`, including its archive, post dates, attachments,
+        outbound research links, and any email-only differences. Treat it as a
+        first-party writer/newsletter scope related to—but distinct from—the
+        official Anthropic company archive.
+  - [ ] Preserve both Scott Alexander publication eras as separate, linked
+        sources: the historical **Slate Star Codex** archive at
+        `slatestarcodex.com` and its successor **Astral Codex Ten** at
+        `astralcodexten.com`. Inventory canonical posts, archives, comments,
+        media, cross-links, and redirects before approving either crawl.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

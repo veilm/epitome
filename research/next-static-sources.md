@@ -88,3 +88,21 @@ large first-party document/link collection. Preserve it in reviewed families
 rather than treating every internal link as one immediate crawl. Its static
 presentation makes it tractable after inventorying, but its breadth puts it
 behind the smaller AI 2027 and Karpathy scopes.
+
+## Import AI
+
+`https://importai.substack.com/` is Jack Clark's current Import AI newsletter
+home. Chromium exposed the canonical URL and the publication title “Import AI |
+Jack Clark | Substack.” Preserve it as a distinct writer/newsletter source with
+an explicit relationship to Anthropic, not as part of the official company-site
+inventory. Review the Substack archive, feeds, attachments, outbound papers,
+and possible email/public-body differences before defining its batch.
+
+## Scott Alexander's two archives
+
+`https://slatestarcodex.com/` remains the historical Slate Star Codex site.
+`https://www.astralcodexten.com/` is the successor Astral Codex Ten Substack,
+whose rendered canonical metadata identifies Scott Alexander. They should be
+inventoried and archived separately, with cross-era redirects and links
+recorded so the public catalog can present the relationship without conflating
+their identities.
