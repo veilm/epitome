@@ -124,25 +124,36 @@ a{color:var(--link);text-decoration:none}a:visited{color:var(--visited)}
 a:hover{text-decoration:underline}
 .site-header{height:74px;display:flex;align-items:center;gap:2rem;max-width:1352px;
 margin:0 auto;padding:8px 28px;border-bottom:1px solid transparent}
-.brand{display:flex;align-items:center;gap:10px;min-width:205px;color:var(--ink)!important}
-.brand:hover{text-decoration:none}.brand-name{display:block;font:24px/1 Georgia,serif;
-font-variant:small-caps;letter-spacing:.04em}.brand-tagline{display:block;margin-top:3px;
-color:var(--quiet);font:10px/1.2 Georgia,serif;letter-spacing:.03em}
-.crystal{position:relative;width:42px;height:42px;perspective:100px;
+.brand{display:flex;align-items:center;gap:10px;min-width:150px;color:var(--ink)!important}
+.brand:hover{text-decoration:none}.brand-name{display:block;font:24px/1 Georgia,serif}
+.crystal{position:relative;display:block;width:42px;height:42px;perspective:100px;
 transform-style:preserve-3d;filter:drop-shadow(0 1px 1px #8ea6c4)}
-.crystal i{position:absolute;inset:7px 6px;background:linear-gradient(135deg,#fff 15%,#7baee8 52%,#3056a5);
+.crystal-facet i{position:absolute;inset:7px 6px;background:linear-gradient(135deg,#fff 15%,#7baee8 52%,#3056a5);
 clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.62;transform-origin:50% 64%;
 mix-blend-mode:multiply}
-.crystal i:nth-child(1){animation:orbit-a 9s linear infinite}
-.crystal i:nth-child(2){background:linear-gradient(135deg,#d9ffff,#5cc7c2 58%,#315fa5);
+.crystal-facet i:nth-child(1){animation:orbit-a 9s linear infinite}
+.crystal-facet i:nth-child(2){background:linear-gradient(135deg,#d9ffff,#5cc7c2 58%,#315fa5);
 animation:orbit-b 11s linear infinite}
-.crystal i:nth-child(3){background:linear-gradient(135deg,#fff,#b8a0e8 58%,#3a67a8);
+.crystal-facet i:nth-child(3){background:linear-gradient(135deg,#fff,#b8a0e8 58%,#3a67a8);
 animation:orbit-c 13s linear infinite}
-.crystal:after{content:"";position:absolute;left:18px;top:17px;width:7px;height:7px;
-background:#fff;transform:rotate(45deg);box-shadow:0 0 8px #fff}
-@keyframes orbit-a{to{transform:rotateZ(360deg) rotateX(58deg)}}
-@keyframes orbit-b{from{transform:rotateZ(28deg) rotateY(62deg)}to{transform:rotateZ(-332deg) rotateY(62deg)}}
-@keyframes orbit-c{from{transform:rotateZ(66deg) rotateX(72deg)}to{transform:rotateZ(426deg) rotateX(72deg)}}
+@keyframes orbit-a{from{transform:rotateX(58deg) rotateZ(0)}to{transform:rotateX(58deg) rotateZ(360deg)}}
+@keyframes orbit-b{from{transform:rotateY(62deg) rotateZ(28deg)}to{transform:rotateY(62deg) rotateZ(388deg)}}
+@keyframes orbit-c{from{transform:rotateX(72deg) rotateZ(66deg)}to{transform:rotateX(72deg) rotateZ(426deg)}}
+.crystal-prism i{position:absolute;inset:6px;background:linear-gradient(145deg,#fff,#83b9f0 45%,#345aa8);
+clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);opacity:.62;mix-blend-mode:multiply}
+.crystal-prism i:nth-child(1){animation:prism-a 10s linear infinite}
+.crystal-prism i:nth-child(2){background:linear-gradient(145deg,#e9ffff,#5bc8bf,#3a5ca8);animation:prism-b 14s linear infinite}
+.crystal-prism i:nth-child(3){inset:11px;background:linear-gradient(145deg,#fff,#baa3e7,#315fa5);animation:prism-c 8s linear infinite}
+@keyframes prism-a{from{transform:rotate(0) scaleX(.72)}to{transform:rotate(360deg) scaleX(.72)}}
+@keyframes prism-b{from{transform:rotate(45deg) scaleY(.72)}to{transform:rotate(405deg) scaleY(.72)}}
+@keyframes prism-c{from{transform:rotate(90deg)}to{transform:rotate(450deg)}}
+.crystal-orbit i{position:absolute;inset:8px 2px;border:2px solid #527bb9;border-radius:50%;opacity:.75}
+.crystal-orbit i:nth-child(1){animation:ring-a 9s linear infinite}
+.crystal-orbit i:nth-child(2){border-color:#4ab7ae;animation:ring-b 12s linear infinite}
+.crystal-orbit i:nth-child(3){border-color:#9b82cf;animation:ring-c 15s linear infinite}
+@keyframes ring-a{from{transform:rotate(0) scaleY(.38)}to{transform:rotate(360deg) scaleY(.38)}}
+@keyframes ring-b{from{transform:rotate(60deg) scaleY(.38)}to{transform:rotate(420deg) scaleY(.38)}}
+@keyframes ring-c{from{transform:rotate(120deg) scaleY(.38)}to{transform:rotate(480deg) scaleY(.38)}}
 .site-search{display:flex;width:min(475px,40vw);height:34px}
 .site-search input{min-width:0;flex:1;border:1px solid #72777d;padding:6px 10px;
 font:14px Arial,sans-serif}.site-search button{border:1px solid #72777d;border-left:0;
@@ -198,8 +209,10 @@ border-bottom:1px solid var(--line);padding:0 0 7px;margin-bottom:0}.feed-toolba
 .feed-count{color:var(--quiet);font-size:12px}.feed{list-style:none;margin:0;padding:0}
 .feed-item{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;padding:14px 4px;
 border-bottom:1px solid var(--faint)}.feed-item[hidden]{display:none}
-.source-mark{display:flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #72777d;
+.source-mark{position:relative;display:flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #72777d;
 background:#fff;color:#202122;font:700 11px/1 Arial,sans-serif;letter-spacing:-.02em;border-radius:2px}
+.source-mark img{position:absolute;inset:0;width:100%;height:100%;padding:3px;object-fit:contain;background:#fff;border-radius:1px}
+.source-andrej-karpathy img,.source-peter-steinberger img{padding:0;object-fit:cover}
 .source-openai{background:#e7f5ef}.source-anthropic{background:#f4eee7}.source-claude{background:#f8e7db}
 .source-dario-amodei{background:#e9edf7}.source-andrej-karpathy{background:#f0e9f5}
 .source-peter-steinberger{background:#e7f1f7}.source-dwarkesh{background:#f6efd9}.source-semianalysis{background:#ebeff1}
@@ -208,13 +221,18 @@ background:#fff;color:#202122;font:700 11px/1 Arial,sans-serif;letter-spacing:-.
 .summary-link{display:inline-block;border:1px solid #a2a9b1;background:#f8f9fa;padding:0 5px;font-weight:700}
 .undated-note{max-width:46rem;color:var(--quiet);font-size:12px;margin:8px 0 0}
 .empty-state{padding:30px 4px;color:var(--quiet)}
-@media(prefers-reduced-motion:reduce){.crystal i{animation:none!important}}
+.logo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0}
+.logo-card{border:1px solid var(--line);background:#f8f9fa;padding:24px;text-align:center}
+.logo-card .crystal{margin:18px auto 30px;transform:scale(1.7)}
+.logo-card h2{font:21px/1.3 Georgia,serif;margin:12px 0 4px}.logo-card p{margin:0;color:var(--quiet)}
+@media(prefers-reduced-motion:reduce){.crystal i{animation-play-state:paused!important}}
 @media(max-width:800px){.site-header{height:auto;flex-wrap:wrap;padding:10px 18px;gap:8px 18px}
 .brand{min-width:0}.site-search{order:3;width:100%}.site-links{font-size:12px}
 .page-shell{padding:14px 18px 36px}
 .notice{display:block;padding:12px 14px}.notice .symbol{display:none}.stats{flex-wrap:wrap;gap:.3rem 1rem}
 .summary-list{columns:1}.article-layout{display:block}.infobox{margin:18px 0}.tabs-right{display:none}
-.catalog-layout{display:block}.filters{position:static;margin-bottom:20px}.feed-title{font-size:17px}}
+.catalog-layout{display:block}.filters{position:static;margin-bottom:20px}.feed-title{font-size:17px}
+.logo-grid{grid-template-columns:1fr}}
 """
 
 
@@ -224,13 +242,12 @@ def _page(title: str, body: str) -> str:
 <title>{escape(title)} — Epitome</title><link rel="stylesheet" href="/style.css">
 </head><body><header class="site-header">
 <a class="brand" href="/" aria-label="Epitome home">
-<span class="crystal" aria-hidden="true"><i></i><i></i><i></i></span>
-<span><span class="brand-name">Epitome</span>
-<span class="brand-tagline">A living archive of machine intelligence</span></span></a>
+<span class="crystal crystal-facet" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="brand-name">Epitome</span></a>
 <form class="site-search" action="/" method="get">
 <input type="search" name="q" placeholder="Search Epitome" aria-label="Search Epitome">
 <button type="submit">Search</button></form>
-<nav class="site-links" aria-label="Site"><a href="/">Catalog</a></nav></header>
+<nav class="site-links" aria-label="Site"><a href="/logo-variants.html">Logo variants</a></nav></header>
 <div class="page-shell">{body}</div>
 <footer class="site-footer">Epitome preserves source material and concise,
 model-readable summaries for future research.</footer>
@@ -369,7 +386,15 @@ def build_summary_site(
         url = str(page["url"])
         source_id = str(page.get("source", "other"))
         used_sources.add(source_id)
-        source_name = str(source_records.get(source_id, {}).get("name", source_id))
+        source_record = source_records.get(source_id, {})
+        source_name = str(source_record.get("name", source_id))
+        fallback = escape(initials.get(source_id, source_name[:2].upper()))
+        logo_url = source_record.get("logo_url")
+        logo = (
+            f'<img src="{escape(str(logo_url), quote=True)}" alt="" '
+            'loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'
+            if logo_url else ""
+        )
         title = str(page.get("title") or url)
         published_at = page.get("published_at")
         if isinstance(published_at, int):
@@ -389,7 +414,7 @@ def build_summary_site(
             f'''<li class="feed-item" data-source="{escape(source_id, quote=True)}"
 data-summary="{"yes" if summary else "no"}" data-published="{sort_date}"
 data-title="{escape(title.lower(), quote=True)}"><span class="source-mark source-{escape(source_id, quote=True)}"
-aria-hidden="true">{escape(initials.get(source_id, source_name[:2].upper()))}</span><div>
+aria-hidden="true"><span>{fallback}</span>{logo}</span><div>
 <h3 class="feed-title"><a href="{escape(url, quote=True)}" target="_blank"
 rel="noopener noreferrer">{escape(title)}</a></h3><div class="feed-meta">
 <span>{escape(source_name)}</span><span aria-hidden="true">·</span><time>{date_display}</time>
@@ -429,6 +454,23 @@ source metadata. Pages without a reliable publication date appear after dated en
 </section></div></main>"""
     (output_dir / "index.html").write_text(
         _page("Archived publications", index_body),
+        encoding="utf-8",
+    )
+    variants_body = """
+<main><a class="article-back" href="/">← Archived publications</a>
+<h1 class="page-title">Epitome crystal variants</h1>
+<div class="page-tabs"><div class="tabs-left"><span class="selected">Comparison</span></div></div>
+<p class="site-note">Three continuous, code-native marks without a foreground sparkle.</p>
+<section class="logo-grid" aria-label="Logo variants">
+<article class="logo-card"><span class="crystal crystal-facet" aria-hidden="true"><i></i><i></i><i></i></span>
+<h2>Facet</h2><p>Three translucent triangular planes. This is the current header mark.</p></article>
+<article class="logo-card"><span class="crystal crystal-prism" aria-hidden="true"><i></i><i></i><i></i></span>
+<h2>Prism</h2><p>Nested crystalline diamonds with slower counter-rotation.</p></article>
+<article class="logo-card"><span class="crystal crystal-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
+<h2>Orbit</h2><p>Three wireframe planes suggesting a rotating arcane instrument.</p></article>
+</section></main>"""
+    (output_dir / "logo-variants.html").write_text(
+        _page("Crystal variants", variants_body),
         encoding="utf-8",
     )
     return {

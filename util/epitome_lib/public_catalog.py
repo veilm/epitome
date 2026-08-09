@@ -29,9 +29,8 @@ class _HeadMetadataParser(HTMLParser):
         self.meta: dict[str, str] = {}
         self.title_parts: list[str] = []
         self.h1_parts: list[str] = []
-        self.times: list[str] = []
+        self.visible_dates: list[str] = []
         self.json_ld: list[str] = []
-        self.text_dates: list[str] = []
         self._inside_title = False
         self._inside_h1 = False
         self._inside_json_ld = False
@@ -51,7 +50,9 @@ class _HeadMetadataParser(HTMLParser):
         elif tag == "h1" and not self.h1_parts:
             self._inside_h1 = True
         elif tag == "time" and values.get("datetime"):
-            self.times.append(values["datetime"])
+            # Keep fallback dates in document order. Recommendation cards often
+            # contain later <time> tags that must not outrank earlier hero copy.
+            self.visible_dates.append(values["datetime"])
         elif tag == "script" and "ld+json" in values.get("type", "").lower():
             self._inside_json_ld = True
             self._json_parts = []
@@ -85,7 +86,7 @@ class _HeadMetadataParser(HTMLParser):
         if not self._script_depth and not self._style_depth:
             value = _clean_text(data)
             if TEXT_DATE_RE.fullmatch(value):
-                self.text_dates.append(value)
+                self.visible_dates.append(value)
 
 
 def _clean_text(value: str) -> str:
@@ -182,10 +183,9 @@ def extract_page_metadata(html_path: Path, url: str) -> dict[str, object]:
             )
             if title == url and isinstance(item.get("headline"), str):
                 title = _clean_text(item["headline"])
-    published_candidates.extend(parser.times)
     path_parts = [part for part in urlsplit(url).path.split("/") if part]
     if len(path_parts) >= 2:
-        published_candidates.extend(parser.text_dates)
+        published_candidates.extend(parser.visible_dates)
     published_at = next(
         (parsed for value in published_candidates if (parsed := _parse_timestamp(value))),
         None,
@@ -299,9 +299,12 @@ def build_public_catalog(
         reverse=True,
     )
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    public_sources = [
-        {"id": str(source["id"]), "name": str(source["name"])} for source in sources
-    ]
+    public_sources = []
+    for source in sources:
+        record = {"id": str(source["id"]), "name": str(source["name"])}
+        if source.get("logo_url"):
+            record["logo_url"] = str(source["logo_url"])
+        public_sources.append(record)
     output_path.write_text(
         json.dumps({"sources": public_sources, "pages": entries}, ensure_ascii=False, indent=2)
         + "\n",

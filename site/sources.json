@@ -1,12 +1,57 @@
 {
   "sources": [
-    {"id": "openai", "name": "OpenAI", "archive_directory": "openai", "hosts": ["openai.com"], "undated_paths": ["/"]},
-    {"id": "anthropic", "name": "Anthropic", "archive_directory": "anthropic", "hosts": ["anthropic.com"], "title_suffixes": [" | Anthropic", " \\ Anthropic"], "undated_paths": ["/", "/news", "/research"]},
-    {"id": "claude", "name": "Claude", "archive_directory": "claude.com", "hosts": ["claude.com"], "title_suffixes": [" | Claude by Anthropic", " | Claude"], "undated_paths": ["/", "/blog"]},
-    {"id": "dario-amodei", "name": "Dario Amodei", "archive_directory": "dario-amodei", "hosts": ["darioamodei.com"], "title_prefix": "Dario Amodei — ", "undated_paths": ["/"]},
-    {"id": "andrej-karpathy", "name": "Andrej Karpathy", "archive_directory": "andrej-karpathy", "hosts": ["karpathy.github.io"], "undated_paths": ["/"]},
-    {"id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger", "hosts": ["steipete.me"], "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"], "exclude_paths": ["/rss.xml"]},
-    {"id": "dwarkesh", "name": "Dwarkesh Patel", "archive_directory": "dwarkesh", "hosts": ["dwarkesh.com"], "undated_paths": ["/", "/archive", "/podcast"]},
-    {"id": "semianalysis", "name": "SemiAnalysis", "archive_directory": "semianalysis", "hosts": ["semianalysis.com"], "undated_paths": ["/", "/archive"]}
+    {
+      "id": "openai", "name": "OpenAI", "archive_directory": "openai",
+      "hosts": ["openai.com"], "logo_url": "https://openai.com/favicon.svg",
+      "undated_paths": ["/"],
+      "exclude_paths": ["/", "/index/inworld-ai-do-not-publish"]
+    },
+    {
+      "id": "anthropic", "name": "Anthropic", "archive_directory": "anthropic",
+      "hosts": ["anthropic.com"],
+      "logo_url": "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/681d52619fec35886a7f1a70_favicon.png",
+      "title_suffixes": [" | Anthropic", " \\ Anthropic"],
+      "undated_paths": ["/", "/news", "/research"],
+      "exclude_paths": ["/", "/news", "/research", "/careers/jobs"]
+    },
+    {
+      "id": "claude", "name": "Claude", "archive_directory": "claude.com",
+      "hosts": ["claude.com"],
+      "logo_url": "https://cdn.sanity.io/images/4zrzovbb/claude-com/369b14e80ac643cc09dccd581ccb91f82b559190-32x32.png",
+      "title_suffixes": [" | Claude by Anthropic", " | Claude"],
+      "undated_paths": ["/", "/blog"], "exclude_paths": ["/", "/blog"]
+    },
+    {
+      "id": "dario-amodei", "name": "Dario Amodei", "archive_directory": "dario-amodei",
+      "hosts": ["darioamodei.com"],
+      "logo_url": "https://cdn.prod.website-files.com/67e201a6a390d00a0ca1cbf3/67f34ed1b219c58a92e819e1_dario-favicon.png",
+      "title_prefix": "Dario Amodei — ", "undated_paths": ["/"], "exclude_paths": ["/"]
+    },
+    {
+      "id": "andrej-karpathy", "name": "Andrej Karpathy", "archive_directory": "andrej-karpathy",
+      "hosts": ["karpathy.github.io"], "logo_url": "https://karpathy.ai/assets/me_new.jpg",
+      "undated_paths": ["/", "/about", "/feed.xml"],
+      "exclude_paths": ["/", "/about", "/feed.xml"]
+    },
+    {
+      "id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger",
+      "hosts": ["steipete.me"], "logo_url": "https://steipete.me/peter-avatar.jpg",
+      "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"],
+      "exclude_paths": ["/", "/about", "/rss.xml"]
+    },
+    {
+      "id": "dwarkesh", "name": "Dwarkesh Patel", "archive_directory": "dwarkesh",
+      "hosts": ["dwarkesh.com"],
+      "logo_url": "https://substackcdn.com/image/fetch/$s_!ouq6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F2ba3bcc4-643d-4197-98f2-e7439f9ae2d1%2Ffavicon-32x32.png",
+      "undated_paths": ["/", "/about", "/archive", "/feed", "/podcast"],
+      "exclude_paths": ["/", "/about", "/archive", "/feed", "/podcast"]
+    },
+    {
+      "id": "semianalysis", "name": "SemiAnalysis", "archive_directory": "semianalysis",
+      "hosts": ["semianalysis.com"],
+      "logo_url": "https://substackcdn.com/image/fetch/$s_!T08X!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f02aaaa-9a11-47db-8aee-d57188ddabf9%2Ffavicon-32x32.png",
+      "undated_paths": ["/", "/archive", "/feed"],
+      "exclude_paths": ["/", "/archive", "/feed"]
+    }
   ]
 }

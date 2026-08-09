@@ -62,7 +62,11 @@ site. It contains more than one hundred characters and links to the
                 json.dumps(
                     {
                         "sources": [
-                            {"id": "example", "name": "Example source"}
+                            {
+                                "id": "example",
+                                "name": "Example source",
+                                "logo_url": "https://example.com/favicon.png",
+                            }
                         ],
                         "pages": [
                             {
@@ -91,7 +95,10 @@ site. It contains more than one hundred characters and links to the
             article_pages = list((output / "articles").glob("*.html"))
             self.assertIn("Example article", index)
             self.assertIn('class="feed"', index)
-            self.assertIn('class="crystal"', index)
+            self.assertIn('class="crystal crystal-facet"', index)
+            self.assertIn('src="https://example.com/favicon.png"', index)
+            self.assertNotIn("A living archive of machine intelligence", index)
+            self.assertNotIn('href="/">Catalog</a>', index)
             self.assertIn("Archived publications", index)
             self.assertIn('target="_blank"', index)
             self.assertIn('data-source-filter checked', index)
@@ -102,6 +109,10 @@ site. It contains more than one hundred characters and links to the
             article = article_pages[0].read_text(encoding="utf-8")
             self.assertIn("Original article", article)
             self.assertIn('class="infobox"', article)
+            variants = (output / "logo-variants.html").read_text(encoding="utf-8")
+            self.assertIn("Facet", variants)
+            self.assertIn("Prism", variants)
+            self.assertIn("Orbit", variants)
 
 
 if __name__ == "__main__":

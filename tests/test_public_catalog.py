@@ -37,6 +37,18 @@ class PublicCatalogTest(unittest.TestCase):
             self.assertEqual(article["published_at"], 1761004800)
             self.assertIsNone(listing["published_at"])
 
+    def test_visible_date_fallback_preserves_document_order(self):
+        with tempfile.TemporaryDirectory() as temp:
+            page = Path(temp) / "page.html"
+            page.write_text(
+                '<meta property="og:title" content="An article">'
+                '<main><p>October 27, 2025</p></main>'
+                '<aside><time datetime="2026-08-01T00:00">Aug 1, 2026</time></aside>',
+                encoding="utf-8",
+            )
+            metadata = extract_page_metadata(page, "https://example.com/news/article")
+            self.assertEqual(metadata["published_at"], 1761523200)
+
     def test_build_deduplicates_and_ignores_dependency_hosts(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -50,7 +62,9 @@ class PublicCatalogTest(unittest.TestCase):
                                 "name": "Example",
                                 "archive_directory": "example",
                                 "hosts": ["example.com"],
+                                "logo_url": "https://example.com/favicon.png",
                                 "undated_paths": ["/2025/03/04/post"],
+                                "exclude_paths": ["/feed"],
                             }
                         ]
                     }
@@ -86,6 +100,19 @@ class PublicCatalogTest(unittest.TestCase):
                 encoding="utf-8",
             )
             (dependency / "page.html").write_text("<title>Asset</title>", encoding="utf-8")
+            excluded = root / "archive" / "example" / "crawls" / "feed"
+            excluded.mkdir(parents=True)
+            (excluded / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "complete": True,
+                        "requested_url": "https://example.com/feed",
+                        "capture_started_at": 40,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (excluded / "page.html").write_text("<title>Feed XML</title>", encoding="utf-8")
             output = root / "catalog.json"
             result = build_public_catalog(root / "archive", config, output)
             catalog = json.loads(output.read_text(encoding="utf-8"))
@@ -94,7 +121,14 @@ class PublicCatalogTest(unittest.TestCase):
             self.assertIsNone(catalog["pages"][0]["published_at"])
             self.assertNotIn("capture_path", catalog["pages"][0])
             self.assertEqual(
-                catalog["sources"], [{"id": "example", "name": "Example"}]
+                catalog["sources"],
+                [
+                    {
+                        "id": "example",
+                        "name": "Example",
+                        "logo_url": "https://example.com/favicon.png",
+                    }
+                ],
             )
 
 
