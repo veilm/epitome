@@ -184,6 +184,25 @@ https://chunks.example/segment-1.ts?token=abc
         self.assertIn('srcset=""', html)
         self.assertNotIn(resource_path(missing), html)
 
+    def test_svg_image_references_are_localized(self):
+        source = (
+            '<svg><image href="/current.svg"></image>'
+            '<image xlink:href="/legacy.svg"></image></svg>'
+        )
+        html = rewrite_html(
+            source,
+            "https://example.com/article/",
+            CaptureIndex(),
+        )
+        self.assertIn(
+            f'href="{resource_path("https://example.com/current.svg")}"',
+            html,
+        )
+        self.assertIn(
+            f'xlink:href="{resource_path("https://example.com/legacy.svg")}"',
+            html,
+        )
+
     def test_missing_substack_proxy_falls_back_to_captured_original(self):
         original = "https://images.example/full.png"
         proxy = "https://cdn.example/proxy.png"

@@ -34,6 +34,7 @@ FETCH_ATTRIBUTES = {
     "embed": {"src"},
     "iframe": {"src"},
     "img": {"src", "data-src"},
+    "image": {"href", "xlink:href"},
     "input": {"src"},
     "object": {"data"},
     "source": {"src"},
