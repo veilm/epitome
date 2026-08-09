@@ -149,6 +149,8 @@ deletion-history workflows are explicitly designed.
   - [x] Confirm AI 2027's canonical static site and its scenario, summary,
         supplements, about page, PDF, and AI 2040 navigation; prioritize this as
         the easiest next source after SemiAnalysis.
+  - [x] Define the bounded 13-URL English AI 2027 inventory in
+        `sources/ai-2027.txt`, excluding translations and legacy redirect aliases.
   - [ ] Capture and offline-verify the bounded English AI 2027 scope.
   - [ ] AI 2040.
   - [ ] *Situational Awareness* essay series.

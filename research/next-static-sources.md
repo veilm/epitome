@@ -19,10 +19,14 @@ supplements, an about page, a first-party PDF, footnotes, alternate languages,
 and AI 2040. The homepage exposed about 140 same-host links, many of which are
 section anchors or translated variants rather than distinct English documents.
 
-Define a small canonical English inventory before capture: the main scenario,
-summary, research index and individual forecast supplements, about page,
-footnotes where separate, and PDF. Treat translations and AI 2040 as adjacent
-scopes so the first batch remains easy to audit.
+The site does not expose a usable `/sitemap.xml`, so its rendered navigation was
+used as the bounded authority. The resulting 13-URL English inventory is tracked
+in `sources/ai-2027.txt`: the main scenario, summary, research index, five
+forecast supplements, slowdown and race endings, footnotes, about page, and
+PDF. Old `/supplements/<name>` links redirect to the corresponding
+`/research/<name>` pages and are excluded as aliases. Translations and the
+separate `https://ai-2040.com/` site remain adjacent scopes so the first batch is
+easy to audit.
 
 ## Andrej Karpathy
 
