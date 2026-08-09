@@ -84,3 +84,11 @@ util/inventory_embedded_media \
 The raw Substack page state and podcast feed also contain audio, captions, and
 transcription metadata. Inventorying those is required before a large Dwarkesh
 batch; the current hosted-media ledger covers video elements only.
+
+## AI 2027 media
+
+[`ai-2027-media.json`](ai-2027-media.json) records the narrated-scenario MP3,
+its podcast distribution links, and the companion YouTube video exposed by the
+validated homepage. Imports are relative to `/mnt2/capsule/epitome/ai-2027/`;
+the page capture remains useful and offline without silently claiming those
+large media items are complete.

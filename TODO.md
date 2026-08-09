@@ -151,6 +151,8 @@ deletion-history workflows are explicitly designed.
         the easiest next source after SemiAnalysis.
   - [x] Define the bounded 13-URL English AI 2027 inventory in
         `sources/ai-2027.txt`, excluding translations and legacy redirect aliases.
+  - [x] Capture and offline-verify the long AI 2027 homepage pilot; localize SVG
+        graph images and inventory its narrated audio plus YouTube companion.
   - [ ] Capture and offline-verify the bounded English AI 2027 scope.
   - [ ] AI 2040.
   - [ ] *Situational Awareness* essay series.

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786301074,
+  "source": "AI 2027",
+  "source_archive": "/mnt2/capsule/epitome/ai-2027",
+  "summary": {
+    "items": 2,
+    "statuses": {
+      "pending_download": 2
+    }
+  },
+  "items": [
+    {
+      "provider": "direct-audio",
+      "media_id": "scenario-narration",
+      "status": "pending_download",
+      "content_type": "audio/mpeg",
+      "source_url": "https://ghjyjqzwz4.ufs.sh/f/9qHa0cBclQ7sd8I4JOvWfxDbCA5lLh9PFsygwTqB3HveZ1jd",
+      "import_directory": "media/audio/scenario-narration",
+      "alternate_sources": [
+        "https://open.spotify.com/show/0pVfkdbpQWM9sKlhzpbQq6",
+        "https://podcasts.apple.com/podcast/id1806225838",
+        "https://feeds.buzzsprout.com/2466760.rss"
+      ],
+      "articles": [
+        {
+          "url": "https://ai-2027.com/",
+          "title": "AI 2027",
+          "role": "Narrated scenario",
+          "capture_page": "validation/1786300694-home"
+        }
+      ],
+      "notes": "The browser observed an HTTP 206 audio response, but its response body timed out. Import and duration-check a complete rendition through the external media downloader."
+    },
+    {
+      "provider": "youtube",
+      "media_id": "5KVDDfAkRgc",
+      "status": "pending_download",
+      "watch_url": "https://www.youtube.com/watch?v=5KVDDfAkRgc",
+      "import_directory": "media/youtube/5KVDDfAkRgc",
+      "articles": [
+        {
+          "url": "https://ai-2027.com/",
+          "title": "AI 2027",
+          "role": "Watch companion",
+          "capture_page": "validation/1786300694-home"
+        }
+      ]
+    }
+  ]
+}

@@ -28,6 +28,33 @@ PDF. Old `/supplements/<name>` links redirect to the corresponding
 separate `https://ai-2040.com/` site remain adjacent scopes so the first batch is
 easy to audit.
 
+### Homepage validation
+
+The long homepage was captured through CDP at:
+
+`/mnt2/capsule/epitome/ai-2027/validation/1786300694-home`
+
+The manifest is complete and its tab closed. The run retained a 1.9 MB rendered
+document and 114 responses (18,873,312 body bytes); bounded asset completion
+recovered all 75 missing references with two-second spacing. Primary and
+all-image audits report zero omitted ordinary images.
+
+The first offline screenshot nevertheless exposed three broken timeline icons:
+they were SVG `<image href>` resources, which the older replay rewriter did not
+localize and the ordinary `<img>` audit could not see. Replay now localizes both
+`href` and legacy `xlink:href` on SVG image elements, with a regression test.
+The corrected desktop replay contains about 50,000 visible characters, 17
+ordinary images, six localized SVG image instances, and zero broken ordinary
+images. Its strict audit recorded 26 requests, all to the temporary local replay
+server, and the audit tab was closed.
+
+The page also offers a narrated-scenario MP3 and links to one YouTube companion
+video. The initial MP3 range response timed out during network-body capture, so
+both are explicit external imports in `inventories/ai-2027-media.json` rather
+than being treated as complete page assets. The page archive is otherwise ready
+for its small batch after SemiAnalysis; use the validated longer page budget
+(120 scrolls and 120 seconds) for the scenario and endings.
+
 ## Andrej Karpathy
 
 `https://karpathy.ai/` is a distinct first-party property from the completed
