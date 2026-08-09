@@ -8,17 +8,17 @@
     {
       "id": "anthropic",
       "name": "Anthropic",
-      "logo_url": "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/681d52619fec35886a7f1a70_favicon.png"
+      "logo_url": "https://cdn.prod.website-files.com/67ce28cfec624e2b733f8a52/67d31dd7aa394792257596c5_webclip.png"
     },
     {
       "id": "claude",
       "name": "Claude",
-      "logo_url": "https://cdn.sanity.io/images/4zrzovbb/claude-com/369b14e80ac643cc09dccd581ccb91f82b559190-32x32.png"
+      "logo_url": "https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"
     },
     {
       "id": "dario-amodei",
       "name": "Dario Amodei",
-      "logo_url": "https://cdn.prod.website-files.com/67e201a6a390d00a0ca1cbf3/67f34ed1b219c58a92e819e1_dario-favicon.png"
+      "logo_url": "https://cdn.prod.website-files.com/67e201a6a390d00a0ca1cbf3/67f34ed4b5b7dea3e6bcdb2d_dario-webclip.png"
     },
     {
       "id": "andrej-karpathy",
@@ -33,12 +33,12 @@
     {
       "id": "dwarkesh",
       "name": "Dwarkesh Patel",
-      "logo_url": "https://substackcdn.com/image/fetch/$s_!ouq6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F2ba3bcc4-643d-4197-98f2-e7439f9ae2d1%2Ffavicon-32x32.png"
+      "logo_url": "https://substackcdn.com/image/fetch/$s_!HtI2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F2ba3bcc4-643d-4197-98f2-e7439f9ae2d1%2Fapple-touch-icon-1024x1024.png"
     },
     {
       "id": "semianalysis",
       "name": "SemiAnalysis",
-      "logo_url": "https://substackcdn.com/image/fetch/$s_!T08X!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f02aaaa-9a11-47db-8aee-d57188ddabf9%2Ffavicon-32x32.png"
+      "logo_url": "https://substackcdn.com/image/fetch/$s_!Dypw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f02aaaa-9a11-47db-8aee-d57188ddabf9%2Fapple-touch-icon-1024x1024.png"
     }
   ],
   "pages": [
@@ -11558,6 +11558,20 @@
       "url": "https://www.dwarkesh.com/p/agustin-lebron"
     },
     {
+      "captured_at": 1786301911,
+      "published_at": 1655601041,
+      "source": "semianalysis",
+      "title": "Die Size And Reticle Conundrum – Cost Model With Lithography Scanner Throughput",
+      "url": "https://newsletter.semianalysis.com/p/die-size-and-reticle-conundrum-cost"
+    },
+    {
+      "captured_at": 1786302152,
+      "published_at": 1655488703,
+      "source": "semianalysis",
+      "title": "AMD – To Infinity And Beyond",
+      "url": "https://newsletter.semianalysis.com/p/amd-to-infinity-and-beyond"
+    },
+    {
       "captured_at": 1785836242,
       "published_at": 1655424000,
       "source": "openai",
@@ -11565,11 +11579,39 @@
       "url": "https://openai.com/index/evolution-through-large-models"
     },
     {
+      "captured_at": 1786302387,
+      "published_at": 1655119832,
+      "source": "semianalysis",
+      "title": "Why America Will Lose Semiconductors",
+      "url": "https://newsletter.semianalysis.com/p/why-america-will-lose-semiconductors"
+    },
+    {
+      "captured_at": 1786302629,
+      "published_at": 1654827731,
+      "source": "semianalysis",
+      "title": "Apple M2 Die Shot and Architecture Analysis – Big Cost Increase And A15 Based IP",
+      "url": "https://newsletter.semianalysis.com/p/apple-m2-die-shot-and-architecture"
+    },
+    {
+      "captured_at": 1786302866,
+      "published_at": 1654673906,
+      "source": "semianalysis",
+      "title": "Packaging Developments From ECTC 2022",
+      "url": "https://newsletter.semianalysis.com/p/packaging-developments-from-ectc"
+    },
+    {
       "captured_at": 1785875012,
       "published_at": 1654128000,
       "source": "openai",
       "title": "Best practices for deploying language models",
       "url": "https://openai.com/index/best-practices-for-deploying-language-models"
+    },
+    {
+      "captured_at": 1786303106,
+      "published_at": 1654095050,
+      "source": "semianalysis",
+      "title": "Is Ampere Computing’s Cloud Native Marketing Fluff? – Siryn Ampere One 5nm Architecture, Cost Analysis, and IPO Analysis",
+      "url": "https://newsletter.semianalysis.com/p/is-ampere-computings-cloud-native"
     },
     {
       "captured_at": 1785835422,

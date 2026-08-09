@@ -113,13 +113,97 @@ def markdown_to_html(markdown: str) -> str:
     return "\n".join(output)
 
 
+CRYSTAL_KINDS = (
+    "outline-color",
+    "outline-ink",
+    "outline-dusk",
+    "cathedral",
+    "facet",
+    "prism",
+    "orbit",
+)
+
+
+def crystal_markup(kind: str) -> str:
+    if kind not in CRYSTAL_KINDS:
+        raise ValueError(f"unknown crystal kind: {kind}")
+    if kind == "cathedral":
+        shapes = '<polygon class="tri tri-a" points="21,7 35,32 7,32"/>' \
+            '<polygon class="tri tri-b" points="21,7 35,32 7,32"/>'
+        return (
+            f'<span class="crystal crystal-svg crystal-{kind}" data-crystal="{kind}" '
+            f'aria-hidden="true"><svg viewBox="0 0 42 42">{shapes}</svg></span>'
+        )
+    if kind.startswith("outline-"):
+        shapes = "".join(
+            f'<polygon class="tri tri-{letter}" points="21,6 36,32 6,32"/>'
+            for letter in "abc"
+        )
+        return (
+            f'<span class="crystal crystal-svg crystal-{kind}" data-crystal="{kind}" '
+            f'aria-hidden="true"><svg viewBox="0 0 42 42">{shapes}</svg></span>'
+        )
+    return (
+        f'<span class="crystal crystal-{kind}" data-crystal="{kind}" '
+        'aria-hidden="true"><i></i><i></i><i></i></span>'
+    )
+
+
+EARLY_SETTINGS_SCRIPT = """<script>
+(()=>{try{
+ const saved=JSON.parse(localStorage.getItem('epitome-settings')||'{}');
+ const theme=saved.theme||'system';
+ document.documentElement.dataset.theme=theme==='system'
+  ?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):theme;
+ document.documentElement.dataset.logo=saved.logo||'outline-color';
+ document.documentElement.dataset.sourceBorder=saved.sourceBorder?'on':'off';
+}catch(_){document.documentElement.dataset.theme='light';
+ document.documentElement.dataset.logo='outline-color';
+ document.documentElement.dataset.sourceBorder='off'}})();
+</script>"""
+
+
+SETTINGS_SCRIPT = """<script>
+const settingsKey='epitome-settings';
+function readSettings(){try{return {...{theme:'system',logo:'outline-color',sourceBorder:false},
+ ...JSON.parse(localStorage.getItem(settingsKey)||'{}')}}catch(_){return {theme:'system',logo:'outline-color',sourceBorder:false}}}
+function applySettings(settings){
+ const theme=settings.theme==='system'
+  ?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):settings.theme;
+ document.documentElement.dataset.theme=theme;
+ document.documentElement.dataset.logo=settings.logo;
+ document.documentElement.dataset.sourceBorder=settings.sourceBorder?'on':'off';
+}
+function saveSettings(patch){const settings={...readSettings(),...patch};
+ localStorage.setItem(settingsKey,JSON.stringify(settings));applySettings(settings)}
+const currentSettings=readSettings();applySettings(currentSettings);
+document.querySelectorAll('[name="site-logo"]').forEach(input=>{
+ input.checked=input.value===currentSettings.logo;
+ input.addEventListener('change',()=>saveSettings({logo:input.value}));
+});
+const themeSetting=document.querySelector('#theme-setting');
+if(themeSetting){themeSetting.value=currentSettings.theme;
+ themeSetting.addEventListener('change',()=>saveSettings({theme:themeSetting.value}))}
+const borderSetting=document.querySelector('#source-border-setting');
+if(borderSetting){borderSetting.checked=currentSettings.sourceBorder;
+ borderSetting.addEventListener('change',()=>saveSettings({sourceBorder:borderSetting.checked}))}
+matchMedia('(prefers-color-scheme:dark)').addEventListener('change',()=>{
+ if(readSettings().theme==='system')applySettings(readSettings())});
+</script>"""
+
+
 STYLE = """
 :root{color-scheme:light;--ink:#202122;--quiet:#54595d;--line:#a2a9b1;
 --faint:#eaecf0;--link:#36c;--visited:#6b4ba1;--panel:#eaf3ff;
---panel-line:#a2a9b1;--good:#14866d;--bad:#b32424}
+--panel-line:#a2a9b1;--good:#14866d;--bad:#b32424;--bg:#fff;
+--surface:#f8f9fa;--heading:#101418;--field:#fff;--mark-bg:#fff;--mark-ink:#202122}
+html[data-theme="dark"]{color-scheme:dark;--ink:#eaecf0;--quiet:#aeb4ba;--line:#72777d;
+--faint:#343a40;--link:#8ab4f8;--visited:#c6a0f6;--panel:#17263b;
+--panel-line:#536b8a;--good:#5ad1b9;--bad:#ff7b7b;--bg:#101214;
+--surface:#1b1e22;--heading:#f8f9fa;--field:#181b1f;--mark-bg:#f8f9fa;--mark-ink:#202122}
 *{box-sizing:border-box}
-html{background:#fff}
-body{margin:0;color:var(--ink);background:#fff;font:14px/1.6 Arial,Helvetica,sans-serif}
+html{background:var(--bg)}
+body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.6 Arial,Helvetica,sans-serif}
 a{color:var(--link);text-decoration:none}a:visited{color:var(--visited)}
 a:hover{text-decoration:underline}
 .site-header{height:74px;display:flex;align-items:center;gap:2rem;max-width:1352px;
@@ -128,6 +212,31 @@ margin:0 auto;padding:8px 28px;border-bottom:1px solid transparent}
 .brand:hover{text-decoration:none}.brand-name{display:block;font:24px/1 Georgia,serif}
 .crystal{position:relative;display:block;width:42px;height:42px;perspective:100px;
 transform-style:preserve-3d;filter:drop-shadow(0 1px 1px #8ea6c4)}
+.brand-mark{display:block;width:42px;height:42px;flex:0 0 42px}
+.brand-mark .crystal{display:none}
+html[data-logo="outline-color"] .brand-mark .crystal-outline-color,
+html[data-logo="outline-ink"] .brand-mark .crystal-outline-ink,
+html[data-logo="outline-dusk"] .brand-mark .crystal-outline-dusk,
+html[data-logo="cathedral"] .brand-mark .crystal-cathedral,
+html[data-logo="facet"] .brand-mark .crystal-facet,
+html[data-logo="prism"] .brand-mark .crystal-prism,
+html[data-logo="orbit"] .brand-mark .crystal-orbit{display:block}
+.crystal-svg svg{display:block;width:100%;height:100%;overflow:visible}
+.crystal-svg .tri{fill:none;stroke-width:1.45;vector-effect:non-scaling-stroke;
+transform-box:fill-box;transform-origin:center}
+.crystal-svg .tri-a{animation:outline-a 12s linear infinite}
+.crystal-svg .tri-b{animation:outline-b 9s linear infinite}
+.crystal-svg .tri-c{animation:outline-c 15s linear infinite}
+.crystal-outline-ink .tri{stroke:var(--ink)}
+.crystal-outline-color .tri-a{stroke:#3769b0}.crystal-outline-color .tri-b{stroke:#2ba8a0}
+.crystal-outline-color .tri-c{stroke:#865db5}
+.crystal-outline-dusk .tri-a{stroke:#5b6bd5}.crystal-outline-dusk .tri-b{stroke:#c25b85}
+.crystal-outline-dusk .tri-c{stroke:#d19a38}
+.crystal-cathedral .tri-a{stroke:#8b7355;stroke-width:1.6;animation:outline-a 12s linear infinite}
+.crystal-cathedral .tri-b{stroke:#6b635a;stroke-width:1.35;opacity:.65;animation:outline-b 8s linear infinite}
+@keyframes outline-a{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes outline-b{from{transform:rotate(34deg)}to{transform:rotate(-326deg)}}
+@keyframes outline-c{from{transform:rotate(72deg)}to{transform:rotate(432deg)}}
 .crystal-facet i{position:absolute;inset:7px 6px;background:linear-gradient(135deg,#fff 15%,#7baee8 52%,#3056a5);
 clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.62;transform-origin:50% 64%;
 mix-blend-mode:multiply}
@@ -155,13 +264,13 @@ clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);opacity:.62;mix-blend-mode:mult
 @keyframes ring-b{from{transform:rotate(60deg) scaleY(.38)}to{transform:rotate(420deg) scaleY(.38)}}
 @keyframes ring-c{from{transform:rotate(120deg) scaleY(.38)}to{transform:rotate(480deg) scaleY(.38)}}
 .site-search{display:flex;width:min(475px,40vw);height:34px}
-.site-search input{min-width:0;flex:1;border:1px solid #72777d;padding:6px 10px;
+.site-search input{min-width:0;flex:1;border:1px solid #72777d;padding:6px 10px;background:var(--field);color:var(--ink);
 font:14px Arial,sans-serif}.site-search button{border:1px solid #72777d;border-left:0;
-background:#f8f9fa;padding:0 14px;font-weight:700;color:var(--ink)}
+background:var(--surface);padding:0 14px;font-weight:700;color:var(--ink)}
 .site-links{display:flex;gap:1rem;margin-left:auto;white-space:nowrap;font-size:13px}
 .page-shell{max-width:1352px;margin:0 auto;padding:14px 28px 48px}
 .page-title{font:29px/1.25 Georgia,"Times New Roman",serif;margin:0;
-padding-bottom:3px;border-bottom:1px solid var(--line);color:#101418}
+padding-bottom:3px;border-bottom:1px solid var(--line);color:var(--heading)}
 .page-tabs{display:flex;justify-content:space-between;border-bottom:1px solid #c8ccd1;
 height:33px;margin-bottom:9px}.tabs-left,.tabs-right{display:flex;gap:18px}
 .page-tabs span,.page-tabs a{padding-top:7px}.page-tabs .selected{border-bottom:2px solid var(--ink);
@@ -171,7 +280,7 @@ background:var(--panel);display:grid;grid-template-columns:48px 1fr;gap:12px;ali
 .notice .symbol{font:34px/1 Georgia,serif;color:#607d9f;text-align:center}
 .notice p{margin:.25rem 0}.stats{display:flex;gap:1.5rem;color:var(--quiet)}
 .list-heading{font:22px/1.35 Arial,sans-serif;margin:14px 0 0;padding:10px 14px;
-border:1px solid var(--line);background:#f8f9fa}
+border:1px solid var(--line);background:var(--surface)}
 .summary-list{columns:2;column-gap:3rem;margin:0;padding:12px 28px 18px 34px;
 border:1px solid var(--line);border-top:0}
 .summary-list li{break-inside:avoid;margin:0 0 14px;padding-left:2px}
@@ -189,65 +298,76 @@ border-bottom:1px solid var(--line);padding-bottom:3px}
 .content h3{font-size:17px;margin:1.3em 0 .25em}.content p{margin:.6em 0}
 .content ul,.content ol{margin:.3em 0 .9em;padding-left:2.2em}
 .content blockquote{border-left:3px solid var(--line);margin:1em 0;padding:.2em 1em;color:var(--quiet)}
-.infobox{align-self:start;margin-top:18px;border:1px solid var(--line);background:#f8f9fa;
+.infobox{align-self:start;margin-top:18px;border:1px solid var(--line);background:var(--surface);
 padding:10px 12px;font-size:12px}.infobox h2{margin:0 0 8px;padding:5px;
-background:#dbeafe;text-align:center;font-size:15px}.infobox dl{margin:0}
+background:var(--panel);text-align:center;font-size:15px}.infobox dl{margin:0}
 .infobox dt{font-weight:700;margin-top:8px}.infobox dd{margin:1px 0;overflow-wrap:anywhere}
 .infobox .status{font-size:13px}.article-back{display:block;margin-bottom:8px}
-code,pre{font-family:ui-monospace,monospace}code{background:#f8f9fa;border:1px solid var(--faint);
-padding:.05em .25em}pre{overflow:auto;background:#f8f9fa;border:1px solid var(--line);padding:1em}
+code,pre{font-family:ui-monospace,monospace}code{background:var(--surface);border:1px solid var(--faint);
+padding:.05em .25em}pre{overflow:auto;background:var(--surface);border:1px solid var(--line);padding:1em}
 .site-footer{max-width:1352px;margin:0 auto;padding:18px 28px 30px;border-top:1px solid var(--faint);
 color:var(--quiet);font-size:12px}
 .catalog-layout{display:grid;grid-template-columns:230px minmax(0,850px);gap:28px;align-items:start}
-.filters{position:sticky;top:12px;border:1px solid var(--line);background:#f8f9fa;padding:13px 15px}
+.filters{position:sticky;top:12px;border:1px solid var(--line);background:var(--surface);padding:13px 15px}
 .filters h2{font:18px/1.3 Georgia,serif;margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
 .filter-group{border:0;margin:0 0 15px;padding:0}.filter-group legend{font-weight:700;margin-bottom:5px}
 .filter-source{display:flex;align-items:center;gap:7px;padding:3px 0;cursor:pointer}
-.filter-source input{margin:0}.filter-select{width:100%;padding:5px;border:1px solid #72777d;background:#fff}
+.filter-source input{margin:0}.filter-select{width:100%;padding:5px;border:1px solid #72777d;background:var(--field);color:var(--ink)}
 .feed-toolbar{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
 border-bottom:1px solid var(--line);padding:0 0 7px;margin-bottom:0}.feed-toolbar h2{font:22px Georgia,serif;margin:0}
 .feed-count{color:var(--quiet);font-size:12px}.feed{list-style:none;margin:0;padding:0}
 .feed-item{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;padding:14px 4px;
 border-bottom:1px solid var(--faint)}.feed-item[hidden]{display:none}
-.source-mark{position:relative;display:flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #72777d;
-background:#fff;color:#202122;font:700 11px/1 Arial,sans-serif;letter-spacing:-.02em;border-radius:2px}
-.source-mark img{position:absolute;inset:0;width:100%;height:100%;padding:3px;object-fit:contain;background:#fff;border-radius:1px}
+.source-mark{position:relative;display:flex;width:34px;height:34px;align-items:center;justify-content:center;
+background:var(--mark-bg);color:var(--mark-ink);font:700 11px/1 Arial,sans-serif;letter-spacing:-.02em;border-radius:2px}
+html[data-source-border="on"] .source-mark{border:1px solid #72777d}
+.source-mark img{position:absolute;inset:0;width:100%;height:100%;padding:3px;object-fit:contain;background:var(--mark-bg);border-radius:1px}
 .source-andrej-karpathy img,.source-peter-steinberger img{padding:0;object-fit:cover}
 .source-openai{background:#e7f5ef}.source-anthropic{background:#f4eee7}.source-claude{background:#f8e7db}
 .source-dario-amodei{background:#e9edf7}.source-andrej-karpathy{background:#f0e9f5}
 .source-peter-steinberger{background:#e7f1f7}.source-dwarkesh{background:#f6efd9}.source-semianalysis{background:#ebeff1}
 .feed-title{font:18px/1.35 Georgia,"Times New Roman",serif;margin:0 0 3px}
 .feed-meta{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;color:var(--quiet);font-size:12px}
-.summary-link{display:inline-block;border:1px solid #a2a9b1;background:#f8f9fa;padding:0 5px;font-weight:700}
+.summary-link{display:inline-block;border:1px solid var(--line);background:var(--surface);padding:0 5px;font-weight:700}
 .undated-note{max-width:46rem;color:var(--quiet);font-size:12px;margin:8px 0 0}
 .empty-state{padding:30px 4px;color:var(--quiet)}
-.logo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0}
-.logo-card{border:1px solid var(--line);background:#f8f9fa;padding:24px;text-align:center}
-.logo-card .crystal{margin:18px auto 30px;transform:scale(1.7)}
-.logo-card h2{font:21px/1.3 Georgia,serif;margin:12px 0 4px}.logo-card p{margin:0;color:var(--quiet)}
-@media(prefers-reduced-motion:reduce){.crystal i{animation-play-state:paused!important}}
+.settings-section{max-width:1000px;margin:24px 0}.settings-section>h2{font:22px/1.35 Georgia,serif;
+border-bottom:1px solid var(--line);padding-bottom:4px}.logo-grid{display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}
+.logo-choice{position:relative;display:flex;min-height:174px;flex-direction:column;align-items:center;
+justify-content:center;border:1px solid var(--line);background:var(--surface);padding:22px 14px;text-align:center;cursor:pointer}
+.logo-choice:hover{border-color:var(--link)}.logo-choice:has(input:checked){outline:2px solid var(--link);outline-offset:1px}
+.logo-choice input{position:absolute;top:10px;left:10px}.logo-choice .crystal{display:block;margin:12px auto 24px;transform:scale(1.6)}
+.logo-choice strong{font:17px/1.3 Georgia,serif}.logo-choice small{display:block;color:var(--quiet);margin-top:4px}
+.setting-row{display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:700px;
+padding:14px 0;border-bottom:1px solid var(--faint)}.setting-row label{font-weight:700}
+.setting-row p{margin:2px 0 0;color:var(--quiet)}.setting-control{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.setting-control select{min-width:130px;padding:5px;border:1px solid var(--line);background:var(--field);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.crystal i,.crystal .tri{animation-play-state:paused!important}}
 @media(max-width:800px){.site-header{height:auto;flex-wrap:wrap;padding:10px 18px;gap:8px 18px}
 .brand{min-width:0}.site-search{order:3;width:100%}.site-links{font-size:12px}
 .page-shell{padding:14px 18px 36px}
 .notice{display:block;padding:12px 14px}.notice .symbol{display:none}.stats{flex-wrap:wrap;gap:.3rem 1rem}
 .summary-list{columns:1}.article-layout{display:block}.infobox{margin:18px 0}.tabs-right{display:none}
 .catalog-layout{display:block}.filters{position:static;margin-bottom:20px}.feed-title{font-size:17px}
-.logo-grid{grid-template-columns:1fr}}
+.logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.setting-row{align-items:flex-start}}
+@media(max-width:460px){.logo-grid{grid-template-columns:1fr}}
 """
 
 
 def _page(title: str, body: str) -> str:
+    brand_marks = "".join(crystal_markup(kind) for kind in CRYSTAL_KINDS)
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{escape(title)} — Epitome</title><link rel="stylesheet" href="/style.css">
+<title>{escape(title)} — Epitome</title>{EARLY_SETTINGS_SCRIPT}<link rel="stylesheet" href="/style.css">
 </head><body><header class="site-header">
 <a class="brand" href="/" aria-label="Epitome home">
-<span class="crystal crystal-facet" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="brand-mark">{brand_marks}</span>
 <span class="brand-name">Epitome</span></a>
 <form class="site-search" action="/" method="get">
 <input type="search" name="q" placeholder="Search Epitome" aria-label="Search Epitome">
 <button type="submit">Search</button></form>
-<nav class="site-links" aria-label="Site"><a href="/logo-variants.html">Logo variants</a></nav></header>
+<nav class="site-links" aria-label="Site"><a href="/settings.html">Settings</a></nav></header>
 <div class="page-shell">{body}</div>
 <footer class="site-footer">Epitome preserves source material and concise,
 model-readable summaries for future research.</footer>
@@ -281,7 +401,7 @@ form?.addEventListener('submit',event=>{{event.preventDefault();refresh()}});
 input?.addEventListener('input',refresh);sourceInputs.forEach(box=>box.addEventListener('change',refresh));
 summaryFilter?.addEventListener('change',refresh);sortSelect?.addEventListener('change',refresh);
 refresh();
-</script></body></html>"""
+</script>{SETTINGS_SCRIPT}</body></html>"""
 
 
 def _summary_path(catalog_path: Path, content_path: str) -> Path:
@@ -456,23 +576,45 @@ source metadata. Pages without a reliable publication date appear after dated en
         _page("Archived publications", index_body),
         encoding="utf-8",
     )
-    variants_body = """
-<main><a class="article-back" href="/">← Archived publications</a>
-<h1 class="page-title">Epitome crystal variants</h1>
-<div class="page-tabs"><div class="tabs-left"><span class="selected">Comparison</span></div></div>
-<p class="site-note">Three continuous, code-native marks without a foreground sparkle.</p>
-<section class="logo-grid" aria-label="Logo variants">
-<article class="logo-card"><span class="crystal crystal-facet" aria-hidden="true"><i></i><i></i><i></i></span>
-<h2>Facet</h2><p>Three translucent triangular planes. This is the current header mark.</p></article>
-<article class="logo-card"><span class="crystal crystal-prism" aria-hidden="true"><i></i><i></i><i></i></span>
-<h2>Prism</h2><p>Nested crystalline diamonds with slower counter-rotation.</p></article>
-<article class="logo-card"><span class="crystal crystal-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
-<h2>Orbit</h2><p>Three wireframe planes suggesting a rotating arcane instrument.</p></article>
-</section></main>"""
-    (output_dir / "logo-variants.html").write_text(
-        _page("Crystal variants", variants_body),
-        encoding="utf-8",
+    logo_options = (
+        ("outline-color", "Cool outlines", "Blue, turquoise, and purple triangle outlines."),
+        ("outline-ink", "Ink outlines", "Three hard monochrome outlines using the page ink color."),
+        ("outline-dusk", "Dusk outlines", "Indigo, rose, and amber triangle outlines."),
+        ("cathedral", "Cathedral", "The original warm, counter-rotating two-triangle mark."),
+        ("facet", "Facet", "The translucent three-plane crystal."),
+        ("prism", "Prism", "Nested crystalline diamonds."),
+        ("orbit", "Orbit", "Three wireframe orbital planes."),
     )
+    logo_choices = "".join(
+        f'''<label class="logo-choice"><input type="radio" name="site-logo" value="{kind}">
+{crystal_markup(kind)}<span><strong>{escape(name)}</strong>
+<small>{escape(description)}</small></span></label>'''
+        for kind, name, description in logo_options
+    )
+    preview_source = source_records.get("semianalysis", {})
+    preview_url = escape(str(preview_source.get("logo_url", "")), quote=True)
+    settings_body = f"""
+<main><a class="article-back" href="/">← Archived publications</a>
+<h1 class="page-title">Site settings</h1>
+<div class="page-tabs"><div class="tabs-left"><span class="selected">Appearance</span></div></div>
+<p class="site-note">Settings are saved in this browser and apply immediately.</p>
+<section class="settings-section"><h2>Epitome mark</h2>
+<div class="logo-grid" aria-label="Epitome logo choices">{logo_choices}</div></section>
+<section class="settings-section"><h2>Appearance</h2>
+<div class="setting-row"><div><label for="theme-setting">Color theme</label>
+<p>Follow the device theme or choose light or dark explicitly.</p></div>
+<div class="setting-control"><select id="theme-setting"><option value="system">System</option>
+<option value="light">Light</option><option value="dark">Dark</option></select></div></div>
+<div class="setting-row"><div><label for="source-border-setting">Borders around source logos</label>
+<p>Add a one-pixel frame around each publication’s source mark.</p></div>
+<div class="setting-control"><span class="source-mark source-semianalysis" aria-hidden="true">
+<span>SA</span><img src="{preview_url}" alt="" onerror="this.remove()"></span>
+<input id="source-border-setting" type="checkbox" aria-label="Borders around source logos"></div></div>
+</section></main>"""
+    settings_page = _page("Site settings", settings_body)
+    (output_dir / "settings.html").write_text(settings_page, encoding="utf-8")
+    # Keep the previous comparison URL useful for existing bookmarks.
+    (output_dir / "logo-variants.html").write_text(settings_page, encoding="utf-8")
     return {
         "articles": len(entries),
         "pages": len(pages),
