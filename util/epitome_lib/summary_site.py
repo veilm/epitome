@@ -116,8 +116,12 @@ def markdown_to_html(markdown: str) -> str:
 CRYSTAL_KINDS = (
     "facet-outline-color",
     "facet-outline-ink",
+    "facet-outline-color-ghost",
+    "facet-outline-ink-ghost",
     "prism-outline-color",
     "prism-outline-ink",
+    "prism-outline-color-ghost",
+    "prism-outline-ink-ghost",
     "outline-color",
     "outline-ink",
     "outline-dusk",
@@ -134,9 +138,17 @@ def crystal_markup(kind: str) -> str:
     if kind not in CRYSTAL_KINDS:
         raise ValueError(f"unknown crystal kind: {kind}")
     if kind.startswith("facet-outline-") or kind.startswith("prism-outline-"):
+        is_facet = kind.startswith("facet-")
+        view_box = "0 0 30 28" if is_facet else "0 0 30 30"
+        points = "15,1 29,27 1,27" if is_facet else "15,1 29,15 15,29 1,15"
+        planes = "".join(
+            f'<svg class="plane plane-{letter}" viewBox="{view_box}">'
+            f'<polygon points="{points}"/></svg>'
+            for letter in "abc"
+        )
         return (
             f'<span class="crystal crystal-{kind}" data-crystal="{kind}" '
-            'aria-hidden="true"><i></i><i></i><i></i></span>'
+            f'aria-hidden="true">{planes}</span>'
         )
     if kind.startswith("cathedral"):
         shapes = '<polygon class="tri tri-a" points="21,7 35,32 7,32"/>' \
@@ -166,18 +178,18 @@ EARLY_SETTINGS_SCRIPT = """<script>
  const theme=saved.theme||'system';
  document.documentElement.dataset.theme=theme==='system'
   ?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):theme;
- document.documentElement.dataset.logo=saved.logo||'facet-outline-color';
+ document.documentElement.dataset.logo=saved.logo||'cathedral-ink';
  document.documentElement.dataset.sourceBorder=saved.sourceBorder?'on':'off';
 }catch(_){document.documentElement.dataset.theme='light';
- document.documentElement.dataset.logo='facet-outline-color';
+ document.documentElement.dataset.logo='cathedral-ink';
  document.documentElement.dataset.sourceBorder='off'}})();
 </script>"""
 
 
 SETTINGS_SCRIPT = """<script>
 const settingsKey='epitome-settings';
-function readSettings(){try{return {...{theme:'system',logo:'facet-outline-color',sourceBorder:false},
- ...JSON.parse(localStorage.getItem(settingsKey)||'{}')}}catch(_){return {theme:'system',logo:'facet-outline-color',sourceBorder:false}}}
+function readSettings(){try{return {...{theme:'system',logo:'cathedral-ink',sourceBorder:false},
+ ...JSON.parse(localStorage.getItem(settingsKey)||'{}')}}catch(_){return {theme:'system',logo:'cathedral-ink',sourceBorder:false}}}
 function applySettings(settings){
  const theme=settings.theme==='system'
   ?(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):settings.theme;
@@ -215,7 +227,7 @@ html[data-theme="dark"]{color-scheme:dark;--ink:#eaecf0;--quiet:#aeb4ba;--line:#
 *{box-sizing:border-box}
 html{background:var(--bg)}
 body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.6 Arial,Helvetica,sans-serif}
-a{color:var(--link);text-decoration:none}a:visited{color:var(--visited)}
+a{color:var(--link);text-decoration:none}a:visited{color:var(--link)}
 a:hover{text-decoration:underline}
 .site-header{height:74px;display:flex;align-items:center;gap:2rem;max-width:1352px;
 margin:0 auto;padding:8px 28px;border-bottom:1px solid transparent}
@@ -227,8 +239,12 @@ transform-style:preserve-3d;--crystal-cutout:var(--bg)}
 .brand-mark .crystal{display:none}
 html[data-logo="facet-outline-color"] .brand-mark .crystal-facet-outline-color,
 html[data-logo="facet-outline-ink"] .brand-mark .crystal-facet-outline-ink,
+html[data-logo="facet-outline-color-ghost"] .brand-mark .crystal-facet-outline-color-ghost,
+html[data-logo="facet-outline-ink-ghost"] .brand-mark .crystal-facet-outline-ink-ghost,
 html[data-logo="prism-outline-color"] .brand-mark .crystal-prism-outline-color,
 html[data-logo="prism-outline-ink"] .brand-mark .crystal-prism-outline-ink,
+html[data-logo="prism-outline-color-ghost"] .brand-mark .crystal-prism-outline-color-ghost,
+html[data-logo="prism-outline-ink-ghost"] .brand-mark .crystal-prism-outline-ink-ghost,
 html[data-logo="outline-color"] .brand-mark .crystal-outline-color,
 html[data-logo="outline-ink"] .brand-mark .crystal-outline-ink,
 html[data-logo="outline-dusk"] .brand-mark .crystal-outline-dusk,
@@ -262,30 +278,27 @@ animation:outline-b 8s linear infinite}
 @keyframes outline-a{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 @keyframes outline-b{from{transform:rotate(34deg)}to{transform:rotate(-326deg)}}
 @keyframes outline-c{from{transform:rotate(72deg)}to{transform:rotate(432deg)}}
-.crystal-facet-outline-color i,.crystal-facet-outline-ink i{position:absolute;inset:7px 6px;
-clip-path:polygon(50% 0,100% 100%,0 100%);transform-origin:50% 64%;background:var(--outline-stroke)}
-.crystal-facet-outline-color i::after,.crystal-facet-outline-ink i::after{
-content:"";position:absolute;inset:1.7px;clip-path:polygon(50% 0,100% 100%,0 100%);
-background:var(--crystal-cutout)}
-.crystal-facet-outline-color i:nth-child(1),.crystal-facet-outline-ink i:nth-child(1){animation:orbit-a 9s linear infinite}
-.crystal-facet-outline-color i:nth-child(2),.crystal-facet-outline-ink i:nth-child(2){animation:orbit-b 11s linear infinite}
-.crystal-facet-outline-color i:nth-child(3),.crystal-facet-outline-ink i:nth-child(3){animation:orbit-c 13s linear infinite}
-.crystal-facet-outline-color i:nth-child(1){--outline-stroke:#3769b0}
-.crystal-facet-outline-color i:nth-child(2){--outline-stroke:#2ba8a0}
-.crystal-facet-outline-color i:nth-child(3){--outline-stroke:#865db5}
-.crystal-facet-outline-ink i{--outline-stroke:var(--ink)}
-.crystal-prism-outline-color i,.crystal-prism-outline-ink i{position:absolute;inset:6px;
-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:var(--outline-stroke)}
-.crystal-prism-outline-color i::after,.crystal-prism-outline-ink i::after{
-content:"";position:absolute;inset:1.7px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
-background:var(--crystal-cutout)}
-.crystal-prism-outline-color i:nth-child(1),.crystal-prism-outline-ink i:nth-child(1){animation:prism-a 10s linear infinite}
-.crystal-prism-outline-color i:nth-child(2),.crystal-prism-outline-ink i:nth-child(2){animation:prism-b 14s linear infinite}
-.crystal-prism-outline-color i:nth-child(3),.crystal-prism-outline-ink i:nth-child(3){inset:11px;animation:prism-c 8s linear infinite}
-.crystal-prism-outline-color i:nth-child(1){--outline-stroke:#3769b0}
-.crystal-prism-outline-color i:nth-child(2){--outline-stroke:#2ba8a0}
-.crystal-prism-outline-color i:nth-child(3){--outline-stroke:#865db5}
-.crystal-prism-outline-ink i{--outline-stroke:var(--ink)}
+.crystal[data-crystal^="facet-outline-"] .plane,
+.crystal[data-crystal^="prism-outline-"] .plane{position:absolute;display:block;overflow:visible;
+transform-style:preserve-3d}
+.crystal[data-crystal^="facet-outline-"] .plane{inset:7px 6px;transform-origin:50% 64%}
+.crystal[data-crystal^="prism-outline-"] .plane{inset:6px}
+.crystal[data-crystal^="prism-outline-"] .plane-c{inset:11px}
+.crystal[data-crystal^="facet-outline-"] polygon,
+.crystal[data-crystal^="prism-outline-"] polygon{fill:var(--crystal-cutout);stroke:var(--outline-stroke);
+stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+shape-rendering:geometricPrecision}
+.crystal[data-crystal$="-ghost"] polygon{fill:none}
+.crystal[data-crystal*="-outline-ink"] .plane{--outline-stroke:var(--ink)}
+.crystal[data-crystal*="-outline-color"] .plane-a{--outline-stroke:#3769b0}
+.crystal[data-crystal*="-outline-color"] .plane-b{--outline-stroke:#2ba8a0}
+.crystal[data-crystal*="-outline-color"] .plane-c{--outline-stroke:#865db5}
+.crystal[data-crystal^="facet-outline-"] .plane-a{animation:orbit-a 9s linear infinite}
+.crystal[data-crystal^="facet-outline-"] .plane-b{animation:orbit-b 11s linear infinite}
+.crystal[data-crystal^="facet-outline-"] .plane-c{animation:orbit-c 13s linear infinite}
+.crystal[data-crystal^="prism-outline-"] .plane-a{animation:prism-a 10s linear infinite}
+.crystal[data-crystal^="prism-outline-"] .plane-b{animation:prism-b 14s linear infinite}
+.crystal[data-crystal^="prism-outline-"] .plane-c{animation:prism-c 8s linear infinite}
 .crystal-facet i{position:absolute;inset:7px 6px;background:linear-gradient(135deg,#fff 15%,#7baee8 52%,#3056a5);
 clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.62;transform-origin:50% 64%;
 mix-blend-mode:multiply}
@@ -629,8 +642,12 @@ source metadata. Pages without a reliable publication date appear after dated en
     logo_options = (
         ("facet-outline-color", "Facet outline · color", "Facet’s original 3D movement with three colored outlines."),
         ("facet-outline-ink", "Facet outline · ink", "Facet’s original 3D movement in the page ink color."),
+        ("facet-outline-color-ghost", "Facet ghost · color", "Transparent 3D Facet planes that pass through one another."),
+        ("facet-outline-ink-ghost", "Facet ghost · ink", "Transparent 3D Facet planes in the page ink color."),
         ("prism-outline-color", "Prism outline · color", "Prism’s original 3D geometry with three colored outlines."),
         ("prism-outline-ink", "Prism outline · ink", "Prism’s original 3D geometry in the page ink color."),
+        ("prism-outline-color-ghost", "Prism ghost · color", "Transparent Prism planes with colored outlines."),
+        ("prism-outline-ink-ghost", "Prism ghost · ink", "Transparent Prism planes in the page ink color."),
         ("cathedral-adaptive", "Cathedral · adaptive", "Epitome link and quiet colors in Cathedral’s original emphasis ratio."),
         ("cathedral-ink", "Cathedral · ink", "Cathedral’s two triangles using strong and quiet page ink."),
         ("cathedral", "Cathedral · original", "The original warm gold and stone strokes on Epitome’s background."),

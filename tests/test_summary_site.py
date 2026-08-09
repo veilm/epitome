@@ -97,6 +97,7 @@ site. It contains more than one hundred characters and links to the
             self.assertIn('class="feed"', index)
             self.assertIn('class="crystal crystal-facet"', index)
             self.assertIn('data-crystal="outline-color"', index)
+            self.assertIn("saved.logo||'cathedral-ink'", index)
             self.assertIn('src="https://example.com/favicon.png"', index)
             self.assertNotIn("A living archive of machine intelligence", index)
             self.assertNotIn('href="/">Catalog</a>', index)
@@ -118,8 +119,12 @@ site. It contains more than one hundred characters and links to the
             self.assertIn('id="source-border-setting"', settings)
             self.assertIn('value="facet-outline-color"', settings)
             self.assertIn('value="facet-outline-ink"', settings)
+            self.assertIn('value="facet-outline-color-ghost"', settings)
+            self.assertIn('value="facet-outline-ink-ghost"', settings)
             self.assertIn('value="prism-outline-color"', settings)
             self.assertIn('value="prism-outline-ink"', settings)
+            self.assertIn('value="prism-outline-color-ghost"', settings)
+            self.assertIn('value="prism-outline-ink-ghost"', settings)
             self.assertIn('value="cathedral-adaptive"', settings)
             self.assertIn('value="cathedral-ink"', settings)
             self.assertIn('value="outline-color"', settings)
@@ -132,6 +137,8 @@ site. It contains more than one hundred characters and links to the
             stylesheet = (output / "style.css").read_text(encoding="utf-8")
             self.assertIn('html[data-theme="dark"]', stylesheet)
             self.assertIn('html[data-source-border="on"]', stylesheet)
+            self.assertIn('a:visited{color:var(--link)}', stylesheet)
+            self.assertIn('.crystal[data-crystal$="-ghost"] polygon{fill:none}', stylesheet)
 
 
 if __name__ == "__main__":
