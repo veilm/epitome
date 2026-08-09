@@ -233,3 +233,37 @@ articles and no YouTube or Substack-audio entries. The next 75 deduplicated
 articles are selected in the ignored working list
 `data/semianalysis-next-75.txt` for a 105-second-delay batch after local replay
 verification passes.
+
+## Fifth bounded page batch
+
+The next 75 deduplicated article identities are complete across one validation
+capture and a 74-page batch:
+
+- `/mnt2/capsule/epitome/semianalysis/validation/1786281289-session-probe`
+- `/mnt2/capsule/epitome/semianalysis/crawls/1786281425`
+
+The first batch attempt lost its temporary CDP session after loading the first
+article and was stopped immediately. An isolated retry captured that article
+completely with its tab closed; the restarted batch skipped it and completed
+the other 74 identities with zero capture errors. All 75 manifests are complete
+and all capture tabs closed. Together with the earlier captures, 228 of the 325
+approved identities are now complete.
+
+The primary-image audit found nine omitted figures in the AMD Genoa article,
+and the all-image audit found 22 instances of one missing related-content
+thumbnail. The bounded repairs recovered all 31 resources with three-second
+request spacing: 1,442,937 bytes with zero failures. Repeated primary and
+all-rendered-image audits now report zero omissions across the batch.
+
+A 1440x900 Chromium audit then covered the repaired AMD Genoa article and four
+varied historical, image-heavy, and paid-preview articles. The pages retained
+their article text and subscription boundaries, ranged from five to 27 rendered
+images, and had zero broken or pending images. A strict CDP log recorded 238
+requests, all to `127.0.0.1:8013`, with no production-origin traffic. The audit
+tab was closed afterward.
+
+The provider inventories remain at ten Substack-hosted videos across five
+articles with no YouTube or Substack-audio entries. The final 97 deduplicated
+article identities are selected in the ignored working list
+`data/semianalysis-final-97.txt` for a longer-delay batch after local replay
+verification passes.
