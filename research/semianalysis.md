@@ -144,3 +144,35 @@ The refreshed provider inventories contain four Substack-hosted videos across
 two articles and no YouTube or Substack-audio entries. These videos are explicit
 external-downloader imports. The next deduplicated 30-page batch can proceed
 with a longer inter-page delay.
+
+## Second bounded page batch
+
+The next 30 deduplicated article identities completed at:
+
+`/mnt2/capsule/epitome/semianalysis/crawls/1786244832`
+
+All 30 manifests are complete, all capture tabs closed, and the crawl reported
+zero page or asset-completion failures. Together with the structural
+validations and first batch, 48 of the 325 approved source identities are now
+complete.
+
+Five unusually image-heavy articles exceeded the ordinary 50-asset completion
+budget, leaving 106 primary figures absent. Two other pages had six missing
+listing/card images. The all-image repair recovered exactly those 112 resources
+with three-second request spacing: 22,246,923 bytes with zero failures. Repeated
+primary and all-rendered-image audits now report zero omissions across the 30
+pages.
+
+The refreshed archive index was then checked at 1440×900 in Chromium. Five
+varied pages included the three heaviest repaired articles, a long CPU analysis,
+and a four-video article. Each retained its article text, figures, paid boundary
+where applicable, and 39–104 rendered images with zero broken or pending
+images. All six video/frame sources on the video-bearing page were rewritten to
+local archive resources. A strict network log across the sequence recorded 552
+of 552 requests to `127.0.0.1:8013` and no production-origin traffic.
+
+The refreshed provider inventories contain nine Substack-hosted videos across
+four articles and no YouTube or Substack-audio entries. All nine videos remain
+explicit external-downloader imports. The next 45 deduplicated articles are
+selected in the ignored working list `data/semianalysis-next-45.txt` for a
+longer-delay batch after local replay verification passes.

@@ -88,7 +88,10 @@ small validation samples come before any large crawl.
   - [x] Capture and offline-verify the first bounded 15-page SemiAnalysis batch;
         repair 43 omitted article/listing images and inventory four Substack
         videos.
-  - [ ] Continue with the selected deduplicated 30-page SemiAnalysis batch.
+  - [x] Capture and preservation-audit the deduplicated 30-page SemiAnalysis
+        batch; repair 112 omitted article/listing images and inventory five new
+        Substack videos.
+  - [ ] Continue with the selected deduplicated 45-page SemiAnalysis batch.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**

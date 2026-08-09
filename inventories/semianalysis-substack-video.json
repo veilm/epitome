@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786244338,
+  "generated_at_unix": 1786252212,
   "source": "SemiAnalysis newsletter",
   "capture_runs": [
     "semianalysis"
@@ -12,13 +12,40 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 4,
-    "articles": 2,
+    "videos": 9,
+    "articles": 4,
     "statuses": {
-      "pending_download": 4
+      "pending_download": 9
     }
   },
   "items": [
+    {
+      "provider": "substack",
+      "media_id": "0733605b-055b-4f8a-a641-510cab67c233",
+      "status": "pending_download",
+      "import_directory": "media/substack/0733605b-055b-4f8a-a641-510cab67c233",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/nvidia-the-inference-kingdom-expands",
+          "title": "GTC 2026 \u2013 The Inference Kingdom Expands",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/191561008/0733605b-055b-4f8a-a641-510cab67c233/transcoded-00001.png?refresh=Sun Aug 09 2026 00:32:26 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/0733605b-055b-4f8a-a641-510cab67c233/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/0733605b-055b-4f8a-a641-510cab67c233/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786244832/pages/000023-newsletter.semianalysis.com-p-nvidia-the-inference-kingdom-expands",
+          "capture_started_at": 1786249945
+        }
+      ]
+    },
     {
       "provider": "substack",
       "media_id": "334084fa-0b1a-4e94-9458-d4efd483c9f4",
@@ -75,6 +102,87 @@
     },
     {
       "provider": "substack",
+      "media_id": "6aef7c5a-63e3-4887-8296-efb35861ec42",
+      "status": "pending_download",
+      "import_directory": "media/substack/6aef7c5a-63e3-4887-8296-efb35861ec42",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/deepseekv4-16t-day-0-to-day-43-performance",
+          "title": "DeepSeekV4 1.6T Day 0 to Day 43 Performance Over Time - GB300 NVL72, Huawei, MI355X, B200",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/199671399/6aef7c5a-63e3-4887-8296-efb35861ec42/transcoded-00001.png?refresh=Sat Aug 08 2026 23:25:50 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/6aef7c5a-63e3-4887-8296-efb35861ec42/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/6aef7c5a-63e3-4887-8296-efb35861ec42/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786244832/pages/000007-newsletter.semianalysis.com-p-deepseekv4-16t-day-0-to-day-43-performance",
+          "capture_started_at": 1786245948
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "b272ffdb-b25a-4be5-98e2-b5f0639f8b49",
+      "status": "pending_download",
+      "import_directory": "media/substack/b272ffdb-b25a-4be5-98e2-b5f0639f8b49",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/deepseekv4-16t-day-0-to-day-43-performance",
+          "title": "DeepSeekV4 1.6T Day 0 to Day 43 Performance Over Time - GB300 NVL72, Huawei, MI355X, B200",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/199671399/b272ffdb-b25a-4be5-98e2-b5f0639f8b49/transcoded-00001.png?refresh=Sat Aug 08 2026 23:25:50 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/b272ffdb-b25a-4be5-98e2-b5f0639f8b49/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/b272ffdb-b25a-4be5-98e2-b5f0639f8b49/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786244832/pages/000007-newsletter.semianalysis.com-p-deepseekv4-16t-day-0-to-day-43-performance",
+          "capture_started_at": 1786245948
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "c0d6d255-bd12-478a-b32d-6e82858c2afc",
+      "status": "pending_download",
+      "import_directory": "media/substack/c0d6d255-bd12-478a-b32d-6e82858c2afc",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/deepseekv4-16t-day-0-to-day-43-performance",
+          "title": "DeepSeekV4 1.6T Day 0 to Day 43 Performance Over Time - GB300 NVL72, Huawei, MI355X, B200",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/199671399/c0d6d255-bd12-478a-b32d-6e82858c2afc/transcoded-00001.png?refresh=Sat Aug 08 2026 23:25:50 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/c0d6d255-bd12-478a-b32d-6e82858c2afc/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/c0d6d255-bd12-478a-b32d-6e82858c2afc/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786244832/pages/000007-newsletter.semianalysis.com-p-deepseekv4-16t-day-0-to-day-43-performance",
+          "capture_started_at": 1786245948
+        }
+      ]
+    },
+    {
+      "provider": "substack",
       "media_id": "db3972fc-3aac-4e32-9f25-ee84b7177ecf",
       "status": "pending_download",
       "import_directory": "media/substack/db3972fc-3aac-4e32-9f25-ee84b7177ecf",
@@ -97,6 +205,33 @@
           "capture_run": "semianalysis",
           "capture_page": "crawls/1786241060/pages/000007-newsletter.semianalysis.com-p-can-amd-break-the-cuda-moat-amd-advancing",
           "capture_started_at": 1786241950
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "ddcb0dc6-ecfd-4288-93f3-551598a14e1b",
+      "status": "pending_download",
+      "import_directory": "media/substack/ddcb0dc6-ecfd-4288-93f3-551598a14e1b",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/deepseekv4-16t-day-0-to-day-43-performance",
+          "title": "DeepSeekV4 1.6T Day 0 to Day 43 Performance Over Time - GB300 NVL72, Huawei, MI355X, B200",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/199671399/ddcb0dc6-ecfd-4288-93f3-551598a14e1b/transcoded-00001.png?refresh=Sat Aug 08 2026 23:25:50 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/ddcb0dc6-ecfd-4288-93f3-551598a14e1b/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/ddcb0dc6-ecfd-4288-93f3-551598a14e1b/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786244832/pages/000007-newsletter.semianalysis.com-p-deepseekv4-16t-day-0-to-day-43-performance",
+          "capture_started_at": 1786245948
         }
       ]
     },
