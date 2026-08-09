@@ -5,6 +5,11 @@ OpenAI crawl. Each source should eventually have both a faithful private archive
 and a clean, model-readable rendition suitable for summaries. Investigation and
 small validation samples come before any large crawl.
 
+Prefer the easiest well-bounded static source whenever the current page crawl
+finishes. Defer account-oriented or continuously changing sources such as
+Twitter/X and YouTube until their identity, media, incremental-update, and
+deletion-history workflows are explicitly designed.
+
 ## Source backlog
 
 - [ ] **Company careers and job listings**
@@ -126,12 +131,25 @@ small validation samples come before any large crawl.
         article, image, and static Disqus-comment preservation.
   - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including
         representative static Disqus threads.
+  - [ ] Inventory and preserve `karpathy.ai` as a separate first-party
+        personal/educational property, including its course and books pages and
+        first-party presentation PDF; do not conflate it with the completed
+        `karpathy.github.io` blog scope.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
+  - [ ] Inventory and preserve Paul Graham's static essay corpus from
+        `paulgraham.com/articles.html`, separating essays from unrelated site
+        utilities and historical sections before crawling.
+  - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
+        first-party documents—before approving a crawl of its much larger link
+        graph.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
-  - [ ] AI 2027.
+  - [x] Confirm AI 2027's canonical static site and its scenario, summary,
+        supplements, about page, PDF, and AI 2040 navigation; prioritize this as
+        the easiest next source after SemiAnalysis.
+  - [ ] Capture and offline-verify the bounded English AI 2027 scope.
   - [ ] AI 2040.
   - [ ] *Situational Awareness* essay series.
   - [ ] Identify the canonical site and complete page/media set for each before
