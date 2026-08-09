@@ -85,8 +85,10 @@ small validation samples come before any large crawl.
   - [x] Compare current SemiAnalysis subscriber emails with their public pages;
         free-account emails preserve the same preview/paywall boundary and are
         not a richer source for paid issues.
-  - [ ] Begin bounded SemiAnalysis batches after Dwarkesh's approved page scope
-        completes.
+  - [x] Capture and offline-verify the first bounded 15-page SemiAnalysis batch;
+        repair 43 omitted article/listing images and inventory four Substack
+        videos.
+  - [ ] Continue with the selected deduplicated 30-page SemiAnalysis batch.
   - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
         metadata, and links between installments.
 - [ ] **Individual writers and personal blogs**

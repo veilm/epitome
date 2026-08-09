@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at_unix": 1786195003,
-  "source": "SemiAnalysis",
+  "generated_at_unix": 1786244338,
+  "source": "SemiAnalysis newsletter",
   "capture_runs": [
     "semianalysis"
   ],
@@ -12,9 +12,120 @@
     "note": "Download one durable video rendition per media ID and record the imported filenames in each item's imported_files field."
   },
   "summary": {
-    "videos": 0,
-    "articles": 0,
-    "statuses": {}
+    "videos": 4,
+    "articles": 2,
+    "statuses": {
+      "pending_download": 4
+    }
   },
-  "items": []
+  "items": [
+    {
+      "provider": "substack",
+      "media_id": "334084fa-0b1a-4e94-9458-d4efd483c9f4",
+      "status": "pending_download",
+      "import_directory": "media/substack/334084fa-0b1a-4e94-9458-d4efd483c9f4",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/the-wild-wild-west-of-lego-datacenters",
+          "title": "The Wild Wild West Of LEGO Datacenters",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/208309954/334084fa-0b1a-4e94-9458-d4efd483c9f4/transcoded-00001.png?refresh=Sat Aug 08 2026 22:16:12 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/334084fa-0b1a-4e94-9458-d4efd483c9f4/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/334084fa-0b1a-4e94-9458-d4efd483c9f4/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786241060/pages/000006-newsletter.semianalysis.com-p-the-wild-wild-west-of-lego-datacenters",
+          "capture_started_at": 1786241770
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "51f24710-45db-4a62-ae2d-918953f49a6d",
+      "status": "pending_download",
+      "import_directory": "media/substack/51f24710-45db-4a62-ae2d-918953f49a6d",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing",
+          "title": "Can AMD break the CUDA Moat? AMD Advancing AI 2026",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/208362548/51f24710-45db-4a62-ae2d-918953f49a6d/transcoded-01463.png?refresh=Sat Aug 08 2026 22:19:12 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/51f24710-45db-4a62-ae2d-918953f49a6d/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/51f24710-45db-4a62-ae2d-918953f49a6d/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786241060/pages/000007-newsletter.semianalysis.com-p-can-amd-break-the-cuda-moat-amd-advancing",
+          "capture_started_at": 1786241950
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "db3972fc-3aac-4e32-9f25-ee84b7177ecf",
+      "status": "pending_download",
+      "import_directory": "media/substack/db3972fc-3aac-4e32-9f25-ee84b7177ecf",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing",
+          "title": "Can AMD break the CUDA Moat? AMD Advancing AI 2026",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/208362548/db3972fc-3aac-4e32-9f25-ee84b7177ecf/transcoded-00756.png?refresh=Sat Aug 08 2026 22:19:12 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/db3972fc-3aac-4e32-9f25-ee84b7177ecf/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/db3972fc-3aac-4e32-9f25-ee84b7177ecf/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786241060/pages/000007-newsletter.semianalysis.com-p-can-amd-break-the-cuda-moat-amd-advancing",
+          "capture_started_at": 1786241950
+        }
+      ]
+    },
+    {
+      "provider": "substack",
+      "media_id": "ecf860ca-6187-44b5-af44-361a66a0831b",
+      "status": "pending_download",
+      "import_directory": "media/substack/ecf860ca-6187-44b5-af44-361a66a0831b",
+      "articles": [
+        {
+          "url": "https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing",
+          "title": "Can AMD break the CUDA Moat? AMD Advancing AI 2026",
+          "embed_title": "",
+          "poster_url": "https://substack-video.s3.amazonaws.com/video_upload/post/208362548/ecf860ca-6187-44b5-af44-361a66a0831b/transcoded-02667.png?refresh=Sat Aug 08 2026 22:19:12 GMT-0400 (Eastern Daylight Time)",
+          "sources": [
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/ecf860ca-6187-44b5-af44-361a66a0831b/src?override_publication_id=6349492&type=hls",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "url": "https://newsletter.semianalysis.com/api/v1/video/upload/ecf860ca-6187-44b5-af44-361a66a0831b/src?override_publication_id=6349492&type=mp4",
+              "type": "video/mp4"
+            }
+          ],
+          "capture_run": "semianalysis",
+          "capture_page": "crawls/1786241060/pages/000007-newsletter.semianalysis.com-p-can-amd-break-the-cuda-moat-amd-advancing",
+          "capture_started_at": 1786241950
+        }
+      ]
+    }
+  ]
 }

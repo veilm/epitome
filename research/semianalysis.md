@@ -55,7 +55,7 @@ bounded checks:
 4. Keep the 325-identity newsletter scope separate from a later reviewed
    `semianalysis.com` corporate/careers/models scope.
 
-No SemiAnalysis batch has been started during this reconnaissance.
+The checks below were completed before the first bounded batch started.
 
 ## Structural validations
 
@@ -110,3 +110,37 @@ free subscription. If a future account legitimately receives full issues by
 email, those messages should be treated as a separate private, authenticated
 source rather than mixed into the public-web archive. No message body or
 account-specific data is stored in Git.
+
+## First bounded page batch
+
+The selected 15-page batch completed at:
+
+`/mnt2/capsule/epitome/semianalysis/crawls/1786241060`
+
+All 15 manifests are complete, all capture tabs closed, and the run reported
+zero page or asset-completion failures. Together with the three structural
+validations, 18 of the 325 approved source identities are complete.
+
+The ordinary article-image audit found one concrete budget edge case. `The Wild
+Wild West of LEGO Datacenters` contains 74 rendered images and exceeded the
+50-asset completion ceiling, leaving 21 primary figures absent. Those exact 21
+resources were recovered with three-second request delays. The structural
+homepage and archive listing then exposed 22 additional missing card and
+thumbnail images, so `research/audit_capture_images` gained an explicit
+`--all-images` mode and recovered those resources as well. The three repairs
+added 3,598,746 bytes; repeated article and structural audits report zero
+missing rendered images.
+
+The custom-domain homepage's public server HTML is a subscription welcome gate.
+Its `No thanks` action depends on removed client scripts, and there is no
+server-rendered homepage body behind the gate. Replay therefore preserves that
+faithful gate state rather than hiding it into a blank page; `/archive` is the
+complete, usable chronological index. Chromium checks also covered that index,
+two extremely image-heavy paid previews, and a long architecture article. Text,
+figures, subscription boundaries, and layouts were intact. The final strict
+network check recorded 103 requests, all to the local replay server.
+
+The refreshed provider inventories contain four Substack-hosted videos across
+two articles and no YouTube or Substack-audio entries. These videos are explicit
+external-downloader imports. The next deduplicated 30-page batch can proceed
+with a longer inter-page delay.

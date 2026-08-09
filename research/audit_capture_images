@@ -17,9 +17,10 @@ from epitome_lib.replay import CaptureIndex, decode_url, rewrite_html
 
 
 class _ReplayImageParser(HTMLParser):
-    def __init__(self, index: CaptureIndex):
+    def __init__(self, index: CaptureIndex, *, all_images: bool = False):
         super().__init__()
         self.index = index
+        self.all_images = all_images
         self.article_depth = 0
         self.picture_sources: list[bool] = []
         self.missing: list[str] = []
@@ -29,11 +30,11 @@ class _ReplayImageParser(HTMLParser):
         attrs = {name.lower(): value or "" for name, value in attrs_list}
         if tag == "article":
             self.article_depth += 1
-        if tag == "picture" and self.article_depth:
+        if tag == "picture" and (self.all_images or self.article_depth):
             self.picture_sources.append(False)
         if tag == "source" and self.picture_sources and attrs.get("srcset", "").strip():
             self.picture_sources[-1] = True
-        if tag != "img" or not self.article_depth:
+        if tag != "img" or (not self.all_images and not self.article_depth):
             return
         available = bool(attrs.get("srcset", "").strip()) or any(self.picture_sources)
         src = attrs.get("src", "")
@@ -58,6 +59,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("capture_root", type=Path)
     parser.add_argument("--repair", action="store_true")
+    parser.add_argument(
+        "--all-images",
+        action="store_true",
+        help="audit every rendered image, including listing and structural pages",
+    )
     parser.add_argument("--delay-seconds", type=float, default=2)
     parser.add_argument("--max-bytes", type=int, default=500 * 1024 * 1024)
     parser.add_argument("--timeout", type=float, default=90)
@@ -87,7 +93,7 @@ def main() -> int:
             page_url,
             index,
         )
-        image_parser = _ReplayImageParser(index)
+        image_parser = _ReplayImageParser(index, all_images=args.all_images)
         image_parser.feed(rendered)
         missing = sorted(set(image_parser.missing))
         if missing:
