@@ -1,0 +1,48 @@
+#!/usr/bin/python
+"""Print the next uncaptured URLs from a reviewed source inventory."""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+from epitome_lib.capture import archival_url_key, completed_capture_urls, validate_url
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--url-file", type=Path, required=True)
+    parser.add_argument(
+        "--existing-root",
+        type=Path,
+        action="append",
+        required=True,
+        help="archive root to scan; may be repeated",
+    )
+    parser.add_argument("--limit", type=int, required=True)
+    args = parser.parse_args()
+    if args.limit <= 0:
+        parser.error("--limit must be positive")
+
+    completed = completed_capture_urls(args.existing_root)
+    selected: list[str] = []
+    seen: set[str] = set()
+    for raw in args.url_file.read_text(encoding="utf-8").splitlines():
+        url = raw.strip()
+        if not url or url.startswith("#"):
+            continue
+        identity = archival_url_key(validate_url(url))
+        if identity in completed or identity in seen:
+            continue
+        seen.add(identity)
+        selected.append(url)
+        if len(selected) == args.limit:
+            break
+
+    if selected:
+        print("\n".join(selected))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
