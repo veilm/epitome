@@ -40,3 +40,22 @@ Before any page batch begins:
 
 The successor `astralcodexten.com` remains a separate source because its
 Substack structure and free/paywalled/email variants require their own scope.
+
+## Archives-page pilot
+
+The complete structural archive was captured at:
+
+`/mnt2/capsule/epitome/slate-star-codex/validation/1786356305-archives`
+
+Its manifest is complete and tab-closed. The capture retains a 562,635-byte
+final DOM, 84,297 visible characters, 1,906 links, 59 rendered images, and 46
+server-rendered historical comments. Asset completion recovered 88 of 90
+initially missing references with two-second spacing. The only failures are two
+obsolete Gravatar share-button sprites that return HTTP 404 upstream and are
+not rendered `<img>` content; both primary and all-image audits are clean.
+
+Desktop replay preserves the full three-column WordPress layout, archive list,
+sidebars, advertising/book images, avatars, and comments. Its 41,774-pixel page
+has zero broken rendered images and made zero production-origin requests. The
+structural path is therefore capture-ready, but representative ordinary,
+image-heavy, long, and open-thread post pilots still precede any large crawl.
