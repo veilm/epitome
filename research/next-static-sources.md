@@ -55,6 +55,34 @@ than being treated as complete page assets. The page archive is otherwise ready
 for its small batch after SemiAnalysis; use the validated longer page budget
 (120 scrolls and 120 seconds) for the scenario and endings.
 
+### Completed bounded scope
+
+The remaining 12 identities completed with 30-second inter-page spacing at:
+
+`/mnt2/capsule/epitome/ai-2027/crawls/1786340042`
+
+Together with the homepage pilot, all 13 approved identities have complete
+manifests and closed capture tabs. There were no capture failures, and repeated
+primary and all-rendered-image audits report zero missing resources. The PDF
+capture contains the actual 8,863,479-byte PDF 1.7 document with 71 A4 pages,
+not merely Chromium's viewer shell.
+
+The first multi-page replay audit exposed one real script-disabled layout bug:
+six Security Forecast images with the site's `h-[100%]` utility class expanded
+to the entire grid-track height, creating roughly 25,874-pixel figures and large
+blank gaps. A replay rule scoped to `ai-2027.com` now restores intrinsic image
+height. Its dimensions match the live page, and a regression test prevents the
+rule from affecting other sources.
+
+The corrected desktop audit covered the scenario, summary, Security Forecast,
+both endings, footnotes, and the locally served PDF. HTML pages retained
+8,929–83,103 visible characters with zero broken images; the scenario graphs
+and repaired security timelines render at their expected sizes. The strict log
+recorded 692 requests to the temporary local server plus Chromium's internal
+PDF-viewer stylesheet, with no production-origin request. Audit tabs were
+closed afterward. The direct narration remains the only current non-YouTube
+media import; YouTube was not fetched.
+
 ## Andrej Karpathy
 
 `https://karpathy.ai/` is a distinct first-party property from the completed

@@ -227,6 +227,18 @@ def _path_matches(url: str, configured_paths: object) -> bool:
     return path in {str(value).rstrip("/") or "/" for value in configured_paths or []}
 
 
+def _configured_title(url: str, source: dict[str, object]) -> str | None:
+    overrides = source.get("title_overrides")
+    if not isinstance(overrides, dict):
+        return None
+    path = urlsplit(url).path.rstrip("/") or "/"
+    for configured_path, title in overrides.items():
+        if (str(configured_path).rstrip("/") or "/") == path:
+            value = _clean_text(str(title))
+            return value or None
+    return None
+
+
 def build_public_catalog(
     archive_root: Path,
     source_config_path: Path,
@@ -286,7 +298,8 @@ def build_public_catalog(
                 "captured_at": captured_at,
                 "published_at": metadata["published_at"],
                 "source": str(source["id"]),
-                "title": _clean_source_title(metadata["title"], source),
+                "title": _configured_title(url, source)
+                or _clean_source_title(metadata["title"], source),
                 "url": identity,
             }
         )

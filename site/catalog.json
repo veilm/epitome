@@ -39,6 +39,11 @@
       "id": "semianalysis",
       "name": "SemiAnalysis",
       "logo_url": "https://substackcdn.com/image/fetch/$s_!Dypw!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0f02aaaa-9a11-47db-8aee-d57188ddabf9%2Fapple-touch-icon-1024x1024.png"
+    },
+    {
+      "id": "ai-2027",
+      "name": "AI 2027",
+      "logo_url": "https://ai-2027.com/favicon.png"
     }
   ],
   "pages": [
@@ -13803,6 +13808,97 @@
       "source": "andrej-karpathy",
       "title": "Lessons learned from manually classifying CIFAR-10",
       "url": "https://karpathy.github.io/2011/04/27/manually-classifying-cifar10"
+    },
+    {
+      "captured_at": 1786342261,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI 2027 PDF",
+      "url": "https://ai-2027.com/ai-2027.pdf"
+    },
+    {
+      "captured_at": 1786342060,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "About",
+      "url": "https://ai-2027.com/about"
+    },
+    {
+      "captured_at": 1786341841,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI 2027 Footnotes",
+      "url": "https://ai-2027.com/footnotes"
+    },
+    {
+      "captured_at": 1786341619,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI 2027 — Race ending",
+      "url": "https://ai-2027.com/race"
+    },
+    {
+      "captured_at": 1786341388,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI 2027 — Slowdown ending",
+      "url": "https://ai-2027.com/slowdown"
+    },
+    {
+      "captured_at": 1786341162,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Security Forecast",
+      "url": "https://ai-2027.com/research/security-forecast"
+    },
+    {
+      "captured_at": 1786340945,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI Goals Forecast",
+      "url": "https://ai-2027.com/research/ai-goals-forecast"
+    },
+    {
+      "captured_at": 1786340738,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Takeoff Forecast",
+      "url": "https://ai-2027.com/research/takeoff-forecast"
+    },
+    {
+      "captured_at": 1786340506,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Timelines Forecast",
+      "url": "https://ai-2027.com/research/timelines-forecast"
+    },
+    {
+      "captured_at": 1786340301,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Compute Forecast",
+      "url": "https://ai-2027.com/research/compute-forecast"
+    },
+    {
+      "captured_at": 1786340259,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Supplements",
+      "url": "https://ai-2027.com/research"
+    },
+    {
+      "captured_at": 1786340049,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "Summary",
+      "url": "https://ai-2027.com/summary"
+    },
+    {
+      "captured_at": 1786300694,
+      "published_at": null,
+      "source": "ai-2027",
+      "title": "AI 2027",
+      "url": "https://ai-2027.com/"
     },
     {
       "captured_at": 1786164988,

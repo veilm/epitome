@@ -166,7 +166,9 @@ deletion-history workflows are explicitly designed.
         `sources/ai-2027.txt`, excluding translations and legacy redirect aliases.
   - [x] Capture and offline-verify the long AI 2027 homepage pilot; localize SVG
         graph images and inventory its narrated audio plus YouTube companion.
-  - [ ] Capture and offline-verify the bounded English AI 2027 scope.
+  - [x] Capture and offline-verify all 13 identities in the bounded English
+        AI 2027 scope, including the underlying 71-page PDF; correct the
+        script-disabled percentage-height image layout in local replay.
   - [x] Inventory AI 2040's canonical Plan A scenario, PDF, about page,
         footnotes, supplements index, and seventeen supplements as a bounded
         22-identity scope in `sources/ai-2040.txt`.

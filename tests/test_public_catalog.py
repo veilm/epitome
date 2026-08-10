@@ -63,6 +63,9 @@ class PublicCatalogTest(unittest.TestCase):
                                 "archive_directory": "example",
                                 "hosts": ["example.com"],
                                 "logo_url": "https://example.com/favicon.png",
+                                "title_overrides": {
+                                    "/2025/03/04/post": "Configured title"
+                                },
                                 "undated_paths": ["/2025/03/04/post"],
                                 "exclude_paths": ["/feed"],
                             }
@@ -117,7 +120,7 @@ class PublicCatalogTest(unittest.TestCase):
             result = build_public_catalog(root / "archive", config, output)
             catalog = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(result["pages"], 1)
-            self.assertEqual(catalog["pages"][0]["title"], "New")
+            self.assertEqual(catalog["pages"][0]["title"], "Configured title")
             self.assertIsNone(catalog["pages"][0]["published_at"])
             self.assertNotIn("capture_path", catalog["pages"][0])
             self.assertEqual(
