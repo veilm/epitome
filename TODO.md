@@ -160,6 +160,8 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the index and four varied essays, then complete and
           offline-audit the first 15-page bounded batch (20/232 total).
     - [x] Capture and offline-audit the next 30 essays (50/232 total).
+    - [x] Capture and offline-audit the next 45 essays (95/232 total); classify
+          the only failures as the reviewed obsolete Virtumundo layout spacer.
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.

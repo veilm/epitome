@@ -13208,6 +13208,14 @@
       "published_precision": "month"
     },
     {
+      "captured_at": 1786358671,
+      "published_at": 1580515200,
+      "source": "paul-graham",
+      "title": "How to Write Usefully",
+      "url": "https://paulgraham.com/useful.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785875214,
       "published_at": 1580342400,
       "source": "openai",
@@ -13220,6 +13228,22 @@
       "source": "openai",
       "title": "Scaling laws for neural language models",
       "url": "https://openai.com/index/scaling-laws-for-neural-language-models"
+    },
+    {
+      "captured_at": 1786358831,
+      "published_at": 1577836800,
+      "source": "paul-graham",
+      "title": "Haters",
+      "url": "https://paulgraham.com/fh.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786358751,
+      "published_at": 1577836800,
+      "source": "paul-graham",
+      "title": "Being a Noob",
+      "url": "https://paulgraham.com/noob.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785828987,
@@ -13236,6 +13260,30 @@
       "url": "https://openai.com/index/deep-double-descent"
     },
     {
+      "captured_at": 1786359070,
+      "published_at": 1575158400,
+      "source": "paul-graham",
+      "title": "The Lesson to Unlearn",
+      "url": "https://paulgraham.com/lesson.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786358990,
+      "published_at": 1575158400,
+      "source": "paul-graham",
+      "title": "Fashionable Problems",
+      "url": "https://paulgraham.com/fp.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786358910,
+      "published_at": 1575158400,
+      "source": "paul-graham",
+      "title": "The Two Kinds of Moderate",
+      "url": "https://paulgraham.com/mod.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786354197,
       "published_at": 1575158400,
       "source": "paul-graham",
@@ -13249,6 +13297,22 @@
       "source": "openai",
       "title": "Benchmarking safe exploration in deep reinforcement learning",
       "url": "https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning"
+    },
+    {
+      "captured_at": 1786359229,
+      "published_at": 1572566400,
+      "source": "paul-graham",
+      "title": "The Bus Ticket Theory of Genius",
+      "url": "https://paulgraham.com/genius.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786359149,
+      "published_at": 1572566400,
+      "source": "paul-graham",
+      "title": "Novelty and Heresy",
+      "url": "https://paulgraham.com/nov.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785840793,
@@ -13601,6 +13665,14 @@
       "url": "https://openai.com/index/learning-with-opponent-learning-awareness"
     },
     {
+      "captured_at": 1786359309,
+      "published_at": 1504224000,
+      "source": "paul-graham",
+      "title": "General and Surprising",
+      "url": "https://paulgraham.com/sun.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785753318,
       "published_at": 1502841600,
       "source": "openai",
@@ -13767,6 +13839,22 @@
       "source": "openai",
       "title": "PixelCNN++: Improving the PixelCNN with discretized logistic mixture likelihood and other modifications",
       "url": "https://openai.com/index/pixelcnn-plus-plus"
+    },
+    {
+      "captured_at": 1786359468,
+      "published_at": 1483228800,
+      "source": "paul-graham",
+      "title": "The Risk of Discovery",
+      "url": "https://paulgraham.com/disc.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786359389,
+      "published_at": 1483228800,
+      "source": "paul-graham",
+      "title": "Charisma / Power",
+      "url": "https://paulgraham.com/pow.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785726043,
@@ -14014,6 +14102,14 @@
       "url": "https://steipete.me/posts/2016/a-pragmatic-approach-to-cross-platform"
     },
     {
+      "captured_at": 1786359548,
+      "published_at": 1459468800,
+      "source": "paul-graham",
+      "title": "How to Make Pittsburgh a Startup Hub",
+      "url": "https://paulgraham.com/pgh.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785644250,
       "published_at": 1459382400,
       "source": "openai",
@@ -14035,6 +14131,30 @@
       "url": "https://openai.com/index/weight-normalization"
     },
     {
+      "captured_at": 1786359791,
+      "published_at": 1451606400,
+      "source": "paul-graham",
+      "title": "The Refragmentation",
+      "url": "https://paulgraham.com/re.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786359708,
+      "published_at": 1451606400,
+      "source": "paul-graham",
+      "title": "Economic Inequality",
+      "url": "https://paulgraham.com/ineq.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786359628,
+      "published_at": 1451606400,
+      "source": "paul-graham",
+      "title": "Life is Short",
+      "url": "https://paulgraham.com/vb.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785704696,
       "published_at": 1449792000,
       "source": "openai",
@@ -14049,6 +14169,14 @@
       "url": "https://karpathy.github.io/2015/11/14/ai"
     },
     {
+      "captured_at": 1786359872,
+      "published_at": 1446336000,
+      "source": "paul-graham",
+      "title": "Jessica Livingston",
+      "url": "https://paulgraham.com/jessica.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786162936,
       "published_at": 1445731200,
       "source": "andrej-karpathy",
@@ -14061,6 +14189,46 @@
       "source": "peter-steinberger",
       "title": "Using ccache for Fun and Profit",
       "url": "https://steipete.me/posts/2015/ccache-for-fun-and-profit"
+    },
+    {
+      "captured_at": 1786360111,
+      "published_at": 1443657600,
+      "source": "paul-graham",
+      "title": "Default Alive or Default Dead?",
+      "url": "https://paulgraham.com/aord.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360031,
+      "published_at": 1443657600,
+      "source": "paul-graham",
+      "title": "Write Like You Talk",
+      "url": "https://paulgraham.com/talk.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786359952,
+      "published_at": 1443657600,
+      "source": "paul-graham",
+      "title": "A Way to Detect Bias",
+      "url": "https://paulgraham.com/bias.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360270,
+      "published_at": 1438387200,
+      "source": "paul-graham",
+      "title": "Change Your Name",
+      "url": "https://paulgraham.com/name.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360191,
+      "published_at": 1438387200,
+      "source": "paul-graham",
+      "title": "Why It's Safe for Founders to Be Nice",
+      "url": "https://paulgraham.com/safe.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786163014,
@@ -14091,6 +14259,14 @@
       "url": "https://karpathy.github.io/2015/03/30/breaking-convnets"
     },
     {
+      "captured_at": 1786360350,
+      "published_at": 1422748800,
+      "source": "paul-graham",
+      "title": "What Microsoft Is this the Altair Basic of?",
+      "url": "https://paulgraham.com/altair.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786168335,
       "published_at": 1422221100,
       "source": "peter-steinberger",
@@ -14103,6 +14279,78 @@
       "source": "peter-steinberger",
       "title": "UIKit Debug Mode",
       "url": "https://steipete.me/posts/2015/uikit-debug-mode"
+    },
+    {
+      "captured_at": 1786360590,
+      "published_at": 1420070400,
+      "source": "paul-graham",
+      "title": "Don't Talk to Corp Dev",
+      "url": "https://paulgraham.com/corpdev.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360510,
+      "published_at": 1420070400,
+      "source": "paul-graham",
+      "title": "What Doesn't Seem Like Work?",
+      "url": "https://paulgraham.com/work.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360430,
+      "published_at": 1420070400,
+      "source": "paul-graham",
+      "title": "The Ronco Principle",
+      "url": "https://paulgraham.com/ronco.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360911,
+      "published_at": 1417392000,
+      "source": "paul-graham",
+      "title": "The Fatal Pinch",
+      "url": "https://paulgraham.com/pinch.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360831,
+      "published_at": 1417392000,
+      "source": "paul-graham",
+      "title": "How You Know",
+      "url": "https://paulgraham.com/know.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360751,
+      "published_at": 1417392000,
+      "source": "paul-graham",
+      "title": "How to Be an Expert in a Changing World",
+      "url": "https://paulgraham.com/ecw.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360671,
+      "published_at": 1417392000,
+      "source": "paul-graham",
+      "title": "Let the Other 95% of Great Programmers In",
+      "url": "https://paulgraham.com/95.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786360990,
+      "published_at": 1414800000,
+      "source": "paul-graham",
+      "title": "Mean People Fail",
+      "url": "https://paulgraham.com/mean.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361070,
+      "published_at": 1412121600,
+      "source": "paul-graham",
+      "title": "Before the Startup",
+      "url": "https://paulgraham.com/before.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786163166,
@@ -14210,11 +14458,51 @@
       "url": "https://steipete.me/posts/2013/fixing-uisearchdisplaycontroller-on-ios-7"
     },
     {
+      "captured_at": 1786361153,
+      "published_at": 1377993600,
+      "source": "paul-graham",
+      "title": "How to Raise Money",
+      "url": "https://paulgraham.com/fr.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361319,
+      "published_at": 1375315200,
+      "source": "paul-graham",
+      "title": "How to Convince Investors",
+      "url": "https://paulgraham.com/convince.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361236,
+      "published_at": 1375315200,
+      "source": "paul-graham",
+      "title": "Investor Herd Dynamics",
+      "url": "https://paulgraham.com/herd.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786167662,
       "published_at": 1375208880,
       "source": "peter-steinberger",
       "title": "Smart Proxy Delegation",
       "url": "https://steipete.me/posts/2013/smart-proxy-delegation"
+    },
+    {
+      "captured_at": 1786361401,
+      "published_at": 1372636800,
+      "source": "paul-graham",
+      "title": "Do Things that Don't Scale",
+      "url": "https://paulgraham.com/ds.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361486,
+      "published_at": 1370044800,
+      "source": "paul-graham",
+      "title": "Startup Investing Trends",
+      "url": "https://paulgraham.com/invtrend.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786167320,
@@ -14238,11 +14526,43 @@
       "url": "https://steipete.me/posts/2013/uiappearance-for-custom-views"
     },
     {
+      "captured_at": 1786361566,
+      "published_at": 1351728000,
+      "source": "paul-graham",
+      "title": "How to Get Startup Ideas",
+      "url": "https://paulgraham.com/startupideas.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786163707,
       "published_at": 1350864000,
       "source": "andrej-karpathy",
       "title": "The state of Computer Vision and AI: we are really, really far away.",
       "url": "https://karpathy.github.io/2012/10/22/state-of-computer-vision"
+    },
+    {
+      "captured_at": 1786361649,
+      "published_at": 1349049600,
+      "source": "paul-graham",
+      "title": "The Hardware Renaissance",
+      "url": "https://paulgraham.com/hw.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361814,
+      "published_at": 1346457600,
+      "source": "paul-graham",
+      "title": "Black Swan Farming",
+      "url": "https://paulgraham.com/swan.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361731,
+      "published_at": 1346457600,
+      "source": "paul-graham",
+      "title": "Startup = Growth",
+      "url": "https://paulgraham.com/growth.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786166889,
@@ -14292,6 +14612,46 @@
       "source": "peter-steinberger",
       "title": "Reboot",
       "url": "https://steipete.me/posts/2012/reboot"
+    },
+    {
+      "captured_at": 1786361896,
+      "published_at": 1333238400,
+      "source": "paul-graham",
+      "title": "The Top of My Todo List",
+      "url": "https://paulgraham.com/todo.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786362217,
+      "published_at": 1330560000,
+      "source": "paul-graham",
+      "title": "Frighteningly Ambitious Startup Ideas",
+      "url": "https://paulgraham.com/ambitious.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786362135,
+      "published_at": 1330560000,
+      "source": "paul-graham",
+      "title": "Defining Property",
+      "url": "https://paulgraham.com/property.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786362055,
+      "published_at": 1330560000,
+      "source": "paul-graham",
+      "title": "How Y Combinator Started",
+      "url": "https://paulgraham.com/ycstart.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786361975,
+      "published_at": 1330560000,
+      "source": "paul-graham",
+      "title": "Writing and Speaking",
+      "url": "https://paulgraham.com/speak.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786163771,

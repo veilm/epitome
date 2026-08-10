@@ -98,3 +98,18 @@ spanning illustrated, short, long, political, and technical essays retained
 1,480–24,993 visible characters and 4–15 images, with no broken images or
 production-origin requests. Coverage is now 50/232 approved identities; the
 public catalog contains the 49 non-structural essays.
+
+## Third bounded batch
+
+The next 45 deduplicated essays completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786358665`
+
+All 45 manifests are complete and tab-closed. Primary-image audits report zero
+omissions. The only eleven asset failures are repeated requests for the same
+dead Virtumundo 1x1 layout spacer already reviewed in the pilot; the replay
+alias substitutes the captured transparent GIF, so affected pages have zero
+broken rendered images. Five desktop checks spanning short, long, illustrated,
+and obsolete-layout variants retained their article text and source styling
+with zero production-origin requests. Coverage is now 95/232 approved
+identities.
