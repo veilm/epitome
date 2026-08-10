@@ -279,6 +279,18 @@ def _configured_title(url: str, source: dict[str, object]) -> str | None:
     return None
 
 
+def _configured_publication_date(
+    url: str, source: dict[str, object]
+) -> tuple[int, str] | None:
+    overrides = source.get("publication_date_overrides")
+    if isinstance(overrides, dict):
+        path = urlsplit(url).path.rstrip("/") or "/"
+        for configured_path, value in overrides.items():
+            if (str(configured_path).rstrip("/") or "/") == path:
+                return _parse_timestamp_detail(value)
+    return _parse_timestamp_detail(source.get("publication_date_default"))
+
+
 def build_public_catalog(
     archive_root: Path,
     source_config_path: Path,
@@ -340,12 +352,28 @@ def build_public_catalog(
         if _path_matches(url, source.get("undated_paths")):
             metadata["published_at"] = None
             metadata["published_precision"] = None
+        configured_date = _configured_publication_date(url, source)
+        if metadata["published_at"] is None and configured_date:
+            metadata["published_at"], metadata["published_precision"] = configured_date
         source_title = metadata["title"]
         if source.get("prefer_h1") and metadata.get("h1"):
             source_title = metadata["h1"]
+        published_at = metadata["published_at"]
+        sort_at = published_at if isinstance(published_at, int) else captured_at
         entry = {
             "captured_at": captured_at,
-            "published_at": metadata["published_at"],
+            "publication_status": (
+                "exact"
+                if published_at is not None and metadata.get("published_precision") != "month"
+                else "partial"
+                if published_at is not None
+                else "not_applicable"
+                if _path_matches(url, source.get("undated_paths"))
+                else "unknown"
+            ),
+            "published_at": published_at,
+            "sort_at": sort_at,
+            "sort_basis": "published" if published_at is not None else "captured",
             "source": str(source["id"]),
             "title": _configured_title(url, source)
             or _clean_source_title(source_title, source),
@@ -356,7 +384,7 @@ def build_public_catalog(
         entries.append(entry)
     entries.sort(
         key=lambda entry: (
-            int(entry["published_at"] or -1),
+            int(entry["sort_at"]),
             int(entry["captured_at"]),
             str(entry["url"]),
         ),
@@ -378,5 +406,6 @@ def build_public_catalog(
         "pages": len(entries),
         "sources": len({str(entry["source"]) for entry in entries}),
         "dated": sum(entry["published_at"] is not None for entry in entries),
+        "placed": sum(entry["sort_at"] is not None for entry in entries),
         "malformed": malformed,
     }

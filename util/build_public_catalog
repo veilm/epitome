@@ -23,7 +23,8 @@ def main() -> int:
         return 1
     print(
         f"Cataloged {result['pages']} pages from {result['sources']} sources; "
-        f"{result['dated']} have publication dates ({result['malformed']} malformed skipped)"
+        f"{result['dated']} have publication dates and {result['placed']} have chronology "
+        f"dates ({result['malformed']} malformed skipped)"
     )
     return 0
 

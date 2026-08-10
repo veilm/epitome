@@ -96,6 +96,7 @@ class PublicCatalogTest(unittest.TestCase):
                                     "/2025/03/04/post": "Configured title"
                                 },
                                 "undated_paths": ["/2025/03/04/post"],
+                                "publication_date_default": "March 4, 2025",
                                 "exclude_paths": ["/feed"],
                             }
                         ]
@@ -150,7 +151,10 @@ class PublicCatalogTest(unittest.TestCase):
             catalog = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(result["pages"], 1)
             self.assertEqual(catalog["pages"][0]["title"], "Configured title")
-            self.assertIsNone(catalog["pages"][0]["published_at"])
+            self.assertEqual(catalog["pages"][0]["published_at"], 1741046400)
+            self.assertEqual(catalog["pages"][0]["sort_at"], 1741046400)
+            self.assertEqual(catalog["pages"][0]["sort_basis"], "published")
+            self.assertEqual(catalog["pages"][0]["publication_status"], "exact")
             self.assertNotIn("capture_path", catalog["pages"][0])
             self.assertEqual(
                 catalog["sources"],

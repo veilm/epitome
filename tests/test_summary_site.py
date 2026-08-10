@@ -80,6 +80,8 @@ site. It contains more than one hundred characters and links to the
                             {
                                 "captured_at": 19,
                                 "published_at": None,
+                                "sort_at": 19,
+                                "sort_basis": "captured",
                                 "source": "example",
                                 "title": "An undated page",
                                 "url": "https://example.com/undated",
@@ -110,6 +112,9 @@ site. It contains more than one hundred characters and links to the
             self.assertIn('class="summary-link"', index)
             self.assertIn("<time>2025-03</time>", index)
             self.assertNotIn("<time>2025-03-04</time>", index)
+            self.assertIn("<time>1970-01-01</time>", index)
+            self.assertIn('class="date-basis">captured</span>', index)
+            self.assertIn("<strong>2</strong> dated", index)
             self.assertEqual(len(article_pages), 1)
             article = article_pages[0].read_text(encoding="utf-8")
             self.assertIn("Original article", article)

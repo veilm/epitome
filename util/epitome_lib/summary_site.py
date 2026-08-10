@@ -562,7 +562,7 @@ def build_summary_site(
         "semianalysis": "SA", "other": "·",
     }
     feed_items: list[str] = []
-    dated_count = 0
+    placed_count = 0
     summarized_count = 0
     used_sources: set[str] = set()
     for page in pages:
@@ -581,7 +581,7 @@ def build_summary_site(
         title = str(page.get("title") or url)
         published_at = page.get("published_at")
         if isinstance(published_at, int):
-            dated_count += 1
+            placed_count += 1
             date_format = (
                 "%Y-%m"
                 if page.get("published_precision") == "month"
@@ -591,9 +591,20 @@ def build_summary_site(
                 published_at, tz=timezone.utc
             ).strftime(date_format)
             sort_date = published_at
+            date_basis = "published"
         else:
-            date_display = "Date unavailable"
-            sort_date = -1
+            sort_at = page.get("sort_at", page.get("captured_at"))
+            if isinstance(sort_at, int):
+                placed_count += 1
+                date_display = datetime.fromtimestamp(
+                    sort_at, tz=timezone.utc
+                ).strftime("%Y-%m-%d")
+                sort_date = sort_at
+                date_basis = str(page.get("sort_basis", "captured")).replace("_", " ")
+            else:
+                date_display = "Date unavailable"
+                sort_date = -1
+                date_basis = "unknown"
         summary = summaries_by_url.get(archival_url_key(url))
         summarized_count += int(summary is not None)
         summary_link = (
@@ -608,6 +619,7 @@ aria-hidden="true"><span>{fallback}</span>{logo}</span><div>
 <h3 class="feed-title"><a href="{escape(url, quote=True)}" target="_blank"
 rel="noopener noreferrer">{escape(title)}</a></h3><div class="feed-meta">
 <span>{escape(source_name)}</span><span aria-hidden="true">·</span><time>{date_display}</time>
+<span class="date-basis">{escape(date_basis)}</span>
 {summary_link}</div></div></li>'''
         )
     source_filters = []
@@ -628,7 +640,7 @@ rel="noopener noreferrer">{escape(title)}</a></h3><div class="feed-meta">
 independent writers, research organizations, and company publications. Titles link to
 their original public pages; available Epitome summaries are marked separately.</p>
 <div class="stats"><span><strong>{len(pages):,}</strong> pages</span>
-<span><strong>{len(used_sources)}</strong> sources</span><span><strong>{dated_count}</strong> dated</span>
+<span><strong>{len(used_sources)}</strong> sources</span><span><strong>{placed_count}</strong> dated</span>
 <span><strong>{summarized_count}</strong> summarized</span></div></div></section>
 <div class="catalog-layout"><aside class="filters" aria-label="Catalog filters"><h2>Filter</h2>
 <fieldset class="filter-group"><legend>Sources</legend>{''.join(source_filters)}</fieldset>
@@ -638,8 +650,8 @@ their original public pages; available Epitome summaries are marked separately.<
 <label class="filter-group"><strong>Order</strong><select id="sort-order" class="filter-select">
 <option value="newest">Newest first</option><option value="oldest">Oldest first</option>
 </select></label></aside><section><div class="feed-toolbar"><h2>Publications</h2>
-<span class="feed-count"></span></div><p class="undated-note">Publication dates come from
-source metadata. Pages without a reliable publication date appear after dated entries.</p>
+<span class="feed-count"></span></div><p class="undated-note">Each page has a chronology date.
+The adjacent label distinguishes publication dates from capture-based archival dates.</p>
 <ul class="feed">{''.join(feed_items)}</ul><p class="empty-state" hidden>No pages match these filters.</p>
 </section></div></main>"""
     (output_dir / "index.html").write_text(

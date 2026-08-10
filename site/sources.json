@@ -74,6 +74,7 @@
         "/footnotes": "AI 2027 Footnotes",
         "/ai-2027.pdf": "AI 2027 PDF"
       },
+      "publication_date_default": "2025-04-03",
       "undated_paths": [
         "/", "/summary", "/research", "/research/compute-forecast",
         "/research/timelines-forecast", "/research/takeoff-forecast",
@@ -92,6 +93,7 @@
         "/footnotes": "AI 2040 Footnotes",
         "/supplements/econ-explorer": "Economic Growth Explorer"
       },
+      "publication_date_default": "2026-07-09",
       "undated_paths": [
         "/", "/AI-2040.pdf", "/about", "/footnotes", "/supplements",
         "/supplements/faq", "/supplements/how-plan-a-solves-our-5-biggest-problems",
@@ -117,6 +119,7 @@
       "title_overrides": {
         "/wp-content/uploads/2024/06/situationalawareness.pdf": "Situational Awareness — Full Series PDF"
       },
+      "publication_date_default": "June 2024",
       "undated_paths": [
         "/wp-content/uploads/2024/06/situationalawareness.pdf"
       ]
