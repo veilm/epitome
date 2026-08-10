@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786349229` (2026-08-10 08:07 UTC).
+Updated at Unix timestamp `1786350192` (2026-08-10 08:23 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -19,6 +19,7 @@ work.
 | SemiAnalysis newsletter | Page archive complete; media imports active | All 325 reviewed identities are complete across structural validations and six bounded batches. Paywalled and free articles, image-heavy technical posts, and the chronological archive replay locally without production requests. A total of 433 initially omitted article/listing images were repaired; ten Substack videos across five articles are inventoried. Free-subscriber emails end at the same paid boundary and are not a richer source. | Import the ten videos separately. Inventory the corporate, careers, models, and public-tools site later; authenticated institutional data is out of public-crawl scope. |
 | AI 2027 | Page archive complete; audio import active | All 13 approved English identities are captured and offline-verified: the scenario, summary, research index and five forecasts, both endings, footnotes, about page, and the real 71-page PDF. A source-scoped replay fix restores the live intrinsic dimensions of percentage-height figures. | Import and duration-check the direct narrated-scenario audio. The companion YouTube video is inventoried but deliberately untouched. |
 | AI 2040 | Page archive complete; audio import active | All 22 approved identities are complete across the homepage pilot and two bounded batches. Long supplements, index layouts, images, the first-party 14.5 MB PDF, and substantive cited PDFs replay locally without production requests. Raw visualization/application code and data are preserved; script-free replay presents the homepage's final scroll state and leaves Economic Growth Explorer canvas charts inert. | Import and duration-check the inventoried 64-minute narration; reconstruct executable offline interactions only if later preservation priorities warrant it. |
+| Situational Awareness | 2/11 pages validated; final batch ready | The introduction and long *From GPT-4 to AGI* pilots are complete. Asset completion recovered all 181 missing long-essay references, eliminating the live page's twenty broken figures; the valid 165-page, 21.4 MB full-series PDF also renders locally. | Capture and offline-verify the final nine approved identities with the validated original-asset strategy. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
 ## Active media import
@@ -79,5 +80,5 @@ newsletter scope is also complete and replay-verified; its ten external video
 imports remain active. AI 2027's 13-identity English scope is complete and
 replay-verified. AI 2040's approved 22-identity Plan A scope and Karpathy's
 separate four-identity `karpathy.ai` property are also complete. The next source
-should continue the easiest-static-first rule while Twitter/X and YouTube stay
-deferred.
+is the active eleven-identity *Situational Awareness* scope; its two pilots pass
+and the final nine-page batch is ready. Twitter/X and YouTube stay deferred.

@@ -30,3 +30,36 @@ Classify which original-size images remain available and recover confirmed
 missing figures from exact historical copies where practical. The first-party
 PDF is especially important as a second representation of the full essay and
 its figures; require the actual PDF body rather than a viewer shell.
+
+## Validated pilots
+
+The introduction pilot completed at:
+
+`/mnt2/capsule/epitome/situational-awareness/validation/1786349398-home`
+
+Its manifest is complete, the capture tab closed, and both image audits report
+zero omissions. Asset completion recovered all seven missing references,
+including the actual 21,371,840-byte full-series PDF. The document identifies as
+a valid PDF 1.5 file with 165 pages.
+
+The representative long-essay pilot completed at:
+
+`/mnt2/capsule/epitome/situational-awareness/validation/1786349432-from-gpt-4-to-agi`
+
+Its manifest is complete and the capture tab closed. The run retained 205
+response bodies totaling 92,920,405 bytes. Asset completion attempted and
+recovered all 181 discovered missing references with two-second spacing and zero
+failures. Primary and all-rendered-image audits are both zero: the offline page
+loads all 27 figures at natural size even though twenty were broken in the live
+rendered page during reconnaissance.
+
+A 1440x900 replay audit found exact introduction text metrics and 62,619 visible
+characters in the long essay, with its complete figure-rich layout. The PDF
+renders locally with all 165 pages. A strict network log recorded 81 requests to
+the local replay server plus Chromium's internal PDF-viewer stylesheet and no
+production-origin request. Audit tabs were closed afterward.
+
+The two pilots establish a viable figure strategy: retain every responsive and
+original WordPress asset discovered from the page markup rather than accepting
+the live browser's selected broken variants. The remaining nine identities are
+ready for one bounded batch with generous inter-page and per-asset delays.
