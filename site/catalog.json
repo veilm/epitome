@@ -9982,6 +9982,14 @@
       "url": "https://www.anthropic.com/news/claude-3-family"
     },
     {
+      "captured_at": 1786356134,
+      "published_at": 1709251200,
+      "source": "paul-graham",
+      "title": "The Best Essay",
+      "url": "https://paulgraham.com/best.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786354895,
       "published_at": 1709251200,
       "source": "paul-graham",
@@ -10458,6 +10466,14 @@
       "source": "semianalysis",
       "title": "Amazon Anthropic: Poison Pill or Empire Strikes Back",
       "url": "https://newsletter.semianalysis.com/p/amazon-anthropic-poison-pill-or-empire"
+    },
+    {
+      "captured_at": 1786356199,
+      "published_at": 1696118400,
+      "source": "paul-graham",
+      "title": "Superlinear Returns",
+      "url": "https://paulgraham.com/superlinear.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786276989,
@@ -11252,6 +11268,14 @@
       "url": "https://www.dwarkesh.com/p/holden-karnofsky"
     },
     {
+      "captured_at": 1786356265,
+      "published_at": 1672531200,
+      "source": "paul-graham",
+      "title": "How to Get New Ideas",
+      "url": "https://paulgraham.com/getideas.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786289601,
       "published_at": 1672283238,
       "source": "semianalysis",
@@ -11434,6 +11458,22 @@
       "url": "https://newsletter.semianalysis.com/p/the-future-of-packaging-gets-blurry"
     },
     {
+      "captured_at": 1786356394,
+      "published_at": 1667260800,
+      "source": "paul-graham",
+      "title": "What You (Want to)* Want",
+      "url": "https://paulgraham.com/want.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786356329,
+      "published_at": 1667260800,
+      "source": "paul-graham",
+      "title": "The Need to Read",
+      "url": "https://paulgraham.com/read.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786292960,
       "published_at": 1666928552,
       "source": "semianalysis",
@@ -11518,6 +11558,14 @@
       "url": "https://newsletter.semianalysis.com/p/semiconductor-fab-buildout-delays"
     },
     {
+      "captured_at": 1786356459,
+      "published_at": 1664582400,
+      "source": "paul-graham",
+      "title": "Alien Truth",
+      "url": "https://paulgraham.com/alien.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786217291,
       "published_at": 1664371266,
       "source": "dwarkesh",
@@ -11579,6 +11627,14 @@
       "source": "semianalysis",
       "title": "How Onto Innovation Is Gaining Market Share From KLA - $ONTO $KLA",
       "url": "https://newsletter.semianalysis.com/p/how-onto-innovation-is-gaining-market"
+    },
+    {
+      "captured_at": 1786356524,
+      "published_at": 1661990400,
+      "source": "paul-graham",
+      "title": "What I've Learned from Users",
+      "url": "https://paulgraham.com/users.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786295863,
@@ -11994,6 +12050,14 @@
       "url": "https://newsletter.semianalysis.com/p/how-nvidias-empire-could-be-eroded"
     },
     {
+      "captured_at": 1786356588,
+      "published_at": 1648771200,
+      "source": "paul-graham",
+      "title": "Heresy",
+      "url": "https://paulgraham.com/heresy.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786305241,
       "published_at": 1648033980,
       "source": "semianalysis",
@@ -12097,6 +12161,14 @@
       "source": "semianalysis",
       "title": "Semiconductor Roundup – 2/1/2022",
       "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-212022"
+    },
+    {
+      "captured_at": 1786356653,
+      "published_at": 1643673600,
+      "source": "paul-graham",
+      "title": "Putting Ideas into Words",
+      "url": "https://paulgraham.com/words.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786236564,
@@ -12232,6 +12304,14 @@
       "url": "https://openai.com/index/api-no-waitlist"
     },
     {
+      "captured_at": 1786356718,
+      "published_at": 1635724800,
+      "source": "paul-graham",
+      "title": "Is There Such a Thing as Good Taste?",
+      "url": "https://paulgraham.com/goodtaste.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786310283,
       "published_at": 1634899314,
       "source": "semianalysis",
@@ -12286,6 +12366,14 @@
       "source": "semianalysis",
       "title": "Apple A15 Die Shot and Annotation - IP Block Area Analysis",
       "url": "https://newsletter.semianalysis.com/p/apple-a15-die-shot-and-annotation"
+    },
+    {
+      "captured_at": 1786356783,
+      "published_at": 1633046400,
+      "source": "paul-graham",
+      "title": "Beyond Smart",
+      "url": "https://paulgraham.com/smart.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786311897,
@@ -12435,6 +12523,14 @@
       "url": "https://newsletter.semianalysis.com/p/power-integrations-powi-a-premier"
     },
     {
+      "captured_at": 1786356848,
+      "published_at": 1627776000,
+      "source": "paul-graham",
+      "title": "Weird Languages",
+      "url": "https://paulgraham.com/weird.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786316090,
       "published_at": 1627591002,
       "source": "semianalysis",
@@ -12554,6 +12650,22 @@
       "url": "https://newsletter.semianalysis.com/p/google-new-custom-silicon-replaces"
     },
     {
+      "captured_at": 1786356978,
+      "published_at": 1622505600,
+      "source": "paul-graham",
+      "title": "A Project of One's Own",
+      "url": "https://paulgraham.com/own.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786356913,
+      "published_at": 1622505600,
+      "source": "paul-graham",
+      "title": "How to Work Hard",
+      "url": "https://paulgraham.com/hwh.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786237671,
       "published_at": 1622239361,
       "source": "dwarkesh",
@@ -12589,6 +12701,30 @@
       "url": "https://openai.com/index/will-hurd-joins"
     },
     {
+      "captured_at": 1786357172,
+      "published_at": 1619827200,
+      "source": "paul-graham",
+      "title": "An NFT That Saves Lives",
+      "url": "https://paulgraham.com/nft.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357107,
+      "published_at": 1619827200,
+      "source": "paul-graham",
+      "title": "Crazy New Ideas",
+      "url": "https://paulgraham.com/newideas.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357043,
+      "published_at": 1619827200,
+      "source": "paul-graham",
+      "title": "Fierce Nerds",
+      "url": "https://paulgraham.com/fn.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786319946,
       "published_at": 1619718480,
       "source": "semianalysis",
@@ -12610,6 +12746,22 @@
       "url": "https://newsletter.semianalysis.com/p/coming-soon"
     },
     {
+      "captured_at": 1786357302,
+      "published_at": 1617235200,
+      "source": "paul-graham",
+      "title": "How People Get Rich Now",
+      "url": "https://paulgraham.com/richnow.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357237,
+      "published_at": 1617235200,
+      "source": "paul-graham",
+      "title": "The Real Reason to End the Death Penalty",
+      "url": "https://paulgraham.com/real.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786162458,
       "published_at": 1616803200,
       "source": "andrej-karpathy",
@@ -12622,6 +12774,22 @@
       "source": "openai",
       "title": "GPT-3 powers the next generation of apps",
       "url": "https://openai.com/index/gpt-3-apps"
+    },
+    {
+      "captured_at": 1786357431,
+      "published_at": 1614556800,
+      "source": "paul-graham",
+      "title": "Donate Unrestricted",
+      "url": "https://paulgraham.com/donate.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357366,
+      "published_at": 1614556800,
+      "source": "paul-graham",
+      "title": "Write Simply",
+      "url": "https://paulgraham.com/simply.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785844859,
@@ -12667,6 +12835,30 @@
       "url": "https://steipete.me/posts/2020/apple-silicon-mac-mini-for-ci"
     },
     {
+      "captured_at": 1786357626,
+      "published_at": 1606780800,
+      "source": "paul-graham",
+      "title": "The Airbnbs",
+      "url": "https://paulgraham.com/airbnbs.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357561,
+      "published_at": 1606780800,
+      "source": "paul-graham",
+      "title": "Billionaires Build",
+      "url": "https://paulgraham.com/ace.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357496,
+      "published_at": 1606780800,
+      "source": "paul-graham",
+      "title": "Earnestness",
+      "url": "https://paulgraham.com/earnest.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786171550,
       "published_at": 1606568400,
       "source": "peter-steinberger",
@@ -12693,6 +12885,14 @@
       "source": "dwarkesh",
       "title": "Scott Young - Ultralearning",
       "url": "https://www.dwarkesh.com/p/scott-young"
+    },
+    {
+      "captured_at": 1786357690,
+      "published_at": 1604188800,
+      "source": "paul-graham",
+      "title": "How to Think for Yourself",
+      "url": "https://paulgraham.com/think.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786238547,
@@ -12735,6 +12935,14 @@
       "source": "dwarkesh",
       "title": "Alex Tabarrok - Prizes, Prices, and Public Goods",
       "url": "https://www.dwarkesh.com/p/alex-tabarrok"
+    },
+    {
+      "captured_at": 1786357755,
+      "published_at": 1601510400,
+      "source": "paul-graham",
+      "title": "Early Work",
+      "url": "https://paulgraham.com/early.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786172265,
@@ -12814,11 +13022,35 @@
       "url": "https://newsletter.semianalysis.com/p/jensen-huangs-vision-for-data-center"
     },
     {
+      "captured_at": 1786357820,
+      "published_at": 1596240000,
+      "source": "paul-graham",
+      "title": "Modeling a Wealth Tax",
+      "url": "https://paulgraham.com/wtax.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786167148,
       "published_at": 1594400122,
       "source": "dwarkesh",
       "title": "Tyler Cowen - The Great Reset",
       "url": "https://www.dwarkesh.com/p/tyler-cowen"
+    },
+    {
+      "captured_at": 1786357949,
+      "published_at": 1593561600,
+      "source": "paul-graham",
+      "title": "Orthodox Privilege",
+      "url": "https://paulgraham.com/orth.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786357884,
+      "published_at": 1593561600,
+      "source": "paul-graham",
+      "title": "The Four Quadrants of Conformism",
+      "url": "https://paulgraham.com/conformism.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786171747,
@@ -12966,6 +13198,14 @@
       "source": "openai",
       "title": "OpenAI Microscope",
       "url": "https://openai.com/index/microscope"
+    },
+    {
+      "captured_at": 1786358014,
+      "published_at": 1585699200,
+      "source": "paul-graham",
+      "title": "Coronavirus and Credibility",
+      "url": "https://paulgraham.com/cred.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785875214,

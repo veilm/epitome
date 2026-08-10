@@ -159,6 +159,7 @@ deletion-history workflows are explicitly designed.
         historical language material.
     - [x] Validate the index and four varied essays, then complete and
           offline-audit the first 15-page bounded batch (20/232 total).
+    - [x] Capture and offline-audit the next 30 essays (50/232 total).
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.

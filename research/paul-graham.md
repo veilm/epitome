@@ -84,3 +84,17 @@ Because this corpus usually provides publication dates only to the month, the
 catalog stores and displays month precision explicitly (`YYYY-MM`) rather than
 inventing a day. The revised *Beating the Averages* byline is correctly treated
 as April 2001, not its April 2003 revision date.
+
+## Second bounded batch
+
+The next 30 deduplicated essays completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786356129`
+
+All 30 manifests are complete and tab-closed. The run retained 310 responses
+and 1,345,732 response-body bytes with zero page or asset failures. Primary and
+all-rendered-image audits report zero omissions. Five desktop replay checks
+spanning illustrated, short, long, political, and technical essays retained
+1,480–24,993 visible characters and 4–15 images, with no broken images or
+production-origin requests. Coverage is now 50/232 approved identities; the
+public catalog contains the 49 non-structural essays.

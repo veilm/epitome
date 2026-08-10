@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786356012` (2026-08-10 10:00 UTC).
+Updated at Unix timestamp `1786358582` (2026-08-10 10:43 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -20,7 +20,7 @@ work.
 | AI 2027 | Page archive complete; audio import active | All 13 approved English identities are captured and offline-verified: the scenario, summary, research index and five forecasts, both endings, footnotes, about page, and the real 71-page PDF. A source-scoped replay fix restores the live intrinsic dimensions of percentage-height figures. | Import and duration-check the direct narrated-scenario audio. The companion YouTube video is inventoried but deliberately untouched. |
 | AI 2040 | Page archive complete; audio import active | All 22 approved identities are complete across the homepage pilot and two bounded batches. Long supplements, index layouts, images, the first-party 14.5 MB PDF, and substantive cited PDFs replay locally without production requests. Raw visualization/application code and data are preserved; script-free replay presents the homepage's final scroll state and leaves Economic Growth Explorer canvas charts inert. | Import and duration-check the inventoried 64-minute narration; reconstruct executable offline interactions only if later preservation priorities warrant it. |
 | Situational Awareness | Complete | All eleven approved identities are archived and replay-verified: the introduction, eight essay installments, author page, and valid 165-page full-series PDF. All rendered figures are preserved despite twenty broken images on the live pilot page; exact historical copies restore two dead/blocked outbound citation PDFs. | Add future revisions only if the source changes; no page-scope work remains. |
-| Paul Graham essays | Page crawl active | 20/232 approved identities are complete: the essay index, four varied pilots, and a clean 15-page first batch. All sampled replays preserve the narrow early-web layout and images without production requests. Catalog dates retain the source's month precision instead of inventing a day. | Continue bounded batches, recover the unavailable outbound *Roots of Lisp* PDF separately, and keep books/RSS/site utilities outside the essay scope. |
+| Paul Graham essays | Page crawl active | 50/232 approved identities are complete across the structural index, four varied pilots, and clean 15- and 30-page batches. All sampled replays preserve the narrow early-web layout and images without production requests. Catalog dates retain the source's month precision instead of inventing a day. | Continue bounded batches, recover the unavailable outbound *Roots of Lisp* PDF separately, and keep books/RSS/site utilities outside the essay scope. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
 ## Active media import
