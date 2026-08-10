@@ -69,6 +69,9 @@ deletion-history workflows are explicitly designed.
         `slatestarcodex.com` and its successor **Astral Codex Ten** at
         `astralcodexten.com`. Inventory canonical posts, archives, comments,
         media, cross-links, and redirects before approving either crawl.
+    - [x] Build the reviewed 1,562-identity Slate Star Codex scope from its
+          rendered canonical archive, keeping feeds/listing aliases and Astral
+          Codex Ten separate pending representative capture validation.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
