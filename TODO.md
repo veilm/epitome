@@ -175,9 +175,12 @@ deletion-history workflows are explicitly designed.
   - [x] Capture and offline-verify the AI 2040 homepage pilot, preserve its
         first-party and substantive citation PDFs, and inventory the non-YouTube
         narration without downloading it.
-  - [ ] Capture and offline-verify the remaining 21 AI 2040 identities in
-        bounded batches; retain raw visualization code/data while documenting
-        that script-free replay exposes a static final scroll state.
+  - [x] Capture and offline-verify the first varied ten-page AI 2040 batch,
+        including the supplements index, long-form articles, the underlying PDF,
+        and the Economic Growth Explorer's raw application/code/data.
+  - [ ] Capture and offline-verify the final deduplicated eleven AI 2040
+        identities; retain raw visualization code/data while documenting that
+        script-free replay exposes static or inert interactive states.
   - [ ] *Situational Awareness* essay series.
   - [ ] Identify the canonical site and complete page/media set for each before
         capture.

@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786345048` (2026-08-10 06:57 UTC).
+Updated at Unix timestamp `1786346542` (2026-08-10 07:49 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -17,7 +17,7 @@ work.
 | Dwarkesh Podcast | Page archive complete; media imports active | All 183 approved source identities are captured across structural validations and five bounded batches. Long transcripts, standalone essays, inline figures, ordinary images, and media posters replay locally without production requests. HLS playlist children fail closed through local replay. Seventy-two Substack audio assets, 128 YouTube videos, and 72 Substack videos are inventoried. | Import full audio/video through the external downloader. One cited 1989 UQ paper remains blocked by upstream verification and publisher authentication; its stable bibliographic landing page is preserved. Add future publication URLs incrementally. |
 | SemiAnalysis newsletter | Page archive complete; media imports active | All 325 reviewed identities are complete across structural validations and six bounded batches. Paywalled and free articles, image-heavy technical posts, and the chronological archive replay locally without production requests. A total of 433 initially omitted article/listing images were repaired; ten Substack videos across five articles are inventoried. Free-subscriber emails end at the same paid boundary and are not a richer source. | Import the ten videos separately. Inventory the corporate, careers, models, and public-tools site later; authenticated institutional data is out of public-crawl scope. |
 | AI 2027 | Page archive complete; audio import active | All 13 approved English identities are captured and offline-verified: the scenario, summary, research index and five forecasts, both endings, footnotes, about page, and the real 71-page PDF. A source-scoped replay fix restores the live intrinsic dimensions of percentage-height figures. | Import and duration-check the direct narrated-scenario audio. The companion YouTube video is inventoried but deliberately untouched. |
-| AI 2040 | Pilot complete; page crawl ready | The Plan A homepage pilot has a complete manifest, zero missing rendered images, faithful text/layout, the first-party 14.5 MB PDF, and two substantive cited PDFs. Its initial and final DOM plus visualization code/data are preserved; script-free replay presents a static final visualization state rather than the live scroll interaction. | Capture the remaining 21 approved identities in bounded batches. Import and duration-check the inventoried 64-minute narration separately. |
+| AI 2040 | 11/22 pages complete; final batch ready | The homepage pilot and first varied ten-page batch have complete manifests, zero missing rendered images, faithful article/index layouts, the first-party 14.5 MB PDF, and substantive cited PDFs. Raw visualization/application code and data are preserved; script-free replay presents the homepage's final scroll state and leaves the Economic Growth Explorer's canvas charts inert. | Capture the final deduplicated eleven identities. Import and duration-check the inventoried 64-minute narration separately. |
 | Model-readable articles and summaries | Prototype | Extraction and Codex-driven summary flows work on bounded OpenAI and Anthropic samples. | Expand only after each source's archive completeness checks pass. |
 
 ## Active media import
@@ -76,5 +76,6 @@ and replay-verified. Dwarkesh's approved 183-identity page scope is complete and
 its external media imports remain active. SemiAnalysis's approved 325-identity
 newsletter scope is also complete and replay-verified; its ten external video
 imports remain active. AI 2027's 13-identity English scope is complete and
-replay-verified. AI 2040 is the next easiest bounded source: its 22-identity
-Plan A scope is reviewed, and its homepage is ready for a capture pilot.
+replay-verified. AI 2040 is the active bounded source: its 22-identity Plan A
+scope is reviewed, eleven identities are preservation-verified, and the final
+deduplicated eleven-page batch is ready.
