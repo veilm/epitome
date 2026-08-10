@@ -1,0 +1,4 @@
+https://karpathy.ai/
+https://karpathy.ai/zero-to-hero.html
+https://karpathy.ai/books.html
+https://karpathy.ai/stateofgpt.pdf

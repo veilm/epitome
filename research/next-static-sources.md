@@ -98,6 +98,12 @@ Inventory and preserve this small property separately. Outbound YouTube,
 GitHub, papers, and social links should remain provenance-bearing dependencies,
 not silently expand the page scope.
 
+The four reviewed first-party identities are tracked in
+`sources/andrej-karpathy-site.txt`. Begin with the homepage as a bounded pilot,
+then capture the two HTML resource pages and underlying presentation PDF if its
+layout, assets, and offline replay validate normally. YouTube remains excluded
+from the page crawl.
+
 ## Paul Graham
 
 `https://paulgraham.com/articles.html` is a simple static essay index with about
