@@ -33,6 +33,26 @@ util/summarize_article output/markdown/openai.com-index-example.md
 util/serve_summaries --port 8014
 ```
 
+Incremental refreshes use one command. Its safe default discovers each
+first-party listing in Chromium, compares both reviewed inventories and complete
+capture manifests, and writes a durable plan without downloading articles:
+
+```sh
+util/refresh_sources
+```
+
+Review the reported `plan.json` and per-source URL files. To capture only the
+newly discovered delta with source-specific pacing and settle settings, run:
+
+```sh
+util/refresh_sources --capture
+```
+
+Use `--source SOURCE_ID` to limit either operation. Known inventory backlog is
+reported separately from URLs newly appearing in a live listing, so an update
+check does not accidentally turn an unfinished historical scope into an
+unbounded crawl.
+
 The archive browser is then available at `http://127.0.0.1:8013/`. It rewrites
 captured pages for local-only static replay and never falls back to the live
 site. See [docs/replay.md](docs/replay.md).

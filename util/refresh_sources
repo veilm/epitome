@@ -1,0 +1,80 @@
+#!/usr/bin/python
+"""Discover and optionally capture only new pages across Epitome sources."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+import subprocess
+import sys
+import time
+
+from epitome_lib.refresh import BrowserDiscovery, build_plan, capture_plan, write_plan
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Discover publication listings, compare completed captures, and plan deltas."
+    )
+    parser.add_argument("--config", type=Path, default=Path("site/refresh-sources.json"))
+    parser.add_argument("--archive-root", type=Path, default=Path("/mnt2/capsule/epitome"))
+    parser.add_argument("--output-root", type=Path)
+    parser.add_argument("--source", action="append", default=[])
+    parser.add_argument("--port", type=int, default=2103)
+    parser.add_argument("--max-new", type=int, default=100)
+    parser.add_argument("--listing-delay-seconds", type=float, default=1)
+    parser.add_argument(
+        "--capture",
+        action="store_true",
+        help="after a successful plan, capture each bounded source delta",
+    )
+    args = parser.parse_args()
+    if args.max_new < 1 or args.listing_delay_seconds < 0:
+        parser.error("limits must be positive and delays non-negative")
+    try:
+        config = json.loads(args.config.read_text(encoding="utf-8"))
+        configured = {str(source["id"]) for source in config["sources"]}
+    except (OSError, KeyError, TypeError, json.JSONDecodeError) as error:
+        print(f"refresh_sources: invalid config: {error}", file=sys.stderr)
+        return 2
+    unknown = sorted(set(args.source) - configured)
+    if unknown:
+        print(f"refresh_sources: unknown source(s): {', '.join(unknown)}", file=sys.stderr)
+        return 2
+    output_dir = args.output_root or args.archive_root / "refresh" / str(int(time.time()))
+    try:
+        with BrowserDiscovery(args.port, args.listing_delay_seconds) as browser:
+            plan = build_plan(
+                config,
+                args.archive_root,
+                browser.discover,
+                selected_sources=set(args.source) or None,
+                max_new=args.max_new,
+            )
+        write_plan(plan, output_dir)
+    except (OSError, ValueError) as error:
+        print(f"refresh_sources: {error}", file=sys.stderr)
+        return 1
+
+    for record in plan["sources"]:
+        detail = record.get("error") or record.get("reason") or f"{record.get('new_count', 0)} new"
+        backlog = int(record.get("known_uncaptured_count", 0))
+        suffix = f", {backlog} known uncaptured" if backlog else ""
+        print(f"{record['id']}: {record['status']} ({detail}{suffix})")
+    print(f"Plan: {output_dir / 'plan.json'}")
+    errors = [record for record in plan["sources"] if record["status"] in {"error", "over_limit"}]
+    if errors:
+        print("refresh_sources: resolve errors/limits before capture", file=sys.stderr)
+        return 1
+    if args.capture:
+        try:
+            capture_plan(plan, output_dir, port=args.port)
+        except (OSError, subprocess.CalledProcessError) as error:
+            print(f"refresh_sources: capture failed: {error}", file=sys.stderr)
+            return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
