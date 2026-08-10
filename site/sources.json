@@ -45,6 +45,16 @@
       "undated_paths": ["/", "/zero-to-hero.html", "/books.html", "/stateofgpt.pdf"]
     },
     {
+      "id": "andrej-karpathy-bear", "name": "Andrej Karpathy Bear Blog",
+      "archive_directory": "andrej-karpathy-bear",
+      "hosts": ["karpathy.bearblog.dev"],
+      "logo_url": "https://karpathy.ai/assets/me_new.jpg",
+      "title_suffixes": [" – karpathy"],
+      "visible_date_min_path_parts": 1,
+      "undated_paths": ["/", "/blog", "/feed"],
+      "exclude_paths": ["/", "/blog", "/feed"]
+    },
+    {
       "id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger",
       "hosts": ["steipete.me"], "logo_url": "https://steipete.me/peter-avatar.jpg",
       "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"],

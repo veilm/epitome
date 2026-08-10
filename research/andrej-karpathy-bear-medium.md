@@ -53,6 +53,14 @@ reload requested only the local replay document and two local resource routes;
 it made no production-origin requests. The reviewed sixteen-identity Bear scope
 is approved for one bounded completion batch.
 
+The remaining thirteen identities completed at
+`/mnt2/capsule/epitome/andrej-karpathy-bear/crawls/1786378795`. All thirteen
+manifests are complete and tab-closed, bringing the archive to all sixteen
+reviewed identities. Primary and all-image audits are clean across the combined
+archive. A second long post, *Animals vs Ghosts*, retains 10,650 visible
+characters and its exact 2025-10-01 datetime; the Atom replay retains its full
+143,501-character XML body. The Bear scope is complete.
+
 ## Medium scope
 
 The canonical profile is `https://karpathy.medium.com/`; the historical

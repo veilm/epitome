@@ -31,6 +31,11 @@
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
     },
     {
+      "id": "andrej-karpathy-bear",
+      "name": "Andrej Karpathy Bear Blog",
+      "logo_url": "https://karpathy.ai/assets/me_new.jpg"
+    },
+    {
       "id": "peter-steinberger",
       "name": "Peter Steinberger",
       "logo_url": "https://steipete.me/peter-avatar.jpg"
@@ -4881,6 +4886,16 @@
       "url": "https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks"
     },
     {
+      "captured_at": 1786378860,
+      "publication_status": "exact",
+      "published_at": 1777564800,
+      "sort_at": 1777564800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Sequoia Ascent 2026 summary",
+      "url": "https://karpathy.bearblog.dev/sequoia-ascent-2026"
+    },
+    {
       "captured_at": 1786152491,
       "publication_status": "exact",
       "published_at": 1777507200,
@@ -7753,6 +7768,16 @@
       "url": "https://openai.com/index/one-in-a-million-customers"
     },
     {
+      "captured_at": 1786378081,
+      "publication_status": "exact",
+      "published_at": 1766167200,
+      "sort_at": 1766167200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "2025 LLM Year in Review",
+      "url": "https://karpathy.bearblog.dev/year-in-review-2025"
+    },
+    {
       "captured_at": 1786191850,
       "publication_status": "exact",
       "published_at": 1766166079,
@@ -7791,6 +7816,16 @@
       "source": "anthropic",
       "title": "Introducing Bloom: an open source tool for automated behavioral evaluations",
       "url": "https://www.anthropic.com/research/bloom"
+    },
+    {
+      "captured_at": 1786378926,
+      "publication_status": "exact",
+      "published_at": 1766080800,
+      "sort_at": 1766080800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Chemical hygiene",
+      "url": "https://karpathy.bearblog.dev/chemical-hygiene"
     },
     {
       "captured_at": 1786177981,
@@ -8051,6 +8086,16 @@
       "source": "openai",
       "title": "How Podium is arming 10,000+ SMBs with AI agents",
       "url": "https://openai.com/index/podium"
+    },
+    {
+      "captured_at": 1786378991,
+      "publication_status": "exact",
+      "published_at": 1765378800,
+      "sort_at": 1765378800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Auto-grading decade-old Hacker News discussions with hindsight",
+      "url": "https://karpathy.bearblog.dev/auto-grade-hn"
     },
     {
       "captured_at": 1785879338,
@@ -8363,6 +8408,16 @@
       "url": "https://openai.com/index/mirakl"
     },
     {
+      "captured_at": 1786379056,
+      "publication_status": "exact",
+      "published_at": 1764439200,
+      "sort_at": 1764439200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "The space of minds",
+      "url": "https://karpathy.bearblog.dev/the-space-of-minds"
+    },
+    {
       "captured_at": 1786255425,
       "publication_status": "exact",
       "published_at": 1764336632,
@@ -8631,6 +8686,16 @@
       "source": "openai",
       "title": "Intuit and OpenAI join forces on new AI-powered experiences",
       "url": "https://openai.com/index/intuit-partnership"
+    },
+    {
+      "captured_at": 1786379120,
+      "publication_status": "exact",
+      "published_at": 1763398800,
+      "sort_at": 1763398800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Verifiability",
+      "url": "https://karpathy.bearblog.dev/verifiability"
     },
     {
       "captured_at": 1786192576,
@@ -9631,6 +9696,16 @@
       "source": "openai",
       "title": "With GPT-5, Wrtn builds lifestyle AI for millions in Korea",
       "url": "https://openai.com/index/wrtn"
+    },
+    {
+      "captured_at": 1786379185,
+      "publication_status": "exact",
+      "published_at": 1759338000,
+      "sort_at": 1759338000,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Animals vs Ghosts",
+      "url": "https://karpathy.bearblog.dev/animals-vs-ghosts"
     },
     {
       "captured_at": 1786195401,
@@ -12285,6 +12360,16 @@
       "url": "https://www.anthropic.com/news/introducing-the-anthropic-economic-advisory-council"
     },
     {
+      "captured_at": 1786379249,
+      "publication_status": "exact",
+      "published_at": 1745755200,
+      "sort_at": 1745755200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Vibe coding MenuGen",
+      "url": "https://karpathy.bearblog.dev/vibe-coding-menugen"
+    },
+    {
       "captured_at": 1786199667,
       "publication_status": "exact",
       "published_at": 1745510037,
@@ -12503,6 +12588,16 @@
       "source": "anthropic",
       "title": "Anthropic Education Report: How University Students Use Claude",
       "url": "https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude"
+    },
+    {
+      "captured_at": 1786379313,
+      "publication_status": "exact",
+      "published_at": 1744048800,
+      "sort_at": 1744048800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Power to the people: How LLMs flip the script on technology diffusion",
+      "url": "https://karpathy.bearblog.dev/power-to-the-people"
     },
     {
       "captured_at": 1785376216,
@@ -12796,6 +12891,16 @@
       "url": "https://openai.com/index/introducing-4o-image-generation"
     },
     {
+      "captured_at": 1786379378,
+      "publication_status": "exact",
+      "published_at": 1742857200,
+      "sort_at": 1742857200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Finding the Best Sleep Tracker",
+      "url": "https://karpathy.bearblog.dev/finding-the-best-sleep-tracker"
+    },
+    {
       "captured_at": 1785721231,
       "publication_status": "exact",
       "published_at": 1742774400,
@@ -12856,6 +12961,16 @@
       "url": "https://openai.com/index/introducing-our-next-generation-audio-models"
     },
     {
+      "captured_at": 1786379443,
+      "publication_status": "exact",
+      "published_at": 1742367600,
+      "sort_at": 1742367600,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "The append-and-review note",
+      "url": "https://karpathy.bearblog.dev/the-append-and-review-note"
+    },
+    {
       "captured_at": 1786262020,
       "publication_status": "exact",
       "published_at": 1742350091,
@@ -12884,6 +12999,16 @@
       "source": "openai",
       "title": "EliseAI improves housing and healthcare efficiency with AI",
       "url": "https://openai.com/index/eliseai-minna-song"
+    },
+    {
+      "captured_at": 1786379507,
+      "publication_status": "exact",
+      "published_at": 1742234880,
+      "sort_at": 1742234880,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "Digital hygiene",
+      "url": "https://karpathy.bearblog.dev/digital-hygiene"
     },
     {
       "captured_at": 1785643237,
@@ -14609,6 +14734,16 @@
       "source": "claude",
       "title": "Claude for Enterprise",
       "url": "https://claude.com/blog/claude-for-enterprise"
+    },
+    {
+      "captured_at": 1786379572,
+      "publication_status": "exact",
+      "published_at": 1725814800,
+      "sort_at": 1725814800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-bear",
+      "title": "I love calculator",
+      "url": "https://karpathy.bearblog.dev/i-love-calculator"
     },
     {
       "captured_at": 1785975929,
