@@ -72,6 +72,9 @@ deletion-history workflows are explicitly designed.
     - [x] Build the reviewed 1,562-identity Slate Star Codex scope from its
           rendered canonical archive, keeping feeds/listing aliases and Astral
           Codex Ten separate pending representative capture validation.
+    - [x] Validate the archive, ordinary-post, long-form, political-quiz, and
+          comment-heavy open-thread variants through offline replay before any
+          Slate Star Codex page batch begins.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

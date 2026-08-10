@@ -59,3 +59,35 @@ sidebars, advertising/book images, avatars, and comments. Its 41,774-pixel page
 has zero broken rendered images and made zero production-origin requests. The
 structural path is therefore capture-ready, but representative ordinary,
 image-heavy, long, and open-thread post pilots still precede any large crawl.
+
+## Representative post validation
+
+Four varied posts were captured at:
+
+`/mnt2/capsule/epitome/slate-star-codex/validation/1786358714-varied`
+
+They cover the short *Introducing Astral Codex Ten* post, the long-form
+*Meditations on Moloch*, the political-spectrum quiz, and comment-heavy *Open
+Thread 156*. A redundant post-navigation ready-state wait marked the first
+Moloch attempt incomplete despite preserving its 1.55 MB final DOM and 410
+response bodies. Capture now reads the already-parsed DOM without repeating
+that full-load wait; the bounded retry at
+`/mnt2/capsule/epitome/slate-star-codex/validation/1786362856-moloch-retry`
+is complete and tab-closed.
+
+All five representative identities—including the archive pilot—retain the
+three-column WordPress layout, article bodies, sidebars, ads, avatars, and
+server-rendered comments. The long Moloch replay contains about 504,000 visible
+characters and 726 comments; the quiz contains about 209,000 characters and
+439 matched comment nodes; the open thread contains about 444,000 characters
+and 1,208 displayed comments. The quiz questions and choices are preserved,
+but JavaScript scoring is intentionally inert in script-free replay.
+
+Primary-image audits are clean. The only remaining Moloch misses are two
+zero-size Amazon tracking pixels, two obsolete Gravatar share sprites, and one
+external event image already returning HTTP 404 upstream. The open thread also
+references two dead outbound PDFs; those are dependency-recovery tasks rather
+than missing first-party post content. Desktop replays show zero substantive
+broken images and make zero production-origin requests. This representative
+scope is ready for bounded page batches after the active Paul Graham scope is
+complete.
