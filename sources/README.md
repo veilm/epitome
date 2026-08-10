@@ -15,6 +15,12 @@ Current reviewed lists:
 - `dario-amodei.txt`: homepage plus five self-hosted writings;
 - `andrej-karpathy-blog.txt`: homepage, About page, RSS feed, and 23 dated blog
   posts. Captured Disqus threads are rendered statically during replay;
+- `andrej-karpathy-bear.txt`: Karpathy's current Bear homepage, index, Atom
+  feed, and 13 dated posts;
+- `andrej-karpathy-medium.txt`: Karpathy's canonical Medium profile, About page,
+  feed, and eight authored posts, excluding platform activity/navigation;
+- `ai-futures-model.txt`: five bounded first-party application routes for the
+  December 2025 AI Futures Model release;
 - `peter-steinberger-blog.txt`: homepage, About page, all-posts index, RSS feed,
   and 112 article identities from the first-party sitemap. Pagination and tag
   archives are deferred to a later phase;
