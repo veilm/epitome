@@ -118,6 +118,27 @@ class ReplayTest(unittest.TestCase):
             )
             self.assertIn("/unavailable/", html)
 
+    def test_ai_2027_replay_restores_intrinsic_image_height(self):
+        with tempfile.TemporaryDirectory() as temp:
+            index = self.make_capture(Path(temp))
+            html = rewrite_html(
+                '<html><head></head><body><img class="w-[100%] h-[100%]" '
+                'src="/figure.png"></body></html>',
+                "https://ai-2027.com/research/security-forecast",
+                index,
+            )
+            self.assertIn(
+                'img[class~="h-[100%]"]{height:auto!important}',
+                html,
+            )
+
+            other = rewrite_html(
+                '<html><head></head><body></body></html>',
+                "https://example.com/article/",
+                index,
+            )
+            self.assertNotIn('img[class~="h-[100%]"]', other)
+
     def test_css_urls_are_localized(self):
         result = rewrite_css(
             "a{background:url('../image.png')} @import '/more.css';",

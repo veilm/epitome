@@ -729,6 +729,15 @@ class _HTMLRewriter(HTMLParser):
             # Consent controls captured in their initial state become inert once
             # replay strips scripts.  Keep the raw HTML untouched on disk, but
             # do not let an uncloseable overlay obscure the archived document.
+            source_fixes = ""
+            if urlsplit(self.base_url).hostname == "ai-2027.com":
+                # The live app's hydrated grid treats this Tailwind percentage
+                # height as intrinsic. Without scripts, Chromium instead
+                # resolves it against the full grid track and stretches each
+                # image to tens of thousands of pixels.
+                source_fixes = (
+                    'img[class~="h-[100%]"]{height:auto!important}'
+                )
             self.output.append(
                 '<style id="epitome-replay-style">'
                 '#consent-banner,[data-testid="consent-banner"]'
@@ -746,6 +755,7 @@ class _HTMLRewriter(HTMLParser):
                 'padding:1.5rem;text-align:center}'
                 '.epitome-media-placeholder span{color:#666}'
                 '.epitome-media-wide{aspect-ratio:16/9;height:auto!important;width:100%}'
+                f'{source_fixes}'
                 '</style>'
             )
         if tag == "style" and self.style_depth:
