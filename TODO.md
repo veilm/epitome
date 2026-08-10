@@ -172,8 +172,12 @@ deletion-history workflows are explicitly designed.
   - [x] Inventory AI 2040's canonical Plan A scenario, PDF, about page,
         footnotes, supplements index, and seventeen supplements as a bounded
         22-identity scope in `sources/ai-2040.txt`.
-  - [ ] Capture and offline-verify the AI 2040 homepage pilot, then its bounded
-        page scope; inventory non-YouTube audio separately.
+  - [x] Capture and offline-verify the AI 2040 homepage pilot, preserve its
+        first-party and substantive citation PDFs, and inventory the non-YouTube
+        narration without downloading it.
+  - [ ] Capture and offline-verify the remaining 21 AI 2040 identities in
+        bounded batches; retain raw visualization code/data while documenting
+        that script-free replay exposes a static final scroll state.
   - [ ] *Situational Awareness* essay series.
   - [ ] Identify the canonical site and complete page/media set for each before
         capture.

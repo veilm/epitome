@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "generated_at_unix": 1786345048,
+  "source": "AI 2040",
+  "source_archive": "/mnt2/capsule/epitome/ai-2040",
+  "summary": {
+    "items": 1,
+    "statuses": {
+      "pending_download": 1
+    }
+  },
+  "items": [
+    {
+      "provider": "buzzsprout",
+      "media_id": "19471515",
+      "status": "pending_download",
+      "title": "AI 2040: Plan A",
+      "published_at_unix": 1783623600,
+      "duration_seconds": 3840,
+      "content_type": "audio/mpeg",
+      "source_url": "https://www.buzzsprout.com/2466760/episodes/19471515-ai-2040-plan-a.mp3?download=true",
+      "import_directory": "media/audio/buzzsprout-19471515",
+      "alternate_sources": [
+        "https://open.spotify.com/episode/4FSHMcMm2Emu812gRS6txd?si=2dab55eed81245d4",
+        "https://podcasts.apple.com/us/podcast/ai-2040-plan-a/id1806225838?i=1000776166546",
+        "https://feeds.buzzsprout.com/2466760.rss"
+      ],
+      "articles": [
+        {
+          "url": "https://ai-2040.com/",
+          "title": "AI 2040: Plan A",
+          "role": "Narrated by Rob Miles",
+          "capture_page": "validation/1786344706-home"
+        }
+      ],
+      "notes": "The rendered site exposes an inert script-driven player in static replay. The canonical Buzzsprout feed supplied the direct MP3 identity and stated 64-minute duration; the audio was inventoried without downloading it."
+    }
+  ]
+}

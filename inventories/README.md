@@ -92,3 +92,10 @@ its podcast distribution links, and the companion YouTube video exposed by the
 validated homepage. Imports are relative to `/mnt2/capsule/epitome/ai-2027/`;
 the page capture remains useful and offline without silently claiming those
 large media items are complete.
+
+## AI 2040 audio
+
+[`ai-2040-audio.json`](ai-2040-audio.json) records the 64-minute Plan A
+narration and its canonical Buzzsprout MP3 identity. Spotify, Apple Podcasts,
+and the podcast feed are retained as alternate provenance. The direct audio is
+an external-downloader task and was not fetched during page capture.
