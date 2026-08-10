@@ -21,6 +21,7 @@ from util.epitome_lib.capture import (
     completed_capture_urls,
     redact_capture_headers,
     recommended_page_delay,
+    read_document,
     summarize_crawl,
     summarize_network,
     url_slug,
@@ -44,6 +45,15 @@ class _AssetHandler(BaseHTTPRequestHandler):
 
 
 class CaptureHelpersTest(unittest.TestCase):
+    def test_read_document_does_not_repeat_full_load_wait(self):
+        with mock.patch("util.epitome_lib.capture.cdp.run") as run:
+            read_document("capture-session")
+
+        run.assert_called_once_with(
+            ["read", "--session", "capture-session", "--json"],
+            timeout=30,
+        )
+
     def test_navigation_wait_passes_explicit_cdp_timeout(self):
         with mock.patch("util.epitome_lib.capture.cdp.run") as run:
             result = wait_for_document("capture-session", max_seconds=90)

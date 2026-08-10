@@ -389,6 +389,16 @@ def wait_for_document(session: str, *, max_seconds: float) -> dict[str, Any]:
         raise
 
 
+def read_document(session: str) -> subprocess.CompletedProcess[str]:
+    """Read the settled DOM without imposing a second full-load wait.
+
+    ``wait_for_document`` has already applied the bounded readiness policy.
+    Asking ``cdp read --wait`` again makes historical pages with dead
+    subresources fail after their complete DOM has already been saved.
+    """
+    return cdp.run(["read", "--session", session, "--json"], timeout=30)
+
+
 def capture_url(
     url: str,
     output_dir: Path,
@@ -488,10 +498,7 @@ def capture_url(
         )
         final_page_url = page["url"]
         (output_dir / "page.html").write_text(page["html"], encoding="utf-8")
-        read_result = cdp.run(
-            ["read", "--session", session, "--json", "--wait"],
-            timeout=30,
-        )
+        read_result = read_document(session)
         (output_dir / "read.json").write_text(read_result.stdout, encoding="utf-8")
     except BaseException as error:
         failure = error
