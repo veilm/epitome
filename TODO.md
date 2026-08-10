@@ -150,9 +150,10 @@ deletion-history workflows are explicitly designed.
         `karpathy.github.io` blog scope.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
-  - [ ] Inventory and preserve Paul Graham's static essay corpus from
-        `paulgraham.com/articles.html`, separating essays from unrelated site
-        utilities and historical sections before crawling.
+  - [ ] Preserve Paul Graham's static essay corpus from
+        `paulgraham.com/articles.html`; the reviewed 232-identity index-plus-
+        essay scope is tracked separately from the homepage, RSS, books, and
+        historical language material.
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.

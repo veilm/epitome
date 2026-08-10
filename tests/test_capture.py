@@ -6,6 +6,7 @@ import threading
 import unittest
 from unittest import mock
 
+from util.epitome_lib import cdp
 from util.epitome_lib.assets import (
     asset_priority,
     complete_body,
@@ -45,7 +46,7 @@ class _AssetHandler(BaseHTTPRequestHandler):
 class CaptureHelpersTest(unittest.TestCase):
     def test_navigation_wait_passes_explicit_cdp_timeout(self):
         with mock.patch("util.epitome_lib.capture.cdp.run") as run:
-            wait_for_document("capture-session", max_seconds=90)
+            result = wait_for_document("capture-session", max_seconds=90)
 
         run.assert_called_once_with(
             [
@@ -57,6 +58,51 @@ class CaptureHelpersTest(unittest.TestCase):
             ],
             timeout=50,
         )
+        self.assertEqual(result, {"state": "complete", "timed_out": False})
+
+    def test_navigation_wait_accepts_parsed_document_with_dead_subresources(self):
+        timeout_error = cdp.CdpError("load timeout")
+        with (
+            mock.patch(
+                "util.epitome_lib.capture.cdp.run", side_effect=timeout_error
+            ),
+            mock.patch(
+                "util.epitome_lib.capture.cdp.eval_json",
+                return_value={
+                    "readyState": "interactive",
+                    "url": "https://example.com/old-page.html",
+                    "htmlLength": 4096,
+                },
+            ),
+        ):
+            result = wait_for_document("capture-session", max_seconds=90)
+
+        self.assertEqual(
+            result,
+            {
+                "state": "interactive",
+                "timed_out": True,
+                "html_length_at_timeout": 4096,
+            },
+        )
+
+    def test_navigation_wait_rejects_unparsed_document(self):
+        timeout_error = cdp.CdpError("load timeout")
+        with (
+            mock.patch(
+                "util.epitome_lib.capture.cdp.run", side_effect=timeout_error
+            ),
+            mock.patch(
+                "util.epitome_lib.capture.cdp.eval_json",
+                return_value={
+                    "readyState": "loading",
+                    "url": "about:blank",
+                    "htmlLength": 39,
+                },
+            ),
+            self.assertRaises(cdp.CdpError),
+        ):
+            wait_for_document("capture-session", max_seconds=90)
 
     def test_url_validation_and_slug(self):
         self.assertEqual(

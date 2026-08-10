@@ -354,13 +354,39 @@ return {discovered:slots.length,embedded_urls:urls.length,results};
     }
 
 
-def wait_for_document(session: str, *, max_seconds: float) -> None:
-    """Wait for navigation using the capture budget, not cdp's 10s default."""
+def wait_for_document(session: str, *, max_seconds: float) -> dict[str, Any]:
+    """Wait for navigation, tolerating dead subresources after DOM readiness.
+
+    Old pages can remain at ``interactive`` forever when an image host has
+    disappeared.  After the bounded full-load wait expires, accept a real,
+    substantially parsed HTTP document so the later asset audit can record the
+    broken dependency instead of discarding the entire page.
+    """
     timeout = min(max_seconds, 45)
-    cdp.run(
-        ["wait", "--session", session, "--timeout", f"{timeout:g}s"],
-        timeout=timeout + 5,
-    )
+    try:
+        cdp.run(
+            ["wait", "--session", session, "--timeout", f"{timeout:g}s"],
+            timeout=timeout + 5,
+        )
+        return {"state": "complete", "timed_out": False}
+    except cdp.CdpError:
+        state = cdp.eval_json(
+            session,
+            "({readyState:document.readyState,url:location.href,"
+            "htmlLength:document.documentElement?.outerHTML.length||0})",
+            timeout=10,
+        )
+        if (
+            state.get("readyState") in {"interactive", "complete"}
+            and str(state.get("url", "")).startswith(("http://", "https://"))
+            and int(state.get("htmlLength", 0)) >= 512
+        ):
+            return {
+                "state": state["readyState"],
+                "timed_out": True,
+                "html_length_at_timeout": int(state["htmlLength"]),
+            }
+        raise
 
 
 def capture_url(
@@ -398,6 +424,7 @@ def capture_url(
     logger_result = ("", "", 0)
     failure: BaseException | None = None
     asset_completion: dict[str, Any] | None = None
+    document_wait: dict[str, Any] | None = None
     final_page_url = url
 
     cdp.run(
@@ -428,7 +455,7 @@ def capture_url(
             f"(location.href={json.dumps(url)}, true)",
             timeout=10,
         )
-        wait_for_document(session, max_seconds=max_seconds)
+        document_wait = wait_for_document(session, max_seconds=max_seconds)
         time.sleep(max(0, settle_seconds))
 
         previous_height = -1
@@ -514,6 +541,8 @@ def capture_url(
             "network_summary": summary,
             "complete": failure is None,
         }
+        if document_wait is not None:
+            manifest["document_wait"] = document_wait
         if (interactive_path := output_dir / "interactive-media.json").exists():
             manifest["interactive_media"] = json.loads(
                 interactive_path.read_text(encoding="utf-8")

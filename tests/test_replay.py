@@ -39,7 +39,7 @@ class ReplayTest(unittest.TestCase):
             <link rel="preconnect" href="https://example.com">
             <link rel="stylesheet" href="/style.css">
             <script src="/app.js">alert(1)</script>
-            </head><body>
+            </head><body background="/image.png">
             <img src="/image.png">
             <a href="https://outside.example/story">Story</a>
             </body></html>
@@ -117,6 +117,7 @@ class ReplayTest(unittest.TestCase):
                 resource_path("https://example.com/image.png"),
                 html,
             )
+            self.assertNotIn('background="/image.png"', html)
             self.assertIn("/unavailable/", html)
 
     def test_ai_2027_replay_restores_intrinsic_image_height(self):

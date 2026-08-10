@@ -705,6 +705,10 @@ class _HTMLRewriter(HTMLParser):
                 value = self._srcset(value)
             elif lower == "style":
                 value = rewrite_css(value, self.base_url)
+            elif lower == "background":
+                # Historical HTML commonly uses BODY/TABLE/TD background
+                # attributes instead of CSS. They are fetch-bearing URLs too.
+                value = self._resource(value)
             elif lower in FETCH_ATTRIBUTES.get(tag, set()):
                 value = self._resource(value)
             elif tag == "link" and lower == "href":
