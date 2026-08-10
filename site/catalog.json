@@ -11621,11 +11621,32 @@
       "url": "https://openai.com/index/teaching-models-to-express-their-uncertainty-in-words"
     },
     {
+      "captured_at": 1786303345,
+      "published_at": 1653583201,
+      "source": "semianalysis",
+      "title": "Meteor Lake Die Shot and Architecture Analysis – Why Is Intel 4 Only A 40% Area Reduction Versus Intel 7?",
+      "url": "https://newsletter.semianalysis.com/p/meteor-lake-die-shot-and-architecture"
+    },
+    {
+      "captured_at": 1786303584,
+      "published_at": 1652867821,
+      "source": "semianalysis",
+      "title": "Turning The Titanic – How Intel Is Using Software Acquisitions And Increased Accountability To Attempt To Save The Sinking Ship",
+      "url": "https://newsletter.semianalysis.com/p/turning-the-titanic-how-intel-is"
+    },
+    {
       "captured_at": 1785816784,
       "published_at": 1652832000,
       "source": "openai",
       "title": "DALL·E 2 research preview update",
       "url": "https://openai.com/index/dall-e-2-update"
+    },
+    {
+      "captured_at": 1786303818,
+      "published_at": 1652437553,
+      "source": "semianalysis",
+      "title": "Marvell Acquires Tanzanite Silicon To Enable Composable Server Architectures Using CXL Based Memory Expansion And Pooling",
+      "url": "https://newsletter.semianalysis.com/p/marvell-acquires-tanzanite-silicon"
     },
     {
       "captured_at": 1786234791,
@@ -11649,6 +11670,13 @@
       "url": "https://openai.com/index/leadership-team-update"
     },
     {
+      "captured_at": 1786304055,
+      "published_at": 1651303034,
+      "source": "semianalysis",
+      "title": "Ayar Labs | Co-packaged Optics Revolution | The Most Promising Hardware Startup With Wins At HPE And Nvidia?",
+      "url": "https://newsletter.semianalysis.com/p/ayar-labs-co-packaged-optics-revolution"
+    },
+    {
       "captured_at": 1785974024,
       "published_at": 1651190400,
       "source": "anthropic",
@@ -11670,11 +11698,25 @@
       "url": "https://www.dwarkesh.com/p/razib-khan"
     },
     {
+      "captured_at": 1786304292,
+      "published_at": 1650193884,
+      "source": "semianalysis",
+      "title": "Samsung Electronics Cultural Issues Are Causing Disasters In Samsung Foundry, LSI, And Even DRAM Memory!",
+      "url": "https://newsletter.semianalysis.com/p/samsung-electronics-cultural-issues"
+    },
+    {
       "captured_at": 1786235681,
       "published_at": 1650103200,
       "source": "dwarkesh",
       "title": "24: Jimmy Soni - Peter Thiel, Elon Musk, and the Paypal Mafia",
       "url": "https://www.dwarkesh.com/p/jimmy-soni"
+    },
+    {
+      "captured_at": 1786304525,
+      "published_at": 1650072388,
+      "source": "semianalysis",
+      "title": "Nvidia Ada Lovelace Leaked Specifications, Die Sizes, Architecture, Cost, And Performance Analysis",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-ada-lovelace-leaked-specifications"
     },
     {
       "captured_at": 1786235899,
@@ -11691,6 +11733,13 @@
       "url": "https://openai.com/index/hierarchical-text-conditional-image-generation-with-clip-latents"
     },
     {
+      "captured_at": 1786304760,
+      "published_at": 1649749963,
+      "source": "semianalysis",
+      "title": "Tenstorrent Blackhole, Grendel, And Buda - A Scale Out Architecture For Sparsity, Conditional Execution, And Dynamic Routing",
+      "url": "https://newsletter.semianalysis.com/p/tenstorrent-blackhole-grendel-and"
+    },
+    {
       "captured_at": 1786236115,
       "published_at": 1649743200,
       "source": "dwarkesh",
@@ -11698,11 +11747,46 @@
       "url": "https://www.dwarkesh.com/p/bryan-caplan-2"
     },
     {
+      "captured_at": 1786305005,
+      "published_at": 1649233448,
+      "source": "semianalysis",
+      "title": "How Nvidia’s Empire Could Be Eroded - Intel Network And Edge Has The Playbook",
+      "url": "https://newsletter.semianalysis.com/p/how-nvidias-empire-could-be-eroded"
+    },
+    {
+      "captured_at": 1786305241,
+      "published_at": 1648033980,
+      "source": "semianalysis",
+      "title": "Short Report: Nvidia Supplier Cut Out Of Next Generation Hopper GPUs - Nvidia Represents Up To 55% of Revenue",
+      "url": "https://newsletter.semianalysis.com/p/short-report-nvidia-supplier-cut"
+    },
+    {
+      "captured_at": 1786305442,
+      "published_at": 1647243576,
+      "source": "semianalysis",
+      "title": "As Moore’s Law Slows, Apple Is Forced To Use Cheaper Chipsets In Non-Pro iPhones",
+      "url": "https://newsletter.semianalysis.com/p/as-moores-law-slows-apple-is-forced"
+    },
+    {
       "captured_at": 1786162313,
       "published_at": 1647216000,
       "source": "andrej-karpathy",
       "title": "Deep Neural Nets: 33 years ago and 33 years from now",
       "url": "https://karpathy.github.io/2022/03/14/lecun1989"
+    },
+    {
+      "captured_at": 1786305661,
+      "published_at": 1646791865,
+      "source": "semianalysis",
+      "title": "GlobalFoundries Fotonix, The Leading Silicon Photonics Foundry For Co-packaged Optics And Processing",
+      "url": "https://newsletter.semianalysis.com/p/globalfoundries-fotonix-the-leading"
+    },
+    {
+      "captured_at": 1786305897,
+      "published_at": 1646301640,
+      "source": "semianalysis",
+      "title": "Graphcore Announces World’s First 3D Wafer On Wafer Hybrid Bond Processor",
+      "url": "https://newsletter.semianalysis.com/p/graphcore-announces-worlds-first"
     },
     {
       "captured_at": 1785830437,
@@ -11726,11 +11810,53 @@
       "url": "https://openai.com/index/economic-impacts"
     },
     {
+      "captured_at": 1786306130,
+      "published_at": 1646255515,
+      "source": "semianalysis",
+      "title": "Nvidia Hacked - A National Security Disaster",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-hacked-a-national-security"
+    },
+    {
+      "captured_at": 1786306361,
+      "published_at": 1645765032,
+      "source": "semianalysis",
+      "title": "I, Semiconductor – The Regionalization Of Semiconductors Due To Global Supply Chain Instability",
+      "url": "https://newsletter.semianalysis.com/p/i-semiconductor-the-regionalization"
+    },
+    {
       "captured_at": 1786236339,
       "published_at": 1645682400,
       "source": "dwarkesh",
       "title": "22: Richard Hanania - Foreign Policy, Fertility, and Wokeness",
       "url": "https://www.dwarkesh.com/p/richard-hanania"
+    },
+    {
+      "captured_at": 1786306594,
+      "published_at": 1645387501,
+      "source": "semianalysis",
+      "title": "The Transformation of Veeco",
+      "url": "https://newsletter.semianalysis.com/p/the-transformation-of-veeco"
+    },
+    {
+      "captured_at": 1786306829,
+      "published_at": 1645184698,
+      "source": "semianalysis",
+      "title": "Intel Is Throwing The Kitchen Sink, But Is The Turn Around Plan Reasonable?",
+      "url": "https://newsletter.semianalysis.com/p/intel-is-throwing-the-kitchen-sink"
+    },
+    {
+      "captured_at": 1786307070,
+      "published_at": 1644492691,
+      "source": "semianalysis",
+      "title": "Semiconductor Roundup – 2/10/2022",
+      "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-2102022"
+    },
+    {
+      "captured_at": 1786307308,
+      "published_at": 1643787995,
+      "source": "semianalysis",
+      "title": "Semiconductor Roundup – 2/1/2022",
+      "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-212022"
     },
     {
       "captured_at": 1786236564,
@@ -11740,11 +11866,39 @@
       "url": "https://www.dwarkesh.com/p/david-deutsch"
     },
     {
+      "captured_at": 1786307542,
+      "published_at": 1643511064,
+      "source": "semianalysis",
+      "title": "Is Intel Shipping Tools Out Of US Fabs So They Can Abuse CHIPS Act Subsidies?",
+      "url": "https://newsletter.semianalysis.com/p/is-intel-shipping-tools-out-of-us"
+    },
+    {
+      "captured_at": 1786307762,
+      "published_at": 1643367792,
+      "source": "semianalysis",
+      "title": "Semiconductor Roundup - 1/28/2022",
+      "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-1282022"
+    },
+    {
+      "captured_at": 1786307966,
+      "published_at": 1643282338,
+      "source": "semianalysis",
+      "title": "Semiconductor Roundup - 1/27/2022",
+      "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-1272022"
+    },
+    {
       "captured_at": 1785840588,
       "published_at": 1642982400,
       "source": "openai",
       "title": "Text and code embeddings by contrastive pre-training",
       "url": "https://openai.com/index/text-and-code-embeddings-by-contrastive-pre-training"
+    },
+    {
+      "captured_at": 1786308203,
+      "published_at": 1642551578,
+      "source": "semianalysis",
+      "title": "Advanced Packaging Part 3 – Intel’s Curious Bet on Thermocompression Bonding, ASM Pacific, Kulicke and Soffa, and Besi TCB Tool Landscape",
+      "url": "https://newsletter.semianalysis.com/p/advanced-packaging-part-3-intels"
     },
     {
       "captured_at": 1786236792,
@@ -11754,11 +11908,60 @@
       "url": "https://www.dwarkesh.com/p/universal-explainers"
     },
     {
+      "captured_at": 1786308439,
+      "published_at": 1642070594,
+      "source": "semianalysis",
+      "title": "TSMC Throws Down a $40B-$44B Gauntlet, Far Surpassing Intel And Samsung",
+      "url": "https://newsletter.semianalysis.com/p/tsmc-throws-down-a-40b-44b-gauntlet"
+    },
+    {
+      "captured_at": 1786308672,
+      "published_at": 1641476192,
+      "source": "semianalysis",
+      "title": "Advanced Packaging Part 2 - Review Of Options/Use From Intel, TSMC, Samsung, AMD, ASE, Sony, Micron, SKHynix, YMTC, Tesla, and Nvidia",
+      "url": "https://newsletter.semianalysis.com/p/advanced-packaging-part-2-review"
+    },
+    {
+      "captured_at": 1786308907,
+      "published_at": 1641190942,
+      "source": "semianalysis",
+      "title": "2022 Semiconductor Outlook (and Webinar) - Transistor Radio Podcast Launch",
+      "url": "https://newsletter.semianalysis.com/p/2022-semiconductor-outlook-and-webinar"
+    },
+    {
+      "captured_at": 1786309138,
+      "published_at": 1640292920,
+      "source": "semianalysis",
+      "title": "TSMC Wants To Make Intel Dependent On External Manufacturing - Wafer Supply Agreement Insights For AMD, Apple, Broadcom, Intel, MediaTek, Nvidia, and Qualcomm",
+      "url": "https://newsletter.semianalysis.com/p/tsmc-wants-to-make-intel-dependent"
+    },
+    {
+      "captured_at": 1786309359,
+      "published_at": 1640199676,
+      "source": "semianalysis",
+      "title": "TSMC Wants To Make Intel Dependent On External Manufacturing - Wafer Supply Agreement Insights For AMD, Apple, Broadcom, Intel, MediaTek, Nvidia, and Qualcomm",
+      "url": "https://newsletter.semianalysis.com/p/tsmc-the-drug-dealer-is-trying-to"
+    },
+    {
       "captured_at": 1785906363,
       "published_at": 1640131200,
       "source": "anthropic",
       "title": "A Mathematical Framework for Transformer Circuits",
       "url": "https://www.anthropic.com/research/a-mathematical-framework-for-transformer-circuits"
+    },
+    {
+      "captured_at": 1786309578,
+      "published_at": 1639593090,
+      "source": "semianalysis",
+      "title": "Advanced Packaging Part 1 – Pad Limited Designs, Breakdown Of Economic Semiconductor Scaling, Heterogeneous Compute, and Chiplets",
+      "url": "https://newsletter.semianalysis.com/p/advanced-packaging-part-1-pad-limited"
+    },
+    {
+      "captured_at": 1786309814,
+      "published_at": 1638431164,
+      "source": "semianalysis",
+      "title": "Amazon Graviton 3 Uses Chiplets & Advanced Packaging To Commoditize High Performance CPUs | The First PCIe 5.0 And DDR5 Server CPU",
+      "url": "https://newsletter.semianalysis.com/p/amazon-graviton-3-uses-chiplets-and"
     },
     {
       "captured_at": 1785906273,
@@ -11775,6 +11978,13 @@
       "url": "https://openai.com/index/openai-residency"
     },
     {
+      "captured_at": 1786310048,
+      "published_at": 1637250056,
+      "source": "semianalysis",
+      "title": "Lam Research, Tokyo Electron, JSR Battle It Out In The $5B+ EUV Photoresist, Coater, and Developer Market - CAR vs MOR vs Dry Resist",
+      "url": "https://newsletter.semianalysis.com/p/lam-research-tokyo-electron-jsr-battle"
+    },
+    {
       "captured_at": 1785817191,
       "published_at": 1637193600,
       "source": "openai",
@@ -11782,11 +11992,109 @@
       "url": "https://openai.com/index/api-no-waitlist"
     },
     {
+      "captured_at": 1786310283,
+      "published_at": 1634899314,
+      "source": "semianalysis",
+      "title": "Intel Betting The Farm – Shrinking Business, Margins Down For Few Years, But Aggressively Investing $40B-$43B A Year And More With Subsidies",
+      "url": "https://newsletter.semianalysis.com/p/intel-betting-the-farm-shrinking"
+    },
+    {
+      "captured_at": 1786310513,
+      "published_at": 1634750345,
+      "source": "semianalysis",
+      "title": "Qualcomm RFFE Business Continues Relentless Pace With ultraBAW Filters | >$8B Segment By 2025",
+      "url": "https://newsletter.semianalysis.com/p/qualcomm-rffe-business-continues"
+    },
+    {
+      "captured_at": 1786310744,
+      "published_at": 1634248653,
+      "source": "semianalysis",
+      "title": "TSMC 3nm Wafer Shipments Pushed Into Q1 2023, 2.5 Years After N5 | TSMC 2nm, Samsung 2nm, And Intel 20A Battle It Out In 2025",
+      "url": "https://newsletter.semianalysis.com/p/tsmc-3nm-wafer-shipments-pushed-into"
+    },
+    {
+      "captured_at": 1786310972,
+      "published_at": 1634094742,
+      "source": "semianalysis",
+      "title": "ASML’s EUV Tools Have A Throughput Problem, But Lyncean Has The Answer By Scaling EUV Light Source Power An Order Of Magnitude",
+      "url": "https://newsletter.semianalysis.com/p/asmls-euv-tools-have-a-throughput"
+    },
+    {
+      "captured_at": 1786311203,
+      "published_at": 1633525412,
+      "source": "semianalysis",
+      "title": "GlobalFoundries $GFS IPO – Mubadala Lost Over $22.4B, Now They Are Hoping Public Markets Bail Them Out",
+      "url": "https://newsletter.semianalysis.com/p/globalfoundries-gfs-ipo-mubadala"
+    },
+    {
       "captured_at": 1786237020,
       "published_at": 1633410000,
       "source": "dwarkesh",
       "title": "Byrne Hobart - Optionality, Stagnation, and Secret Societies",
       "url": "https://www.dwarkesh.com/p/byrne-hobart"
+    },
+    {
+      "captured_at": 1786311436,
+      "published_at": 1633061340,
+      "source": "semianalysis",
+      "title": "China Has Built The World’s Most Expensive Silicon Carbide Fab, But Numbers Don’t Add Up",
+      "url": "https://newsletter.semianalysis.com/p/china-has-built-the-worlds-most-expensive"
+    },
+    {
+      "captured_at": 1786311665,
+      "published_at": 1633046700,
+      "source": "semianalysis",
+      "title": "Apple A15 Die Shot and Annotation - IP Block Area Analysis",
+      "url": "https://newsletter.semianalysis.com/p/apple-a15-die-shot-and-annotation"
+    },
+    {
+      "captured_at": 1786311897,
+      "published_at": 1632941132,
+      "source": "semianalysis",
+      "title": "Aehr Multi-Wafer Level Burn-in Test for Silicon Carbide and Silicon Photonics Applications",
+      "url": "https://newsletter.semianalysis.com/p/aehr-multi-wafer-level-burn-in-test"
+    },
+    {
+      "captured_at": 1786312129,
+      "published_at": 1632893125,
+      "source": "semianalysis",
+      "title": "Memory Oligopoly Woes - Micron Says They Will Not Increase Wafer Output In DRAM Or NAND For The Foreseeable Future",
+      "url": "https://newsletter.semianalysis.com/p/memory-oligopoly-woes-micron-says"
+    },
+    {
+      "captured_at": 1786312362,
+      "published_at": 1632843481,
+      "source": "semianalysis",
+      "title": "The Impending Chinese NAND Apocalypse – YMTC 128 Layer NAND Is The First Semiconductor Where China Is Technologically Competitive",
+      "url": "https://newsletter.semianalysis.com/p/the-impending-chinese-nand-apocalypse-e01"
+    },
+    {
+      "captured_at": 1786312597,
+      "published_at": 1632776540,
+      "source": "semianalysis",
+      "title": "Kulicke & Soffa Industries, $KLIC, Continued Outperformance Of Wire Bonders And Emerging Supplier in Mini-LED, Micro-LED, And Battery Manufacturing",
+      "url": "https://newsletter.semianalysis.com/p/kulicke-and-soffa-industries-klic-771"
+    },
+    {
+      "captured_at": 1786312830,
+      "published_at": 1631653842,
+      "source": "semianalysis",
+      "title": "Apple CPU Gains Grind To A Halt And The Future Looks Dim As The Impact From The CPU Engineer Exodus To Nuvia And Rivos Starts To Bleed In",
+      "url": "https://newsletter.semianalysis.com/p/apple-cpu-gains-grind-to-a-halt-and"
+    },
+    {
+      "captured_at": 1786313064,
+      "published_at": 1631572231,
+      "source": "semianalysis",
+      "title": "Will The China Real Estate Meltdown End The Semiconductor Shortage?",
+      "url": "https://newsletter.semianalysis.com/p/will-the-china-real-estate-meltdown"
+    },
+    {
+      "captured_at": 1786313295,
+      "published_at": 1631500387,
+      "source": "semianalysis",
+      "title": "Advanced Packaging The Size Of Your Monitor | Applied Materials, $AMAT, Modifies Panel PVD Tool For 60x60cm Fan Outs To Usher In A New Age Of Mega Packages",
+      "url": "https://newsletter.semianalysis.com/p/advanced-packaging-the-size-of-your"
     },
     {
       "captured_at": 1785839146,
@@ -11803,11 +12111,172 @@
       "url": "https://openai.com/index/helen-toner-joins"
     },
     {
+      "captured_at": 1786313526,
+      "published_at": 1630614597,
+      "source": "semianalysis",
+      "title": "No, The iPhone 13 Does Not Have Satellite Internet | Band n53 & Globalstar (GSAT) Explained",
+      "url": "https://newsletter.semianalysis.com/p/no-the-iphone-13-does-not-have-satellite"
+    },
+    {
+      "captured_at": 1786313759,
+      "published_at": 1630446971,
+      "source": "semianalysis",
+      "title": "NXP Semiconductor (NXPI) CFO Sells Nearly 70% Of His Shares As Samsung Acquisition Rumored To Fall Apart",
+      "url": "https://newsletter.semianalysis.com/p/nxp-semiconductor-nxpi-cfo-sells"
+    },
+    {
+      "captured_at": 1786313990,
+      "published_at": 1630333037,
+      "source": "semianalysis",
+      "title": "Rivos Inc | A Chip Off The Old Block? New RISC-V Startup Garners Many Senior CPU Architects From Apple, Google, Marvell, Qualcomm, Intel, and AMD",
+      "url": "https://newsletter.semianalysis.com/p/rivos-inc-a-chip-off-the-old-block"
+    },
+    {
+      "captured_at": 1786314222,
+      "published_at": 1630171207,
+      "source": "semianalysis",
+      "title": "A Chip Off The Old Block? New RISC-V Startup Garners Many Senior CPU Architects From Apple, Google, Marvell, Qualcomm, Intel, and AMD",
+      "url": "https://newsletter.semianalysis.com/p/a-chip-off-the-old-block-new-risc"
+    },
+    {
+      "captured_at": 1786314452,
+      "published_at": 1630074607,
+      "source": "semianalysis",
+      "title": "The Semiconductor Heist Of The Century | Arm China Has Gone Completely Rogue, Operating As An Independent Company With Inhouse IP/R&D",
+      "url": "https://newsletter.semianalysis.com/p/the-semiconductor-heist-of-the-century"
+    },
+    {
+      "captured_at": 1786314685,
+      "published_at": 1629869721,
+      "source": "semianalysis",
+      "title": "The Tesla Dojo Chip Is Impressive, But There Are Some Major Technical Issues",
+      "url": "https://newsletter.semianalysis.com/p/the-tesla-dojo-chip-is-impressive"
+    },
+    {
+      "captured_at": 1786314919,
+      "published_at": 1629444386,
+      "source": "semianalysis",
+      "title": "Tesla Dojo - Unique Packaging and Chip Design Allow An Order Magnitude Advantage Over Competing AI Hardware",
+      "url": "https://newsletter.semianalysis.com/p/tesla-dojo-unique-packaging-and-chip"
+    },
+    {
       "captured_at": 1786237236,
       "published_at": 1628521686,
       "source": "dwarkesh",
       "title": "David Friedman - Dating Markets, Legal Systems, Bitcoin, and Automation",
       "url": "https://www.dwarkesh.com/p/david-friedman"
+    },
+    {
+      "captured_at": 1786315155,
+      "published_at": 1628195821,
+      "source": "semianalysis",
+      "title": "Kulicke & Soffa Industries, $KLIC, Crushes Earnings But Continues To Sandbag, $6 EPS '21, $6.75 EPS '22",
+      "url": "https://newsletter.semianalysis.com/p/kulicke-and-soffa-industries-klic"
+    },
+    {
+      "captured_at": 1786315388,
+      "published_at": 1628100735,
+      "source": "semianalysis",
+      "title": "Tesla AI Day Supercomputer Chip Teaser | Is This The First Deployment Of TSMC InFO_SoW?",
+      "url": "https://newsletter.semianalysis.com/p/tesla-ai-day-supercomputer-chip-teaser"
+    },
+    {
+      "captured_at": 1786315621,
+      "published_at": 1628019475,
+      "source": "semianalysis",
+      "title": "Fears for Chinese Semiconductor Capital Equipment and Chemical Supply Chain Are Overblown | Cautionary Tale On Trusting Industry Analysts",
+      "url": "https://newsletter.semianalysis.com/p/fears-for-chinese-semiconductor-capital"
+    },
+    {
+      "captured_at": 1786315852,
+      "published_at": 1627959636,
+      "source": "semianalysis",
+      "title": "Power Integrations, $POWI, A Premier ESG Play Semiconductor Exposure To Electric Vehicles, Green Energy, And Power Efficiency Regulations",
+      "url": "https://newsletter.semianalysis.com/p/power-integrations-powi-a-premier"
+    },
+    {
+      "captured_at": 1786316090,
+      "published_at": 1627591002,
+      "source": "semianalysis",
+      "title": "Intel Grossly Exaggerates Foundry “Wins” With Qualcomm And Amazon, There Are No Deals For Manufacturing Chips",
+      "url": "https://newsletter.semianalysis.com/p/intel-grossly-exaggerates-foundry"
+    },
+    {
+      "captured_at": 1786316325,
+      "published_at": 1627482751,
+      "source": "semianalysis",
+      "title": "MediaTek Officially Enters The Flagship Mobile Race With The First TSMC 4nm SOC",
+      "url": "https://newsletter.semianalysis.com/p/mediatek-officially-enters-the-flagship"
+    },
+    {
+      "captured_at": 1786316558,
+      "published_at": 1625574600,
+      "source": "semianalysis",
+      "title": "Nvidia’s 2021 Bubble, Eerily Similar To Other Bubbles That Came Before",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-2021-bubble-eerily-similar"
+    },
+    {
+      "captured_at": 1786316790,
+      "published_at": 1625159253,
+      "source": "semianalysis",
+      "title": "Graphcore Looks Like A Complete Failure In Machine Learning Training Performance",
+      "url": "https://newsletter.semianalysis.com/p/graphcore-looks-like-a-complete-failure"
+    },
+    {
+      "captured_at": 1786317019,
+      "published_at": 1625087286,
+      "source": "semianalysis",
+      "title": "Micron Sells 3D X-Point Lehi, Utah Fab to Texas Instruments For $1.5B",
+      "url": "https://newsletter.semianalysis.com/p/micron-sells-3d-x-point-lehi-utah"
+    },
+    {
+      "captured_at": 1786317248,
+      "published_at": 1625083802,
+      "source": "semianalysis",
+      "title": "Cerebras Wafer Scale Hardware Crushes High Performance Computing Workloads Including Machine Learning And Beyond",
+      "url": "https://newsletter.semianalysis.com/p/cerebras-wafer-scale-hardware-crushes"
+    },
+    {
+      "captured_at": 1786317483,
+      "published_at": 1625005906,
+      "source": "semianalysis",
+      "title": "Samsung Foundry 3nm Gate All Around Process Node, 3GAE, Delayed To As Late As 2024",
+      "url": "https://newsletter.semianalysis.com/p/samsung-foundry-3nm-gate-all-around"
+    },
+    {
+      "captured_at": 1786322090,
+      "published_at": 1624968198,
+      "source": "semianalysis",
+      "title": "Qualcomm MWC 2021 - Network Infrastructure And Edge 5G Get Supercharged | FSM200, DU X100 Accelerator, And Range Of Features",
+      "url": "https://newsletter.semianalysis.com/p/qualcomm-mwc-2021-network-infrastructure"
+    },
+    {
+      "captured_at": 1786317838,
+      "published_at": 1624636857,
+      "source": "semianalysis",
+      "title": "Tenstorrent Wormhole Analysis - A Scale Out Architecture for Machine Learning That Could Put Nvidia On Their Back Foot",
+      "url": "https://newsletter.semianalysis.com/p/tenstorrent-wormhole-analysis-a-scale"
+    },
+    {
+      "captured_at": 1786318074,
+      "published_at": 1624454304,
+      "source": "semianalysis",
+      "title": "Morgan Stanley Just Reduced TSMC’s Value By $25B While Demonstrating A Complete Lack of Semiconductor Knowledge",
+      "url": "https://newsletter.semianalysis.com/p/morgan-stanley-just-reduced-tsmcs"
+    },
+    {
+      "captured_at": 1786318305,
+      "published_at": 1624383037,
+      "source": "semianalysis",
+      "title": "Rockley Photonics Will Revolutionize Healthcare By Measuring Biomarkers Such As Glucose With Lasers In The Apple Watch",
+      "url": "https://newsletter.semianalysis.com/p/rockley-photonics-will-revolutionize"
+    },
+    {
+      "captured_at": 1786318542,
+      "published_at": 1624303188,
+      "source": "semianalysis",
+      "title": "GlobalFoundries Is A Leading-Edge Foundry Despite Claims Otherwise",
+      "url": "https://newsletter.semianalysis.com/p/globalfoundries-is-a-leading-edge"
     },
     {
       "captured_at": 1786162381,
@@ -11817,11 +12286,32 @@
       "url": "https://karpathy.github.io/2021/06/21/blockchain"
     },
     {
+      "captured_at": 1786318776,
+      "published_at": 1623954751,
+      "source": "semianalysis",
+      "title": "Qualcomm Hits a Homerun AI 100 - Powerful AI Inference Acceleration For the Edge",
+      "url": "https://newsletter.semianalysis.com/p/qualcomm-hits-a-homerun-ai-100-powerful"
+    },
+    {
+      "captured_at": 1786319008,
+      "published_at": 1623418441,
+      "source": "semianalysis",
+      "title": "Intel’s Trojan Horse into the Foundry Business | Co-packaged Silicon Photonics is Intel’s Path Forward for IDM 2.0",
+      "url": "https://newsletter.semianalysis.com/p/intels-trojan-horse-into-the-foundry"
+    },
+    {
       "captured_at": 1786237453,
       "published_at": 1622823982,
       "source": "dwarkesh",
       "title": "Sarah Fitz-Claridge - Taking Children Seriously",
       "url": "https://www.dwarkesh.com/p/sarah-fitz"
+    },
+    {
+      "captured_at": 1786319245,
+      "published_at": 1622660558,
+      "source": "semianalysis",
+      "title": "Google New Custom Silicon Replaces 10 Million Intel CPUs | Google Argos VPU",
+      "url": "https://newsletter.semianalysis.com/p/google-new-custom-silicon-replaces"
     },
     {
       "captured_at": 1786237671,
@@ -11838,6 +12328,20 @@
       "url": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
     },
     {
+      "captured_at": 1786319481,
+      "published_at": 1622139454,
+      "source": "semianalysis",
+      "title": "Nvidia is Raking in the Money, but are Earnings Inflated?",
+      "url": "https://newsletter.semianalysis.com/p/nvidia-is-raking-in-the-money-but"
+    },
+    {
+      "captured_at": 1786319715,
+      "published_at": 1620754584,
+      "source": "semianalysis",
+      "title": "Semi Supply Chain Cutting Expectations as Phone Sales Plummet",
+      "url": "https://newsletter.semianalysis.com/p/semi-supply-chain-cutting-expectations"
+    },
+    {
       "captured_at": 1785714437,
       "published_at": 1620000000,
       "source": "openai",
@@ -11845,11 +12349,25 @@
       "url": "https://openai.com/index/will-hurd-joins"
     },
     {
+      "captured_at": 1786319946,
+      "published_at": 1619718480,
+      "source": "semianalysis",
+      "title": "Trailing Edge is Going Gangbusters ($KLIC)",
+      "url": "https://newsletter.semianalysis.com/p/trailing-edge-is-going-gangbusters"
+    },
+    {
       "captured_at": 1786165528,
       "published_at": 1617984000,
       "source": "peter-steinberger",
       "title": "Top-Level Menu Visibility in SwiftUI for macOS",
       "url": "https://steipete.me/posts/2021/top-level-menu-visibility-in-swiftui"
+    },
+    {
+      "captured_at": 1786320177,
+      "published_at": 1617645476,
+      "source": "semianalysis",
+      "title": "Bridging the gap between business and the worlds most important industry.",
+      "url": "https://newsletter.semianalysis.com/p/coming-soon"
     },
     {
       "captured_at": 1786162458,
@@ -11934,6 +12452,20 @@
       "source": "dwarkesh",
       "title": "Charles Murray - Human Accomplishment and the Future of Liberty",
       "url": "https://www.dwarkesh.com/p/charles-murray"
+    },
+    {
+      "captured_at": 1786320356,
+      "published_at": 1603821180,
+      "source": "semianalysis",
+      "title": "Apple’s A14 Packs 134 Million Transistors/mm², but Falls Short of TSMC’s Density Claims",
+      "url": "https://newsletter.semianalysis.com/p/apples-a14-packs-134-million-transistorsmm"
+    },
+    {
+      "captured_at": 1786320589,
+      "published_at": 1603651560,
+      "source": "semianalysis",
+      "title": "Qualcomm Lost the iPhone 12 mmWave Antenna Module Contract to a Chinese Company",
+      "url": "https://newsletter.semianalysis.com/p/qualcomm-lost-the-iphone-12-mmwave"
     },
     {
       "captured_at": 1786172073,
@@ -12027,6 +12559,13 @@
       "url": "https://www.dwarkesh.com/p/matjaz-leonardis"
     },
     {
+      "captured_at": 1786320822,
+      "published_at": 1598032140,
+      "source": "semianalysis",
+      "title": "Jensen Huang’s Vision For Data Center Dominance Will Destroy The Arm Ecosystem",
+      "url": "https://newsletter.semianalysis.com/p/jensen-huangs-vision-for-data-center"
+    },
+    {
       "captured_at": 1786167148,
       "published_at": 1594400122,
       "source": "dwarkesh",
@@ -12102,6 +12641,20 @@
       "source": "peter-steinberger",
       "title": "Jailbreaking for iOS Developers",
       "url": "https://steipete.me/posts/2020/jailbreaking-for-ios-developers"
+    },
+    {
+      "captured_at": 1786321059,
+      "published_at": 1590188820,
+      "source": "semianalysis",
+      "title": "Mediatek Stands to Gain the Most from the New Cold War",
+      "url": "https://newsletter.semianalysis.com/p/mediatek-stands-to-gain-the-most"
+    },
+    {
+      "captured_at": 1786321294,
+      "published_at": 1590183360,
+      "source": "semianalysis",
+      "title": "LAM Research (LRCX) Dry Deposit and Resist Could Become a Multi-Billion Dollar Business",
+      "url": "https://newsletter.semianalysis.com/p/lam-research-lrcx-dry-deposit-and"
     },
     {
       "captured_at": 1786194927,

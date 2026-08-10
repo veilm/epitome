@@ -267,3 +267,39 @@ articles with no YouTube or Substack-audio entries. The final 97 deduplicated
 article identities are selected in the ignored working list
 `data/semianalysis-final-97.txt` for a longer-delay batch after local replay
 verification passes.
+
+## Final bounded page batch
+
+The final 97 approved identities are complete across the main batch and one
+isolated retry:
+
+- `/mnt2/capsule/epitome/semianalysis/crawls/1786299086`
+- `/mnt2/capsule/epitome/semianalysis/retries/1786336400-qualcomm-mwc-2021`
+
+The main run preserved 96 pages. One article lost its temporary CDP session
+after navigation and was captured completely in the isolated retry. All 97
+requested identities now have complete manifests and their capture tabs are
+closed. A full source-to-archive selection check reports 325 completed URL
+identities and zero uncaptured identities.
+
+Seven unusually image-heavy articles in the main run exceeded the ordinary
+asset budget and were missing 56 primary figures. The retry also lacked three
+related-content thumbnails. Bounded repairs recovered all 59 resources with
+three-second request spacing: 5,444,826 bytes with zero failures. Repeated
+primary and all-rendered-image audits report zero omissions across both capture
+roots.
+
+A desktop Chromium replay audit at 1440x900 covered five repaired or varied
+historical articles, including the retried Qualcomm page and three of the
+heaviest image repairs. Each retained its full heading and article text, showed
+23–36 rendered images with zero broken or pending images, and preserved the
+expected paid or free layout. Full-page screenshots of an image-heavy packaging
+review and the retry both showed intact figures and page structure. A strict
+network log across the audited sequence recorded 280 requests, all to
+`127.0.0.1:8013`, with no production-origin traffic. The audit tab was closed
+afterward.
+
+The refreshed provider inventories remain at ten Substack-hosted videos across
+five articles with no YouTube or Substack-audio entries. These videos remain
+explicit external-downloader imports; the approved 325-identity page archive is
+otherwise complete.

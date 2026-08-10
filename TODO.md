@@ -113,9 +113,12 @@ deletion-history workflows are explicitly designed.
         video.
   - [x] Capture and preservation-audit the deduplicated 75-page SemiAnalysis
         increment; recover nine omitted primary figures and 22 listing images.
-  - [ ] Complete the selected final 97-page SemiAnalysis remainder.
-  - [ ] Preserve posts, podcast/video embeds, images, attachments, publication
-        metadata, and links between installments.
+  - [x] Complete the selected final 97-page SemiAnalysis remainder; retry its
+        one lost temporary CDP session and repair 59 article/listing images.
+  - [x] Preserve SemiAnalysis posts, images, attachments, publication metadata,
+        and links between installments across the approved 325-page scope.
+  - [ ] Import the ten inventoried SemiAnalysis Substack videos through the
+        external downloader and connect replay to their private media paths.
 - [ ] **Individual writers and personal blogs**
   - [x] Inventory Peter Steinberger's canonical 116-URL core blog scope and
         validate one representative rendered article plus its official Markdown
