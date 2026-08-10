@@ -44,6 +44,11 @@
       "id": "ai-2027",
       "name": "AI 2027",
       "logo_url": "https://ai-2027.com/favicon.png"
+    },
+    {
+      "id": "ai-2040",
+      "name": "AI 2040",
+      "logo_url": "https://ai-2040.com/favicon.png"
     }
   ],
   "pages": [
@@ -13808,6 +13813,160 @@
       "source": "andrej-karpathy",
       "title": "Lessons learned from manually classifying CIFAR-10",
       "url": "https://karpathy.github.io/2011/04/27/manually-classifying-cifar10"
+    },
+    {
+      "captured_at": 1786347802,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Transparency Plan",
+      "url": "https://ai-2040.com/supplements/transparency-plan"
+    },
+    {
+      "captured_at": 1786347604,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Takeoff Forecast",
+      "url": "https://ai-2040.com/supplements/takeoff-forecast"
+    },
+    {
+      "captured_at": 1786347520,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Space Governance Plan",
+      "url": "https://ai-2040.com/supplements/space-governance-plan"
+    },
+    {
+      "captured_at": 1786347448,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Security in Plan A",
+      "url": "https://ai-2040.com/supplements/security-in-plan-a"
+    },
+    {
+      "captured_at": 1786347374,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Plan A Assumptions",
+      "url": "https://ai-2040.com/supplements/plan-a-assumptions"
+    },
+    {
+      "captured_at": 1786347090,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Economics of Plan A",
+      "url": "https://ai-2040.com/supplements/economics-of-plan-a"
+    },
+    {
+      "captured_at": 1786347017,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Deal Decline",
+      "url": "https://ai-2040.com/supplements/deal-decline"
+    },
+    {
+      "captured_at": 1786346812,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Compute in Plan A",
+      "url": "https://ai-2040.com/supplements/compute-supplement"
+    },
+    {
+      "captured_at": 1786346742,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Comparing Possible Plans",
+      "url": "https://ai-2040.com/supplements/comparing-possible-plans"
+    },
+    {
+      "captured_at": 1786346671,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Capability Scaling Strategy",
+      "url": "https://ai-2040.com/supplements/capability-scaling-strategy"
+    },
+    {
+      "captured_at": 1786346600,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "AI for Epistemics",
+      "url": "https://ai-2040.com/supplements/ai-for-epistemics"
+    },
+    {
+      "captured_at": 1786345935,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Alignment Roadmap",
+      "url": "https://ai-2040.com/supplements/alignment-roadmap"
+    },
+    {
+      "captured_at": 1786345741,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Economic Growth Explorer",
+      "url": "https://ai-2040.com/supplements/econ-explorer"
+    },
+    {
+      "captured_at": 1786345543,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Verification Plan",
+      "url": "https://ai-2040.com/supplements/verification-plan"
+    },
+    {
+      "captured_at": 1786345465,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Covert AI Projects",
+      "url": "https://ai-2040.com/supplements/covert-ai-projects"
+    },
+    {
+      "captured_at": 1786345409,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "How Plan A solves our 5 biggest problems",
+      "url": "https://ai-2040.com/supplements/how-plan-a-solves-our-5-biggest-problems"
+    },
+    {
+      "captured_at": 1786345354,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "FAQ",
+      "url": "https://ai-2040.com/supplements/faq"
+    },
+    {
+      "captured_at": 1786345297,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "Supplements",
+      "url": "https://ai-2040.com/supplements"
+    },
+    {
+      "captured_at": 1786345231,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "AI 2040 Footnotes",
+      "url": "https://ai-2040.com/footnotes"
+    },
+    {
+      "captured_at": 1786345172,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "About AI 2040",
+      "url": "https://ai-2040.com/about"
+    },
+    {
+      "captured_at": 1786345121,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "AI 2040 PDF",
+      "url": "https://ai-2040.com/AI-2040.pdf"
+    },
+    {
+      "captured_at": 1786344724,
+      "published_at": null,
+      "source": "ai-2040",
+      "title": "AI 2040: Plan A",
+      "url": "https://ai-2040.com/"
     },
     {
       "captured_at": 1786342261,

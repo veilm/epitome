@@ -178,7 +178,7 @@ deletion-history workflows are explicitly designed.
   - [x] Capture and offline-verify the first varied ten-page AI 2040 batch,
         including the supplements index, long-form articles, the underlying PDF,
         and the Economic Growth Explorer's raw application/code/data.
-  - [ ] Capture and offline-verify the final deduplicated eleven AI 2040
+  - [x] Capture and offline-verify the final deduplicated eleven AI 2040
         identities; retain raw visualization code/data while documenting that
         script-free replay exposes static or inert interactive states.
   - [ ] *Situational Awareness* essay series.

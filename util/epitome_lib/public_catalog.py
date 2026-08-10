@@ -197,7 +197,11 @@ def extract_page_metadata(html_path: Path, url: str) -> dict[str, object]:
             )
         except ValueError:
             pass
-    return {"title": title, "published_at": published_at}
+    return {
+        "title": title,
+        "h1": _clean_text("".join(parser.h1_parts)) or None,
+        "published_at": published_at,
+    }
 
 
 def _source_for_url(url: str, sources: list[dict[str, object]]) -> dict[str, object] | None:
@@ -293,13 +297,16 @@ def build_public_catalog(
         metadata = extract_page_metadata(directory / "page.html", url)
         if _path_matches(url, source.get("undated_paths")):
             metadata["published_at"] = None
+        source_title = metadata["title"]
+        if source.get("prefer_h1") and metadata.get("h1"):
+            source_title = metadata["h1"]
         entries.append(
             {
                 "captured_at": captured_at,
                 "published_at": metadata["published_at"],
                 "source": str(source["id"]),
                 "title": _configured_title(url, source)
-                or _clean_source_title(metadata["title"], source),
+                or _clean_source_title(source_title, source),
                 "url": identity,
             }
         )

@@ -134,6 +134,48 @@ class PublicCatalogTest(unittest.TestCase):
                 ],
             )
 
+    def test_source_can_prefer_h1_over_generic_social_title(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            config = root / "sources.json"
+            config.write_text(
+                json.dumps(
+                    {
+                        "sources": [
+                            {
+                                "id": "example",
+                                "name": "Example",
+                                "archive_directory": "example",
+                                "hosts": ["example.com"],
+                                "prefer_h1": True,
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            capture = root / "archive" / "example" / "capture"
+            capture.mkdir(parents=True)
+            (capture / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "complete": True,
+                        "requested_url": "https://example.com/specific-article",
+                        "capture_started_at": 10,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (capture / "page.html").write_text(
+                '<meta property="og:title" content="Generic site title">'
+                "<h1>Specific article title</h1>",
+                encoding="utf-8",
+            )
+            output = root / "catalog.json"
+            build_public_catalog(root / "archive", config, output)
+            catalog = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(catalog["pages"][0]["title"], "Specific article title")
+
 
 if __name__ == "__main__":
     unittest.main()

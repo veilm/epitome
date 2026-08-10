@@ -69,6 +69,30 @@
         "/research/ai-goals-forecast", "/research/security-forecast",
         "/slowdown", "/race", "/footnotes", "/about", "/ai-2027.pdf"
       ]
+    },
+    {
+      "id": "ai-2040", "name": "AI 2040", "archive_directory": "ai-2040",
+      "hosts": ["ai-2040.com"], "logo_url": "https://ai-2040.com/favicon.png",
+      "prefer_h1": true,
+      "title_overrides": {
+        "/": "AI 2040: Plan A",
+        "/AI-2040.pdf": "AI 2040 PDF",
+        "/about": "About AI 2040",
+        "/footnotes": "AI 2040 Footnotes",
+        "/supplements/econ-explorer": "Economic Growth Explorer"
+      },
+      "undated_paths": [
+        "/", "/AI-2040.pdf", "/about", "/footnotes", "/supplements",
+        "/supplements/faq", "/supplements/how-plan-a-solves-our-5-biggest-problems",
+        "/supplements/covert-ai-projects", "/supplements/verification-plan",
+        "/supplements/econ-explorer", "/supplements/alignment-roadmap",
+        "/supplements/ai-for-epistemics", "/supplements/capability-scaling-strategy",
+        "/supplements/comparing-possible-plans", "/supplements/compute-supplement",
+        "/supplements/deal-decline", "/supplements/economics-of-plan-a",
+        "/supplements/plan-a-assumptions", "/supplements/security-in-plan-a",
+        "/supplements/space-governance-plan", "/supplements/takeoff-forecast",
+        "/supplements/transparency-plan"
+      ]
     }
   ]
 }
