@@ -54,6 +54,11 @@
       "id": "ai-2040",
       "name": "AI 2040",
       "logo_url": "https://ai-2040.com/favicon.png"
+    },
+    {
+      "id": "situational-awareness",
+      "name": "Situational Awareness",
+      "logo_url": "https://situational-awareness.ai/wp-content/uploads/2024/06/cropped-Untitled-design-1-192x192.png"
     }
   ],
   "pages": [
@@ -9249,6 +9254,69 @@
       "url": "https://openai.com/index/introducing-chatgpt-edu"
     },
     {
+      "captured_at": 1786350960,
+      "published_at": 1717021297,
+      "source": "situational-awareness",
+      "title": "IIId. The Free World Must Prevail",
+      "url": "https://situational-awareness.ai/the-free-world-must-prevail"
+    },
+    {
+      "captured_at": 1786350824,
+      "published_at": 1717021297,
+      "source": "situational-awareness",
+      "title": "IIIc. Superalignment",
+      "url": "https://situational-awareness.ai/superalignment"
+    },
+    {
+      "captured_at": 1786350692,
+      "published_at": 1717021297,
+      "source": "situational-awareness",
+      "title": "IIIb. Lock Down the Labs: Security for AGI",
+      "url": "https://situational-awareness.ai/lock-down-the-labs"
+    },
+    {
+      "captured_at": 1786350450,
+      "published_at": 1717021297,
+      "source": "situational-awareness",
+      "title": "IIIa. Racing to the Trillion-Dollar Cluster",
+      "url": "https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster"
+    },
+    {
+      "captured_at": 1786351239,
+      "published_at": 1717019121,
+      "source": "situational-awareness",
+      "title": "About",
+      "url": "https://situational-awareness.ai/leopold-aschenbrenner"
+    },
+    {
+      "captured_at": 1786351163,
+      "published_at": 1717016873,
+      "source": "situational-awareness",
+      "title": "V. Parting Thoughts",
+      "url": "https://situational-awareness.ai/parting-thoughts"
+    },
+    {
+      "captured_at": 1786351067,
+      "published_at": 1717016873,
+      "source": "situational-awareness",
+      "title": "IV. The Project",
+      "url": "https://situational-awareness.ai/the-project"
+    },
+    {
+      "captured_at": 1786350220,
+      "published_at": 1717016873,
+      "source": "situational-awareness",
+      "title": "II. From AGI to Superintelligence: the Intelligence Explosion",
+      "url": "https://situational-awareness.ai/from-agi-to-superintelligence"
+    },
+    {
+      "captured_at": 1786349438,
+      "published_at": 1717016873,
+      "source": "situational-awareness",
+      "title": "I. From GPT-4 to AGI: Counting the OOMs",
+      "url": "https://situational-awareness.ai/from-gpt-4-to-agi"
+    },
+    {
       "captured_at": 1786091543,
       "published_at": 1716940800,
       "source": "anthropic",
@@ -13818,6 +13886,20 @@
       "source": "andrej-karpathy",
       "title": "Lessons learned from manually classifying CIFAR-10",
       "url": "https://karpathy.github.io/2011/04/27/manually-classifying-cifar10"
+    },
+    {
+      "captured_at": 1786351309,
+      "published_at": null,
+      "source": "situational-awareness",
+      "title": "Situational Awareness — Full Series PDF",
+      "url": "https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf"
+    },
+    {
+      "captured_at": 1786349403,
+      "published_at": null,
+      "source": "situational-awareness",
+      "title": "Introduction",
+      "url": "https://situational-awareness.ai/"
     },
     {
       "captured_at": 1786348776,

@@ -181,12 +181,13 @@ deletion-history workflows are explicitly designed.
   - [x] Capture and offline-verify the final deduplicated eleven AI 2040
         identities; retain raw visualization code/data while documenting that
         script-free replay exposes static or inert interactive states.
-  - [ ] *Situational Awareness* essay series.
+  - [x] *Situational Awareness* essay series.
     - [x] Inventory the introduction, eight installments, author page, and
           first-party PDF as an eleven-identity bounded scope.
     - [x] Validate the introduction and a long figure-heavy installment; retain
           all WordPress original/responsive assets and the actual 165-page PDF.
-    - [ ] Capture and offline-verify the final nine identities.
+    - [x] Capture and offline-verify the final nine identities; restore the two
+          unavailable outbound citation PDFs from exact historical copies.
   - [ ] Identify the canonical site and complete page/media set for each before
         capture.
 - [ ] **near.blog and Near's link graph**

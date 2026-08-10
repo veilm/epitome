@@ -63,3 +63,37 @@ The two pilots establish a viable figure strategy: retain every responsive and
 original WordPress asset discovered from the page markup rather than accepting
 the live browser's selected broken variants. The remaining nine identities are
 ready for one bounded batch with generous inter-page and per-asset delays.
+
+## Completed bounded scope
+
+The final nine identities completed with 45-second inter-page spacing and
+two-second asset spacing at:
+
+`/mnt2/capsule/epitome/situational-awareness/crawls/1786350214`
+
+All nine manifests are complete, every capture tab closed, and the run reported
+zero page failures. Across the increment it retained 306 network requests and
+284,745,503 response-body bytes. Asset completion attempted 165 references and
+recovered 163. The two misses were not rendered figures: they were a Deloitte
+report whose live URL now returns 404 and a RAND report whose live URL returns
+403. Repeated primary and all-rendered-image audits across all eleven approved
+pages report zero omissions.
+
+Exact Wayback PDF copies were found and retained at:
+
+- `/mnt2/capsule/epitome/situational-awareness/dependencies/wayback-deloitte-green-energy-1786353070`
+- `/mnt2/capsule/epitome/situational-awareness/dependencies/wayback-rand-rr1751-1786353071`
+
+They are valid 27-page and PDF 1.3 documents. Reviewed resource aliases make the
+two original citation URLs serve these historical bodies locally, eliminating
+the substantive dependency gaps without changing the raw failed responses.
+
+A final 1440x900 audit covered all seven remaining essay installments and the
+author page. The essays retain 8,133–44,704 visible characters, all rendered
+figures load at natural size, and the author page preserves its portrait and
+text. A strict log recorded 93 requests, all to the local replay server. Both
+recovered citation URLs return local PDF bodies, and audit tabs were closed.
+
+Completed-URL selection now reports all eleven approved identities archived and
+none remaining. The bounded *Situational Awareness* page scope is complete. No
+YouTube or Twitter/X content was opened or downloaded.

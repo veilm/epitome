@@ -104,6 +104,22 @@
         "/supplements/space-governance-plan", "/supplements/takeoff-forecast",
         "/supplements/transparency-plan"
       ]
+    },
+    {
+      "id": "situational-awareness", "name": "Situational Awareness",
+      "archive_directory": "situational-awareness",
+      "hosts": ["situational-awareness.ai"],
+      "logo_url": "https://situational-awareness.ai/wp-content/uploads/2024/06/cropped-Untitled-design-1-192x192.png",
+      "title_suffixes": [
+        " - SITUATIONAL AWARENESS: The Decade Ahead",
+        " - SITUATIONAL AWARENESS"
+      ],
+      "title_overrides": {
+        "/wp-content/uploads/2024/06/situationalawareness.pdf": "Situational Awareness — Full Series PDF"
+      },
+      "undated_paths": [
+        "/wp-content/uploads/2024/06/situationalawareness.pdf"
+      ]
     }
   ]
 }
