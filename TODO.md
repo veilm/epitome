@@ -160,6 +160,8 @@ deletion-history workflows are explicitly designed.
         eight authored posts; treat `medium.com/@karpathy` as an alias.
   - [ ] Validate and capture the bounded Bear and Medium scopes separately,
         checking Medium bodies for mirrors of the completed Jekyll corpus.
+    - [x] Validate Bear homepage, index, exact post dates, long-form layout,
+          images, and production-network isolation through local replay.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
   - [ ] Preserve Paul Graham's static essay corpus from

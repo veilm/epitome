@@ -39,6 +39,20 @@ The homepage separately says the Bear property started in March 2025. Preserve
 that as a site-history event rather than overwriting the displayed 2024 post
 date; the older post was likely imported or backdated, but that is an inference.
 
+### Representative capture validation
+
+A bounded homepage, index, and image-bearing long-post pilot completed at
+`/mnt2/capsule/epitome/andrej-karpathy-bear/validation/1786378012-pilot`.
+All three manifests are complete and tab-closed, with no capture or image-audit
+failures. The index replay preserves all thirteen exact displayed dates. The
+2025 year-review replay retains 10,703 visible characters and both CDN images
+at their captured 1024 by 559 and 1200 by 340 dimensions.
+
+Desktop replay matches the live site's narrow dark layout. A fresh network-log
+reload requested only the local replay document and two local resource routes;
+it made no production-origin requests. The reviewed sixteen-identity Bear scope
+is approved for one bounded completion batch.
+
 ## Medium scope
 
 The canonical profile is `https://karpathy.medium.com/`; the historical
