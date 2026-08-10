@@ -154,6 +154,12 @@ deletion-history workflows are explicitly designed.
         personal/educational property, including its course and books pages and
         first-party presentation PDF; do not conflate it with the completed
         `karpathy.github.io` blog scope.
+  - [x] Inventory Karpathy's single first-party Bear Blog property: homepage,
+        index, feed, and 13 dated posts.
+  - [x] Inventory Karpathy's canonical Medium profile, About/feed resources, and
+        eight authored posts; treat `medium.com/@karpathy` as an alias.
+  - [ ] Validate and capture the bounded Bear and Medium scopes separately,
+        checking Medium bodies for mirrors of the completed Jekyll corpus.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
   - [ ] Preserve Paul Graham's static essay corpus from
@@ -165,6 +171,9 @@ deletion-history workflows are explicitly designed.
     - [x] Capture and offline-audit the next 30 essays (50/232 total).
     - [x] Capture and offline-audit the next 45 essays (95/232 total); classify
           the only failures as the reviewed obsolete Virtumundo layout spacer.
+    - [x] Capture and offline-audit the next 60 essays (155/232 total); restore
+          the retired Hacker News badge and historical traffic chart from exact
+          Wayback bodies.
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.
@@ -176,6 +185,10 @@ deletion-history workflows are explicitly designed.
         the easiest next source after SemiAnalysis.
   - [x] Define the bounded 13-URL English AI 2027 inventory in
         `sources/ai-2027.txt`, excluding translations and legacy redirect aliases.
+  - [x] Inventory the five-route December 2025 AI Futures Model web app as a
+        distinct release between AI 2027 and AI 2040.
+  - [ ] Validate AI Futures Model application/data preservation through offline
+        replay before beginning its bounded capture.
   - [x] Capture and offline-verify the long AI 2027 homepage pilot; localize SVG
         graph images and inventory its narrated audio plus YouTube companion.
   - [x] Capture and offline-verify all 13 identities in the bounded English

@@ -113,3 +113,25 @@ broken rendered images. Five desktop checks spanning short, long, illustrated,
 and obsolete-layout variants retained their article text and source styling
 with zero production-origin requests. Coverage is now 95/232 approved
 identities.
+
+## Fourth bounded batch
+
+The next 60 deduplicated essays completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786364735`
+
+All 60 manifests are complete and tab-closed. The run retained 703 responses
+and 3,197,147 response-body bytes with zero page failures. Primary-image audit
+across all 155 completed identities reports no omissions. Twenty-three of the
+28 raw asset misses are the already-reviewed dead Virtumundo spacer and replay
+continues to substitute the captured transparent GIF.
+
+The other five misses came from the retired `ycombinator.com/images` path: four
+pages use the same 18x18 Hacker News comment badge, while *Two Years of Hacker
+News* links its historical traffic chart. Exact 200-status Wayback bodies from
+2007 and 2009 are preserved under the private Paul Graham dependency tree, and
+reviewed aliases restore the original URLs only when no captured live body is
+available. Five desktop replays spanning short, long, illustrated, obsolete-
+layout, and restored-YC-asset variants retain their source styling and make no
+production-origin requests. Coverage is now 155/232 approved identities, with
+the next 60-page deduplicated input selected from the 77 remaining essays.
