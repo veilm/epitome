@@ -66,6 +66,11 @@
       "logo_url": "https://ai-2040.com/favicon.png"
     },
     {
+      "id": "ai-futures-model",
+      "name": "AI Futures Model",
+      "logo_url": "https://www.aifuturesmodel.com/favicon.ico"
+    },
+    {
       "id": "situational-awareness",
       "name": "Situational Awareness",
       "logo_url": "https://situational-awareness.ai/wp-content/uploads/2024/06/cropped-Untitled-design-1-192x192.png"
@@ -7711,6 +7716,50 @@
       "title": "The Adolescence of Technology",
       "url": "https://darioamodei.com/essay/the-adolescence-of-technology",
       "published_precision": "month"
+    },
+    {
+      "captured_at": 1786385719,
+      "publication_status": "exact",
+      "published_at": 1767139200,
+      "sort_at": 1767139200,
+      "sort_basis": "published",
+      "source": "ai-futures-model",
+      "title": "Analyzing the AI Futures Model",
+      "url": "https://www.aifuturesmodel.com/analysis",
+      "updated_at": 1775088000
+    },
+    {
+      "captured_at": 1786385455,
+      "publication_status": "exact",
+      "published_at": 1767139200,
+      "sort_at": 1767139200,
+      "sort_basis": "published",
+      "source": "ai-futures-model",
+      "title": "About the AI Futures Model",
+      "url": "https://www.aifuturesmodel.com/about",
+      "updated_at": 1775088000
+    },
+    {
+      "captured_at": 1786383746,
+      "publication_status": "exact",
+      "published_at": 1767139200,
+      "sort_at": 1767139200,
+      "sort_basis": "published",
+      "source": "ai-futures-model",
+      "title": "AI Futures Model Forecasts",
+      "url": "https://www.aifuturesmodel.com/forecast/daniel-04-02-26",
+      "updated_at": 1775088000
+    },
+    {
+      "captured_at": 1786383520,
+      "publication_status": "exact",
+      "published_at": 1767139200,
+      "sort_at": 1767139200,
+      "sort_basis": "published",
+      "source": "ai-futures-model",
+      "title": "AI Futures Model: Timelines & Takeoff",
+      "url": "https://www.aifuturesmodel.com/",
+      "updated_at": 1775088000
     },
     {
       "captured_at": 1786254757,

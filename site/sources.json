@@ -137,6 +137,25 @@
       ]
     },
     {
+      "id": "ai-futures-model", "name": "AI Futures Model",
+      "archive_directory": "ai-futures-model",
+      "hosts": ["aifuturesmodel.com"],
+      "logo_url": "https://www.aifuturesmodel.com/favicon.ico",
+      "title_overrides": {
+        "/": "AI Futures Model: Timelines & Takeoff",
+        "/about": "About the AI Futures Model",
+        "/analysis": "Analyzing the AI Futures Model",
+        "/forecast": "AI Futures Model Forecasts",
+        "/forecast/daniel-04-02-26": "AI Futures Model Forecasts"
+      },
+      "publication_date_default": "2025-12-31",
+      "publication_date_overrides": {
+        "/forecast/daniel-04-02-26": "2025-12-31"
+      },
+      "updated_date_default": "2026-04-02",
+      "undated_paths": ["/", "/about", "/analysis", "/forecast"]
+    },
+    {
       "id": "situational-awareness", "name": "Situational Awareness",
       "archive_directory": "situational-awareness",
       "hosts": ["situational-awareness.ai"],

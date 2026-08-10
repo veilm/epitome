@@ -193,10 +193,12 @@ deletion-history workflows are explicitly designed.
         `sources/ai-2027.txt`, excluding translations and legacy redirect aliases.
   - [x] Inventory the five-route December 2025 AI Futures Model web app as a
         distinct release between AI 2027 and AI 2040.
-  - [ ] Validate AI Futures Model application/data preservation through offline
+  - [x] Validate AI Futures Model application/data preservation through offline
         replay before beginning its bounded capture.
     - [x] Validate homepage model controls, eight forecast states, analysis
           plots, long-settle streaming behavior, and offline network isolation.
+    - [x] Capture four canonical routes plus the historical `/results` alias;
+          preserve the release and latest-update dates separately.
   - [x] Capture and offline-verify the long AI 2027 homepage pilot; localize SVG
         graph images and inventory its narrated audio plus YouTube companion.
   - [x] Capture and offline-verify all 13 identities in the bounded English

@@ -97,6 +97,7 @@ class PublicCatalogTest(unittest.TestCase):
                                 },
                                 "undated_paths": ["/2025/03/04/post"],
                                 "publication_date_default": "March 4, 2025",
+                                "updated_date_default": "April 2025",
                                 "publication_date_overrides": {
                                     "/2025/03/04/post": "March 3, 2025"
                                 },
@@ -158,6 +159,8 @@ class PublicCatalogTest(unittest.TestCase):
             self.assertEqual(catalog["pages"][0]["sort_at"], 1740960000)
             self.assertEqual(catalog["pages"][0]["sort_basis"], "published")
             self.assertEqual(catalog["pages"][0]["publication_status"], "exact")
+            self.assertEqual(catalog["pages"][0]["updated_at"], 1743465600)
+            self.assertEqual(catalog["pages"][0]["updated_precision"], "month")
             self.assertNotIn("capture_path", catalog["pages"][0])
             self.assertEqual(
                 catalog["sources"],

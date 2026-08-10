@@ -64,3 +64,16 @@ images. A fresh reload made sixteen requests, all to loopback.
 Use at least a 15-second settle for the remaining app routes. The bounded
 five-route scope is approved for completion; retain the first analysis attempt
 as evidence of the timing failure, but serve the newer complete identity.
+
+The final `/about` and `/results` requests completed at
+`/mnt2/capsule/epitome/ai-futures-model/crawls/1786385455`, with complete,
+tab-closed manifests and no asset failures. About replay preserves the complete
+changelog through 2026-04-02. `/results` resolves to `/analysis`; isolated replay
+serves both requested identities from the same fully materialized analysis
+capture. It is therefore a preserved historical alias, not a fifth canonical
+publication.
+
+The finished archive contains five requested identities, four canonical pages,
+and no missing images. Catalog all four canonical pages with the 2025-12-31
+release date and retain 2026-04-02 separately as their latest documented update.
+The bounded AI Futures Model web-app scope is complete.

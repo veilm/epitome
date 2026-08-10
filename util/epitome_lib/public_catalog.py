@@ -360,6 +360,7 @@ def build_public_catalog(
             source_title = metadata["h1"]
         published_at = metadata["published_at"]
         sort_at = published_at if isinstance(published_at, int) else captured_at
+        updated_detail = _parse_timestamp_detail(source.get("updated_date_default"))
         entry = {
             "captured_at": captured_at,
             "publication_status": (
@@ -379,6 +380,10 @@ def build_public_catalog(
             or _clean_source_title(source_title, source),
             "url": identity,
         }
+        if updated_detail:
+            entry["updated_at"] = updated_detail[0]
+            if updated_detail[1] == "month":
+                entry["updated_precision"] = "month"
         if metadata.get("published_precision") == "month":
             entry["published_precision"] = "month"
         entries.append(entry)
