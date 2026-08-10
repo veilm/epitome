@@ -26,6 +26,11 @@
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
     },
     {
+      "id": "andrej-karpathy-site",
+      "name": "Karpathy.ai",
+      "logo_url": "https://karpathy.ai/assets/me_new.jpg"
+    },
+    {
       "id": "peter-steinberger",
       "name": "Peter Steinberger",
       "logo_url": "https://steipete.me/peter-avatar.jpg"
@@ -13813,6 +13818,34 @@
       "source": "andrej-karpathy",
       "title": "Lessons learned from manually classifying CIFAR-10",
       "url": "https://karpathy.github.io/2011/04/27/manually-classifying-cifar10"
+    },
+    {
+      "captured_at": 1786348776,
+      "published_at": null,
+      "source": "andrej-karpathy-site",
+      "title": "State of GPT — Slides",
+      "url": "https://karpathy.ai/stateofgpt.pdf"
+    },
+    {
+      "captured_at": 1786348742,
+      "published_at": null,
+      "source": "andrej-karpathy-site",
+      "title": "Andrej Karpathy: Books",
+      "url": "https://karpathy.ai/books.html"
+    },
+    {
+      "captured_at": 1786348708,
+      "published_at": null,
+      "source": "andrej-karpathy-site",
+      "title": "Neural Networks: Zero to Hero",
+      "url": "https://karpathy.ai/zero-to-hero.html"
+    },
+    {
+      "captured_at": 1786348605,
+      "published_at": null,
+      "source": "andrej-karpathy-site",
+      "title": "Andrej Karpathy",
+      "url": "https://karpathy.ai/"
     },
     {
       "captured_at": 1786347802,

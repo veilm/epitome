@@ -266,6 +266,14 @@ class ResourceRecord:
     order: int
 
 
+def _resource_matches_url_type(url: str, resource: ResourceRecord) -> bool:
+    """Reject a reviewed PDF alias's captured HTML fallback as authoritative."""
+    if urlsplit(url).path.lower().endswith(".pdf"):
+        content_type = resource.content_type.lower().split(";", 1)[0].strip()
+        return content_type in {"application/pdf", "application/octet-stream"}
+    return True
+
+
 def _read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -381,18 +389,21 @@ class CaptureIndex:
 
     def resource(self, url: str) -> ResourceRecord | None:
         seen: set[str] = set()
+        fallback: ResourceRecord | None = None
         while url not in seen:
             seen.add(url)
-            if resource := self.resources.get(url):
-                return resource
-            if identity := stable_resource_identity(url):
-                if resource := self.resources.get(identity):
-                    return resource
+            resource = self.resources.get(url)
+            if resource is None and (identity := stable_resource_identity(url)):
+                resource = self.resources.get(identity)
             replacement = self.resource_aliases.get(url)
+            if resource and (not replacement or _resource_matches_url_type(url, resource)):
+                return resource
+            if resource and fallback is None:
+                fallback = resource
             if not replacement:
-                return None
+                return fallback
             url = replacement
-        return None
+        return fallback
 
     def add_resource_aliases(self, aliases: dict[str, str]) -> None:
         """Add reviewed URL substitutions for resources lost at their origin."""
@@ -445,6 +456,16 @@ class CaptureIndex:
 
     def twitter_quote(self, status_id: str) -> str | None:
         return self.twitter_quotes.get(status_id)
+
+
+def replay_document_resource(index: CaptureIndex, url: str) -> ResourceRecord | None:
+    """Return the underlying document that a replay route should serve directly."""
+    if not urlsplit(url).path.lower().endswith(".pdf"):
+        return None
+    resource = index.resource(url)
+    if resource and _resource_matches_url_type(url, resource):
+        return resource
+    return None
 
 
 def rewrite_css(css: str, base_url: str) -> str:

@@ -8,6 +8,7 @@ from util.epitome_lib.replay import (
     decode_url,
     encode_url,
     normalize_url,
+    replay_document_resource,
     resource_path,
     resolve_byte_range,
     stable_resource_identity,
@@ -433,6 +434,48 @@ src="{player_url}"></iframe></body></html>""",
             # Captured originals remain authoritative if an alias is stale.
             index.add_resource_aliases({replacement: "https://example.com/other.png"})
             self.assertIsNotNone(index.resource(replacement))
+
+    def test_pdf_alias_replaces_captured_html_fallback(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            network = root / "network"
+            for name, url, body, content_type in (
+                (
+                    "fallback",
+                    "https://example.com/slides.pdf",
+                    b"<html>site fallback</html>",
+                    "text/html; charset=utf-8",
+                ),
+                (
+                    "recovered",
+                    "https://archive.example/slides.pdf",
+                    b"%PDF-recovered",
+                    "application/pdf",
+                ),
+            ):
+                record = network / name
+                record.mkdir(parents=True)
+                (record / "metadata.json").write_text(
+                    json.dumps({"url": url, "status": "200"}), encoding="utf-8"
+                )
+                (record / "response-headers.json").write_text(
+                    json.dumps(
+                        {"content-length": str(len(body)), "content-type": content_type}
+                    ),
+                    encoding="utf-8",
+                )
+                (record / "response-body.bin").write_bytes(body)
+            index = CaptureIndex.from_roots([root])
+            original = "https://example.com/slides.pdf"
+            replacement = "https://archive.example/slides.pdf"
+            index.add_resource_aliases({original: replacement})
+            self.assertEqual(index.resource(original), index.resource(replacement))
+            self.assertEqual(
+                replay_document_resource(index, original), index.resource(replacement)
+            )
+            self.assertIsNone(
+                replay_document_resource(index, "https://example.com/article.html")
+            )
 
     def test_resource_alias_cycles_fail_closed(self):
         index = CaptureIndex()

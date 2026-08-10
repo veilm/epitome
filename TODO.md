@@ -144,7 +144,7 @@ deletion-history workflows are explicitly designed.
         article, image, and static Disqus-comment preservation.
   - [x] Capture and offline-verify all 26 canonical Karpathy blog URLs, including
         representative static Disqus threads.
-  - [ ] Inventory and preserve `karpathy.ai` as a separate first-party
+  - [x] Inventory and preserve `karpathy.ai` as a separate first-party
         personal/educational property, including its course and books pages and
         first-party presentation PDF; do not conflate it with the completed
         `karpathy.github.io` blog scope.

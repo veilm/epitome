@@ -14,6 +14,7 @@ from epitome_lib.replay import (
     CaptureIndex,
     archive_index_html,
     decode_url,
+    replay_document_resource,
     resolve_byte_range,
     rewrite_css,
     rewrite_hls_playlist,
@@ -147,6 +148,13 @@ def make_handler(index: CaptureIndex, *, verbose: bool = False):
                 self.send_error(400, "Invalid archive URL")
                 return
             if prefix == "replay":
+                if resource := replay_document_resource(index, url):
+                    self._send_file(
+                        resource.body_path,
+                        resource.content_type,
+                        head_only=head_only,
+                    )
+                    return
                 page = index.page(url)
                 if not page:
                     self.send_error(404, "Captured page not found")

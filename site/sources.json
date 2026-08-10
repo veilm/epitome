@@ -34,6 +34,17 @@
       "exclude_paths": ["/", "/about", "/feed.xml"]
     },
     {
+      "id": "andrej-karpathy-site", "name": "Karpathy.ai", "archive_directory": "karpathy.ai",
+      "hosts": ["karpathy.ai"], "logo_url": "https://karpathy.ai/assets/me_new.jpg",
+      "title_overrides": {
+        "/": "Andrej Karpathy",
+        "/zero-to-hero.html": "Neural Networks: Zero to Hero",
+        "/books.html": "Andrej Karpathy: Books",
+        "/stateofgpt.pdf": "State of GPT — Slides"
+      },
+      "undated_paths": ["/", "/zero-to-hero.html", "/books.html", "/stateofgpt.pdf"]
+    },
+    {
       "id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger",
       "hosts": ["steipete.me"], "logo_url": "https://steipete.me/peter-avatar.jpg",
       "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"],

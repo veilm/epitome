@@ -1,6 +1,6 @@
 # Epitome archive status
 
-Updated at Unix timestamp `1786347815` (2026-08-10 08:23 UTC).
+Updated at Unix timestamp `1786349229` (2026-08-10 08:07 UTC).
 
 “Complete” below means complete for the currently discovered and approved source
 scope. Incremental recrawls and newly published pages remain ongoing archival
@@ -13,6 +13,7 @@ work.
 | Claude.com blog | Page archive complete; media active | All 201 inventoried URL identities are captured across the pilot and four deduplicated batches. Representative long, image-heavy, technical, customer-story, and video-bearing pages render locally with complete article text and ordinary images. | Import the 81 YouTube videos referenced by 58 captured Claude.com articles; add future publications incrementally. |
 | Dario Amodei personal site | Complete | The homepage and all five self-hosted writings are captured and visually/offline-network verified. | Pursue archival copies of three unavailable outbound citation PDFs; continue the separate broader writing and interview inventory. |
 | Andrej Karpathy blog | Complete | All 26 reviewed URL identities are captured and offline-verified. Recent, historical, image-heavy, and long code-heavy pages replay locally; captured Disqus threads render statically, including 35 comments on `microgpt` and 37 on the RNN article. | Recover archival copies of five unavailable outbound research PDFs, then inventory Medium, `karpathy.ai`, notebooks, papers, videos, and other first-party writing separately. |
+| Andrej Karpathy personal site | Complete | All four reviewed `karpathy.ai` identities are archived and replay-verified: the personal/educational homepage, Zero to Hero course page, books page, and State of GPT slides. The live slide URL's erroneous homepage fallback is replaced locally by an exact 50-page Wayback copy, and the dead course badge is restored from its historical SVG. | Inventory notebooks, papers, Medium posts, and other first-party writing separately; keep YouTube imports outside this page scope. |
 | Peter Steinberger blog | Core page archive complete; media active | All 116 reviewed core URL identities are archived across validation and four bounded batches. Twenty desktop replays spanning 2012–2026 passed visual and offline-network checks. Five lost inline images are restored from reviewed canonical or Wayback copies, preserved tweets render statically, and two captured Vimeo videos play locally—including a 3h28m, 2.2 GB recording. | Import four inventoried YouTube videos. Two 2020 inline images are unavailable at the live origin, public source repository, and checked exact historical locations; another Vimeo player returns HTTP 403, and four dead outbound citations remain recovery tasks. Preserve deferred pagination/tag indexes later and evaluate the official Markdown mirror as a model-readable supplement. |
 | Dwarkesh Podcast | Page archive complete; media imports active | All 183 approved source identities are captured across structural validations and five bounded batches. Long transcripts, standalone essays, inline figures, ordinary images, and media posters replay locally without production requests. HLS playlist children fail closed through local replay. Seventy-two Substack audio assets, 128 YouTube videos, and 72 Substack videos are inventoried. | Import full audio/video through the external downloader. One cited 1989 UQ paper remains blocked by upstream verification and publisher authentication; its stable bibliographic landing page is preserved. Add future publication URLs incrementally. |
 | SemiAnalysis newsletter | Page archive complete; media imports active | All 325 reviewed identities are complete across structural validations and six bounded batches. Paywalled and free articles, image-heavy technical posts, and the chronological archive replay locally without production requests. A total of 433 initially omitted article/listing images were repaired; ten Substack videos across five articles are inventoried. Free-subscriber emails end at the same paid boundary and are not a richer source. | Import the ten videos separately. Inventory the corporate, careers, models, and public-tools site later; authenticated institutional data is out of public-crawl scope. |
@@ -76,6 +77,7 @@ and replay-verified. Dwarkesh's approved 183-identity page scope is complete and
 its external media imports remain active. SemiAnalysis's approved 325-identity
 newsletter scope is also complete and replay-verified; its ten external video
 imports remain active. AI 2027's 13-identity English scope is complete and
-replay-verified. AI 2040's approved 22-identity Plan A scope is also complete
-and replay-verified. The compact four-identity `karpathy.ai` personal and
-educational property is the next easiest reviewed source.
+replay-verified. AI 2040's approved 22-identity Plan A scope and Karpathy's
+separate four-identity `karpathy.ai` property are also complete. The next source
+should continue the easiest-static-first rule while Twitter/X and YouTube stay
+deferred.

@@ -104,6 +104,40 @@ then capture the two HTML resource pages and underlying presentation PDF if its
 layout, assets, and offline replay validate normally. YouTube remains excluded
 from the page crawl.
 
+### Completed bounded scope
+
+The homepage pilot completed at:
+
+`/mnt2/capsule/epitome/karpathy.ai/validation/1786348598-home`
+
+The remaining three identities completed with 30-second spacing at:
+
+`/mnt2/capsule/epitome/karpathy.ai/crawls/1786348703`
+
+All four manifests are complete, capture tabs closed, and primary images
+present. The homepage retains 10,525 visible characters, 46 images, the full
+writing/publication lists, and several linked first-party research PDFs. The
+Zero to Hero and books pages retain 5,145 and 6,035 visible characters and their
+complete course/book lists. A strict sampled replay log recorded only local
+requests plus Chromium's internal PDF-viewer stylesheet.
+
+The live `stateofgpt.pdf` path now returns the Karpathy homepage HTML with HTTP
+200 instead of a PDF. Wayback's exact capture history identified a surviving
+official copy, preserved at:
+
+`/mnt2/capsule/epitome/karpathy.ai/dependencies/wayback-stateofgpt-1786348886`
+
+It is a valid 50-page, 18,933,556-byte slide deck. A reviewed resource alias and
+PDF-aware replay fallback make the original URL serve this recovered document
+locally, including byte-range PDF viewing. The dead upstream Discord badge on
+Zero to Hero was likewise restored from its exact 2024 Wayback SVG at:
+
+`/mnt2/capsule/epitome/karpathy.ai/dependencies/wayback-discord-badge-1786349135`
+
+The repaired badge renders at its historical 400x28 dimensions. Completed-URL
+selection reports all four approved identities archived and none remaining. No
+YouTube or Twitter/X content was opened or downloaded.
+
 ## Paul Graham
 
 `https://paulgraham.com/articles.html` is a simple static essay index with about
