@@ -167,7 +167,11 @@ deletion-history workflows are explicitly designed.
   - [x] Capture and offline-verify the long AI 2027 homepage pilot; localize SVG
         graph images and inventory its narrated audio plus YouTube companion.
   - [ ] Capture and offline-verify the bounded English AI 2027 scope.
-  - [ ] AI 2040.
+  - [x] Inventory AI 2040's canonical Plan A scenario, PDF, about page,
+        footnotes, supplements index, and seventeen supplements as a bounded
+        22-identity scope in `sources/ai-2040.txt`.
+  - [ ] Capture and offline-verify the AI 2040 homepage pilot, then its bounded
+        page scope; inventory non-YouTube audio separately.
   - [ ] *Situational Awareness* essay series.
   - [ ] Identify the canonical site and complete page/media set for each before
         capture.
