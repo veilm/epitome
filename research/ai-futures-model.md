@@ -41,3 +41,26 @@ Before a batch, validate one representative page through Chromium capture and
 offline replay. Require the app shell, JavaScript/CSS, same-origin model data,
 charts, and forecast definitions—not merely a screenshot or final canvas—to be
 retained.
+
+## Representative capture validation
+
+A homepage, forecast, and analysis pilot completed at
+`/mnt2/capsule/epitome/ai-futures-model/validation/1786383520-pilot`. All three
+manifests are complete and tab-closed; 239 queued dependencies completed with
+no failures, and both image audits are clean. Homepage replay retains the model
+diagram, SVG charts, parameter sliders and values, and its 61,922 visible
+characters. Forecast replay retains both charts, milestone controls, and all
+eight Eli/Daniel dated parameter states.
+
+The first analysis capture serialized a complete Next.js streamed response
+before its boundary swap, leaving the article hidden behind `Loading results`
+in script-free replay. The live route takes roughly ten seconds to materialize.
+A targeted 15-second-settle retry at
+`/mnt2/capsule/epitome/ai-futures-model/validation/1786384586-analysis-retry`
+captures the post-swap DOM, with no hidden streaming boundary. Its replay shows
+10,165 visible characters, all seven analysis section headings, and eight plot
+images. A fresh reload made sixteen requests, all to loopback.
+
+Use at least a 15-second settle for the remaining app routes. The bounded
+five-route scope is approved for completion; retain the first analysis attempt
+as evidence of the timing failure, but serve the newer complete identity.
