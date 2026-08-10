@@ -87,3 +87,22 @@ are:
 Before capture approval, compare normalized article bodies against the completed
 Jekyll corpus for mirrors. No title-level duplicate was identified, but body
 similarity is a stronger archival check.
+
+### Representative capture validation
+
+A profile plus two-article pilot completed at
+`/mnt2/capsule/epitome/andrej-karpathy-medium/validation/1786379902-pilot`.
+All three manifests are complete and tab-closed. The only asset failures are
+three identical requests for Medium's nonexistent `/sitemap/sitemap.xml`, which
+returns HTTP 404; primary and all-image audits are otherwise clean.
+
+Script-free desktop replay preserves Medium's layout and full readable bodies,
+without a paywall truncation. *Software 2.0* retains 13,961 visible characters;
+*AlphaGo, in context* retains 7,589 and its visible 2017-10-18 update notice. A
+fresh Software 2.0 reload made 23 requests, all to the loopback replay server.
+
+Normalized seven-word-shingle comparisons against every page in the completed
+Jekyll archive found no substantive duplicate: AlphaGo had zero overlap and
+Software 2.0's maximum containment was 0.04%, against an unrelated post. The
+reviewed eleven-identity Medium scope is approved for one bounded completion
+batch.

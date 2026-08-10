@@ -163,6 +163,8 @@ deletion-history workflows are explicitly designed.
     - [x] Validate Bear homepage, index, exact post dates, long-form layout,
           images, and production-network isolation through local replay.
     - [x] Capture and offline-audit all 16 reviewed Bear identities.
+    - [x] Validate Medium profile and full article replay, production-network
+          isolation, and body-level distinctness from the Jekyll archive.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
   - [ ] Preserve Paul Graham's static essay corpus from
