@@ -154,6 +154,8 @@ deletion-history workflows are explicitly designed.
         `paulgraham.com/articles.html`; the reviewed 232-identity index-plus-
         essay scope is tracked separately from the homepage, RSS, books, and
         historical language material.
+    - [x] Validate the index and four varied essays, then complete and
+          offline-audit the first 15-page bounded batch (20/232 total).
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.

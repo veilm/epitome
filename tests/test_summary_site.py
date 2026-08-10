@@ -72,6 +72,7 @@ site. It contains more than one hundred characters and links to the
                             {
                                 "captured_at": 20,
                                 "published_at": 1741046400,
+                                "published_precision": "month",
                                 "source": "example",
                                 "title": "Example article",
                                 "url": source_url,
@@ -107,6 +108,8 @@ site. It contains more than one hundred characters and links to the
             self.assertIn('id="sort-order"', index)
             self.assertIn('id="summary-filter"', index)
             self.assertIn('class="summary-link"', index)
+            self.assertIn("<time>2025-03</time>", index)
+            self.assertNotIn("<time>2025-03-04</time>", index)
             self.assertEqual(len(article_pages), 1)
             article = article_pages[0].read_text(encoding="utf-8")
             self.assertIn("Original article", article)

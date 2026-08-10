@@ -64,3 +64,23 @@ requests across all five pages. *The Roots of Lisp* links to an unavailable
 but the outbound paper is a later dependency-recovery task rather than a reason
 to reject the first-party page. The reviewed scope is ready for a small bounded
 batch.
+
+## First bounded batch
+
+The first 15-page batch completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786354191`
+
+All 15 manifests are complete and tab-closed. The run recorded 151 requests and
+717,296 response-body bytes with zero capture or asset failures. Primary and
+all-rendered-image audits both report zero omissions. Desktop replay checks of
+five varied pages retained 3,801–36,771 visible characters and 4–11 images per
+page, with no broken images or production-origin requests. The visual layout
+matches the intentionally narrow, image-chrome early-web source design.
+
+Together with the pilot, 20/232 approved identities are complete. The public
+catalog excludes the structural essay index and includes the other 19 pages.
+Because this corpus usually provides publication dates only to the month, the
+catalog stores and displays month precision explicitly (`YYYY-MM`) rather than
+inventing a day. The revised *Beating the Averages* byline is correctly treated
+as April 2001, not its April 2003 revision date.

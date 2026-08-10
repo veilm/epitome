@@ -18,7 +18,12 @@ DATE_URL_RE = re.compile(r"/(20\d{2})/(0[1-9]|1[0-2])/([0-2]\d|3[01])(?:/|$)")
 TEXT_DATE_RE = re.compile(
     r"^(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|"
     r"Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) "
-    r"[0-3]?\d, 20\d{2}$"
+    r"(?:[0-3]?\d, )?20\d{2}$"
+)
+TEXT_DATE_PREFIX_RE = re.compile(
+    r"^(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|"
+    r"Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) "
+    r"20\d{2}\b"
 )
 WHITESPACE_RE = re.compile(r"\s+")
 
@@ -87,6 +92,11 @@ class _HeadMetadataParser(HTMLParser):
             value = _clean_text(data)
             if TEXT_DATE_RE.fullmatch(value):
                 self.visible_dates.append(value)
+            elif match := TEXT_DATE_PREFIX_RE.match(value):
+                # Some historical essays append revision provenance in the
+                # same text node: "April 2001, rev. April 2003". Preserve the
+                # original publication month, which appears first.
+                self.visible_dates.append(match.group(0))
 
 
 def _clean_text(value: str) -> str:
@@ -103,15 +113,23 @@ def _walk_json(value: Any):
             yield from _walk_json(child)
 
 
-def _parse_timestamp(value: object) -> int | None:
+def _parse_timestamp_detail(value: object) -> tuple[int, str] | None:
     if not isinstance(value, str) or not value.strip():
         return None
     raw = value.strip()
-    formats = ("%b %d, %Y", "%B %d, %Y", "%Y-%m-%d")
+    formats = (
+        ("%b %d, %Y", "day"),
+        ("%B %d, %Y", "day"),
+        ("%Y-%m-%d", "day"),
+        ("%b %Y", "month"),
+        ("%B %Y", "month"),
+    )
     parsed: datetime | None = None
-    for format_string in formats:
+    precision = "instant"
+    for format_string, candidate_precision in formats:
         try:
             parsed = datetime.strptime(raw, format_string).replace(tzinfo=timezone.utc)
+            precision = candidate_precision
             break
         except ValueError:
             pass
@@ -122,10 +140,20 @@ def _parse_timestamp(value: object) -> int | None:
             return None
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
-    return int(parsed.timestamp())
+    return int(parsed.timestamp()), precision
 
 
-def extract_page_metadata(html_path: Path, url: str) -> dict[str, object]:
+def _parse_timestamp(value: object) -> int | None:
+    detail = _parse_timestamp_detail(value)
+    return detail[0] if detail else None
+
+
+def extract_page_metadata(
+    html_path: Path,
+    url: str,
+    *,
+    visible_date_min_path_parts: int = 2,
+) -> dict[str, object]:
     """Extract portable title/date metadata without retaining captured HTML."""
     parser = _HeadMetadataParser()
     # Metadata is normally in the head. The cap avoids reading multi-megabyte
@@ -184,23 +212,31 @@ def extract_page_metadata(html_path: Path, url: str) -> dict[str, object]:
             if title == url and isinstance(item.get("headline"), str):
                 title = _clean_text(item["headline"])
     path_parts = [part for part in urlsplit(url).path.split("/") if part]
-    if len(path_parts) >= 2:
+    if len(path_parts) >= visible_date_min_path_parts:
         published_candidates.extend(parser.visible_dates)
-    published_at = next(
-        (parsed for value in published_candidates if (parsed := _parse_timestamp(value))),
+    published_detail = next(
+        (
+            parsed
+            for value in published_candidates
+            if (parsed := _parse_timestamp_detail(value))
+        ),
         None,
     )
+    published_at = published_detail[0] if published_detail else None
+    published_precision = published_detail[1] if published_detail else None
     if published_at is None and (match := DATE_URL_RE.search(urlsplit(url).path)):
         try:
             published_at = int(
                 datetime(*(int(part) for part in match.groups()), tzinfo=timezone.utc).timestamp()
             )
+            published_precision = "day"
         except ValueError:
             pass
     return {
         "title": title,
         "h1": _clean_text("".join(parser.h1_parts)) or None,
         "published_at": published_at,
+        "published_precision": published_precision,
     }
 
 
@@ -294,22 +330,30 @@ def build_public_catalog(
     entries: list[dict[str, object]] = []
     for identity, (captured_at, directory, manifest, source) in captures.items():
         url = str(manifest.get("final_url") or manifest.get("requested_url"))
-        metadata = extract_page_metadata(directory / "page.html", url)
+        metadata = extract_page_metadata(
+            directory / "page.html",
+            url,
+            visible_date_min_path_parts=int(
+                source.get("visible_date_min_path_parts", 2)
+            ),
+        )
         if _path_matches(url, source.get("undated_paths")):
             metadata["published_at"] = None
+            metadata["published_precision"] = None
         source_title = metadata["title"]
         if source.get("prefer_h1") and metadata.get("h1"):
             source_title = metadata["h1"]
-        entries.append(
-            {
-                "captured_at": captured_at,
-                "published_at": metadata["published_at"],
-                "source": str(source["id"]),
-                "title": _configured_title(url, source)
-                or _clean_source_title(source_title, source),
-                "url": identity,
-            }
-        )
+        entry = {
+            "captured_at": captured_at,
+            "published_at": metadata["published_at"],
+            "source": str(source["id"]),
+            "title": _configured_title(url, source)
+            or _clean_source_title(source_title, source),
+            "url": identity,
+        }
+        if metadata.get("published_precision") == "month":
+            entry["published_precision"] = "month"
+        entries.append(entry)
     entries.sort(
         key=lambda entry: (
             int(entry["published_at"] or -1),

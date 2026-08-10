@@ -59,6 +59,11 @@
       "id": "situational-awareness",
       "name": "Situational Awareness",
       "logo_url": "https://situational-awareness.ai/wp-content/uploads/2024/06/cropped-Untitled-design-1-192x192.png"
+    },
+    {
+      "id": "paul-graham",
+      "name": "Paul Graham",
+      "logo_url": "https://ycombinator.com/arc/arc.png"
     }
   ],
   "pages": [
@@ -1400,6 +1405,22 @@
       "url": "https://openai.com/index/travelers"
     },
     {
+      "captured_at": 1786354297,
+      "published_at": 1780272000,
+      "source": "paul-graham",
+      "title": "How to Earn a Billion Dollars",
+      "url": "https://paulgraham.com/earn.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786147934,
+      "published_at": 1780272000,
+      "source": "dario-amodei",
+      "title": "Policy on the AI Exponential",
+      "url": "https://darioamodei.com/post/policy-on-the-ai-exponential",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786077792,
       "published_at": 1780272000,
       "source": "anthropic",
@@ -2161,6 +2182,14 @@
       "source": "semianalysis",
       "title": "AI Value Capture - The Shift To Model Labs",
       "url": "https://newsletter.semianalysis.com/p/ai-value-capture-the-shift-to-model"
+    },
+    {
+      "captured_at": 1786354346,
+      "published_at": 1777593600,
+      "source": "paul-graham",
+      "title": "How to Convert Between Wealth and Income Tax",
+      "url": "https://paulgraham.com/winc.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786147247,
@@ -3164,6 +3193,14 @@
       "url": "https://openai.com/index/gpt-5-3-instant"
     },
     {
+      "captured_at": 1786354396,
+      "published_at": 1772323200,
+      "source": "paul-graham",
+      "title": "The Brand Age",
+      "url": "https://paulgraham.com/brandage.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785724941,
       "published_at": 1772236800,
       "source": "openai",
@@ -4121,6 +4158,14 @@
       "source": "semianalysis",
       "title": "Co Packaged Optics (CPO) – Scaling with Light for the Next Wave of Interconnect",
       "url": "https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling"
+    },
+    {
+      "captured_at": 1786147838,
+      "published_at": 1767225600,
+      "source": "dario-amodei",
+      "title": "The Adolescence of Technology",
+      "url": "https://darioamodei.com/essay/the-adolescence-of-technology",
+      "published_precision": "month"
     },
     {
       "captured_at": 1786254757,
@@ -7021,6 +7066,14 @@
       "url": "https://steipete.me/posts/2025/finding-my-spark-again"
     },
     {
+      "captured_at": 1786354446,
+      "published_at": 1748736000,
+      "source": "paul-graham",
+      "title": "The Shape of the Essay Field",
+      "url": "https://paulgraham.com/field.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785733347,
       "published_at": 1748736000,
       "source": "openai",
@@ -7287,6 +7340,14 @@
       "url": "https://www.dwarkesh.com/p/ai-firms-narration"
     },
     {
+      "captured_at": 1786354496,
+      "published_at": 1746057600,
+      "source": "paul-graham",
+      "title": "Good Writing",
+      "url": "https://paulgraham.com/goodwriting.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786151388,
       "published_at": 1746057600,
       "source": "claude",
@@ -7525,6 +7586,14 @@
       "url": "https://openai.com/index/nonprofit-commission-guidance"
     },
     {
+      "captured_at": 1786147994,
+      "published_at": 1743465600,
+      "source": "dario-amodei",
+      "title": "The Urgency of Interpretability",
+      "url": "https://darioamodei.com/post/the-urgency-of-interpretability",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785721409,
       "published_at": 1743379200,
       "source": "openai",
@@ -7754,6 +7823,14 @@
       "source": "anthropic",
       "title": "Anthropic raises Series E at $61.5B post-money valuation",
       "url": "https://www.anthropic.com/news/anthropic-raises-series-e-at-usd61-5b-post-money-valuation"
+    },
+    {
+      "captured_at": 1786354546,
+      "published_at": 1740787200,
+      "source": "paul-graham",
+      "title": "What to Do",
+      "url": "https://paulgraham.com/do.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785973559,
@@ -8176,6 +8253,22 @@
       "url": "https://www.anthropic.com/engineering/swe-bench-sonnet"
     },
     {
+      "captured_at": 1786354595,
+      "published_at": 1735689600,
+      "source": "paul-graham",
+      "title": "The Origins of Wokeness",
+      "url": "https://paulgraham.com/woke.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786148053,
+      "published_at": 1735689600,
+      "source": "dario-amodei",
+      "title": "On DeepSeek and Export Controls",
+      "url": "https://darioamodei.com/post/on-deepseek-and-export-controls",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786202613,
       "published_at": 1735326591,
       "source": "dwarkesh",
@@ -8589,6 +8682,22 @@
       "url": "https://openai.com/index/decagon"
     },
     {
+      "captured_at": 1786354646,
+      "published_at": 1727740800,
+      "source": "paul-graham",
+      "title": "Writes and Write-Nots",
+      "url": "https://paulgraham.com/writes.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786143591,
+      "published_at": 1727740800,
+      "source": "dario-amodei",
+      "title": "Machines of Loving Grace",
+      "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785976358,
       "published_at": 1727740800,
       "source": "anthropic",
@@ -8834,6 +8943,22 @@
       "url": "https://newsletter.semianalysis.com/p/the-memory-wall"
     },
     {
+      "captured_at": 1786354745,
+      "published_at": 1725148800,
+      "source": "paul-graham",
+      "title": "Founder Mode",
+      "url": "https://paulgraham.com/foundermode.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786354695,
+      "published_at": 1725148800,
+      "source": "paul-graham",
+      "title": "When To Do What You Love",
+      "url": "https://paulgraham.com/when.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786206328,
       "published_at": 1725041961,
       "source": "dwarkesh",
@@ -9021,6 +9146,14 @@
       "source": "claude",
       "title": "Evaluate prompts in the developer console",
       "url": "https://claude.com/blog/evaluate-prompts"
+    },
+    {
+      "captured_at": 1786354794,
+      "published_at": 1719792000,
+      "source": "paul-graham",
+      "title": "The Right Kind of Stubborn",
+      "url": "https://paulgraham.com/persistence.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785904903,
@@ -9849,6 +9982,22 @@
       "url": "https://www.anthropic.com/news/claude-3-family"
     },
     {
+      "captured_at": 1786354895,
+      "published_at": 1709251200,
+      "source": "paul-graham",
+      "title": "How to Start Google",
+      "url": "https://paulgraham.com/google.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786354844,
+      "published_at": 1709251200,
+      "source": "paul-graham",
+      "title": "The Reddits",
+      "url": "https://paulgraham.com/reddits.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786103957,
       "published_at": 1709164800,
       "source": "anthropic",
@@ -10568,6 +10717,14 @@
       "source": "openai",
       "title": "Introducing Superalignment",
       "url": "https://openai.com/index/introducing-superalignment"
+    },
+    {
+      "captured_at": 1786353580,
+      "published_at": 1688169600,
+      "source": "paul-graham",
+      "title": "How to Do Great Work",
+      "url": "https://paulgraham.com/greatwork.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785875828,
@@ -12474,6 +12631,14 @@
       "url": "https://openai.com/index/understanding-the-capabilities-limitations-and-societal-impact-of-large-language-models"
     },
     {
+      "captured_at": 1786353617,
+      "published_at": 1612137600,
+      "source": "paul-graham",
+      "title": "What I Worked On",
+      "url": "https://paulgraham.com/worked.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786173549,
       "published_at": 1612092600,
       "source": "peter-steinberger",
@@ -12829,6 +12994,14 @@
       "source": "openai",
       "title": "Deep double descent",
       "url": "https://openai.com/index/deep-double-descent"
+    },
+    {
+      "captured_at": 1786354197,
+      "published_at": 1575158400,
+      "source": "paul-graham",
+      "title": "Having Kids",
+      "url": "https://paulgraham.com/kids.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1785852948,
@@ -13888,6 +14061,30 @@
       "url": "https://karpathy.github.io/2011/04/27/manually-classifying-cifar10"
     },
     {
+      "captured_at": 1786354247,
+      "published_at": 1277942400,
+      "source": "paul-graham",
+      "title": "How to Lose Time and Money",
+      "url": "https://paulgraham.com/selfindulgence.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786353653,
+      "published_at": 988675200,
+      "source": "paul-graham",
+      "title": "The Roots of Lisp",
+      "url": "https://paulgraham.com/rootsoflisp.html",
+      "published_precision": "month"
+    },
+    {
+      "captured_at": 1786353904,
+      "published_at": 986083200,
+      "source": "paul-graham",
+      "title": "Beating the Averages",
+      "url": "https://paulgraham.com/avg.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1786351309,
       "published_at": null,
       "source": "situational-awareness",
@@ -14180,41 +14377,6 @@
       "source": "peter-steinberger",
       "title": "Posts",
       "url": "https://steipete.me/posts"
-    },
-    {
-      "captured_at": 1786148053,
-      "published_at": null,
-      "source": "dario-amodei",
-      "title": "On DeepSeek and Export Controls",
-      "url": "https://darioamodei.com/post/on-deepseek-and-export-controls"
-    },
-    {
-      "captured_at": 1786147994,
-      "published_at": null,
-      "source": "dario-amodei",
-      "title": "The Urgency of Interpretability",
-      "url": "https://darioamodei.com/post/the-urgency-of-interpretability"
-    },
-    {
-      "captured_at": 1786147934,
-      "published_at": null,
-      "source": "dario-amodei",
-      "title": "Policy on the AI Exponential",
-      "url": "https://darioamodei.com/post/policy-on-the-ai-exponential"
-    },
-    {
-      "captured_at": 1786147838,
-      "published_at": null,
-      "source": "dario-amodei",
-      "title": "The Adolescence of Technology",
-      "url": "https://darioamodei.com/essay/the-adolescence-of-technology"
-    },
-    {
-      "captured_at": 1786143591,
-      "published_at": null,
-      "source": "dario-amodei",
-      "title": "Machines of Loving Grace",
-      "url": "https://darioamodei.com/essay/machines-of-loving-grace"
     },
     {
       "captured_at": 1785904465,

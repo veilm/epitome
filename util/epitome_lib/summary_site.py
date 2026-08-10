@@ -582,7 +582,14 @@ def build_summary_site(
         published_at = page.get("published_at")
         if isinstance(published_at, int):
             dated_count += 1
-            date_display = datetime.fromtimestamp(published_at, tz=timezone.utc).strftime("%Y-%m-%d")
+            date_format = (
+                "%Y-%m"
+                if page.get("published_precision") == "month"
+                else "%Y-%m-%d"
+            )
+            date_display = datetime.fromtimestamp(
+                published_at, tz=timezone.utc
+            ).strftime(date_format)
             sort_date = published_at
         else:
             date_display = "Date unavailable"

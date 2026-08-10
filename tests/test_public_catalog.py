@@ -49,6 +49,35 @@ class PublicCatalogTest(unittest.TestCase):
             metadata = extract_page_metadata(page, "https://example.com/news/article")
             self.assertEqual(metadata["published_at"], 1761523200)
 
+    def test_source_can_opt_into_single_segment_month_precision_date(self):
+        with tempfile.TemporaryDirectory() as temp:
+            page = Path(temp) / "page.html"
+            page.write_text(
+                "<title>An old essay</title><main>July 2023</main>",
+                encoding="utf-8",
+            )
+            default = extract_page_metadata(page, "https://example.com/essay.html")
+            opted_in = extract_page_metadata(
+                page,
+                "https://example.com/essay.html",
+                visible_date_min_path_parts=1,
+            )
+            self.assertIsNone(default["published_at"])
+            self.assertEqual(opted_in["published_at"], 1688169600)
+            self.assertEqual(opted_in["published_precision"], "month")
+
+            page.write_text(
+                "<title>Revised essay</title><main>April 2001, rev. April 2003</main>",
+                encoding="utf-8",
+            )
+            revised = extract_page_metadata(
+                page,
+                "https://example.com/revised.html",
+                visible_date_min_path_parts=1,
+            )
+            self.assertEqual(revised["published_at"], 986083200)
+            self.assertEqual(revised["published_precision"], "month")
+
     def test_build_deduplicates_and_ignores_dependency_hosts(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

@@ -120,6 +120,15 @@
       "undated_paths": [
         "/wp-content/uploads/2024/06/situationalawareness.pdf"
       ]
+    },
+    {
+      "id": "paul-graham", "name": "Paul Graham",
+      "archive_directory": "paul-graham",
+      "hosts": ["paulgraham.com"],
+      "logo_url": "https://ycombinator.com/arc/arc.png",
+      "visible_date_min_path_parts": 1,
+      "undated_paths": ["/articles.html"],
+      "exclude_paths": ["/articles.html"]
     }
   ]
 }
