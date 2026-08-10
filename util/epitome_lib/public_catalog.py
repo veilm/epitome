@@ -281,14 +281,14 @@ def _configured_title(url: str, source: dict[str, object]) -> str | None:
 
 def _configured_publication_date(
     url: str, source: dict[str, object]
-) -> tuple[int, str] | None:
+) -> tuple[tuple[int, str] | None, bool]:
     overrides = source.get("publication_date_overrides")
     if isinstance(overrides, dict):
         path = urlsplit(url).path.rstrip("/") or "/"
         for configured_path, value in overrides.items():
             if (str(configured_path).rstrip("/") or "/") == path:
-                return _parse_timestamp_detail(value)
-    return _parse_timestamp_detail(source.get("publication_date_default"))
+                return _parse_timestamp_detail(value), True
+    return _parse_timestamp_detail(source.get("publication_date_default")), False
 
 
 def build_public_catalog(
@@ -352,8 +352,8 @@ def build_public_catalog(
         if _path_matches(url, source.get("undated_paths")):
             metadata["published_at"] = None
             metadata["published_precision"] = None
-        configured_date = _configured_publication_date(url, source)
-        if metadata["published_at"] is None and configured_date:
+        configured_date, configured_override = _configured_publication_date(url, source)
+        if configured_date and (configured_override or metadata["published_at"] is None):
             metadata["published_at"], metadata["published_precision"] = configured_date
         source_title = metadata["title"]
         if source.get("prefer_h1") and metadata.get("h1"):

@@ -106,3 +106,16 @@ Jekyll archive found no substantive duplicate: AlphaGo had zero overlap and
 Software 2.0's maximum containment was 0.04%, against an unrelated post. The
 reviewed eleven-identity Medium scope is approved for one bounded completion
 batch.
+
+The remaining eight identities completed at
+`/mnt2/capsule/epitome/andrej-karpathy-medium/crawls/1786380982`. Every manifest
+is complete and tab-closed, bringing the archive to all eleven reviewed
+identities. The only seven asset failures are repeated HTTP 404 responses from
+the nonexistent sitemap; both image audits are clean across the combined
+archive.
+
+Final replays preserve the About profile, the full 95,213-character RSS XML,
+and a third complete article: *Yes you should understand backprop* retains
+9,992 visible characters and its 2016-12-19 date. The feed's sole visually
+broken image is an inert Medium `post.clientViewed` 1 by 1 tracking pixel inside
+the XML content, not publication media. The Medium scope is complete.

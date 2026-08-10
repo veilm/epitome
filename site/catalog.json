@@ -36,6 +36,11 @@
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
     },
     {
+      "id": "andrej-karpathy-medium",
+      "name": "Andrej Karpathy on Medium",
+      "logo_url": "https://karpathy.ai/assets/me_new.jpg"
+    },
+    {
       "id": "peter-steinberger",
       "name": "Peter Steinberger",
       "logo_url": "https://steipete.me/peter-avatar.jpg"
@@ -21464,6 +21469,16 @@
       "url": "https://openai.com/index/learning-sparse-neural-networks-through-l0-regularization"
     },
     {
+      "captured_at": 1786380136,
+      "publication_status": "exact",
+      "published_at": 1510358400,
+      "sort_at": 1510358400,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "Software 2.0",
+      "url": "https://karpathy.medium.com/software-2-0-a64152b37c35"
+    },
+    {
       "captured_at": 1785844452,
       "publication_status": "exact",
       "published_at": 1509580800,
@@ -21615,6 +21630,26 @@
       "url": "https://openai.com/index/ucb-exploration-via-q-ensembles"
     },
     {
+      "captured_at": 1786380460,
+      "publication_status": "exact",
+      "published_at": 1496188800,
+      "sort_at": 1496188800,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "AlphaGo, in context",
+      "url": "https://karpathy.medium.com/alphago-in-context-c47718cb95a5"
+    },
+    {
+      "captured_at": 1786381318,
+      "publication_status": "exact",
+      "published_at": 1495584000,
+      "sort_at": 1495584000,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "ICML accepted papers institution stats",
+      "url": "https://karpathy.medium.com/icml-accepted-papers-institution-stats-bad8d2943f5d"
+    },
+    {
       "captured_at": 1785861891,
       "publication_status": "exact",
       "published_at": 1495584000,
@@ -21653,6 +21688,16 @@
       "source": "openai",
       "title": "Stochastic Neural Networks for hierarchical reinforcement learning",
       "url": "https://openai.com/index/stochastic-neural-networks-for-hierarchical-reinforcement-learning"
+    },
+    {
+      "captured_at": 1786381525,
+      "publication_status": "exact",
+      "published_at": 1491523200,
+      "sort_at": 1491523200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "A Peek at Trends in Machine Learning",
+      "url": "https://karpathy.medium.com/a-peek-at-trends-in-machine-learning-ab8a1085a106"
     },
     {
       "captured_at": 1785726974,
@@ -21703,6 +21748,16 @@
       "source": "openai",
       "title": "Emergence of grounded compositional language in multi-agent populations",
       "url": "https://openai.com/index/emergence-of-grounded-compositional-language-in-multi-agent-populations"
+    },
+    {
+      "captured_at": 1786381946,
+      "publication_status": "exact",
+      "published_at": 1489449600,
+      "sort_at": 1489449600,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "ICLR 2017 vs arxiv-sanity",
+      "url": "https://karpathy.medium.com/iclr-2017-vs-arxiv-sanity-d1488ac5c131"
     },
     {
       "captured_at": 1785849012,
@@ -21775,6 +21830,16 @@
       "url": "https://openai.com/index/pixelcnn-plus-plus"
     },
     {
+      "captured_at": 1786382227,
+      "publication_status": "exact",
+      "published_at": 1484611200,
+      "sort_at": 1484611200,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "Virtual Reality: still not quite there, again.",
+      "url": "https://karpathy.medium.com/virtual-reality-still-not-quite-there-again-5f51f2b43867"
+    },
+    {
       "captured_at": 1786359468,
       "publication_status": "partial",
       "published_at": 1483228800,
@@ -21805,6 +21870,16 @@
       "source": "openai",
       "title": "Faulty reward functions in the wild",
       "url": "https://openai.com/index/faulty-reward-functions"
+    },
+    {
+      "captured_at": 1786382822,
+      "publication_status": "exact",
+      "published_at": 1482105600,
+      "sort_at": 1482105600,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "Yes you should understand backprop",
+      "url": "https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b"
     },
     {
       "captured_at": 1785846950,
@@ -22229,6 +22304,16 @@
       "source": "openai",
       "title": "Introducing OpenAI",
       "url": "https://openai.com/index/introducing-openai"
+    },
+    {
+      "captured_at": 1786383197,
+      "publication_status": "exact",
+      "published_at": 1447545600,
+      "sort_at": 1447545600,
+      "sort_basis": "published",
+      "source": "andrej-karpathy-medium",
+      "title": "CS183c Assignment #3",
+      "url": "https://karpathy.medium.com/cs183c-assignment-3-649181b07fa0"
     },
     {
       "captured_at": 1786162870,

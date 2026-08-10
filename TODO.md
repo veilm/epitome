@@ -158,13 +158,14 @@ deletion-history workflows are explicitly designed.
         index, feed, and 13 dated posts.
   - [x] Inventory Karpathy's canonical Medium profile, About/feed resources, and
         eight authored posts; treat `medium.com/@karpathy` as an alias.
-  - [ ] Validate and capture the bounded Bear and Medium scopes separately,
+  - [x] Validate and capture the bounded Bear and Medium scopes separately,
         checking Medium bodies for mirrors of the completed Jekyll corpus.
     - [x] Validate Bear homepage, index, exact post dates, long-form layout,
           images, and production-network isolation through local replay.
     - [x] Capture and offline-audit all 16 reviewed Bear identities.
     - [x] Validate Medium profile and full article replay, production-network
           isolation, and body-level distinctness from the Jekyll archive.
+    - [x] Capture and offline-audit all 11 reviewed Medium identities.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
   - [ ] Preserve Paul Graham's static essay corpus from

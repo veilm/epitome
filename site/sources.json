@@ -55,6 +55,25 @@
       "exclude_paths": ["/", "/blog", "/feed"]
     },
     {
+      "id": "andrej-karpathy-medium", "name": "Andrej Karpathy on Medium",
+      "archive_directory": "andrej-karpathy-medium",
+      "hosts": ["karpathy.medium.com", "medium.com"],
+      "logo_url": "https://karpathy.ai/assets/me_new.jpg",
+      "title_suffixes": [" | by Andrej Karpathy | Medium"],
+      "publication_date_overrides": {
+        "/software-2-0-a64152b37c35": "2017-11-11",
+        "/alphago-in-context-c47718cb95a5": "2017-05-31",
+        "/icml-accepted-papers-institution-stats-bad8d2943f5d": "2017-05-24",
+        "/a-peek-at-trends-in-machine-learning-ab8a1085a106": "2017-04-07",
+        "/iclr-2017-vs-arxiv-sanity-d1488ac5c131": "2017-03-14",
+        "/virtual-reality-still-not-quite-there-again-5f51f2b43867": "2017-01-17",
+        "/yes-you-should-understand-backprop-e2f06eab496b": "2016-12-19",
+        "/cs183c-assignment-3-649181b07fa0": "2015-11-15"
+      },
+      "undated_paths": ["/", "/about", "/feed/@karpathy"],
+      "exclude_paths": ["/", "/about", "/feed/@karpathy"]
+    },
+    {
       "id": "peter-steinberger", "name": "Peter Steinberger", "archive_directory": "peter-steinberger",
       "hosts": ["steipete.me"], "logo_url": "https://steipete.me/peter-avatar.jpg",
       "title_suffixes": [" | Peter Steinberger"], "undated_paths": ["/", "/about"],
