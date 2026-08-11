@@ -177,7 +177,7 @@ deletion-history workflows are explicitly designed.
     - [x] Capture and offline-audit all 11 reviewed Medium identities.
   - [ ] Recover archival copies of the five unavailable outbound research PDFs
         listed in `research/andrej-karpathy.md`.
-  - [ ] Preserve Paul Graham's static essay corpus from
+  - [x] Preserve Paul Graham's static essay corpus from
         `paulgraham.com/articles.html`; the reviewed 232-identity index-plus-
         essay scope is tracked separately from the homepage, RSS, books, and
         historical language material.
@@ -191,7 +191,7 @@ deletion-history workflows are explicitly designed.
           Wayback bodies.
     - [x] Capture and offline-audit the next 60 essays (215/232 total); retain
           the reviewed legacy spacer/badge handling.
-    - [ ] Capture and offline-audit the prepared final 17 essays.
+    - [x] Capture and offline-audit the final 17 essays (232/232 total).
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.

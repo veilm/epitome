@@ -152,3 +152,21 @@ Representative early, middle, and late replays retain 2,841–24,441 visible
 characters in the source's narrow legacy layout, have no substantive broken
 images, and make no production-origin requests. Coverage is now 215/232. The
 final 17 uncaptured identities are prepared in `data/paul-graham-final-17.txt`.
+
+## Final batch
+
+The final 17 essays completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786488163-final-17`
+
+All manifests are complete and tab-closed with no page errors. Primary-image
+audit is clean. Four all-image misses are the already-reviewed obsolete
+Virtumundo spacer; two additional failures are unavailable outbound programming
+papers and do not affect article content. Representative replays retain
+25,000–32,000 visible characters, the original narrow legacy layout, no
+substantive broken images, and no production-origin requests.
+
+All 232 approved index-and-essay identities are now captured and offline-
+verified. The unavailable outbound *Roots of Lisp* paper and deferred books,
+RSS, and language-history material remain separate from this completed page
+scope.

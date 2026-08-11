@@ -70,8 +70,8 @@ YouTube/Twitter/X downloads.
 
 | Queue item | Current status | N+1 readiness / next action |
 | --- | --- | --- |
-| Paul Graham essays | **Active: 215/232 complete before the current run.** The prepared final 17 identities are capturing from `data/paul-graham-final-17.txt`. | Audit at the boundary; successful completion closes the approved essay page scope. |
-| LessWrong | **Partial.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and Highlights positions 1–45 passed offline replay. | **Ready.** `data/lesswrong-highlights-final-6.txt` contains every remaining Highlights identity. |
+| LessWrong | **Active.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and Highlights positions 1–45 passed offline replay. The final six Highlights identities are capturing. | Audit at the boundary, then define the next bounded core/curated tier before the lane returns to LessWrong. |
+| Paul Graham essays | **Complete: 232/232.** The approved index-and-essay scope is captured and offline-verified. | Only separately scoped dependency recovery and non-essay material remain. |
 | Slate Star Codex | **Partial.** The 1,562-identity canonical scope and five representative variants are approved; no large page batch has begun. | **Ready after Paul Graham.** `data/slate-star-codex-first-15.txt` contains the first 15 identities not already completed by validation; use the approved varied-pilot capture settings. |
 | Astral Codex Ten | **Not started as a capture scope.** It is intentionally separate from Slate Star Codex. | Inventory canonical archive/post identities and validate a small ordinary, long, comment-heavy, and media-bearing pilot. |
 | Import AI by Jack Clark | **Not started.** First-party Substack home is identified. | Inventory archive/feed identities, email-only differences if any, attachments, and a varied pilot. |
