@@ -259,8 +259,9 @@ deletion-history workflows are explicitly designed.
     - [x] Capture and offline-audit the first 15 ordered Highlights identities
           (14 new after pilot deduplication).
     - [x] Capture and offline-audit Highlights identities 16–30.
-    - [ ] Capture the remaining Highlights identities in similarly bounded
-          tranches after preparing the next reviewed URL list.
+    - [x] Capture and offline-audit Highlights identities 31–45.
+    - [ ] Capture and offline-audit the prepared final six Highlights
+          identities.
   - [ ] Preserve annual-review winners and new moderator-curated posts with
         original-publication and curation-date provenance.
   - [ ] Review standout community sequences explicitly rather than crawling

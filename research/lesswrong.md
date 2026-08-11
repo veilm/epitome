@@ -156,3 +156,18 @@ Representative replays across the batch expose approximately 43,000, 148,000,
 and 59,000 visible characters, preserve article metadata and comment threads,
 show no broken images, and request resources only from loopback. The approved
 Highlights coverage is now the first 30 ordered identities.
+
+## Sequences Highlights batch 3
+
+Highlights positions 31–45 are complete at
+`/mnt2/capsule/epitome/lesswrong/crawls/1786481966-highlights-03`. All 15
+manifests are complete and tab-closed with no page errors. Primary and all-image
+audits are clean. The asset failures comprise the recurring first-party
+scissors icon, two unavailable historical research PDFs, and one dead outbound
+decorative image.
+
+Representative early, middle, and late replays expose approximately 11,000,
+59,000, and 27,000 visible characters, preserve article metadata and comments,
+show no broken images, and request resources only from loopback. The approved
+Highlights coverage is now positions 1–45; the final six identities are
+prepared in `data/lesswrong-highlights-final-6.txt`.
