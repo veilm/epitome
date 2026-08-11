@@ -5,6 +5,9 @@ OpenAI crawl. Each source should eventually have both a faithful private archive
 and a clean, model-readable rendition suitable for summaries. Investigation and
 small validation samples come before any large crawl.
 
+The continuously occupied capture lane, preparation handoff, adaptive alarm
+policy, and explicitly low-risk queue are defined in `LOW_RISK_WORKFLOW.md`.
+
 Prefer the easiest well-bounded static source whenever the current page crawl
 finishes. Defer account-oriented or continuously changing sources such as
 Twitter/X and YouTube until their identity, media, incremental-update, and
