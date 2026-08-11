@@ -135,3 +135,20 @@ available. Five desktop replays spanning short, long, illustrated, obsolete-
 layout, and restored-YC-asset variants retain their source styling and make no
 production-origin requests. Coverage is now 155/232 approved identities, with
 the next 60-page deduplicated input selected from the 77 remaining essays.
+
+## Fifth bounded batch
+
+The next 60 deduplicated essays completed at:
+
+`/mnt2/capsule/epitome/paul-graham/crawls/1786472698-next-60`
+
+All 60 manifests are complete and tab-closed with no page errors. The
+primary-image audit is clean. Twenty-five all-image misses are the already
+reviewed obsolete Virtumundo layout spacer and two are the retired Hacker News
+badge; replay aliases cover those decorative assets. The other misses are dead
+outbound Tipjoy and Boss Talks dependencies rather than article content.
+
+Representative early, middle, and late replays retain 2,841–24,441 visible
+characters in the source's narrow legacy layout, have no substantive broken
+images, and make no production-origin requests. Coverage is now 215/232. The
+final 17 uncaptured identities are prepared in `data/paul-graham-final-17.txt`.

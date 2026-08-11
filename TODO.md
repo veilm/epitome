@@ -189,6 +189,9 @@ deletion-history workflows are explicitly designed.
     - [x] Capture and offline-audit the next 60 essays (155/232 total); restore
           the retired Hacker News badge and historical traffic chart from exact
           Wayback bodies.
+    - [x] Capture and offline-audit the next 60 essays (215/232 total); retain
+          the reviewed legacy spacer/badge handling.
+    - [ ] Capture and offline-audit the prepared final 17 essays.
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.
