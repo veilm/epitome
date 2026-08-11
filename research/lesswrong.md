@@ -100,3 +100,24 @@ Curated post identified in email. Required checks are complete/tab-closed
 manifests, post and comment text, equations/code/images, original and curation
 dates where present, and loopback-only replay. YouTube and Twitter/X remain
 outside capture scope.
+
+## Pilot validation
+
+The seven-page pilot at
+`/mnt2/capsule/epitome/lesswrong/validation/1786423739-pilot` completed with all
+seven manifests complete and capture tabs closed. The primary-image audit is
+clean. All seven pages reference a first-party scissors icon that already
+returns HTTP 404, and the Cartesian Frames post references an old AIXI image at
+`intelligence.org` that also returns HTTP 404 upstream. These are the only
+asset-completion failures; the latter remains visibly broken in replay and is
+recorded rather than silently replaced with an unrelated image.
+
+Isolated script-free replay preserves the Library and collection navigation,
+the long annual-review index, sequence metadata, publication dates, article
+bodies, equations and comments. The classic Lens, Cartesian Frames, and recent
+Curated posts expose approximately 48,000, 86,000, and 66,000 visible
+characters respectively. The Cartesian Frames page retains its article layout
+and 32 displayed comments. No page remains at the live site's transient
+one-character Next.js shell, no primary image is broken, and every replay
+resource request is loopback-only. The pilot therefore approves conservative,
+bounded collection batches using the same 15-second settle.

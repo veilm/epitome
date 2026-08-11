@@ -246,7 +246,7 @@ deletion-history workflows are explicitly designed.
         token-free incremental source.
   - [x] Build a rendered-browser inventory of collection order and stable post
         IDs; the current core/curated union contains 1,384 unique posts.
-  - [ ] Complete and offline-audit the seven-page structural/content pilot,
+  - [x] Complete and offline-audit the seven-page structural/content pilot,
         including streamed Next.js materialization and comments.
   - [ ] Preserve the Sequences and their canonical ordering in bounded batches,
         beginning with the 50-post Highlights subset.
