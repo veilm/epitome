@@ -255,6 +255,7 @@ deletion-history workflows are explicitly designed.
         beginning with the 50-post Highlights subset.
     - [x] Capture and offline-audit the first 15 ordered Highlights identities
           (14 new after pilot deduplication).
+    - [x] Capture and offline-audit Highlights identities 16–30.
     - [ ] Capture the remaining Highlights identities in similarly bounded
           tranches after preparing the next reviewed URL list.
   - [ ] Preserve annual-review winners and new moderator-curated posts with

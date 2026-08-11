@@ -142,3 +142,17 @@ characters, retain displayed comment threads, and make no non-loopback resource
 requests. Visual inspection confirms normal article typography, metadata, and
 body layout. The first tranche is approved; subsequent Highlights work should
 continue in similarly bounded ordered groups.
+
+## Sequences Highlights batch 2
+
+Highlights positions 16–30 are complete at
+`/mnt2/capsule/epitome/lesswrong/crawls/1786466262-highlights-02`. All 15
+manifests are complete and tab-closed with no page errors. Primary and all-image
+audits are clean. The only asset failures are the recurring first-party
+scissors icon and four historical outbound research PDFs whose hosts now return
+404, 403, or no longer resolve.
+
+Representative replays across the batch expose approximately 43,000, 148,000,
+and 59,000 visible characters, preserve article metadata and comment threads,
+show no broken images, and request resources only from loopback. The approved
+Highlights coverage is now the first 30 ordered identities.

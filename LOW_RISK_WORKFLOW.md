@@ -70,8 +70,8 @@ YouTube/Twitter/X downloads.
 
 | Queue item | Current status | N+1 readiness / next action |
 | --- | --- | --- |
-| LessWrong | **Active.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and Highlights positions 1–15 passed offline replay. Positions 16–30 are the active bounded batch. | After this batch, audit it and either run the prepared next ordered Highlights tranche or move directly to the already-prepared Paul Graham batch while preparing that tranche. |
-| Paul Graham essays | **Partial: 155/232 complete.** Static layout and prior bounded batches are approved. | **Ready.** `data/paul-graham-next-60.txt` contains the next 60 reviewed identities; the expected final remainder is 17. |
+| Paul Graham essays | **Active: 155/232 complete before the current run.** The next 60 reviewed identities are capturing from `data/paul-graham-next-60.txt`. Static layout and prior bounded batches are approved. | Audit the 60-page run at its boundary; the expected final remainder is 17. |
+| LessWrong | **Partial.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and Highlights positions 1–30 passed offline replay. | **Ready.** `data/lesswrong-highlights-31-45.txt` contains the next bounded ordered tranche. |
 | Slate Star Codex | **Partial.** The 1,562-identity canonical scope and five representative variants are approved; no large page batch has begun. | **Ready after Paul Graham.** `data/slate-star-codex-first-15.txt` contains the first 15 identities not already completed by validation; use the approved varied-pilot capture settings. |
 | Astral Codex Ten | **Not started as a capture scope.** It is intentionally separate from Slate Star Codex. | Inventory canonical archive/post identities and validate a small ordinary, long, comment-heavy, and media-bearing pilot. |
 | Import AI by Jack Clark | **Not started.** First-party Substack home is identified. | Inventory archive/feed identities, email-only differences if any, attachments, and a varied pilot. |
