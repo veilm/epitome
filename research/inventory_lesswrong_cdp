@@ -1,0 +1,227 @@
+#!/usr/bin/python
+"""Inventory LessWrong's official Library collections through rendered pages."""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import json
+import os
+from pathlib import Path
+import sys
+import time
+from typing import Any
+from urllib.parse import urlsplit
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "util"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from epitome_lib import cdp
+
+
+ORIGIN = "https://www.lesswrong.com"
+LIBRARY_URL = f"{ORIGIN}/library"
+CORE_COLLECTIONS = [
+    ("rationality-a-z", f"{ORIGIN}/rationality"),
+    ("sequence-highlights", f"{ORIGIN}/highlights"),
+    ("hpmor", f"{ORIGIN}/hpmor"),
+    ("codex", f"{ORIGIN}/codex"),
+    ("best-of-lesswrong", f"{ORIGIN}/bestoflesswrong"),
+]
+
+READ_LIBRARY = r"""(()=>({
+  title: document.title,
+  core: [...document.querySelectorAll('h3')].map(h => ({
+    title: h.innerText.trim(),
+    url: h.parentElement?.querySelector('a[href]')?.href || null,
+    description: h.parentElement?.innerText?.trim() || '',
+  })).filter(x => x.url),
+  grids: [...document.querySelectorAll('.SequencesGrid-gridContent')].map(g =>
+    [...g.querySelectorAll('a[href*="/s/"]')].map(a => ({
+      url: a.href.split(/[?#]/)[0],
+      label: a.closest('.LinkCard-root')?.innerText?.trim()
+        .replace(/\s+/g, ' ') || '',
+    }))
+  ),
+}))()"""
+
+READ_COLLECTION = r"""(()=>({
+  title: document.title,
+  final_url: location.href,
+  visible_characters: (document.body?.innerText || '').length,
+  post_links: [...new Set([...document.querySelectorAll('a[href]')]
+    .map(a => a.href.split(/[?#]/)[0])
+    .filter(h => h.includes('/posts/') || /\/s\/[^/]+\/p\/[^/]+/.test(h)))],
+}))()"""
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Inventory LessWrong core and moderator-curated collections."
+    )
+    parser.add_argument("--port", type=int, default=2103)
+    parser.add_argument("--delay-seconds", type=float, default=1)
+    parser.add_argument("--settle-seconds", type=float, default=3)
+    parser.add_argument("--timeout", type=float, default=45)
+    parser.add_argument("--output", type=Path, required=True)
+    return parser.parse_args()
+
+
+def canonical_post_url(url: str) -> str | None:
+    parsed = urlsplit(url)
+    parts = parsed.path.strip("/").split("/")
+    allowed_hosts = {
+        "alignmentforum.org",
+        "www.alignmentforum.org",
+        "lesswrong.com",
+        "www.lesswrong.com",
+    }
+    if parsed.scheme != "https" or parsed.netloc not in allowed_hosts:
+        return None
+    post_id = None
+    if len(parts) >= 2 and parts[0] == "posts":
+        post_id = parts[1]
+    elif len(parts) >= 4 and parts[0] == "s" and parts[2] == "p":
+        post_id = parts[3]
+    if not post_id or len(post_id) < 8 or not post_id.isalnum():
+        return None
+    # Alignment Forum posts are first-party mirrored LessWrong identities. Use
+    # the LessWrong route so one post is not counted twice merely because a
+    # sequence exposes both hosts.
+    return f"https://www.lesswrong.com/posts/{post_id}"
+
+
+def load(
+    session: str,
+    url: str,
+    timeout: float,
+    settle_seconds: float,
+) -> dict[str, Any]:
+    cdp.eval_json(session, f"(location.href={json.dumps(url)}, true)", timeout=10)
+    cdp.run(["wait", "--session", session], timeout=timeout)
+    cdp.run(
+        ["wait", "--session", session, "--selector", "body"],
+        timeout=timeout,
+    )
+    if settle_seconds:
+        time.sleep(settle_seconds)
+    return cdp.eval_script(session, READ_COLLECTION, timeout=15)
+
+
+def unique(values: list[str]) -> list[str]:
+    return list(dict.fromkeys(values))
+
+
+def main() -> int:
+    args = parse_args()
+    if args.delay_seconds < 0 or args.settle_seconds < 0:
+        print(
+            "inventory_lesswrong_cdp: delays must be non-negative",
+            file=sys.stderr,
+        )
+        return 2
+
+    session = f"epitome-lesswrong-{int(time.time() * 1000)}-{os.getpid()}"
+    connected = False
+    try:
+        cdp.run(
+            [
+                "connect", "--session", session, "--port", str(args.port),
+                "--new", "--new-url", "about:blank",
+            ],
+            timeout=15,
+        )
+        connected = True
+        load(session, LIBRARY_URL, args.timeout, args.settle_seconds)
+        library = cdp.eval_script(session, READ_LIBRARY, timeout=15)
+        grids = library.get("grids", [])
+        if len(grids) < 2:
+            raise RuntimeError("Library did not expose curated and community grids")
+
+        curated = grids[0]
+        community_visible = grids[1]
+        collections: list[dict[str, Any]] = []
+        for collection_id, url in CORE_COLLECTIONS:
+            page = load(session, url, args.timeout, args.settle_seconds)
+            posts = unique([
+                canonical
+                for value in page.get("post_links", [])
+                if (canonical := canonical_post_url(value))
+            ])
+            collections.append({
+                "id": collection_id,
+                "kind": "core",
+                "title": page.get("title"),
+                "url": url,
+                "post_count": len(posts),
+                "posts": posts,
+            })
+            if args.delay_seconds:
+                time.sleep(args.delay_seconds)
+
+        for index, item in enumerate(curated, start=1):
+            url = str(item["url"])
+            page = load(session, url, args.timeout, args.settle_seconds)
+            posts = unique([
+                canonical
+                for value in page.get("post_links", [])
+                if (canonical := canonical_post_url(value))
+            ])
+            collections.append({
+                "id": url.rstrip("/").rsplit("/", 1)[-1],
+                "kind": "curated_sequence",
+                "library_order": index,
+                "label": str(item.get("label", "")),
+                "title": page.get("title"),
+                "url": url,
+                "post_count": len(posts),
+                "posts": posts,
+            })
+            if args.delay_seconds:
+                time.sleep(args.delay_seconds)
+
+        all_posts = unique([
+            post
+            for collection in collections
+            for post in collection["posts"]
+        ])
+        result = {
+            "created_at": int(time.time()),
+            "created_at_iso": datetime.now(timezone.utc).isoformat(),
+            "method": "rendered Chromium through CDP",
+            "library_url": LIBRARY_URL,
+            "core_collection_count": len(CORE_COLLECTIONS),
+            "curated_sequence_count": len(curated),
+            "community_sequence_visible_count": len(community_visible),
+            "community_sequence_total_label": "266 shown by the rendered Library",
+            "collection_count": len(collections),
+            "unique_post_count": len(all_posts),
+            "collections": collections,
+            "unique_posts": all_posts,
+        }
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(
+            json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print(
+            f"Wrote {len(collections)} collections and {len(all_posts)} unique posts "
+            f"to {args.output}",
+            file=sys.stderr,
+        )
+        return 0
+    except (OSError, RuntimeError, ValueError, cdp.CdpError) as error:
+        print(f"inventory_lesswrong_cdp: {error}", file=sys.stderr)
+        return 1
+    finally:
+        if connected:
+            if not cdp.close_session_tab(session):
+                print(
+                    "inventory_lesswrong_cdp: warning: inventory tab did not close",
+                    file=sys.stderr,
+                )
+            cdp.run(["disconnect", "--session", session], timeout=5, check=False)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,102 @@
+# LessWrong source reconnaissance
+
+Investigated through the rendered public site on CDP port 2103 and the user's
+legitimately received Gmail UI on port 2102 on 2026-08-11. No mailbox API was
+used, and no private email body or tracking token is stored in Git.
+
+## Editorial hierarchy
+
+LessWrong has several signals that should not be conflated with raw karma:
+
+1. The public **Library** promotes five bounded core collections: *Rationality:
+   A-Z*, *The Sequences Highlights*, *Harry Potter and the Methods of
+   Rationality*, *The Codex*, and *Best of LessWrong*.
+2. The same page separately displays 38 **Curated Sequences**. LessWrong's FAQ
+   describes these as sets the moderation team considers especially valuable
+   and part of the site's intellectual canon.
+3. **Community Sequences** are user-created and much broader. The current
+   Library exposes 12 initially and labels the pool as 266. They are not an
+   automatic archival tier merely because they use the same sequence UI.
+4. Individual **Curated posts** are selected by the moderation team from
+   Frontpage posts, normally about three per week, for being especially
+   well-written, insightful, instructive, or important. This differs from the
+   recency-and-karma ranking used for ordinary Latest Posts.
+5. **Best of LessWrong** is a slower community review: posts over a year old are
+   revisited and voted on for how well they stood the test of time. The current
+   page covers annual-review results beginning in 2018.
+
+The stable reviewed collection-index list is tracked in
+`sources/lesswrong-collections.txt`. The rendered inventory tool
+`research/inventory_lesswrong_cdp` visits those indexes in one disposable tab,
+preserves displayed ordering, normalizes sequence routes to post IDs, and
+deduplicates Alignment Forum mirrors onto their public LessWrong identities.
+
+The 2026-08-11 snapshot contains 43 collection indexes and 1,384 unique post
+IDs. Before cross-collection deduplication, the five core indexes contain:
+
+- 339 links in *Rationality: A-Z*;
+- 51 in *Sequences Highlights* (the advertised reading list itself has 50;
+  the rendered page also links introductory material);
+- 122 HPMOR chapter/post identities;
+- 83 entries in *The Codex*; and
+- 342 annual-review winners in *Best of LessWrong*.
+
+The 38 moderator-curated sequences contain 551 ordered entries before overlap
+with one another and the core collections. Individual sequence sizes range from
+four to 46. This is a culturally meaningful but still large scope; inventorying
+it does not authorize an immediate 1,384-page crawl.
+
+## Curated email evidence
+
+The user's mailbox contains single-post messages from
+`no-reply@lesserwrong.com`, with subjects of the form `[LessWrong] POST TITLE`.
+Recent examples arrive every few days rather than as one weekly bundle. A
+rendered August 4 message contains the complete public article body, its author
+and publication date, a canonical `lesswrong.com/posts/ID/slug` discussion
+link, and five recommended public posts. Its footer states exactly why it was
+sent: the account has **Email me new posts in Curated** enabled.
+
+The newsletter tier is therefore the moderator-curated post stream, not the
+generic `Newsletters` concept tag and not an old third-party LessWrong Digest.
+The supported public incremental endpoint is:
+
+`https://www.lesswrong.com/feed.xml?view=curated`
+
+The feed supplies full HTML, canonical public links, authors, and timestamps.
+It can drive future delta discovery without retaining mailbox tracking or
+unsubscribe tokens. Gmail is useful only as provenance that this is the stream
+the user meant.
+
+## Proposed preservation tiers
+
+1. Preserve the Library index and five core collection indexes, followed by
+   their deduplicated post identities in bounded batches. *Sequences
+   Highlights* is a useful first 50-post reading subset, while *Rationality:
+   A-Z* preserves the canonical edited order.
+2. Preserve the 38 moderator-curated sequence indexes and their deduplicated
+   posts. Keep the index-to-post ordering metadata even when a post appears in
+   multiple sequences.
+3. Preserve annual-review winners from *Best of LessWrong* and increment the
+   archive when a new review is published. Many overlap the sequence tiers.
+4. Track new moderator-curated posts from the curated RSS feed. Record original
+   publication time separately from curation time: LessWrong may display the
+   curation timestamp as the apparent front-page date.
+5. Review standout community sequences explicitly. Do not ingest all 266 by
+   default, and do not substitute a top-karma scrape for editorial provenance.
+
+## Capture risks and pilot
+
+Current post pages use streamed Next.js boundaries. During live inspection, the
+article data was present in the DOM and serialized state while the visible body
+temporarily consisted only of a one-character low-opacity shell. Collection
+indexes materialized normally. The archive pilot therefore uses a 15-second
+settle and must prove that script-free replay exposes the actual article and
+comments rather than approving hidden content by file size alone.
+
+The seven-page pilot covers the Library, *Rationality: A-Z*, *Best of
+LessWrong*, the *AGI safety from first principles* curated-sequence index, a
+classic Sequences post, a Cartesian Frames technical post, and the recent
+Curated post identified in email. Required checks are complete/tab-closed
+manifests, post and comment text, equations/code/images, original and curation
+dates where present, and loopback-only replay. YouTube and Twitter/X remain
+outside capture scope.

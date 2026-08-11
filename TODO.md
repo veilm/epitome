@@ -238,11 +238,24 @@ deletion-history workflows are explicitly designed.
   - [ ] Record provenance from each outbound item back to the Near page that
         referenced it; bound recursive discovery before crawling.
 - [ ] **LessWrong**
-  - [ ] Preserve the Sequences and their canonical ordering.
-  - [ ] Preserve daily/top-ranked article collections and their ranking/date
-        context.
-  - [ ] Define broader coverage for notable posts, series, authors, comments,
-        and linked media.
+  - [x] Distinguish the five Library core collections, 38 moderator-curated
+        sequences, 266 community sequences, annual-review winners, and
+        moderator-curated post stream from raw karma/popularity.
+  - [x] Identify the user's received LessWrong emails as individual Curated
+        post notifications and the supported curated RSS feed as the private-
+        token-free incremental source.
+  - [x] Build a rendered-browser inventory of collection order and stable post
+        IDs; the current core/curated union contains 1,384 unique posts.
+  - [ ] Complete and offline-audit the seven-page structural/content pilot,
+        including streamed Next.js materialization and comments.
+  - [ ] Preserve the Sequences and their canonical ordering in bounded batches,
+        beginning with the 50-post Highlights subset.
+  - [ ] Preserve annual-review winners and new moderator-curated posts with
+        original-publication and curation-date provenance.
+  - [ ] Review standout community sequences explicitly rather than crawling
+        all 266 or treating raw top-karma pages as editorial canon.
+  - [ ] Define broader coverage for notable authors, comments, revisions, and
+        linked media after the curated tiers pass replay validation.
 - [ ] **Nonfiction books**
   - [ ] Start a title and edition inventory, beginning with *The Elephant in the
         Brain*.
