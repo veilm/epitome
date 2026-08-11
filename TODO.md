@@ -250,6 +250,10 @@ deletion-history workflows are explicitly designed.
         including streamed Next.js materialization and comments.
   - [ ] Preserve the Sequences and their canonical ordering in bounded batches,
         beginning with the 50-post Highlights subset.
+    - [x] Capture and offline-audit the first 15 ordered Highlights identities
+          (14 new after pilot deduplication).
+    - [ ] Capture the remaining Highlights identities in similarly bounded
+          tranches after preparing the next reviewed URL list.
   - [ ] Preserve annual-review winners and new moderator-curated posts with
         original-publication and curation-date provenance.
   - [ ] Review standout community sequences explicitly rather than crawling

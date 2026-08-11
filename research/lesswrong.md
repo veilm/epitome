@@ -124,3 +124,21 @@ and 32 displayed comments. No page remains at the live site's transient
 one-character Next.js shell, no primary image is broken, and every replay
 resource request is loopback-only. The pilot therefore approves conservative,
 bounded collection batches using the same 15-second settle.
+
+## Sequences Highlights batch 1
+
+The first ordered Highlights tranche at
+`/mnt2/capsule/epitome/lesswrong/crawls/1786429260-highlights-01` supplied 15
+identities. Capture correctly skipped the Lens post already preserved by the
+pilot, leaving 14 new pages. All 14 manifests are complete and tab-closed with
+no page errors, and both primary and all-image audits are clean.
+
+Each page references the same broken first-party scissors icon. Two historical
+CDC injury-statistics PDFs now return HTTP 404, and one old Harvard psychology
+PDF host no longer resolves; these are dead outbound reading dependencies, not
+missing article images or bodies. Representative early, middle, and late
+script-free replays expose approximately 34,000, 37,000, and 83,000 visible
+characters, retain displayed comment threads, and make no non-loopback resource
+requests. Visual inspection confirms normal article typography, metadata, and
+body layout. The first tranche is approved; subsequent Highlights work should
+continue in similarly bounded ordered groups.
