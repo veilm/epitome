@@ -53,6 +53,11 @@ reported separately from URLs newly appearing in a live listing, so an update
 check does not accidentally turn an unfinished historical scope into an
 unbounded crawl.
 
+The reviewed baselines used for this comparison live in `sources/`, including
+the larger OpenAI, Anthropic, and Claude inventories. After a captured delta
+passes replay and image audits, append its URLs to the applicable baseline so a
+fresh checkout preserves the same reviewed state.
+
 The archive browser is then available at `http://127.0.0.1:8013/`. It rewrites
 captured pages for local-only static replay and never falls back to the live
 site. See [docs/replay.md](docs/replay.md).

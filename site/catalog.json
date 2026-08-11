@@ -123,6 +123,86 @@
       "url": "https://karpathy.ai/"
     },
     {
+      "captured_at": 1786406238,
+      "publication_status": "exact",
+      "published_at": 1786337495,
+      "sort_at": 1786337495,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Ultra-High Interactivity on NVIDIA GPUs? - TileRT InferenceX",
+      "url": "https://newsletter.semianalysis.com/p/ultra-high-interactivity-on-nvidia"
+    },
+    {
+      "captured_at": 1786402487,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Learning more about Claude's mathematical capabilities",
+      "url": "https://www.anthropic.com/research/riemann-zeta"
+    },
+    {
+      "captured_at": 1786400453,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+      "url": "https://openai.com/index/model-ml"
+    },
+    {
+      "captured_at": 1786399165,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
+    },
+    {
+      "captured_at": 1786398327,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Premium seats are coming to ChatGPT Business",
+      "url": "https://openai.com/index/premium-seats-chatgpt-business"
+    },
+    {
+      "captured_at": 1786397829,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
+      "url": "https://openai.com/index/responsible-ai-infrastructure-texas"
+    },
+    {
+      "captured_at": 1786396176,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "What building an AI-native finance function taught me",
+      "url": "https://openai.com/index/building-an-ai-native-finance-function"
+    },
+    {
+      "captured_at": 1786395739,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Putting frontier cyber models in more trusted hands",
+      "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands"
+    },
+    {
       "captured_at": 1786164988,
       "publication_status": "unknown",
       "published_at": null,
@@ -163,6 +243,106 @@
       "url": "https://newsletter.semianalysis.com/p/gemini-is-cooked-but-gcp-is-cooking"
     },
     {
+      "captured_at": 1786403903,
+      "publication_status": "exact",
+      "published_at": 1786060800,
+      "sort_at": 1786060800,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Running auto mode in production",
+      "url": "https://claude.com/blog/auto-mode-in-production"
+    },
+    {
+      "captured_at": 1786403715,
+      "publication_status": "exact",
+      "published_at": 1786060800,
+      "sort_at": 1786060800,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+      "url": "https://claude.com/blog/auto-mode-default-in-claude-code"
+    },
+    {
+      "captured_at": 1786402315,
+      "publication_status": "exact",
+      "published_at": 1786060800,
+      "sort_at": 1786060800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Improving Fable 5 Safeguards",
+      "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+    },
+    {
+      "captured_at": 1786399639,
+      "publication_status": "exact",
+      "published_at": 1786060800,
+      "sort_at": 1786060800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Responding to the next frontier of critical cyber capabilities",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
+    },
+    {
+      "captured_at": 1786394221,
+      "publication_status": "exact",
+      "published_at": 1786060800,
+      "sort_at": 1786060800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How HSP GRUPPE builds AI capabilities for tax advisory",
+      "url": "https://openai.com/index/hsp-gruppe"
+    },
+    {
+      "captured_at": 1786404310,
+      "publication_status": "exact",
+      "published_at": 1785974400,
+      "sort_at": 1785974400,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Self-hosted environments for Claude Code",
+      "url": "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute"
+    },
+    {
+      "captured_at": 1786404174,
+      "publication_status": "exact",
+      "published_at": 1785974400,
+      "sort_at": 1785974400,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Millennium and Anthropic are building a digital risk analyst with Claude",
+      "url": "https://claude.com/blog/millennium-and-anthropic-are-building-a-digital-risk-analyst-with-claude"
+    },
+    {
+      "captured_at": 1786401373,
+      "publication_status": "exact",
+      "published_at": 1785974400,
+      "sort_at": 1785974400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt"
+    },
+    {
+      "captured_at": 1786396631,
+      "publication_status": "exact",
+      "published_at": 1785974400,
+      "sort_at": 1785974400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Working with the American Psychological Association on youth mental health and AI",
+      "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai"
+    },
+    {
+      "captured_at": 1786395081,
+      "publication_status": "exact",
+      "published_at": 1785974400,
+      "sort_at": 1785974400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "From asking to doing: How the world is putting ChatGPT to work",
+      "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
+    },
+    {
       "captured_at": 1785904465,
       "publication_status": "unknown",
       "published_at": null,
@@ -181,6 +361,16 @@
       "source": "anthropic",
       "title": "What 81,000 people want from AI",
       "url": "https://www.anthropic.com/features/81k-interviews"
+    },
+    {
+      "captured_at": 1786404038,
+      "publication_status": "exact",
+      "published_at": 1785888000,
+      "sort_at": 1785888000,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Inference hooks: inline data loss prevention for Claude Enterprise",
+      "url": "https://claude.com/blog/claude-enterprise-inference-hooks"
     },
     {
       "captured_at": 1785886340,
@@ -893,6 +1083,36 @@
       "url": "https://openai.com/index/memory-and-new-controls-for-chatgpt"
     },
     {
+      "captured_at": 1786403579,
+      "publication_status": "exact",
+      "published_at": 1785801600,
+      "sort_at": 1785801600,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "A guide to cost visibility and control in Claude",
+      "url": "https://claude.com/blog/a-guide-to-cost-visibility-and-control-in-claude"
+    },
+    {
+      "captured_at": 1786400043,
+      "publication_status": "exact",
+      "published_at": 1785801600,
+      "sort_at": 1785801600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Third-party cyber evaluations involving OpenAI models",
+      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models"
+    },
+    {
+      "captured_at": 1786398710,
+      "publication_status": "exact",
+      "published_at": 1785801600,
+      "sort_at": 1785801600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "New ways to learn and teach with ChatGPT Work and Codex",
+      "url": "https://openai.com/index/learn-teach-chatgpt-work-codex"
+    },
+    {
       "captured_at": 1785800301,
       "publication_status": "unknown",
       "published_at": null,
@@ -1271,6 +1491,26 @@
       "source": "openai",
       "title": "OpenAI Scholars 2018: Final projects",
       "url": "https://openai.com/index/openai-scholars-2018-final-projects"
+    },
+    {
+      "captured_at": 1786397422,
+      "publication_status": "exact",
+      "published_at": 1785715200,
+      "sort_at": 1785715200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Apple is getting this wrong",
+      "url": "https://openai.com/index/apple-is-getting-this-wrong"
+    },
+    {
+      "captured_at": 1786394662,
+      "publication_status": "exact",
+      "published_at": 1785715200,
+      "sort_at": 1785715200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Circles powers telco personalization with OpenAI technology",
+      "url": "https://openai.com/index/circles"
     },
     {
       "captured_at": 1785791583,
@@ -3481,6 +3721,16 @@
       "source": "semianalysis",
       "title": "Unitree's Impossible Trajectory Is Still Overlooked",
       "url": "https://newsletter.semianalysis.com/p/chinas-unitree-will-dominate-global"
+    },
+    {
+      "captured_at": 1786397027,
+      "publication_status": "exact",
+      "published_at": 1780876800,
+      "sort_at": 1780876800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing the OpenAI Economic Research Exchange",
+      "url": "https://openai.com/index/introducing-the-openai-economic-research-exchange"
     },
     {
       "captured_at": 1786153710,

@@ -10,6 +10,12 @@ finishes. Defer account-oriented or continuously changing sources such as
 Twitter/X and YouTube until their identity, media, incremental-update, and
 deletion-history workflows are explicitly designed.
 
+- [x] Add a plan-first, one-command incremental refresh across configured
+      first-party sources; separate newly listed URLs from reviewed historical
+      backlog and capture only an explicitly requested delta.
+- [x] Run the first all-source refresh and offline-audit its 25 new pages:
+      OpenAI 16, Anthropic 2, Claude 6, and SemiAnalysis 1.
+
 ## Source backlog
 
 - [ ] **Company careers and job listings**
