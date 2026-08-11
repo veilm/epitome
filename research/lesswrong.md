@@ -31,8 +31,9 @@ The stable reviewed collection-index list is tracked in
 preserves displayed ordering, normalizes sequence routes to post IDs, and
 deduplicates Alignment Forum mirrors onto their public LessWrong identities.
 
-The 2026-08-11 snapshot contains 43 collection indexes and 1,384 unique post
-IDs. Before cross-collection deduplication, the five core indexes contain:
+The hardened 2026-08-11 inventory contains 43 collection indexes and 1,384
+unique post IDs. Before cross-collection deduplication, the five core indexes
+contain:
 
 - 339 links in *Rationality: A-Z*;
 - 51 in *Sequences Highlights* (the advertised reading list itself has 50;
@@ -44,7 +45,9 @@ IDs. Before cross-collection deduplication, the five core indexes contain:
 The 38 moderator-curated sequences contain 551 ordered entries before overlap
 with one another and the core collections. Individual sequence sizes range from
 four to 46. This is a culturally meaningful but still large scope; inventorying
-it does not authorize an immediate 1,384-page crawl.
+it does not authorize an immediate 1,384-page crawl. The inventory explicitly
+waits for post links after the collection shell loads; without that readiness
+check, the 34-post *Hammertime* sequence can transiently appear empty.
 
 ## Curated email evidence
 

@@ -245,7 +245,7 @@ deletion-history workflows are explicitly designed.
         post notifications and the supported curated RSS feed as the private-
         token-free incremental source.
   - [x] Build a rendered-browser inventory of collection order and stable post
-        IDs; the current core/curated union contains 1,384 unique posts.
+        IDs; the hardened core/curated union contains 1,384 unique posts.
   - [x] Complete and offline-audit the seven-page structural/content pilot,
         including streamed Next.js materialization and comments.
   - [ ] Preserve the Sequences and their canonical ordering in bounded batches,

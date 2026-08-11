@@ -112,6 +112,19 @@ def unique(values: list[str]) -> list[str]:
     return list(dict.fromkeys(values))
 
 
+def wait_for_posts(
+    session: str,
+    page: dict[str, Any],
+    timeout: float = 15,
+) -> dict[str, Any]:
+    """Wait for client-rendered collection entries after the page shell loads."""
+    deadline = time.monotonic() + timeout
+    while not page.get("post_links") and time.monotonic() < deadline:
+        time.sleep(1)
+        page = cdp.eval_script(session, READ_COLLECTION, timeout=15)
+    return page
+
+
 def main() -> int:
     args = parse_args()
     if args.delay_seconds < 0 or args.settle_seconds < 0:
@@ -143,6 +156,7 @@ def main() -> int:
         collections: list[dict[str, Any]] = []
         for collection_id, url in CORE_COLLECTIONS:
             page = load(session, url, args.timeout, args.settle_seconds)
+            page = wait_for_posts(session, page)
             posts = unique([
                 canonical
                 for value in page.get("post_links", [])
@@ -162,6 +176,7 @@ def main() -> int:
         for index, item in enumerate(curated, start=1):
             url = str(item["url"])
             page = load(session, url, args.timeout, args.settle_seconds)
+            page = wait_for_posts(session, page)
             posts = unique([
                 canonical
                 for value in page.get("post_links", [])
