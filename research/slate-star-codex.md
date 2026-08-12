@@ -153,3 +153,21 @@ only broken rendered images in those samples are 40-pixel comment avatars;
 there are no substantive broken images and every loaded resource is
 loopback-only. The optimized policy is therefore approved for the active
 60-page continuation.
+
+## Fourth bounded batch
+
+The next 60 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786534399-next-60-no-gravatars`
+and the one-page retry at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786546288-next-60-retry`.
+The main run preserved 59 pages and closed all 60 tabs; one article lost its
+temporary CDP session before completion and passed on the focused retry. The
+combined scope is therefore 60/60 complete and tab-closed.
+
+The main run attempted 1,488 non-avatar dependencies and excluded 14,684
+Gravatar URLs. Its 87 asset failures are dead, blocked, rate-limited, or timed
+out outbound dependencies, while the primary-image audit is clean. Three
+isolated replays retain 359,000–795,000 visible characters and 554–1,152
+comments with substantial comment text. Their only broken images are 40-pixel
+avatars, and all loaded resources are loopback-only. The same policy is
+approved for the active 75-page continuation.
