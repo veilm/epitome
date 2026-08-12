@@ -86,7 +86,10 @@ deletion-history workflows are explicitly designed.
           Slate Star Codex page batch begins.
     - [x] Capture and offline-audit the first 15 uncaptured identities; repair
           the 52 Gravatar avatars beyond the bounded asset budget.
-    - [ ] Continue the active 30-page deduplicated batch.
+    - [x] Complete the 30-page deduplicated batch across its original and
+          optimized continuation runs; preserve comment text while excluding
+          costly Gravatar completion downloads.
+    - [ ] Continue the active 45-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

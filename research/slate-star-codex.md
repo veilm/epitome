@@ -112,3 +112,27 @@ large comment-heavy threads. The largest checked open thread exposes about
 broken images. Every checked replay resource is loopback-only. The approved
 batch pattern retains the bounded 500-asset page capture, followed by targeted
 all-image repair at the batch boundary when a page has more rendered avatars.
+
+## Second bounded batch and avatar policy
+
+The next 30 identities are complete across:
+
+- `/mnt2/capsule/epitome/slate-star-codex/crawls/1786503032-next-30` (first 15);
+- `/mnt2/capsule/epitome/slate-star-codex/crawls/1786520508-next-30-no-gravatars`
+  (remaining 15).
+
+All 30 manifests are complete and tab-closed with no page errors, and both
+halves have clean primary-image audits. The original half showed that hundreds
+of unique 40-pixel Gravatars dominated runtime at two-second request spacing,
+despite being incidental to the preserved discussion. Capture now supports an
+exact-host asset-completion exclusion; the continuation skipped 5,244 missing
+`secure.gravatar.com` avatar downloads while still attempting 433 non-avatar
+assets. It completed about six to seven times faster.
+
+The exclusion does not remove the server-rendered comment DOM, authors,
+timestamps, or text, nor does it block avatars received during the initial
+browser load. Representative combined replays retain 314,000–770,000 visible
+characters and 464–1,464 comments. They have no substantive broken images and
+make no production-origin requests. Subsequent Slate Star Codex batches should
+use `--exclude-asset-host secure.gravatar.com`; missing small avatars are an
+accepted presentation loss, while primary article images remain required.
