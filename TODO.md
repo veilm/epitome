@@ -84,6 +84,9 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the archive, ordinary-post, long-form, political-quiz, and
           comment-heavy open-thread variants through offline replay before any
           Slate Star Codex page batch begins.
+    - [x] Capture and offline-audit the first 15 uncaptured identities; repair
+          the 52 Gravatar avatars beyond the bounded asset budget.
+    - [ ] Continue the active 30-page deduplicated batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

@@ -91,3 +91,24 @@ than missing first-party post content. Desktop replays show zero substantive
 broken images and make zero production-origin requests. This representative
 scope is ready for bounded page batches after the active Paul Graham scope is
 complete.
+
+## First bounded batch
+
+The first 15 identities not already completed by representative validation are
+captured at:
+
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786493569-first-15`
+
+All 15 manifests are complete and tab-closed with no page errors. The
+primary-image audit is clean. Two pages exposed more rendered avatars than the
+500-asset capture budget: a targeted all-image repair recovered all 52 omitted
+Gravatars (79,814 bytes), after which the repeated all-image audit was clean.
+The remaining failures are obsolete Gravatar share sprites plus dead or blocked
+outbound documents and images, not missing first-party article content.
+
+Isolated replay samples preserve the homepage and indexes, ordinary posts, and
+large comment-heavy threads. The largest checked open thread exposes about
+1.79 million visible characters, 2,996 comment nodes, and 3,014 images with no
+broken images. Every checked replay resource is loopback-only. The approved
+batch pattern retains the bounded 500-asset page capture, followed by targeted
+all-image repair at the batch boundary when a page has more rendered avatars.
