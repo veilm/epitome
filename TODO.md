@@ -93,7 +93,9 @@ deletion-history workflows are explicitly designed.
           completion excluded while retaining article images and comment text.
     - [x] Complete and offline-audit the 60-page optimized tranche, including
           a one-page retry after a transient lost CDP session.
-    - [ ] Continue the active 75-page optimized batch.
+    - [x] Capture and offline-audit the next 75 identities with Gravatar
+          completion excluded and zero page failures.
+    - [ ] Continue the active 90-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
