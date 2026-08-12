@@ -89,7 +89,9 @@ deletion-history workflows are explicitly designed.
     - [x] Complete the 30-page deduplicated batch across its original and
           optimized continuation runs; preserve comment text while excluding
           costly Gravatar completion downloads.
-    - [ ] Continue the active 45-page optimized batch.
+    - [x] Capture and offline-audit the next 45 identities with Gravatar
+          completion excluded while retaining article images and comment text.
+    - [ ] Continue the active 60-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

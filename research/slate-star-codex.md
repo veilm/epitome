@@ -136,3 +136,20 @@ characters and 464–1,464 comments. They have no substantive broken images and
 make no production-origin requests. Subsequent Slate Star Codex batches should
 use `--exclude-asset-host secure.gravatar.com`; missing small avatars are an
 accepted presentation loss, while primary article images remain required.
+
+## Third bounded batch
+
+The next 45 identities are complete at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786523829-next-45-no-gravatars`.
+All 45 manifests are complete and tab-closed with no page errors. Asset
+completion attempted 1,189 non-avatar dependencies, excluded 14,144
+`secure.gravatar.com` URLs, and recorded 92 failures from dead, blocked,
+rate-limited, or timed-out outbound sites. The primary-image audit is clean on
+all 45 pages.
+
+Early, middle, and late isolated replays retain 65,000–616,000 visible
+characters and 102–863 comment nodes, including comment text and authors. The
+only broken rendered images in those samples are 40-pixel comment avatars;
+there are no substantive broken images and every loaded resource is
+loopback-only. The optimized policy is therefore approved for the active
+60-page continuation.
