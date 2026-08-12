@@ -171,3 +171,17 @@ Representative early, middle, and late replays expose approximately 11,000,
 show no broken images, and request resources only from loopback. The approved
 Highlights coverage is now positions 1–45; the final six identities are
 prepared in `data/lesswrong-highlights-final-6.txt`.
+
+## Sequences Highlights completion
+
+The final six rendered-index identities completed at
+`/mnt2/capsule/epitome/lesswrong/crawls/1786491039-highlights-final-6`. All six
+manifests are complete and tab-closed with no page errors, and primary and
+all-image audits are clean. The only asset failures are the recurring
+first-party scissors icon and one unavailable external research paper.
+
+Three representative replays expose approximately 45,000, 45,000, and 173,000
+visible characters, preserve article metadata and comment threads, show no
+broken images, and request resources only from loopback. All 51 identities on
+the rendered Highlights index—the advertised 50-post reading subset plus its
+introductory identity—are now captured and offline-verified in canonical order.

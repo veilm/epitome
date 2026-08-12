@@ -70,9 +70,9 @@ YouTube/Twitter/X downloads.
 
 | Queue item | Current status | N+1 readiness / next action |
 | --- | --- | --- |
-| LessWrong | **Active.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and Highlights positions 1–45 passed offline replay. The final six Highlights identities are capturing. | Audit at the boundary, then define the next bounded core/curated tier before the lane returns to LessWrong. |
+| LessWrong | **Partial.** Taxonomy and the 1,384-post core/curated inventory are complete. The seven-page pilot and all 51 rendered Highlights identities pass offline replay. | Define the next bounded core/curated tier before the lane returns to LessWrong. |
 | Paul Graham essays | **Complete: 232/232.** The approved index-and-essay scope is captured and offline-verified. | Only separately scoped dependency recovery and non-essay material remain. |
-| Slate Star Codex | **Partial.** The 1,562-identity canonical scope and five representative variants are approved; no large page batch has begun. | **Ready after Paul Graham.** `data/slate-star-codex-first-15.txt` contains the first 15 identities not already completed by validation; use the approved varied-pilot capture settings. |
+| Slate Star Codex | **Active.** The 1,562-identity canonical scope and five representative variants are approved. The first 15 uncaptured identities are capturing. | **Ready.** `data/slate-star-codex-next-30.txt` contains the following 30 identities, excluding the five validation pages and active first batch. |
 | Astral Codex Ten | **Not started as a capture scope.** It is intentionally separate from Slate Star Codex. | Inventory canonical archive/post identities and validate a small ordinary, long, comment-heavy, and media-bearing pilot. |
 | Import AI by Jack Clark | **Not started.** First-party Substack home is identified. | Inventory archive/feed identities, email-only differences if any, attachments, and a varied pilot. |
 | Gwern.net | **Not started.** Preliminary research identifies a large first-party site, so it must be divided into bounded families. | Inventory major essays, blog entries, and first-party documents; prepare a varied pilot rather than crawling the whole link graph at once. |

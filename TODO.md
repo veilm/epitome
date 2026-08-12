@@ -260,8 +260,8 @@ deletion-history workflows are explicitly designed.
           (14 new after pilot deduplication).
     - [x] Capture and offline-audit Highlights identities 16–30.
     - [x] Capture and offline-audit Highlights identities 31–45.
-    - [ ] Capture and offline-audit the prepared final six Highlights
-          identities.
+    - [x] Capture and offline-audit the final six Highlights identities; all 51
+          rendered index identities (50 advertised readings plus intro) pass.
   - [ ] Preserve annual-review winners and new moderator-curated posts with
         original-publication and curation-date provenance.
   - [ ] Review standout community sequences explicitly rather than crawling
