@@ -26,6 +26,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-asset-bytes", type=int, default=500 * 1024 * 1024)
     parser.add_argument("--asset-delay-seconds", type=float, default=2)
     parser.add_argument("--asset-timeout", type=float, default=90)
+    parser.add_argument(
+        "--exclude-asset-host",
+        action="append",
+        default=[],
+        help="skip asset-completion downloads from this exact host (repeatable)",
+    )
     return parser.parse_args()
 
 
@@ -46,6 +52,7 @@ def main() -> int:
             max_asset_bytes=args.max_asset_bytes,
             asset_delay_seconds=args.asset_delay_seconds,
             asset_timeout=args.asset_timeout,
+            exclude_asset_hosts=set(args.exclude_asset_host),
         )
     except (RuntimeError, ValueError) as error:
         print(f"capture_url: {error}", file=sys.stderr)

@@ -74,6 +74,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--asset-delay-seconds", type=float, default=2)
     parser.add_argument("--asset-timeout", type=float, default=90)
     parser.add_argument(
+        "--exclude-asset-host",
+        action="append",
+        default=[],
+        help="skip asset-completion downloads from this exact host (repeatable)",
+    )
+    parser.add_argument(
         "--delay-seconds",
         type=float,
         help="pause between pages (default: 10-45 seconds based on batch size)",
@@ -165,6 +171,7 @@ def main() -> int:
                 max_asset_bytes=args.max_asset_bytes,
                 asset_delay_seconds=args.asset_delay_seconds,
                 asset_timeout=args.asset_timeout,
+                exclude_asset_hosts=set(args.exclude_asset_host),
             )
             append_event(
                 progress,

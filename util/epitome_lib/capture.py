@@ -413,6 +413,7 @@ def capture_url(
     max_asset_bytes: int = 500 * 1024 * 1024,
     asset_delay_seconds: float = 2,
     asset_timeout: float = 90,
+    exclude_asset_hosts: set[str] | None = None,
 ) -> dict[str, Any]:
     """Capture one URL and return its manifest.
 
@@ -515,6 +516,7 @@ def capture_url(
                     max_bytes=max_asset_bytes,
                     delay_seconds=asset_delay_seconds,
                     timeout=asset_timeout,
+                    exclude_hosts=exclude_asset_hosts,
                 )
             except (OSError, ValueError) as error:
                 asset_completion = {
@@ -542,6 +544,7 @@ def capture_url(
                 "max_asset_bytes": max_asset_bytes,
                 "asset_delay_seconds": asset_delay_seconds,
                 "asset_timeout": asset_timeout,
+                "exclude_asset_hosts": sorted(exclude_asset_hosts or set()),
             },
             "redacted_header_values": redacted,
             "network_log_returncode": logger_result[2],
@@ -563,6 +566,7 @@ def capture_url(
                     "attempted",
                     "completed",
                     "failed",
+                    "excluded",
                     "downloaded_bytes",
                     "error",
                 )

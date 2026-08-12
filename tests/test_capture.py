@@ -370,6 +370,43 @@ class CaptureHelpersTest(unittest.TestCase):
             ],
         )
 
+    def test_asset_completion_can_exclude_incidental_host(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            network = root / "network"
+            network.mkdir()
+            page = root / "page.html"
+            page.write_text(
+                '<img src="https://secure.gravatar.com/avatar/a">'
+                '<img src="https://example.com/article.jpg">',
+                encoding="utf-8",
+            )
+            with mock.patch(
+                "util.epitome_lib.assets.download_capture_asset",
+                return_value={
+                    "bytes": 1,
+                    "complete": True,
+                    "error": None,
+                    "record": "record",
+                    "url": "https://example.com/article.jpg",
+                },
+            ) as download:
+                report = complete_capture_assets(
+                    page,
+                    network,
+                    "https://example.com/post",
+                    max_assets=10,
+                    delay_seconds=0,
+                    exclude_hosts={"secure.gravatar.com"},
+                )
+            self.assertEqual(report["excluded"], 1)
+            self.assertEqual(report["attempted"], 1)
+            download.assert_called_once()
+            self.assertEqual(
+                download.call_args.args[0],
+                "https://example.com/article.jpg",
+            )
+
     def test_vimeo_progressive_discovery_prefers_highest_resolution(self):
         html = (
             "<script>window.playerConfig = "

@@ -565,6 +565,7 @@ def complete_capture_assets(
     max_bytes: int = 500 * 1024 * 1024,
     delay_seconds: float = 2,
     timeout: float = 90,
+    exclude_hosts: set[str] | None = None,
 ) -> dict[str, Any]:
     """Recover referenced assets whose complete bodies are absent."""
     if max_assets < 0 or max_bytes < 0 or delay_seconds < 0 or timeout <= 0:
@@ -574,8 +575,14 @@ def complete_capture_assets(
         page_url,
     )
     discovered = discover_capture_assets(page_html, network_dir, page_url)
+    excluded_hosts = {host.lower() for host in (exclude_hosts or set())}
+    excluded = {
+        url
+        for url in discovered
+        if (urlsplit(url).hostname or "").lower() in excluded_hosts
+    }
     already_complete = captured_complete_urls(network_dir)
-    pending = set(discovered - already_complete)
+    pending = set(discovered - already_complete - excluded)
     attempted_urls: set[str] = set()
     results = []
     downloaded_bytes = 0
@@ -627,15 +634,17 @@ def complete_capture_assets(
         "discovered": len(discovered),
         "downloaded_bytes": downloaded_bytes,
         "failed": sum(not item["complete"] for item in results),
+        "excluded": len(excluded),
         "limits": {
             "delay_seconds": delay_seconds,
             "max_assets": max_assets,
             "max_bytes": max_bytes,
             "timeout": timeout,
+            "exclude_hosts": sorted(excluded_hosts),
         },
         "results": results,
         "skipped": sorted(
-            discovered - already_complete - attempted_urls,
+            discovered - already_complete - attempted_urls - excluded,
             key=asset_priority,
         ),
     }
