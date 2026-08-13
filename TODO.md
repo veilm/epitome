@@ -217,6 +217,9 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve all of **Generative Ink** at `generative.ink` as
         an explicitly low-risk source; review its canonical pages, generated
         works, and first-party assets before bounded capture.
+  - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
+        low-risk source; define its canonical page and asset scope and validate
+        a small varied pilot before bounded capture.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
