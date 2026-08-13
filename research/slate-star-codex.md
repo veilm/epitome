@@ -199,3 +199,24 @@ Early, middle, and late isolated replays retain 133,000–696,000 visible
 characters and 155–978 comments with substantial comment text. Their only
 broken images are 40-pixel avatars, and every loaded resource is loopback-only.
 The optimized policy is approved for the active 105-page continuation.
+
+## Seventh bounded batch
+
+The next 105 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786579580-next-105-no-gravatars`
+and the focused continuation at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786603084-next-105-retry`.
+The original run preserved 91 complete pages before a comment-linked MP3 from
+`vivalapanda.moe` streamed indefinitely at playback speed. Capture now applies
+its asset timeout as a wall-clock deadline rather than only a socket-inactivity
+timeout. The retry excluded that incidental stream and completed the remaining
+14 identities. The combined scope has 105 unique URLs, all complete and
+tab-closed with no final page errors.
+
+Primary-image audits are clean across both runs. Early, middle, and late
+isolated replays retain 160,000–283,000 visible characters and 260–402 comments
+with substantial comment text. Their only broken images are 40-pixel avatars,
+and every loaded resource is loopback-only. One malformed bracketed historical
+link also prompted replay normalization to leave invalid URLs inert instead of
+aborting an entire audit. The hardened policy is approved for the active
+120-page continuation.
