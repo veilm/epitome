@@ -214,6 +214,9 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve **Cyborgism Wiki** at `cyborgism.wiki` as an
         explicitly low-risk source; define its canonical page scope and
         validate a small varied pilot before bounded capture.
+  - [ ] Inventory and preserve all of **Generative Ink** at `generative.ink` as
+        an explicitly low-risk source; review its canonical pages, generated
+        works, and first-party assets before bounded capture.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
@@ -287,6 +290,9 @@ deletion-history workflows are explicitly designed.
         all 266 or treating raw top-karma pages as editorial canon.
   - [ ] Define broader coverage for notable authors, comments, revisions, and
         linked media after the curated tiers pass replay validation.
+    - [ ] Add the complete public post scope for Janus at
+          `https://www.lesswrong.com/users/janus-1` as an explicitly low-risk
+          author collection, deduplicated against existing LessWrong captures.
 - [ ] **Nonfiction books**
   - [ ] Start a title and edition inventory, beginning with *The Elephant in the
         Brain*.
