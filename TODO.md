@@ -220,6 +220,10 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
         low-risk source; define its canonical page and asset scope and validate
         a small varied pilot before bounded capture.
+  - [ ] Preserve Eliezer Yudkowsky's fiction page
+        `https://www.yudkowsky.net/other/fiction/the-sword-of-good` and inventory
+        the writing scope linked from `https://yudkowsky.tumblr.com/writing` as
+        explicitly low-risk material, deduplicated against LessWrong.
   - [ ] Preserve Michael Burry's canonical Substack article
         `https://post.substack.com/p/the-ai-revolution-is-here-will-the`
         as an explicitly low-risk page; it is separate from Dwarkesh and Import
@@ -306,6 +310,9 @@ deletion-history workflows are explicitly designed.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.
+    - [ ] Include the requested LessWrong wiki page *Highly Advanced
+          Epistemology 101 for Beginners* and explicitly prioritize the
+          already-inventoried `SqFbMbtxGybdS2gRs` sequence.
 - [ ] **Nonfiction books**
   - [ ] Start a title and edition inventory, beginning with *The Elephant in the
         Brain*.
