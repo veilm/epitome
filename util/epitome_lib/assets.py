@@ -387,6 +387,7 @@ def download_capture_asset(
     _write_json(record_dir / "request-headers.json", request_headers)
     temporary_body = record_dir / "response-body.partial"
     try:
+        deadline = time.monotonic() + timeout
         request = Request(url, headers=request_headers)
         with urlopen(request, timeout=timeout) as response:
             response_headers = {name.lower(): value for name, value in response.headers.items()}
@@ -407,7 +408,14 @@ def download_capture_asset(
             digest = hashlib.sha256()
             size = 0
             with temporary_body.open("wb") as stream:
-                while chunk := response.read(1024 * 1024):
+                while True:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError(
+                            f"asset download exceeded {timeout:g}-second deadline"
+                        )
+                    chunk = response.read1(1024 * 1024)
+                    if not chunk:
+                        break
                     size += len(chunk)
                     if size > remaining_bytes:
                         raise ValueError(

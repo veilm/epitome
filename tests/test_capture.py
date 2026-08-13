@@ -3,6 +3,7 @@ import json
 import tempfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import threading
+import time
 import unittest
 from unittest import mock
 
@@ -11,6 +12,7 @@ from util.epitome_lib.assets import (
     asset_priority,
     complete_body,
     complete_capture_assets,
+    download_capture_asset,
     discover_html_asset_priorities,
     discover_html_assets,
     discover_vimeo_progressive_asset,
@@ -36,15 +38,45 @@ class _AssetHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-Type", "video/mp4")
-        self.send_header("Content-Length", str(len(self.body)))
+        if self.path != "/stream":
+            self.send_header("Content-Length", str(len(self.body)))
         self.end_headers()
-        self.wfile.write(self.body)
+        if self.path == "/stream":
+            try:
+                while True:
+                    self.wfile.write(b"x" * 1024)
+                    self.wfile.flush()
+                    time.sleep(0.01)
+            except (BrokenPipeError, ConnectionResetError):
+                pass
+        else:
+            self.wfile.write(self.body)
 
     def log_message(self, format, *args):
         pass
 
 
 class CaptureHelpersTest(unittest.TestCase):
+    def test_asset_timeout_is_total_deadline_for_continuous_stream(self):
+        server = ThreadingHTTPServer(("127.0.0.1", 0), _AssetHandler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            with tempfile.TemporaryDirectory() as temp:
+                result = download_capture_asset(
+                    f"http://127.0.0.1:{server.server_port}/stream",
+                    Path(temp),
+                    remaining_bytes=1024 * 1024,
+                    timeout=0.05,
+                )
+                self.assertFalse(result["complete"])
+                self.assertIn("deadline", result["error"])
+                self.assertEqual(result["bytes"], 0)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
     def test_read_document_does_not_repeat_full_load_wait(self):
         with mock.patch("util.epitome_lib.capture.cdp.run") as run:
             read_document("capture-session")
