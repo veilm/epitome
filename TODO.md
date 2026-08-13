@@ -211,6 +211,9 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
         first-party documents—before approving a crawl of its much larger link
         graph.
+  - [ ] Inventory and preserve **Cyborgism Wiki** at `cyborgism.wiki` as an
+        explicitly low-risk source; define its canonical page scope and
+        validate a small varied pilot before bounded capture.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
