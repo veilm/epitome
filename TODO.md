@@ -95,7 +95,9 @@ deletion-history workflows are explicitly designed.
           a one-page retry after a transient lost CDP session.
     - [x] Capture and offline-audit the next 75 identities with Gravatar
           completion excluded and zero page failures.
-    - [ ] Continue the active 90-page optimized batch.
+    - [x] Capture and offline-audit the next 90 identities with Gravatar
+          completion excluded and zero page failures.
+    - [ ] Continue the active 105-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

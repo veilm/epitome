@@ -185,3 +185,17 @@ Early, middle, and late isolated replays retain 88,000–796,000 visible
 characters and 101–1,228 comments with substantial comment text. Their only
 broken images are 40-pixel avatars, and every loaded resource is loopback-only.
 The optimized policy is approved for the active 90-page continuation.
+
+## Sixth bounded batch
+
+The next 90 identities are complete at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786563033-next-90-no-gravatars`.
+All 90 manifests are complete and tab-closed with no page errors. Asset
+completion attempted 2,299 non-avatar dependencies, excluded 22,834 Gravatar
+URLs, and recorded 186 dead, blocked, rate-limited, or timed-out outbound
+failures. The primary-image audit is clean on every page.
+
+Early, middle, and late isolated replays retain 133,000–696,000 visible
+characters and 155–978 comments with substantial comment text. Their only
+broken images are 40-pixel avatars, and every loaded resource is loopback-only.
+The optimized policy is approved for the active 105-page continuation.
