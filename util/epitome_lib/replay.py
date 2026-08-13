@@ -205,11 +205,14 @@ def normalize_url(value: str, base_url: str) -> str | None:
     value = value.strip()
     if not value or value.startswith(("data:", "blob:", "javascript:", "#")):
         return None
-    resolved = quote(
-        urljoin(base_url, value),
-        safe=":/?#[]@!$&'()*+,;=%",
-    )
-    parsed = urlsplit(resolved)
+    try:
+        resolved = quote(
+            urljoin(base_url, value),
+            safe=":/?#[]@!$&'()*+,;=%",
+        )
+        parsed = urlsplit(resolved)
+    except ValueError:
+        return None
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return None
     return parsed._replace(fragment="").geturl()

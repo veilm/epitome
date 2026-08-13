@@ -92,6 +92,11 @@ class ReplayTest(unittest.TestCase):
             "https://example.com/media/a%20video%20(1).mp4",
         )
 
+    def test_normalize_url_rejects_malformed_bracketed_host(self):
+        self.assertIsNone(
+            normalize_url("http://[not-an-ipv6-address]/asset", "https://example.com/")
+        )
+
     def test_rewrite_removes_execution_and_localizes_fetches(self):
         with tempfile.TemporaryDirectory() as temp:
             index = self.make_capture(Path(temp))
