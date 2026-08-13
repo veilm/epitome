@@ -220,6 +220,13 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
         low-risk source; define its canonical page and asset scope and validate
         a small varied pilot before bounded capture.
+  - [ ] Preserve Michael Burry's canonical Substack article
+        `https://post.substack.com/p/the-ai-revolution-is-here-will-the`
+        as an explicitly low-risk page; it is separate from Dwarkesh and Import
+        AI.
+  - [ ] Preserve Citrini Research's canonical article
+        `https://www.citriniresearch.com/p/2028gic` as an explicitly low-risk
+        page, with tracking parameters removed.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
@@ -296,6 +303,9 @@ deletion-history workflows are explicitly designed.
     - [ ] Add the complete public post scope for Janus at
           `https://www.lesswrong.com/users/janus-1` as an explicitly low-risk
           author collection, deduplicated against existing LessWrong captures.
+    - [ ] Prioritize the requested LessWrong posts and sequences listed in
+          `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
+          `d3WgHDBAPYYScp5Em` sequence and all captured member posts.
 - [ ] **Nonfiction books**
   - [ ] Start a title and edition inventory, beginning with *The Elephant in the
         Brain*.
