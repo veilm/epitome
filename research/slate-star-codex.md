@@ -259,3 +259,19 @@ Early, middle, and late isolated replays retain 154,000–517,000 visible
 characters and 243–642 comments with substantial comment text. Their only
 broken images are 40-pixel avatars, and every loaded resource is loopback-only.
 The current policy is approved unchanged for the active 165-page continuation.
+
+## Eleventh bounded batch
+
+The next 165 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786700179-next-165-no-gravatars`,
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786734763-next-165-retry`,
+and `/mnt2/capsule/epitome/slate-star-codex/crawls/1786735842-next-165-retry-2`.
+The main run preserved 161 complete pages; four late pages lost temporary CDP
+sessions. The first focused retry recovered two, and the second recovered the
+remaining two. The combined scope is 165/165 complete and tab-closed.
+
+Split primary-image audits are clean across all 165 successful identities.
+Early, middle, and late isolated replays retain 267,000–502,000 visible
+characters and 426–684 comments with substantial comment text. Their only
+broken images are 40-pixel avatars, and every loaded resource is loopback-only.
+The current policy is approved unchanged for the active 180-page continuation.
