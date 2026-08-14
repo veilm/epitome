@@ -99,7 +99,11 @@ deletion-history workflows are explicitly designed.
           completion excluded and zero page failures.
     - [x] Complete and offline-audit the 105-page optimized tranche across its
           preserved 91-page run and focused 14-page streaming-asset recovery.
-    - [ ] Continue the active 120-page optimized batch.
+    - [x] Complete the 120-page optimized tranche across its preserved
+          96-page run and focused 24-page CDP recovery.
+    - [x] Complete and offline-audit the 135-page optimized tranche across its
+          preserved 133-page run and focused two-page recovery.
+    - [ ] Continue the active 150-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

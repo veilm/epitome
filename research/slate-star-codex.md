@@ -220,3 +220,27 @@ and every loaded resource is loopback-only. One malformed bracketed historical
 link also prompted replay normalization to leave invalid URLs inert instead of
 aborting an entire audit. The hardened policy is approved for the active
 120-page continuation.
+
+## Eighth and ninth bounded batches
+
+The next 120 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786605860-next-120-no-gravatars`
+and `/mnt2/capsule/epitome/slate-star-codex/crawls/1786636339-next-120-retry`.
+The main run preserved 96 complete pages before its long-lived CDP context
+began timing out consistently; a fresh browser check remained healthy and the
+focused retry completed all 24 missing identities. The combined scope has 120
+unique complete URLs; superseded failed manifests remain as provenance.
+
+The following 135 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786641864-next-135-no-gravatars`
+and `/mnt2/capsule/epitome/slate-star-codex/crawls/1786669098-next-135-retry`.
+The main run preserved 133 pages. One page lost its temporary CDP session and
+another contained a malformed comment dependency URL; asset completion now
+records `InvalidURL` as a nonfatal failed dependency. Both pages passed on the
+focused retry, yielding 135/135 complete and tab-closed identities.
+
+Primary-image audits are clean across all 135 successful captures. Early,
+middle, and late isolated replays retain 173,000–624,000 visible characters and
+183–856 comments with substantial comment text. Their only broken images are
+40-pixel avatars, and every loaded resource is loopback-only. The current
+policy is approved unchanged for the active 150-page continuation.
