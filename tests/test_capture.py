@@ -77,6 +77,18 @@ class CaptureHelpersTest(unittest.TestCase):
             server.server_close()
             thread.join()
 
+    def test_malformed_asset_url_is_recorded_without_aborting_page(self):
+        with tempfile.TemporaryDirectory() as temp:
+            result = download_capture_asset(
+                "http://example.com/broken link.png",
+                Path(temp),
+                remaining_bytes=1024,
+                timeout=1,
+            )
+            self.assertFalse(result["complete"])
+            self.assertIn("InvalidURL", result["error"])
+            self.assertEqual(result["bytes"], 0)
+
     def test_read_document_does_not_repeat_full_load_wait(self):
         with mock.patch("util.epitome_lib.capture.cdp.run") as run:
             read_document("capture-session")

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 from html.parser import HTMLParser
+from http.client import InvalidURL
 import json
 from pathlib import Path
 import re
@@ -428,7 +429,7 @@ def download_capture_asset(
             metadata["sha256"] = digest.hexdigest()
             if not complete_body(record_dir, metadata):
                 raise ValueError("downloaded response is not a complete declared entity")
-    except (HTTPError, URLError, OSError, ValueError) as error:
+    except (HTTPError, URLError, InvalidURL, OSError, ValueError) as error:
         temporary_body.unlink(missing_ok=True)
         (record_dir / "response-body.bin").unlink(missing_ok=True)
         if isinstance(error, HTTPError):
