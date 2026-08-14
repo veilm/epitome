@@ -103,7 +103,9 @@ deletion-history workflows are explicitly designed.
           96-page run and focused 24-page CDP recovery.
     - [x] Complete and offline-audit the 135-page optimized tranche across its
           preserved 133-page run and focused two-page recovery.
-    - [ ] Continue the active 150-page optimized batch.
+    - [x] Capture and offline-audit the next 150 identities with zero page
+          failures under the hardened policy.
+    - [ ] Continue the active 165-page optimized batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
