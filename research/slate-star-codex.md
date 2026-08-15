@@ -275,3 +275,28 @@ Early, middle, and late isolated replays retain 267,000–502,000 visible
 characters and 426–684 comments with substantial comment text. Their only
 broken images are 40-pixel avatars, and every loaded resource is loopback-only.
 The current policy is approved unchanged for the active 180-page continuation.
+
+## Twelfth bounded batch
+
+The next 180 identities are complete across
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786736538-next-180-no-gravatars`,
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786737496-next-180-diagnostic`,
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786738417-session-lock-validation`,
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786738534-next-180-session-lock-fixed`,
+and
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786746271-next-180-post-reboot`.
+The first attempts exposed a shared CDP session-registry race; after the
+registry was made safe for concurrent writers, 21 identities completed before
+a workstation reboot and the remaining 154 resumed without recapture. The
+combined scope is 180/180 complete and tab-closed. Successful pages attempted
+5,019 non-avatar dependencies, excluded 59,860 Gravatar URLs, and recorded 731
+dead, blocked, rate-limited, or timed-out outbound failures.
+
+Primary-image audits are clean across the first 26 recovered identities. The
+bulk audit process could not finish the 154-page root, so early, middle, and
+late local replays were checked directly instead. They retain
+135,000–872,000 visible characters and 212–892 comments, load no non-loopback
+resources, and preserve substantive images. Their broken image elements are
+the accepted 40-pixel Gravatars plus two 1-pixel Amazon tracking images in the
+middle sample. The current policy is approved unchanged for the active
+195-page continuation.
