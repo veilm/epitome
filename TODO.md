@@ -109,8 +109,9 @@ deletion-history workflows are explicitly designed.
           preserved 161-page run and two focused recovery runs.
     - [x] Complete and offline-audit the 180-page optimized tranche across its
           preserved pre-reboot runs and clean 154-page recovery.
-    - [ ] Continue the active 195-page optimized batch, then finish the final
-          193 identities from the reviewed canonical scope.
+    - [x] Complete and offline-audit the 195-page optimized tranche with zero
+          page failures.
+    - [ ] Finish the final 193 identities from the reviewed canonical scope.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
