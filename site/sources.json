@@ -180,6 +180,14 @@
       "visible_date_min_path_parts": 1,
       "undated_paths": ["/articles.html"],
       "exclude_paths": ["/articles.html"]
+    },
+    {
+      "id": "slate-star-codex", "name": "Slate Star Codex",
+      "archive_directory": "slate-star-codex",
+      "hosts": ["slatestarcodex.com"],
+      "logo_url": "https://slatestarcodex.com/wp-content/uploads/2014/10/ssc-logo.png",
+      "title_suffixes": [" | Slate Star Codex"],
+      "exclude_paths": ["/", "/about", "/archives", "/top-posts"]
     }
   ]
 }
