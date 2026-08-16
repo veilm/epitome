@@ -300,3 +300,19 @@ resources, and preserve substantive images. Their broken image elements are
 the accepted 40-pixel Gravatars plus two 1-pixel Amazon tracking images in the
 middle sample. The current policy is approved unchanged for the active
 195-page continuation.
+
+## Thirteenth bounded batch
+
+The next 195 identities are complete at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786786220-next-195-no-gravatars`.
+All 195 manifests are complete and tab-closed with no page or CDP-session
+errors. Asset completion attempted 4,571 non-avatar dependencies, excluded
+29,162 Gravatar URLs, and recorded 474 dead, blocked, rate-limited, or timed-out
+outbound failures.
+
+Primary-image audits of the first, middle, and final identities are clean.
+Their isolated replays retain 117,000–384,000 visible characters and 177–579
+comments. Broken image elements are limited to the accepted small avatars and
+tracking pixels; there are no substantive broken images and every loaded
+resource is loopback-only. The current policy is approved unchanged for the
+final 193 canonical identities.
