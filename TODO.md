@@ -84,6 +84,12 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the archive, ordinary-post, long-form, political-quiz, and
           comment-heavy open-thread variants through offline replay before any
           Slate Star Codex page batch begins.
+    - [x] Inventory Astral Codex Ten's 1,452 canonical archive identities and
+          validate a five-page archive, ordinary, long, image-rich, and
+          comment-heavy pilot through isolated offline replay.
+    - [ ] Capture Astral Codex Ten in bounded batches, preserving the public
+          preview and paywall boundary for its 282 paid-only identities without
+          bypassing access controls.
     - [x] Capture and offline-audit the first 15 uncaptured identities; repair
           the 52 Gravatar avatars beyond the bounded asset budget.
     - [x] Complete the 30-page deduplicated batch across its original and

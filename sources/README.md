@@ -26,6 +26,9 @@ Current reviewed lists:
   archives are deferred to a later phase;
 - `dwarkesh-podcast.txt`: homepage, public podcast feed, archive/about/podcast
   indexes, and 178 first-party Substack post identities.
+- `astral-codex-ten.txt`: 1,452 canonical post identities from the publication's
+  paginated first-party archive API, including public previews of paid-only
+  posts while excluding account and platform routes.
 
 Example:
 
