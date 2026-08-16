@@ -316,3 +316,22 @@ comments. Broken image elements are limited to the accepted small avatars and
 tracking pixels; there are no substantive broken images and every loaded
 resource is loopback-only. The current policy is approved unchanged for the
 final 193 canonical identities.
+
+## Final canonical batch
+
+The final 193-identity tail is complete. One identity was already present from
+representative validation, four completed at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786845453-final-193-no-gravatars`,
+and the remaining 188 completed at
+`/mnt2/capsule/epitome/slate-star-codex/crawls/1786846194-final-port-2103`.
+The restart's existing-root scan skipped 1,374 already-complete canonical URLs
+and selected exactly 188 missing URLs; all 188 finished complete and
+tab-closed with no page or CDP-session errors. Together these account for all
+1,562 identities in `sources/slate-star-codex.txt`.
+
+The two final capture runs attempted 4,221 non-avatar dependencies, excluded
+11,228 Gravatar URLs, and recorded 168 dead, blocked, rate-limited, or timed-out
+outbound failures. Primary-image audits of early, middle, and final pages are
+clean. Their isolated replays retain 15,000–51,000 visible characters and
+9–101 comments, have no substantive broken images, and load only loopback
+resources. The canonical Slate Star Codex publication scope is complete.
