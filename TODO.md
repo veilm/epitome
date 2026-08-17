@@ -84,41 +84,45 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the archive, ordinary-post, long-form, political-quiz, and
           comment-heavy open-thread variants through offline replay before any
           Slate Star Codex page batch begins.
+    - [x] Capture and offline-audit the first 15 uncaptured Slate identities;
+          repair the 52 Gravatar avatars beyond the bounded asset budget.
+    - [x] Complete the 30-page deduplicated Slate batch across its original and
+          optimized continuation runs; preserve comment text while excluding
+          costly Gravatar completion downloads.
+    - [x] Capture and offline-audit the next 45 Slate identities with Gravatar
+          completion excluded while retaining article images and comment text.
+    - [x] Complete and offline-audit the 60-page optimized Slate tranche,
+          including a one-page retry after a transient lost CDP session.
+    - [x] Capture and offline-audit the next 75 Slate identities with Gravatar
+          completion excluded and zero page failures.
+    - [x] Capture and offline-audit the next 90 Slate identities with Gravatar
+          completion excluded and zero page failures.
+    - [x] Complete the 105-page optimized Slate tranche across its preserved
+          91-page run and focused 14-page streaming-asset recovery.
+    - [x] Complete the 120-page optimized Slate tranche across its preserved
+          96-page run and focused 24-page CDP recovery.
+    - [x] Complete the 135-page optimized Slate tranche across its preserved
+          133-page run and focused two-page recovery.
+    - [x] Capture and offline-audit the next 150 Slate identities with zero
+          page failures under the hardened policy.
+    - [x] Complete the 165-page optimized Slate tranche across its preserved
+          161-page run and two focused recovery runs.
+    - [x] Complete the 180-page optimized Slate tranche across its preserved
+          pre-reboot runs and clean 154-page recovery.
+    - [x] Complete and offline-audit the 195-page optimized Slate tranche with
+          zero page failures.
+    - [x] Finish and offline-audit the final 193-identity Slate tail,
+          completing all 1,562 reviewed canonical identities.
     - [x] Inventory Astral Codex Ten's 1,452 canonical archive identities and
           validate a five-page archive, ordinary, long, image-rich, and
           comment-heavy pilot through isolated offline replay.
     - [ ] Capture Astral Codex Ten in bounded batches, preserving the public
           preview and paywall boundary for its 282 paid-only identities without
           bypassing access controls.
-    - [x] Capture and offline-audit the first 15 uncaptured identities; repair
-          the 52 Gravatar avatars beyond the bounded asset budget.
-    - [x] Complete the 30-page deduplicated batch across its original and
-          optimized continuation runs; preserve comment text while excluding
-          costly Gravatar completion downloads.
-    - [x] Capture and offline-audit the next 45 identities with Gravatar
-          completion excluded while retaining article images and comment text.
-    - [x] Complete and offline-audit the 60-page optimized tranche, including
-          a one-page retry after a transient lost CDP session.
-    - [x] Capture and offline-audit the next 75 identities with Gravatar
-          completion excluded and zero page failures.
-    - [x] Capture and offline-audit the next 90 identities with Gravatar
-          completion excluded and zero page failures.
-    - [x] Complete and offline-audit the 105-page optimized tranche across its
-          preserved 91-page run and focused 14-page streaming-asset recovery.
-    - [x] Complete the 120-page optimized tranche across its preserved
-          96-page run and focused 24-page CDP recovery.
-    - [x] Complete and offline-audit the 135-page optimized tranche across its
-          preserved 133-page run and focused two-page recovery.
-    - [x] Capture and offline-audit the next 150 identities with zero page
-          failures under the hardened policy.
-    - [x] Complete and offline-audit the 165-page optimized tranche across its
-          preserved 161-page run and two focused recovery runs.
-    - [x] Complete and offline-audit the 180-page optimized tranche across its
-          preserved pre-reboot runs and clean 154-page recovery.
-    - [x] Complete and offline-audit the 195-page optimized tranche with zero
-          page failures.
-    - [x] Finish and offline-audit the final 193-identity tail, completing all
-          1,562 reviewed canonical identities.
+    - [x] Capture and offline-audit Astral's first 15 uncaptured identities;
+          primary/all-image audits and representative offline replays pass.
+    - [ ] Continue Astral Codex Ten with the prepared 30-page list in
+          `data/astral-codex-ten-next-30.txt`.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
