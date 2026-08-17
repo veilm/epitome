@@ -121,8 +121,12 @@ deletion-history workflows are explicitly designed.
           bypassing access controls.
     - [x] Capture and offline-audit Astral's first 15 uncaptured identities;
           primary/all-image audits and representative offline replays pass.
-    - [ ] Continue Astral Codex Ten with the prepared 30-page list in
-          `data/astral-codex-ten-next-30.txt`.
+    - [x] Continue Astral Codex Ten with the prepared 30-page list in
+          `data/astral-codex-ten-next-30.txt`; all 30 pages completed and
+          passed primary/all-image audits and representative loopback replay,
+          with dependency failures classified.
+    - [ ] Prepare and deduplicate the next bounded Astral Codex Ten list
+          before starting another capture batch.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
