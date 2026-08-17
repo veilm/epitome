@@ -36,3 +36,27 @@ The pilot approves bounded capture batches. The first 15 uncaptured identities
 are prepared in ignored working data as `data/astral-codex-ten-first-15.txt`;
 it deliberately includes two paid-only posts to validate faithful public
 preview/paywall replay without crossing the access boundary.
+
+## First bounded batch
+
+The prepared first 15 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1786880775-first-15`
+
+All 15 manifests are complete and tab-closed with zero page errors. Asset
+completion attempted 5,262 dependencies. The only two failures are external
+research PDFs returning HTTP 403 from `research.vu.nl` and ResearchGate; they
+are outbound citation dependencies rather than missing Astral-hosted content.
+Primary-image and all-rendered-image audits report zero missing images.
+
+Isolated replay of an early ordinary article retained about 43,000 visible
+characters, the middle Open Thread 444 retained about 429,000, and the late
+Hugging Face article retained about 360,000. A hidden Open Thread 445.5
+preserved its explicit paid-subscriber boundary and public preview. The
+representative replays retained their article/comment content and made no
+production-origin requests.
+
+The first batch is therefore approved. The next 30 uncaptured identities are
+prepared in ignored working data as `data/astral-codex-ten-next-30.txt`; the
+next batch should retain the same access boundary, bounded asset policy, and
+port-2103-only capture workflow.
