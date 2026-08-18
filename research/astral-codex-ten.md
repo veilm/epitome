@@ -139,3 +139,52 @@ are prepared in ignored working data as
 `data/astral-codex-ten-next-60.txt`; the next run must retain the same
 port-2103-only workflow and pass `--exclude-asset-host
 www.youtube-nocookie.com --exclude-asset-host pbs.twimg.com`.
+
+## Fourth bounded batch
+
+The prepared next 60 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787013682-next-60`
+
+All 60 manifests are complete and tab-closed, with zero page errors and a
+zero-failure batch finish. Asset completion attempted 19,325 dependencies;
+19,308 completed, 17 failed, and seven were skipped by the exact-host
+exclusions. The failed dependencies were eight HTTP 403 responses, five HTTP
+404 responses, one HTTP 429 response, one connection reset, and two malformed
+local-file references. They were external citations, stale linked media,
+profile images, or a local-file reference from the source page; none was an
+Astral-hosted primary image. The network ledger records 19 response-body
+errors across 15 pages, consisting of two timed-out prediction embeds, the
+same external citation/image/dependency failures, two missing Pledge assets,
+one Facebook-hosted image denial, one Substack avatar reset, and three
+missing or malformed references on Vibecession. They did not become page
+failures.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The batch recorded no asset result or network
+request from those hosts, and no YouTube or Twitter/X media downloader was
+invoked. Pages containing YouTube embeds therefore retain the source
+reference while avoiding incidental media downloads.
+
+The primary-image audit reported 60 pages with zero missing images. The
+all-rendered-image audit initially found one non-article cover variant on
+The Dilbert Afterlife; a targeted repair recovered 11,677 bytes, and the
+repeat audit reported 60 pages with zero missing images and no remaining
+repair attempts. Loopback replay of paid-preview Hidden Open Thread 410.5
+retained its explicit subscriber boundary, the December links page retained
+326,153 visible characters and 647 images while rewriting its YouTube embeds
+offline, and comment-heavy Open Thread 417 retained 621,362 visible
+characters and 1,208 images. A replay of the Mux-bearing candidate page from
+the preceding batch retained 138,625 visible characters, 348 images, and one
+ready local video element. All four replays made no production-origin
+requests; only expected local platform-CSS or unavailable-resource 404s were
+observed.
+
+Together with the first three production batches, 150 previously uncaptured
+identities are now captured and audited, in addition to the five-page pilot.
+The next 75 deduplicated identities are prepared in ignored working data as
+`data/astral-codex-ten-next-75.txt`; the next run must retain the same
+port-2103-only workflow, public/paywall boundary, bounded asset policy, and
+exact YouTube/Twitter host exclusions.
