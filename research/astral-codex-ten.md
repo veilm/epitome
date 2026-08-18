@@ -96,3 +96,46 @@ boundary, and the media page retained one video element.
 Together with the first bounded batch, 45 previously uncaptured identities
 are now captured and audited. The next batch must begin with a deduplicated,
 explicitly prepared list; this completed list should not be grown in place.
+
+## Third bounded batch
+
+The prepared next 45 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1786978416-next-45`
+
+All 45 manifests are complete and tab-closed, with zero page errors and a
+zero-failure batch finish. Asset completion attempted 13,439 dependencies;
+the four failures are a malformed Substack avatar fetch (HTTP 400), a
+90-second timeout for an external `i.postimg.cc` image, an external TLS
+handshake failure, and a transient DNS failure for a Substack avatar. None is
+an Astral-hosted primary image.
+
+The network ledger records six response-body errors across five pages: one
+HTTP 400 on Use AI This Election, two media responses on The Types Of
+Candidate You Find In The California Gubernatorial Race, one unknown response
+on Open Thread 431, one redirect/dependency response on Links For April 2026,
+and one unknown response on Open Thread 427. They did not become page
+failures.
+
+Generic asset completion also encountered two small YouTube embed documents
+(about 127 KB and 129 KB) and one 229 KB `pbs.twimg.com` image from article
+embeds. No YouTube video or Twitter/X post/media downloader was invoked, and
+the Substack-hosted `twitter.white.svg` share icons are not Twitter-hosted
+content. The next capture explicitly excludes the observed exact hosts so
+these incidental dependencies are not fetched again.
+
+Primary-image and all-rendered-image audits both report 45 pages with zero
+missing images and no repair attempts. Loopback replay of paid-preview Hidden
+Open Thread 435.5 retained its explicit subscriber boundary; Open Thread 435
+retained about 99,500 visible characters and 215 images; the Mux-bearing
+candidate article retained about 138,600 characters, 348 images, and one
+video; Links For April 2026 retained about 250,700 characters and 416 images;
+and the late paid-preview Lines Composed In A Fake Sequoia Forest retained
+its public boundary. All five replays made no production-origin requests.
+
+Together with the first two bounded batches, 90 previously uncaptured
+identities are now captured and audited. The next 60 deduplicated identities
+are prepared in ignored working data as
+`data/astral-codex-ten-next-60.txt`; the next run must retain the same
+port-2103-only workflow and pass `--exclude-asset-host
+www.youtube-nocookie.com --exclude-asset-host pbs.twimg.com`.
