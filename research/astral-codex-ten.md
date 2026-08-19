@@ -188,3 +188,67 @@ The next 75 deduplicated identities are prepared in ignored working data as
 `data/astral-codex-ten-next-75.txt`; the next run must retain the same
 port-2103-only workflow, public/paywall boundary, bounded asset policy, and
 exact YouTube/Twitter host exclusions.
+
+## Fifth bounded batch
+
+The prepared next 75 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787064294-next-75`
+
+All 75 manifests are complete and tab-closed, with zero page failures and a
+zero-failure batch finish. The aggregate contains 42,854 requests, 42,531
+response bodies, 1,508,157,166 response bytes, and 17 response-body errors.
+Asset completion attempted 22,190 dependencies: 22,173 completed, 17 failed,
+and 14 were skipped by the exact-host exclusions. The 17 response/asset
+failures are the same dependency failures and classify as follows:
+
+* page 15 Liverpool repository PDF: read timeout;
+* page 18 Saismaran PDF: HTTP 404;
+* page 27 Wikimedia PDF: HTTP 429;
+* page 31 IJMET PDF: TLS certificate validation failure, and BSWA PDF: HTTP
+  403;
+* page 40 Rutgers PDF: HTTP 404;
+* page 41 UT Austin PDF: HTTP 404;
+* page 47 Independent PDF: HTTP 403, and Independent.ie image: HTTP 404;
+* page 49 MIT PDF: TLS certificate validation failure;
+* page 55 Sheldrake PDF: HTTP 403;
+* page 57 ResearchGate PDF: HTTP 403;
+* page 60 RERO PDF: HTTP 410;
+* page 61 Harvard PDF: HTTP 504;
+* page 62 Alnylam PDF: HTTP 404;
+* page 66 Harvard PDF: HTTP 504; and
+* page 73 consc.net PDF: HTTP 522.
+
+These are external citation PDFs or linked images, not Astral-hosted primary
+content. The aggregate status counts were 200=42,609, 204=153, 401=75,
+403=4, 404=5, 410=1, 429=1, 504=2, 522=1, and unknown=3. No page manifest
+failed.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The batch recorded 14 exclusion decisions and no
+network host or completed asset result from any excluded host. No YouTube or
+Twitter/X downloader was invoked. This batch had no activated interactive
+media (`discovered=0`, `embedded_urls=0`, `activated=0`); a media/reference
+page retained its textual YouTube references and one Mux-hosted image
+reference without fetching those services.
+
+Primary and all-rendered-image audits both report 75 pages with zero missing
+images and no repair attempts. Loopback replays included an early ordinary
+page (180,188 visible characters and 300 loaded images), the
+YouTube/Mux-reference page (184,591 characters and 287 loaded images), a
+comment-heavy page (357,070 characters and 373 loaded images), a links-heavy
+page (596,752 characters and 954 loaded images), and late and early
+paid-preview pages (338 and 335 characters respectively, each retaining its
+explicit subscriber boundary and 2 loaded images). The five-page combined
+trace contained 695 requests: 682 local 200 responses and 13 local 404s, all
+to `127.0.0.1:8018`; the separate early paid-preview trace was also entirely
+loopback. No replay made a production-origin request.
+
+Together with the first four production batches, 225 previously uncaptured
+identities are now captured and audited, in addition to the five-page pilot.
+The next 90 deduplicated identities are prepared in ignored working data as
+`data/astral-codex-ten-next-90.txt`; the next run must retain the same
+port-2103-only workflow, public/paywall boundary, bounded asset policy, and
+exact YouTube/Twitter host exclusions.
