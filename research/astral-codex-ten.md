@@ -252,3 +252,75 @@ The next 90 deduplicated identities are prepared in ignored working data as
 `data/astral-codex-ten-next-90.txt`; the next run must retain the same
 port-2103-only workflow, public/paywall boundary, bounded asset policy, and
 exact YouTube/Twitter host exclusions.
+
+## Sixth bounded batch
+
+The prepared next 90 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787123812-next-90`
+
+All 90 manifests are complete and tab-closed, with zero page failures and a
+zero-failure batch finish. The aggregate contains 51,107 requests, 50,712
+response bodies, 1,497,889,366 response bytes, and 32 response-body errors.
+Asset completion discovered 76,450 dependencies, attempted 26,164, completed
+26,134, failed 31, skipped 14 by exact-host exclusion, and downloaded
+648,661,712 bytes. The 31 asset-completion failures classify as follows:
+
+* page 10 Benning Army PDF: read timeout;
+* pages 14 Discord PNG and imgcdn PNG, 15 ACA PDF, 22 ACLUM PDF, 25 UVA
+  lactose PDF, 31 Core PDF and UN genocide-convention PDF, 41 Supreme Court
+  transcript PDF, pages 44 CRS case-story, annual-report, and handbook PDFs,
+  page 46 PVAL PDF, page 76 Democrats platform PDF, and page 77 NICJR PDF:
+  HTTP 404 (14 total);
+* page 17 RAND PDF, page 36 PhilPapers PDF, page 45 IMF PDF, page 47
+  Tearfund PDF, page 50 Johns Hopkins PDF, page 65 Justia filing PDF, and
+  page 70 ABA PDF: HTTP 403 (7 total);
+* page 17 Syracuse PDF, page 25 BWH PDF, and page 51 Silverchair PDF: TLS
+  hostname/certificate validation failures (3 total);
+* page 24 Harvard PDF: HTTP 504;
+* page 31 Wikimedia PDF and page 64 Wikimedia PDF: HTTP 429 (2 total);
+* page 45 DrKnow PDF: HTTP 522;
+* page 52 Evidencias en Pediatria PDF: HTTP 502; and
+* page 88 Meetups Everywhere Spring 2025 Times: an internal
+  `ValueError: Invalid IPv6 URL` while parsing a dependency URL, with zero
+  asset attempts for that page.
+
+These are external citation or linked-media dependencies, or one malformed
+dependency URL; none is an Astral-hosted primary image. The network ledger
+records 32 response-body errors across 23 pages. Its explicit error/status
+classes are 14 HTTP 404, seven HTTP 403, two HTTP 429, one HTTP 504, one HTTP
+522, one HTTP 502, and four unknown responses. The links-heavy Mux page also
+has four 206 range responses and one 307 redirect in its network status ledger;
+these are separate from the response-body error total. No page manifest
+failed.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The batch recorded 14 exclusion decisions and no
+asset-completion result from an excluded host. Three page-level network
+requests used `www.youtube-nocookie.com` as incidental source-page
+dependencies; no YouTube or Twitter/X downloader was invoked and no excluded
+host was intentionally fetched as media. Interactive-media ledgers for all
+90 pages report zero discovered, embedded, or activated interactive media.
+
+Primary and all-rendered-image audits both report 90 pages with zero missing
+images, zero repair attempts, and zero repair failures. Loopback replays used
+the local archive server on port 8019 and included paid-preview Hidden Open
+Thread 390.5 (336 visible characters, 2/2 images, explicit paywall), ordinary
+My Heart Of Hearts (646,142 visible characters, 1,133/1,133 images),
+comment-heavy Highlights From The Comments On Missing Heritability (143,101
+characters, 149/149 images), links-heavy Links For July 2025 (325,077
+characters, 617/617 images), and the Mux/media-reference Links For April 2025
+(597,933 characters, 1,003/1,003 images, one local video element). The
+combined trace contained 1,252 request records: 1,228 local 200 responses,
+18 local 404s, and six local 206 range responses, all from `127.0.0.1:8019`;
+no replay made a production-origin request.
+
+Together with the first five production batches, 315 previously uncaptured
+identities are now captured and audited, in addition to the five-page pilot.
+The next 105 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-105.txt`, deduplicated against the pilot and all
+six production batches. The next run must retain the same port-2103-only
+workflow, public/paywall boundary, bounded asset policy, and exact
+YouTube/Twitter host exclusions.
