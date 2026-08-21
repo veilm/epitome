@@ -324,3 +324,63 @@ The next 105 identities are prepared in ignored working data as
 six production batches. The next run must retain the same port-2103-only
 workflow, public/paywall boundary, bounded asset policy, and exact
 YouTube/Twitter host exclusions.
+
+## Seventh bounded batch
+
+The prepared next 105 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787194393-next-105`
+
+All 105 manifests are complete and tab-closed, with zero page failures,
+zero nonzero network-log return codes, and a zero-failure batch finish. The
+aggregate contains 64,288 requests, 63,788 response bodies,
+1,711,202,613 response bytes, and 74 response-body errors. Network status
+counts are 200=63,900, 204=211, 308=24, 400=1, 401=105, 403=14, 404=14,
+405=1, 429=3, 503=1, 504=1, and unknown=13. Asset completion discovered
+101,369 dependencies, found 28,515 already-complete entries, attempted
+33,215, completed 33,167, failed 48, skipped two by exact-host exclusion,
+and downloaded 697,690,489 bytes. Interactive-media ledgers report zero
+discovered, embedded, activated, or completed interactive media.
+
+The 48 asset-completion failures classify as two connection resets, 14
+HTTP 404s, 14 HTTP 403s, two TLS validation failures, one HTTP 400, eight
+DNS/no-address failures, one timeout, three HTTP 429s, one HTTP 504, one
+HTTP 503, and one HTTP 405. They are external citation PDFs, linked images
+or media, or malformed external dependencies; no Astral-hosted primary
+image failed. The exact per-page records remain in the bounded root. The
+74 response-level records are distributed across pages 5, 6, 10, 12, 31,
+32, 36, 38, 40, 44, 46, 52, 54, 56, 57, 58, 65, 66, 70, 72, 73, 74, 77,
+81, 85, 86, 87, 88, 90, 92, 96, 101, and 104: 24 HTTP 308 redirect-body
+records, 14 HTTP 403s, 14 HTTP 404s, three HTTP 429s, and one each of
+HTTP 400, 405, 503, and 504, with the remainder statusless/unknown. No
+page manifest failed.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. There were two exclusion decisions and no
+excluded-host asset result. One page-level request used
+`www.youtube-nocookie.com` as an incidental source-page dependency; no
+YouTube or Twitter/X downloader was invoked and no excluded host was
+intentionally fetched as media.
+
+Primary and all-rendered-image audits both report 105 pages with zero
+missing images, zero repair attempts, and zero repair failures. Loopback
+replays used the local archive server on port 8020 and included paid-preview
+Hidden Open Thread 373.5 (337 visible characters, 2/2 images, explicit
+paywall), ordinary Misophonia (195,062 characters, 286/286 images),
+comment-heavy Highlights From The Comments On Tegmark (430,614 characters,
+577/577 images), links-heavy Links For February 2025 (485,186 characters,
+1,007/1,007 images), and the media/reference Model City Monday 2/3/25
+(117,595 characters, 285/285 images, no activated video). The combined
+trace contained 727 request records: 719 local 200 responses and eight
+local 404s, all from `127.0.0.1:8020`; no replay made a production-origin
+request and the replay tab was closed afterward.
+
+Together with the first six production batches, 420 previously uncaptured
+identities are now captured and audited, in addition to the five-page pilot.
+The next 120 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-120.txt`, deduplicated against the pilot and all
+seven production batches. The next run must retain the same port-2103-only
+workflow, public/paywall boundary, bounded asset policy, and exact
+YouTube/Twitter host exclusions.
