@@ -384,3 +384,52 @@ The next 120 identities are prepared in ignored working data as
 seven production batches. The next run must retain the same port-2103-only
 workflow, public/paywall boundary, bounded asset policy, and exact
 YouTube/Twitter host exclusions.
+
+## Eighth bounded batch
+
+The prepared next 120 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787278704-next-120`
+
+All 120 manifests are complete and tab-closed, with zero page failures and a
+zero-failure batch finish. The aggregate contains 76,043 requests, 75,519
+response bodies, 1,948,683,397 response bytes, and 39 response-body errors.
+Asset completion discovered 111,258 dependencies, found 31,919
+already-complete entries, attempted 41,162, completed 41,124, failed 38,
+recorded 18 exact-host exclusions, and downloaded 784,005,253 bytes. The 38
+asset-completion failures classify as 19 HTTP 404s, 10 HTTP 403s, one each
+of HTTP 503, 500, 502, and 410, one read timeout, one DNS/no-address error,
+one connection reset, one TLS hostname-validation failure, and one DNS
+name-resolution error. They are external citation PDFs, linked images, or
+other dependencies; no Astral-hosted primary image failed.
+
+The response-level records are likewise dependency outcomes rather than page
+failures. Their status counts include 19 HTTP 404s, 10 HTTP 403s, one each of
+HTTP 410, 500, 502, and 503, and five statusless/unknown errors, alongside
+the successful and ordinary platform responses. Interactive-media ledgers
+for all 120 pages report zero discovered, embedded, activated, or completed
+interactive media. The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`; no excluded-host URL appears in an asset result,
+and no YouTube or Twitter/X downloader was invoked.
+
+Primary and all-rendered-image audits both report 120 pages with zero
+missing images, zero repair attempts, and zero repair failures. Loopback
+replays used the local archive server on port 8021 and covered ordinary
+Ballots Everywhere (17,519 visible characters, 49/49 images), comment-heavy
+Open Thread 347 (639,359 characters, 1,103/1,103 images), links-heavy Links
+For September 2024 (678,019 characters, 1,058/1,058 images), paid-preview
+Hidden Open Thread 338.5 (338 characters, 2/2 images, explicit paywall), and
+the YouTube-reference Your Book Review: Autobiography Of Yukichi Fukuzawa
+(91,437 characters, 155/155 images). The combined trace contained 625
+request records: 611 local 200 responses and 14 local 404s, all from
+`127.0.0.1:8021`; no replay made a production-origin request.
+
+Together with the first eight production batches, 540 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+next 135 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-135.txt`, deduplicated against the pilot and all
+eight production batches. The next run must retain the same port-2103-only
+workflow, public/paywall boundary, bounded asset policy, and exact
+YouTube/Twitter host exclusions.
