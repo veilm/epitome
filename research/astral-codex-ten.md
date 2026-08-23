@@ -433,3 +433,57 @@ next 135 identities are prepared in ignored working data as
 eight production batches. The next run must retain the same port-2103-only
 workflow, public/paywall boundary, bounded asset policy, and exact
 YouTube/Twitter host exclusions.
+
+## Ninth bounded batch
+
+The prepared next 135 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787383071-next-135`
+
+All 135 manifests are complete and tab-closed, with zero page failures and a
+zero-failure batch finish. The aggregate contains 80,675 requests,
+79,825 response bodies, 2,482,436,863 response bytes, and 285 response-body
+errors. The status ledger includes 16 HTTP 403s, 17 HTTP 404s, three HTTP
+429s, two HTTP 500s, and one each of HTTP 400, 418, 502, and 520, with 11
+unknown-status records; the large body-error count includes 233
+response-body-budget failures on Seen In The Bay. These are dependency or
+response-body outcomes, not capture-level page failures.
+
+Asset completion discovered 110,000 dependencies, found 33,350
+already-complete entries, attempted 43,743, completed 43,459, failed 284,
+skipped 32,897 already-accounted-for entries, recorded 10 exact-host
+exclusions, and downloaded 1,205,112,090 bytes. The 284 asset-completion
+failures classify as 233 response-body-budget errors on Seen In The Bay;
+16 HTTP 403s; 15 HTTP 404s; three HTTP 429s; two HTTP 500s; one each of
+HTTP 400, 418, 502, and 520; three TLS certificate failures; four connection
+resets; three timeouts; and one DNS/URL-resolution failure. They are linked
+external citations, images, or other dependencies; no Astral-hosted primary
+image failed.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The 10 exclusion decisions occurred on five
+pages; no excluded-host URL appears in an asset result. Interactive-media
+ledgers for all 135 pages report zero discovered, embedded, activated, or
+completed interactive media. No YouTube or Twitter/X downloader was invoked.
+
+Primary and all-rendered-image audits both report 135 pages with zero missing
+images, zero repair attempts, and zero repair failures. Loopback replays used
+the local archive server on port 8022 and included public The Mystery Of
+Internet Survey IQs (201,729 visible characters, 356/356 images),
+comment-heavy Open Thread 320 (357,893 characters, 702/702 images),
+links-heavy Links For February 2024 (302,097 characters, 585/585 images),
+paid-preview Hidden Open Thread 321 (336 characters, 2/2 images), and the
+YouTube-reference Book Review Contest Rules 2024 (29,570 characters,
+110/110 images). The combined trace contained 657 request records: 647
+local 200 responses and 10 local 404s, all from `127.0.0.1:8022`; no replay
+made a production-origin request.
+
+Together with the first nine production batches, 675 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+next 150 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-150.txt`, deduplicated against the pilot and all
+nine production batches. The next run must retain the same port-2103-only
+workflow, public/paywall boundary, bounded asset policy, and exact
+YouTube/Twitter host exclusions.
