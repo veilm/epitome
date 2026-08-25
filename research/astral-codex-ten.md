@@ -487,3 +487,65 @@ next 150 identities are prepared in ignored working data as
 nine production batches. The next run must retain the same port-2103-only
 workflow, public/paywall boundary, bounded asset policy, and exact
 YouTube/Twitter host exclusions.
+
+## Tenth bounded batch
+
+The prepared next 150 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787494909-next-150`
+
+All 150 manifests are complete and tab-closed, with zero page failures and a
+zero-failure batch finish. The aggregate contains 89,073 requests,
+88,372 response bodies, 2,309,212,019 response bytes, and 86 response-body
+errors across 47 pages. Among error-bearing pages, the status ledger contains
+47 HTTP 404s, 15 HTTP 403s, two HTTP 400s, one HTTP 500, one HTTP 503, and
+14 unknown-status records; six additional response-body records have no
+paired error status. These are dependency/body outcomes rather than page
+capture failures.
+
+Asset completion discovered 120,545 dependencies, found 36,850
+already-complete entries, attempted 48,542, completed 48,465, failed 77,
+skipped 35,142 already-accounted-for entries, recorded 11 exact-host
+exclusions, and downloaded 911,157,927 bytes. The 77 asset-completion
+failures classify as 44 HTTP 404s, 15 HTTP 403s, two HTTP 400s, one HTTP 500,
+one HTTP 503, seven connection resets, one read timeout, and six DNS/name
+resolution failures. The five primary-image repair attempts all returned
+HTTP 404 with zero bytes, confirming that those historical image URLs are no
+longer available.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The 11 exclusion decisions produced no excluded-host
+asset result. The all-rendered-image audit additionally identified two
+Twitter-host avatar variants as intentionally excluded dependencies; no
+YouTube or Twitter/X downloader was invoked. Interactive-media ledgers for
+all 150 pages report zero discovered, embedded, activated, or completed
+interactive media.
+
+The primary image audit found 150 pages with five missing images on three
+pages. The all-rendered-image audit found seven missing images on five pages:
+the same five unavailable HTTP-404 images plus two excluded Twitter-host
+avatar variants. No repair succeeded or altered the public/paywall boundary.
+
+Bounded loopback replays used the local archive server on port 8023 and
+covered early Open Thread 290 (369,957 visible characters, 672/672 images),
+paid-preview Hidden Open Thread 289.5 (338 visible characters, 2/2 images,
+the preserved `.paywall` marker and paid-subscriber text), comment-heavy
+Highlights From The Comments On Putin (268,965 characters, 298/298 images,
+one offline media placeholder), links-heavy Links For August 2023 (433,058
+characters, 801/801 images), media/reference Your Book Review: The Rise And
+Fall Of The Third Reich (207,646 characters, 297/297 images), a middle
+Hypergamy review preview (373 characters, 2/2 images), and late Berkeley
+Meetup On Tuesday (37,915 characters, 96/96 images). The trace contained 890
+request records, all from `127.0.0.1:8023` (870 local 200 responses, 19
+intentional local 404s, and one local 400 route probe); no replay made a
+production-origin request, and the replay tab was closed afterward.
+
+Together with the first ten production batches, 825 bounded production pages
+are now captured and audited, in addition to the five-page pilot. The next
+165 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-165.txt`, with 165 unique URLs and zero overlap
+against the pilot and all ten completed production batches. The next run must
+retain the same port-2103-only workflow, public/paywall boundary, bounded
+asset policy, and exact YouTube/Twitter host exclusions.
