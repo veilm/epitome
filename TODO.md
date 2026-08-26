@@ -190,6 +190,15 @@ deletion-history workflows are explicitly designed.
     - [x] Prepare and deduplicate the next 165-page Astral Codex Ten list in
           `data/astral-codex-ten-next-165.txt` against the pilot and all ten
           completed production batches.
+    - [x] Capture and offline-audit Astral Codex Ten's prepared 165-page
+          continuation in `data/astral-codex-ten-next-165.txt`; all 165 pages
+          completed with zero page failures, classified 370 response-body and
+          353 asset-completion outcomes, recorded 11 exact-host exclusions,
+          classified one unavailable primary image, and passed representative
+          local-only loopback replays.
+    - [x] Prepare and deduplicate the next 180-page Astral Codex Ten list in
+          `data/astral-codex-ten-next-180.txt` against the pilot and all eleven
+          completed production batches.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video

@@ -549,3 +549,60 @@ are now captured and audited, in addition to the five-page pilot. The next
 against the pilot and all ten completed production batches. The next run must
 retain the same port-2103-only workflow, public/paywall boundary, bounded
 asset policy, and exact YouTube/Twitter host exclusions.
+
+## Eleventh bounded batch
+
+The prepared next 165 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787620501-next-165`
+
+All 165 manifests are complete and tab-closed, with zero page failures and
+`finish.failures=0`. The aggregate contains 93,417 requests, 92,364 response
+bodies, 2,562,512,851 response bytes, and 370 response-body errors across 89
+pages. These are dependency/body outcomes rather than capture-level page
+failures.
+
+Asset completion discovered 127,288 dependencies, attempted 52,182,
+completed 51,829, failed 353, skipped 37,881 already-accounted-for entries,
+recorded 37,214 already-complete entries, recorded 11 exact-host exclusions,
+and downloaded 1,081,963,939 bytes. The 353 asset-completion failures
+classify as 282 HTTP 403s, 42 HTTP 404s, four download timeouts, four DNS
+failures for `-5`, four read-operation timeouts, three DNS failures for `-2`,
+two SSL hostname mismatches, two HTTP 504s, two HTTP 429s, two HTTP 400s, and
+one each of an SSL unexpected-EOF, connection refusal, 90-second asset
+deadline, HTTP 503, HTTP 410, and blank HTTP 404 record. The exact
+asset-result records retain the individual URLs and error text.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The 11 exclusion decisions occurred on eight pages;
+no excluded-host URL appears in an asset result. Interactive-media ledgers
+for all 165 pages report zero discovered, embedded, activated, or completed
+interactive media. No YouTube or Twitter/X downloader was invoked.
+
+The primary and all-rendered-image audits both found one missing image on
+`https://www.astralcodexten.com/p/links-for-july-095`,
+`https://pbs.substack.com/media/FXHJWA3XwAEqSSo.jpg`. The bounded repair
+attempt returned HTTP 404 with zero bytes, so this is an unavailable upstream
+image rather than a local capture omission; all other primary/all-rendered
+images passed.
+
+Bounded loopback replays used the local archive server on port 8024 and
+covered paid-preview Hidden Open Thread 261.5 (337 visible characters,
+paywall marker, 2/2 images), comment-heavy Highlights From The Comments On
+Semaglutide (138/138 images), large Open Thread 247 (1,088/1,088 images),
+media/reference Your Book Review: The Righteous Mind (333/333 images), the
+known missing-image Links For July (488/489 images), and late Book Review: The
+Man From The Future (461/461 images). The trace contained 873 request
+metadata records, 824 local 200 responses and 49 local 404s, all from
+`127.0.0.1:8024`; no replay made a production-origin request and the replay
+tab was closed afterward.
+
+Together with the first eleven production batches, 990 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+next 180 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-180.txt`, deduplicated against the pilot and all
+eleven completed production batches. The next run must retain the same
+port-2103-only workflow, public/paywall boundary, bounded asset policy, and
+exact YouTube/Twitter host exclusions.
