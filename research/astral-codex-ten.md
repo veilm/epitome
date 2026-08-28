@@ -606,3 +606,54 @@ next 180 identities are prepared in ignored working data as
 eleven completed production batches. The next run must retain the same
 port-2103-only workflow, public/paywall boundary, bounded asset policy, and
 exact YouTube/Twitter host exclusions.
+
+## Twelfth bounded batch
+
+The prepared next 180 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787757242-next-180`
+
+All 180 manifests are complete and tab-closed, with zero page failures and
+`finish.failures=0`. The aggregate contains 95,232 requests, 93,871 response
+bodies, 2,241,483,440 response bytes, and 638 response-body errors across 106
+pages. These are dependency/body outcomes rather than capture-level page
+failures.
+
+Asset completion discovered 125,692 dependencies, attempted 54,825,
+completed 54,205, failed 620, recorded 36,059 already-complete entries,
+recorded 23 exact-host exclusions, and downloaded 677,840,116 bytes. The 620
+asset-completion failures were classified across HTTP, timeout, DNS, reset,
+disconnect, certificate, and connection errors in the per-asset records.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The 23 exclusion decisions produced no
+excluded-host asset result, including no completed or incomplete result URL.
+Interactive-media ledgers for all 180 pages report zero discovered, embedded,
+activated, or completed interactive media. No YouTube or Twitter/X downloader
+was invoked, and incidental media-host variants remained outside the asset
+result set.
+
+The primary image audit found eight missing images on four pages. The
+all-rendered-image audit found ten missing images on six pages: the same eight
+unavailable primary images plus two Twitter-host avatar variants covered by
+the exact exclusion policy. No repair was attempted or needed to preserve the
+public/paywall boundary; the missing dependencies remain classified as
+upstream unavailable or intentionally excluded.
+
+Bounded local loopback replays covered paid-preview, comment-heavy,
+media/reference, and two known missing-image pages. The replay metrics
+preserved the paid-preview marker and subscriber boundary, retained the large
+comment and image bodies, and showed the expected intentional local 404s for
+missing dependencies. Every replay had zero production-origin requests; the
+temporary archive server and replay tab were closed afterward.
+
+Together with the first eleven production batches, 1,170 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+next 195 identities are prepared in ignored working data as
+`data/astral-codex-ten-next-195.txt`, with 195 unique URLs and zero overlap
+against the pilot and all twelve completed production batches. The next run
+must retain the same port-2103-only workflow, public/paywall boundary, bounded
+asset policy, exact YouTube/Twitter host exclusions, and incidental-media
+policy.
