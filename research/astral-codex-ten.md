@@ -657,3 +657,63 @@ against the pilot and all twelve completed production batches. The next run
 must retain the same port-2103-only workflow, public/paywall boundary, bounded
 asset policy, exact YouTube/Twitter host exclusions, and incidental-media
 policy.
+
+## Thirteenth bounded batch
+
+The prepared next 195 uncaptured identities completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1787909332-next-195`
+
+All 195 manifests are complete and tab-closed, with zero page failures and
+`finish.failures=0`. The aggregate contains 98,708 requests, 97,280 response
+bodies, 2,484,698,186 response bytes, and 632 response-body errors across 117
+pages. These are dependency/body outcomes rather than capture-level page
+failures; the complete page records also retain the per-status classifications.
+
+Asset completion discovered 123,421 dependencies, attempted 57,857,
+completed 57,247, failed 610, skipped 29,393 entries, recorded 36,162
+already-complete entries, recorded 11 exact-host exclusions, and downloaded
+844,554,640 bytes. The 610 asset-completion failures were classified in the
+per-asset records: 446 HTTP 403s, 106 HTTP 404s, 11 download timeouts, ten
+DNS failures for `-2`, six HTTP 400s, six HTTP 502s, four HTTP 410s, four DNS
+failures for `-5`, two HTTP 504s, two HTTP 520s, and 13 one-off HTTP,
+connection, timeout, redirect, and TLS outcomes. There were 57,857 exact
+asset-result records, of which 57,247 completed and 610 remained incomplete.
+
+The exact asset-completion exclusions were
+`www.youtube-nocookie.com`, `www.youtube.com`, `youtube.com`,
+`pbs.twimg.com`, `video.twimg.com`, `twitter.com`, `www.twitter.com`,
+`x.com`, and `www.x.com`. The 11 exclusion decisions produced no excluded-host
+asset result, including no completed or incomplete result URL. Interactive-
+media ledgers for all 195 pages report zero discovered, embedded, activated,
+or completed interactive media. No YouTube or Twitter/X downloader was
+invoked, and incidental media-host variants remained outside the asset result
+set.
+
+The primary image audit found four missing images on two pages: one on
+`https://www.astralcodexten.com/p/links-for-june` and three on
+`https://www.astralcodexten.com/p/links-for-may`. The all-rendered-image audit
+found 12 missing images on nine pages: those four unavailable primary images,
+one additional unavailable article image, and seven Twitter-host avatar
+variants covered by the exact exclusion policy. No repair was attempted; the
+missing dependencies remain classified as upstream unavailable or intentionally
+excluded.
+
+Bounded local loopback replays covered paid-preview Hidden Open Thread 169.5
+(337 visible characters, paywall marker, 2/2 images), media/reference Pascalian
+Medicine (299,740 body characters, 521/521 images, two media nodes),
+comment-heavy Open Thread 170 (338,144 body characters, 614/614 images and
+6,690 comment-like nodes), and the known missing-image Links For June and
+Links For May (696/697 and 415/418 images respectively, reproducing the
+intentional local 404s). The replay network logs contained 643 metadata
+records, all from `127.0.0.1:8025`, with zero nonlocal URLs; the replay tab
+and temporary archive server were closed afterward.
+
+Together with the first twelve production batches, 1,365 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+remaining source remainder is prepared in ignored working data as
+`data/astral-codex-ten-next-210.txt`, with 84 unique URLs and zero overlap
+against the pilot and all thirteen completed production batches. The final
+run must retain the same port-2103-only workflow, public/paywall boundary,
+bounded asset policy, exact YouTube/Twitter host exclusions, and
+incidental-media policy.
