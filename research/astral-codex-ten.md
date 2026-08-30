@@ -649,7 +649,7 @@ comment and image bodies, and showed the expected intentional local 404s for
 missing dependencies. Every replay had zero production-origin requests; the
 temporary archive server and replay tab were closed afterward.
 
-Together with the first eleven production batches, 1,170 bounded production
+Together with the first twelve production batches, 1,170 bounded production
 pages are now captured and audited, in addition to the five-page pilot. The
 next 195 identities are prepared in ignored working data as
 `data/astral-codex-ten-next-195.txt`, with 195 unique URLs and zero overlap
@@ -709,7 +709,7 @@ intentional local 404s). The replay network logs contained 643 metadata
 records, all from `127.0.0.1:8025`, with zero nonlocal URLs; the replay tab
 and temporary archive server were closed afterward.
 
-Together with the first twelve production batches, 1,365 bounded production
+Together with the first thirteen production batches, 1,365 bounded production
 pages are now captured and audited, in addition to the five-page pilot. The
 remaining source remainder is prepared in ignored working data as
 `data/astral-codex-ten-next-210.txt`, with 84 unique URLs and zero overlap
@@ -717,3 +717,64 @@ against the pilot and all thirteen completed production batches. The final
 run must retain the same port-2103-only workflow, public/paywall boundary,
 bounded asset policy, exact YouTube/Twitter host exclusions, and
 incidental-media policy.
+
+## Fourteenth bounded batch
+
+The prepared next 210 list contained 84 unique uncaptured identities and completed at:
+
+`/mnt2/capsule/epitome/astral-codex-ten/crawls/1788058140-next-210`
+
+All 84 manifests are complete and tab-closed. The terminal `finish` record reports
+`failures=0`; no capture-level page failure was observed. The aggregate contains
+45,412 requests, 44,843 response bodies, 1,070,034,606 response bytes, and 215
+response-body errors across 51 pages. The status ledger records 200=44,943,
+202=1, 204=168, 301=4, 400=2, 401=85, 403=162, 404=28, 502=6, 503=1,
+522=1, one pending response, and ten unknown responses.
+
+Asset completion discovered 58,836 dependencies, attempted 26,776, completed
+26,567, and left 209 incomplete; 16,600 entries were already complete and
+365,212,686 bytes were downloaded. The 209 incomplete asset results were
+classified as 162 HTTP 403s, 27 HTTP 404s, five HTTP 502s, three timeouts,
+two HTTP 400s, two connection resets, one HTTP 401, one HTTP 503, one HTTP 522,
+two DNS failures, and three TLS-hostname mismatches. The exact exclusion policy
+made five decisions for the nine listed YouTube/Twitter/X hosts and produced no
+excluded-host asset result—completed or incomplete. The page network summaries
+contained four `pbs.twimg.com` and one `www.youtube-nocookie.com` request, but
+none entered the asset result set. Interactive-media ledgers for all 84 pages
+report zero discovered, embedded, activated, or completed media. No YouTube or
+Twitter/X downloader was invoked, and incidental media-host variants remained
+outside the asset result set.
+
+The primary image audit found one missing platform/embed derivative on
+`https://www.astralcodexten.com/p/links-for-april`. The all-rendered-image audit
+found three missing images: that same derivative, an unavailable transformed
+article image on `https://www.astralcodexten.com/p/still-alive`, and a transformed
+avatar sourced from the intentionally excluded `pbs.twimg.com` host on
+`https://www.astralcodexten.com/p/a-modest-proposal-for-republicans`. No repair
+was attempted; all three remain classified as upstream unavailable or
+intentionally excluded.
+
+Bounded local loopback replays covered public long-form Your Book Review:
+Progress And Poverty (479,953 body characters, 560/560 images, 5,775
+comment-like nodes), paid-preview Hidden Open Thread 167.5 (338 visible
+characters, paywall marker, 2/2 images), media/reference Prospectus On Prospera
+(391,766, 574/574 images, two media nodes, 5,922 comment-like nodes),
+comment-heavy Open Thread 168 (188,628, 420/420 images, 4,582 comment-like
+nodes), the known missing-image Links For April (425/424 images), the known
+missing-image Still Alive (359/358 images), and the paid-preview-marker page
+Youre Probably Wondering Why Ive (258/258 images). Across 2,200 replay
+metadata records, every request was local to `127.0.0.1:8026` and there were
+zero production-origin requests; the replay tab and temporary server were
+closed afterward.
+
+Together with the first thirteen production batches, 1,449 bounded production
+pages are now captured and audited, in addition to the five-page pilot. The
+source snapshot contains 1,452 unique identities, and the union of all ignored
+working lists contains 1,454 unique URLs: every source identity is covered,
+while `https://www.astralcodexten.com/archive` and
+`https://www.astralcodexten.com/p/mistakes` are historical list-only URLs absent
+from that source snapshot. The source-backed queue is therefore exhausted;
+there is no nonempty next batch to start. Future work should resume only when a
+new source snapshot is intentionally prepared, using the same port-2103-only
+workflow, public/paywall boundary, bounded asset policy, exact YouTube/Twitter
+host exclusions, and incidental-media policy.

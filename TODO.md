@@ -221,6 +221,19 @@ deletion-history workflows are explicitly designed.
           list in `data/astral-codex-ten-next-210.txt`; the final source
           remainder contains 84 unique URLs with zero overlap against all
           completed batch lists.
+    - [x] Capture and offline-audit Astral Codex Ten's final 84-page
+          continuation in `data/astral-codex-ten-next-210.txt`; all pages
+          completed and tab-closed with zero capture-level failures, with 215
+          response-body errors and 209 incomplete asset results classified,
+          five exact-host exclusion decisions producing zero excluded-host
+          asset results, one primary and three all-rendered missing images
+          classified, and paid-preview, media/reference, comment-heavy, and
+          known-missing-image local-only replays passing with no production-origin
+          requests.
+    - [x] Verify that the Astral Codex Ten source-backed queue is exhausted;
+          the 1,452-URL source snapshot has no uncaptured identities, while
+          two historical list-only URLs remain outside that snapshot, so no
+          empty follow-up batch was started.
   - [x] Inventory Dwarkesh Patel's 183-URL first-party publication scope and
         validate one long transcript/video post through offline replay.
   - [x] Inventory the representative post's Substack-hosted and YouTube video
