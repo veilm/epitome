@@ -445,9 +445,15 @@ deletion-history workflows are explicitly designed.
     - [x] Prepare a varied seven-post Janus pilot in
           `data/lesswrong-janus-pilot.txt`, spanning recent, long-form,
           image-rich, sequence, unusual, and oldest-post structures.
-    - [ ] Capture and offline-audit the prepared Janus pilot; preserve article,
+    - [x] Capture and offline-audit the prepared Janus pilot; preserve article,
           comment, image, redirect, and loopback replay behavior before scaling
-          to the remaining 12 identities.
+          to the remaining 12 identities. The 7/7 capture has zero capture-level
+          failures, clean primary/all-image audits, and loopback-only replays.
+    - [x] Prepare the remaining 12 deduplicated Janus identities in original
+          profile order at `data/lesswrong-janus-next-12.txt` as N+1; do not
+          start that second capture in the pilot checkpoint.
+    - [ ] Capture and offline-audit the prepared Janus N+1 batch before expanding
+          to a broader author or core/curated tier.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.

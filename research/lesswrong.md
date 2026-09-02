@@ -234,3 +234,41 @@ capture command is:
 ```text
 util/capture_urls --url-file data/lesswrong-janus-pilot.txt --output-root /mnt2/capsule/epitome/lesswrong/crawls/1788363086-janus-pilot --max-urls 7 --port 2103 --max-scrolls 60 --max-seconds 120 --settle-seconds 15 --max-assets 400 --asset-delay-seconds 2 --asset-timeout 90 --delay-seconds 30 --exclude-asset-host www.youtube-nocookie.com --exclude-asset-host www.youtube.com --exclude-asset-host youtube.com --exclude-asset-host pbs.twimg.com --exclude-asset-host video.twimg.com --exclude-asset-host twitter.com --exclude-asset-host www.twitter.com --exclude-asset-host x.com --exclude-asset-host www.x.com
 ```
+
+## Janus pilot validation
+
+The bounded seven-post pilot completed on 2026-09-02 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788363086-janus-pilot`. All seven
+manifests and page records are complete, capture tabs are closed, and the
+terminal `finish` record reports `failures=0`. The capture recorded 1,547
+requests, 1,503 response bodies, 198,007,349 response bytes, and 22
+response-level body-error records; the per-page error counts in source order
+were 5, 2, 2, 6, 2, 3, and 2. The response statuses included 5 HTTP 404s,
+14 HTTP 429s, 5 pending records, and 2 unknown records. These are dependency
+or rate-limit observations, not page-capture failures.
+
+Asset outcomes were 1,407 discovered, 770 attempted, 753 completed, 637
+already complete, and 17 failed. The failed asset results classify as one
+HTTP 404, fourteen HTTP 429s, and two DNS-resolution failures. Downloaded
+asset bytes total 80,168,142. The seven `interactive-media.json` records have
+no discovered, embedded, activated, or result-level interactive media. Exact
+checks found zero asset-result URLs and zero exclusion decisions for the nine
+prohibited YouTube/Twitter/X hosts; no downloader was invoked.
+
+Both primary-image and all-rendered-image audits report seven pages,
+zero missing images, zero repair attempts, and zero repair failures. Five
+representative public loopback replays covered the latest short post,
+image-rich `Cyborgism`, spoiler-heavy `Language Ex Machina`, flagship
+`Simulators`, and the oldest survey. Their visible body lengths were 24,823,
+106,804, 61,531, 228,791, and 4,465 characters; rendered image counts were
+9, 23, 1, 21, and 0, with zero broken images in every replay. The replay
+pages exposed comment-heavy bodies (131, 375, 189, 1,046, and 42 matching
+comment nodes), no video or audio elements, and no production-origin resource
+entries. The local network logger recorded 199 loopback archive metadata URLs
+and zero non-loopback URLs. This validates streamed article materialization,
+long comments, image-heavy content, and the public-only boundary for this
+pilot.
+
+The remaining twelve deduplicated identities are prepared in original profile
+order in `data/lesswrong-janus-next-12.txt`. They are N+1 work only; this
+pilot checkpoint intentionally did not start a second capture.
