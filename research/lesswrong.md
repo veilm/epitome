@@ -185,3 +185,52 @@ visible characters, preserve article metadata and comment threads, show no
 broken images, and request resources only from loopback. All 51 identities on
 the rendered Highlights index—the advertised 50-post reading subset plus its
 introductory identity—are now captured and offline-verified in canonical order.
+
+## Janus author inventory
+
+On 2026-09-02, the rendered public profile at
+`https://www.lesswrong.com/users/janus-1` exposed an all-posts panel labeled
+`POSTS (19)`. Two rendered `Load More` actions expanded the visible list from
+7/19 to 14/19 and then 19/19. The list is ordered newest first and contains 19
+unique stable LessWrong post identities, recorded in that order in
+`sources/lesswrong-janus.txt`.
+
+| Order | Date | Post | Stable ID |
+| ---: | --- | --- | --- |
+| 1 | Jul 10, 2025 | what makes Claude 3 Opus misaligned | `bLFmE8NtqxrtEaipN` |
+| 2 | Jul 8, 2025 | Why Do Some Language Models Fake Alignment While Others Don't? | `ghESoA8mo3fv9Yx3E` |
+| 3 | Jul 7, 2025 | Economics of Claude 3 Opus Inference | `vFXmy84kJ77C5cELy` |
+| 4 | Jul 24, 2023 | How LLMs are and are not myopic | `c68SJsBpiAxkPwRHj` |
+| 5 | Feb 26, 2023 | [Simulators seminar sequence] #2 Semiotic physics - revamped | `TTn6vTcZ3szBctvgb` |
+| 6 | Feb 10, 2023 | Cyborgism | `bxt7uCiHam4QXrQAA` |
+| 7 | Feb 8, 2023 | Anomalous tokens reveal the original identities of Instruct models | `LAxAmooK4uDfWmbep` |
+| 8 | Jan 18, 2023 | Gradient Filtering | `2sTTEkzvscWCPBQAk` |
+| 9 | Jan 15, 2023 | Language Ex Machina | `vPsupipfyeDoSAirY` |
+| 10 | Jan 8, 2023 | Simulacra are Things | `3BDqZMNSJDBg2oyvW` |
+| 11 | Jan 2, 2023 | [Simulators seminar sequence] #1 Background & shared assumptions | `nmMorGE4MS4txzr8q` |
+| 12 | Dec 19, 2022 | Results from a survey on tool use and workflows in alignment research | `a2io2mcxTWS4mxodF` |
+| 13 | Nov 28, 2022 | Searching for Search | `FDjTgDcGPc7B98AES` |
+| 14 | Nov 19, 2022 | Update to Mysteries of mode collapse: text-davinci-002 not RLHF | `mbGjzyy6eJXT4gFpm` |
+| 15 | Nov 10, 2022 | [simulation] 4chan user claiming to be the attorney hired by Google's sentient chatbot LaMDA shares wild details of encounter | `tJ6aGSTctmjCz2o57` |
+| 16 | Nov 8, 2022 | Mysteries of mode collapse | `t9svvNPNmFf5Qa3TA` |
+| 17 | Sep 2, 2022 | Simulators | `vJFdjigzmcXMhNTsx` |
+| 18 | Jun 6, 2022 | A descriptive, not prescriptive, overview of current AI Alignment Research | `FgjcHiWvADgsocE34` |
+| 19 | Mar 23, 2022 | A survey of tool use and workflows in alignment research | `ebYiodG3MAEqskCDG` |
+
+The 19 canonical identities have zero overlap with the existing LessWrong
+pilot and the four completed Sequences Highlights lists. The profile's top-post
+cards are a separate presentation layer and were not double-counted as extra
+author identities.
+
+The varied first pilot is prepared in
+`data/lesswrong-janus-pilot.txt` with seven new URLs: the latest short
+response-to-X post, the recent technical alignment post, the image-rich
+`Cyborgism`, spoiler-heavy `Language Ex Machina`, the unusual simulation/fiction
+post, flagship `Simulators`, and the oldest survey. The remaining 12 identities
+stay prepared in the ordered source list until this pilot passes article,
+comment, image, redirect, and loopback replay checks. The pilot's bounded
+capture command is:
+
+```text
+util/capture_urls --url-file data/lesswrong-janus-pilot.txt --output-root /mnt2/capsule/epitome/lesswrong/crawls/1788363086-janus-pilot --max-urls 7 --port 2103 --max-scrolls 60 --max-seconds 120 --settle-seconds 15 --max-assets 400 --asset-delay-seconds 2 --asset-timeout 90 --delay-seconds 30 --exclude-asset-host www.youtube-nocookie.com --exclude-asset-host www.youtube.com --exclude-asset-host youtube.com --exclude-asset-host pbs.twimg.com --exclude-asset-host video.twimg.com --exclude-asset-host twitter.com --exclude-asset-host www.twitter.com --exclude-asset-host x.com --exclude-asset-host www.x.com
+```

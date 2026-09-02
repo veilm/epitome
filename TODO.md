@@ -116,7 +116,7 @@ deletion-history workflows are explicitly designed.
     - [x] Inventory Astral Codex Ten's 1,452 canonical archive identities and
           validate a five-page archive, ordinary, long, image-rich, and
           comment-heavy pilot through isolated offline replay.
-    - [ ] Capture Astral Codex Ten in bounded batches, preserving the public
+    - [x] Capture Astral Codex Ten in bounded batches, preserving the public
           preview and paywall boundary for its 282 paid-only identities without
           bypassing access controls.
     - [x] Capture and offline-audit Astral's first 15 uncaptured identities;
@@ -438,9 +438,16 @@ deletion-history workflows are explicitly designed.
         all 266 or treating raw top-karma pages as editorial canon.
   - [ ] Define broader coverage for notable authors, comments, revisions, and
         linked media after the curated tiers pass replay validation.
-    - [ ] Add the complete public post scope for Janus at
+    - [x] Add the complete public post scope for Janus at
           `https://www.lesswrong.com/users/janus-1` as an explicitly low-risk
-          author collection, deduplicated against existing LessWrong captures.
+          author collection; the rendered profile exposes 19 stable identities,
+          all new after deduplication against existing LessWrong captures.
+    - [x] Prepare a varied seven-post Janus pilot in
+          `data/lesswrong-janus-pilot.txt`, spanning recent, long-form,
+          image-rich, sequence, unusual, and oldest-post structures.
+    - [ ] Capture and offline-audit the prepared Janus pilot; preserve article,
+          comment, image, redirect, and loopback replay behavior before scaling
+          to the remaining 12 identities.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.
