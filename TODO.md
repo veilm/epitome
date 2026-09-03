@@ -351,9 +351,12 @@ deletion-history workflows are explicitly designed.
     - [x] Capture and offline-audit the next 60 essays (215/232 total); retain
           the reviewed legacy spacer/badge handling.
     - [x] Capture and offline-audit the final 17 essays (232/232 total).
-  - [ ] Inventory Gwern.net in bounded families—major essays, blog entries, and
-        first-party documents—before approving a crawl of its much larger link
-        graph.
+  - [x] Validate Gwern.net's public essays index, blog/document indexes,
+        long essay, fiction, and recent blog shapes; defer direct-video
+        `/embryo-selection` to separate media scope; prepare the seven-route
+        bounded `data/gwern-pilot.txt`.
+  - [ ] Capture and offline-audit the Gwern pilot before expanding its family
+        inventories.
   - [ ] Inventory and preserve **Cyborgism Wiki** at `cyborgism.wiki` as an
         explicitly low-risk source; define its canonical page scope and
         validate a small varied pilot before bounded capture.
