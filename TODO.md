@@ -358,6 +358,11 @@ deletion-history workflows are explicitly designed.
         `https://www.yudkowsky.net/other/fiction/the-sword-of-good` and inventory
         the writing scope linked from `https://yudkowsky.tumblr.com/writing` as
         explicitly low-risk material, deduplicated against LessWrong.
+    - [x] Inventory the public Sword of Good page and the 13 canonical writing
+          pages linked by the Tumblr writing index; prepare the seven-route
+          varied pilot and eight-route continuation in ignored `data/` lists.
+    - [ ] Capture and offline-audit the prepared Yudkowsky fiction/writing
+          pilot before starting its eight-route continuation.
   - [ ] Preserve Michael Burry's canonical Substack article
         `https://post.substack.com/p/the-ai-revolution-is-here-will-the`
         as an explicitly low-risk page; it is separate from Dwarkesh and Import
