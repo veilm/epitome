@@ -90,6 +90,35 @@ The pilot is approved for the prepared eight-route continuation in
 `data/yudkowsky-fiction-writing-next-8.txt` under the same public-only and
 exact-host-exclusion policy.
 
-The continuation is now active at
-`/mnt2/capsule/epitome/yudkowsky/crawls/1788436267-fiction-writing-next-8`;
-its first route is `https://yudkowsky.tumblr.com/writing/empathyrespect`.
+## Eight-route continuation result
+
+The continuation completed at
+`/mnt2/capsule/epitome/yudkowsky/crawls/1788436267-fiction-writing-next-8`.
+All eight manifests are complete and tab-closed; the terminal `finish` record
+reports `failures=0`. The capture recorded 634 requests, 594 response bodies,
+43,823,596 response bytes, and 16 response-body errors. Every page contributed
+one ScorecardResearch telemetry 302 and one Tumblr monetization-frame 303;
+these are platform dependencies, not substantive article or asset failures.
+
+The eight pages contain substantive article text and one article element each.
+The capture discovered 498 asset references and attempted and completed 392;
+there were zero asset failures and zero exclusion decisions. Interactive-media
+ledgers report zero discovered, embedded, activated, or result-level media.
+No YouTube or Twitter/X downloader was invoked, and no excluded-host URL
+appears in an asset or media result.
+
+The primary-image and all-rendered-image audits both report eight pages with
+zero missing images, repair attempts, or repair failures. Four patched local
+replays covered the early Empathy and Respect page (8,761 visible characters),
+the middle Realistic Villains and Viewpoints page (8,611 characters), the late
+Solvable Mysteries page (6,474 characters), and the longer Inexploitability
+page (18,313 characters with a discussion link). They recorded 41 requests in
+total: 33 local 200s and eight local 404s for optional consent/static variants,
+with zero response-body errors and zero production-origin requests. The
+replays showed one article and four or five local frames per page; the local
+404s did not affect substantive text or image preservation.
+
+The eight-route continuation completes the 15-route public fiction/writing
+scope (the seven-route pilot plus these eight canonical Tumblr pages). The
+source is approved for handoff to the next explicitly low-risk first-party
+scope; no account, paywall, or access-control bypass was used.
