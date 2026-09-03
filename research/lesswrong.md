@@ -383,9 +383,49 @@ audio elements and zero production-origin resource entries. The local network
 logger recorded 174 archive metadata URLs, all on loopback, with zero
 non-loopback URLs.
 
-The first fifteen post-only Fun Theory expansion identities are ready in
-`data/lesswrong-priority-members-next-15.txt`; the following fifteen are
-prepared in `data/lesswrong-priority-members-next-15b.txt`, continuing the
-remaining Fun Theory order and then the first three newly rendered 6BF
-members. The active capture must finish and pass its boundary checks before
-the `15b` list is started.
+The first fifteen post-only Fun Theory expansion identities in
+`data/lesswrong-priority-members-next-15.txt` completed as the next bounded
+batch. The following fifteen are prepared in
+`data/lesswrong-priority-members-next-15b.txt`, continuing the remaining Fun
+Theory order and then the first three newly rendered 6BF members.
+
+## LessWrong priority member N+1 validation
+
+The first fifteen-member expansion completed on 2026-09-03 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-15`.
+All fifteen manifests and page records are complete and tab-closed; the
+terminal `finish` record reports `failures=0`. The capture recorded 2,976
+requests, 2,917 response bodies, 282,257,400 response bytes, and 35
+response-level body-error records. Network statuses were 2,917 HTTP 200,
+15 HTTP 204, 12 HTTP 404, 30 HTTP 429, and two pending observations. These
+dependency and rate-limit records did not become capture-level failures.
+
+Asset outcomes were 2,733 discovered, 1,494 attempted, 1,461 completed,
+1,239 already complete, and 33 failed, with 74,567,002 downloaded bytes.
+The failed asset results classify as three HTTP 404s and thirty HTTP 429s.
+There were zero exclusion decisions and zero prohibited YouTube/Twitter/X
+URLs in asset result records. All fifteen `interactive-media.json` records
+have zero discovered, embedded, activated, and result-level interactive
+media. No YouTube or Twitter/X downloader was invoked.
+
+Both primary-image and all-rendered-image audits report fifteen pages, zero
+missing images, zero repair attempts, and zero repair failures. Four
+representative public loopback replays covered the early
+`pK4HTxuv6mftHXWC3` Prolegomena post, the middle and comment-heavy
+`MTjej6HKvPByx3dEA` Devil's Offers post, the late and media-reference
+`NLMo5FZWFFq652MNe` Sympathetic Minds post, and the image-bearing
+`wqDRRx9RqwKLzWt7R` Nonperson Predicates post. They retained 44,373, 51,247,
+26,551, and 70,712 visible characters, with 1,107, 1,012, 619, and 2,241
+comment-node matches respectively. The first three replays had no images,
+video, or audio; the fourth had one loaded local image and zero broken
+images. The media-reference page had no activated media or external media
+element in replay. The local network logger recorded 114 archive metadata
+URLs, all on `127.0.0.1:8028`, with zero non-loopback URLs (78 local 200,
+four local 404, and 32 pending observations).
+
+The next deduplicated batch is prepared in
+`data/lesswrong-priority-members-next-15b.txt` and is now the active N batch;
+the following 24 stable members—eight remaining 6BF entries followed by all
+sixteen Highly Advanced Epistemology entries—are prepared in
+`data/lesswrong-priority-members-next-24.txt` as N+1. Its reserved output root
+is `/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-24`.
