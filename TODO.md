@@ -376,8 +376,9 @@ deletion-history workflows are explicitly designed.
         AI.
     - [x] Validate the rendered public canonical page and prepare its bounded
           one-page pilot in ignored `data/michael-burry-article-pilot.txt`.
-    - [ ] Capture and offline-audit the one-page Michael Burry pilot before
-          advancing to the next low-risk source.
+    - [x] Capture and offline-audit the one-page Michael Burry pilot; the page
+          completed with zero capture/asset failures, clean primary/all-image
+          audits, and a local-only article/image replay.
   - [ ] Preserve Citrini Research's canonical article
         `https://www.citriniresearch.com/p/2028gic` as an explicitly low-risk
         page, with tracking parameters removed.
