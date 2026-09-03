@@ -478,6 +478,10 @@ deletion-history workflows are explicitly designed.
     - [x] Prepare the next 24 stable sequence-member identities at
           `data/lesswrong-priority-members-next-24.txt`, covering the remaining
           6BF entries and all 16 Highly Advanced Epistemology members.
+    - [x] Capture and offline-audit the following 15-member expansion. The
+          15/15 capture has zero capture-level failures, clean primary/
+          all-image audits, zero excluded-host results, and loopback-only
+          representative replays.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.

@@ -429,3 +429,46 @@ the following 24 stable members—eight remaining 6BF entries followed by all
 sixteen Highly Advanced Epistemology entries—are prepared in
 `data/lesswrong-priority-members-next-24.txt` as N+1. Its reserved output root
 is `/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-24`.
+
+## LessWrong priority member 15b validation
+
+The following fifteen-member expansion completed on 2026-09-03 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-15b`.
+All fifteen manifests and page records are complete and tab-closed; the
+terminal `finish` record reports `failures=0`. The capture recorded 2,923
+requests, 2,870 response bodies, 278,132,453 response bytes, and 35
+response-level body-error records. Network statuses were 2,870 HTTP 200,
+15 HTTP 204, five HTTP 404, 30 HTTP 429, two pending observations, and one
+unknown observation. These dependency and rate-limit records did not become
+capture-level failures.
+
+Asset outcomes were 2,716 discovered, 1,504 attempted, 1,471 completed,
+1,212 already complete, and 33 failed, with 75,054,134 downloaded bytes.
+The failed asset results classify as one DNS resolution failure, two HTTP
+404s, and thirty HTTP 429s. There were zero exclusion decisions and zero
+prohibited YouTube/Twitter/X URLs in asset result records. All fifteen
+`interactive-media.json` records have zero discovered, embedded, activated,
+and result-level interactive media. No YouTube or Twitter/X downloader was
+invoked.
+
+Both primary-image and all-rendered-image audits report fifteen pages, zero
+missing images, zero repair attempts, and zero repair failures. Four
+representative public loopback replays covered the early image-bearing
+`Py3uGnncqXuEfPtQp` Interpersonal Entanglement post, the middle
+`cWjK3SbRcLkb3gN69` Building Weirdtopia post, the comment-heavy
+`ctpkTaqTKbmm6uRgC` Failed Utopia #4-2 post, and the late
+`WjpA4PCjt5EkTGbLF` Bind Yourself to Reality post with its captured
+media-reference context. They retained 80,133, 127,171, 138,772, and 7,580
+visible characters, with 2,585, 4,616, 4,356, and 170 comment-node matches
+respectively. The early replay had one loaded local image and zero broken
+images; the other three had no images, video, or audio elements. The late
+media-reference replay had no activated media or external media element. The
+local network logger recorded 135 archive metadata URLs, all on
+`127.0.0.1:8029`, with zero non-loopback URLs (94 local 200, five local 404,
+and 36 pending observations).
+
+The next 24 stable members remain prepared in
+`data/lesswrong-priority-members-next-24.txt`: eight remaining 6BF entries
+followed by all sixteen Highly Advanced Epistemology entries. Its reserved
+output root is
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-24`.
