@@ -356,6 +356,11 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve all of **Generative Ink** at `generative.ink` as
         an explicitly low-risk source; review its canonical pages, generated
         works, and first-party assets before bounded capture.
+    - [x] Validate the public home, posts index, and representative long post,
+          and prepare the seven-route bounded pilot in ignored
+          `data/generative-ink-pilot.txt`.
+    - [ ] Capture and offline-audit the Generative Ink pilot before expanding
+          its generated-work inventory.
   - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
         low-risk source; define its canonical page and asset scope and validate
         a small varied pilot before bounded capture.

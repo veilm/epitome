@@ -19,3 +19,9 @@ YouTube/Twitter/X asset exclusions remain in force. At the pilot boundary,
 require complete tab-closed manifests, substantive wiki text, image and
 attachment classification, both image audits, and local-only replay of early,
 middle, late, list/category, and image-bearing pages.
+
+The next low-risk scope is prepared while this pilot runs: a seven-route
+Generative Ink pilot covering the public home, posts index, about page,
+prophecies, two representative posts, and an image-rich post. Its animated
+home surface will be treated as a bounded static/image check; no external
+media downloader is permitted.
