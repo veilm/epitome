@@ -463,8 +463,11 @@ deletion-history workflows are explicitly designed.
         direct-video `/this-anime-does-not-exist/` page to a separate media
         scope, and prepare the seven-route bounded pilot in ignored
         `data/near-blog-pilot.txt`.
-  - [ ] Capture and offline-audit the near.blog pilot before expanding its
-        own-page inventory.
+  - [x] Capture and offline-audit the seven-route near.blog pilot: all
+        manifests completed with zero capture failures, Matomo 403 telemetry
+        classified, clean primary/all-image audits, zero prohibited-host
+        results, and seven local-only route replays with no production-origin
+        requests.
   - [ ] Inventory and prioritize the sites, essays, papers, videos, and other
         material Near links to.
   - [ ] Record provenance from each outbound item back to the Near page that

@@ -25,3 +25,35 @@ pages. Exact YouTube/Twitter/X asset exclusions remain in force. At the pilot
 boundary, require substantive text, image and missing-image classification,
 media/redirect classification, and local-only replay with no live-origin
 fallback.
+
+## Seven-route pilot validation
+
+The bounded pilot completed on 2026-09-03 at
+`/mnt2/capsule/epitome/near-blog/crawls/1788452985-pilot`. All seven manifests
+are complete and tab-closed; the terminal `finish` record reports
+`failures=0`. The capture recorded 197 requests, 182 response bodies,
+5,077,405 response bytes, and seven response-body errors. The statuses were
+175 HTTP 200 page/dependency responses, eight HTTP 204 Cloudflare RUM beacon
+records, and fourteen HTTP 403 records for the repeated `/matomo/m.js`
+telemetry endpoint (one browser response and one asset-completion response per
+route). The seven body errors are the asset-completion attempts for that same
+Matomo endpoint; they do not affect the captured public documents.
+
+Asset completion discovered 175 references and attempted all of them: 61
+completed in this run, 107 were already complete, and seven failed. Every
+asset failure is the same HTTP 403 Matomo telemetry script; there were zero
+excluded assets and 2,748,284 downloaded bytes. The seven interactive-media
+ledgers contain zero discovered, embedded, activated, or result-level media.
+The 68 asset-result URLs are all first-party `near.blog` URLs; exact checks
+found zero result URLs on the prohibited YouTube/Twitter/X hosts.
+
+Both primary-image and all-rendered-image audits report seven pages, zero
+missing images, zero repair attempts, and zero repair failures. Local-only
+loopback replays covered all seven routes: the home, link index, 69-image
+`/things/` list, illustrated `/heavenbanning/` post, two text articles, and
+the known-missing-image `Glyptodons` post. They retained 499–24,397 visible
+characters and 0–69 rendered images, with zero broken images, frames, video,
+or audio elements. A CDP network logger recorded 107 requests, all to
+`127.0.0.1:8034`, with zero non-loopback requests. This validates the bounded
+WordPress capture and replay path; the direct-video
+`/this-anime-does-not-exist/` route remains deferred to a separate media scope.
