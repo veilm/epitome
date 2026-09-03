@@ -361,8 +361,11 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the public home, posts index, and representative long post,
           and prepare the seven-route bounded pilot in ignored
           `data/generative-ink-pilot.txt`.
-    - [ ] Capture and offline-audit the Generative Ink pilot before expanding
-          its generated-work inventory.
+    - [x] Capture and offline-audit the Generative Ink pilot; all seven routes
+          completed with zero page failures, classified the 28 repeated favicon
+          404s, one unavailable CloudFront PDF, external reference assets, and
+          pending/redirect body records, passed both image audits, and passed
+          six local-only content/image/media replays.
   - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
         low-risk source; define its canonical page and asset scope and validate
         a small varied pilot before bounded capture.
