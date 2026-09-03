@@ -73,6 +73,12 @@ deletion-history workflows are explicitly designed.
         outbound research links, and any email-only differences. Treat it as a
         first-party writer/newsletter scope related to—but distinct from—the
         official Anthropic company archive.
+    - [x] Validate the public Substack home and a substantive public article
+          preview, record the preview/paywall and platform-frame boundary, and
+          prepare the bounded five-route pilot in ignored
+          `data/import-ai-pilot.txt`.
+    - [ ] Capture and offline-audit the Import AI public pilot before expanding
+          its archive or outbound research-link scope.
   - [ ] Preserve both Scott Alexander publication eras as separate, linked
         sources: the historical **Slate Star Codex** archive at
         `slatestarcodex.com` and its successor **Astral Codex Ten** at
