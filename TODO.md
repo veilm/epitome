@@ -457,16 +457,20 @@ deletion-history workflows are explicitly designed.
           capture-level failures, clean primary/all-image audits, and loopback-
           only representative replays.
     - [x] Resolve the requested priority routes in
-          `sources/lesswrong-priority.txt`, including the rendered 11-entry
+          `sources/lesswrong-priority.txt`, including the rendered 12-entry
           6BF sequence and stable-member deduplication against existing roots.
     - [x] Prepare the nine-route priority pilot at
           `data/lesswrong-priority-pilot.txt`, covering direct posts, sequence
           indexes/member context, and the requested public wiki page.
-    - [ ] Capture and offline-audit the prepared priority pilot before expanding
-          its ordered sequence members in larger deduplicated batches.
+    - [x] Capture and offline-audit the prepared priority pilot before expanding
+          its ordered sequence members in larger deduplicated batches. The 9/9
+          capture has zero capture-level failures and clean image audits; empty
+          sequence-header placeholders are classified in research notes.
     - [x] Prepare the first 15 stable Fun Theory member IDs not already in the
           pilot or existing capture roots at
           `data/lesswrong-priority-members-next-15.txt` as the next bounded N+1.
+    - [x] Prepare the following 15 deduplicated sequence-member identities at
+          `data/lesswrong-priority-members-next-15b.txt` as the subsequent N+1.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.

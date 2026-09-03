@@ -316,7 +316,7 @@ behavior for the complete Janus collection.
 The reviewed `sources/lesswrong-priority.txt` contains nine requested
 first-party routes. The frozen library inventory supplies 29 ordered Fun Theory
 members and 16 ordered Highly Advanced Epistemology members. A rendered public
-inspection of `https://www.lesswrong.com/s/6BFkmEgre7uwhDxDR` supplied eleven
+inspection of `https://www.lesswrong.com/s/6BFkmEgre7uwhDxDR` supplied twelve
 ordered entries, including the already requested `Scarcity` identity
 `MCYp8g9EMAiTCTawk`. None of the nine priority routes overlap the existing
 LessWrong capture lists or the Janus roots. Sequence-member expansion will use
@@ -345,3 +345,47 @@ output root is
 After the nine-route pilot boundary passes, run it with the same command and
 settings, then continue through the 6BF and Highly Advanced Epistemology
 members in displayed order.
+
+## LessWrong priority pilot validation
+
+The nine-route priority pilot completed on 2026-09-03 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-pilot`. All nine
+manifests and page records are complete and the runner tab is closed; the
+terminal `finish` record reports `failures=0`. The capture recorded 1,783
+requests, 1,742 response bodies, 166,605,996 response bytes, and 25
+response-level body-error records. In source order, per-page error counts were
+2, 3, 2, 3, 5, 4, 2, 2, and 2. Network statuses were 1,742 HTTP 200,
+13 HTTP 204, 7 HTTP 404, 18 HTTP 429, 2 pending, and 1 unknown. These are
+dependency or rate-limit observations, not capture-level failures.
+
+Asset outcomes were 1,644 discovered, 916 attempted, 893 completed, 728
+already complete, and 23 failed, with 45,933,316 downloaded bytes. The failed
+asset results classify as four HTTP 404s, eighteen HTTP 429s, and one DNS
+resolution failure. There were zero exclusion decisions and zero prohibited
+YouTube/Twitter/X URLs in asset result records. All nine
+`interactive-media.json` records have zero discovered, embedded, activated,
+and result-level interactive media. No YouTube or Twitter/X downloader was
+invoked.
+
+Both primary-image and all-rendered-image audits report nine pages, zero
+missing images, zero repair attempts, and zero repair failures. Six
+representative public loopback replays covered the direct long post, Fun
+Theory member and index, 6BF sequence index, requested wiki page, and Highly
+Advanced Epistemology index. The visible body lengths for
+`Ap4KfkHyxjYPDiqh2`, `d3-index`, `K4aGvLnHvYgX9pZHS`, `6BF-index`, `wiki`, and
+`Sq-index` were 248,313, 1,864, 52,542, 948, 1,020, and 1,369 characters;
+comment-node counts were 2,026, 116, 225, 48, 2, and 64. Direct posts and
+the wiki had zero broken images. Each of the three sequence indexes exposed
+one empty `<img height="380">` with no source in the archived shell; this is
+classified as a decorative sequence-header placeholder, not a substantive
+article image, and no repair was attempted. All replays had zero video or
+audio elements and zero production-origin resource entries. The local network
+logger recorded 174 archive metadata URLs, all on loopback, with zero
+non-loopback URLs.
+
+The first fifteen post-only Fun Theory expansion identities are ready in
+`data/lesswrong-priority-members-next-15.txt`; the following fifteen are
+prepared in `data/lesswrong-priority-members-next-15b.txt`, continuing the
+remaining Fun Theory order and then the first three newly rendered 6BF
+members. The active capture must finish and pass its boundary checks before
+the `15b` list is started.
