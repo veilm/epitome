@@ -335,3 +335,13 @@ util/capture_urls --url-file data/lesswrong-priority-pilot.txt --output-root /mn
 This remains public-only and excludes all YouTube/Twitter/X asset downloads;
 after the pilot passes replay validation, the ordered sequence members can be
 expanded in progressively larger deduplicated batches.
+
+The first member-expansion N+1 is already prepared at
+`data/lesswrong-priority-members-next-15.txt`. It contains the first fifteen
+stable Fun Theory member IDs after removing the pilot's `K4aGvLnHvYgX9pZHS` and
+`QfpHRAMRM2HjteKFK` identities and all existing captured IDs. Its reserved
+output root is
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-15`.
+After the nine-route pilot boundary passes, run it with the same command and
+settings, then continue through the 6BF and Highly Advanced Epistemology
+members in displayed order.

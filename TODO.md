@@ -464,6 +464,9 @@ deletion-history workflows are explicitly designed.
           indexes/member context, and the requested public wiki page.
     - [ ] Capture and offline-audit the prepared priority pilot before expanding
           its ordered sequence members in larger deduplicated batches.
+    - [x] Prepare the first 15 stable Fun Theory member IDs not already in the
+          pilot or existing capture roots at
+          `data/lesswrong-priority-members-next-15.txt` as the next bounded N+1.
     - [ ] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.
