@@ -89,3 +89,7 @@ source handoff and applies before the eight-page continuation.
 The pilot is approved for the prepared eight-route continuation in
 `data/yudkowsky-fiction-writing-next-8.txt` under the same public-only and
 exact-host-exclusion policy.
+
+The continuation is now active at
+`/mnt2/capsule/epitome/yudkowsky/crawls/1788436267-fiction-writing-next-8`;
+its first route is `https://yudkowsky.tumblr.com/writing/empathyrespect`.
