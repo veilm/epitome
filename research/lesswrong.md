@@ -272,3 +272,66 @@ pilot.
 The remaining twelve deduplicated identities are prepared in original profile
 order in `data/lesswrong-janus-next-12.txt`. They are N+1 work only; this
 pilot checkpoint intentionally did not start a second capture.
+
+## Janus N+1 validation
+
+The remaining twelve Janus identities completed on 2026-09-03 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788403614-janus-next-12`. All twelve
+manifests and page records are complete and tab-closed; the terminal `finish`
+record reports `failures=0`. The capture recorded 2,988 requests, 2,937
+response bodies, 356,763,028 response bytes, and 31 response-level body-error
+records. In source order, per-page response-body-error counts were 2, 2, 5,
+2, 2, 2, 2, 2, 4, 2, 4, and 2. Network statuses were 2,939 HTTP 200,
+13 HTTP 204, 2 HTTP 302, 1 HTTP 403, 5 HTTP 404, 24 HTTP 429, and 4 pending
+records. These remain dependency or rate-limit observations rather than
+capture-level page failures.
+
+Asset outcomes were 2,736 discovered, 1,685 attempted, 1,660 completed,
+1,051 already complete, 25 failed, and 1 excluded, with 170,190,913
+downloaded bytes. The failed asset results classify as one HTTP 403 and
+twenty-four HTTP 429s. The one exclusion decision occurred on the
+`LAxAmooK4uDfWmbep` page; its network summary contains one `www.youtube.com`
+reference, but no prohibited-host URL appears in any asset result record.
+The nine prohibited YouTube/Twitter/X hosts therefore have zero downloaded
+asset-result URLs, and no downloader was invoked. All twelve
+`interactive-media.json` records have zero discovered, embedded, activated,
+and result-level interactive media.
+
+Both primary-image and all-rendered-image audits report twelve pages,
+zero missing images, zero repair attempts, and zero repair failures. Five
+representative public loopback replays covered recent technical, sequence,
+excluded-media-reference, long comment-heavy, and oldest-page structures:
+`vFXmy84kJ77C5cELy`, `TTn6vTcZ3szBctvgb`, `LAxAmooK4uDfWmbep`,
+`t9svvNPNmFf5Qa3TA`, and `FgjcHiWvADgsocE34`. Their visible body lengths were
+22,498, 92,826, 31,405, 94,716, and 23,483 characters; rendered image counts
+were 15, 17, 2, 41, and 7. Every replay had zero broken images, zero video or
+audio elements, and zero production-origin resource entries. The local
+network logger recorded 245 archive metadata URLs, all on loopback, with zero
+non-loopback URLs. This validates the streamed article shell, sequence and
+long-comment structures, excluded-media boundary, and public-only replay
+behavior for the complete Janus collection.
+
+## LessWrong priority pilot preparation
+
+The reviewed `sources/lesswrong-priority.txt` contains nine requested
+first-party routes. The frozen library inventory supplies 29 ordered Fun Theory
+members and 16 ordered Highly Advanced Epistemology members. A rendered public
+inspection of `https://www.lesswrong.com/s/6BFkmEgre7uwhDxDR` supplied eleven
+ordered entries, including the already requested `Scarcity` identity
+`MCYp8g9EMAiTCTawk`. None of the nine priority routes overlap the existing
+LessWrong capture lists or the Janus roots. Sequence-member expansion will use
+stable post IDs, so direct-post and sequence-route aliases are captured only
+once while index and ordering provenance are retained.
+
+The bounded nine-route priority pilot is prepared in
+`data/lesswrong-priority-pilot.txt`, with the requested direct posts, Fun
+Theory member and index, 6BF sequence index, Highly Advanced Epistemology wiki
+page and sequence index. Its planned capture is:
+
+```text
+util/capture_urls --url-file data/lesswrong-priority-pilot.txt --output-root /mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-pilot --max-urls 9 --port 2103 --max-scrolls 60 --max-seconds 120 --settle-seconds 15 --max-assets 400 --asset-delay-seconds 2 --asset-timeout 90 --delay-seconds 30 --exclude-asset-host www.youtube-nocookie.com --exclude-asset-host www.youtube.com --exclude-asset-host youtube.com --exclude-asset-host pbs.twimg.com --exclude-asset-host video.twimg.com --exclude-asset-host twitter.com --exclude-asset-host www.twitter.com --exclude-asset-host x.com --exclude-asset-host www.x.com
+```
+
+This remains public-only and excludes all YouTube/Twitter/X asset downloads;
+after the pilot passes replay validation, the ordered sequence members can be
+expanded in progressively larger deduplicated batches.
