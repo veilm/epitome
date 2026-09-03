@@ -450,7 +450,12 @@ deletion-history workflows are explicitly designed.
   - [ ] Identify the canonical site and complete page/media set for each before
         capture.
 - [ ] **near.blog and Near's link graph**
-  - [ ] Preserve near.blog itself.
+  - [x] Validate near.blog's public home and representative routes, defer the
+        direct-video `/this-anime-does-not-exist/` page to a separate media
+        scope, and prepare the seven-route bounded pilot in ignored
+        `data/near-blog-pilot.txt`.
+  - [ ] Capture and offline-audit the near.blog pilot before expanding its
+        own-page inventory.
   - [ ] Inventory and prioritize the sites, essays, papers, videos, and other
         material Near links to.
   - [ ] Record provenance from each outbound item back to the Near page that
