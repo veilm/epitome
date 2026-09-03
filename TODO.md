@@ -366,6 +366,11 @@ deletion-history workflows are explicitly designed.
   - [ ] Inventory and preserve `https://alien.v01d.zone/` as an explicitly
         low-risk source; define its canonical page and asset scope and validate
         a small varied pilot before bounded capture.
+    - [x] Validate the public long-form home, classify its fragment-only
+          navigation and first-party image surface, and prepare the bounded
+          one-route pilot in ignored `data/alien-v01d-pilot.txt`.
+    - [ ] Capture and offline-audit the alien.v01d.zone pilot before expanding
+          beyond its canonical long-form page.
   - [ ] Preserve Eliezer Yudkowsky's fiction page
         `https://www.yudkowsky.net/other/fiction/the-sword-of-good` and inventory
         the writing scope linked from `https://yudkowsky.tumblr.com/writing` as
