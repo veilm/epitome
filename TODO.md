@@ -77,8 +77,11 @@ deletion-history workflows are explicitly designed.
           preview, record the preview/paywall and platform-frame boundary, and
           prepare the bounded five-route pilot in ignored
           `data/import-ai-pilot.txt`.
-    - [ ] Capture and offline-audit the Import AI public pilot before expanding
-          its archive or outbound research-link scope.
+    - [x] Capture and offline-audit the five-route Import AI public pilot:
+          all manifests completed with zero capture failures, public-preview
+          and platform/reporting records classified, clean primary/all-image
+          audits, zero prohibited-host results, and five local-only replays
+          with no production-origin requests.
   - [ ] Preserve both Scott Alexander publication eras as separate, linked
         sources: the historical **Slate Star Codex** archive at
         `slatestarcodex.com` and its successor **Astral Codex Ten** at
