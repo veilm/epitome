@@ -19,3 +19,8 @@ The exact YouTube/Twitter/X asset exclusions remain in force. At its boundary,
 require complete tab-closed manifests, dependency/media and exclusion
 classification, both image audits, and local-only replay of the article and
 image path.
+
+The next low-risk scope is prepared while this pilot runs: a seven-route
+Cyborgism Wiki pilot covering the public home, representative hypha, glossary,
+categories, profiles, all-hyphae list, and bibliography routes. Login and
+random routes remain out of scope.
