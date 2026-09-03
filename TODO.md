@@ -355,8 +355,13 @@ deletion-history workflows are explicitly designed.
         long essay, fiction, and recent blog shapes; defer direct-video
         `/embryo-selection` to separate media scope; prepare the seven-route
         bounded `data/gwern-pilot.txt`.
-  - [ ] Capture and offline-audit the Gwern pilot before expanding its family
-        inventories.
+  - [x] Capture and offline-audit the seven-route Gwern pilot with zero
+        capture failures, zero response/asset failures or exclusions, clean
+        primary/all-image audits, classified public PDF references, and
+        loopback-only representative replays.
+  - [ ] Capture and offline-audit the prepared twelve-route major-essay family
+        in ignored `data/gwern-major-essays-next-12.txt` before expanding the
+        blog/document families.
   - [ ] Inventory and preserve **Cyborgism Wiki** at `cyborgism.wiki` as an
         explicitly low-risk source; define its canonical page scope and
         validate a small varied pilot before bounded capture.
