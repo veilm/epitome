@@ -472,3 +472,59 @@ The next 24 stable members remain prepared in
 followed by all sixteen Highly Advanced Epistemology entries. Its reserved
 output root is
 `/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-24`.
+
+## LessWrong priority member 24 validation
+
+The 24-member continuation completed on 2026-09-03 at
+`/mnt2/capsule/epitome/lesswrong/crawls/1788409362-priority-members-next-24`.
+All 24 manifests and page records are complete and tab-closed; the terminal
+`finish` record reports `failures=0`. The capture recorded 5,201 requests,
+4,930 response bodies, 480,462,915 response bytes, and 231 response-level
+body-error records. Network statuses were 4,933 HTTP 200, 27 HTTP 204,
+115 HTTP 301, 40 HTTP 302, one HTTP 308, two HTTP 403, 17 HTTP 404,
+49 HTTP 429, two pending observations, and 15 unknown observations. These
+dependency, redirect, and rate-limit records did not become capture-level
+failures.
+
+Asset outcomes were 4,541 discovered, 2,551 attempted, 2,478 completed,
+1,990 already complete, and 73 failed, with 127,374,947 downloaded bytes.
+The failed asset results classify as 15 DNS resolution failures, two HTTP
+403s, seven HTTP 404s, and 49 HTTP 429s. There were zero exclusion decisions
+and zero prohibited YouTube/Twitter/X URLs in asset result records. All 24
+`interactive-media.json` records have zero discovered, embedded, activated,
+and result-level interactive media, including the pages with Type3 audio and
+other linked-host references. No YouTube or Twitter/X downloader was
+invoked.
+
+The primary-image audit reports 24 pages, zero missing images, zero repair
+attempts, and zero repair failures. The all-rendered-image audit reports 13
+missing rendered-only images on two pages, with no repair attempts. The
+`fnEWQAYxcRnaYBqaZ` Initiation Ceremony page has one unavailable old
+LessWrong-imported JPG whose capture result was HTTP 429. The
+`hzuSDMx7pd2uxFc5w` Causal Diagrams and Causal Models page has twelve
+unavailable historical Web Archive/CodeCogs formula variants whose capture
+results were connection-refused errors. These are external or historical
+formula/image variants, not primary article-image failures.
+
+Six representative public loopback replays covered the early
+`iiWiHgtQekWNnmE6Q` post, image-bearing middle
+`XqvnWFtRD2keJdwjX`, late and comment-heavy
+`zqwWicCLNBSA5Ssmn`, Type3-audio/image-reference
+`o5F2p3krzT4JgzqQc`, and both known missing-image cases
+`fnEWQAYxcRnaYBqaZ` and `hzuSDMx7pd2uxFc5w`. The visible body lengths were
+74,730, 264,301, 355,046, 217,135, 43,927, and 170,666 characters; comment
+node matches were 2,445, 6,948, 8,928, 5,307, 1,701, and 4,094. The image
+replay retained 14/14 loaded images, the late post 1/1, and the media/reference
+post 10/10, all with zero broken images. The first four had zero video or
+audio elements and no activated media. The missing-image replays exposed the
+expected one unavailable JPG and 13 unavailable formula/image elements
+(30/43 formula-page images loaded); no production-origin resource was
+requested. The local network logger recorded 274 archive metadata URLs, all
+on `127.0.0.1:8030`, with zero non-loopback URLs (193 local 200, 20 local
+404, and 61 pending observations).
+
+This completes the requested priority routes and their deduplicated sequence
+members: the nine-route pilot, 29 Fun Theory identities, 12 6BF identities,
+and 16 Highly Advanced Epistemology identities. The LessWrong priority queue
+is now complete; the next low-risk source is the prepared public Yudkowsky
+fiction/writing pilot.

@@ -482,12 +482,15 @@ deletion-history workflows are explicitly designed.
           15/15 capture has zero capture-level failures, clean primary/
           all-image audits, zero excluded-host results, and loopback-only
           representative replays.
-    - [ ] Prioritize the requested LessWrong posts and sequences listed in
+    - [x] Prioritize the requested LessWrong posts and sequences listed in
           `sources/lesswrong-priority.txt`, deduplicating the already-inventoried
           `d3WgHDBAPYYScp5Em` sequence and all captured member posts.
-    - [ ] Include the requested LessWrong wiki page *Highly Advanced
+          The nine-route pilot plus 15-, 15-, and 24-member expansions are
+          complete and audited.
+    - [x] Include the requested LessWrong wiki page *Highly Advanced
           Epistemology 101 for Beginners* and explicitly prioritize the
-          already-inventoried `SqFbMbtxGybdS2gRs` sequence.
+          already-inventoried `SqFbMbtxGybdS2gRs` sequence. Its 16 members are
+          captured in the final 24-member expansion.
 - [ ] **Nonfiction books**
   - [ ] Start a title and edition inventory, beginning with *The Elephant in the
         Brain*.
