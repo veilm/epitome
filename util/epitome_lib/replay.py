@@ -562,7 +562,13 @@ class _HTMLRewriter(HTMLParser):
 
     def _should_drop_link(self, attrs: dict[str, str]) -> bool:
         rel = set(attrs.get("rel", "").lower().split())
-        if rel & {"dns-prefetch", "modulepreload", "preconnect", "prefetch"}:
+        if rel & {
+            "compression-dictionary",
+            "dns-prefetch",
+            "modulepreload",
+            "preconnect",
+            "prefetch",
+        }:
             return True
         # Preloads are only performance hints. Keeping captured absolute font,
         # style, image, or script preloads lets the offline replay contact the
@@ -716,7 +722,7 @@ class _HTMLRewriter(HTMLParser):
                 value = self._resource(value)
             elif tag == "link" and lower == "href":
                 rel = set(attrs.get("rel", "").lower().split())
-                if rel & {"apple-touch-icon", "icon", "stylesheet"}:
+                if rel & {"apple-touch-icon", "icon", "mask-icon", "stylesheet"}:
                     value = self._resource(value)
             elif tag == "a" and lower == "href":
                 value = self._link(value)

@@ -361,8 +361,12 @@ deletion-history workflows are explicitly designed.
     - [x] Inventory the public Sword of Good page and the 13 canonical writing
           pages linked by the Tumblr writing index; prepare the seven-route
           varied pilot and eight-route continuation in ignored `data/` lists.
-    - [ ] Capture and offline-audit the prepared Yudkowsky fiction/writing
-          pilot before starting its eight-route continuation.
+    - [x] Capture and offline-audit the prepared Yudkowsky fiction/writing
+          pilot; all seven routes completed with zero page or asset failures,
+          clean primary/all-image audits, and loopback-only replay after the
+          compression-dictionary replay fix.
+    - [ ] Capture and offline-audit the prepared eight-route Yudkowsky
+          fiction/writing continuation before preparing the next source.
   - [ ] Preserve Michael Burry's canonical Substack article
         `https://post.substack.com/p/the-ai-revolution-is-here-will-the`
         as an explicitly low-risk page; it is separate from Dwarkesh and Import
