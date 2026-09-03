@@ -372,8 +372,11 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the public long-form home, classify its fragment-only
           navigation and first-party image surface, and prepare the bounded
           one-route pilot in ignored `data/alien-v01d-pilot.txt`.
-    - [ ] Capture and offline-audit the alien.v01d.zone pilot before expanding
-          beyond its canonical long-form page.
+    - [x] Capture and offline-audit the alien.v01d.zone pilot; the canonical
+          page completed with zero page, response, or asset failures, passed
+          both image audits, preserved all 15 images and 220,166 characters in
+          three local-only long-form/fragment replays, and had no excluded-host
+          results or interactive media.
   - [ ] Preserve Eliezer Yudkowsky's fiction page
         `https://www.yudkowsky.net/other/fiction/the-sword-of-good` and inventory
         the writing scope linked from `https://yudkowsky.tumblr.com/writing` as
