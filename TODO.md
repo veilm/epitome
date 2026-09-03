@@ -389,8 +389,9 @@ deletion-history workflows are explicitly designed.
         page, with tracking parameters removed.
     - [x] Validate the rendered public canonical page and prepare its bounded
           one-page pilot in ignored `data/citrini-research-pilot.txt`.
-    - [ ] Capture and offline-audit the one-page Citrini Research pilot before
-          advancing to the next low-risk source.
+    - [x] Capture and offline-audit the one-page Citrini Research pilot; the
+          page completed with zero capture/asset failures, clean primary/all-
+          image audits, and a local-only article/image replay.
   - [ ] Inventory each person's canonical blog, essays, talks, and other
         first-party writing before defining capture scope.
 - [ ] **One-off essay and forecast sites**
