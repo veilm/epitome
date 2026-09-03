@@ -351,8 +351,10 @@ deletion-history workflows are explicitly designed.
     - [x] Validate the public home and representative hypha page, and prepare
           the seven-route bounded pilot in ignored
           `data/cyborgism-wiki-pilot.txt`.
-    - [ ] Capture and offline-audit the Cyborgism Wiki pilot before expanding
-          its canonical page inventory.
+    - [x] Capture and offline-audit the Cyborgism Wiki pilot; all seven routes
+          completed with zero page failures, classified the repeated missing
+          favicon 404 and three linked public PDF references, passed both image
+          audits, and passed five local-only structural/image replays.
   - [ ] Inventory and preserve all of **Generative Ink** at `generative.ink` as
         an explicitly low-risk source; review its canonical pages, generated
         works, and first-party assets before bounded capture.
