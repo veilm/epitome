@@ -365,12 +365,19 @@ deletion-history workflows are explicitly designed.
           pilot; all seven routes completed with zero page or asset failures,
           clean primary/all-image audits, and loopback-only replay after the
           compression-dictionary replay fix.
-    - [ ] Capture and offline-audit the prepared eight-route Yudkowsky
-          fiction/writing continuation before preparing the next source.
+    - [x] Capture and offline-audit the prepared eight-route Yudkowsky
+          fiction/writing continuation; all eight routes completed with zero
+          page or asset failures, classified 16 platform dependency redirects,
+          clean primary/all-image audits, and four local-only replays with no
+          production-origin requests.
   - [ ] Preserve Michael Burry's canonical Substack article
         `https://post.substack.com/p/the-ai-revolution-is-here-will-the`
         as an explicitly low-risk page; it is separate from Dwarkesh and Import
         AI.
+    - [x] Validate the rendered public canonical page and prepare its bounded
+          one-page pilot in ignored `data/michael-burry-article-pilot.txt`.
+    - [ ] Capture and offline-audit the one-page Michael Burry pilot before
+          advancing to the next low-risk source.
   - [ ] Preserve Citrini Research's canonical article
         `https://www.citriniresearch.com/p/2028gic` as an explicitly low-risk
         page, with tracking parameters removed.
