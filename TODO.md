@@ -22,8 +22,11 @@ deletion-history workflows are explicitly designed.
 ## Source backlog
 
 - [ ] **Company careers and job listings**
-  - [ ] Add OpenAI careers and individual job listings to the OpenAI archive
-        scope.
+  - [x] Validate the public OpenAI careers index and six varied job detail
+        identities, record stable Ashby IDs, and prepare the seven-route
+        ignored `data/openai-careers-pilot.txt`.
+  - [ ] Capture and offline-audit the OpenAI careers pilot before expanding
+        the versioned job inventory.
   - [ ] Add Anthropic's careers index and individual Greenhouse job listings to
         the Anthropic archive scope.
   - [ ] Preserve title, team, location, description, requirements, compensation
