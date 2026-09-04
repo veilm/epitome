@@ -29,8 +29,11 @@ deletion-history workflows are explicitly designed.
         routes completed with `finish.failures=0`, clean primary/all-image
         audits, zero excluded-host results, classified optional static 403s,
         and loopback-only index/detail replays.
-  - [ ] Add Anthropic's careers index and individual Greenhouse job listings to
-        the Anthropic archive scope.
+  - [x] Validate Anthropic's public careers index and six varied Greenhouse
+        detail identities, record the current 590-ID versioned observation, and
+        prepare the ignored `data/anthropic-careers-pilot.txt`.
+  - [ ] Capture and offline-audit the bounded Anthropic careers pilot before
+        expanding the versioned job inventory.
   - [ ] Preserve title, team, location, description, requirements, compensation
         where published, stable external job ID, first/last-seen timestamps, and
         removal history. Job listings need incremental snapshots because their
