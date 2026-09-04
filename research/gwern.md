@@ -111,14 +111,70 @@ replay layer, not substantive page or content-image failures. There were zero
 non-loopback and zero production-origin requests, so no live-origin fallback
 occurred.
 
-The next bounded family is prepared in ignored
-`data/gwern-major-essays-next-12.txt`. It contains twelve unique first-party
-essay routes taken from the captured homepage inventory and deduplicated
-against the seven-route pilot: `/lean-scaling`, `/guardian-angel`,
-`/llm-catapult`, `/generating-style`, `/vaping`, `/rl-children`,
-`/complement`, `/banner`, `/face`, `/subculture`, `/improvement`, and
-`/math-error`. The direct-video `/embryo-selection` route, `/twitter`, and
-other media-heavy or non-essay families remain excluded from this next page
-lane. Before starting that family, repeat the standard 2103-only settings and
-the exact eight-host exclusions, then require the same page, asset, media,
-image-audit, and local-only replay checks.
+## Twelve-route major-essay result
+
+The prepared family in ignored `data/gwern-major-essays-next-12.txt` completed
+on 2026-09-03 at
+`/mnt2/capsule/epitome/gwern/crawls/1788480295-major-essays-next-12`. All
+twelve manifests are complete and tab-closed, and the final `progress.jsonl`
+record reports `failures=0`. The page/network outcomes were:
+
+| Route | Requests / bodies / body errors; status classification | Assets discovered / attempted / complete / existing / failed / excluded | Interactive media |
+| --- | ---: | ---: | ---: |
+| `/lean-scaling` | 202 / 199 / 1; 199×200, 2×204, 1 pending | 189 / 171 / 171 / 18 / 0 / 0 | 0 / 0 / 0 |
+| `/guardian-angel` | 214 / 212 / 1; 212×200, 1×204, 1 pending | 197 / 174 / 174 / 23 / 0 / 0 | 0 / 0 / 0 |
+| `/llm-catapult` | 238 / 235 / 2; 235×200, 1×204, 2 pending | 222 / 197 / 197 / 25 / 0 / 0 | 0 / 0 / 0 |
+| `/generating-style` | 201 / 199 / 1; 199×200, 1×204, 1 pending | 189 / 169 / 169 / 20 / 0 / 0 | 0 / 0 / 0 |
+| `/vaping` | 201 / 199 / 1; 199×200, 1×204, 1 pending | 189 / 168 / 168 / 21 / 0 / 0 | 0 / 0 / 0 |
+| `/rl-children` | 200 / 199 / 0; 199×200, 1×204 | 190 / 172 / 172 / 18 / 0 / 0 | 0 / 0 / 0 |
+| `/complement` | 212 / 210 / 1; 210×200, 1×204, 1 pending | 194 / 168 / 168 / 26 / 0 / 0 | 0 / 0 / 0 |
+| `/banner` | 274 / 268 / 5; 267×200, 1×202, 1×204, 3×403, 2×404 | 259 / 232 / 227 / 27 / 5 / 0 | 0 / 0 / 0 |
+| `/face` | 348 / 86 / 261; 342×200, 1×204, 2×404, 3 pending | 328 / 295 / 37 / 33 / 258 / 0 | 0 / 0 / 0 |
+| `/subculture` | 238 / 230 / 7; 229×200, 1×202, 1×204, 1×403, 3×404, 1 pending, 2 unknown | 225 / 199 / 193 / 26 / 6 / 0 | 0 / 0 / 0 |
+| `/improvement` | 214 / 212 / 1; 212×200, 1×204, 1 pending | 196 / 170 / 170 / 26 / 0 / 0 | 0 / 0 / 0 |
+| `/math-error` | 246 / 239 / 6; 239×200, 1×204, 3×404, 3 unknown | 232 / 209 / 203 / 23 / 6 / 0 | 0 / 0 / 0 |
+
+The aggregate capture recorded 2,788 requests, 2,488 response bodies,
+287 response-body error records, and 885,622,948 response bytes. The 287
+error records classify as 256 HTTP-200 bodies rejected by the completion
+budget on the media-heavy `/face` route, four HTTP 403 reference responses,
+ten HTTP 404 reference responses, five unknown-status records, and twelve
+pending records. The thirteen HTTP 204 responses are telemetry with no body,
+not capture failures. The five pages with ordinary body errors still retained
+their substantive HTML and completed normally.
+
+Asset completion discovered 2,610 references and attempted 2,324: 2,049
+completed, 286 already complete, 275 failed, zero excluded, and
+835,591,835 downloaded bytes. The failed assets classify as 256
+completion-budget/value failures on `/face`, four HTTP 403 public-reference
+PDF failures, ten HTTP 404 public-reference/image failures, two DNS failures,
+one TLS failure, one no-route failure, and one timeout. These are optional
+first-party media or linked public-reference outcomes; no access control was
+bypassed. All twelve interactive-media ledgers report zero discovered,
+embedded, activated, or result-level media. The asset-result URL audit found
+zero results on the exact YouTube/Twitter/X exclusion hosts, and no downloader
+was invoked or incidental media variant intentionally fetched.
+
+Both primary-image and all-rendered-image audits report twelve pages, one page
+with missing images, 42 missing image references, zero repair attempts, and
+zero repair failures. The missing references are the known unavailable
+StyleGAN images on `/face`; the other eleven pages have no missing images.
+
+Local-only CDP replays covered early `/lean-scaling`, early long-form
+`/llm-catapult`, middle reference-heavy `/banner`, media-heavy `/face`, and
+late reference-heavy `/math-error`. They retained 16,996–228,060 article
+characters. The routes rendered respectively 0, 1, 18, 47, and 1 images;
+only `/face` reproduced the 42 known broken images, and it also exposed 27
+captured video elements without activating them. Frames and audio were zero
+on every replay. The replay logger recorded 255 requests, all to
+`127.0.0.1:8037`: 126 HTTP 200 responses, ten local HTTP 400s for repeated
+decorative root-relative assets, 42 local HTTP 404s for the known `/face`
+image gaps, and 77 pending local font reads when the logger stopped. There
+were zero production-origin or non-loopback requests, so no live-origin
+fallback occurred.
+
+The next sole capture lane is the prepared public-only OpenAI careers pilot in
+ignored `data/openai-careers-pilot.txt`; its validation and stable Ashby-ID
+notes are in `research/openai-careers.md`. Keep the standard CDP-2103-only
+settings and exact eight-host exclusions, preserve the public job-description
+boundary, and defer Ashby application links and any authenticated route.
