@@ -201,6 +201,39 @@ held-out Fellows/application-form-heavy listings, and the completed
 `next-15` continuation. This keeps application links as references only while
 continuing the versioned public job-identity snapshots.
 
+## Careers N+1b result
+
+The `next-15b` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788499452-next-15b` completed
+15/15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and all tabs closed. It recorded 506 requests, 482
+response bodies, 16 response-body error records, and 70,300,621 response
+bytes. The status ledger contained 482 HTTP 200 responses, eight HTTP 401
+session probes, and 16 pending asynchronous records. The eight error-bearing
+pages were ordinary application-shell variants: their public descriptions
+rendered while `my.greenhouse.io` session checks, Google Picker/identity,
+reCAPTCHA, Dropbox Chooser, and telemetry remained optional boundary traffic.
+
+Three public Anthropic PDF references were captured from
+`www-cdn.anthropic.com`; they were treated as reference assets, not as
+application routes. The asset ledger contained 362 discovered assets, 181
+attempted and completed downloads, 181 already-complete entries, 0 failures,
+0 exclusions, and 29,072,724 downloaded bytes. Interactive media was zero.
+Both image audits reported 15/15 pages with zero missing images.
+
+Local-only early/middle/late replays of `5367417008`, `5231612008`, and
+`5198074008` preserved 17,776, 17,496, and 8,010 body-text characters, one
+intact logo image per page, and no broken images, video, or audio. The middle
+and late pages exposed three local application/anti-abuse frames each; no
+application route was opened or submitted. The replay logger recorded 32
+loopback-only requests (23 HTTP 200, two unavailable captured reCAPTCHA
+stylesheet 404s, and seven pending), with no production-origin or
+excluded-host result.
+
+The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15c.txt`, continuing the archived index after the
+pilot, held-out Fellows listings, `next-15`, and `next-15b`.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
