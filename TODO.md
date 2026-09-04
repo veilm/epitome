@@ -25,8 +25,10 @@ deletion-history workflows are explicitly designed.
   - [x] Validate the public OpenAI careers index and six varied job detail
         identities, record stable Ashby IDs, and prepare the seven-route
         ignored `data/openai-careers-pilot.txt`.
-  - [ ] Capture and offline-audit the OpenAI careers pilot before expanding
-        the versioned job inventory.
+  - [x] Capture and offline-audit the OpenAI careers pilot: all seven public
+        routes completed with `finish.failures=0`, clean primary/all-image
+        audits, zero excluded-host results, classified optional static 403s,
+        and loopback-only index/detail replays.
   - [ ] Add Anthropic's careers index and individual Greenhouse job listings to
         the Anthropic archive scope.
   - [ ] Preserve title, team, location, description, requirements, compensation
