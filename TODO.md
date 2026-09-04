@@ -32,8 +32,15 @@ deletion-history workflows are explicitly designed.
   - [x] Validate Anthropic's public careers index and six varied Greenhouse
         detail identities, record the current 590-ID versioned observation, and
         prepare the ignored `data/anthropic-careers-pilot.txt`.
-  - [ ] Capture and offline-audit the bounded Anthropic careers pilot before
-        expanding the versioned job inventory.
+  - [x] Capture and offline-audit the bounded Anthropic careers pilot: all
+        seven public/index and Greenhouse routes completed with
+        `finish.failures=0`, zero response or asset failures, clean image/media
+        ledgers, zero excluded-host results, and loopback-only replays.
+  - [x] Prepare the deduplicated 15-route Anthropic careers continuation in
+        ignored `data/anthropic-careers-next-15.txt`, holding out the four
+        adjacent Fellows pages with embedded/application-form references.
+  - [ ] Capture and offline-audit the next versioned Anthropic job-identity
+        batch before expanding further.
   - [ ] Preserve title, team, location, description, requirements, compensation
         where published, stable external job ID, first/last-seen timestamps, and
         removal history. Job listings need incremental snapshots because their

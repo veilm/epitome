@@ -150,6 +150,18 @@ current opening in one pass. Keep the Greenhouse detail URLs public-only,
 record application links as references without following them, and retain the
 same exact asset-host exclusions used by the other low-risk lanes.
 
+## Careers N+1 preparation
+
+The pilot’s archived index was used to prepare the ignored
+`data/anthropic-careers-next-15.txt`. It contains the first 15 uncaptured
+Greenhouse detail IDs in the captured display order, after removing the six
+pilot detail IDs. The four immediately adjacent Fellows listings
+(`5023394008`, `5183044008`, `5183051008`, and `5183053008`) are intentionally
+held out because the live validation showed an embedded frame or visible
+external application-form references; they remain public references for a
+separate boundary review and were not opened. The N+1 list is therefore a
+bounded 15-page detail-only continuation with no application URLs.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
