@@ -362,9 +362,11 @@ deletion-history workflows are explicitly designed.
         capture failures, zero response/asset failures or exclusions, clean
         primary/all-image audits, classified public PDF references, and
         loopback-only representative replays.
-  - [ ] Capture and offline-audit the prepared twelve-route major-essay family
-        in ignored `data/gwern-major-essays-next-12.txt` before expanding the
-        blog/document families.
+  - [x] Capture and offline-audit the prepared twelve-route major-essay family
+        in ignored `data/gwern-major-essays-next-12.txt`; classify the
+        response/body and optional-reference failures, the `/face` media-budget
+        boundary and 42 known missing images, pass both image audits and
+        loopback replays, and preserve zero excluded-host asset results.
   - [ ] Inventory and preserve **Cyborgism Wiki** at `cyborgism.wiki` as an
         explicitly low-risk source; define its canonical page scope and
         validate a small varied pilot before bounded capture.
