@@ -263,6 +263,39 @@ The next deduplicated public-only batch is prepared in ignored
 `data/anthropic-careers-next-15d.txt`, continuing the archived index after the
 pilot, held-out Fellows listings, `next-15`, `next-15b`, and `next-15c`.
 
+## Careers N+1d result
+
+The `next-15d` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788511006-next-15d` completed
+15/15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and all capture tabs closed. It recorded 503
+requests, 478 response bodies, 17 response-body error records, and 48,834,539
+response bytes. The status ledger contained 478 HTTP 200 responses, eight
+HTTP 401 session probes, and 17 pending asynchronous records. The error and
+session traffic was classified as optional Greenhouse application-shell,
+anti-abuse, Google/Dropbox, reCAPTCHA, and telemetry boundary traffic; no
+application or authenticated route was opened.
+
+The asset ledger contained 359 discovered assets, 178 attempted and completed
+downloads, 181 already-complete entries, 0 failures, 0 exclusions, and
+7,638,828 downloaded bytes. Interactive media was zero. Both the primary and
+all-rendered-image audits reported 15/15 pages with no missing images.
+
+Local-only early/middle/late replays of `5387564008`, `5370690008`, and
+`5227672008` preserved 17,376, 13,510, and 9,422 body-text characters and one
+intact logo image per page, with no broken images, video, or audio. The early
+and late pages exposed three archived optional frames each; the middle page
+exposed none. The replay logger recorded 32 loopback-only requests (23 HTTP
+200, two unavailable captured Google reCAPTCHA stylesheet 404s, and seven
+pending), with no production-origin or excluded-host result. The replay tab
+and server were closed after validation.
+
+The archived index still has 505 uncaptured public job identities after this
+batch. The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15e.txt`; application links remain references
+only and the four held-out Fellows/application-form-heavy listings remain
+outside the ordinary lane.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
