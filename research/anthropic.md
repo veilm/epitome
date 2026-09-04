@@ -162,6 +162,45 @@ external application-form references; they remain public references for a
 separate boundary review and were not opened. The N+1 list is therefore a
 bounded 15-page detail-only continuation with no application URLs.
 
+## Careers N+1 result
+
+The continuation in `/mnt2/capsule/epitome/anthropic-careers/crawls/1788497343-next-15`
+completed all 15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and every capture tab closed. The batch recorded 431
+requests, 419 response bodies, 8 response-body error records, and 41,171,966
+response bytes. Statuses were 419 HTTP 200 responses, four HTTP 401 records,
+and eight pending records. The 401/pending records were optional Greenhouse
+application scaffolding and asynchronous dependencies, not a failure to render
+the public job descriptions.
+
+Page 10 (`5357746008`, Life Sciences Operator, Lead) was the only unusual
+route: it made 42 requests with 39 response bodies and two response-body error
+records. Its public page rendered the job description and application-form
+shell. The related `my.greenhouse.io` 401, Google Picker/identity,
+reCAPTCHA, Dropbox Chooser, and Snowplow traffic was classified as optional
+application-reference, anti-abuse, or telemetry behavior. No application form
+was submitted and no application link was opened.
+
+The asset ledger contained 351 discovered assets, 178 attempted and completed
+downloads, 173 already-complete entries, 0 failures, 0 exclusions, and
+7,638,828 downloaded bytes. Interactive media was zero across all 15 pages.
+Both primary-image and all-rendered-image audits reported 15/15 pages with
+zero missing images. A local-only archive replay of early page `4951814008`,
+the page-10 form/reference case `5357746008`, and late page `5224564008`
+preserved 16,927, 17,666, and 19,414 body-text characters respectively, with
+one intact logo image on each and no broken images, video, or audio. The
+middle replay exposed three local reCAPTCHA frames as expected; early and late
+pages exposed no frames. Its 25 network records were loopback-only (19 HTTP
+200, one intentionally unavailable captured reCAPTCHA stylesheet at HTTP 404,
+and five pending), with no production-origin or excluded-host result.
+
+The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15b.txt`. It contains the next 15 IDs in the
+archived 590-ID index order after excluding the six pilot details, the four
+held-out Fellows/application-form-heavy listings, and the completed
+`next-15` continuation. This keeps application links as references only while
+continuing the versioned public job-identity snapshots.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
