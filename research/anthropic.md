@@ -105,8 +105,12 @@ Do not infer authorship merely because a page mentions Dario in its body.
 
 ## Careers
 
-`/careers/jobs` currently renders 254 unique openings across 14 departments and
-links each one to a stable `job-boards.greenhouse.io` job ID. The main sitemap
+`/careers/jobs` was revalidated through Chromium/CDP on 2026-09-04. It rendered
+as `Jobs \\ Anthropic` with 53,335 body-text characters and 590 unique opening
+links, each carrying a stable numeric `job-boards.greenhouse.io` job ID. The
+index had no images, broken images, frames, video, or audio. The count is a
+versioned observation and supersedes the earlier 254-opening observation; it
+must not be treated as a permanently complete inventory. The main sitemap
 contains only `/careers` and `/careers/jobs`, not those individual job pages.
 
 The careers crawler therefore needs a second discovery step from the rendered
@@ -114,6 +118,37 @@ jobs index. Store the external job ID, title, department, locations,
 first-seen/last-seen timestamps, and the full posting snapshot. Incremental runs
 should preserve removed listings instead of deleting or overwriting their last
 known content.
+
+The first bounded public-only pilot is prepared in the ignored
+`data/anthropic-careers-pilot.txt` and contains the index plus six distinct
+Greenhouse detail pages:
+
+1. `https://www.anthropic.com/careers/jobs` — current public job index.
+2. `https://job-boards.greenhouse.io/anthropic/jobs/4980436008` — Research
+   Manager, Interpretability; San Francisco.
+3. `https://job-boards.greenhouse.io/anthropic/jobs/5076109008` — Applied AI
+   Architect; Tokyo.
+4. `https://job-boards.greenhouse.io/anthropic/jobs/5394887008` — Product
+   Manager, Claude Science; San Francisco/New York/Seattle.
+5. `https://job-boards.greenhouse.io/anthropic/jobs/5254582008` — Policy
+   Communications; San Francisco/New York.
+6. `https://job-boards.greenhouse.io/anthropic/jobs/5391293008` — Enterprise
+   Account Executive, Automotive; Paris.
+7. `https://job-boards.greenhouse.io/anthropic/jobs/5287327008` — Salesforce
+   Developer, Partnerships; San Francisco/New York/Seattle.
+
+The six details were live-validated as public Greenhouse job pages. They
+rendered 21,332, 9,568, 21,398, 19,708, 15,302, and 18,054 body-text
+characters respectively, each with one intact image and no broken images,
+video, or audio. No application link was opened. The related Fellows page was
+deliberately not selected for this first pilot because it exposes a visible
+external application form reference and an embedded frame; that reference
+remains outside the public archive lane.
+
+This is an explicitly bounded job-board pilot, not a request to crawl every
+current opening in one pass. Keep the Greenhouse detail URLs public-only,
+record application links as references without following them, and retain the
+same exact asset-host exclusions used by the other low-risk lanes.
 
 ## Proposed first bounded batch
 
