@@ -362,6 +362,35 @@ The next deduplicated public-only batch is prepared in ignored
 only and the four held-out Fellows/application-form-heavy listings remain
 outside the ordinary lane.
 
+## Careers N+1g result
+
+The `next-15g` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788797701-next-15g` completed
+15/15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and all capture tabs closed. It recorded 356 requests,
+356 response bodies, no response-body errors, and 33,307,746 response bytes;
+all 356 responses were HTTP 200. The observed hosts were limited to the
+Greenhouse job page and CDN hosts, with no application or authenticated route
+opened.
+
+The asset ledger contained 341 discovered assets, 176 attempted and completed
+downloads, 165 already-complete entries, 0 failures, 0 exclusions, and
+7,514,706 downloaded bytes. Interactive media was zero. Both the primary and
+all-rendered-image audits reported 15/15 pages with no missing images.
+
+Local-only early/middle/late replays of `5390865008`, `5383388008`, and
+`5240487008` preserved 20,671, 19,278, and 17,118 body-text characters and
+one intact logo image per page, with no broken images, frames, video, or
+audio. The replay logger recorded 18 loopback-only requests (15 HTTP 200 and
+three pending), with no production-origin or excluded-host result. The replay
+tab and server were closed after validation.
+
+The archived index has 460 uncaptured public job identities after this batch.
+The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15h.txt`; application links remain references
+only and the four held-out Fellows/application-form-heavy listings remain
+outside the ordinary lane.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
