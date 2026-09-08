@@ -174,6 +174,14 @@ deletion-history workflows are explicitly designed.
   - [x] Prepare and start the next deduplicated public-only Anthropic batch in
         ignored `data/anthropic-careers-next-15r.txt`; continue the archived
         index without opening application or authenticated routes.
+  - [x] Capture and offline-audit the `next-15r` versioned Anthropic
+        job-identity batch: 15/15 public routes, `finish.failures=0`, no
+        capture-level failures, classified the retired public Greenhouse
+        redirect/status boundary, clean primary/all-rendered-image audits, no
+        excluded-host results, and loopback-only representative replays.
+  - [x] Prepare and start the next deduplicated public-only Anthropic batch in
+        ignored `data/anthropic-careers-next-15s.txt`; continue the archived
+        index without opening application or authenticated routes.
   - [ ] Preserve title, team, location, description, requirements, compensation
         where published, stable external job ID, first/last-seen timestamps, and
         removal history. Job listings need incremental snapshots because their
