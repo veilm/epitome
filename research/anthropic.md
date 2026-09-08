@@ -673,6 +673,36 @@ The next deduplicated public-only batch is prepared in ignored
 prepared batch. Application links remain references only and the four held-out
 Fellows/application-form-heavy listings remain outside the ordinary lane.
 
+## Careers N+1q result
+
+The `next-15q` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788855894-next-15q` completed
+15/15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and all capture tabs closed. It recorded 358 requests,
+358 response bodies, no response-body errors, and 33,475,681 response bytes;
+all 358 responses were HTTP 200. No application or authenticated route was
+opened.
+
+The asset ledger contained 343 discovered assets, 178 attempted and completed
+downloads, 165 already-complete entries, 0 failures, 0 exclusions, and
+7,638,828 downloaded bytes. Interactive media was zero. Both the primary and
+all-rendered-image audits reported 15/15 pages with no missing images.
+
+Local-only early/middle/late replays of `5275765008`, `5398360008`, and
+`5398641008` preserved 17,721, 18,465, and 19,865 body-text characters and
+one intact 2000x2001 logo image per page, with no broken images, frames, video,
+or audio. All three replays retained the public application form surface with
+an Apply button without opening an application link. Fresh performance-resource
+checks showed only loopback `127.0.0.1:8057` resources for all three replays,
+with no production-origin or excluded-host result. The replay tabs and server
+were closed after validation.
+
+The archived index has 325 uncaptured public job identities after this batch.
+The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15r.txt`; 310 public identities remain after that
+prepared batch. Application links remain references only and the four held-out
+Fellows/application-form-heavy listings remain outside the ordinary lane.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
