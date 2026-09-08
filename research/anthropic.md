@@ -777,6 +777,42 @@ selection. The next deduplicated public-only batch is prepared in ignored
 prepared batch. Application links remain references only and the four held-out
 Fellows/application-form-heavy listings remain outside the ordinary lane.
 
+## Careers N+1t result
+
+The `next-15t` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788873307-next-15t` completed
+15/15 public Greenhouse route pages with `finish.failures=0`, no capture-level
+failures, and all capture tabs closed. All 15 routes preserved public
+Greenhouse job-detail pages with HTTP 200 responses and no response-body
+errors. The batch recorded 359 requests, 359 response bodies, 0 response-body
+errors, and 39,563,506 response bytes. No application or authenticated route
+was opened.
+
+The asset ledger contained 344 discovered assets, 179 attempted and completed
+downloads, 165 already-complete entries, 0 failures, 0 exclusions, and
+13,721,863 downloaded bytes. One detail page, job `5018472008`, preserved the
+public first-party `Economic_Tasks_AI_Paper.pdf` dependency from
+`assets.anthropic.com`, along with its ordinary Greenhouse assets. Interactive
+media was zero. Both the primary and all-rendered-image audits reported 15/15
+pages with no missing images. Result URLs contained none of the excluded
+YouTube, Twitter, or X hosts.
+
+Local-only early/middle/late replays of `4986159008`, `5018472008`, and
+`5068570008` preserved 19,582, 19,348, and 19,585 body-text characters and one
+intact 2000x2001 logo image per page, with no broken images, frames, video, or
+audio. The middle replay covered the PDF/reference-bearing role; the captured
+PDF remained a non-activated public reference. All fresh replay resource hosts
+were loopback-only. The detail replays preserved the public Apply/application
+surface without activating it, and visible careers, mailto, and Greenhouse
+references were recorded without opening an application route. The replay tab
+and server were closed after validation.
+
+The archived index has 280 uncaptured public job identities before the next
+selection. The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15u.txt`; 265 public identities remain after that
+prepared batch. Application links remain references only and the four held-out
+Fellows/application-form-heavy listings remain outside the ordinary lane.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
