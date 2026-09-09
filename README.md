@@ -23,6 +23,11 @@ See [docs/network-capture.md](docs/network-capture.md) for current capture usage
 active preservation gaps are tracked in [STATUS.md](STATUS.md); external-media
 import mappings live under [inventories/](inventories/README.md).
 
+The reader product's purpose, the user's design philosophy, and proposed
+summary/feed workflow are recorded in
+[docs/product-philosophy.md](docs/product-philosophy.md). Its proposals are
+distinct from the currently implemented archive and summary utilities.
+
 Quick start, using an OpenAI article as one example source:
 
 ```sh
