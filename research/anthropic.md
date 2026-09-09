@@ -1445,6 +1445,44 @@ batch. The next deduplicated public-only batch is prepared in ignored
 listings remain outside the ordinary lane, and application links remain
 references only.
 
+## Careers N+1am result
+
+The `next-15am` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788986089-next-15am`
+completed all 15/15 public Greenhouse detail routes with `finish.failures=0`,
+no capture-level failures, and every capture tab closed. All 15 routes returned
+HTTP 200 public job-detail pages. No application or authenticated route was
+opened; the public job pages' application surface remained reference content.
+
+The batch recorded 360 requests and response bodies, all HTTP 200, totaling
+33,624,152 response bytes. Its asset ledger completed 180/180 attempted assets
+with zero asset failures and zero exclusions. The only response hosts were
+`job-boards.greenhouse.io`, `job-boards.cdn.greenhouse.io`, and
+`s8-recruiting.cdn.greenhouse.io`; interactive media was zero. Asset result
+URLs contained none of the excluded YouTube, Twitter, or X hosts, and no
+prohibited downloader or incidental media fetch was used. The captured pages
+include public Greenhouse application/form references and optional public
+document/font resources, but no application route was activated.
+
+Both primary and all-rendered-image audits reported 15/15 pages with no
+missing images. Local-only representative replays through an isolated archive
+server covered early (`5251609008`, 17,478 body-text characters), middle
+(`5368023008`, 17,206 characters), and late (`5416059008`, 18,867 characters)
+detail pages, plus the archive index as the structural boundary. Each detail
+replay preserved substantive headings and text, one intact 2000x2001 logo,
+one local application form surface, zero broken images, frames, video, or
+audio, and only loopback resource requests. The index replay rendered all 15
+links, had no broken images or interactive media, and likewise made no
+production-origin requests. This batch had no retired/status-boundary page;
+that case remains covered by the prior `next-15al` boundary replay.
+
+The archived 590-ID snapshot is now exhausted for the ordinary public-only
+lane after this final 15-identity batch. The four Fellows/application-form-
+heavy listings remain intentionally held out, and application links remain
+references only. No further explicitly prepared low-risk capture batch is
+present in the workflow queue; the remaining LessWrong item is marked Partial
+with no further priority batch queued.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
