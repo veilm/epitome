@@ -1324,9 +1324,9 @@ replays exposed the captured public application surface without activating an
 application route; the retired route exposed only the public Greenhouse
 reference.
 
-The archived index has 55 uncaptured ordinary public job identities before the
+The archived index has 60 uncaptured ordinary public job identities before the
 next selection. The next deduplicated public-only batch is prepared in ignored
-`data/anthropic-careers-next-15aj.txt`; 40 ordinary public identities remain
+`data/anthropic-careers-next-15aj.txt`; 45 ordinary public identities remain
 after that prepared batch. Application links remain references only and the
 four held-out Fellows/application-form-heavy listings remain outside the
 ordinary lane.
@@ -1371,9 +1371,44 @@ an early detail (`5400153008`, 16,601 body-text characters), a middle detail
 resource requests. The public Greenhouse application surface was visible as a
 reference; no application route was activated.
 
-The archived index has 40 uncaptured ordinary public job identities after the
+The archived index has 45 uncaptured ordinary public job identities after the
 repaired batch. The next deduplicated public-only batch is prepared in ignored
 `data/anthropic-careers-next-15ak.txt`. The four Fellows/application-form-heavy
+listings remain outside the ordinary lane, and application links remain
+references only.
+
+## Careers N+1ak result
+
+The `next-15ak` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788974551-next-15ak`
+completed 15/15 public Greenhouse detail routes with `finish.failures=0`, no
+capture-level failures, and all capture tabs closed. Fourteen routes preserved
+public job-detail pages. Job `5023394008` returned a public HTTP 302 and
+resolved to the Greenhouse `?error=true` index shell; its one response-body
+error is classified as a retired/removed public listing, not a capture
+failure. No application or authenticated route was opened.
+
+The batch recorded 351 requests, 350 response bodies, one response-body error,
+and 32,681,661 response bytes: 350 HTTP 200 responses and one HTTP 302
+response. Its asset ledger contained 170 attempted/completed assets, zero
+asset failures, and zero exclusions. The captured page HTML includes a public
+YouTube link as a reference, but no excluded-host result was downloaded and no
+YouTube/Twitter/X downloader or incidental media fetch was used. Interactive
+media was zero. Both primary and all-rendered-image audits reported 15/15
+pages with no missing images.
+
+Local-only representative replays through an isolated archive server covered
+an early detail (`5183044008`, 13,640 body-text characters), a middle detail
+(`5309917008`, 15,256 characters), a late detail (`5206978008`, 18,921
+characters), and the structurally unusual retired-listing shell
+(`5023394008`, 4,702 characters). The three detail replays each preserved one
+intact 2000x2001 logo and one public application form reference; the retired
+shell preserved the same logo without a form. All four had no broken images,
+video, or audio, and every fresh resource host was loopback-only.
+
+The archived index has 30 uncaptured ordinary public job identities after this
+batch. The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15al.txt`. The four Fellows/application-form-heavy
 listings remain outside the ordinary lane, and application links remain
 references only.
 
