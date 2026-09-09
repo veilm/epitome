@@ -1002,6 +1002,48 @@ after that prepared batch. Application links remain references only and the
 four held-out Fellows/application-form-heavy listings remain outside the
 ordinary lane.
 
+## Careers N+1aa result
+
+The `next-15aa` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788913655-next-15aa` completed
+15/15 public Greenhouse route pages with `finish.failures=0`, no capture-level
+failures, and all capture tabs closed. Fourteen routes preserved public
+Greenhouse job-detail pages. Job `5230394008` returned one public HTTP 302
+boundary record and resolved to the Greenhouse `?error=true` index shell; its
+single response-body error is classified as a retired/removed public listing,
+not a page-capture failure. The other four response-level records were two
+optional `my.greenhouse.io` application-session probes returning HTTP 401 and
+two optional Greenhouse font responses still pending; the public job pages
+rendered completely. The batch recorded 396 requests, 389 response bodies,
+five response-level records, and 37,403,970 response bytes: 389 HTTP 200
+responses, one HTTP 302, two HTTP 401 responses, and four pending records. No
+application or authenticated route was opened.
+
+The asset ledger contained 344 discovered assets, 179 attempted and completed
+downloads, 165 already-complete entries, 0 failures, 0 exclusions, and
+7,700,889 downloaded bytes. Interactive media was zero. Result URLs contained
+none of the excluded YouTube, Twitter, or X hosts. Both the primary and
+all-rendered-image audits reported 15/15 pages with no missing images.
+
+Local-only early/middle/late replays of `5137183008`, `5397708008`, and
+`5305476008` preserved 19,039, 17,496, and 19,418 body-text characters and one
+intact 2000x2001 logo image per page, with no broken images, video, or audio.
+The early application-surface replay exposed three captured reCAPTCHA/Google
+frames, all rewritten to loopback resources; the normal detail replays had no
+frames. The structurally unusual replay of retired `5230394008` preserved the
+public Greenhouse index shell with 4,702 body-text characters and the same
+intact logo. All fresh replay resource hosts were loopback-only. The normal
+replays exposed the public application surface without activating an
+application route; the retired route exposed only the public Greenhouse
+reference.
+
+The archived index has 175 uncaptured ordinary public job identities before the
+next selection. The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15ab.txt`; 160 ordinary public identities remain
+after that prepared batch. Application links remain references only and the
+four held-out Fellows/application-form-heavy listings remain outside the
+ordinary lane.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
