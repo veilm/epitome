@@ -1331,6 +1331,52 @@ after that prepared batch. Application links remain references only and the
 four held-out Fellows/application-form-heavy listings remain outside the
 ordinary lane.
 
+## Careers N+1aj result
+
+The original `next-15aj` continuation at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788965656-next-15aj` reached
+11/15 complete pages and ended with `finish.failures=4`. The four failures were
+CDP/browser acquisition failures only: three `context deadline exceeded` errors
+and one timeout waiting for `document.readyState == complete`. Its 11 completed
+pages were tab-closed and its two pending custom-font records plus one public
+`my.greenhouse.io/users/self` HTTP 401 are response-level optional
+font/telemetry records, not application-route access.
+
+The repair at
+`/mnt2/capsule/epitome/anthropic-careers/crawls/1788971297-next-15aj-repair`
+captured the four missing public Greenhouse routes, completed and tab-closed
+all four, and ended with `finish.failures=0`. The combined `next-15aj` result
+therefore covers all 15/15 routes. The repair recorded 95 requests, 86
+response bodies, and nine response-body errors; the page HTML for
+`5231496008` completed, while the nine errors were optional
+`job-boards.cdn.greenhouse.io` PDF, flag, and font assets. Eight failed because
+of local certificate verification and one because of temporary DNS failure;
+the substantive job page remained intact. The original capture recorded 283
+requests, 279 response bodies, three response-level errors, and 26,595,766
+response bytes; the repair recorded 8,487,949 response bytes. No application
+or authenticated route was opened.
+
+The original asset ledger had 132 attempted/completed assets. The repair had
+47 attempts, 38 completed assets, and nine failed optional assets. Across both
+roots, result URLs contained none of the excluded YouTube, Twitter, or X
+hosts, interactive media was zero, and both primary and all-rendered-image
+audits reported no missing images on all 15 captured pages.
+
+Local-only representative replays through the combined archive server covered
+an early detail (`5400153008`, 16,601 body-text characters), a middle detail
+(`5250052008`, 20,994 characters), the repaired late detail (`5231496008`,
+18,441 characters), and the frame-heavy boundary detail (`5195705008`,
+19,108 characters and three captured frames). Each replay preserved one intact
+2000x2001 logo, had no broken images, video, or audio, and made only loopback
+resource requests. The public Greenhouse application surface was visible as a
+reference; no application route was activated.
+
+The archived index has 40 uncaptured ordinary public job identities after the
+repaired batch. The next deduplicated public-only batch is prepared in ignored
+`data/anthropic-careers-next-15ak.txt`. The four Fellows/application-form-heavy
+listings remain outside the ordinary lane, and application links remain
+references only.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
