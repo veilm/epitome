@@ -1,10 +1,12 @@
 # Product philosophy and reading experience
 
-Recorded 2026-09-09 from the user's design discussion. This document gives
-future contributors the purpose behind the product. The first section records
-the user's intent; subsequent sections are proposals, not accepted decisions or
-descriptions of implemented behavior. See [summaries.md](summaries.md) for the
-existing implementation.
+Recorded 2026-09-09, with the user's digest idea added 2026-09-10. This document
+gives future contributors the purpose behind the product. “User's stated
+intent” and “User's additional idea: daily and weekly posts” record the user's
+thinking. All subsequent sections are assistant proposals, not accepted
+decisions or descriptions of implemented behavior. The user has not yet
+reviewed those proposals; the digest addition does not imply their acceptance.
+See [summaries.md](summaries.md) for the existing implementation.
 
 ## User's stated intent
 
@@ -53,6 +55,51 @@ what has actually changed without placing the whole archive in context.
 The user is open to consulting Claude later about prompt wording and writing
 quality. Model choice and final wording are undecided; this conversation does
 not authorize or require an external consultation.
+
+## User's additional idea: daily and weekly posts
+
+Epitome could publish its own daily and weekly summaries as entries in the
+same feed as externally sourced posts. “Epitome Digest” is a working name,
+not a naming decision. These entries would identify Epitome as their source
+and use its animated logo, just as external entries use their source or
+organization's logo. The Epitome logo should also animate within the feed.
+Each digest would open as an Epitome post.
+
+The daily post would summarize the most important developments across the
+inputs for the preceding day: for example, GPU developments, a model release,
+and other noteworthy announcements or ideas. The weekly post would cover the
+preceding week. This is a synthesis of the period's useful information, with
+the precise article structure and generation design still to be determined.
+
+The intended canonical timezone is San Francisco local time. Express this as
+`America/Los_Angeles` so it follows Pacific standard/daylight time, rather than
+fixed PST throughout the year. The proposed generation boundaries are:
+
+- Daily: midnight local time, covering the day that just ended.
+- Weekly: Monday at midnight local time, covering the Monday-through-Sunday
+  week that just ended.
+
+The user envisages scheduled generation; no scheduling is implemented or
+authorized by this design note. Exact publication timing, handling of inputs
+that arrive late, and any processing delay after the boundary remain open.
+
+Generation could reuse existing work. A daily-writing agent would have access
+to Epitome's individual article summaries and could consult them without
+necessarily rereading every original. A weekly-writing agent would similarly
+have access to that week's daily digests. Access to underlying material would
+remain possible when useful. This hierarchy could connect to the separate
+LLM memory architecture; the precise integration is undecided.
+
+Digest entries could receive the same eventual “worth reading” indicator as
+other feed entries. The scoring method remains open. A quiet day with only a
+minor announcement might produce a very short, low-value digest; length and
+rating should reflect the actual material. When there are no articles to
+summarize, the user proposes skipping the digest entirely. Do not invent
+content or pad a quiet period merely to publish on schedule.
+
+This addition records an idea the user wanted to preserve before reviewing
+the assistant's earlier proposals. It does not settle the overall feed design,
+ranking scheme, summary formats, or any of the recommendations below.
 
 ## Proposed default experience
 
