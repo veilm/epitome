@@ -16,9 +16,14 @@ complete and tab-closed, `finish.failures=0`, both image audits are clean, and
 excluded-host result URLs are absent. Its optional same-origin 403 asset
 failures, response-level status/dependency records, 44 hydrated Vimeo
 references, and representative loopback replay results are documented in
-`research/openai-careers.md`. The next reviewed lane is the 15-identity public
-Anthropic delta; after each source boundary, the same audit, replay,
-documentation, commit, and deduplicated handoff is required.
+`research/openai-careers.md`. The 15-identity public Anthropic delta is now
+complete at `/mnt2/capsule/epitome/anthropic/refresh/1789091412`: all manifests
+are complete/tab-closed, `finish.failures=0`, both image audits are clean, and
+excluded-host result URLs are absent; its seven policy exclusions and six
+response-level partial/pending records are documented in `research/anthropic.md`.
+The next reviewed lane is the 28-identity public Claude delta. After each
+source boundary, the same audit, replay, documentation, commit, and
+deduplicated handoff is required.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
