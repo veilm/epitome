@@ -170,3 +170,28 @@ All 232 approved index-and-essay identities are now captured and offline-
 verified. The unavailable outbound *Roots of Lisp* paper and deferred books,
 RSS, and language-history material remain separate from this completed page
 scope.
+
+## Incremental refresh 1789091412
+
+The newly listed, deduplicated public route completed at:
+
+`/mnt2/capsule/epitome/paul-graham/refresh/1789091412`
+
+The one-page manifest for *How Universities Should Prepare Founders* is
+complete and tab-closed. The ledger reports `finish.failures=0`, ten requests,
+ten response bodies, zero response-body errors, 53,366 response bytes, and all
+ten responses returning HTTP 200. Eight assets were discovered: seven were
+already present in the archive and the one attempted asset completed without a
+failure; no asset was excluded. The completed asset result was the optional
+`ycombinator.com` arc image, and no prohibited-host result URL was recorded.
+
+Primary-image and all-rendered-image audits both report one page with zero
+missing images, repair attempts, or repair failures. A local-only replay
+retained the page title and 17,050 visible characters, 25 links, four images,
+zero broken or zero-size images, and no frames, videos, or forms. Its resource
+ledger contained only `127.0.0.1:8013`, with zero production-origin requests;
+the rendered screenshot retained the article text and narrow legacy layout.
+
+The refresh identity is therefore complete without extending the approved
+public page scope. The refresh plan's remaining work is a final all-source
+deduplication check rather than historical Paul Graham backlog recovery.
