@@ -61,11 +61,21 @@ def completed_capture_urls(roots: list[Path]) -> set[str]:
     for root in roots:
         if not root.exists():
             continue
-        manifest_paths = (
-            Path(directory) / "manifest.json"
-            for directory, _, filenames in os.walk(root, followlinks=True)
-            if "manifest.json" in filenames
-        )
+        manifest_paths: set[Path] = set()
+        # Epitome page manifests occur at the root of a legacy capture,
+        # beneath a one-level captures/validation entry, or beneath a
+        # crawls/refresh batch's pages directory.  Avoid walking network and
+        # asset bodies, which can outnumber page manifests by several orders
+        # of magnitude on a large archive.
+        for pattern in (
+            "manifest.json",
+            "*/manifest.json",
+            "*/*/manifest.json",
+            "pages/*/manifest.json",
+            "*/pages/*/manifest.json",
+            "*/*/pages/*/manifest.json",
+        ):
+            manifest_paths.update(root.glob(pattern))
         for manifest_path in manifest_paths:
             if not manifest_path.with_name("page.html").exists():
                 continue
