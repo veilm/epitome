@@ -144,3 +144,34 @@ public Anthropic delta in
 `/mnt2/capsule/epitome/refresh/1789091412/anthropic.txt`, to be captured under
 `/mnt2/capsule/epitome/anthropic/refresh/1789091412` before proceeding through
 the remaining reviewed source deltas.
+
+## Reconciliation refresh 1789091412
+
+The final all-source discovery check on 2026-09-11 found one newly listed,
+deduplicated OpenAI identity:
+
+`https://openai.com/index/scaling-storage-one-billion-users-part-one/`
+
+It completed at
+`/mnt2/capsule/epitome/openai/refresh/1789091412-reconcile`. The single
+manifest is complete and tab-closed; `finish.failures=0`. The capture retained
+314 requests, 299 response bodies, 28,596,816 response bytes, and six
+response-level body errors. Statuses were 300×200, 3×202, 2×204, 1×302,
+2×304, 1×401, and five pending; the latter records are optional platform,
+telemetry, redirect/cache, and unresolved-response outcomes and did not block
+the public page. Asset accounting is 272 discovered, 136 already complete,
+136 attempted and completed, zero failed, and zero excluded. The one optional
+public USENIX PDF/reference asset is present, no prohibited-host result URL
+appears in the structured asset/media records, and interactive media was zero.
+
+Primary-image and all-rendered-image audits both report one page with zero
+missing images, repair attempts, or repair failures. A local-only replay of the
+long-form storage article retained 26,233 visible characters, 100 paragraphs,
+three images, 72 SVG diagrams, one canvas, one archived frame, and zero broken
+or zero-size images. Its resource ledger contained only `127.0.0.1:8013`, with
+zero production-origin requests; the screenshot retained the article's
+diagrammatic surface and substantive text.
+
+This reconciliation identity is complete. The next reviewed lane is the
+three-identity public Anthropic delta in
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/anthropic.txt`.
