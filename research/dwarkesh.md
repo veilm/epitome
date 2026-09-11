@@ -241,3 +241,45 @@ media ledgers contain 128 YouTube videos, 72 Substack videos referenced by 70
 articles, and 72 Substack audio assets. Those 272 durable media imports remain
 a separate active task for the external downloader, not an omission from the
 completed page crawl.
+
+## Incremental refresh 1789091412
+
+The six newly listed, deduplicated public identities in the 2026-09-11
+refresh completed at:
+
+`/mnt2/capsule/epitome/dwarkesh/refresh/1789091412`
+
+All six manifests are complete and all capture tabs are closed. The final
+ledger reports `finish` with `failures: 0`; no page-level capture failed. The
+batch recorded 2,125 requests, 2,074 response bodies, 15 response-body error
+records, and 160,467,362 response bytes. Statuses were 2,068 HTTP 200, 12
+HTTP 204, 28 HTTP 206, four HTTP 307, six HTTP 401, and seven pending records.
+The 401 and pending records are optional Substack/provider or telemetry
+dependencies rather than missing article bodies.
+
+Asset completion attempted 1,004 resources and completed 1,000. Four optional
+video assets failed because their declared multi-gigabyte or near-budget body
+sizes exceeded the bounded completion budget: the `api/v1/video/upload`
+resources for the Ajeya Cotra, OpenAI/Hugging Face, Dylan Patel, and Ryan
+Greenblatt pages. Four `www.youtube-nocookie.com` requests were policy
+excluded. No excluded-host URL appears in an asset-completion result, and no
+YouTube or Twitter/X downloader was invoked. Mux and Substack media references
+remain recorded for the separate media-import workflow; no interactive media
+activation produced a downloaded result in this page batch.
+
+Repeated primary and all-rendered-image audits report zero missing images. The
+offline replay set used the local archive server only: the early
+`pretraining-progress-is-mostly-data` page retained 19,007 characters, its
+public-preview markers, 15 images, and nine frames; the media-heavy Ajeya
+Cotra page retained 144,657 characters, its `subscribe`/`paid subscriber`
+markers, 56 images, two frames, and one video; the middle
+`openai-huggingface` page retained 27,932 characters, 14 images, and two
+frames; and the late Ryan Greenblatt page retained 153,315 characters, its
+`subscribe`/`unlock` markers, 28 images, two frames, and one video. After
+waiting for article hydration, every audited image was unbroken and every
+replay request stayed on `127.0.0.1:8080`; the initial blank/placeholder
+observations were hydration races, not archive defects.
+
+The next reviewed nine-identity public SemiAnalysis delta is listed in
+`/mnt2/capsule/epitome/refresh/1789091412/semianalysis.txt` and is ready for
+the sole capture lane.
