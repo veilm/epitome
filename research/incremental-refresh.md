@@ -54,16 +54,20 @@ historical uncaptured backlogs remain out of scope.
 
 ## Reconciliation 1789091412
 
-The final plan-only discovery on 2026-09-11 found 34 further canonical public
-identities after deduplication: one OpenAI, three Anthropic, 28 Claude, one
-Dwarkesh, and one SemiAnalysis. The one-page OpenAI reconciliation delta is
+The final plan-only discovery on 2026-09-11 reported 34 candidate canonical
+public identities: one OpenAI, three Anthropic, 28 Claude, one Dwarkesh, and
+one SemiAnalysis. The 28 Claude candidates are byte-for-byte identical to the
+first refresh list and all 28 already have complete manifests in
+`/mnt2/capsule/epitome/claude/refresh/1789091412`; the source-root capture
+deduplication skipped them, so the actual new work in this reconciliation is
+six identities. The one-page OpenAI reconciliation delta is
 complete at `/mnt2/capsule/epitome/openai/refresh/1789091412-reconcile` with
 `finish.failures=0`, a complete/tab-closed manifest, clean image audits, zero
 failed or excluded assets, and a local-only long-form replay. The next sole
-capture lane is the reviewed three-page Anthropic list at
-`/mnt2/capsule/epitome/refresh/1789091412-reconcile/anthropic.txt`.
-Historical Anthropic and Claude backlogs remain explicitly outside this
-refresh.
+capture lane was the reviewed three-page Anthropic list at
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/anthropic.txt`, now
+complete as documented below. Historical Anthropic and Claude backlogs remain
+explicitly outside this refresh.
 
 The three-page Anthropic reconciliation delta is now complete at
 `/mnt2/capsule/epitome/anthropic/refresh/1789091412-reconcile`: all manifests
@@ -71,8 +75,10 @@ are complete/tab-closed, `finish.failures=0`, both image audits are clean, the
 single pending response record is classified, and 79 assets completed with no
 failure or exclusion. Early, middle, and late replays retained substantive
 text and images using only the loopback archive server. The next sole lane is
-the reviewed 28-page public Claude list in
-`/mnt2/capsule/epitome/refresh/1789091412-reconcile/claude.txt`.
+the one-page public Dwarkesh list in
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/dwarkesh.txt`; the
+candidate 28-page Claude list was verified as already captured and was not
+recrawled.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
