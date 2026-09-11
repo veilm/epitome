@@ -98,6 +98,19 @@ the figures, article text, and paid-subscriber boundary. The six actual new
 identities in the reconciliation are therefore complete; the remaining work
 is a final plan-only discovery check.
 
+The final plan-only live-list check then found 29 Claude candidates. An exact
+diff against the prior 28-URL list identified 28 already captured identities
+and one genuinely new canonical public post. The 28 duplicates were skipped
+by source-root deduplication; the new post completed at
+`/mnt2/capsule/epitome/claude/refresh/1789156195-final-reconcile` with a
+complete/tab-closed manifest, `finish.failures=0`, 18 completed new assets,
+one exact `www.youtube.com` policy exclusion, and no failed assets or
+prohibited-host result URLs. Both image audits are clean. The local replay
+retained 15,863 visible body characters and eight loaded, non-broken images;
+all 12 resource requests were loopback-only and the optional video stayed
+paused. The final all-source plan-only discovery must be rerun after this
+last one-page addition.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical
