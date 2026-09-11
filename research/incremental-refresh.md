@@ -1,5 +1,25 @@
 # Incremental source refresh
 
+## Refresh plan 1789091412
+
+On 2026-09-11, the reviewed all-source plan found 130 newly listed canonical
+identities after deduplicating against each source's full existing archive.
+The bounded capture order is OpenAI 70, Anthropic 15, Claude 28, Dwarkesh 6,
+SemiAnalysis 9, AI 2040 1, and Paul Graham 1. All other configured source
+families had zero new identities in this snapshot. Known historical but
+uncaptured backlogs—especially Anthropic and Claude—remain excluded from this
+refresh and are not silently treated as new work.
+
+The OpenAI 70-identity delta is complete at
+`/mnt2/capsule/epitome/openai/refresh/1789091412`: 70/70 manifests are
+complete and tab-closed, `finish.failures=0`, both image audits are clean, and
+excluded-host result URLs are absent. Its optional same-origin 403 asset
+failures, response-level status/dependency records, 44 hydrated Vimeo
+references, and representative loopback replay results are documented in
+`research/openai-careers.md`. The next reviewed lane is the 15-identity public
+Anthropic delta; after each source boundary, the same audit, replay,
+documentation, commit, and deduplicated handoff is required.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical
