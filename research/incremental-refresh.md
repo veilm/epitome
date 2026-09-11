@@ -31,8 +31,13 @@ at `/mnt2/capsule/epitome/dwarkesh/refresh/1789091412`: all manifests are
 complete/tab-closed, `finish.failures=0`, both image audits are clean, the four
 optional oversized video failures and four YouTube-nocookie exclusions are
 classified, and the audited replays stayed on the loopback archive server.
-The next reviewed lane is the nine-identity public SemiAnalysis delta. After
-each source boundary, the same audit, replay, documentation, commit, and
+The nine-identity public SemiAnalysis delta is also complete at
+`/mnt2/capsule/epitome/semianalysis/refresh/1789091412`: all manifests are
+complete/tab-closed, `finish.failures=0`, both image audits are clean, four
+response-level records are classified, no asset failed, and the audited
+replays stayed on the loopback archive server with the paid boundary intact.
+The next reviewed lane is the one-identity public AI-2040 delta. After each
+source boundary, the same audit, replay, documentation, commit, and
 deduplicated handoff is required.
 
 The first all-source update check ran on 2026-08-10 with

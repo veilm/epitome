@@ -303,3 +303,44 @@ The refreshed provider inventories remain at ten Substack-hosted videos across
 five articles with no YouTube or Substack-audio entries. These videos remain
 explicit external-downloader imports; the approved 325-identity page archive is
 otherwise complete.
+
+## Incremental refresh 1789091412
+
+The nine newly listed, deduplicated public identities completed at:
+
+`/mnt2/capsule/epitome/semianalysis/refresh/1789091412`
+
+All nine manifests are complete and all capture tabs are closed. The final
+ledger reports `finish` with `failures: 0`; no page-level capture failed. The
+batch recorded 3,459 requests, 3,416 response bodies, four response-body error
+records, and 419,159,755 response bytes. Statuses were 3,418 HTTP 200, 18
+HTTP 204, 10 HTTP 206, two HTTP 307, nine HTTP 401, and two pending records.
+The response-level records are optional Substack/provider, subscription, or
+telemetry dependencies and did not prevent the nine article bodies from being
+captured.
+
+Asset completion attempted and completed 2,218 resources with zero failures.
+Two image/media-heavy pages reached the bounded 400-resource ceiling, but both
+the primary and all-rendered-image audits report zero omissions. No excluded
+host was present in the asset-completion results or manifests, and no
+YouTube/Twitter/X downloader was invoked. The TPU page retained two local
+video elements and Mux references; the batch produced zero interactive-media
+activation results. External media and linked public documents remain
+references rather than a reason to cross the public/paywall boundary.
+
+The local replay audit covered the early long-form paid page, the media-heavy
+TPU article, the structural Cerebras article, and the late modeling article.
+The early page rendered 50,269 characters, 22 images, and two frames while
+preserving `subscribe`/`paid subscriber` markers. After hydration, the TPU
+page rendered 51,798 characters, 44 images, two videos, and two frames with
+zero broken or zero-size images and its paid-subscriber panel intact. The
+structural page rendered 13,737 characters, 14 images, and two frames; the
+late page rendered 52,821 characters, 22 images, and two frames. All audited
+images were intact. A transient nine-image loading count on the TPU page
+resolved to zero broken images after the archive content finished hydrating.
+
+The strict CDP replay log recorded 216 requests, all to `127.0.0.1:8013`,
+with no production-origin requests. The replay tab, archive server, and
+network logger were closed after verification. The next reviewed lane is the
+one-identity public AI-2040 refresh listed at
+`/mnt2/capsule/epitome/refresh/1789091412/ai-2040.txt`.
