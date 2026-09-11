@@ -1524,6 +1524,44 @@ the 28-URL public Claude list at
 `/mnt2/capsule/epitome/claude/refresh/1789091412` and existing-root
 deduplication against `/mnt2/capsule/epitome/claude`.
 
+## Incremental Claude refresh 1789091412
+
+The reviewed refresh plan selected 28 newly listed public Claude blog
+identities after deduplication against the existing archive. They were captured
+at `/mnt2/capsule/epitome/claude/refresh/1789091412` with the standard
+CDP-2103 public-only settings. All 28 manifests are complete and tab-closed;
+`finish.failures=0`, with no capture-level page failure.
+
+The batch recorded 2,702 requests, 2,670 response bodies, 32 response-body
+errors, and 512,528,867 response bytes. Statuses were 2,670×200, 28×302, and
+four pending. The 28 redirect records and four pending body records were
+classified as optional platform/telemetry or dependency outcomes and did not
+block substantive blog pages. Asset accounting is 539 attempted, 539
+completed, zero failed, and three excluded. The three excluded requests were
+YouTube references on Claude pages; zero excluded-host URLs appear in asset
+result records. Interactive media activation/results were zero. The ordinary
+Claude assets came from the Claude/Webflow static surfaces and related public
+Anthropic references; no YouTube or Twitter/X downloader or incidental-media
+workflow was used.
+
+The primary-image and all-rendered-image audits both report 28 pages with zero
+missing images, repair attempts, or repair failures. Representative loopback
+replays through an isolated archive server used only `127.0.0.1:8080` and made
+zero production-origin requests: the early CI/CD page rendered 15,434 body
+characters, 13 intact images, one video, and its code-oriented content; the
+media Cowork page rendered 6,867 characters, eight intact images, and one
+video; the middle Claude Code startup guide rendered 32,539 characters and 43
+intact images after a full offline scroll resolved its eight initially lazy
+zero-size images; and the late Slack page rendered 12,273 characters, eight
+intact images, and one video. All replayed images were non-broken and all
+resource hosts were loopback-only.
+
+This completes the Claude refresh delta. The next reviewed source delta is the
+six-URL public Dwarkesh list at
+`/mnt2/capsule/epitome/refresh/1789091412/dwarkesh.txt`, with output root
+`/mnt2/capsule/epitome/dwarkesh/refresh/1789091412` and existing-root
+deduplication against `/mnt2/capsule/epitome/dwarkesh`.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:

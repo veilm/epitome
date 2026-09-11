@@ -21,9 +21,14 @@ complete at `/mnt2/capsule/epitome/anthropic/refresh/1789091412`: all manifests
 are complete/tab-closed, `finish.failures=0`, both image audits are clean, and
 excluded-host result URLs are absent; its seven policy exclusions and six
 response-level partial/pending records are documented in `research/anthropic.md`.
-The next reviewed lane is the 28-identity public Claude delta. After each
-source boundary, the same audit, replay, documentation, commit, and
-deduplicated handoff is required.
+The 28-identity public Claude delta is now complete at
+`/mnt2/capsule/epitome/claude/refresh/1789091412`: all manifests are
+complete/tab-closed, `finish.failures=0`, both image audits are clean, and
+excluded-host result URLs are absent; its 32 redirect/pending response records,
+three policy exclusions, and offline replays are documented in
+`research/anthropic.md`. The next reviewed lane is the six-identity public
+Dwarkesh delta. After each source boundary, the same audit, replay,
+documentation, commit, and deduplicated handoff is required.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
