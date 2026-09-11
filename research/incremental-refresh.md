@@ -40,9 +40,17 @@ The one-identity public AI-2040 delta is also complete at
 `/mnt2/capsule/epitome/ai-2040/refresh/1789091412`: its manifest is
 complete/tab-closed, `finish.failures=0`, both image audits are clean, two
 pending response records are classified, and the replay stayed on the
-loopback archive server. The next reviewed lane is the one-identity public
-Paul Graham delta. After each source boundary, the same audit, replay,
-documentation, commit, and deduplicated handoff is required.
+loopback archive server. The one-identity public Paul Graham delta is now also
+complete at `/mnt2/capsule/epitome/paul-graham/refresh/1789091412`: its
+manifest is complete/tab-closed, `finish.failures=0`, both image audits are
+clean, all ten responses returned HTTP 200, the one attempted asset completed,
+and the local replay stayed on the loopback archive server with substantive
+text and images intact. No prohibited-host result URL was recorded.
+
+All 130 identities in refresh plan 1789091412 have now been captured or
+confirmed complete in their source-scoped output roots. A final plan-only
+all-source discovery check remains the handoff gate for newly listed pages;
+historical uncaptured backlogs remain out of scope.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
