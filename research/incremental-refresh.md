@@ -80,6 +80,15 @@ the one-page public Dwarkesh list in
 candidate 28-page Claude list was verified as already captured and was not
 recrawled.
 
+The one-page Dwarkesh reconciliation delta is now complete at
+`/mnt2/capsule/epitome/dwarkesh/refresh/1789091412-reconcile`: its manifest is
+complete/tab-closed, `finish.failures=0`, both image audits are clean, one
+optional oversized video failure and one YouTube-nocookie exclusion are
+classified, and the local long-form replay retained the public-preview text,
+images, and media surface on loopback only. The next sole lane is the
+one-page public SemiAnalysis list in
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/semianalysis.txt`.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical

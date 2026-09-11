@@ -283,3 +283,39 @@ observations were hydration races, not archive defects.
 The next reviewed nine-identity public SemiAnalysis delta is listed in
 `/mnt2/capsule/epitome/refresh/1789091412/semianalysis.txt` and is ready for
 the sole capture lane.
+
+## Reconciliation refresh 1789091412
+
+The final all-source discovery found one newly listed, deduplicated public
+Dwarkesh identity:
+
+`https://www.dwarkesh.com/p/john-beren-charlie`
+
+It completed at
+`/mnt2/capsule/epitome/dwarkesh/refresh/1789091412-reconcile`. The single
+manifest is complete and tab-closed; `finish.failures=0`. The capture retained
+331 requests, 320 response bodies, three response-body errors, and 55,400,928
+response bytes. Statuses were 319×200, 2×204, 7×206, 1×307, 1×401, and one
+pending; these optional provider, telemetry, redirect, and incomplete-response
+records did not block the article or transcript.
+
+Asset accounting is 273 discovered, 137 attempted, 136 completed, one
+completion-budget failure, and one exact policy exclusion. The failed asset was
+the optional 2,601,862,588-byte first-party video-upload response, which could
+not fit the bounded completion budget. The excluded request was the
+`www.youtube-nocookie.com` media reference; no excluded-host result URL was
+recorded, and no downloader was invoked. Mux/Substack references and the
+public-preview boundary remain preserved as page dependencies; interactive
+media activation/results were zero.
+
+Primary-image and all-rendered-image audits both report one page with zero
+missing images, repair attempts, or repair failures. A local-only replay
+retained the transcript page's title, 104,899 visible characters, 24 images,
+two frames, one optional video element, and `subscribe`/`unlock` markers. All
+images were non-broken and non-zero-size; the resource ledger contained only
+`127.0.0.1:8013`, with zero production-origin requests. The rendered replay
+preserved the transcript text and public paid-preview surface.
+
+This reconciliation identity is complete. The next reviewed lane is the
+one-page public SemiAnalysis list at
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/semianalysis.txt`.
