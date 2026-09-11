@@ -52,6 +52,19 @@ confirmed complete in their source-scoped output roots. A final plan-only
 all-source discovery check remains the handoff gate for newly listed pages;
 historical uncaptured backlogs remain out of scope.
 
+## Reconciliation 1789091412
+
+The final plan-only discovery on 2026-09-11 found 34 further canonical public
+identities after deduplication: one OpenAI, three Anthropic, 28 Claude, one
+Dwarkesh, and one SemiAnalysis. The one-page OpenAI reconciliation delta is
+complete at `/mnt2/capsule/epitome/openai/refresh/1789091412-reconcile` with
+`finish.failures=0`, a complete/tab-closed manifest, clean image audits, zero
+failed or excluded assets, and a local-only long-form replay. The next sole
+capture lane is the reviewed three-page Anthropic list at
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/anthropic.txt`.
+Historical Anthropic and Claude backlogs remain explicitly outside this
+refresh.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical
