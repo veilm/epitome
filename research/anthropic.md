@@ -1592,6 +1592,37 @@ This reconciliation delta is complete. The next reviewed source lane is the
 28-URL public Claude list at
 `/mnt2/capsule/epitome/refresh/1789091412-reconcile/claude.txt`.
 
+## Final Claude incremental refresh 1789156195
+
+The final plan-only live-list check found 29 Claude candidates. An exact diff
+against the earlier refresh list showed that 28 were already captured there;
+the only genuinely new canonical public identity was
+`https://claude.com/blog/what-1-000-small-business-owners-taught-us-about-ai`.
+The source-root deduplication skipped the 28 duplicates and captured only the
+new page at
+`/mnt2/capsule/epitome/claude/refresh/1789156195-final-reconcile` using the
+standard CDP-2103 public-only settings. Its manifest is complete and
+tab-closed, `finish.failures=0`, and its network ledger records 97 requests,
+93 response bodies, four response-body errors, and 18,609,958 response bytes.
+Statuses were 93×200, one 302, and three pending; the optional pending and
+redirect records did not prevent the substantive page capture.
+
+The asset ledger discovered 45 candidates, found 26 already complete,
+attempted and completed 18 new assets, failed none, and recorded one exact
+`www.youtube.com` policy exclusion. No prohibited-host URL appears in an
+asset or interactive-media result, and no downloader or incidental-media
+workflow was used. Interactive media activation/results were zero; the
+captured page exposes one optional paused video surface in replay.
+
+Primary-image and all-rendered-image audits both report one page with zero
+missing images, repair attempts, or repair failures. A local-only rendered
+replay retained the article title, 15,863 visible body characters, eight
+loaded images with zero broken images, and the substantive hero and article
+text. Its 12 resource requests were all to `127.0.0.1:8013`, with zero
+non-loopback or production-origin requests; the optional video remained
+paused and unactivated. The final all-source plan-only discovery gate remains
+the last refresh handoff check.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
