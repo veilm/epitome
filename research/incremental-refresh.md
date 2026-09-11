@@ -111,6 +111,23 @@ all 12 resource requests were loopback-only and the optional video stayed
 paused. The final all-source plan-only discovery must be rerun after this
 last one-page addition.
 
+## Final all-source reconciliation 1789091412
+
+The post-capture plan-only discovery at
+`/mnt2/capsule/epitome/refresh/1789091412-final-reconcile-after-claude`
+completed with zero newly listed OpenAI, Anthropic, Dwarkesh, SemiAnalysis,
+AI-2040, Paul Graham, or other configured-source identities. It repeated the
+29 Claude candidates because the planner's source snapshot does not count
+refresh subdirectories; the capture tool's exact source-root deduplication
+check skipped all 29 as complete, including the final
+`what-1-000-small-business-owners-taught-us-about-ai` page. Anthropic's 160
+and Claude's 41 known-uncaptured entries remain historical backlog, not new
+identities, and were not recrawled.
+
+The refresh plan 1789091412 is therefore closed: all genuinely new identities
+from the live snapshots are captured or confirmed complete, with no duplicate
+capture created. Future work should begin with a new reviewed source snapshot.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical

@@ -1623,6 +1623,20 @@ non-loopback or production-origin requests; the optional video remained
 paused and unactivated. The final all-source plan-only discovery gate remains
 the last refresh handoff check.
 
+## Final all-source reconciliation 1789091412
+
+The post-capture plan-only discovery at
+`/mnt2/capsule/epitome/refresh/1789091412-final-reconcile-after-claude`
+reported zero new identities for every configured source except the 29 Claude
+candidate URLs repeated by the source snapshot. An exact source-root
+deduplication check skipped all 29 as complete, including the final page
+captured above. The 160 Anthropic and 41 Claude known-uncaptured entries are
+historical backlog and remain outside the incremental refresh scope.
+
+All genuinely new identities in refresh plan 1789091412 are now captured or
+confirmed complete, and the plan is closed. No duplicate capture was created;
+the next cycle should start from a new reviewed live-list snapshot.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
