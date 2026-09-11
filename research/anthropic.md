@@ -1562,6 +1562,36 @@ six-URL public Dwarkesh list at
 `/mnt2/capsule/epitome/dwarkesh/refresh/1789091412` and existing-root
 deduplication against `/mnt2/capsule/epitome/dwarkesh`.
 
+## Reconciliation Anthropic refresh 1789091412
+
+The final all-source discovery check found three newly listed, deduplicated
+public Anthropic research identities. They completed at
+`/mnt2/capsule/epitome/anthropic/refresh/1789091412-reconcile` with all three
+manifests complete and tab-closed, `finish.failures=0`, 211 requests, 210
+response bodies, one pending response record, and 14,085,657 response bytes.
+All 210 completed responses returned HTTP 200; the single pending record was
+retained as an optional dependency/status outcome and did not block the
+substantive pages.
+
+Asset accounting is 79 attempted and completed, zero failed, and zero
+excluded. The only capture hosts were `www.anthropic.com` and the one public
+`www-cdn.anthropic.com` dependency. Interactive media was zero, and structured
+asset/media result URLs contained none of the exact YouTube, Twitter, or X
+exclusions.
+
+Primary-image and all-rendered-image audits both report three pages with zero
+missing images, repair attempts, or repair failures. Early, middle, and late
+local-only replays through `127.0.0.1:8013` retained substantive article text:
+16,363 characters and 12 intact images for the Claude 3.7 Economic Index
+insights page; 21,528 characters and four intact images for the Education
+Report; and 14,886 characters and six intact images for the Economic Index.
+All three had zero broken or zero-size images, no videos or frames, and only
+the loopback resource host, with zero production-origin requests.
+
+This reconciliation delta is complete. The next reviewed source lane is the
+28-URL public Claude list at
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/claude.txt`.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
