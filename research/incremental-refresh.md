@@ -26,9 +26,14 @@ The 28-identity public Claude delta is now complete at
 complete/tab-closed, `finish.failures=0`, both image audits are clean, and
 excluded-host result URLs are absent; its 32 redirect/pending response records,
 three policy exclusions, and offline replays are documented in
-`research/anthropic.md`. The next reviewed lane is the six-identity public
-Dwarkesh delta. After each source boundary, the same audit, replay,
-documentation, commit, and deduplicated handoff is required.
+`research/anthropic.md`. The six-identity public Dwarkesh delta is now complete
+at `/mnt2/capsule/epitome/dwarkesh/refresh/1789091412`: all manifests are
+complete/tab-closed, `finish.failures=0`, both image audits are clean, the four
+optional oversized video failures and four YouTube-nocookie exclusions are
+classified, and the audited replays stayed on the loopback archive server.
+The next reviewed lane is the nine-identity public SemiAnalysis delta. After
+each source boundary, the same audit, replay, documentation, commit, and
+deduplicated handoff is required.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
