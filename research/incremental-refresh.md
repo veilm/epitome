@@ -36,9 +36,13 @@ The nine-identity public SemiAnalysis delta is also complete at
 complete/tab-closed, `finish.failures=0`, both image audits are clean, four
 response-level records are classified, no asset failed, and the audited
 replays stayed on the loopback archive server with the paid boundary intact.
-The next reviewed lane is the one-identity public AI-2040 delta. After each
-source boundary, the same audit, replay, documentation, commit, and
-deduplicated handoff is required.
+The one-identity public AI-2040 delta is also complete at
+`/mnt2/capsule/epitome/ai-2040/refresh/1789091412`: its manifest is
+complete/tab-closed, `finish.failures=0`, both image audits are clean, two
+pending response records are classified, and the replay stayed on the
+loopback archive server. The next reviewed lane is the one-identity public
+Paul Graham delta. After each source boundary, the same audit, replay,
+documentation, commit, and deduplicated handoff is required.
 
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
