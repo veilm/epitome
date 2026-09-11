@@ -89,6 +89,15 @@ images, and media surface on loopback only. The next sole lane is the
 one-page public SemiAnalysis list in
 `/mnt2/capsule/epitome/refresh/1789091412-reconcile/semianalysis.txt`.
 
+The one-page SemiAnalysis reconciliation delta is now complete at
+`/mnt2/capsule/epitome/semianalysis/refresh/1789091412-reconcile`: its
+manifest is complete/tab-closed, `finish.failures=0`, both image audits are
+clean, two optional response-level records are classified, and 94 assets
+completed with no failure or exclusion. A local-only long-form replay retained
+the figures, article text, and paid-subscriber boundary. The six actual new
+identities in the reconciliation are therefore complete; the remaining work
+is a final plan-only discovery check.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical

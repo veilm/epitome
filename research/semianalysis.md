@@ -344,3 +344,35 @@ with no production-origin requests. The replay tab, archive server, and
 network logger were closed after verification. The next reviewed lane is the
 one-identity public AI-2040 refresh listed at
 `/mnt2/capsule/epitome/refresh/1789091412/ai-2040.txt`.
+
+## Reconciliation refresh 1789091412
+
+The final all-source discovery found one newly listed, deduplicated public
+SemiAnalysis identity:
+
+`https://newsletter.semianalysis.com/p/nvidias-backstop-universe-heads-i`
+
+It completed at
+`/mnt2/capsule/epitome/semianalysis/refresh/1789091412-reconcile`. The single
+manifest is complete and tab-closed; `finish.failures=0`. The capture retained
+231 requests, 224 response bodies, two response-body errors, and 19,735,125
+response bytes. Statuses were 226×200, 2×204, 1×401, and two pending; these
+optional Substack/provider, telemetry, or incomplete-response records did not
+block the public article.
+
+Asset accounting is 211 discovered, 117 already complete, 94 attempted and
+completed, zero failed, and zero excluded. The capture preserved the
+first-party article, Substack media, and optional provider/telemetry records;
+no prohibited-host result URL or interactive-media result was recorded.
+
+Primary-image and all-rendered-image audits both report one page with zero
+missing images, repair attempts, or repair failures. A local-only replay
+retained the long-form page title, 12,479 visible characters, nine images, two
+frames, and `subscribe`/`paid subscriber` markers. All images were non-broken
+and non-zero-size; its resource ledger contained only `127.0.0.1:8013`, with
+zero production-origin requests. The rendered replay visibly preserved the
+article figures and public paid-subscriber boundary.
+
+This reconciliation identity is complete. A final plan-only all-source
+discovery pass is the remaining handoff gate for any pages published after this
+reconciliation.
