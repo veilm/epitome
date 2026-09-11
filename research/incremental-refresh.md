@@ -65,6 +65,15 @@ capture lane is the reviewed three-page Anthropic list at
 Historical Anthropic and Claude backlogs remain explicitly outside this
 refresh.
 
+The three-page Anthropic reconciliation delta is now complete at
+`/mnt2/capsule/epitome/anthropic/refresh/1789091412-reconcile`: all manifests
+are complete/tab-closed, `finish.failures=0`, both image audits are clean, the
+single pending response record is classified, and 79 assets completed with no
+failure or exclusion. Early, middle, and late replays retained substantive
+text and images using only the loopback archive server. The next sole lane is
+the reviewed 28-page public Claude list in
+`/mnt2/capsule/epitome/refresh/1789091412-reconcile/claude.txt`.
+
 The first all-source update check ran on 2026-08-10 with
 `util/refresh_sources`. Discovery covered all 17 configured first-party source
 families and separated newly listed URLs from reviewed but uncaptured historical
