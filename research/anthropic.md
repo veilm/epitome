@@ -1483,6 +1483,47 @@ references only. No further explicitly prepared low-risk capture batch is
 present in the workflow queue; the remaining LessWrong item is marked Partial
 with no further priority batch queued.
 
+## Incremental refresh 1789091412
+
+The reviewed refresh plan selected 15 newly listed public Anthropic news and
+research identities after deduplication against the existing archive. They were
+captured at `/mnt2/capsule/epitome/anthropic/refresh/1789091412` using the
+standard CDP-2103 public-only settings. All 15 manifests are complete and
+tab-closed; `finish.failures=0`, with no capture-level page failure.
+
+The batch recorded 1,157 requests, 1,151 response bodies, six response-body
+errors, and 1,680,860,498 response bytes. Statuses were 1,125×200, 29×206,
+and three pending. The six body records are confined to page 5's partial
+content, page 7's pending responses, and page 9's partial/pending response
+record; they did not prevent substantive page capture. Asset accounting is
+427 attempted, 427 completed, zero failed, and seven excluded. Three excluded
+requests occurred on the enterprise-frontier-safeguards page and four on the
+model-hardware page; all were YouTube requests rejected by the exact policy
+hosts, and zero excluded-host URLs appear in asset result records. No
+interactive media activation was recorded. Public `cdn.sanity.io`,
+`www-cdn.anthropic.com`, `assets.claude.ai`, and external research/PDF
+references were captured as ordinary page dependencies; HubSpot form and
+telemetry hosts remained passive records, and no Greenhouse or application
+route was opened.
+
+The primary-image and all-rendered-image audits both report 15 pages with zero
+missing images, repair attempts, or repair failures. Representative loopback
+replays through an isolated archive server used only `127.0.0.1:8080` and made
+zero production-origin requests: the early watermark page rendered 15,947
+body characters and one intact image; the media/reference enterprise page
+rendered 16,535 characters and 19 intact images; the middle cybersecurity
+research page rendered 107,195 characters and 42 intact images; the late
+economics team page rendered 4,771 characters and two intact images; and the
+structural model-hardware page rendered 15,353 characters, 20 intact images,
+and 10 video elements. All replayed images were non-broken and all resource
+hosts were loopback-only.
+
+This completes the Anthropic refresh delta. The next reviewed source delta is
+the 28-URL public Claude list at
+`/mnt2/capsule/epitome/refresh/1789091412/claude.txt`, with output root
+`/mnt2/capsule/epitome/claude/refresh/1789091412` and existing-root
+deduplication against `/mnt2/capsule/epitome/claude`.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:
