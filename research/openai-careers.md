@@ -104,3 +104,43 @@ replay request reached the production origin. This completes the bounded
 OpenAI careers pilot; future captures must preserve stable job IDs,
 first/last-seen timestamps, and removal history rather than treating the
 changing inventory as a static complete archive.
+
+## Incremental refresh 1789091412
+
+On 2026-09-11, the reviewed refresh plan found 70 newly listed public OpenAI
+`/index/` identities after deduplication against the existing archive root
+`/mnt2/capsule/epitome/openai`. The batch was captured at
+`/mnt2/capsule/epitome/openai/refresh/1789091412` with the standard CDP-2103
+public-only settings. All 70 manifests are complete and tab-closed;
+`finish.failures=0`, and the runner exited normally.
+
+The capture contains 22,652 requests, 21,454 response bodies, 720
+response-level body errors, and 3,406,857,143 response bytes. Status records
+are 21,417×200, 210×202, 75×204, 4×206, 71×302, 156×304, 70×401, 639×403,
+and 10 pending. These are retained as optional platform, telemetry, redirect,
+cache, partial, and dependency records; none became a capture-level page
+failure. Asset accounting is 10,867 attempts, 10,228 completions, 639 failed
+attempts, and zero exclusions. Every failed asset result is a same-origin
+`openai.com` HTTP 403 for an optional/static resource; no prohibited-host
+result URL appears. The batch also recorded 65 embedded and 44 activated
+Vimeo references, all on `player.vimeo.com`; no YouTube or Twitter/X
+downloader or incidental-media workflow was used.
+
+The primary-image and all-rendered-image audits both report 70 pages with zero
+missing images, repair attempts, or repair failures. Representative loopback
+replays from early, middle, late, and structural/media pages preserved
+substantive text and used only `127.0.0.1:8079`, with zero production-origin
+resource requests. The early `1Password` replay exposed three zero-size
+`<img>` elements alongside two rendered images; these are recorded as a
+replay-only decorative/rewritten-image anomaly rather than an archive image
+audit failure. The middle California youth-safety page rendered 7,398 body
+characters and three intact images; the late Replit page rendered 5,747 body
+characters, three intact images, and its video reference; and the GPT-6 Astra
+structural replay rendered 32,885 body characters, one intact image, one frame,
+and five video elements. All four replays had loopback-only resource hosts.
+
+This completes the OpenAI refresh delta. The reviewed next batch is the 15-URL
+public Anthropic delta in
+`/mnt2/capsule/epitome/refresh/1789091412/anthropic.txt`, to be captured under
+`/mnt2/capsule/epitome/anthropic/refresh/1789091412` before proceeding through
+the remaining reviewed source deltas.
