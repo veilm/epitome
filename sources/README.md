@@ -29,6 +29,8 @@ Current reviewed lists:
 - `astral-codex-ten.txt`: 1,452 canonical post identities from the publication's
   paginated first-party archive API, including public previews of paid-only
   posts while excluding account and platform routes.
+- `geohot-blog.txt`: the rendered George Hotz blog homepage, About page, feed,
+  and 143 canonical Jekyll post identities; social links remain references.
 
 Example:
 

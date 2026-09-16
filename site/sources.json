@@ -34,6 +34,13 @@
       "exclude_paths": ["/", "/about", "/feed.xml"]
     },
     {
+      "id": "geohot", "name": "George Hotz", "archive_directory": "geohot",
+      "hosts": ["geohot.github.io"],
+      "title_suffixes": [" | the singularity is nearer"],
+      "undated_paths": ["/", "/about", "/feed.xml"],
+      "exclude_paths": ["/", "/about", "/feed.xml"]
+    },
+    {
       "id": "andrej-karpathy-site", "name": "Karpathy.ai", "archive_directory": "karpathy.ai",
       "hosts": ["karpathy.ai"], "logo_url": "https://karpathy.ai/assets/me_new.jpg",
       "title_overrides": {
