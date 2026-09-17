@@ -48,7 +48,10 @@ block the public previews. Four representative local-only replays retained
 long-form text and all images, preserved the visible subscribe/paid boundary,
 and made 191 loopback-only requests with no production-origin fallback. The
 next reviewed source delta is the one-route public Paul Graham list at
-`/mnt2/capsule/epitome/refresh/1789621253/paul-graham.txt`.
+`/mnt2/capsule/epitome/refresh/1789621253/paul-graham.txt`, now active at
+`/mnt2/capsule/epitome/paul-graham/refresh/1789621253` as the sole capture
+lane with the same public-only settings. Historical known-uncaptured backlogs
+remain outside this refresh.
 Historical known-uncaptured backlogs remain outside this refresh.
 
 ## Refresh plan 1789091412
