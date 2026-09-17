@@ -1637,6 +1637,44 @@ All genuinely new identities in refresh plan 1789091412 are now captured or
 confirmed complete, and the plan is closed. No duplicate capture was created;
 the next cycle should start from a new reviewed live-list snapshot.
 
+## Incremental Claude refresh 1789621253
+
+The reviewed 37-route public Claude list was deduplicated against the existing
+Claude archive at capture time. Twenty-nine URLs were already complete and
+were skipped, leaving eight genuinely new public routes. They were captured at
+`/mnt2/capsule/epitome/claude/refresh/1789621253` with the standard CDP-2103
+public-only settings. All eight manifests are complete and tab-closed;
+`finish.failures=0`, with no capture-level page failure.
+
+The batch recorded 836 requests, 825 response bodies, 11 response-level body
+errors, and 139,668,565 response bytes. Statuses were 825×200, 8×302, and
+three pending. The eight redirects were optional `unpkg.com` DotLottie player
+redirects; the pending records were optional Website Files font/dependency
+records. These response-level outcomes did not block the substantive public
+Claude pages. Asset accounting is 454 discovered, 221 attempted and
+completed, zero failed, nine policy-excluded, 224 already complete, and
+32,209,969 downloaded bytes. The nine excluded incidental-media requests
+include four YouTube iframe dependencies present in browser metadata. No
+excluded asset-result record or excluded asset bytes were written, and no
+YouTube or Twitter/X downloader was invoked. Interactive media discovery,
+embedding, activation, and results were all zero.
+
+The primary-image and all-rendered-image audits both report eight pages with
+zero missing images, repair attempts, or repair failures. Five representative
+local-only replays through `127.0.0.1:8136` retained substantive content: the
+early CI/CD article rendered 13,337 body characters and 15/15 loaded images;
+the financial-advisors page rendered 20,375 characters and 44/44 images; the
+small-business page rendered 26,900 characters and 44/44 images; the middle
+Cowork page rendered 7,272 characters and 8/8 images; and the late Salesforce
+page rendered 9,131 characters and 8/8 images. Each replay also exposed one
+video element where the archived page had one, and all 149 logged resource
+requests were loopback-only with no production-origin or prohibited-host
+resource URL.
+
+This completes the Claude refresh delta. The next reviewed source delta is the
+four-route public SemiAnalysis list at
+`/mnt2/capsule/epitome/refresh/1789621253/semianalysis.txt`.
+
 ## Proposed first bounded batch
 
 Before any large crawl, use roughly 10–15 deliberately varied pages:

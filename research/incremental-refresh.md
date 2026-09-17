@@ -24,10 +24,21 @@ middle, structural/media, and late local-only replays retained substantive text
 and images with no production-origin fallback. The 37-route Claude list is in
 `/mnt2/capsule/epitome/refresh/1789621253/claude.txt`. At capture launch,
 source-root deduplication skipped 29 URLs already complete in the Claude
-archive, leaving eight genuinely new public routes in the active lane at
-`/mnt2/capsule/epitome/claude/refresh/1789621253`; SemiAnalysis and Paul Graham
-follow it in the reviewed plan order. Historical known-uncaptured backlogs
-remain outside this refresh.
+archive, leaving eight genuinely new public routes. The eight-route capture
+at `/mnt2/capsule/epitome/claude/refresh/1789621253` is complete: all manifests
+are complete/tab-closed, `finish.failures=0`, and both image audits are clean.
+It recorded 836 requests, 825 response bodies, 11 response-level body errors,
+and 139,668,565 response bytes (825 HTTP 200, eight HTTP 302, and three
+pending). The asset ledger recorded 454 discovered, 221 attempted and
+completed, zero failed, nine policy-excluded, 224 already-complete, and
+32,209,969 downloaded bytes. The nine exclusions include four YouTube iframe
+dependencies visible in browser metadata; no excluded asset-result record or
+excluded asset bytes were written, and no downloader was invoked. Five
+representative local-only replays retained substantive text and all rendered
+images with no production-origin requests. The next reviewed source delta is
+the four-route SemiAnalysis list at
+`/mnt2/capsule/epitome/refresh/1789621253/semianalysis.txt`.
+Historical known-uncaptured backlogs remain outside this refresh.
 
 ## Refresh plan 1789091412
 
