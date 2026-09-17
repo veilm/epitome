@@ -376,3 +376,32 @@ article figures and public paid-subscriber boundary.
 This reconciliation identity is complete. A final plan-only all-source
 discovery pass is the remaining handoff gate for any pages published after this
 reconciliation.
+
+## Incremental refresh 1789621253
+
+The reviewed four-route public SemiAnalysis delta was captured at
+`/mnt2/capsule/epitome/semianalysis/refresh/1789621253` with the standard
+CDP-2103 public-only settings. All four manifests are complete and tab-closed;
+`finish.failures=0`, with no capture-level page failure.
+
+The batch recorded 1,374 requests, 1,357 response bodies, zero response-body
+errors, and 117,177,910 response bytes. Statuses were 1,362×200, 8×204, and
+4×401. The four optional 401 records were provider, telemetry, or boundary
+traffic and did not block the public Substack previews. Asset accounting is
+1,309 discovered, 842 attempted and completed, zero failed, zero excluded,
+467 already complete, and 86,489,797 downloaded bytes. No prohibited-host
+result URL or interactive-media result was recorded; no YouTube or Twitter/X
+downloader was invoked.
+
+The primary-image and all-rendered-image audits both report four pages with
+zero missing images, repair attempts, or repair failures. Four representative
+local-only replays through `127.0.0.1:8137` covered long-form, image-heavy,
+middle, and late/paywall cases. They retained 25,133, 15,955, 46,250, and
+28,587 visible body characters with 12/12, 20/20, 38/38, and 21/21 images
+loaded, respectively, and no broken or zero-size images. Each preserved the
+visible subscribe/paid boundary; all 191 logged replay requests were
+loopback-only with no production-origin fallback.
+
+This completes the SemiAnalysis refresh delta. The next reviewed source lane
+is the one-route public Paul Graham list at
+`/mnt2/capsule/epitome/refresh/1789621253/paul-graham.txt`.

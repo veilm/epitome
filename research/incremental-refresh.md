@@ -35,11 +35,20 @@ completed, zero failed, nine policy-excluded, 224 already-complete, and
 dependencies visible in browser metadata; no excluded asset-result record or
 excluded asset bytes were written, and no downloader was invoked. Five
 representative local-only replays retained substantive text and all rendered
-images with no production-origin requests. The next reviewed source delta is
-the four-route SemiAnalysis list at
-`/mnt2/capsule/epitome/refresh/1789621253/semianalysis.txt`, now active at
-`/mnt2/capsule/epitome/semianalysis/refresh/1789621253` as the sole capture
-lane with the same public-only settings.
+images with no production-origin requests. The four-route SemiAnalysis delta
+is now complete at `/mnt2/capsule/epitome/semianalysis/refresh/1789621253`:
+all manifests are complete/tab-closed, `finish.failures=0`, both image audits
+are clean, and no prohibited-host result URL was recorded. It retained 1,374
+requests, 1,357 response bodies, zero response-body errors, and 117,177,910
+response bytes (1,362 HTTP 200, eight HTTP 204, and four HTTP 401). The asset
+ledger recorded 1,309 discovered, 842 attempted and completed, zero failed,
+zero excluded, 467 already-complete, and 86,489,797 downloaded bytes. The four
+optional 401 records were provider/telemetry or boundary traffic and did not
+block the public previews. Four representative local-only replays retained
+long-form text and all images, preserved the visible subscribe/paid boundary,
+and made 191 loopback-only requests with no production-origin fallback. The
+next reviewed source delta is the one-route public Paul Graham list at
+`/mnt2/capsule/epitome/refresh/1789621253/paul-graham.txt`.
 Historical known-uncaptured backlogs remain outside this refresh.
 
 ## Refresh plan 1789091412
