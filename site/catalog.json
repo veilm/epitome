@@ -26,6 +26,10 @@
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
     },
     {
+      "id": "geohot",
+      "name": "George Hotz"
+    },
+    {
       "id": "andrej-karpathy-site",
       "name": "Karpathy.ai",
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
@@ -88,6 +92,1016 @@
   ],
   "pages": [
     {
+      "captured_at": 1789593644,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789593644,
+      "sort_basis": "captured",
+      "source": "geohot",
+      "title": "the singularity is nearerI love LLMs, I hate hypeAI 2040 and the Cult of IntelligenceLiminalityThe doom justifies the valuationYou don’t understand, prices can’t go downSummoning the DemonAI will be massively deflationaryStairway to HeavenOur Great War is a Spiritual WarThe Eternal Sloptember",
+      "url": "https://geohot.github.io/blog/feed.xml"
+    },
+    {
+      "captured_at": 1789593598,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789593598,
+      "sort_basis": "captured",
+      "source": "geohot",
+      "title": "About",
+      "url": "https://geohot.github.io/blog/about"
+    },
+    {
+      "captured_at": 1789593550,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789593550,
+      "sort_basis": "captured",
+      "source": "geohot",
+      "title": "the singularity is nearer",
+      "url": "https://geohot.github.io/blog"
+    },
+    {
+      "captured_at": 1789154218,
+      "publication_status": "exact",
+      "published_at": 1789146292,
+      "sort_at": 1789146292,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Nvidia’s Backstop Universe – Heads I Win, Tails Who Loses?",
+      "url": "https://newsletter.semianalysis.com/p/nvidias-backstop-universe-heads-i"
+    },
+    {
+      "captured_at": 1789152759,
+      "publication_status": "exact",
+      "published_at": 1789144091,
+      "sort_at": 1789144091,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "AI researchers debate how close we are to recursive self-improvement",
+      "url": "https://www.dwarkesh.com/p/john-beren-charlie"
+    },
+    {
+      "captured_at": 1789111875,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789111875,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "url": "https://openai.com/index/gpt-6-astra"
+    },
+    {
+      "captured_at": 1789111475,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789111475,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "GPT-6 Astra: The next generation in intelligence for work",
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work"
+    },
+    {
+      "captured_at": 1789096553,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789096553,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "Supporting the blind community with ChatGPT",
+      "url": "https://openai.com/index/two-blind-brothers"
+    },
+    {
+      "captured_at": 1789095957,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789095957,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "Using ChatGPT to grow ATV Big Air Tour",
+      "url": "https://openai.com/index/growing-atv-big-air-tour"
+    },
+    {
+      "captured_at": 1789092103,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789092103,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "Accelerating antibiotic discovery with ChatGPT",
+      "url": "https://openai.com/index/accelerating-antibiotic-discovery"
+    },
+    {
+      "captured_at": 1789149814,
+      "publication_status": "exact",
+      "published_at": 1789084800,
+      "sort_at": 1789084800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
+    },
+    {
+      "captured_at": 1789138420,
+      "publication_status": "exact",
+      "published_at": 1789050500,
+      "sort_at": 1789050500,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "What is So Hard About Behind-The-Meter Power For Datacenters? Part 1",
+      "url": "https://newsletter.semianalysis.com/p/what-is-so-hard-about-behind-the"
+    },
+    {
+      "captured_at": 1789125726,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Measuring AI capabilities in intelligence targeting and conventional weapons",
+      "url": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities"
+    },
+    {
+      "captured_at": 1789116431,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api"
+    },
+    {
+      "captured_at": 1789113503,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Now everyone can put data to work",
+      "url": "https://openai.com/index/put-data-to-work"
+    },
+    {
+      "captured_at": 1789112310,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing ChatGPT for Financial Services",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services"
+    },
+    {
+      "captured_at": 1789110743,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "url": "https://openai.com/index/expanding-ai-access-us-government"
+    },
+    {
+      "captured_at": 1789100178,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials"
+    },
+    {
+      "captured_at": 1789098796,
+      "publication_status": "exact",
+      "published_at": 1788998400,
+      "sort_at": 1788998400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing the Agents API",
+      "url": "https://openai.com/index/introducing-the-agents-api"
+    },
+    {
+      "captured_at": 1789124740,
+      "publication_status": "exact",
+      "published_at": 1788912000,
+      "sort_at": 1788912000,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    },
+    {
+      "captured_at": 1789110350,
+      "publication_status": "exact",
+      "published_at": 1788912000,
+      "sort_at": 1788912000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The AI policy window is open. We need to act.",
+      "url": "https://openai.com/index/ai-policy-window"
+    },
+    {
+      "captured_at": 1789107372,
+      "publication_status": "exact",
+      "published_at": 1788912000,
+      "sort_at": 1788912000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Paul Christiano joins OpenAI Foundation Board",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board"
+    },
+    {
+      "captured_at": 1789135235,
+      "publication_status": "exact",
+      "published_at": 1788883816,
+      "sort_at": 1788883816,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "Pretraining progress is mostly coming from data",
+      "url": "https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data"
+    },
+    {
+      "captured_at": 1789119702,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Funding grants for new research into AI and teen development",
+      "url": "https://openai.com/index/teen-development-research-grants"
+    },
+    {
+      "captured_at": 1789118094,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "On the Navier–Stokes Millennium Prize Problem",
+      "url": "https://openai.com/index/navier-stokes-solution"
+    },
+    {
+      "captured_at": 1789112841,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing ChatGPT Images 2.5",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-5"
+    },
+    {
+      "captured_at": 1789108147,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The Work Now Within Reach",
+      "url": "https://openai.com/index/the-work-now-within-reach"
+    },
+    {
+      "captured_at": 1789107759,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms"
+    },
+    {
+      "captured_at": 1789099321,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "url": "https://openai.com/index/codex-quantum-computing-experiments"
+    },
+    {
+      "captured_at": 1789091675,
+      "publication_status": "exact",
+      "published_at": 1788825600,
+      "sort_at": 1788825600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "url": "https://openai.com/index/1password"
+    },
+    {
+      "captured_at": 1789138947,
+      "publication_status": "exact",
+      "published_at": 1788811218,
+      "sort_at": 1788811218,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "TPU Inference Externalization Full Steam Ahead - InferenceX",
+      "url": "https://newsletter.semianalysis.com/p/tpu-inferencex-full-steam"
+    },
+    {
+      "captured_at": 1789109124,
+      "publication_status": "exact",
+      "published_at": 1788739200,
+      "sort_at": 1788739200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Supporting independent journalism in Ukraine",
+      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine"
+    },
+    {
+      "captured_at": 1789118540,
+      "publication_status": "exact",
+      "published_at": 1788652800,
+      "sort_at": 1788652800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind"
+    },
+    {
+      "captured_at": 1789117702,
+      "publication_status": "exact",
+      "published_at": 1788652800,
+      "sort_at": 1788652800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
+    },
+    {
+      "captured_at": 1789125569,
+      "publication_status": "exact",
+      "published_at": 1788480000,
+      "sort_at": 1788480000,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Formalizing Fermat's Last Theorem",
+      "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+    },
+    {
+      "captured_at": 1789121234,
+      "publication_status": "exact",
+      "published_at": 1788393600,
+      "sort_at": 1788393600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra"
+    },
+    {
+      "captured_at": 1789120831,
+      "publication_status": "exact",
+      "published_at": 1788393600,
+      "sort_at": 1788393600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra"
+    },
+    {
+      "captured_at": 1789120464,
+      "publication_status": "exact",
+      "published_at": 1788393600,
+      "sort_at": 1788393600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders"
+    },
+    {
+      "captured_at": 1789118927,
+      "publication_status": "exact",
+      "published_at": 1788393600,
+      "sort_at": 1788393600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Safety overview: GPT-6 Astra",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra"
+    },
+    {
+      "captured_at": 1789095524,
+      "publication_status": "exact",
+      "published_at": 1788307200,
+      "sort_at": 1788307200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "url": "https://openai.com/index/atv-big-air-tour"
+    },
+    {
+      "captured_at": 1789139922,
+      "publication_status": "exact",
+      "published_at": 1788293672,
+      "sort_at": 1788293672,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Korea’s Trillion-Dollar Sovereign AI Investment: Nvidia Wins, Hynix Loses",
+      "url": "https://newsletter.semianalysis.com/p/koreas-trillion-dollar-sovereign"
+    },
+    {
+      "captured_at": 1789135565,
+      "publication_status": "exact",
+      "published_at": 1788277266,
+      "sort_at": 1788277266,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "Ajeya Cotra – Inside the OpenAI agent swarm that hacked Hugging Face",
+      "url": "https://www.dwarkesh.com/p/ajeya-cotra"
+    },
+    {
+      "captured_at": 1789123813,
+      "publication_status": "exact",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+    },
+    {
+      "captured_at": 1789119314,
+      "publication_status": "exact",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra"
+    },
+    {
+      "captured_at": 1789116850,
+      "publication_status": "exact",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources"
+    },
+    {
+      "captured_at": 1789098376,
+      "publication_status": "exact",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows"
+    },
+    {
+      "captured_at": 1789095120,
+      "publication_status": "exact",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "url": "https://openai.com/index/gilbert-tobin"
+    },
+    {
+      "captured_at": 1789136158,
+      "publication_status": "exact",
+      "published_at": 1788208613,
+      "sort_at": 1788208613,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "The rise and fall of agent civilizations",
+      "url": "https://www.dwarkesh.com/p/openai-huggingface-narration"
+    },
+    {
+      "captured_at": 1789124157,
+      "publication_status": "exact",
+      "published_at": 1788134400,
+      "sort_at": 1788134400,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Improving our alignment and security practices",
+      "url": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+    },
+    {
+      "captured_at": 1789116032,
+      "publication_status": "exact",
+      "published_at": 1788134400,
+      "sort_at": 1788134400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "A milestone in expanding access to AI",
+      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads"
+    },
+    {
+      "captured_at": 1789106939,
+      "publication_status": "exact",
+      "published_at": 1788134400,
+      "sort_at": 1788134400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "OpenAI supports California’s bill to advance youth AI safety",
+      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety"
+    },
+    {
+      "captured_at": 1789093038,
+      "publication_status": "exact",
+      "published_at": 1788134400,
+      "sort_at": 1788134400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "url": "https://openai.com/index/polimill"
+    },
+    {
+      "captured_at": 1789140256,
+      "publication_status": "exact",
+      "published_at": 1788104782,
+      "sort_at": 1788104782,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Most Neoclouds Suck At Security",
+      "url": "https://newsletter.semianalysis.com/p/most-neoclouds-suck-at-security"
+    },
+    {
+      "captured_at": 1789136671,
+      "publication_status": "exact",
+      "published_at": 1788043673,
+      "sort_at": 1788043673,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "The Rise and Fall of Agent Civilizations",
+      "url": "https://www.dwarkesh.com/p/openai-huggingface"
+    },
+    {
+      "captured_at": 1789125070,
+      "publication_status": "exact",
+      "published_at": 1787875200,
+      "sort_at": 1787875200,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Automated researchers can reliably mitigate alignment failures",
+      "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
+    },
+    {
+      "captured_at": 1789106533,
+      "publication_status": "exact",
+      "published_at": 1787875200,
+      "sort_at": 1787875200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Supporting Thailand’s next generation of AI startups",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand"
+    },
+    {
+      "captured_at": 1789105156,
+      "publication_status": "exact",
+      "published_at": 1787875200,
+      "sort_at": 1787875200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
+    },
+    {
+      "captured_at": 1789124323,
+      "publication_status": "exact",
+      "published_at": 1787788800,
+      "sort_at": 1787788800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Previewing the Model Hardware Standard",
+      "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+    },
+    {
+      "captured_at": 1789124005,
+      "publication_status": "exact",
+      "published_at": 1787788800,
+      "sort_at": 1787788800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Expanding our support for scientists",
+      "url": "https://www.anthropic.com/news/expanding-support-for-scientists"
+    },
+    {
+      "captured_at": 1789103892,
+      "publication_status": "exact",
+      "published_at": 1787788800,
+      "sort_at": 1787788800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil"
+    },
+    {
+      "captured_at": 1789103412,
+      "publication_status": "exact",
+      "published_at": 1787788800,
+      "sort_at": 1787788800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training"
+    },
+    {
+      "captured_at": 1789125417,
+      "publication_status": "exact",
+      "published_at": 1787702400,
+      "sort_at": 1787702400,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Enabling independent research on how people use Claude",
+      "url": "https://www.anthropic.com/research/enabling-independent-research"
+    },
+    {
+      "captured_at": 1789115644,
+      "publication_status": "exact",
+      "published_at": 1787702400,
+      "sort_at": 1787702400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Learning never stops: How AI makes learning continuous",
+      "url": "https://openai.com/index/learning-never-stops"
+    },
+    {
+      "captured_at": 1789114365,
+      "publication_status": "exact",
+      "published_at": 1787702400,
+      "sort_at": 1787702400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts"
+    },
+    {
+      "captured_at": 1789105539,
+      "publication_status": "exact",
+      "published_at": 1787702400,
+      "sort_at": 1787702400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The Hugging Face incident and the road ahead",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead"
+    },
+    {
+      "captured_at": 1789097554,
+      "publication_status": "exact",
+      "published_at": 1787702400,
+      "sort_at": 1787702400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How loveholidays is making everyone a builder with Codex",
+      "url": "https://openai.com/index/loveholidays"
+    },
+    {
+      "captured_at": 1789136984,
+      "publication_status": "exact",
+      "published_at": 1787671977,
+      "sort_at": 1787671977,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028",
+      "url": "https://www.dwarkesh.com/p/dylan-patel-3"
+    },
+    {
+      "captured_at": 1789141093,
+      "publication_status": "exact",
+      "published_at": 1787666438,
+      "sort_at": 1787666438,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "OpenAI Jalapeño: Better Than Nvidia Blackwell",
+      "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+    },
+    {
+      "captured_at": 1789124585,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Funding better evaluations of AI’s impact on wellbeing",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants"
+    },
+    {
+      "captured_at": 1789108534,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Disrupting a new covert influence campaign from Russia",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia"
+    },
+    {
+      "captured_at": 1789104357,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The full stack behind abundant intelligence",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence"
+    },
+    {
+      "captured_at": 1789100982,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results"
+    },
+    {
+      "captured_at": 1789097968,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+      "url": "https://openai.com/index/introducing-admin-plugin"
+    },
+    {
+      "captured_at": 1789141784,
+      "publication_status": "exact",
+      "published_at": 1787530775,
+      "sort_at": 1787530775,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "AgentX - InferenceXv3: Does CUDA Moat Hold up in Agentic Inferencing?",
+      "url": "https://newsletter.semianalysis.com/p/agentx-inferencexv3-does-cuda-moat"
+    },
+    {
+      "captured_at": 1789115261,
+      "publication_status": "exact",
+      "published_at": 1787529600,
+      "sort_at": 1787529600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro"
+    },
+    {
+      "captured_at": 1789142778,
+      "publication_status": "exact",
+      "published_at": 1787330402,
+      "sort_at": 1787330402,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Are Open Models Catching Up?",
+      "url": "https://newsletter.semianalysis.com/p/are-open-models-catching-up"
+    },
+    {
+      "captured_at": 1789111137,
+      "publication_status": "exact",
+      "published_at": 1787184000,
+      "sort_at": 1787184000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing Intelligence Age",
+      "url": "https://openai.com/index/introducing-intelligence-age"
+    },
+    {
+      "captured_at": 1789097136,
+      "publication_status": "exact",
+      "published_at": 1787184000,
+      "sort_at": 1787184000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
+      "url": "https://openai.com/index/stampli"
+    },
+    {
+      "captured_at": 1789143240,
+      "publication_status": "exact",
+      "published_at": 1787103128,
+      "sort_at": 1787103128,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Cerebras's Next Generation CS-4: Fast Just Got Faster",
+      "url": "https://newsletter.semianalysis.com/p/cerebrass-next-generation-cs-4-fast"
+    },
+    {
+      "captured_at": 1789121634,
+      "publication_status": "exact",
+      "published_at": 1787097600,
+      "sort_at": 1787097600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Replit expands access to software creation with GPT-5.6 Luna",
+      "url": "https://openai.com/index/replit"
+    },
+    {
+      "captured_at": 1789101778,
+      "publication_status": "exact",
+      "published_at": 1787097600,
+      "sort_at": 1787097600,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Offering Zero Data Retention for frontier models",
+      "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models"
+    },
+    {
+      "captured_at": 1789125235,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Claude accelerates protein design and analytical chemistry",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+    },
+    {
+      "captured_at": 1789113899,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+      "url": "https://openai.com/index/chatgpt-for-teens"
+    },
+    {
+      "captured_at": 1789109576,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Strengthening democratic oversight in national security",
+      "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security"
+    },
+    {
+      "captured_at": 1789104746,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "ChatGPT Ads expands across Europe",
+      "url": "https://openai.com/index/chatgpt-ads-expands-across-europe"
+    },
+    {
+      "captured_at": 1789102639,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Partnering with CodeAI to prepare the first AI generation",
+      "url": "https://openai.com/index/partnering-with-codeai"
+    },
+    {
+      "captured_at": 1789102253,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Pacing model development in an era of cyber-critical capabilities",
+      "url": "https://openai.com/index/pacing-model-development-cyber-capabilities"
+    },
+    {
+      "captured_at": 1789094276,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "url": "https://openai.com/index/nvidia/chatgpt-work"
+    },
+    {
+      "captured_at": 1789092640,
+      "publication_status": "exact",
+      "published_at": 1787011200,
+      "sort_at": 1787011200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+      "url": "https://openai.com/index/asana"
+    },
+    {
+      "captured_at": 1789120090,
+      "publication_status": "exact",
+      "published_at": 1786924800,
+      "sort_at": 1786924800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The Defender’s Window",
+      "url": "https://openai.com/index/the-defenders-window"
+    },
+    {
+      "captured_at": 1789109964,
+      "publication_status": "exact",
+      "published_at": 1786924800,
+      "sort_at": 1786924800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "New policy ideas for the Intelligence Age",
+      "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age"
+    },
+    {
+      "captured_at": 1789101389,
+      "publication_status": "exact",
+      "published_at": 1786924800,
+      "sort_at": 1786924800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "OpenAI joins PORTS-Pike project",
+      "url": "https://openai.com/index/openai-joins-ports-pike-project"
+    },
+    {
+      "captured_at": 1789143619,
+      "publication_status": "exact",
+      "published_at": 1786919279,
+      "sort_at": 1786919279,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "$12B of US ratepayers' money wasted on a modeling mistake and PJM wants to do it again",
+      "url": "https://newsletter.semianalysis.com/p/12b-of-us-ratepayers-money-wasted"
+    },
+    {
+      "captured_at": 1789123663,
+      "publication_status": "exact",
+      "published_at": 1786665600,
+      "sort_at": 1786665600,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "How Claude's text watermarking works",
+      "url": "https://www.anthropic.com/news/claude-text-watermark"
+    },
+    {
+      "captured_at": 1789125900,
+      "publication_status": "exact",
+      "published_at": 1786579200,
+      "sort_at": 1786579200,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Patterns and problems in multiagent systems",
+      "url": "https://www.anthropic.com/research/multiagent-systems"
+    },
+    {
+      "captured_at": 1789114857,
+      "publication_status": "exact",
+      "published_at": 1786579200,
+      "sort_at": 1786579200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+      "url": "https://openai.com/index/previewing-ultrafast"
+    },
+    {
+      "captured_at": 1789100575,
+      "publication_status": "exact",
+      "published_at": 1786579200,
+      "sort_at": 1786579200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
+      "url": "https://openai.com/index/dali-rajic-chief-revenue-officer"
+    },
+    {
+      "captured_at": 1789099789,
+      "publication_status": "exact",
+      "published_at": 1786579200,
+      "sort_at": 1786579200,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "The builder’s guide to GPT‑5.6",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6"
+    },
+    {
+      "captured_at": 1789126075,
+      "publication_status": "exact",
+      "published_at": 1786492800,
+      "sort_at": 1786492800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "How well do job retraining programs work?",
+      "url": "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs"
+    },
+    {
+      "captured_at": 1789103021,
+      "publication_status": "exact",
+      "published_at": 1786492800,
+      "sort_at": 1786492800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "From assistance to execution: How enterprises put AI to work",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+    },
+    {
+      "captured_at": 1789093441,
+      "publication_status": "exact",
+      "published_at": 1786492800,
+      "sort_at": 1786492800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How RingCentral builds AI-native work from engineering to ops",
+      "url": "https://openai.com/index/ringcentral"
+    },
+    {
       "captured_at": 1786490152,
       "publication_status": "unknown",
       "published_at": null,
@@ -126,6 +1140,26 @@
       "source": "paul-graham",
       "title": "What Languages Fix",
       "url": "https://paulgraham.com/fix.html"
+    },
+    {
+      "captured_at": 1789137532,
+      "publication_status": "exact",
+      "published_at": 1786465883,
+      "sort_at": 1786465883,
+      "sort_basis": "published",
+      "source": "dwarkesh",
+      "title": "Ryan Greenblatt – What happens once AI can automate AI research?",
+      "url": "https://www.dwarkesh.com/p/ryan-greenblatt"
+    },
+    {
+      "captured_at": 1789117320,
+      "publication_status": "exact",
+      "published_at": 1786406400,
+      "sort_at": 1786406400,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Daybreak models are now available on AWS",
+      "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws"
     },
     {
       "captured_at": 1786348776,
@@ -176,6 +1210,26 @@
       "source": "semianalysis",
       "title": "Ultra-High Interactivity on NVIDIA GPUs? - TileRT InferenceX",
       "url": "https://newsletter.semianalysis.com/p/ultra-high-interactivity-on-nvidia"
+    },
+    {
+      "captured_at": 1789094704,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
+      "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
+    },
+    {
+      "captured_at": 1789093859,
+      "publication_status": "exact",
+      "published_at": 1786320000,
+      "sort_at": 1786320000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How Zapier transformed core marketing processes with ChatGPT Work",
+      "url": "https://openai.com/index/zapier"
     },
     {
       "captured_at": 1786402487,
@@ -1838,6 +2892,17 @@
       "url": "https://openai.com/index/creating-new-simulations-black-holes"
     },
     {
+      "captured_at": 1789148003,
+      "publication_status": "partial",
+      "published_at": 1785542400,
+      "sort_at": 1785542400,
+      "sort_basis": "published",
+      "source": "paul-graham",
+      "title": "How Universities Should Prepare Founders",
+      "url": "https://paulgraham.com/prepare.html",
+      "published_precision": "month"
+    },
+    {
       "captured_at": 1785820780,
       "publication_status": "exact",
       "published_at": 1785542400,
@@ -2558,6 +3623,26 @@
       "url": "https://claude.com/blog/working-at-the-frontier-how-hebbia-builds-ai-for-financial-diligence-that-cant-miss-a-detail"
     },
     {
+      "captured_at": 1789593691,
+      "publication_status": "exact",
+      "published_at": 1783839600,
+      "sort_at": 1783839600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "I love LLMs, I hate hype",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/07/12/i-love-llms.html"
+    },
+    {
+      "captured_at": 1789593737,
+      "publication_status": "exact",
+      "published_at": 1783753200,
+      "sort_at": 1783753200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI 2040 and the Cult of Intelligence",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/07/11/ai-2040.html"
+    },
+    {
       "captured_at": 1786184396,
       "publication_status": "exact",
       "published_at": 1783700636,
@@ -2596,6 +3681,16 @@
       "source": "semianalysis",
       "title": "The Future of Meta Superintelligence: A 1 Year Progress Update",
       "url": "https://newsletter.semianalysis.com/p/the-future-of-meta-superintelligence"
+    },
+    {
+      "captured_at": 1789146521,
+      "publication_status": "exact",
+      "published_at": 1783555200,
+      "sort_at": 1783555200,
+      "sort_basis": "published",
+      "source": "ai-2040",
+      "title": "Summary of Plan A",
+      "url": "https://ai-2040.com/summary"
     },
     {
       "captured_at": 1786347802,
@@ -3228,6 +4323,16 @@
       "url": "https://www.dwarkesh.com/p/the-next-paradigm"
     },
     {
+      "captured_at": 1789126229,
+      "publication_status": "exact",
+      "published_at": 1782432000,
+      "sort_at": 1782432000,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Economics",
+      "url": "https://www.anthropic.com/research/team/economics"
+    },
+    {
       "captured_at": 1785255324,
       "publication_status": "exact",
       "published_at": 1782432000,
@@ -3276,6 +4381,16 @@
       "source": "semianalysis",
       "title": "China’s CXMT Is Set to Challenge DRAM Incumbents",
       "url": "https://newsletter.semianalysis.com/p/chinas-cxmt-is-set-to-challenge-dram"
+    },
+    {
+      "captured_at": 1789595285,
+      "publication_status": "exact",
+      "published_at": 1782198000,
+      "sort_at": 1782198000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Liminality",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/23/liminality.html"
     },
     {
       "captured_at": 1786089816,
@@ -3358,6 +4473,16 @@
       "url": "https://openai.com/index/patch-the-planet"
     },
     {
+      "captured_at": 1789595331,
+      "publication_status": "exact",
+      "published_at": 1782025200,
+      "sort_at": 1782025200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The doom justifies the valuation",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/21/the-doom-justifies-the-valuation.html"
+    },
+    {
       "captured_at": 1785256559,
       "publication_status": "exact",
       "published_at": 1782000000,
@@ -3386,6 +4511,16 @@
       "source": "semianalysis",
       "title": "Stop Saying Half of 2026 US Datacenter Capacity Is Canceled",
       "url": "https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter"
+    },
+    {
+      "captured_at": 1789595379,
+      "publication_status": "exact",
+      "published_at": 1781766000,
+      "sort_at": 1781766000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "You don’t understand, prices can’t go down",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/18/prices-cant-go-down.html"
     },
     {
       "captured_at": 1786156809,
@@ -3436,6 +4571,16 @@
       "source": "openai",
       "title": "New usage analytics and updated spend controls for enterprises",
       "url": "https://openai.com/index/chatgpt-enterprise-spend-controls"
+    },
+    {
+      "captured_at": 1789595425,
+      "publication_status": "exact",
+      "published_at": 1781679600,
+      "sort_at": 1781679600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Summoning the Demon",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/17/summoning-the-demon.html"
     },
     {
       "captured_at": 1786160598,
@@ -3606,6 +4751,16 @@
       "source": "semianalysis",
       "title": "Intel Should Raise Capital",
       "url": "https://newsletter.semianalysis.com/p/intel-should-raise-capital"
+    },
+    {
+      "captured_at": 1789595517,
+      "publication_status": "exact",
+      "published_at": 1781161200,
+      "sort_at": 1781161200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI will be massively deflationary",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/11/ai-will-be-deflationary.html"
     },
     {
       "captured_at": 1786079820,
@@ -3846,6 +5001,26 @@
       "source": "openai",
       "title": "Confidential submission of draft S-1 to the SEC",
       "url": "https://openai.com/index/openai-submits-confidential-s-1"
+    },
+    {
+      "captured_at": 1789595563,
+      "publication_status": "exact",
+      "published_at": 1780815600,
+      "sort_at": 1780815600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Stairway to Heaven",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/07/stairway-to-heaven.html"
+    },
+    {
+      "captured_at": 1789595655,
+      "publication_status": "exact",
+      "published_at": 1780729200,
+      "sort_at": 1780729200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Our Great War is a Spiritual War",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/06/06/our-great-war.html"
     },
     {
       "captured_at": 1786157486,
@@ -4400,6 +5575,26 @@
       "url": "https://openai.com/index/ai-first-hire-small-business"
     },
     {
+      "captured_at": 1789595702,
+      "publication_status": "exact",
+      "published_at": 1779606000,
+      "sort_at": 1779606000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Eternal Sloptember",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/24/the-eternal-sloptember.html"
+    },
+    {
+      "captured_at": 1789595748,
+      "publication_status": "exact",
+      "published_at": 1779519600,
+      "sort_at": 1779519600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "There is only one bad AI scenario",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/23/one-bad-scenario.html"
+    },
+    {
       "captured_at": 1786187606,
       "publication_status": "exact",
       "published_at": 1779464314,
@@ -4478,6 +5673,16 @@
       "source": "openai",
       "title": "AdventHealth advances whole-person care with OpenAI",
       "url": "https://openai.com/index/adventhealth"
+    },
+    {
+      "captured_at": 1789595795,
+      "publication_status": "exact",
+      "published_at": 1779260400,
+      "sort_at": 1779260400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "What will better AI mean?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/20/what-will-better-mean.html"
     },
     {
       "captured_at": 1786158679,
@@ -4900,6 +6105,16 @@
       "url": "https://openai.com/index/openai-campus-network-student-club-interest-form"
     },
     {
+      "captured_at": 1789595841,
+      "publication_status": "exact",
+      "published_at": 1778310000,
+      "sort_at": 1778310000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Real Singularity is the Friends We Made Along the Way",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/09/real-singularity.html"
+    },
+    {
       "captured_at": 1786188503,
       "publication_status": "exact",
       "published_at": 1778258302,
@@ -5158,6 +6373,26 @@
       "source": "openai",
       "title": "How OpenAI delivers low-latency voice AI at scale",
       "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale"
+    },
+    {
+      "captured_at": 1789595933,
+      "publication_status": "exact",
+      "published_at": 1777791600,
+      "sort_at": 1777791600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Punk, or why I don’t stream anymore",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/03/punk-or-why-i-dont-stream.html"
+    },
+    {
+      "captured_at": 1789595979,
+      "publication_status": "exact",
+      "published_at": 1777618800,
+      "sort_at": 1777618800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI will create jobs",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/05/01/ai-will-create-jobs.html"
     },
     {
       "captured_at": 1786248782,
@@ -5421,6 +6656,16 @@
       "url": "https://openai.com/index/our-principles"
     },
     {
+      "captured_at": 1789596026,
+      "publication_status": "exact",
+      "published_at": 1777100400,
+      "sort_at": 1777100400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Mutating AI Powered Virus",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/25/a-mutating-virus.html"
+    },
+    {
       "captured_at": 1785744363,
       "publication_status": "exact",
       "published_at": 1777075200,
@@ -5451,6 +6696,16 @@
       "url": "https://www.dwarkesh.com/p/blog-prize"
     },
     {
+      "captured_at": 1789596117,
+      "publication_status": "exact",
+      "published_at": 1777014000,
+      "sort_at": 1777014000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Positivity",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/24/positivity.html"
+    },
+    {
       "captured_at": 1786080392,
       "publication_status": "exact",
       "published_at": 1776988800,
@@ -5479,6 +6734,16 @@
       "source": "anthropic",
       "title": "Project Deal: our Claude-run marketplace experiment",
       "url": "https://www.anthropic.com/features/project-deal"
+    },
+    {
+      "captured_at": 1789596164,
+      "publication_status": "exact",
+      "published_at": 1776927600,
+      "sort_at": 1776927600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Do you really want the US to “win” AI?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/23/us-win-ai.html"
     },
     {
       "captured_at": 1786144890,
@@ -5529,6 +6794,16 @@
       "source": "openai",
       "title": "Introducing GPT-5.5",
       "url": "https://openai.com/index/introducing-gpt-5-5"
+    },
+    {
+      "captured_at": 1789596211,
+      "publication_status": "exact",
+      "published_at": 1776841200,
+      "sort_at": 1776841200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI has no moat",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/22/ai-has-no-moat.html"
     },
     {
       "captured_at": 1785885842,
@@ -5611,6 +6886,16 @@
       "url": "https://newsletter.semianalysis.com/p/how-much-do-gpu-clusters-really-cost"
     },
     {
+      "captured_at": 1789596258,
+      "publication_status": "exact",
+      "published_at": 1776668400,
+      "sort_at": 1776668400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "What is freedom?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/20/what-is-freedom.html"
+    },
+    {
       "captured_at": 1786152857,
       "publication_status": "exact",
       "published_at": 1776643200,
@@ -5639,6 +6924,26 @@
       "source": "openai",
       "title": "OpenAI helps Hyatt advance AI among colleagues",
       "url": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise"
+    },
+    {
+      "captured_at": 1789596351,
+      "publication_status": "exact",
+      "published_at": 1776495600,
+      "sort_at": 1776495600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "America lost the Mandate of Heaven",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/18/america-mandate-of-heaven.html"
+    },
+    {
+      "captured_at": 1789596304,
+      "publication_status": "exact",
+      "published_at": 1776495600,
+      "sort_at": 1776495600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Five Simple Steps to Fix America",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/18/five-simple-steps.html"
     },
     {
       "captured_at": 1786072747,
@@ -5721,6 +7026,16 @@
       "url": "https://www.dwarkesh.com/p/what-i-learned-april-15"
     },
     {
+      "captured_at": 1789596397,
+      "publication_status": "exact",
+      "published_at": 1776236400,
+      "sort_at": 1776236400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "zappa: an AI powered mitmproxy",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/15/zappa-mitmproxy.html"
+    },
+    {
       "captured_at": 1786158543,
       "publication_status": "exact",
       "published_at": 1776211200,
@@ -5791,6 +7106,16 @@
       "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense"
     },
     {
+      "captured_at": 1789596489,
+      "publication_status": "exact",
+      "published_at": 1776063600,
+      "sort_at": 1776063600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The ‘Everyone’s a Billionaire’ act",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/13/everyones-a-billionaire.html"
+    },
+    {
       "captured_at": 1785741336,
       "publication_status": "exact",
       "published_at": 1776038400,
@@ -5799,6 +7124,16 @@
       "source": "openai",
       "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
       "url": "https://openai.com/index/cloudflare-openai-agent-cloud"
+    },
+    {
+      "captured_at": 1789596536,
+      "publication_status": "exact",
+      "published_at": 1775890800,
+      "sort_at": 1775890800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "OpenAI is nothing without its people",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/11/openai-people.html"
     },
     {
       "captured_at": 1786155638,
@@ -5841,6 +7176,16 @@
       "url": "https://openai.com/index/axios-developer-tool-compromise"
     },
     {
+      "captured_at": 1789596582,
+      "publication_status": "exact",
+      "published_at": 1775718000,
+      "sort_at": 1775718000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Hong Kong Disneyland Speedrun Guide",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/09/hk-disneyland.html"
+    },
+    {
       "captured_at": 1786157341,
       "publication_status": "exact",
       "published_at": 1775692800,
@@ -5869,6 +7214,16 @@
       "source": "openai",
       "title": "CyberAgent moves faster with ChatGPT Enterprise and Codex",
       "url": "https://openai.com/index/cyberagent"
+    },
+    {
+      "captured_at": 1789596629,
+      "publication_status": "exact",
+      "published_at": 1775631600,
+      "sort_at": 1775631600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The day you get cut out of the economy",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/08/the-day-you-get-cut-out.html"
     },
     {
       "captured_at": 1786138285,
@@ -5951,6 +7306,16 @@
       "url": "https://openai.com/index/introducing-openai-safety-fellowship"
     },
     {
+      "captured_at": 1789596675,
+      "publication_status": "exact",
+      "published_at": 1775199600,
+      "sort_at": 1775199600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Reckoning",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/04/03/the-reckoning.html"
+    },
+    {
       "captured_at": 1786249578,
       "publication_status": "exact",
       "published_at": 1775103957,
@@ -6011,6 +7376,26 @@
       "url": "https://newsletter.semianalysis.com/p/dissecting-nvidia-blackwell-tensor"
     },
     {
+      "captured_at": 1789596769,
+      "publication_status": "exact",
+      "published_at": 1774940400,
+      "sort_at": 1774940400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Clip Show",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/31/clip-show.html"
+    },
+    {
+      "captured_at": 1789596722,
+      "publication_status": "exact",
+      "published_at": 1774940400,
+      "sort_at": 1774940400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Closed Source AI = Neofeudalism",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/31/free-intelligence.html"
+    },
+    {
       "captured_at": 1786069433,
       "publication_status": "exact",
       "published_at": 1774915200,
@@ -6029,6 +7414,16 @@
       "source": "openai",
       "title": "OpenAI raises $122 billion to accelerate the next phase of AI",
       "url": "https://openai.com/index/accelerating-the-next-phase-ai"
+    },
+    {
+      "captured_at": 1789596816,
+      "publication_status": "exact",
+      "published_at": 1774854000,
+      "sort_at": 1774854000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Two Worlds",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/30/two-worlds.html"
     },
     {
       "captured_at": 1786138973,
@@ -6141,6 +7536,16 @@
       "url": "https://openai.com/index/update-on-the-openai-foundation"
     },
     {
+      "captured_at": 1789596862,
+      "publication_status": "exact",
+      "published_at": 1774249200,
+      "sort_at": 1774249200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Changing the World",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/23/changing-the-world.html"
+    },
+    {
       "captured_at": 1786146039,
       "publication_status": "exact",
       "published_at": 1774224000,
@@ -6159,6 +7564,16 @@
       "source": "openai",
       "title": "Creating with Sora safely",
       "url": "https://openai.com/index/creating-with-sora-safely"
+    },
+    {
+      "captured_at": 1789596909,
+      "publication_status": "exact",
+      "published_at": 1774076400,
+      "sort_at": 1774076400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Democracy is a Liability",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/21/democracy-liability.html"
     },
     {
       "captured_at": 1786189798,
@@ -6241,6 +7656,16 @@
       "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano"
     },
     {
+      "captured_at": 1789596956,
+      "publication_status": "exact",
+      "published_at": 1773644400,
+      "sort_at": 1773644400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Polynomial Time Factoring Algorithm",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/16/polynomial-time-factoring.html"
+    },
+    {
       "captured_at": 1785794362,
       "publication_status": "exact",
       "published_at": 1773619200,
@@ -6271,6 +7696,16 @@
       "url": "https://newsletter.semianalysis.com/p/the-great-ai-silicon-shortage"
     },
     {
+      "captured_at": 1789597049,
+      "publication_status": "exact",
+      "published_at": 1773298800,
+      "sort_at": 1773298800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Changing my mind on UBI",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/12/changing-my-mind-on-ubi.html"
+    },
+    {
       "captured_at": 1786128027,
       "publication_status": "exact",
       "published_at": 1773273600,
@@ -6299,6 +7734,16 @@
       "source": "dwarkesh",
       "title": "The most important question nobody's asking about AI",
       "url": "https://www.dwarkesh.com/p/dow-anthropic"
+    },
+    {
+      "captured_at": 1789597096,
+      "publication_status": "exact",
+      "published_at": 1773212400,
+      "sort_at": 1773212400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Every minute you aren’t running 69 agents, you are falling behind",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/03/11/running-69-agents.html"
     },
     {
       "captured_at": 1786137706,
@@ -6642,6 +8087,16 @@
       "url": "https://openai.com/index/our-agreement-with-the-department-of-war"
     },
     {
+      "captured_at": 1789597142,
+      "publication_status": "exact",
+      "published_at": 1772179200,
+      "sort_at": 1772179200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Insane Stupidity of UBI",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/27/the-insane-stupidity-of-ubi.html"
+    },
+    {
       "captured_at": 1785869337,
       "publication_status": "exact",
       "published_at": 1772150400,
@@ -6690,6 +8145,16 @@
       "source": "openai",
       "title": "OpenAI and Amazon announce strategic partnership",
       "url": "https://openai.com/index/amazon-partnership"
+    },
+    {
+      "captured_at": 1789597189,
+      "publication_status": "exact",
+      "published_at": 1772092800,
+      "sort_at": 1772092800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Last Gasps of the Rent Seeking Class",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/26/the-last-gasps-of-the-rent-seeking-class.html"
     },
     {
       "captured_at": 1785747947,
@@ -6852,6 +8317,16 @@
       "url": "https://openai.com/index/first-proof-submissions"
     },
     {
+      "captured_at": 1789597280,
+      "publication_status": "exact",
+      "published_at": 1771488000,
+      "sort_at": 1771488000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI is the Best Thing to Happen to Art",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/19/ai-art.html"
+    },
+    {
       "captured_at": 1785746343,
       "publication_status": "exact",
       "published_at": 1771459200,
@@ -6932,6 +8407,16 @@
       "url": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs"
     },
     {
+      "captured_at": 1789597327,
+      "publication_status": "exact",
+      "published_at": 1771228800,
+      "sort_at": 1771228800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Cost of Housing",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/16/cost-of-housing.html"
+    },
+    {
       "captured_at": 1786069707,
       "publication_status": "exact",
       "published_at": 1771200000,
@@ -6940,6 +8425,16 @@
       "source": "anthropic",
       "title": "Anthropic opens Bengaluru office and announces new partnerships across India",
       "url": "https://www.anthropic.com/news/bengaluru-office-partnerships-across-india"
+    },
+    {
+      "captured_at": 1789597373,
+      "publication_status": "exact",
+      "published_at": 1771142400,
+      "sort_at": 1771142400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "tiny corp’s product – a training box",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/15/tiny-corp-product.html"
     },
     {
       "captured_at": 1786165778,
@@ -6960,6 +8455,16 @@
       "source": "dwarkesh",
       "title": "Dario Amodei — \"We are near the end of the exponential\"",
       "url": "https://www.dwarkesh.com/p/dario-amodei-2"
+    },
+    {
+      "captured_at": 1789597465,
+      "publication_status": "exact",
+      "published_at": 1770969600,
+      "sort_at": 1770969600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "I Told You So",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/02/13/i-told-you-so.html"
     },
     {
       "captured_at": 1786070703,
@@ -7462,6 +8967,16 @@
       "url": "https://openai.com/index/the-next-chapter-for-ai-in-the-eu"
     },
     {
+      "captured_at": 1789597514,
+      "publication_status": "exact",
+      "published_at": 1769500800,
+      "sort_at": 1769500800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Importance of Diversity",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/27/the-importance-of-diversity.html"
+    },
+    {
       "captured_at": 1786100868,
       "publication_status": "exact",
       "published_at": 1769472000,
@@ -7502,6 +9017,16 @@
       "url": "https://openai.com/index/trustbank"
     },
     {
+      "captured_at": 1789597606,
+      "publication_status": "exact",
+      "published_at": 1769414400,
+      "sort_at": 1769414400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Will I ever own a zettaflop?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/26/own-a-zettaflop.html"
+    },
+    {
       "captured_at": 1786151512,
       "publication_status": "exact",
       "published_at": 1769385600,
@@ -7530,6 +9055,16 @@
       "source": "openai",
       "title": "How Indeed uses AI to help evolve the job search",
       "url": "https://openai.com/index/indeed-maggie-hulce"
+    },
+    {
+      "captured_at": 1789597654,
+      "publication_status": "exact",
+      "published_at": 1769328000,
+      "sort_at": 1769328000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Coming War on Car Ownership",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/25/war-on-car-ownership.html"
     },
     {
       "captured_at": 1785737878,
@@ -7692,6 +9227,16 @@
       "url": "https://www.anthropic.com/research/assistant-axis"
     },
     {
+      "captured_at": 1789597701,
+      "publication_status": "exact",
+      "published_at": 1768723200,
+      "sort_at": 1768723200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "how do I stop participating?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/18/how-do-i-stop.html"
+    },
+    {
       "captured_at": 1785719938,
       "publication_status": "exact",
       "published_at": 1768694400,
@@ -7710,6 +9255,16 @@
       "source": "openai",
       "title": "AI for self empowerment",
       "url": "https://openai.com/index/ai-for-self-empowerment"
+    },
+    {
+      "captured_at": 1789597747,
+      "publication_status": "exact",
+      "published_at": 1768636800,
+      "sort_at": 1768636800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "you have three minutes to escape the perpetual underclass",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/17/three-minutes.html"
     },
     {
       "captured_at": 1785971569,
@@ -7770,6 +9325,16 @@
       "source": "dwarkesh",
       "title": "Hiring scouts to help me find guests",
       "url": "https://www.dwarkesh.com/p/hiring-scouts-to-help-me-find-guests"
+    },
+    {
+      "captured_at": 1789597839,
+      "publication_status": "exact",
+      "published_at": 1768464000,
+      "sort_at": 1768464000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Anthropic is making a huge mistake",
+      "url": "https://geohot.github.io/blog/jekyll/update/2026/01/15/anthropic-huge-mistake.html"
     },
     {
       "captured_at": 1785906651,
@@ -8077,6 +9642,16 @@
       "url": "https://www.dwarkesh.com/p/adam-marblestone"
     },
     {
+      "captured_at": 1789597886,
+      "publication_status": "exact",
+      "published_at": 1766995200,
+      "sort_at": 1766995200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Five years of tinygrad",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/12/29/five-years-of-tinygrad.html"
+    },
+    {
       "captured_at": 1786162224,
       "publication_status": "exact",
       "published_at": 1766919600,
@@ -8095,6 +9670,16 @@
       "source": "dwarkesh",
       "title": "Thoughts on AI progress (Dec 2025)",
       "url": "https://www.dwarkesh.com/p/thoughts-on-ai-progress-dec-2025-video"
+    },
+    {
+      "captured_at": 1789597932,
+      "publication_status": "exact",
+      "published_at": 1766390400,
+      "sort_at": 1766390400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The opinion that pisses everyone off",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/12/22/the-opinion.html"
     },
     {
       "captured_at": 1785879128,
@@ -8175,6 +9760,16 @@
       "source": "andrej-karpathy-bear",
       "title": "Chemical hygiene",
       "url": "https://karpathy.bearblog.dev/chemical-hygiene"
+    },
+    {
+      "captured_at": 1789597979,
+      "publication_status": "exact",
+      "published_at": 1766044800,
+      "sort_at": 1766044800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Computer Use Models",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/12/18/computer-use-models.html"
     },
     {
       "captured_at": 1786177981,
@@ -8767,6 +10362,16 @@
       "url": "https://karpathy.bearblog.dev/the-space-of-minds"
     },
     {
+      "captured_at": 1789598026,
+      "publication_status": "exact",
+      "published_at": 1764403200,
+      "sort_at": 1764403200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Bikeshedding, or why I want to build a laptop",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/11/29/bikeshedding-or-laptop.html"
+    },
+    {
       "captured_at": 1786255425,
       "publication_status": "exact",
       "published_at": 1764336632,
@@ -8775,6 +10380,16 @@
       "source": "semianalysis",
       "title": "Google TPUv7: The 900lb Gorilla In the Room",
       "url": "https://newsletter.semianalysis.com/p/tpuv7-google-takes-a-swing-at-the"
+    },
+    {
+      "captured_at": 1789598073,
+      "publication_status": "exact",
+      "published_at": 1764316800,
+      "sort_at": 1764316800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Replacing my MacBook",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/11/28/replacing-my-macbook.html"
     },
     {
       "captured_at": 1785969693,
@@ -9617,6 +11232,16 @@
       "url": "https://newsletter.semianalysis.com/p/nanoimprint-lithography-stop-saying"
     },
     {
+      "captured_at": 1789598120,
+      "publication_status": "exact",
+      "published_at": 1761289200,
+      "sort_at": 1761289200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Gambling is Bad",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/10/24/gambling-is-bad.html"
+    },
+    {
       "captured_at": 1786083145,
       "publication_status": "exact",
       "published_at": 1761177600,
@@ -9767,6 +11392,16 @@
       "url": "https://www.anthropic.com/engineering/claude-code-sandboxing"
     },
     {
+      "captured_at": 1789598167,
+      "publication_status": "exact",
+      "published_at": 1760857200,
+      "sort_at": 1760857200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "the solution is simple but you aren’t demoralized enough yet",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/10/19/solution-is-simple.html"
+    },
+    {
       "captured_at": 1786194788,
       "publication_status": "exact",
       "published_at": 1760720073,
@@ -9775,6 +11410,16 @@
       "source": "dwarkesh",
       "title": "Andrej Karpathy — AGI is still a decade away",
       "url": "https://www.dwarkesh.com/p/andrej-karpathy"
+    },
+    {
+      "captured_at": 1789598214,
+      "publication_status": "exact",
+      "published_at": 1760684400,
+      "sort_at": 1760684400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "anticloud hopecore",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/10/17/anticloud-hopecore.html"
     },
     {
       "captured_at": 1786156518,
@@ -9805,6 +11450,16 @@
       "source": "anthropic",
       "title": "Equipping agents for the real world with Agent Skills",
       "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills"
+    },
+    {
+      "captured_at": 1789598260,
+      "publication_status": "exact",
+      "published_at": 1760511600,
+      "sort_at": 1760511600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Pathetic Losers",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/10/15/pathetic-losers.html"
     },
     {
       "captured_at": 1786155511,
@@ -9955,6 +11610,16 @@
       "source": "anthropic",
       "title": "Anthropic expands global operations to India, plans to open an office in Bengaluru.",
       "url": "https://www.anthropic.com/news/expanding-global-operations-to-india"
+    },
+    {
+      "captured_at": 1789598307,
+      "publication_status": "exact",
+      "published_at": 1759734000,
+      "sort_at": 1759734000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "We have always been at war with Eastasia",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/10/06/always-been-at-war.html"
     },
     {
       "captured_at": 1786153937,
@@ -10557,6 +12222,16 @@
       "url": "https://openai.com/index/how-people-are-using-chatgpt"
     },
     {
+      "captured_at": 1789598354,
+      "publication_status": "exact",
+      "published_at": 1757746800,
+      "sort_at": 1757746800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Get Out of Technology",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/13/get-out-of-technology.html"
+    },
+    {
       "captured_at": 1786195797,
       "publication_status": "exact",
       "published_at": 1757689382,
@@ -10565,6 +12240,16 @@
       "source": "dwarkesh",
       "title": "Fully autonomous robots are much closer than you think – Sergey Levine",
       "url": "https://www.dwarkesh.com/p/sergey-levine"
+    },
+    {
+      "captured_at": 1789598400,
+      "publication_status": "exact",
+      "published_at": 1757660400,
+      "sort_at": 1757660400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AI Coding",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/12/ai-coding.html"
     },
     {
       "captured_at": 1785742936,
@@ -10657,6 +12342,16 @@
       "url": "https://openai.com/index/safetykit"
     },
     {
+      "captured_at": 1789598447,
+      "publication_status": "exact",
+      "published_at": 1757329200,
+      "sort_at": 1757329200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter seven: nudge",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/08/chapter-seven.html"
+    },
+    {
       "captured_at": 1786257409,
       "publication_status": "exact",
       "published_at": 1757325297,
@@ -10665,6 +12360,26 @@
       "source": "semianalysis",
       "title": "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck",
       "url": "https://newsletter.semianalysis.com/p/huawei-ascend-production-ramp"
+    },
+    {
+      "captured_at": 1789598540,
+      "publication_status": "exact",
+      "published_at": 1757314800,
+      "sort_at": 1757314800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter five: sleuthing",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/08/chapter-five.html"
+    },
+    {
+      "captured_at": 1789598494,
+      "publication_status": "exact",
+      "published_at": 1757314800,
+      "sort_at": 1757314800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter six: dashcam",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/08/chapter-six.html"
     },
     {
       "captured_at": 1785972799,
@@ -10687,6 +12402,36 @@
       "url": "https://openai.com/index/people-first-ai-fund"
     },
     {
+      "captured_at": 1789598587,
+      "publication_status": "exact",
+      "published_at": 1757246400,
+      "sort_at": 1757246400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter four: bagel",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/07/chapter-four.html"
+    },
+    {
+      "captured_at": 1789598633,
+      "publication_status": "exact",
+      "published_at": 1757242800,
+      "sort_at": 1757242800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter three: father",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/07/chapter-three.html"
+    },
+    {
+      "captured_at": 1789598680,
+      "publication_status": "exact",
+      "published_at": 1757235600,
+      "sort_at": 1757235600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter two: party",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/07/chapter-two.html"
+    },
+    {
       "captured_at": 1786176762,
       "publication_status": "exact",
       "published_at": 1757152800,
@@ -10695,6 +12440,16 @@
       "source": "peter-steinberger",
       "title": "Live Coding Session: Building Arena",
       "url": "https://steipete.me/posts/2025/live-coding-session-building-arena"
+    },
+    {
+      "captured_at": 1789598727,
+      "publication_status": "exact",
+      "published_at": 1757142000,
+      "sort_at": 1757142000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "chapter one: john",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/06/chapter-one.html"
     },
     {
       "captured_at": 1786195997,
@@ -10757,6 +12512,16 @@
       "url": "https://newsletter.semianalysis.com/p/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion"
     },
     {
+      "captured_at": 1789598773,
+      "publication_status": "exact",
+      "published_at": 1756796400,
+      "sort_at": 1756796400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "you are a good person",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/02/you-are-a-good-person.html"
+    },
+    {
       "captured_at": 1785974240,
       "publication_status": "exact",
       "published_at": 1756771200,
@@ -10787,6 +12552,26 @@
       "url": "https://openai.com/index/vijaye-raji-to-become-cto-of-applications-with-acquisition-of-statsig"
     },
     {
+      "captured_at": 1789598865,
+      "publication_status": "exact",
+      "published_at": 1756710000,
+      "sort_at": 1756710000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "you will blame the wrong people",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/09/01/you-will-blame-the-wrong-people.html"
+    },
+    {
+      "captured_at": 1789598956,
+      "publication_status": "exact",
+      "published_at": 1756623600,
+      "sort_at": 1756623600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "you can never go back",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/08/31/you-can-never-go-back.html"
+    },
+    {
       "captured_at": 1785796269,
       "publication_status": "exact",
       "published_at": 1756339200,
@@ -10805,6 +12590,16 @@
       "source": "openai",
       "title": "Supporting nonprofit and community innovation",
       "url": "https://openai.com/index/supporting-nonprofit-and-community-innovation"
+    },
+    {
+      "captured_at": 1789151305,
+      "publication_status": "exact",
+      "published_at": 1756252800,
+      "sort_at": 1756252800,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Education Report: How educators use Claude",
+      "url": "https://www.anthropic.com/research/anthropic-education-report-how-educators-use-claude"
     },
     {
       "captured_at": 1786090842,
@@ -11547,6 +13342,16 @@
       "url": "https://openai.com/index/ai-as-the-greatest-source-of-empowerment-for-all"
     },
     {
+      "captured_at": 1789599003,
+      "publication_status": "exact",
+      "published_at": 1752822000,
+      "sort_at": 1752822000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The World After Wireheading",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/07/18/the-world-after-wireheading.html"
+    },
+    {
       "captured_at": 1785722976,
       "publication_status": "exact",
       "published_at": 1752796800,
@@ -11705,6 +13510,26 @@
       "source": "anthropic",
       "title": "Advancing Claude for Education",
       "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+    },
+    {
+      "captured_at": 1789599050,
+      "publication_status": "exact",
+      "published_at": 1751785200,
+      "sort_at": 1751785200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Can tinygrad win?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/07/06/can-tinygrad-win.html"
+    },
+    {
+      "captured_at": 1789599096,
+      "publication_status": "exact",
+      "published_at": 1751698800,
+      "sort_at": 1751698800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Are we the baddies?",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/07/05/are-we-the-baddies.html"
     },
     {
       "captured_at": 1786197320,
@@ -12759,6 +14584,16 @@
       "url": "https://openai.com/index/image-generation-api"
     },
     {
+      "captured_at": 1789599143,
+      "publication_status": "exact",
+      "published_at": 1745305200,
+      "sort_at": 1745305200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Way Forward",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/04/22/a-way-forward.html"
+    },
+    {
       "captured_at": 1785632471,
       "publication_status": "exact",
       "published_at": 1745280000,
@@ -12887,6 +14722,16 @@
       "source": "openai",
       "title": "Introducing GPT-4.1 in the API",
       "url": "https://openai.com/index/gpt-4-1"
+    },
+    {
+      "captured_at": 1789599234,
+      "publication_status": "exact",
+      "published_at": 1744354800,
+      "sort_at": 1744354800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Critical Trade Theory",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/04/11/critical-trade-theory.html"
     },
     {
       "captured_at": 1786261598,
@@ -13170,6 +15015,16 @@
       "url": "https://openai.com/index/march-funding-updates"
     },
     {
+      "captured_at": 1789151166,
+      "publication_status": "exact",
+      "published_at": 1743033600,
+      "sort_at": 1743033600,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Anthropic Economic Index: Insights from Claude 3.7 Sonnet",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-insights-from-claude-sonnet-3-7"
+    },
+    {
       "captured_at": 1785971991,
       "publication_status": "exact",
       "published_at": 1743033600,
@@ -13248,6 +15103,16 @@
       "source": "andrej-karpathy-bear",
       "title": "Finding the Best Sleep Tracker",
       "url": "https://karpathy.bearblog.dev/finding-the-best-sleep-tracker"
+    },
+    {
+      "captured_at": 1789599281,
+      "publication_status": "exact",
+      "published_at": 1742799600,
+      "sort_at": 1742799600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Tragic Case of Intel AI",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/03/24/tragic-intel.html"
     },
     {
       "captured_at": 1785721231,
@@ -13360,6 +15225,16 @@
       "url": "https://karpathy.bearblog.dev/digital-hygiene"
     },
     {
+      "captured_at": 1789599373,
+      "publication_status": "exact",
+      "published_at": 1742108400,
+      "sort_at": 1742108400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Resentment",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/03/16/resentment.html"
+    },
+    {
       "captured_at": 1785643237,
       "publication_status": "exact",
       "published_at": 1741910400,
@@ -13440,6 +15315,16 @@
       "url": "https://openai.com/index/chain-of-thought-monitoring"
     },
     {
+      "captured_at": 1789599420,
+      "publication_status": "exact",
+      "published_at": 1741420800,
+      "sort_at": 1741420800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "AMD YOLO",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/03/08/AMD-YOLO.html"
+    },
+    {
       "captured_at": 1785626627,
       "publication_status": "exact",
       "published_at": 1741334400,
@@ -13508,6 +15393,16 @@
       "source": "openai",
       "title": "LaunchDarkly's approach to AI-powered product management",
       "url": "https://openai.com/index/launchdarkly-claire-vo"
+    },
+    {
+      "captured_at": 1789599467,
+      "publication_status": "exact",
+      "published_at": 1740988800,
+      "sort_at": 1740988800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Demoralization is just Beginning",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/03/03/demoralization-is-just-beginning.html"
     },
     {
       "captured_at": 1785974131,
@@ -13611,6 +15506,16 @@
       "url": "https://openai.com/index/estonia-schools-and-chatgpt"
     },
     {
+      "captured_at": 1789599514,
+      "publication_status": "exact",
+      "published_at": 1740384000,
+      "sort_at": 1740384000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Money is the Map",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/02/24/money-is-the-map.html"
+    },
+    {
       "captured_at": 1786071404,
       "publication_status": "exact",
       "published_at": 1740355200,
@@ -13639,6 +15544,16 @@
       "source": "dwarkesh",
       "title": "Satya Nadella — Microsoft’s AGI plan & quantum breakthrough",
       "url": "https://www.dwarkesh.com/p/satya-nadella"
+    },
+    {
+      "captured_at": 1789599561,
+      "publication_status": "exact",
+      "published_at": 1739952000,
+      "sort_at": 1739952000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Nobody Profits",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/02/19/nobody-will-profit.html"
     },
     {
       "captured_at": 1785858084,
@@ -13739,6 +15654,16 @@
       "source": "anthropic",
       "title": "Statement from Dario Amodei on the Paris AI Action Summit",
       "url": "https://www.anthropic.com/news/paris-ai-summit"
+    },
+    {
+      "captured_at": 1789151402,
+      "publication_status": "exact",
+      "published_at": 1739145600,
+      "sort_at": 1739145600,
+      "sort_basis": "published",
+      "source": "anthropic",
+      "title": "Introducing the Anthropic Economic Index",
+      "url": "https://www.anthropic.com/research/the-anthropic-economic-index"
     },
     {
       "captured_at": 1785717993,
@@ -14029,6 +15954,16 @@
       "source": "openai",
       "title": "Introducing Operator",
       "url": "https://openai.com/index/introducing-operator"
+    },
+    {
+      "captured_at": 1789599607,
+      "publication_status": "exact",
+      "published_at": 1737532800,
+      "sort_at": 1737532800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Death of the Visceral",
+      "url": "https://geohot.github.io/blog/jekyll/update/2025/01/22/death-of-the-visceral.html"
     },
     {
       "captured_at": 1785830017,
@@ -14353,6 +16288,16 @@
       "url": "https://openai.com/index/sora-lyndon-barrois"
     },
     {
+      "captured_at": 1789599654,
+      "publication_status": "exact",
+      "published_at": 1733558400,
+      "sort_at": 1733558400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Elon Swing Voter",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/12/07/elon-swing-voter.html"
+    },
+    {
       "captured_at": 1785818428,
       "publication_status": "exact",
       "published_at": 1733356800,
@@ -14391,6 +16336,26 @@
       "source": "claude",
       "title": "Claude 3.5 Haiku on AWS Trainium2 and model distillation in Amazon Bedrock",
       "url": "https://claude.com/blog/trainium2-and-distillation"
+    },
+    {
+      "captured_at": 1789599701,
+      "publication_status": "exact",
+      "published_at": 1733040000,
+      "sort_at": 1733040000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Soul",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/12/01/the-soul.html"
+    },
+    {
+      "captured_at": 1789599747,
+      "publication_status": "exact",
+      "published_at": 1732867200,
+      "sort_at": 1732867200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "nuke/acc",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/29/nuke-acc.html"
     },
     {
       "captured_at": 1786203017,
@@ -14433,6 +16398,16 @@
       "url": "https://openai.com/index/advancing-red-teaming-with-people-and-ai"
     },
     {
+      "captured_at": 1789599794,
+      "publication_status": "exact",
+      "published_at": 1732089600,
+      "sort_at": 1732089600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Place for Me",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/20/a-place-for-me.html"
+    },
+    {
       "captured_at": 1785384368,
       "publication_status": "exact",
       "published_at": 1731999600,
@@ -14441,6 +16416,16 @@
       "source": "openai",
       "title": "Grab builds smarter maps for Southeast Asia with vision fine-tuning",
       "url": "https://openai.com/index/grab"
+    },
+    {
+      "captured_at": 1789599841,
+      "publication_status": "exact",
+      "published_at": 1731830400,
+      "sort_at": 1731830400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A One Way Bridge",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/17/a-one-way-bridge.html"
     },
     {
       "captured_at": 1785698454,
@@ -14463,6 +16448,16 @@
       "url": "https://www.dwarkesh.com/p/gwern-branwen"
     },
     {
+      "captured_at": 1789599887,
+      "publication_status": "exact",
+      "published_at": 1731484800,
+      "sort_at": 1731484800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Collective Marshmallow Test",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/13/collective-marshmallow-test.html"
+    },
+    {
       "captured_at": 1785622597,
       "publication_status": "exact",
       "published_at": 1731456000,
@@ -14471,6 +16466,36 @@
       "source": "openai",
       "title": "Rox goes “all in” on OpenAI",
       "url": "https://openai.com/index/rox"
+    },
+    {
+      "captured_at": 1789599979,
+      "publication_status": "exact",
+      "published_at": 1730880000,
+      "sort_at": 1730880000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "…and now we see what is possible",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/06/what-is-possible.html"
+    },
+    {
+      "captured_at": 1789600070,
+      "publication_status": "exact",
+      "published_at": 1730707200,
+      "sort_at": 1730707200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Influence Agents",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/04/influence-agents.html"
+    },
+    {
+      "captured_at": 1789593829,
+      "publication_status": "exact",
+      "published_at": 1730617200,
+      "sort_at": 1730617200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "High Trust Society",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/11/03/high-trust-society.html"
     },
     {
       "captured_at": 1785622921,
@@ -14531,6 +16556,16 @@
       "source": "semianalysis",
       "title": "Fab Whack-A-Mole: Chinese Companies are Evading U.S. Sanctions",
       "url": "https://newsletter.semianalysis.com/p/fab-whack-a-mole-chinese-companies"
+    },
+    {
+      "captured_at": 1789600117,
+      "publication_status": "exact",
+      "published_at": 1730098800,
+      "sort_at": 1730098800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "America’s Future",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/10/28/americas-future.html"
     },
     {
       "captured_at": 1786203414,
@@ -15227,6 +17262,16 @@
       "url": "https://openai.com/index/introducing-swe-bench-verified"
     },
     {
+      "captured_at": 1789600164,
+      "publication_status": "exact",
+      "published_at": 1723446000,
+      "sort_at": 1723446000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Dangerous Misinformation",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/08/12/dangerous-misinformation.html"
+    },
+    {
       "captured_at": 1786101950,
       "publication_status": "exact",
       "published_at": 1723075200,
@@ -15285,6 +17330,16 @@
       "source": "semianalysis",
       "title": "Nvidia's Blackwell Reworked - Shipment Delays & GB200A Reworked Platforms",
       "url": "https://newsletter.semianalysis.com/p/nvidias-blackwell-reworked-shipment"
+    },
+    {
+      "captured_at": 1789600210,
+      "publication_status": "exact",
+      "published_at": 1722582000,
+      "sort_at": 1722582000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Online Dating",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/08/02/online-dating.html"
     },
     {
       "captured_at": 1786072132,
@@ -16390,6 +18445,16 @@
       "url": "https://www.dwarkesh.com/p/sholto-douglas-trenton-bricken"
     },
     {
+      "captured_at": 1789600257,
+      "publication_status": "exact",
+      "published_at": 1711522800,
+      "sort_at": 1711522800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Where the Bitter Lesson ends",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/03/27/where-the-bitter-lesson-ends.html"
+    },
+    {
       "captured_at": 1786272058,
       "publication_status": "exact",
       "published_at": 1711365115,
@@ -16683,6 +18748,16 @@
       "url": "https://www.dwarkesh.com/p/demis-hassabis"
     },
     {
+      "captured_at": 1789600349,
+      "publication_status": "exact",
+      "published_at": 1708934400,
+      "sort_at": 1708934400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The World’s Computer",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/02/26/the-worlds-computer.html"
+    },
+    {
       "captured_at": 1786209976,
       "publication_status": "exact",
       "published_at": 1708529158,
@@ -16781,6 +18856,16 @@
       "source": "openai",
       "title": "Building an early warning system for LLM-aided biological threat creation",
       "url": "https://openai.com/index/building-an-early-warning-system-for-llm-aided-biological-threat-creation"
+    },
+    {
+      "captured_at": 1789600396,
+      "publication_status": "exact",
+      "published_at": 1706601600,
+      "sort_at": 1706601600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Cruise",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/01/30/cruise.html"
     },
     {
       "captured_at": 1786210424,
@@ -16963,6 +19048,16 @@
       "url": "https://openai.com/index/openai-and-journalism"
     },
     {
+      "captured_at": 1789600488,
+      "publication_status": "exact",
+      "published_at": 1704614400,
+      "sort_at": 1704614400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Tech Heroin",
+      "url": "https://geohot.github.io/blog/jekyll/update/2024/01/07/heroin.html"
+    },
+    {
       "captured_at": 1786274215,
       "publication_status": "exact",
       "published_at": 1704315337,
@@ -17123,6 +19218,16 @@
       "url": "https://newsletter.semianalysis.com/p/microsoft-swallows-openais-core-team"
     },
     {
+      "captured_at": 1789600535,
+      "publication_status": "exact",
+      "published_at": 1700294400,
+      "sort_at": 1700294400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Imitation Learning",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/11/18/imitation-learning.html"
+    },
+    {
       "captured_at": 1785720711,
       "publication_status": "exact",
       "published_at": 1700179200,
@@ -17191,6 +19296,16 @@
       "source": "anthropic",
       "title": "Thoughts on the US Executive Order, G7 Code of Conduct, and Bletchley Park Summit",
       "url": "https://www.anthropic.com/news/policy-recap-q4-2023"
+    },
+    {
+      "captured_at": 1789600585,
+      "publication_status": "exact",
+      "published_at": 1699081200,
+      "sort_at": 1699081200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Disrupt the Government",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/11/04/disrupt-the-government.html"
     },
     {
       "captured_at": 1786275782,
@@ -17301,6 +19416,16 @@
       "source": "dwarkesh",
       "title": "Sarah C. M. Paine - How Xi & Putin Think: Maritime vs Continental Powers & The Wars of Asia",
       "url": "https://www.dwarkesh.com/p/sarah-paine"
+    },
+    {
+      "captured_at": 1789600632,
+      "publication_status": "exact",
+      "published_at": 1696316400,
+      "sort_at": 1696316400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Three Class Society",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/10/03/three-class-society.html"
     },
     {
       "captured_at": 1785867628,
@@ -17534,6 +19659,16 @@
       "url": "https://newsletter.semianalysis.com/p/nvidias-ramp-volume-asp-cloud-pricing"
     },
     {
+      "captured_at": 1789600679,
+      "publication_status": "exact",
+      "published_at": 1692169200,
+      "sort_at": 1692169200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "p(doom)",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/08/16/p-doom.html"
+    },
+    {
       "captured_at": 1785719234,
       "publication_status": "exact",
       "published_at": 1692144000,
@@ -17544,6 +19679,16 @@
       "url": "https://openai.com/index/openai-acquires-global-illumination"
     },
     {
+      "captured_at": 1789600726,
+      "publication_status": "exact",
+      "published_at": 1691650800,
+      "sort_at": 1691650800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "There is no hard takeoff",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/08/10/there-is-no-hard-takeoff.html"
+    },
+    {
       "captured_at": 1786212464,
       "publication_status": "exact",
       "published_at": 1691502007,
@@ -17552,6 +19697,16 @@
       "source": "dwarkesh",
       "title": "Dario Amodei (Anthropic CEO) - Scaling, Alignment, & AI Progress",
       "url": "https://www.dwarkesh.com/p/dario-amodei"
+    },
+    {
+      "captured_at": 1789600819,
+      "publication_status": "exact",
+      "published_at": 1691478000,
+      "sort_at": 1691478000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Really Big Computer",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/08/08/a-really-big-computer.html"
     },
     {
       "captured_at": 1786278583,
@@ -17614,6 +19769,16 @@
       "url": "https://www.anthropic.com/news/frontier-model-security"
     },
     {
+      "captured_at": 1789600866,
+      "publication_status": "exact",
+      "published_at": 1690095600,
+      "sort_at": 1690095600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "choose your own adventure",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/07/23/choose-your-own-adventure.html"
+    },
+    {
       "captured_at": 1785876038,
       "publication_status": "exact",
       "published_at": 1689897600,
@@ -17622,6 +19787,16 @@
       "source": "openai",
       "title": "Moving AI governance forward",
       "url": "https://openai.com/index/moving-ai-governance-forward"
+    },
+    {
+      "captured_at": 1789600913,
+      "publication_status": "exact",
+      "published_at": 1689836400,
+      "sort_at": 1689836400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A disgusting playbook",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/07/20/a-disgusting-playbook-copy.html"
     },
     {
       "captured_at": 1785718524,
@@ -17805,6 +19980,16 @@
       "url": "https://newsletter.semianalysis.com/p/amd-mi300-taming-the-hype-ai-performance"
     },
     {
+      "captured_at": 1789601004,
+      "publication_status": "exact",
+      "published_at": 1686121200,
+      "sort_at": 1686121200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A dive into the AMD driver workflow",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/06/07/a-dive-into-amds-drivers.html"
+    },
+    {
       "captured_at": 1786282753,
       "publication_status": "exact",
       "published_at": 1685960580,
@@ -17843,6 +20028,16 @@
       "source": "semianalysis",
       "title": "Nvidia’s InfiniBand Problem - Spectrum-X AI Fabric, Tomahawk-5, Jericho-3AI, Quantum-2",
       "url": "https://newsletter.semianalysis.com/p/nvidias-infiniband-problem-qmx-ai"
+    },
+    {
+      "captured_at": 1789601051,
+      "publication_status": "exact",
+      "published_at": 1684911600,
+      "sort_at": 1684911600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "the tiny corp raised $5.1M",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/05/24/the-tiny-corp-raised-5M.html"
     },
     {
       "captured_at": 1785976251,
@@ -17995,6 +20190,16 @@
       "url": "https://newsletter.semianalysis.com/p/intel-emerald-rapids-backtracks-on"
     },
     {
+      "captured_at": 1789601098,
+      "publication_status": "exact",
+      "published_at": 1682492400,
+      "sort_at": 1682492400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Person of Compute",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/04/26/a-person-of-compute.html"
+    },
+    {
       "captured_at": 1786103167,
       "publication_status": "exact",
       "published_at": 1682467200,
@@ -18033,6 +20238,16 @@
       "source": "semianalysis",
       "title": "Google AI Infrastructure Supremacy: Systems Matter More Than Microarchitecture",
       "url": "https://newsletter.semianalysis.com/p/google-ai-infrastructure-supremacy"
+    },
+    {
+      "captured_at": 1789601146,
+      "publication_status": "exact",
+      "published_at": 1681196400,
+      "sort_at": 1681196400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Wireheading City",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/04/11/wireheading-city.html"
     },
     {
       "captured_at": 1785879957,
@@ -18265,6 +20480,16 @@
       "url": "https://newsletter.semianalysis.com/p/peeling-the-onions-layers-large-language"
     },
     {
+      "captured_at": 1789601192,
+      "publication_status": "exact",
+      "published_at": 1676275200,
+      "sort_at": 1676275200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Wokeism",
+      "url": "https://geohot.github.io/blog/jekyll/update/2023/02/13/wokeism.html"
+    },
+    {
       "captured_at": 1786287140,
       "publication_status": "exact",
       "published_at": 1675950618,
@@ -18476,6 +20701,16 @@
       "published_precision": "month"
     },
     {
+      "captured_at": 1789601239,
+      "publication_status": "exact",
+      "published_at": 1672473600,
+      "sort_at": 1672473600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "e/acc",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/12/31/eacc.html"
+    },
+    {
       "captured_at": 1786289601,
       "publication_status": "exact",
       "published_at": 1672283238,
@@ -18484,6 +20719,16 @@
       "source": "semianalysis",
       "title": "India’s Semiconductor Scam: Indian Mining Tycoon and Pro-CCP Assembly Giant Swindle India’s Semi Subsidy Program",
       "url": "https://newsletter.semianalysis.com/p/indias-semiconductor-scam-indian"
+    },
+    {
+      "captured_at": 1789601286,
+      "publication_status": "exact",
+      "published_at": 1672128000,
+      "sort_at": 1672128000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Avatar 2 was Bad",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/12/27/avatar-2-was-bad.html"
     },
     {
       "captured_at": 1786289774,
@@ -18758,6 +21003,16 @@
       "published_precision": "month"
     },
     {
+      "captured_at": 1789601333,
+      "publication_status": "exact",
+      "published_at": 1667026800,
+      "sort_at": 1667026800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Hero’s Journey",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/10/29/the-heroes-journey.html"
+    },
+    {
       "captured_at": 1786292960,
       "publication_status": "exact",
       "published_at": 1666928552,
@@ -18838,6 +21093,16 @@
       "url": "https://newsletter.semianalysis.com/p/2023-datacenter-outlook-amd-and-intel"
     },
     {
+      "captured_at": 1789601424,
+      "publication_status": "exact",
+      "published_at": 1665644400,
+      "sort_at": 1665644400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Hope",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/10/13/a-hope.html"
+    },
+    {
       "captured_at": 1786293989,
       "publication_status": "exact",
       "published_at": 1665348463,
@@ -18876,6 +21141,16 @@
       "source": "semianalysis",
       "title": "Semiconductor Fab Buildout Delays – 2023 to 2025 Wafer Fabrication Equipment Outlook",
       "url": "https://newsletter.semianalysis.com/p/semiconductor-fab-buildout-delays"
+    },
+    {
+      "captured_at": 1789601472,
+      "publication_status": "exact",
+      "published_at": 1664694000,
+      "sort_at": 1664694000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Happy Birthday to Me",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/10/02/happy-brithday-to-me.html"
     },
     {
       "captured_at": 1786356459,
@@ -18977,6 +21252,16 @@
       "source": "semianalysis",
       "title": "How Onto Innovation Is Gaining Market Share From KLA - $ONTO $KLA",
       "url": "https://newsletter.semianalysis.com/p/how-onto-innovation-is-gaining-market"
+    },
+    {
+      "captured_at": 1789601564,
+      "publication_status": "exact",
+      "published_at": 1662188400,
+      "sort_at": 1662188400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "On Device Learning",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/09/03/on-device-learning.html"
     },
     {
       "captured_at": 1786356524,
@@ -19520,6 +21805,16 @@
       "url": "https://www.dwarkesh.com/p/jimmy-soni"
     },
     {
+      "captured_at": 1789601611,
+      "publication_status": "exact",
+      "published_at": 1650092400,
+      "sort_at": 1650092400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Vampire Attack Twitter",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/04/16/vampire-attack-twitter.html"
+    },
+    {
       "captured_at": 1786304525,
       "publication_status": "exact",
       "published_at": 1650072388,
@@ -19631,6 +21926,16 @@
       "url": "https://newsletter.semianalysis.com/p/globalfoundries-fotonix-the-leading"
     },
     {
+      "captured_at": 1789601658,
+      "publication_status": "exact",
+      "published_at": 1646467200,
+      "sort_at": 1646467200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Beauty after COVID",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/03/05/beauty-after-covid.html"
+    },
+    {
       "captured_at": 1786305897,
       "publication_status": "exact",
       "published_at": 1646301640,
@@ -19721,6 +22026,16 @@
       "url": "https://newsletter.semianalysis.com/p/intel-is-throwing-the-kitchen-sink"
     },
     {
+      "captured_at": 1789601749,
+      "publication_status": "exact",
+      "published_at": 1645084800,
+      "sort_at": 1645084800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Brain FLOPS",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/02/17/brain-flops.html"
+    },
+    {
       "captured_at": 1786307070,
       "publication_status": "exact",
       "published_at": 1644492691,
@@ -19729,6 +22044,26 @@
       "source": "semianalysis",
       "title": "Semiconductor Roundup – 2/10/2022",
       "url": "https://newsletter.semianalysis.com/p/semiconductor-roundup-2102022"
+    },
+    {
+      "captured_at": 1789601795,
+      "publication_status": "exact",
+      "published_at": 1644393600,
+      "sort_at": 1644393600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Problem of the State",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/02/09/the-problem-of-the-state.html"
+    },
+    {
+      "captured_at": 1789601843,
+      "publication_status": "exact",
+      "published_at": 1643788800,
+      "sort_at": 1643788800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Consumer Class Divide",
+      "url": "https://geohot.github.io/blog/jekyll/update/2022/02/02/consumer-class-divide.html"
     },
     {
       "captured_at": 1786307308,
@@ -19882,6 +22217,16 @@
       "url": "https://www.anthropic.com/research/a-mathematical-framework-for-transformer-circuits"
     },
     {
+      "captured_at": 1789601890,
+      "publication_status": "exact",
+      "published_at": 1639814400,
+      "sort_at": 1639814400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The Fourth Estate",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/12/18/the-fourth-estate.html"
+    },
+    {
       "captured_at": 1786309578,
       "publication_status": "exact",
       "published_at": 1639593090,
@@ -19890,6 +22235,16 @@
       "source": "semianalysis",
       "title": "Advanced Packaging Part 1 – Pad Limited Designs, Breakdown Of Economic Semiconductor Scaling, Heterogeneous Compute, and Chiplets",
       "url": "https://newsletter.semianalysis.com/p/advanced-packaging-part-1-pad-limited"
+    },
+    {
+      "captured_at": 1789601936,
+      "publication_status": "exact",
+      "published_at": 1639296000,
+      "sort_at": 1639296000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Correction on my AI chip thoughts",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/12/12/a-correction-on-ai-chips.html"
     },
     {
       "captured_at": 1786309814,
@@ -19942,6 +22297,16 @@
       "url": "https://openai.com/index/api-no-waitlist"
     },
     {
+      "captured_at": 1789601983,
+      "publication_status": "exact",
+      "published_at": 1636444800,
+      "sort_at": 1636444800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "On The University of Austin",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/11/09/on-the-university-of-austin.html"
+    },
+    {
       "captured_at": 1786356718,
       "publication_status": "partial",
       "published_at": 1635724800,
@@ -19951,6 +22316,26 @@
       "title": "Is There Such a Thing as Good Taste?",
       "url": "https://paulgraham.com/goodtaste.html",
       "published_precision": "month"
+    },
+    {
+      "captured_at": 1789602030,
+      "publication_status": "exact",
+      "published_at": 1635490800,
+      "sort_at": 1635490800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "An Architecture for Life",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/10/29/an-architecture-for-life.html"
+    },
+    {
+      "captured_at": 1789602087,
+      "publication_status": "exact",
+      "published_at": 1635058800,
+      "sort_at": 1635058800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "To Fight against Entropy",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/10/24/to-fight-against-entropy.html"
     },
     {
       "captured_at": 1786310283,
@@ -20074,6 +22459,16 @@
       "url": "https://newsletter.semianalysis.com/p/the-impending-chinese-nand-apocalypse-e01"
     },
     {
+      "captured_at": 1789602134,
+      "publication_status": "exact",
+      "published_at": 1632812400,
+      "sort_at": 1632812400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Class Warfare",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/09/28/class-warfare.html"
+    },
+    {
       "captured_at": 1786312597,
       "publication_status": "exact",
       "published_at": 1632776540,
@@ -20082,6 +22477,16 @@
       "source": "semianalysis",
       "title": "Kulicke & Soffa Industries, $KLIC, Continued Outperformance Of Wire Bonders And Emerging Supplier in Mini-LED, Micro-LED, And Battery Manufacturing",
       "url": "https://newsletter.semianalysis.com/p/kulicke-and-soffa-industries-klic-771"
+    },
+    {
+      "captured_at": 1789602226,
+      "publication_status": "exact",
+      "published_at": 1632380400,
+      "sort_at": 1632380400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The New Regime",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/09/23/the-new-regime.html"
     },
     {
       "captured_at": 1786312830,
@@ -20204,6 +22609,16 @@
       "url": "https://newsletter.semianalysis.com/p/tesla-dojo-unique-packaging-and-chip"
     },
     {
+      "captured_at": 1789602272,
+      "publication_status": "exact",
+      "published_at": 1628578800,
+      "sort_at": 1628578800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Coliving Spaces",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/08/10/coliving-spaces.html"
+    },
+    {
       "captured_at": 1786237236,
       "publication_status": "exact",
       "published_at": 1628521686,
@@ -20212,6 +22627,16 @@
       "source": "dwarkesh",
       "title": "David Friedman - Dating Markets, Legal Systems, Bitcoin, and Automation",
       "url": "https://www.dwarkesh.com/p/david-friedman"
+    },
+    {
+      "captured_at": 1789602319,
+      "publication_status": "exact",
+      "published_at": 1628233200,
+      "sort_at": 1628233200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Consumption",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/08/06/consumption.html"
     },
     {
       "captured_at": 1786315155,
@@ -20285,6 +22710,16 @@
       "url": "https://newsletter.semianalysis.com/p/mediatek-officially-enters-the-flagship"
     },
     {
+      "captured_at": 1789602366,
+      "publication_status": "exact",
+      "published_at": 1625986800,
+      "sort_at": 1625986800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Individual Sovereignty",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/07/11/individual-sovereignty.html"
+    },
+    {
       "captured_at": 1786316558,
       "publication_status": "exact",
       "published_at": 1625574600,
@@ -20293,6 +22728,16 @@
       "source": "semianalysis",
       "title": "Nvidia’s 2021 Bubble, Eerily Similar To Other Bubbles That Came Before",
       "url": "https://newsletter.semianalysis.com/p/nvidias-2021-bubble-eerily-similar"
+    },
+    {
+      "captured_at": 1789602413,
+      "publication_status": "exact",
+      "published_at": 1625382000,
+      "sort_at": 1625382000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Baskets",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/07/04/baskets.html"
     },
     {
       "captured_at": 1786316790,
@@ -20365,6 +22810,16 @@
       "url": "https://newsletter.semianalysis.com/p/morgan-stanley-just-reduced-tsmcs"
     },
     {
+      "captured_at": 1789602460,
+      "publication_status": "exact",
+      "published_at": 1624431600,
+      "sort_at": 1624431600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Pieces of Shit",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/06/23/pieces-of-shit.html"
+    },
+    {
       "captured_at": 1786318305,
       "publication_status": "exact",
       "published_at": 1624383037,
@@ -20405,6 +22860,16 @@
       "url": "https://newsletter.semianalysis.com/p/qualcomm-hits-a-homerun-ai-100-powerful"
     },
     {
+      "captured_at": 1789602507,
+      "publication_status": "exact",
+      "published_at": 1623567600,
+      "sort_at": 1623567600,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Breakdown of AI Chip Companies",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/06/13/a-breakdown-of-ai-chip-companies.html"
+    },
+    {
       "captured_at": 1786319008,
       "publication_status": "exact",
       "published_at": 1623418441,
@@ -20413,6 +22878,16 @@
       "source": "semianalysis",
       "title": "Intel’s Trojan Horse into the Foundry Business | Co-packaged Silicon Photonics is Intel’s Path Forward for IDM 2.0",
       "url": "https://newsletter.semianalysis.com/p/intels-trojan-horse-into-the-foundry"
+    },
+    {
+      "captured_at": 1789602614,
+      "publication_status": "exact",
+      "published_at": 1623308400,
+      "sort_at": 1623308400,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Circulation of the Elites",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/06/10/a-circulation-of-the-elites.html"
     },
     {
       "captured_at": 1786237453,
@@ -20497,6 +22972,16 @@
       "url": "https://newsletter.semianalysis.com/p/semi-supply-chain-cutting-expectations"
     },
     {
+      "captured_at": 1789602660,
+      "publication_status": "exact",
+      "published_at": 1620370800,
+      "sort_at": 1620370800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Idiots are going to kill me",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/05/07/idiots-are-going-to-kill-me.html"
+    },
+    {
       "captured_at": 1785714437,
       "publication_status": "exact",
       "published_at": 1620000000,
@@ -20548,6 +23033,26 @@
       "source": "semianalysis",
       "title": "Trailing Edge is Going Gangbusters ($KLIC)",
       "url": "https://newsletter.semianalysis.com/p/trailing-edge-is-going-gangbusters"
+    },
+    {
+      "captured_at": 1789602707,
+      "publication_status": "exact",
+      "published_at": 1619334000,
+      "sort_at": 1619334000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Machine Ecology",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/04/25/a-machine-ecology.html"
+    },
+    {
+      "captured_at": 1789602754,
+      "publication_status": "exact",
+      "published_at": 1618902000,
+      "sort_at": 1618902000,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Sell Outs",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/04/20/sell-outs.html"
     },
     {
       "captured_at": 1786165528,
@@ -20634,6 +23139,16 @@
       "published_precision": "month"
     },
     {
+      "captured_at": 1789602845,
+      "publication_status": "exact",
+      "published_at": 1614499200,
+      "sort_at": 1614499200,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "The AI Control Problem",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/02/28/the-ai-control-problem.html"
+    },
+    {
       "captured_at": 1785844859,
       "publication_status": "exact",
       "published_at": 1612396800,
@@ -20683,6 +23198,16 @@
       "source": "slate-star-codex",
       "title": "Introducing Astral Codex Ten",
       "url": "https://slatestarcodex.com/2021/01/21/introducing-astral-codex-ten"
+    },
+    {
+      "captured_at": 1789602892,
+      "publication_status": "exact",
+      "published_at": 1610956800,
+      "sort_at": 1610956800,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "Technology without Industry",
+      "url": "https://geohot.github.io/blog/jekyll/update/2021/01/18/technology-without-industry.html"
     },
     {
       "captured_at": 1785716234,
@@ -20978,6 +23503,26 @@
       "source": "semianalysis",
       "title": "Jensen Huang’s Vision For Data Center Dominance Will Destroy The Arm Ecosystem",
       "url": "https://newsletter.semianalysis.com/p/jensen-huangs-vision-for-data-center"
+    },
+    {
+      "captured_at": 1789602984,
+      "publication_status": "exact",
+      "published_at": 1597938584,
+      "sort_at": 1597938584,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "A Silicon Person",
+      "url": "https://geohot.github.io/blog/jekyll/update/2020/08/20/a-silicon-person.html"
+    },
+    {
+      "captured_at": 1789593921,
+      "publication_status": "exact",
+      "published_at": 1596815384,
+      "sort_at": 1596815384,
+      "sort_basis": "published",
+      "source": "geohot",
+      "title": "On Money Creation",
+      "url": "https://geohot.github.io/blog/jekyll/update/2020/08/07/on-money-creation.html"
     },
     {
       "captured_at": 1786357820,
