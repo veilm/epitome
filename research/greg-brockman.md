@@ -38,4 +38,28 @@ images; its 144 requests stayed on `127.0.0.1` with no live-origin fallback.
 
 The full deduplicated 20-route capture is therefore approved to proceed.
 
+## Full capture result
+
+The full run at `/mnt2/capsule/epitome/greg-brockman/crawls/1789605847-all-20`
+captured the 13 routes not already covered by the pilot. It completed 13/13
+with `finish.failures=0`; every new manifest is complete and tab-closed. The
+new-route network ledger contains 521 requests, 463 response bodies, and two
+response-level body errors: an unavailable CloudFront PDF referenced by *The
+OpenAI Mission* (DNS failure) and a 301/response-body capture record on
+`/define-cto-openai`. These are optional reference/redirect records; the
+article pages themselves completed normally. The observed statuses were 476
+HTTP 200, 43 HTTP 204, one HTTP 301, and one unresolved optional reference.
+
+The new routes discovered 282 asset candidates, attempted 68, completed 67,
+and recorded one failed optional CloudFront PDF asset; there were zero
+prohibited-host exclusions and zero interactive-media activations. Primary and
+all-rendered-image audits both found zero missing images across the 13 new
+pages. The combined 20-route local replay covered structural, early, middle,
+reference-heavy, image-bearing, and late routes; all 128 replay requests stayed
+on `127.0.0.1` with no live-origin fallback.
+
+The reviewed 20-route public archive is complete. Future refreshes should
+rediscover both rendered listing pages and capture only newly reviewed post
+identities.
+
 Observed inventory date: 2026-09-16.
