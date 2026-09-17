@@ -30,6 +30,14 @@
       "name": "George Hotz"
     },
     {
+      "id": "greg-brockman",
+      "name": "Greg Brockman"
+    },
+    {
+      "id": "sam-altman",
+      "name": "Sam Altman"
+    },
+    {
       "id": "andrej-karpathy-site",
       "name": "Karpathy.ai",
       "logo_url": "https://karpathy.ai/assets/me_new.jpg"
@@ -91,6 +99,166 @@
     }
   ],
   "pages": [
+    {
+      "captured_at": 1789606521,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606521,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "The Stellar object model • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/the-stellar-domain-model"
+    },
+    {
+      "captured_at": 1789606466,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606466,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "Setting up federated addresses with Stellar • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/setting-up-federated-addresses-with-stellar"
+    },
+    {
+      "captured_at": 1789606410,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606410,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "What to build on Stellar • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/what-to-build-on-stellar"
+    },
+    {
+      "captured_at": 1789606354,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606354,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "A Twitter bot which issues its own currency • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/a-twitter-bot-which-issues-its-own-currency"
+    },
+    {
+      "captured_at": 1789606298,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606298,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "#define CTO • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/figuring-out-the-cto-role-at-stripe"
+    },
+    {
+      "captured_at": 1789606243,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606243,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "Leaving Stripe • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/leaving-stripe"
+    },
+    {
+      "captured_at": 1789606188,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606188,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "Recurse Center • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/recurse-center"
+    },
+    {
+      "captured_at": 1789606133,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606133,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "Stellar board • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/stellar-board"
+    },
+    {
+      "captured_at": 1789606075,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789606075,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "My path to OpenAI • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/my-path-to-openai"
+    },
+    {
+      "captured_at": 1789605960,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789605960,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "The OpenAI Mission • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/the-openai-mission"
+    },
+    {
+      "captured_at": 1789605905,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789605905,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "OpenAI Five Finals Intro • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/openai-five-finals-intro"
+    },
+    {
+      "captured_at": 1789605847,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789605847,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "How I became a machine learning practitioner • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/how-i-became-a-machine-learning-practitioner"
+    },
+    {
+      "captured_at": 1789604637,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789604637,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "System Design: Stripe Capture the Flag • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/system-design-stripe-capture-the-flag"
+    },
+    {
+      "captured_at": 1789604582,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789604582,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "OpenAI Five intro • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/openai-five-benchmark-intro"
+    },
+    {
+      "captured_at": 1789604518,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789604518,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "It's time to become an ML engineer • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/its-time-to-become-an-ml-engineer"
+    },
+    {
+      "captured_at": 1789604459,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789604459,
+      "sort_basis": "captured",
+      "source": "greg-brockman",
+      "title": "The Defender's Window • Greg Brockman",
+      "url": "https://blog.gregbrockman.com/the-defenders-window"
+    },
     {
       "captured_at": 1789593644,
       "publication_status": "unknown",

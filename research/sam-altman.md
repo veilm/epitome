@@ -35,4 +35,22 @@ archive-root deduplication. Future refreshes should review all 13 listing
 views, compare canonical post identities against the archive, and capture only
 new public posts.
 
+## Pilot validation
+
+The seven-route pilot at `/mnt2/capsule/epitome/sam-altman/crawls/1789607898-pilot`
+completed with `finish.failures=0`; all seven manifests are complete and
+tab-closed. It recorded 276 requests, 264 response bodies, and six repeated
+response-level 404s for the optional legacy
+`/assets/images/loading128.gif` path. Asset handling recorded 222 discovered
+candidates, 103 attempted, 97 completed, six failed (the same missing loading
+GIF), zero prohibited-host exclusions, and no interactive media. The exact
+prohibited-host result URL audit was empty.
+
+Primary and all-rendered-image audits found zero missing images across the
+seven pages. A local-only replay of the home, archive, Atom feed, newest,
+middle, old, and oldest routes preserved substantive text and rendered images;
+its 138 requests stayed on `127.0.0.1` with no live-origin fallback. The pilot
+therefore approves the full deduplicated 136-route public scope, while keeping
+Posthaven administrative/authentication paths excluded.
+
 Observed inventory date: 2026-09-16.
