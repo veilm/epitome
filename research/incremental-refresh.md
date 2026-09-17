@@ -21,11 +21,13 @@ response bodies, 27 response-body errors, 5,194 discovered assets, 2,781
 completed assets, two optional same-origin HTTP-403 font failures, six hydrated
 Vimeo references, and 961,489,320 downloaded bytes. Representative early,
 middle, structural/media, and late local-only replays retained substantive text
-and images with no production-origin fallback. The 37-route Claude list is
-prepared as the next sole lane at
-`/mnt2/capsule/epitome/refresh/1789621253/claude.txt`; SemiAnalysis and Paul
-Graham follow it in the reviewed plan order. Historical known-uncaptured
-backlogs remain outside this refresh.
+and images with no production-origin fallback. The 37-route Claude list is in
+`/mnt2/capsule/epitome/refresh/1789621253/claude.txt`. At capture launch,
+source-root deduplication skipped 29 URLs already complete in the Claude
+archive, leaving eight genuinely new public routes in the active lane at
+`/mnt2/capsule/epitome/claude/refresh/1789621253`; SemiAnalysis and Paul Graham
+follow it in the reviewed plan order. Historical known-uncaptured backlogs
+remain outside this refresh.
 
 ## Refresh plan 1789091412
 
