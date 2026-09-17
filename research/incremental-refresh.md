@@ -37,7 +37,9 @@ excluded asset bytes were written, and no downloader was invoked. Five
 representative local-only replays retained substantive text and all rendered
 images with no production-origin requests. The next reviewed source delta is
 the four-route SemiAnalysis list at
-`/mnt2/capsule/epitome/refresh/1789621253/semianalysis.txt`.
+`/mnt2/capsule/epitome/refresh/1789621253/semianalysis.txt`, now active at
+`/mnt2/capsule/epitome/semianalysis/refresh/1789621253` as the sole capture
+lane with the same public-only settings.
 Historical known-uncaptured backlogs remain outside this refresh.
 
 ## Refresh plan 1789091412
