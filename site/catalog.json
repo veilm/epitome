@@ -100,6 +100,1226 @@
   ],
   "pages": [
     {
+      "captured_at": 1789621696,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789621696,
+      "sort_basis": "captured",
+      "source": "openai",
+      "title": "Using ChatGPT to detect wildfires early",
+      "url": "https://openai.com/index/detecting-wildfires-early"
+    },
+    {
+      "captured_at": 1789619986,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619986,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Aliens",
+      "url": "https://blog.samaltman.com/aliens"
+    },
+    {
+      "captured_at": 1789619905,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619905,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "More interesting dinner conversations",
+      "url": "https://blog.samaltman.com/more-interesting-dinner-conversations"
+    },
+    {
+      "captured_at": 1789619818,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619818,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Software to avoid the software people",
+      "url": "https://blog.samaltman.com/software-to-avoid-the-software-people"
+    },
+    {
+      "captured_at": 1789619736,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619736,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "By endurance we conquer",
+      "url": "https://blog.samaltman.com/by-endurance-we-conquer"
+    },
+    {
+      "captured_at": 1789619653,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619653,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Startup Advice",
+      "url": "https://blog.samaltman.com/startup-advice"
+    },
+    {
+      "captured_at": 1789619571,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619571,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Upside risk",
+      "url": "https://blog.samaltman.com/upside-risk"
+    },
+    {
+      "captured_at": 1789619483,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619483,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "A founder-friendly term sheet",
+      "url": "https://blog.samaltman.com/a-founder-friendly-term-sheet"
+    },
+    {
+      "captured_at": 1789619402,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619402,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Rickover",
+      "url": "https://blog.samaltman.com/rickover"
+    },
+    {
+      "captured_at": 1789619320,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619320,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Party rounds",
+      "url": "https://blog.samaltman.com/party-rounds"
+    },
+    {
+      "captured_at": 1789619235,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619235,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Premature optimization",
+      "url": "https://blog.samaltman.com/premature-optimization"
+    },
+    {
+      "captured_at": 1789619148,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619148,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "What happened to innovation?",
+      "url": "https://blog.samaltman.com/what-happened-to-innovation-1"
+    },
+    {
+      "captured_at": 1789619066,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789619066,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Advice for ambitious 19 year olds",
+      "url": "https://blog.samaltman.com/advice-for-ambitious-19-year-olds"
+    },
+    {
+      "captured_at": 1789618984,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618984,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "How things get done",
+      "url": "https://blog.samaltman.com/how-things-get-done"
+    },
+    {
+      "captured_at": 1789618903,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618903,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Electrons and Atoms",
+      "url": "https://blog.samaltman.com/electrons-and-atoms"
+    },
+    {
+      "captured_at": 1789618821,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618821,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "What to do if a bubble is starting",
+      "url": "https://blog.samaltman.com/what-to-do-if-a-bubble-is-starting"
+    },
+    {
+      "captured_at": 1789618740,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618740,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The separation of advice and money",
+      "url": "https://blog.samaltman.com/the-separation-of-advice-and-money"
+    },
+    {
+      "captured_at": 1789618660,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618660,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Non-technical founder? Learn to hack",
+      "url": "https://blog.samaltman.com/non-technical-founder-learn-to-hack"
+    },
+    {
+      "captured_at": 1789618579,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618579,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Only Way to Grow Huge",
+      "url": "https://blog.samaltman.com/the-only-way-to-grow-huge"
+    },
+    {
+      "captured_at": 1789618498,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618498,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Employee Retention",
+      "url": "https://blog.samaltman.com/employee-retention"
+    },
+    {
+      "captured_at": 1789618416,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618416,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "H5N1",
+      "url": "https://blog.samaltman.com/h5n1"
+    },
+    {
+      "captured_at": 1789618335,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618335,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Super successful companies",
+      "url": "https://blog.samaltman.com/super-successful-companies"
+    },
+    {
+      "captured_at": 1789618254,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618254,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Value is created by doing",
+      "url": "https://blog.samaltman.com/value-is-created-by-doing"
+    },
+    {
+      "captured_at": 1789618171,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618171,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Technology and wealth inequality",
+      "url": "https://blog.samaltman.com/technology-and-wealth-inequality"
+    },
+    {
+      "captured_at": 1789618087,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618087,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Anonymity",
+      "url": "https://blog.samaltman.com/anonymity"
+    },
+    {
+      "captured_at": 1789618005,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789618005,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Engineer Crunch",
+      "url": "https://blog.samaltman.com/the-engineer-crunch"
+    },
+    {
+      "captured_at": 1789617923,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617923,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Fundraising Mistakes Founders Make",
+      "url": "https://blog.samaltman.com/fundraising-mistakes-founder-make"
+    },
+    {
+      "captured_at": 1789617842,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617842,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Founder Visa (again)",
+      "url": "https://blog.samaltman.com/the-founder-visa-again"
+    },
+    {
+      "captured_at": 1789617756,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617756,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "AI",
+      "url": "https://blog.samaltman.com/ai"
+    },
+    {
+      "captured_at": 1789617674,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617674,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "New RFS -- Breakthrough Technologies",
+      "url": "https://blog.samaltman.com/new-rfs-breakthrough-technologies"
+    },
+    {
+      "captured_at": 1789617593,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617593,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "What I've Learned From Female Founders So Far",
+      "url": "https://blog.samaltman.com/what-ive-learned-from-female-founders-so-far"
+    },
+    {
+      "captured_at": 1789617507,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617507,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Startups, Role Models, Risk, and Y Combinator",
+      "url": "https://blog.samaltman.com/startups-role-models-risk-and-y-combinator"
+    },
+    {
+      "captured_at": 1789617425,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617425,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Worst Part of YC",
+      "url": "https://blog.samaltman.com/the-worst-part-of-yc"
+    },
+    {
+      "captured_at": 1789617344,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617344,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Employee Equity",
+      "url": "https://blog.samaltman.com/employee-equity"
+    },
+    {
+      "captured_at": 1789617259,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617259,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Thoughts on Bitcoin",
+      "url": "https://blog.samaltman.com/thoughts-on-bitcoin"
+    },
+    {
+      "captured_at": 1789617178,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617178,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Bitcoin Price Pressure",
+      "url": "https://blog.samaltman.com/bitcoin-price-pressure"
+    },
+    {
+      "captured_at": 1789617093,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617093,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Founder Depression",
+      "url": "https://blog.samaltman.com/founder-depression"
+    },
+    {
+      "captured_at": 1789617012,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789617012,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Valuations",
+      "url": "https://blog.samaltman.com/valuations"
+    },
+    {
+      "captured_at": 1789616926,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616926,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "You and Your Research, by Richard Hamming",
+      "url": "https://blog.samaltman.com/you-and-your-research"
+    },
+    {
+      "captured_at": 1789616845,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616845,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Economy",
+      "url": "https://blog.samaltman.com/the-economy"
+    },
+    {
+      "captured_at": 1789616764,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616764,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Net neutrality",
+      "url": "https://blog.samaltman.com/net-neutrality"
+    },
+    {
+      "captured_at": 1789616683,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616683,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Black Swan Seed Rounds",
+      "url": "https://blog.samaltman.com/black-swan-seed-rounds"
+    },
+    {
+      "captured_at": 1789616599,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616599,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Uber vs Car Ownership",
+      "url": "https://blog.samaltman.com/uber-vs-car-ownership"
+    },
+    {
+      "captured_at": 1789616518,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616518,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Stupid Apps and Changing the World",
+      "url": "https://blog.samaltman.com/stupid-apps-and-changing-the-world"
+    },
+    {
+      "captured_at": 1789616436,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616436,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Applying to YC",
+      "url": "https://blog.samaltman.com/applying-to-yc"
+    },
+    {
+      "captured_at": 1789616354,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616354,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "reddit",
+      "url": "https://blog.samaltman.com/reddit"
+    },
+    {
+      "captured_at": 1789616273,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616273,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Why Silicon Valley Works",
+      "url": "https://blog.samaltman.com/why-silicon-valley-works"
+    },
+    {
+      "captured_at": 1789616191,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616191,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Board Members",
+      "url": "https://blog.samaltman.com/board-members"
+    },
+    {
+      "captured_at": 1789616110,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616110,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "A Question",
+      "url": "https://blog.samaltman.com/a-question"
+    },
+    {
+      "captured_at": 1789616029,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789616029,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "A new team at reddit",
+      "url": "https://blog.samaltman.com/a-new-team-at-reddit"
+    },
+    {
+      "captured_at": 1789615947,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615947,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Growth and Government",
+      "url": "https://blog.samaltman.com/growth-and-government"
+    },
+    {
+      "captured_at": 1789615866,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615866,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "FarmLogs",
+      "url": "https://blog.samaltman.com/farmlogs"
+    },
+    {
+      "captured_at": 1789615784,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615784,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Policy for Growth and Innovation",
+      "url": "https://blog.samaltman.com/policy-for-growth-and-innovation"
+    },
+    {
+      "captured_at": 1789615703,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615703,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "China",
+      "url": "https://blog.samaltman.com/china"
+    },
+    {
+      "captured_at": 1789615621,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615621,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Software Revolution",
+      "url": "https://blog.samaltman.com/the-software-revolution"
+    },
+    {
+      "captured_at": 1789615539,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615539,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "How to hire",
+      "url": "https://blog.samaltman.com/how-to-hire"
+    },
+    {
+      "captured_at": 1789615454,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615454,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Startup advice, briefly",
+      "url": "https://blog.samaltman.com/startup-advice-briefly"
+    },
+    {
+      "captured_at": 1789615373,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615373,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Machine intelligence, part 2",
+      "url": "https://blog.samaltman.com/machine-intelligence-part-2"
+    },
+    {
+      "captured_at": 1789615291,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615291,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Technology predictions",
+      "url": "https://blog.samaltman.com/technology-predictions"
+    },
+    {
+      "captured_at": 1789615210,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615210,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Bubble talk",
+      "url": "https://blog.samaltman.com/bubble-talk"
+    },
+    {
+      "captured_at": 1789615129,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615129,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The days are long but the decades are short",
+      "url": "https://blog.samaltman.com/the-days-are-long-but-the-decades-are-short"
+    },
+    {
+      "captured_at": 1789615048,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789615048,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Energy",
+      "url": "https://blog.samaltman.com/energy"
+    },
+    {
+      "captured_at": 1789614967,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614967,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Projects and Companies",
+      "url": "https://blog.samaltman.com/projects-and-companies"
+    },
+    {
+      "captured_at": 1789614794,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614794,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The U.S. Digital Service",
+      "url": "https://blog.samaltman.com/the-us-digital-service"
+    },
+    {
+      "captured_at": 1789614713,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614713,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Post-YC Slump",
+      "url": "https://blog.samaltman.com/the-post-yc-slump"
+    },
+    {
+      "captured_at": 1789614632,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614632,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Financial Misstatements",
+      "url": "https://blog.samaltman.com/financial-misstatements"
+    },
+    {
+      "captured_at": 1789614548,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614548,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Unit Economics",
+      "url": "https://blog.samaltman.com/unit-economics"
+    },
+    {
+      "captured_at": 1789614467,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614467,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Airbnb and San Francisco",
+      "url": "https://blog.samaltman.com/airbnb-and-san-francisco"
+    },
+    {
+      "captured_at": 1789614380,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614380,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Tech Bust of 2015",
+      "url": "https://blog.samaltman.com/the-tech-bust-of-2015"
+    },
+    {
+      "captured_at": 1789614298,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614298,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Before Growth",
+      "url": "https://blog.samaltman.com/before-growth"
+    },
+    {
+      "captured_at": 1789614201,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614201,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Hard Tech is Back",
+      "url": "https://blog.samaltman.com/hard-tech-is-back"
+    },
+    {
+      "captured_at": 1789614120,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614120,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Asana",
+      "url": "https://blog.samaltman.com/asana"
+    },
+    {
+      "captured_at": 1789614038,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789614038,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Cruise",
+      "url": "https://blog.samaltman.com/cruise"
+    },
+    {
+      "captured_at": 1789613954,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613954,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Housing in the Bay Area",
+      "url": "https://blog.samaltman.com/housing-in-the-bay-area"
+    },
+    {
+      "captured_at": 1789613873,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613873,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "'We're in a Bubble'",
+      "url": "https://blog.samaltman.com/were-in-a-bubble"
+    },
+    {
+      "captured_at": 1789613791,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613791,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Don't Read The Comments",
+      "url": "https://blog.samaltman.com/dont-read-the-comments"
+    },
+    {
+      "captured_at": 1789613708,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613708,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "$1 Million VotePlz Sweepstakes",
+      "url": "https://blog.samaltman.com/1-dollars-million-voteplz-sweepstakes"
+    },
+    {
+      "captured_at": 1789613627,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613627,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The 2016 Election",
+      "url": "https://blog.samaltman.com/the-2016-election"
+    },
+    {
+      "captured_at": 1789613543,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613543,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Affordable Care",
+      "url": "https://blog.samaltman.com/affordable-care"
+    },
+    {
+      "captured_at": 1789613462,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613462,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Trump",
+      "url": "https://blog.samaltman.com/trump"
+    },
+    {
+      "captured_at": 1789613380,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613380,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Time to Take a Stand",
+      "url": "https://blog.samaltman.com/time-to-take-a-stand"
+    },
+    {
+      "captured_at": 1789613298,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613298,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "2017 YC Annual Letter",
+      "url": "https://blog.samaltman.com/2017-yc-annual-letter"
+    },
+    {
+      "captured_at": 1789613217,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613217,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "What I Heard From Trump Supporters",
+      "url": "https://blog.samaltman.com/what-i-heard-from-trump-supporters"
+    },
+    {
+      "captured_at": 1789613135,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613135,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Greg",
+      "url": "https://blog.samaltman.com/greg"
+    },
+    {
+      "captured_at": 1789613054,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789613054,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Keep the Internet Open",
+      "url": "https://blog.samaltman.com/keep-the-internet-open"
+    },
+    {
+      "captured_at": 1789612973,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612973,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Tech Workers' Values",
+      "url": "https://blog.samaltman.com/tech-workers-values"
+    },
+    {
+      "captured_at": 1789612891,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612891,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Quora",
+      "url": "https://blog.samaltman.com/quora"
+    },
+    {
+      "captured_at": 1789612809,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612809,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Join the YC Software Team",
+      "url": "https://blog.samaltman.com/join-the-yc-software-team"
+    },
+    {
+      "captured_at": 1789612727,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612727,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The United Slate",
+      "url": "https://blog.samaltman.com/the-united-slate"
+    },
+    {
+      "captured_at": 1789612645,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612645,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "American Equity",
+      "url": "https://blog.samaltman.com/american-equity"
+    },
+    {
+      "captured_at": 1789612564,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612564,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Merge",
+      "url": "https://blog.samaltman.com/the-merge"
+    },
+    {
+      "captured_at": 1789612483,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612483,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "E Pur Si Muove",
+      "url": "https://blog.samaltman.com/e-pur-si-muove"
+    },
+    {
+      "captured_at": 1789612401,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612401,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "A Clarification",
+      "url": "https://blog.samaltman.com/a-clarification"
+    },
+    {
+      "captured_at": 1789612319,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612319,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Productivity",
+      "url": "https://blog.samaltman.com/productivity"
+    },
+    {
+      "captured_at": 1789612238,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612238,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "US Digital Currency",
+      "url": "https://blog.samaltman.com/us-digital-currency"
+    },
+    {
+      "captured_at": 1789612156,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612156,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Reinforcement Learning Progress",
+      "url": "https://blog.samaltman.com/reinforcement-learning-progress"
+    },
+    {
+      "captured_at": 1789612074,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789612074,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "How To Be Successful",
+      "url": "https://blog.samaltman.com/how-to-be-successful"
+    },
+    {
+      "captured_at": 1789611993,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611993,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "How To Invest In Startups",
+      "url": "https://blog.samaltman.com/how-to-invest-in-startups"
+    },
+    {
+      "captured_at": 1789611912,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611912,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Hard Startups",
+      "url": "https://blog.samaltman.com/hard-startups"
+    },
+    {
+      "captured_at": 1789611831,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611831,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Virus",
+      "url": "https://blog.samaltman.com/the-virus"
+    },
+    {
+      "captured_at": 1789611748,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611748,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Funding for COVID-19 Projects",
+      "url": "https://blog.samaltman.com/funding-for-covid-19-projects"
+    },
+    {
+      "captured_at": 1789611666,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611666,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Please Fund More Science",
+      "url": "https://blog.samaltman.com/please-fund-more-science"
+    },
+    {
+      "captured_at": 1789611585,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611585,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Idea Generation",
+      "url": "https://blog.samaltman.com/idea-generation"
+    },
+    {
+      "captured_at": 1789611504,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611504,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Project Covalence",
+      "url": "https://blog.samaltman.com/project-covalence"
+    },
+    {
+      "captured_at": 1789611422,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611422,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Researchers and Founders",
+      "url": "https://blog.samaltman.com/researchers-and-founders"
+    },
+    {
+      "captured_at": 1789611341,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611341,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "PG and Jessica",
+      "url": "https://blog.samaltman.com/pg-and-jessica"
+    },
+    {
+      "captured_at": 1789611260,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611260,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Strength of Being Misunderstood",
+      "url": "https://blog.samaltman.com/the-strength-of-being-misunderstood"
+    },
+    {
+      "captured_at": 1789611178,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611178,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Helion",
+      "url": "https://blog.samaltman.com/helion"
+    },
+    {
+      "captured_at": 1789611096,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611096,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "DALL•E 2",
+      "url": "https://blog.samaltman.com/dall-star-e-2"
+    },
+    {
+      "captured_at": 1789611012,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789611012,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Helion Needs You",
+      "url": "https://blog.samaltman.com/helion-needs-you"
+    },
+    {
+      "captured_at": 1789610930,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610930,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "What I Wish Someone Had Told Me",
+      "url": "https://blog.samaltman.com/what-i-wish-someone-had-told-me"
+    },
+    {
+      "captured_at": 1789610848,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610848,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "GPT-4o",
+      "url": "https://blog.samaltman.com/gpt-4o"
+    },
+    {
+      "captured_at": 1789610767,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610767,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Reflections",
+      "url": "https://blog.samaltman.com/reflections"
+    },
+    {
+      "captured_at": 1789610686,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610686,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Three Observations",
+      "url": "https://blog.samaltman.com/three-observations"
+    },
+    {
+      "captured_at": 1789610604,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610604,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Jakub and Szymon",
+      "url": "https://blog.samaltman.com/jakub-and-szymon"
+    },
+    {
+      "captured_at": 1789610523,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610523,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Abundant Intelligence",
+      "url": "https://blog.samaltman.com/abundant-intelligence"
+    },
+    {
+      "captured_at": 1789610442,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610442,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Sora 2",
+      "url": "https://blog.samaltman.com/sora-2"
+    },
+    {
+      "captured_at": 1789610360,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789610360,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Sora update #1",
+      "url": "https://blog.samaltman.com/sora-update-number-1"
+    },
+    {
+      "captured_at": 1789608359,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789608359,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Successful people",
+      "url": "https://blog.samaltman.com/successful-people"
+    },
+    {
+      "captured_at": 1789608278,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789608278,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "Machine intelligence, part 1",
+      "url": "https://blog.samaltman.com/machine-intelligence-part-1"
+    },
+    {
+      "captured_at": 1789608197,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789608197,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "The Gentle Singularity",
+      "url": "https://blog.samaltman.com/the-gentle-singularity"
+    },
+    {
+      "captured_at": 1789608116,
+      "publication_status": "unknown",
+      "published_at": null,
+      "sort_at": 1789608116,
+      "sort_basis": "captured",
+      "source": "sam-altman",
+      "title": "-",
+      "url": "https://blog.samaltman.com/2279512"
+    },
+    {
       "captured_at": 1789606521,
       "publication_status": "unknown",
       "published_at": null,
@@ -290,6 +1510,76 @@
       "url": "https://geohot.github.io/blog"
     },
     {
+      "captured_at": 1789628503,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Our framework for reporting model misalignment",
+      "url": "https://openai.com/index/model-misalignment-reporting-framework"
+    },
+    {
+      "captured_at": 1789628100,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Reimagining advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai"
+    },
+    {
+      "captured_at": 1789627583,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How to connect AI usage to business value",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value"
+    },
+    {
+      "captured_at": 1789627197,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Helping older adults use AI in everyday life",
+      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life"
+    },
+    {
+      "captured_at": 1789626803,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How workers are unlocking new ways of working",
+      "url": "https://openai.com/index/unlocking-new-ways-of-working"
+    },
+    {
+      "captured_at": 1789629352,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "url": "https://openai.com/index/fyxer"
+    },
+    {
+      "captured_at": 1789622404,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
+    },
+    {
       "captured_at": 1789154218,
       "publication_status": "exact",
       "published_at": 1789146292,
@@ -358,6 +1648,16 @@
       "source": "openai",
       "title": "Accelerating antibiotic discovery with ChatGPT",
       "url": "https://openai.com/index/accelerating-antibiotic-discovery"
+    },
+    {
+      "captured_at": 1789622827,
+      "publication_status": "exact",
+      "published_at": 1789084800,
+      "sort_at": 1789084800,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+      "url": "https://openai.com/index/cognition-devin-testing-with-astra"
     },
     {
       "captured_at": 1789149814,
@@ -938,6 +2238,16 @@
       "source": "semianalysis",
       "title": "OpenAI Jalapeño: Better Than Nvidia Blackwell",
       "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+    },
+    {
+      "captured_at": 1789628898,
+      "publication_status": "exact",
+      "published_at": 1787616000,
+      "sort_at": 1787616000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Disrupting malicious uses of AI",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai"
     },
     {
       "captured_at": 1789124585,
@@ -9013,6 +10323,86 @@
       "source": "openai",
       "title": "Introducing the Codex app",
       "url": "https://openai.com/index/introducing-the-codex-app"
+    },
+    {
+      "captured_at": 1789626246,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "“Cyber Special Operations”: China-linked influence planning",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-cyber-special-operations"
+    },
+    {
+      "captured_at": 1789625833,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Operation “Date Bait”: AI-enabled scam targeting loveseekers",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-date-bait"
+    },
+    {
+      "captured_at": 1789625435,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Operation “False Witness”: Fake recovery service impersonating authorities",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-false-witness"
+    },
+    {
+      "captured_at": 1789625006,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Operation “Fish Food”: Russia-origin content farm activity",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-fish-food"
+    },
+    {
+      "captured_at": 1789624559,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Operation “No Bell”: Coordinated criticism of the US and allies",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-no-bell"
+    },
+    {
+      "captured_at": 1789624128,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Operation “Trolling Stone”: Russia-linked influence activity",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-trolling-stone"
+    },
+    {
+      "captured_at": 1789623656,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Romance scams: AI-enabled romance scam workflows",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-romance-scam"
+    },
+    {
+      "captured_at": 1789623249,
+      "publication_status": "exact",
+      "published_at": 1769904000,
+      "sort_at": 1769904000,
+      "sort_basis": "published",
+      "source": "openai",
+      "title": "Silver Lining Playbook: Likely China-origin activity targeting US persons",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-silver-lining-playbook"
     },
     {
       "captured_at": 1786145329,
