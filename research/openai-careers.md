@@ -181,9 +181,30 @@ three-identity public Anthropic delta in
 The 2026-09-17 plan-only source snapshot found 18 genuinely new public
 `/index/` identities after deduplicating against the completed OpenAI archive.
 The reviewed list is `/mnt2/capsule/epitome/refresh/1789621253/openai.txt`.
-Its sole public capture lane is running at
+Its sole public capture lane completed at
 `/mnt2/capsule/epitome/openai/refresh/1789621253` with the standard bounded
 port-2103 settings: 15-second settle, 120-second page limit, 400-asset cap,
 two-second asset pacing, 90-second asset timeout, and 90-second inter-page
-delay. The next reviewed low-risk lane is the 37-route Claude list in
+delay. All 18 manifests are complete and tab-closed, `finish.failures=0`, and
+the runner exited normally. The capture retained 5,815 requests, 5,675 response
+bodies, 27 response-body errors, and 1,300,321,685 response bytes. Statuses were
+5,667×200, 54×202, 20×204, 17×302, 29×304, 18×401, 2×403, and eight pending;
+the 202/204/401 records are platform registration or telemetry, 302 records are
+challenge-script redirects, 304 records are cached UI resources, and the
+pending records are optional resource dependencies. The two failed assets were
+optional same-origin OpenAI fonts returned as HTTP 403; asset accounting was
+5,194 discovered, 2,783 attempted, 2,781 completed, 2 failed, 2,411 already
+complete, zero excluded, and 961,489,320 downloaded bytes. Six Vimeo embeds were
+discovered, hydrated, and retained as interactive-media references; no
+prohibited-host result URL was recorded.
+
+Both primary and all-rendered-image audits are clean. Representative local-only
+replays of early image/video content, a long reference-heavy article, a middle
+structural article, the malicious-use index, and the late Fyxer article retained
+substantive headings and text. After scrolling lazy content, the five replays
+rendered respectively 14/14, 10/10, 3/3, 10/10, and 3/3 images; all replay
+resource requests stayed on `127.0.0.1` and no production-origin fallback or
+exact excluded-host result occurred.
+
+The next reviewed low-risk lane is the 37-route Claude list in
 `/mnt2/capsule/epitome/refresh/1789621253/claude.txt`.

@@ -13,10 +13,16 @@ it remains unstarted. The Geohot listing check hit a bounded CDP
 the listing check must be retried before treating that source as reconciled.
 
 The first reviewed delta is the 18-route OpenAI list in
-`/mnt2/capsule/epitome/refresh/1789621253/openai.txt`, captured as the sole
-active lane at `/mnt2/capsule/epitome/openai/refresh/1789621253` with the
-standard public-only port-2103 settings. The 37-route Claude list is prepared
-as the next sole lane at
+`/mnt2/capsule/epitome/refresh/1789621253/openai.txt`, now complete at
+`/mnt2/capsule/epitome/openai/refresh/1789621253`: all 18 manifests are
+complete/tab-closed, `finish.failures=0`, both image audits are clean, and the
+exact excluded-host result scan is empty. It retained 5,815 requests, 5,675
+response bodies, 27 response-body errors, 5,194 discovered assets, 2,781
+completed assets, two optional same-origin HTTP-403 font failures, six hydrated
+Vimeo references, and 961,489,320 downloaded bytes. Representative early,
+middle, structural/media, and late local-only replays retained substantive text
+and images with no production-origin fallback. The 37-route Claude list is
+prepared as the next sole lane at
 `/mnt2/capsule/epitome/refresh/1789621253/claude.txt`; SemiAnalysis and Paul
 Graham follow it in the reviewed plan order. Historical known-uncaptured
 backlogs remain outside this refresh.
