@@ -31,6 +31,10 @@ Current reviewed lists:
   posts while excluding account and platform routes.
 - `geohot-blog.txt`: the rendered George Hotz blog homepage, About page, feed,
   and 143 canonical Jekyll post identities; social links remain references.
+- `greg-brockman-blog.txt`: Greg Brockman's public blog home, feed, second
+  listing page, and 17 canonical posts; its social link remains a reference.
+- `sam-altman-blog.txt`: Sam Altman's public blog structural routes and 121
+  unique canonical post identities collected from its 13 listing pages.
 
 Example:
 

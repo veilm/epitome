@@ -41,6 +41,18 @@
       "exclude_paths": ["/", "/about", "/feed.xml"]
     },
     {
+      "id": "greg-brockman", "name": "Greg Brockman", "archive_directory": "greg-brockman",
+      "hosts": ["blog.gregbrockman.com"],
+      "undated_paths": ["/", "/feed", "/page/2"],
+      "exclude_paths": ["/", "/feed", "/page/2"]
+    },
+    {
+      "id": "sam-altman", "name": "Sam Altman", "archive_directory": "sam-altman",
+      "hosts": ["blog.samaltman.com"],
+      "undated_paths": ["/", "/archive", "/posts.atom"],
+      "exclude_paths": ["/", "/archive", "/posts.atom"]
+    },
+    {
       "id": "andrej-karpathy-site", "name": "Karpathy.ai", "archive_directory": "karpathy.ai",
       "hosts": ["karpathy.ai"], "logo_url": "https://karpathy.ai/assets/me_new.jpg",
       "title_overrides": {

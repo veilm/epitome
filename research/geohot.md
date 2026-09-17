@@ -58,3 +58,35 @@ but there was no live-origin fallback.
 The complete reviewed archive is now ready to run as the next bounded capture:
 the pilot routes will be deduplicated against the same archive root, and the
 remaining reviewed routes will be captured with the same public-only limits.
+
+## Full archive result
+
+The full run at
+`/mnt2/capsule/epitome/geohot/crawls/1789595277-all-146` captured the 139
+routes not already present in the pilot. Its ledger has 139 starts, 139
+completions, `finish.failures=0`, and all 139 manifests are complete and
+tab-closed. Together with the pilot, the reviewed 146-route scope is complete.
+
+The full run recorded 499 requests, 494 response bodies, and five
+response-body errors: one external Cell PDF 403, one external IEEE conference
+PDF 401, and three external reference PDF 404s from Groq, Huawei, and
+HotChips. These were optional reference dependencies on two otherwise
+substantive first-party pages. The full asset ledger recorded 221 candidates,
+27 attempted downloads, 22 completed downloads, five failed external PDF
+downloads corresponding to those same 401/403/404 references, and zero policy
+exclusions. The successful optional references included two arXiv PDFs, a CMU
+lecture PDF, a Semantic Scholar PDF, and a Graphcore PDF. No page-level failure
+or interactive media result occurred.
+
+No asset-completion result URL in either capture root belongs to an excluded
+YouTube/Twitter/X host. The only social URLs are preserved page references;
+they were not fetched.
+
+The full-root primary and all-rendered-image audits each reported 139 pages
+and zero missing images; the pilot audits likewise reported seven pages and
+zero missing images. A combined local replay covered the home page, a recent
+post, a middle image-rich post, the reference-heavy AI-chip post, and the
+oldest image-rich post. It made 23 requests, all to `127.0.0.1:8128`; 18
+returned 200 and five optional legacy social-icon path requests returned local
+400s. The replay preserved substantive text and all tested images, with no
+live-origin fallback.
