@@ -1,5 +1,26 @@
 # Incremental source refresh
 
+## Refresh plan 1789621253
+
+The 2026-09-17 plan-only discovery found 73 nominally new identities after
+comparing the configured listings with the current archive. The reviewed
+low-risk deltas are OpenAI 18, Claude 37, SemiAnalysis 4, and Paul Graham 1.
+The 12 Sam Altman results are HTTP aliases of already captured HTTPS posts and
+were removed by scheme-normalized deduplication. The single Dario Amodei
+result is configured but is not in the explicitly approved low-risk queue, so
+it remains unstarted. The Geohot listing check hit a bounded CDP
+`document.readyState` timeout; its already completed archive is preserved and
+the listing check must be retried before treating that source as reconciled.
+
+The first reviewed delta is the 18-route OpenAI list in
+`/mnt2/capsule/epitome/refresh/1789621253/openai.txt`, captured as the sole
+active lane at `/mnt2/capsule/epitome/openai/refresh/1789621253` with the
+standard public-only port-2103 settings. The 37-route Claude list is prepared
+as the next sole lane at
+`/mnt2/capsule/epitome/refresh/1789621253/claude.txt`; SemiAnalysis and Paul
+Graham follow it in the reviewed plan order. Historical known-uncaptured
+backlogs remain outside this refresh.
+
 ## Refresh plan 1789091412
 
 On 2026-09-11, the reviewed all-source plan found 130 newly listed canonical

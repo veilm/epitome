@@ -175,3 +175,15 @@ diagrammatic surface and substantive text.
 This reconciliation identity is complete. The next reviewed lane is the
 three-identity public Anthropic delta in
 `/mnt2/capsule/epitome/refresh/1789091412-reconcile/anthropic.txt`.
+
+## Incremental refresh 1789621253
+
+The 2026-09-17 plan-only source snapshot found 18 genuinely new public
+`/index/` identities after deduplicating against the completed OpenAI archive.
+The reviewed list is `/mnt2/capsule/epitome/refresh/1789621253/openai.txt`.
+Its sole public capture lane is running at
+`/mnt2/capsule/epitome/openai/refresh/1789621253` with the standard bounded
+port-2103 settings: 15-second settle, 120-second page limit, 400-asset cap,
+two-second asset pacing, 90-second asset timeout, and 90-second inter-page
+delay. The next reviewed low-risk lane is the 37-route Claude list in
+`/mnt2/capsule/epitome/refresh/1789621253/claude.txt`.
