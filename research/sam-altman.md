@@ -54,3 +54,47 @@ therefore approves the full deduplicated 136-route public scope, while keeping
 Posthaven administrative/authentication paths excluded.
 
 Observed inventory date: 2026-09-16.
+
+## Full capture result
+
+The full run at `/mnt2/capsule/epitome/sam-altman/crawls/1789609315-all-136`
+completed all 129 routes not covered by the pilot with `finish.failures=0`.
+Together with the seven pilot routes, all 136 reviewed public routes have
+complete, tab-closed manifests. The full run recorded 5,726 summarized
+requests, 5,457 response bodies, and 138 response-level body errors. The
+metadata records normalize to 137 HTTP 404 records and two pending records;
+the two pending records are duplicate status records for the same old Google
+image whose asset requests ultimately returned 404.
+
+Asset handling recorded 4,668 discovered candidates, 2,207 attempted assets,
+2,071 completed assets, 136 failed assets, zero policy exclusions, and
+17,565,698 downloaded bytes. The 136 failures are fully classified: 129
+repeated optional `https://blog.samaltman.com/assets/images/loading128.gif`
+404s; two references to the same unavailable California housing PDF; two
+references to the same unavailable Google-hosted image; two Box viewer
+requests for the same unavailable public document view; and one 90-second
+Google Fonts asset timeout. The four Box 404 response records and the two
+pending Google-image records are repeated network-level observations of those
+asset outcomes, not page-capture failures. All 129 page manifests remained
+complete, and interactive media discovery/activation was zero.
+
+The exact prohibited-host result audit was empty. Incidental share and
+telemetry requests, including `platform.twitter.com`, two
+`syndication.twitter.com` image/GIF records, and Facebook telemetry, were
+observed as browser dependencies only; no social-media variants were
+intentionally fetched and no YouTube/Twitter/X downloader was invoked.
+
+Primary and all-rendered-image audits found the same two known missing legacy
+Google-hosted images on `?page=5` and `/affordable-care`; all other audited
+rendered images were present. These are classified source-side missing assets,
+not capture-level failures. A 12-route local-only replay covered home, archive,
+Atom feed, listing pages (including the missing-image page), newest, middle,
+image/article, comment-bearing, old, missing-image article, and oldest shapes.
+It preserved substantive text and local assets; all 362 replay metadata
+records used `127.0.0.1`, with no live-origin request and no prohibited-host
+result.
+
+The reviewed 136-route public archive is therefore complete. Future refreshes
+should re-review the home/archive/Atom and 13 listing views, deduplicate their
+canonical post identities against this archive, and capture only genuinely new
+public posts. Posthaven administrative/authentication paths remain excluded.
