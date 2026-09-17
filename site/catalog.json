@@ -1510,6 +1510,16 @@
       "url": "https://geohot.github.io/blog"
     },
     {
+      "captured_at": 1789632495,
+      "publication_status": "exact",
+      "published_at": 1789516800,
+      "sort_at": 1789516800,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Claude Cowork and chat are now one Claude",
+      "url": "https://claude.com/blog/cowork-is-now-claude"
+    },
+    {
       "captured_at": 1789628503,
       "publication_status": "exact",
       "published_at": 1789516800,
@@ -1560,6 +1570,106 @@
       "url": "https://openai.com/index/unlocking-new-ways-of-working"
     },
     {
+      "captured_at": 1789636196,
+      "publication_status": "exact",
+      "published_at": 1789505681,
+      "sort_at": 1789505681,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Everyone Says Datacenter Moratoriums Are Killing the US Buildout. We Mapped All 300 of Them",
+      "url": "https://newsletter.semianalysis.com/p/everyone-says-datacenter-moratoriums"
+    },
+    {
+      "captured_at": 1789632913,
+      "publication_status": "exact",
+      "published_at": 1789430400,
+      "sort_at": 1789430400,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Salesforce in Claude",
+      "url": "https://claude.com/blog/salesforce-in-claude"
+    },
+    {
+      "captured_at": 1789632248,
+      "publication_status": "exact",
+      "published_at": 1789430400,
+      "sort_at": 1789430400,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Claude for Small Business launches new workflows, integrations, and training programs",
+      "url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+    },
+    {
+      "captured_at": 1789631897,
+      "publication_status": "exact",
+      "published_at": 1789430400,
+      "sort_at": 1789430400,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Building an AI-native revenue organization",
+      "url": "https://claude.com/blog/building-an-ai-native-revenue-organization"
+    },
+    {
+      "captured_at": 1789636564,
+      "publication_status": "exact",
+      "published_at": 1789423736,
+      "sort_at": 1789423736,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Rubin NVL72 Agentic Inference: 67x better Performance per Dollar",
+      "url": "https://newsletter.semianalysis.com/p/vera-rubin-nvl72-agentic-inference"
+    },
+    {
+      "captured_at": 1789637063,
+      "publication_status": "exact",
+      "published_at": 1789403845,
+      "sort_at": 1789403845,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Where Does a Robot Think — On-Device vs Datacenter Inference",
+      "url": "https://newsletter.semianalysis.com/p/a-brain-too-big-to-carry-on-device"
+    },
+    {
+      "captured_at": 1789632772,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "How healthcare organizations use Claude Tag",
+      "url": "https://claude.com/blog/how-healthcare-organizations-use-claude-tag"
+    },
+    {
+      "captured_at": 1789632635,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Deploying AI from pilot to production: a practical blueprint for CIOs and technical leaders",
+      "url": "https://claude.com/blog/deploying-ai-from-pilot-to-production"
+    },
+    {
+      "captured_at": 1789632031,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Claude for Financial Advisors",
+      "url": "https://claude.com/blog/claude-for-financial-advisors"
+    },
+    {
+      "captured_at": 1789631744,
+      "publication_status": "exact",
+      "published_at": 1789344000,
+      "sort_at": 1789344000,
+      "sort_basis": "published",
+      "source": "claude",
+      "title": "Agentic coding is straining CI. Here’s how we scaled test impact analysis at Anthropic",
+      "url": "https://claude.com/blog/agentic-coding-is-straining-ci-heres-how-we-scaled-test-impact-analysis-at-anthropic"
+    },
+    {
       "captured_at": 1789629352,
       "publication_status": "exact",
       "published_at": 1789344000,
@@ -1578,6 +1688,16 @@
       "source": "openai",
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
       "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra"
+    },
+    {
+      "captured_at": 1789637944,
+      "publication_status": "exact",
+      "published_at": 1789323579,
+      "sort_at": 1789323579,
+      "sort_basis": "published",
+      "source": "semianalysis",
+      "title": "Long Live the Short King: Why 4-hi HBM Wins",
+      "url": "https://newsletter.semianalysis.com/p/long-live-the-short-king-why-4-hi"
     },
     {
       "captured_at": 1789154218,
@@ -1978,6 +2098,17 @@
       "source": "dwarkesh",
       "title": "Ajeya Cotra – Inside the OpenAI agent swarm that hacked Hugging Face",
       "url": "https://www.dwarkesh.com/p/ajeya-cotra"
+    },
+    {
+      "captured_at": 1789640159,
+      "publication_status": "partial",
+      "published_at": 1788220800,
+      "sort_at": 1788220800,
+      "sort_basis": "published",
+      "source": "paul-graham",
+      "title": "Making Startups Powerful",
+      "url": "https://paulgraham.com/powerful.html",
+      "published_precision": "month"
     },
     {
       "captured_at": 1789123813,

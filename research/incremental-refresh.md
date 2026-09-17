@@ -55,10 +55,25 @@ capture recorded 10 HTTP-200 responses with zero response-body errors. Eight
 assets were discovered, one was newly completed, seven were already complete,
 and none failed or was excluded. The local-only replay retained 16,727 body
 characters and 4/4 loaded images with seven loopback-only requests and no
-production-origin fallback. All capture work in refresh plan 1789621253 is
-therefore complete; the remaining step is the final plan-only low-risk source
-discovery gate. Historical known-uncaptured backlogs remain outside this
-refresh.
+production-origin fallback.
+
+## Final discovery gate 1789621253
+
+The final plan-only all-source discovery at
+`/mnt2/capsule/epitome/refresh/1789621253-final-after-paul` found no new
+OpenAI, Anthropic, Greg Brockman, SemiAnalysis, AI-2040, or Paul Graham
+identities. It repeated the 37-route Claude snapshot, but 29 of those URLs are
+already in the baseline archive and the other eight are complete in the
+refresh root above; therefore no Claude capture is due. Sam Altman's 12 HTTP
+URLs are scheme-normalized aliases of completed HTTPS posts. One new public
+Dario Amodei post was discovered, but Dario is not in the explicitly approved
+low-risk capture queue and remains unstarted for separate review. The Geohot
+listing check again hit the bounded CDP `document.readyState` timeout; its
+completed archive is preserved and no retry capture was created.
+
+All approved capture work in refresh plan 1789621253 is complete. The plan is
+closed with the Dario candidate and Geohot listing retry explicitly deferred;
+historical known-uncaptured backlogs remain outside this refresh.
 
 ## Refresh plan 1789091412
 

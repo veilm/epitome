@@ -121,4 +121,8 @@ need a reviewed inventory rather than an unbounded search crawl:
    not maintained promptly. Preserve video, audio, captions/transcripts,
    thumbnail, description, chapters, and the publisher's surrounding page.
 
-No Dario crawl was started during this reconnaissance.
+No Dario crawl was started during this reconnaissance. The final plan-only
+refresh gate on 2026-09-17 found one additional canonical public post,
+`https://darioamodei.com/post/we-must-pace-the-frontier`. It remains
+unstarted because this source is not in the explicitly approved low-risk
+capture queue; it should receive a separate reviewed scope before capture.

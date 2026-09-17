@@ -195,3 +195,24 @@ the rendered screenshot retained the article text and narrow legacy layout.
 The refresh identity is therefore complete without extending the approved
 public page scope. The refresh plan's remaining work is a final all-source
 deduplication check rather than historical Paul Graham backlog recovery.
+
+## Incremental refresh 1789621253
+
+The one-route public delta captured
+`https://paulgraham.com/powerful.html` at
+`/mnt2/capsule/epitome/paul-graham/refresh/1789621253` with the standard
+CDP-2103 public-only settings. The manifest is complete and tab-closed;
+`finish.failures=0`, with 10 HTTP-200 responses, zero response-body errors,
+and 52,987 response bytes.
+
+Eight assets were discovered: seven were already complete in the archive and
+one optional `ycombinator.com` arc image was newly completed. No asset failed
+or was excluded, and no prohibited-host result URL was recorded. Interactive
+media discovery and activation were zero. A local-only rendered replay
+preserved the title, 16,727 body characters, and 4/4 loaded images with no
+broken or zero-size images; its seven logged resource requests were all to
+`127.0.0.1`, with no production-origin fallback.
+
+This completes the approved capture work in refresh plan 1789621253. The
+remaining Dario candidate and Geohot listing retry are explicitly deferred to
+separate reviewed work.
