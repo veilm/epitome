@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="description" content="Epitome is coming soon.">
+  <title>Epitome — Coming soon</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      background: #f8f7f4;
+      color: #252521;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 36px 24px;
+    }
+    .content { width: min(100%, 560px); text-align: center; }
+    .mark { width: 96px; height: 96px; margin: 0 auto 30px; display: block; }
+    .mark polygon {
+      fill: none;
+      stroke: #675e53;
+      stroke-width: 1.5;
+      transform-box: view-box;
+      transform-origin: 48px 48px;
+    }
+    .mark .a { opacity: .86; animation: turn-a 12s linear infinite; }
+    .mark .b { opacity: .48; animation: turn-b 8s linear infinite; }
+    h1 {
+      margin: 0;
+      font: normal clamp(3.5rem, 10vw, 5.5rem)/1.05 Georgia, 'Times New Roman', serif;
+      letter-spacing: -.045em;
+    }
+    .rule { width: 42px; height: 1px; margin: 32px auto 24px; background: #b4aca1; }
+    p { margin: 0; color: #625f59; font-size: 15px; letter-spacing: .015em; }
+    @keyframes turn-a { to { transform: rotate(360deg); } }
+    @keyframes turn-b { from { transform: rotate(34deg); } to { transform: rotate(-326deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      .mark polygon { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="content">
+      <svg class="mark" viewBox="0 0 96 96" role="img" aria-label="Epitome geometric logo">
+        <polygon class="a" points="48,14 80,72 16,72" />
+        <polygon class="b" points="48,14 80,72 16,72" />
+      </svg>
+      <h1>Epitome</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p>Coming soon.</p>
+    </div>
+  </main>
+</body>
+</html>
