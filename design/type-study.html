@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Epitome type study</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 40px 24px 80px; background: #f8f7f4; color: #252521; font: 15px/1.5 Arial, sans-serif; }
+    main { max-width: 1100px; margin: auto; }
+    h1 { font-size: 22px; font-weight: 400; }
+    .intro { max-width: 70ch; color: #625f59; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 28px; }
+    .sample { min-height: 240px; padding: 28px; background: #fff; border: 1px solid #ddd9d3; }
+    .sample h2 { margin: 0; font: normal 16px Arial, sans-serif; }
+    .sample p { margin: 22px 0 0; color: #625f59; }
+    .word { display: block; margin-top: 22px; font-size: clamp(50px, 7vw, 72px); line-height: 1.1; letter-spacing: -.045em; }
+    .liberation .word { font-family: 'Liberation Serif', serif; }
+    .dejavu .word { font-family: 'DejaVu Serif', serif; }
+    .noto .word { font-family: 'Noto Serif', serif; }
+    .sans .word { font-family: 'Liberation Sans', Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Epitome wordmark type study</h1>
+    <p class="intro">The landing page uses Liberation Serif when installed and
+    Georgia otherwise. These samples use fonts installed on Delirium, so this
+    page is for local review and is outside the deployable landing directory.</p>
+    <div class="grid">
+      <section class="sample liberation"><h2>Liberation Serif · current, local</h2><span class="word">Epitome</span><p>The browser originally showed this face.</p></section>
+      <section class="sample dejavu"><h2>DejaVu Serif · local font</h2><span class="word">Epitome</span><p>A wider, heavier serif alternative.</p></section>
+      <section class="sample noto"><h2>Noto Serif · local font</h2><span class="word">Epitome</span><p>A more contemporary serif alternative.</p></section>
+      <section class="sample sans"><h2>Liberation Sans · local font</h2><span class="word">Epitome</span><p>A plain sans-serif reference.</p></section>
+    </div>
+  </main>
+</body>
+</html>

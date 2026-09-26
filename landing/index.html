@@ -22,8 +22,9 @@
       place-items: center;
       padding: 36px 24px;
     }
-    .content { width: min(100%, 560px); text-align: center; }
-    .mark { width: 96px; height: 96px; margin: 0 auto 30px; display: block; }
+    .content { width: min(100%, 660px); text-align: center; }
+    .brand { display: flex; align-items: center; justify-content: center; gap: 14px; }
+    .mark { width: clamp(62px, 11vw, 86px); height: auto; flex: none; display: block; }
     .mark polygon {
       fill: none;
       stroke: #675e53;
@@ -35,11 +36,12 @@
     .mark .b { opacity: .48; animation: turn-b 8s linear infinite; }
     h1 {
       margin: 0;
-      font: normal clamp(3.5rem, 10vw, 5.5rem)/1.05 Georgia, 'Times New Roman', serif;
+      font: normal clamp(3.5rem, 10vw, 5.5rem)/1.05 'Liberation Serif', Georgia, serif;
       letter-spacing: -.045em;
     }
     .rule { width: 42px; height: 1px; margin: 32px auto 24px; background: #b4aca1; }
     p { margin: 0; color: #625f59; font-size: 15px; letter-spacing: .015em; }
+    @media (max-width: 480px) { .brand { gap: 8px; } }
     @keyframes turn-a { to { transform: rotate(360deg); } }
     @keyframes turn-b { from { transform: rotate(34deg); } to { transform: rotate(-326deg); } }
     @media (prefers-reduced-motion: reduce) {
@@ -50,11 +52,13 @@
 <body>
   <main>
     <div class="content">
-      <svg class="mark" viewBox="0 0 96 96" role="img" aria-label="Epitome geometric logo">
-        <polygon class="a" points="48,14 80,72 16,72" />
-        <polygon class="b" points="48,14 80,72 16,72" />
-      </svg>
-      <h1>Epitome</h1>
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 96 96" aria-hidden="true">
+          <polygon class="a" points="48,14 80,72 16,72" />
+          <polygon class="b" points="48,14 80,72 16,72" />
+        </svg>
+        <h1>Epitome</h1>
+      </div>
       <div class="rule" aria-hidden="true"></div>
       <p>Coming soon.</p>
     </div>
