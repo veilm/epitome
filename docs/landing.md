@@ -29,7 +29,23 @@ committing changes to this repository does **not** update the live Worker. A
 new landing page must be uploaded in the Cloudflare Workers dashboard until a
 scoped automated deployment path is configured.
 
-For the future reader, keep generated news data out of Git as required by
+The dashboard upload was a one-time bootstrap: it selected the single HTML file
+in the browser and sent it to Cloudflare. Future automation should call
+`wrangler deploy` with a scoped API token; it does not need to operate the web
+UI or push generated files to a second Git repository. For the reader, the
+publishing job would:
+
+1. update the source checkout and generate the static output locally;
+2. validate the complete output;
+3. deploy that output to the existing Worker with Wrangler;
+4. check `https://epitome.news/` after deployment.
+
+The current `wrangler.jsonc` deploys `landing/`. Before switching the domain to
+the reader, change its asset directory to the chosen generated site directory.
+One publishing job should assemble and deploy the complete site so a UI push
+and a scheduled data refresh cannot overwrite one another with stale output.
+
+For the future reader, keep generated site output out of Git as required by
 `GOLDEN.md`. A scheduled generator can publish a complete static output using
 a scoped Cloudflare token and Wrangler. Cloudflare's default asset headers
 make mutable HTML and JSON revalidate; a client that should change while open
